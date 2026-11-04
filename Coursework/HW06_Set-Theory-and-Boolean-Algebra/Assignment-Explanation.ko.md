@@ -52,7 +52,7 @@
 
 - **(a)** $A \subseteq C$이므로 $A$를 $C$ 안에 그린다. $C \cap B \ne \emptyset$이므로 $B$는 $C$와 겹쳐야 하는데, $A \cap B = \emptyset$이므로 그 겹치는 부분은 $A$ 밖에 있어야 한다. 곧 $B$는 $C$ 가운데 $A$가 아닌 부분과만 겹친다. 점은 $C \cap B$에 찍는다.
 - **(b)** $A \subseteq B$이고 $C \subseteq B$이므로 $A$와 $C$를 모두 $B$ 안에 그린다. $A \cap C \ne \emptyset$이므로 두 영역이 겹치게 그리고 겹친 부분에 점을 찍는다.
-- **(c)** $A$와 $C$는 각각 $B$와 겹쳐야 하고($A \cap B$와 $B \cap C$에 점), 각각 $B$ 밖으로도 나가야 하며($A - B$와 $C - B$에 점), 서로는 겹치지 않아야 한다($A \cap C = \emptyset$). 따라서 $B$를 가운데 두고 $A$와 $C$를 양쪽에서 $B$에 걸치게 그린다.
+- **(c)** $A$와 $C$는 각각 $B$와 겹쳐야 하고($A \cap B$와 $B \cap C$에 점), 각각 $B$ 밖으로도 나가야 하며($A - B$와 $C - B$에 점), 서로는 겹치지 않아야 한다($`A \cap C = \emptyset`$). 따라서 $B$를 가운데 두고 $A$와 $C$를 양쪽에서 $B$에 걸치게 그린다.
 
 ![그림 1. 세 조건 (a), (b), (c)를 각각 만족하는 벤 다이어그램과 원소가 있어야 하는 영역의 점](../../images/HW06_Venn-Diagrams-for-Given-Conditions.png)
 
@@ -127,9 +127,9 @@
 - **(b)** (a)에 의해 $\mathcal{P}(\mathcal{P}(\emptyset)) = \mathcal{P}(\lbrace \emptyset \rbrace)$이다. 원소가 $\emptyset$ 하나인 집합의 부분집합은 아무 원소도 고르지 않은 $\emptyset$과 그 원소를 고른 $\lbrace \emptyset \rbrace$이다. 따라서 $\mathcal{P}(\mathcal{P}(\emptyset)) = \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace$이고 원소는 $2^1 = 2$개이다.
 - **(c)** (b)의 집합 $X = \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace$의 두 원소를 $x_1 = \emptyset$, $x_2 = \lbrace \emptyset \rbrace$로 두면, $X$의 부분집합은 $\emptyset$, $\lbrace x_1 \rbrace$, $\lbrace x_2 \rbrace$, $\lbrace x_1, x_2 \rbrace$의 네 개이다. $x_1$과 $x_2$를 원래 모양으로 되돌리면 다음과 같다.
 
-$$
+```math
 \mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \lbrace \emptyset, \lbrace \emptyset \rbrace, \lbrace \lbrace \emptyset \rbrace \rbrace, \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace \rbrace
-$$
+```
 
 원소는 $2^2 = 4$개이다.
 
@@ -154,25 +154,25 @@ $$
 
 **문제.** 집합은 모두 전체집합 $U$ 안에 있다. 모든 집합 $A$, $B$에 대해 $(A \cap B)^c = A^c \cup B^c$임을 원소 논증으로 보인다.
 
-**사용하는 개념.** [6장 2절](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.ko.md)에서 두 집합 $X$와 $Y$가 같음을 보이는 기본 방법은 $X \subseteq Y$와 $Y \subseteq X$를 각각 증명하는 것이다. $X \subseteq Y$는 $X$의 임의의 원소가 $Y$에 속함을 보이는 **원소 논증(element argument)** 으로 증명한다. 각 단계에서는 여집합($A^c = \lbrace x \in U \mid x \notin A \rbrace$), 교집합, 합집합의 정의와 논리의 드모르간의 법칙 ${\sim}(p \land q) \equiv {\sim}p \lor {\sim}q$를 쓴다.
+**사용하는 개념.** [6장 2절](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.ko.md)에서 두 집합 $X$와 $Y$가 같음을 보이는 기본 방법은 $X \subseteq Y$와 $Y \subseteq X$를 각각 증명하는 것이다. $X \subseteq Y$는 $X$의 임의의 원소가 $Y$에 속함을 보이는 **원소 논증(element argument)** 으로 증명한다. 각 단계에서는 여집합($`A^c = \lbrace x \in U \mid x \notin A \rbrace`$), 교집합, 합집합의 정의와 논리의 드모르간의 법칙 ${\sim}(p \land q) \equiv {\sim}p \lor {\sim}q$를 쓴다.
 
 **증명.** $A$와 $B$를 임의로 택한 집합으로 둔다.
 
 **(1) $(A \cap B)^c \subseteq A^c \cup B^c$임을 보인다.**
 
-1. $x \in (A \cap B)^c$라고 가정한다. [$x \in A^c \cup B^c$임을 보여야 한다.]
+1. $x \in (A \cap B)^c$라고 가정한다. [$`x \in A^c \cup B^c`$임을 보여야 한다.]
 2. 여집합의 정의에 의해 $x \in U$이고 $x \notin A \cap B$이다.
-3. 교집합의 정의에 의해 "$x \in A$이고 $x \in B$"는 거짓이다.
+3. 교집합의 정의에 의해 "$`x \in A`$이고 $x \in B$"는 거짓이다.
 4. 논리의 드모르간의 법칙에 의해 $x \notin A$이거나 $x \notin B$이다.
 5. $x \in U$이므로 여집합의 정의에 의해 $x \in A^c$이거나 $x \in B^c$이다.
 6. 합집합의 정의에 의해 $x \in A^c \cup B^c$이다.
 
 **(2) $A^c \cup B^c \subseteq (A \cap B)^c$임을 보인다.**
 
-1. $x \in A^c \cup B^c$라고 가정한다. [$x \in (A \cap B)^c$임을 보여야 한다.]
+1. $x \in A^c \cup B^c$라고 가정한다. [$`x \in (A \cap B)^c`$임을 보여야 한다.]
 2. 합집합의 정의에 의해 $x \in A^c$이거나 $x \in B^c$이다.
 3. 여집합의 정의에 의해 $x \in U$이고, $x \notin A$이거나 $x \notin B$이다.
-4. 논리의 드모르간의 법칙에 의해 "$x \in A$이고 $x \in B$"는 거짓이다.
+4. 논리의 드모르간의 법칙에 의해 "$`x \in A`$이고 $x \in B$"는 거짓이다.
 5. 교집합의 정의에 의해 $x \notin A \cap B$이다.
 6. $x \in U$이므로 여집합의 정의에 의해 $x \in (A \cap B)^c$이다.
 
@@ -180,9 +180,9 @@ $$
 
 (2)는 (1)의 단계를 거꾸로 밟은 것이다. 모든 단계가 "그리고 그때에만"으로 이어지기 때문이며, 이를 한 줄로 쓰면 $U$의 모든 원소 $x$에 대해 다음과 같다.
 
-$$
+```math
 x \in (A \cap B)^c \iff x \notin A \cap B \iff {\sim}(x \in A \land x \in B) \iff x \notin A \lor x \notin B \iff x \in A^c \cup B^c
-$$
+```
 
 $x$가 $A$와 $B$에 속하는지에 따라 $U$를 네 영역으로 나누어 양변의 소속을 비교해도 같은 결론을 얻는다. 이 표는 논리의 드모르간의 법칙을 확인하는 진리표와 같은 구조이다.
 
@@ -207,7 +207,7 @@ $x$가 $A$와 $B$에 속하는지에 따라 $U$를 네 영역으로 나누어 �
 
 **증명.**
 
-1. $A$, $B$, $C$가 $A \subseteq C$이고 $B \subseteq C$인 임의의 집합이라고 가정한다. [$A \cup B \subseteq C$임을 보여야 한다.]
+1. $A$, $B$, $C$가 $A \subseteq C$이고 $B \subseteq C$인 임의의 집합이라고 가정한다. [$`A \cup B \subseteq C`$임을 보여야 한다.]
 2. $x \in A \cup B$라고 가정한다. 합집합의 정의에 의해 $x \in A$이거나 $x \in B$이다.
 3. **경우 1, $x \in A$:** $A \subseteq C$이므로 부분집합의 정의에 의해 $x \in C$이다.
 4. **경우 2, $x \in B$:** $B \subseteq C$이므로 부분집합의 정의에 의해 $x \in C$이다.
@@ -234,7 +234,7 @@ $x$가 $A$와 $B$에 속하는지에 따라 $U$를 네 영역으로 나누어 �
 5. 따라서 $x \in A$이고 $x \notin A$이므로 모순이다.
 6. 그러므로 2단계의 가정은 거짓이고 $A \cap A^c$에는 원소가 없다. 곧 $A \cap A^c = \emptyset$이다.
 
-> **참고:** 이 결과는 정리 6.2.2의 여집합 법칙 5(b)이며, 논리의 모순명제 $p \land {\sim}p$에 대응한다. 어떤 원소도 "$A$에 속한다"와 "$A$에 속하지 않는다"를 동시에 만족할 수 없다는 것이 증명의 핵심이다.
+> **참고:** 이 결과는 정리 6.2.2의 여집합 법칙 5(b)이며, 논리의 모순명제 $p \land {\sim}p$에 대응한다. 어떤 원소도 "$`A`$에 속한다"와 "$`A`$에 속하지 않는다"를 동시에 만족할 수 없다는 것이 증명의 핵심이다.
 
 > **주의:** $X = \emptyset$을 보일 때 $X \subseteq \emptyset$과 $\emptyset \subseteq X$를 따로 증명할 필요는 없다. $\emptyset \subseteq X$는 정리 6.2.4에 의해 언제나 성립하므로, $X$에 원소가 없음을 보이는 것으로 충분하다.
 
@@ -263,7 +263,7 @@ $x$가 $A$와 $B$에 속하는지에 따라 $U$를 네 영역으로 나누어 �
 
 **증명.**
 
-1. $A$, $B$가 $A^c \subseteq B$인 임의의 집합이라고 가정한다. [$A \cup B = U$임을 보여야 한다.]
+1. $A$, $B$가 $A^c \subseteq B$인 임의의 집합이라고 가정한다. [$`A \cup B = U`$임을 보여야 한다.]
 2. **$A \cup B \subseteq U$:** 모든 집합이 $U$의 부분집합이므로 $A \subseteq U$이고 $B \subseteq U$이다. 5절의 결과(연습 문제 6.2.20)에서 $C = U$로 두면 $A \cup B \subseteq U$이다.
 3. **$U \subseteq A \cup B$:** $x \in U$라고 가정한다. $x \in A$이거나 $x \notin A$이므로 두 경우로 나눈다.
 4. **경우 1, $x \in A$:** 합집합의 정의에 의해 $x \in A \cup B$이다.
@@ -335,14 +335,14 @@ $x$가 $A$와 $B$에 속하는지에 따라 $U$를 네 영역으로 나누어 �
 
 **증명.** $A$와 $B$를 임의의 집합으로 둔다.
 
-$$
+```math
 \begin{aligned}
 A \cup (B - A) &= A \cup (B \cap A^c) && \text{(1)} \\
 &= (A \cup B) \cap (A \cup A^c) && \text{(2)} \\
 &= (A \cup B) \cap U && \text{(3)} \\
 &= A \cup B && \text{(4)}
 \end{aligned}
-$$
+```
 
 (1)은 차집합 법칙 12에서 $A$ 자리에 $B$, $B$ 자리에 $A$를 넣은 $B - A = B \cap A^c$를 쓴 것이다. (2)는 분배 법칙 3(a)에서 $A$, $B$, $C$ 자리에 각각 $A$, $B$, $A^c$를 넣은 것이다. (3)은 여집합 법칙 5(a) $A \cup A^c = U$이고, (4)는 항등 법칙 4(b)에서 $A$ 자리에 $A \cup B$를 넣은 것이다.
 
@@ -358,9 +358,9 @@ $$
 
 **문제.** 연산 $+$와 $\cdot$을 가진 부울 대수 $B$에서 아래의 등식 사슬은 $B$의 모든 $a$에 대해 $a \cdot a = a$임을 보인다. 단계 (a)~(e)마다 그 단계를 정당화하는 부울 대수의 공리를 밝힌다.
 
-$$
+```math
 a = a \cdot 1 = a \cdot (a + \overline{a}) = (a \cdot a) + (a \cdot \overline{a}) = (a \cdot a) + 0 = a \cdot a
-$$
+```
 
 **사용하는 개념.** [6장 4절](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.ko.md)의 **부울 대수(Boolean algebra)** 는 집합 $B$와 두 연산 $+$, $\cdot$으로 이루어진 구조로, $B$의 모든 원소 $a$, $b$에 대해 $a + b$와 $a \cdot b$가 다시 $B$의 원소이고 다음 다섯 공리를 만족한다. 공리 4는 서로 다른 두 원소 0과 1이 존재함을, 공리 5는 각 $a$마다 **보원(complement)** $\overline{a}$가 존재함을 말한다. 집합의 예에서는 $+$가 $\cup$, $\cdot$이 $\cap$, 0이 $\emptyset$, 1이 $U$, $\overline{a}$가 여집합에 대응한다.
 
@@ -398,7 +398,7 @@ $$
 
 ## 11. 연습 문제 6.4.3: 흡수 법칙
 
-**문제.** 부울 대수 $B$의 모든 $a$, $b$에 대해 $(a + b) \cdot a = a$임을 보이는 등식 사슬에서, 단계 (a)~(f)마다 근거가 되는 공리를 밝힌다. 나머지 두 단계의 근거는 연습 문제 6.4.1(곱의 멱등 법칙 $a \cdot a = a$)과 연습 문제 6.4.2(합의 **전체 한계 법칙(universal bound law)** $a + 1 = 1$)이다.
+**문제.** 부울 대수 $B$의 모든 $a$, $b$에 대해 $(a + b) \cdot a = a$임을 보이는 등식 사슬에서, 단계 (a)~(f)마다 근거가 되는 공리를 밝힌다. 나머지 두 단계의 근거는 연습 문제 6.4.1(곱의 멱등 법칙 $`a \cdot a = a`$)과 연습 문제 6.4.2(합의 **전체 한계 법칙(universal bound law)** $`a + 1 = 1`$)이다.
 
 **사용하는 개념.** 10절의 표 7에 정리한 부울 대수의 공리와, 이미 증명된 두 성질이다. 등식은 양쪽 방향으로 쓸 수 있으므로, 공리의 오른쪽 변을 왼쪽 변으로 바꾸는 단계도 같은 공리가 근거이다.
 
@@ -435,22 +435,22 @@ $$
 
 **증명.**
 
-1. $0$과 $0'$이 모두 $+$에 대한 항등원인 $B$의 원소라고 가정한다. 곧 $B$의 모든 $a$에 대해 다음 두 식이 성립한다. [$0' = 0$임을 보여야 한다.]
+1. $0$과 $0'$이 모두 $+$에 대한 항등원인 $B$의 원소라고 가정한다. 곧 $B$의 모든 $a$에 대해 다음 두 식이 성립한다. [$`0' = 0`$임을 보여야 한다.]
    - (i) $a + 0 = a$
    - (ii) $a + 0' = a$
 2. 다음과 같이 계산한다.
 
-$$
+```math
 \begin{aligned}
 0' &= 0' + 0 && \text{(1)} \\
 &= 0 + 0' && \text{(2)} \\
 &= 0 && \text{(3)}
 \end{aligned}
-$$
+```
 
 (1)은 식 (i)에 $a = 0'$을 넣은 것이고, (2)는 $+$의 교환 법칙(공리 1(a))이며, (3)은 식 (ii)에 $a = 0$을 넣은 것이다. 따라서 $0' = 0$이고, $+$에 대한 항등원은 0 하나뿐이다.
 
-> **주의:** $0'$이 $+$에 대한 항등원이라는 것은 공리에서 나오는 사실이 아니라 1단계의 가정이다. 항등 법칙(공리 4(a))은 0이라는 항등원이 **존재함**만 말할 뿐 다른 원소 $0'$에 대해서는 아무것도 말하지 않는다. 그래서 "$0'$도 항등 법칙에 의해 $a + 0' = a$를 만족한다"라고 쓰면 근거가 맞지 않는다. 증명할 명제가 "항등원인 원소는 0뿐이다"이므로, 항등원인 임의의 원소 $0'$을 가정으로 도입하는 것이 출발점이다.
+> **주의:** $0'$이 $+$에 대한 항등원이라는 것은 공리에서 나오는 사실이 아니라 1단계의 가정이다. 항등 법칙(공리 4(a))은 0이라는 항등원이 **존재함**만 말할 뿐 다른 원소 $0'$에 대해서는 아무것도 말하지 않는다. 그래서 "$`0'`$도 항등 법칙에 의해 $a + 0' = a$를 만족한다"라고 쓰면 근거가 맞지 않는다. 증명할 명제가 "항등원인 원소는 0뿐이다"이므로, 항등원인 임의의 원소 $0'$을 가정으로 도입하는 것이 출발점이다.
 
 > **참고:** 교환 법칙이 필요한 이유는 식 (ii)가 $0'$이 오른쪽에 있는 꼴 $a + 0'$이기 때문이다. $0' + 0$을 $0 + 0'$으로 바꾸어야 (ii)에 $a = 0$을 넣을 수 있다. 같은 논증에서 $+$를 $\cdot$으로, 0을 1로 바꾸면 $\cdot$에 대한 항등원 1의 유일성(연습 문제 6.4.7)이 증명된다: $1' = 1' \cdot 1 = 1 \cdot 1' = 1$.
 
@@ -550,6 +550,6 @@ $$
    <details>
    <summary>정답</summary>
 
-   1과 $1'$이 모두 $\cdot$에 대한 항등원이라고 가정한다. 곧 모든 $a$에 대해 $a \cdot 1 = a$이고 $a \cdot 1' = a$이다. 그러면 $1' = 1' \cdot 1$ (1이 항등원, $a = 1'$) $= 1 \cdot 1'$ ($\cdot$의 교환 법칙) $= 1$ ($1'$이 항등원, $a = 1$)이므로 $1' = 1$이다.
+   1과 $1'$이 모두 $\cdot$에 대한 항등원이라고 가정한다. 곧 모든 $a$에 대해 $a \cdot 1 = a$이고 $a \cdot 1' = a$이다. 그러면 $1' = 1' \cdot 1$ (1이 항등원, $`a = 1'`$) $= 1 \cdot 1'$ ($\cdot$의 교환 법칙) $= 1$ ($1'$이 항등원, $`a = 1`$)이므로 $1' = 1$이다.
 
    </details>

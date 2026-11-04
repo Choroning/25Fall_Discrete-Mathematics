@@ -62,20 +62,20 @@ This chapter studies relations defined on sets. It examines several ways of repr
 
 Chapter 1 defined a relation from a set $A$ to a set $B$ as a subset of the Cartesian product $A \times B$. When the emphasis is on its being a subset of a product of two sets, it is called a **binary relation**. Section 1.4 below defines an $n$-ary relation as a subset of a Cartesian product of $n$ sets, but most of this chapter deals with binary relations, so from now on the word relation by itself means a binary relation.
 
-> **Definition:** A **relation** $R$ from a set $A$ to a set $B$ is a subset of $A \times B$. If $(x, y) \in R$, then $x$ is said to be related to $y$ by $R$, written $x \, R \, y$. If $(x, y) \notin R$, then $x$ is not related to $y$ by $R$.
+> **Definition:** A **relation** $R$ from a set $A$ to a set $B$ is a subset of $A \times B$. If $(x, y) \in R$, then $x$ is said to be related to $y$ by $R$, written $`x \, R \, y`$. If $(x, y) \notin R$, then $x$ is not related to $y$ by $R$.
 
 That is, for all $x \in A$ and $y \in B$, the following holds.
 
-$$
+```math
 x \, R \, y \iff (x, y) \in R
-$$
+```
 
-**Example 8.1.1 (The Less-Than Relation for Real Numbers).** Define a relation $L$ from the set $\mathbf{R}$ of all real numbers to $\mathbf{R}$ by $x \, L \, y \iff x < y$ for all real numbers $x$ and $y$.
+**Example 8.1.1 (The Less-Than Relation for Real Numbers).** Define a relation $L$ from the set $\mathbf{R}$ of all real numbers to $\mathbf{R}$ by $`x \, L \, y \iff x < y`$ for all real numbers $x$ and $y$.
 
-- Is $57 \, L \, 53$? No. Since $57 > 53$, the statement $57 < 53$ is false.
-- Is $(-17) \, L \, (-14)$? Yes. $-17 < -14$.
-- Is $143 \, L \, 143$? No. Since $143 = 143$, the statement $143 < 143$ is false.
-- Is $(-35) \, L \, 1$? Yes. $-35 < 1$.
+- Is $`57 \, L \, 53`$? No. Since $57 > 53$, the statement $57 < 53$ is false.
+- Is $`(-17) \, L \, (-14)`$? Yes. $-17 < -14$.
+- Is $`143 \, L \, 143`$? No. Since $143 = 143$, the statement $143 < 143$ is false.
+- Is $`(-35) \, L \, 1`$? Yes. $-35 < 1$.
 
 Since $L$ is a subset of $\mathbf{R} \times \mathbf{R}$, it can be drawn as a set of points in the coordinate plane. For each fixed value of $x$, every point $(x, y)$ with $y > x$ belongs to $L$, so the graph of $L$ consists of all points above the line $y = x$. A point on the line satisfies $x = y$, so $x < y$ is false and the point is not on the graph; Figure 1 draws this line dashed.
 
@@ -83,39 +83,39 @@ Since $L$ is a subset of $\mathbf{R} \times \mathbf{R}$, it can be drawn as a se
 
 *Figure 1. Graph of the less-than relation L as the region above the line y = x*
 
-**Example 8.1.2 (The Congruence Modulo 2 Relation).** Define a relation $E$ from the set $\mathbf{Z}$ of all integers to $\mathbf{Z}$ by $m \, E \, n$ when $m - n$ is even, for every $(m, n) \in \mathbf{Z} \times \mathbf{Z}$. Saying that $m - n$ is even is the same as saying $2 \mid (m - n)$, so the relation can be written as follows.
+**Example 8.1.2 (The Congruence Modulo 2 Relation).** Define a relation $E$ from the set $\mathbf{Z}$ of all integers to $\mathbf{Z}$ by $`m \, E \, n`$ when $m - n$ is even, for every $(m, n) \in \mathbf{Z} \times \mathbf{Z}$. Saying that $m - n$ is even is the same as saying $2 \mid (m - n)$, so the relation can be written as follows.
 
-$$
+```math
 m \, E \, n \iff 2 \mid (m - n)
-$$
+```
 
 First, decide whether some pairs are related.
 
-- $4 \, E \, 0$, because $4 - 0 = 4$ and 4 is even.
-- $2 \, E \, 6$, because $2 - 6 = -4$ and $-4$ is even.
-- $3 \, E \, (-3)$, because $3 - (-3) = 6$ and 6 is even.
+- $`4 \, E \, 0`$, because $4 - 0 = 4$ and 4 is even.
+- $`2 \, E \, 6`$, because $2 - 6 = -4$ and $-4$ is even.
+- $`3 \, E \, (-3)`$, because $3 - (-3) = 6$ and 6 is even.
 - $5$ is not related to $2$ by $E$, because $5 - 2 = 3$ and 3 is not even.
 
 Next, find integers related to 1. Since $1 - 1 = 0$, $3 - 1 = 2$, $5 - 1 = 4$, $-1 - 1 = -2$, and $-3 - 1 = -4$ are all even, each of $1, 3, 5, -1, -3$ is related to 1 by $E$. There are infinitely many other such integers, and the following proposition explains why.
 
-**Proposition.** If $n$ is an odd integer, then $n \, E \, 1$.
+**Proposition.** If $n$ is an odd integer, then $`n \, E \, 1`$.
 
-**Proof:** Suppose $n$ is any odd integer. By definition of odd, $n = 2k + 1$ for some integer $k$. By definition of $E$, $n \, E \, 1$ means that $n - 1$ is even. By substitution, $n - 1 = (2k + 1) - 1 = 2k$, and since $k$ is an integer, $2k$ is even. Hence $n \, E \, 1$.
+**Proof:** Suppose $n$ is any odd integer. By definition of odd, $n = 2k + 1$ for some integer $k$. By definition of $E$, $`n \, E \, 1`$ means that $n - 1$ is even. By substitution, $n - 1 = (2k + 1) - 1 = 2k$, and since $k$ is an integer, $2k$ is even. Hence $`n \, E \, 1`$.
 
 In general, two integers $m$ and $n$ are related by $E$ if, and only if, $m \bmod 2 = n \bmod 2$, that is, both are even or both are odd. In this case $m$ and $n$ are said to be **congruent modulo 2**. Congruence modulo a general $d$ is defined in Section 3.5.
 
 **Example 8.1.3 (A Relation on a Power Set).** If $X = \lbrace a, b, c \rbrace$, its power set is as follows.
 
-$$
+```math
 \mathcal{P}(X) = \lbrace \emptyset, \lbrace a \rbrace, \lbrace b \rbrace, \lbrace c \rbrace, \lbrace a, b \rbrace, \lbrace a, c \rbrace, \lbrace b, c \rbrace, \lbrace a, b, c \rbrace \rbrace
-$$
+```
 
-Write $N(A)$ for the number of elements of a set $A$, and define a relation $\mathbf{S}$ from $\mathcal{P}(X)$ to $\mathcal{P}(X)$ by $A \, \mathbf{S} \, B \iff N(A) \ge N(B)$ for all $A, B \in \mathcal{P}(X)$. That is, $A$ is related to $B$ when $A$ has at least as many elements as $B$.
+Write $N(A)$ for the number of elements of a set $A$, and define a relation $\mathbf{S}$ from $\mathcal{P}(X)$ to $\mathcal{P}(X)$ by $`A \, \mathbf{S} \, B \iff N(A) \ge N(B)`$ for all $A, B \in \mathcal{P}(X)$. That is, $A$ is related to $B$ when $A$ has at least as many elements as $B$.
 
-- $\lbrace a, b \rbrace \, \mathbf{S} \, \lbrace b, c \rbrace$. Both sets have two elements, and $2 \ge 2$.
-- $\lbrace a \rbrace \, \mathbf{S} \, \emptyset$. The sets have 1 and 0 elements, and $1 \ge 0$.
+- $`\lbrace a, b \rbrace \, \mathbf{S} \, \lbrace b, c \rbrace`$. Both sets have two elements, and $2 \ge 2$.
+- $`\lbrace a \rbrace \, \mathbf{S} \, \emptyset`$. The sets have 1 and 0 elements, and $1 \ge 0$.
 - $\lbrace b, c \rbrace$ is not related to $\lbrace a, b, c \rbrace$ by $\mathbf{S}$. The sets have 2 and 3 elements, and $2 \ge 3$ is false.
-- $\lbrace c \rbrace \, \mathbf{S} \, \lbrace a \rbrace$. Both sets have one element.
+- $`\lbrace c \rbrace \, \mathbf{S} \, \lbrace a \rbrace`$. Both sets have one element.
 
 > **Note:** Since relations are sets, set operations apply to them directly. If $R$ and $S$ are both relations from $A$ to $B$, then $R \cup S$, the set of all ordered pairs in $R$ or in $S$, and $R \cap S$, the set of all ordered pairs in both relations, are also relations from $A$ to $B$. For example, the union of the less-than relation $<$ and the equality relation $=$ on $\mathbf{R}$ is the less-than-or-equal-to relation $\le$, and the intersection of the two relations is the empty set.
 
@@ -127,13 +127,13 @@ When $R$ is a relation from $A$ to $B$, interchanging the two components of ever
 
 Written element by element, for all $x \in A$ and $y \in B$, $(y, x) \in R^{-1} \iff (x, y) \in R$.
 
-**Example 8.1.4 (The Inverse of a Finite Relation).** Let $A = \lbrace 2, 3, 4 \rbrace$ and $B = \lbrace 2, 6, 8 \rbrace$, and let $R$ be the divides relation from $A$ to $B$, that is, $x \, R \, y \iff x \mid y$ for every $(x, y) \in A \times B$.
+**Example 8.1.4 (The Inverse of a Finite Relation).** Let $A = \lbrace 2, 3, 4 \rbrace$ and $B = \lbrace 2, 6, 8 \rbrace$, and let $R$ be the divides relation from $A$ to $B$, that is, $`x \, R \, y \iff x \mid y`$ for every $(x, y) \in A \times B$.
 
-Check the nine ordered pairs of $A \times B$ one by one. 2 divides all of 2, 6, and 8; 3 divides only 6 ($3 \nmid 2$, $3 \nmid 8$); and 4 divides only 8 ($4 \nmid 2$, $4 \nmid 6$). Hence the following holds.
+Check the nine ordered pairs of $A \times B$ one by one. 2 divides all of 2, 6, and 8; 3 divides only 6 ($3 \nmid 2$, $`3 \nmid 8`$); and 4 divides only 8 ($4 \nmid 2$, $`4 \nmid 6`$). Hence the following holds.
 
-$$
+```math
 R = \lbrace (2, 2), (2, 6), (2, 8), (3, 6), (4, 8) \rbrace, \qquad R^{-1} = \lbrace (2, 2), (6, 2), (8, 2), (6, 3), (8, 4) \rbrace
-$$
+```
 
 Reversing the direction of every arrow in the arrow diagram of $R$ (Figure 2) gives the arrow diagram of $R^{-1}$. Figure 3 redraws the arrow diagram of $R^{-1}$ with $B$ on the left.
 
@@ -179,9 +179,9 @@ graph LR
 
 *Figure 3. Arrow diagram of the inverse relation drawn with B on the left*
 
-Since $x \mid y$ means the same as $y$ being a multiple of $x$, $R^{-1}$ can be described in words as follows: for every $(y, x) \in B \times A$, $y \, R^{-1} \, x$ if, and only if, $y$ is a multiple of $x$.
+Since $x \mid y$ means the same as $y$ being a multiple of $x$, $R^{-1}$ can be described in words as follows: for every $(y, x) \in B \times A$, $`y \, R^{-1} \, x`$ if, and only if, $y$ is a multiple of $x$.
 
-**Example 8.1.5 (The Inverse of an Infinite Relation).** Define a relation $R$ from $\mathbf{R}$ to $\mathbf{R}$ by $x \, R \, y \iff y = 2\lvert x \rvert$ for every $(x, y) \in \mathbf{R} \times \mathbf{R}$. Draw the graphs of $R$ and $R^{-1}$, and decide whether $R^{-1}$ is a function.
+**Example 8.1.5 (The Inverse of an Infinite Relation).** Define a relation $R$ from $\mathbf{R}$ to $\mathbf{R}$ by $`x \, R \, y \iff y = 2\lvert x \rvert`$ for every $(x, y) \in \mathbf{R} \times \mathbf{R}$. Draw the graphs of $R$ and $R^{-1}$, and decide whether $R^{-1}$ is a function.
 
 If $x \ge 0$, then $y = 2\lvert x \rvert = 2x$, so the graph is a ray with slope 2; if $x < 0$, then $y = 2(-x) = -2x$, so the graph is a ray with slope $-2$. A point $(v, u)$ is on the graph of $R^{-1}$ if, and only if, $(u, v)$ is on the graph of $R$, so the graph of $R^{-1}$ is the reflection of the graph of $R$ in the line $y = x$. Table 1 lists some computed values.
 
@@ -209,12 +209,12 @@ The rest of this chapter deals with relations from a set to itself.
 
 > **Caution:** Distinguish a relation from the set on which it is defined. For example, a relation $R$ on $A = \lbrace 3, 4, 5 \rbrace$ is a subset of $A \times A$, not $A$ itself.
 
-When $R$ is a relation on $A$, the arrow diagram can be turned into a **directed graph**. Instead of drawing $A$ twice, draw each element of $A$ once as a vertex and draw an arrow for each related pair of elements. That is, for all $x, y \in A$, there is an arrow from $x$ to $y$ if, and only if, $x \, R \, y$, that is, $(x, y) \in R$. If an element is related to itself ($x \, R \, x$), draw a **loop** that leaves the vertex and comes back to it.
+When $R$ is a relation on $A$, the arrow diagram can be turned into a **directed graph**. Instead of drawing $A$ twice, draw each element of $A$ once as a vertex and draw an arrow for each related pair of elements. That is, for all $x, y \in A$, there is an arrow from $x$ to $y$ if, and only if, $`x \, R \, y`$, that is, $(x, y) \in R$. If an element is related to itself ($`x \, R \, x`$), draw a **loop** that leaves the vertex and comes back to it.
 
-**Example 8.1.6 (Directed Graph of a Relation).** Define a relation $R$ on $A = \lbrace 3, 4, 5, 6, 7, 8 \rbrace$ by $x \, R \, y \iff 2 \mid (x - y)$ for all $x, y \in A$, and draw the directed graph of $R$.
+**Example 8.1.6 (Directed Graph of a Relation).** Define a relation $R$ on $A = \lbrace 3, 4, 5, 6, 7, 8 \rbrace$ by $`x \, R \, y \iff 2 \mid (x - y)`$ for all $x, y \in A$, and draw the directed graph of $R$.
 
-- $3 \, R \, 3$, because $3 - 3 = 0 = 2 \cdot 0$ and so $2 \mid 0$. For the same reason, the difference of any integer and itself is 0, so every vertex has a loop.
-- $3 \, R \, 5$ and $5 \, R \, 3$, because $3 - 5 = -2 = 2 \cdot (-1)$ and $5 - 3 = 2 = 2 \cdot 1$, so there are arrows both from 3 to 5 and from 5 to 3.
+- $`3 \, R \, 3`$, because $3 - 3 = 0 = 2 \cdot 0$ and so $2 \mid 0$. For the same reason, the difference of any integer and itself is 0, so every vertex has a loop.
+- $`3 \, R \, 5`$ and $`5 \, R \, 3`$, because $3 - 5 = -2 = 2 \cdot (-1)$ and $5 - 3 = 2 = 2 \cdot 1$, so there are arrows both from 3 to 5 and from 5 to 3.
 - 3 and 4 are not related in either direction, because neither $3 - 4 = -1$ nor $4 - 3 = 1$ is a multiple of 2.
 
 In general, $x - y$ is even if, and only if, $x$ and $y$ are both odd or both even. Hence the odd numbers 3, 5, 7 are all related to one another, the even numbers 4, 6, 8 are all related to one another, and there is no arrow between an odd and an even number. $R$ consists of $3 \times 3 + 3 \times 3 = 18$ ordered pairs. In Figure 5, a line with arrowheads at both ends represents the arrows in both directions at once.
@@ -282,10 +282,10 @@ Individual records can be inserted, removed, or modified, and the records can be
 
 ## 2. Reflexivity, Symmetry, and Transitivity (Section 8.2)
 
-Define a relation $R$ on $A = \lbrace 2, 3, 4, 6, 7, 9 \rbrace$ by $x \, R \, y \iff 3 \mid (x - y)$ for all $x, y \in A$. To draw the directed graph of this relation, check each pair.
+Define a relation $R$ on $A = \lbrace 2, 3, 4, 6, 7, 9 \rbrace$ by $`x \, R \, y \iff 3 \mid (x - y)`$ for all $x, y \in A$. To draw the directed graph of this relation, check each pair.
 
-- Every element is related to itself. For example, $2 - 2 = 0$ and $3 \mid 0$, so $2 \, R \, 2$, and for the same reason $3 \, R \, 3$, $4 \, R \, 4$, $6 \, R \, 6$, $7 \, R \, 7$, and $9 \, R \, 9$.
-- $6 - 3 = 3$ and $3 \mid 3$, so $6 \, R \, 3$. Also $3 - 6 = -(6 - 3) = -3$ and $3 \mid (-3)$, so $3 \, R \, 6$. In the same way, $3 \, R \, 9$, $9 \, R \, 3$, $6 \, R \, 9$, $9 \, R \, 6$, $4 \, R \, 7$, and $7 \, R \, 4$.
+- Every element is related to itself. For example, $2 - 2 = 0$ and $3 \mid 0$, so $`2 \, R \, 2`$, and for the same reason $`3 \, R \, 3`$, $`4 \, R \, 4`$, $`6 \, R \, 6`$, $`7 \, R \, 7`$, and $`9 \, R \, 9`$.
+- $6 - 3 = 3$ and $3 \mid 3$, so $`6 \, R \, 3`$. Also $3 - 6 = -(6 - 3) = -3$ and $3 \mid (-3)$, so $`3 \, R \, 6`$. In the same way, $`3 \, R \, 9`$, $`9 \, R \, 3`$, $`6 \, R \, 9`$, $`9 \, R \, 6`$, $`4 \, R \, 7`$, and $`7 \, R \, 4`$.
 - The difference of any other two distinct elements is not a multiple of 3, so they are not related. For example, $2 - 4 = -2$ and $4 - 6 = -2$.
 
 ```mermaid
@@ -315,19 +315,19 @@ These three properties correspond to the properties of general relations called 
 ### 2.1 Definitions of the Three Properties
 
 > **Definition:** Let $R$ be a relation on a set $A$.
-> 1. $R$ is **reflexive** if, and only if, $x \, R \, x$ for every $x \in A$.
-> 2. $R$ is **symmetric** if, and only if, for every $x, y \in A$, if $x \, R \, y$ then $y \, R \, x$.
-> 3. $R$ is **transitive** if, and only if, for every $x, y, z \in A$, if $x \, R \, y$ and $y \, R \, z$ then $x \, R \, z$.
+> 1. $R$ is **reflexive** if, and only if, $`x \, R \, x`$ for every $x \in A$.
+> 2. $R$ is **symmetric** if, and only if, for every $x, y \in A$, if $`x \, R \, y`$ then $`y \, R \, x`$.
+> 3. $R$ is **transitive** if, and only if, for every $x, y, z \in A$, if $`x \, R \, y`$ and $`y \, R \, z`$ then $`x \, R \, z`$.
 
-Since $x \, R \, y$ and $(x, y) \in R$ mean the same thing, the three properties can also be written in terms of ordered pairs as follows.
+Since $`x \, R \, y`$ and $(x, y) \in R$ mean the same thing, the three properties can also be written in terms of ordered pairs as follows.
 
-- Reflexivity: $\forall x \in A, \ (x, x) \in R$
-- Symmetry: $\forall x, y \in A, \ (x, y) \in R \Rightarrow (y, x) \in R$
-- Transitivity: $\forall x, y, z \in A, \ \big( (x, y) \in R \wedge (y, z) \in R \big) \Rightarrow (x, z) \in R$
+- Reflexivity: $`\forall x \in A, \ (x, x) \in R`$
+- Symmetry: $`\forall x, y \in A, \ (x, y) \in R \Rightarrow (y, x) \in R`$
+- Transitivity: $`\forall x, y, z \in A, \ \big( (x, y) \in R \wedge (y, z) \in R \big) \Rightarrow (x, z) \in R`$
 
 Informally, reflexivity means that every element is related to itself. Symmetry means that whenever one element is related to another, the relation also holds in the reverse direction. Transitivity means that if a first element is related to a second and the second to a third, then the first is related to the third.
 
-> **Caution:** The definition of symmetry does not assert that $x$ is related to $y$. It only states that if $x$ happens to be related to $y$, then $y$ must be related to $x$. Also, the first, second, and third elements in the informal versions need not be distinct. For example, transitivity includes the case $x = z$, namely the condition that if $x \, R \, y$ and $y \, R \, x$ then $x \, R \, x$. Since the informal versions can hide such nuances, decisions should be based on the formal definitions.
+> **Caution:** The definition of symmetry does not assert that $x$ is related to $y$. It only states that if $x$ happens to be related to $y$, then $y$ must be related to $x$. Also, the first, second, and third elements in the informal versions need not be distinct. For example, transitivity includes the case $x = z$, namely the condition that if $`x \, R \, y`$ and $`y \, R \, x`$ then $`x \, R \, x`$. Since the informal versions can hide such nuances, decisions should be based on the formal definitions.
 
 All three definitions are universal statements. Hence, to prove that a relation has one of these properties, use the method of exhaustion in finite cases and, in general, the method of generalizing from the generic particular from Chapter 4.
 
@@ -347,13 +347,13 @@ Therefore, a single choice of such elements, presented as a counterexample, is e
 
 **Example 8.2.1 (Properties of Relations on Finite Sets).** Define relations $R$, $S$, and $T$ on $A = \lbrace 0, 1, 2, 3 \rbrace$ as follows. Decide whether each relation is reflexive, symmetric, and transitive.
 
-$$
+```math
 \begin{aligned}
 R &= \lbrace (0, 0), (0, 1), (0, 3), (1, 0), (1, 1), (2, 2), (3, 0), (3, 3) \rbrace \\
 S &= \lbrace (0, 0), (0, 2), (0, 3), (2, 3) \rbrace \\
 T &= \lbrace (0, 1), (2, 3) \rbrace
 \end{aligned}
-$$
+```
 
 **The relation R.** The directed graph of $R$ is shown in Figure 7.
 
@@ -371,7 +371,7 @@ graph LR
 
 - $R$ is reflexive. All of $(0, 0)$, $(1, 1)$, $(2, 2)$, and $(3, 3)$ are in $R$, so every vertex has a loop.
 - $R$ is symmetric. Every ordered pair that is not a loop comes with its reverse partner, as $(0, 1)$ with $(1, 0)$ and $(0, 3)$ with $(3, 0)$. A loop $(x, x)$ is unchanged when its components are interchanged, so it satisfies the symmetry condition automatically.
-- $R$ is not transitive. $1 \, R \, 0$ and $0 \, R \, 3$, but $(1, 3) \notin R$. In the graph, there are arrows from 1 to 0 and from 0 to 3 but no arrow from 1 to 3.
+- $R$ is not transitive. $`1 \, R \, 0`$ and $`0 \, R \, 3`$, but $(1, 3) \notin R$. In the graph, there are arrows from 1 to 0 and from 0 to 3 but no arrow from 1 to 3.
 
 A relation on a finite set can also be represented by a matrix. List the elements of $A$ in the same order along the rows and columns, and write 1 in row $x$, column $y$ if $(x, y) \in R$ and 0 otherwise. This matrix is the adjacency matrix of the directed graph, treated in Chapter 10. Table 3 is the matrix of $R$.
 
@@ -480,39 +480,39 @@ The output agrees with the decisions above. If $A$ has $n$ elements, the three f
 
 ### 2.4 Relations on Infinite Sets
 
-Since not every case can be checked for a relation on an infinite set, the proof proceeds as follows. First, write down the statement to be proved according to the definition. For instance, to prove symmetry, one must prove $\forall x, y \in A, \ x \, R \, y \Rightarrow y \, R \, x$. Next, use the definitions of $A$ and $R$ to rewrite the statement in concrete form. Sometimes the rewritten statement is immediately seen to be true, and sometimes it must be proved by generalizing from the generic particular.
+Since not every case can be checked for a relation on an infinite set, the proof proceeds as follows. First, write down the statement to be proved according to the definition. For instance, to prove symmetry, one must prove $`\forall x, y \in A, \ x \, R \, y \Rightarrow y \, R \, x`$. Next, use the definitions of $A$ and $R$ to rewrite the statement in concrete form. Sometimes the rewritten statement is immediately seen to be true, and sometimes it must be proved by generalizing from the generic particular.
 
-**Example 8.2.2 (Properties of Equality).** Define a relation $R$ on $\mathbf{R}$ by $x \, R \, y \iff x = y$ for all real numbers $x$ and $y$.
+**Example 8.2.2 (Properties of Equality).** Define a relation $R$ on $\mathbf{R}$ by $`x \, R \, y \iff x = y`$ for all real numbers $x$ and $y$.
 
-- $R$ is reflexive. Reflexivity is $\forall x \in \mathbf{R}, \ x \, R \, x$, which by definition of $R$ is the same as $\forall x \in \mathbf{R}, \ x = x$. Every real number equals itself, so this statement is true.
-- $R$ is symmetric. Symmetry is the same as $\forall x, y \in \mathbf{R}, \ x = y \Rightarrow y = x$, which is true because if one number equals a second, the second equals the first.
-- $R$ is transitive. Transitivity is the same as $\forall x, y, z \in \mathbf{R}, \ (x = y \wedge y = z) \Rightarrow x = z$, which is true because if a first number equals a second and the second equals a third, the first equals the third.
+- $R$ is reflexive. Reflexivity is $`\forall x \in \mathbf{R}, \ x \, R \, x`$, which by definition of $R$ is the same as $`\forall x \in \mathbf{R}, \ x = x`$. Every real number equals itself, so this statement is true.
+- $R$ is symmetric. Symmetry is the same as $`\forall x, y \in \mathbf{R}, \ x = y \Rightarrow y = x`$, which is true because if one number equals a second, the second equals the first.
+- $R$ is transitive. Transitivity is the same as $`\forall x, y, z \in \mathbf{R}, \ (x = y \wedge y = z) \Rightarrow x = z`$, which is true because if a first number equals a second and the second equals a third, the first equals the third.
 
-**Example 8.2.3 (Properties of Less Than).** Define a relation $R$ on $\mathbf{R}$ by $x \, R \, y \iff x < y$ for all real numbers $x$ and $y$.
+**Example 8.2.3 (Properties of Less Than).** Define a relation $R$ on $\mathbf{R}$ by $`x \, R \, y \iff x < y`$ for all real numbers $x$ and $y$.
 
-- $R$ is not reflexive. Reflexivity would mean $\forall x \in \mathbf{R}, \ x < x$, which is false. As a counterexample, for $x = 0$ the statement $0 < 0$ does not hold.
-- $R$ is not symmetric. Symmetry would mean $\forall x, y \in \mathbf{R}, \ x < y \Rightarrow y < x$; as a counterexample, for $x = 0$ and $y = 1$, $0 < 1$ but $1 < 0$ is false.
-- $R$ is transitive. Transitivity means $\forall x, y, z \in \mathbf{R}, \ (x < y \wedge y < z) \Rightarrow x < z$, which is true by the transitive law of order for real numbers.
+- $R$ is not reflexive. Reflexivity would mean $`\forall x \in \mathbf{R}, \ x < x`$, which is false. As a counterexample, for $x = 0$ the statement $0 < 0$ does not hold.
+- $R$ is not symmetric. Symmetry would mean $`\forall x, y \in \mathbf{R}, \ x < y \Rightarrow y < x`$; as a counterexample, for $x = 0$ and $y = 1$, $0 < 1$ but $1 < 0$ is false.
+- $R$ is transitive. Transitivity means $`\forall x, y, z \in \mathbf{R}, \ (x < y \wedge y < z) \Rightarrow x < z`$, which is true by the transitive law of order for real numbers.
 
 Some properties are false for every element of the domain. In such a case it may be more natural to show that the property fails for every element rather than to give a single counterexample. For example, by the trichotomy law for real numbers, which says that for any real numbers $x$ and $y$ exactly one of $x < y$, $x = y$, $x > y$ holds, $x < x$ is false for every real number $x$, and $y < x$ is false for all $x$ and $y$ with $x < y$.
 
 **Example 8.2.4 (Properties of Congruence Modulo 3).** Define a relation $T$ on $\mathbf{Z}$ as follows for all integers $m$ and $n$. This relation is called **congruence modulo 3**.
 
-$$
+```math
 m \, T \, n \iff 3 \mid (m - n)
-$$
+```
 
-**Reflexivity.** The statement to be shown is $\forall m \in \mathbf{Z}, \ m \, T \, m$, that is, $\forall m \in \mathbf{Z}, \ 3 \mid (m - m)$. Since $m - m = 0 = 3 \cdot 0$, $3 \mid 0$, and the statement is true.
+**Reflexivity.** The statement to be shown is $`\forall m \in \mathbf{Z}, \ m \, T \, m`$, that is, $`\forall m \in \mathbf{Z}, \ 3 \mid (m - m)`$. Since $m - m = 0 = 3 \cdot 0$, $3 \mid 0$, and the statement is true.
 
-**Proof of reflexivity:** Suppose $m$ is a particular but arbitrarily chosen integer. [It must be shown that $m \, T \, m$.] Now $m - m = 0$, and $0 = 3 \cdot 0$, so $3 \mid 0$. Hence $3 \mid (m - m)$, and by definition of $T$, $m \, T \, m$.
+**Proof of reflexivity:** Suppose $m$ is a particular but arbitrarily chosen integer. [It must be shown that $`m \, T \, m`$.] Now $m - m = 0$, and $0 = 3 \cdot 0$, so $3 \mid 0$. Hence $3 \mid (m - m)$, and by definition of $T$, $`m \, T \, m`$.
 
 **Symmetry.** The statement to be shown is that for all integers $m$ and $n$, if $3 \mid (m - n)$ then $3 \mid (n - m)$. In other words, $n - m$ must be written as 3 times some integer. By definition of divides, $3 \mid (m - n)$ means $m - n = 3k$ for some integer $k$. The crucial observation is that $n - m = -(m - n)$. Multiplying both sides by $-1$ gives $-(m - n) = -3k$, that is, $n - m = 3(-k)$, and since $-k$ is an integer, $3 \mid (n - m)$.
 
-**Proof of symmetry:** Suppose $m$ and $n$ are particular but arbitrarily chosen integers with $m \, T \, n$. [It must be shown that $n \, T \, m$.] By definition of $T$, $3 \mid (m - n)$, and by definition of divides, $m - n = 3k$ for some integer $k$. Multiplying both sides by $-1$ gives $n - m = 3(-k)$. Since $-k$ is an integer, $3 \mid (n - m)$, and by definition of $T$, $n \, T \, m$.
+**Proof of symmetry:** Suppose $m$ and $n$ are particular but arbitrarily chosen integers with $`m \, T \, n`$. [It must be shown that $`n \, T \, m`$.] By definition of $T$, $3 \mid (m - n)$, and by definition of divides, $m - n = 3k$ for some integer $k$. Multiplying both sides by $-1$ gives $n - m = 3(-k)$. Since $-k$ is an integer, $3 \mid (n - m)$, and by definition of $T$, $`n \, T \, m`$.
 
 **Transitivity.** The statement to be shown is that for all integers $m$, $n$, and $p$, if $3 \mid (m - n)$ and $3 \mid (n - p)$ then $3 \mid (m - p)$. By hypothesis, $m - n = 3r$ and $n - p = 3s$ for some integers $r$ and $s$. The crucial observation is that $(m - n) + (n - p) = m - p$. Adding the two equations gives $(m - n) + (n - p) = 3r + 3s$, that is, $m - p = 3(r + s)$. Since $r + s$ is an integer, $3 \mid (m - p)$.
 
-**Proof of transitivity:** Suppose $m$, $n$, and $p$ are particular but arbitrarily chosen integers with $m \, T \, n$ and $n \, T \, p$. [It must be shown that $m \, T \, p$.] By definition of $T$, $3 \mid (m - n)$ and $3 \mid (n - p)$, and by definition of divides, $m - n = 3r$ and $n - p = 3s$ for some integers $r$ and $s$. Adding the two equations gives $(m - n) + (n - p) = 3r + 3s$, which simplifies to $m - p = 3(r + s)$. Since $r + s$ is an integer, $3 \mid (m - p)$, and by definition of $T$, $m \, T \, p$.
+**Proof of transitivity:** Suppose $m$, $n$, and $p$ are particular but arbitrarily chosen integers with $`m \, T \, n`$ and $`n \, T \, p`$. [It must be shown that $`m \, T \, p`$.] By definition of $T$, $3 \mid (m - n)$ and $3 \mid (n - p)$, and by definition of divides, $m - n = 3r$ and $n - p = 3s$ for some integers $r$ and $s$. Adding the two equations gives $(m - n) + (n - p) = 3r + 3s$, which simplifies to $m - p = 3(r + s)$. Since $r + s$ is an integer, $3 \mid (m - p)$, and by definition of $T$, $`m \, T \, p`$.
 
 > **Key Point:** To prove a property of a relation on an infinite set, write the definition as a universal conditional statement, take an arbitrary element satisfying the hypothesis, unfold the definition of the relation, and produce the form the conclusion requires (here, 3 times some integer). To show that a property fails, present one concrete counterexample.
 
@@ -595,9 +595,9 @@ The three conditions of the definition show that this function computes exactly 
 
 A fraction can represent the same number in many forms. For example, the following fractions all represent the same number.
 
-$$
+```math
 \frac{1}{2}, \quad \frac{2}{4}, \quad \frac{3}{6}, \quad \frac{-1}{-2}, \quad \frac{-3}{-6}, \quad \frac{15}{30}, \quad \ldots
-$$
+```
 
 The expressions differ in form and in name, yet all of them denote one number. Collecting objects that differ in form but agree in substance into a single group is the basic idea behind equivalence relations.
 
@@ -609,15 +609,15 @@ As defined in Chapter 6, a **partition** of a set $A$ is a finite or infinite co
 
 *Figure 12. Partition of a set A into six subsets*
 
-> **Definition:** Given a partition of a set $A$, the **relation induced by the partition**, $R$, is the relation on $A$ defined as follows for all $x, y \in A$: $x \, R \, y$ if, and only if, there is a subset $A_i$ of the partition that contains both $x$ and $y$.
+> **Definition:** Given a partition of a set $A$, the **relation induced by the partition**, $R$, is the relation on $A$ defined as follows for all $x, y \in A$: $`x \, R \, y`$ if, and only if, there is a subset $A_i$ of the partition that contains both $x$ and $y$.
 
 **Example 8.3.1 (Relation Induced by a Partition).** Find the relation $R$ induced by the partition $\lbrace 0, 3, 4 \rbrace$, $\lbrace 1 \rbrace$, $\lbrace 2 \rbrace$ of $A = \lbrace 0, 1, 2, 3, 4 \rbrace$.
 
-Since $\lbrace 0, 3, 4 \rbrace$ is a subset of the partition, any two elements chosen from this set, in either order, are related. For example, both 0 and 3 are in $\lbrace 0, 3, 4 \rbrace$, so $0 \, R \, 3$ and $3 \, R \, 0$. In the same way, $0 \, R \, 4$, $4 \, R \, 0$, $3 \, R \, 4$, and $4 \, R \, 3$. Also, both 0 and 0 are in $\lbrace 0, 3, 4 \rbrace$, so $0 \, R \, 0$, and for the same reason $3 \, R \, 3$ and $4 \, R \, 4$. Thus $\lbrace 0, 3, 4 \rbrace$ yields $3 \times 3 = 9$ ordered pairs. The set $\lbrace 1 \rbrace$ yields $1 \, R \, 1$, and $\lbrace 2 \rbrace$ yields $2 \, R \, 2$. Hence $R$ consists of the following 11 ordered pairs.
+Since $\lbrace 0, 3, 4 \rbrace$ is a subset of the partition, any two elements chosen from this set, in either order, are related. For example, both 0 and 3 are in $\lbrace 0, 3, 4 \rbrace$, so $`0 \, R \, 3`$ and $`3 \, R \, 0`$. In the same way, $`0 \, R \, 4`$, $`4 \, R \, 0`$, $`3 \, R \, 4`$, and $`4 \, R \, 3`$. Also, both 0 and 0 are in $\lbrace 0, 3, 4 \rbrace$, so $`0 \, R \, 0`$, and for the same reason $`3 \, R \, 3`$ and $`4 \, R \, 4`$. Thus $\lbrace 0, 3, 4 \rbrace$ yields $3 \times 3 = 9$ ordered pairs. The set $\lbrace 1 \rbrace$ yields $`1 \, R \, 1`$, and $\lbrace 2 \rbrace$ yields $`2 \, R \, 2`$. Hence $R$ consists of the following 11 ordered pairs.
 
-$$
+```math
 R = \lbrace (0, 0), (0, 3), (0, 4), (1, 1), (2, 2), (3, 0), (3, 3), (3, 4), (4, 0), (4, 3), (4, 4) \rbrace
-$$
+```
 
 > **Caution:** The sentence "both 0 and 0 are in $\lbrace 0, 3, 4 \rbrace$" may seem strange, but it is not false. The $x$ and $y$ of the definition may be the same element, so every element of a subset of the partition is related to itself.
 
@@ -625,19 +625,19 @@ A relation induced by a partition has all three properties studied in Section 2.
 
 > **Key Point:** **Theorem 8.3.1.** Let $A$ be a set with a partition, and let $R$ be the relation induced by the partition. Then $R$ is reflexive, symmetric, and transitive.
 
-**Proof:** For simpler notation, suppose the partition consists of finitely many subsets $A_1, A_2, \ldots, A_n$; an infinite partition is handled by the same argument with different indexing. By definition of a partition, $A_i \cap A_j = \emptyset$ whenever $i \ne j$, and $A_1 \cup A_2 \cup \cdots \cup A_n = A$. Also, for all $x, y \in A$, $x \, R \, y$ if, and only if, there is a subset $A_i$ of the partition with $x \in A_i$ and $y \in A_i$.
+**Proof:** For simpler notation, suppose the partition consists of finitely many subsets $A_1, A_2, \ldots, A_n$; an infinite partition is handled by the same argument with different indexing. By definition of a partition, $A_i \cap A_j = \emptyset$ whenever $i \ne j$, and $A_1 \cup A_2 \cup \cdots \cup A_n = A$. Also, for all $x, y \in A$, $`x \, R \, y`$ if, and only if, there is a subset $A_i$ of the partition with $x \in A_i$ and $y \in A_i$.
 
-**Idea for reflexivity.** $x \, R \, x$ means that $x$ lies in the same subset as itself, which is automatic once $x$ lies in some subset of the partition. And $x$ does lie in some subset, since together the subsets of the partition cover all of $A$.
+**Idea for reflexivity.** $`x \, R \, x`$ means that $x$ lies in the same subset as itself, which is automatic once $x$ lies in some subset of the partition. And $x$ does lie in some subset, since together the subsets of the partition cover all of $A$.
 
-**Proof of reflexivity:** Suppose $x \in A$. Since $A_1, A_2, \ldots, A_n$ is a partition of $A$, $x \in A_i$ for some $i$. Hence the statement "there is a subset $A_i$ of the partition such that $x \in A_i$ and $x \in A_i$" is true ($p$ and $p \wedge p$ are logically equivalent), and by definition of $R$, $x \, R \, x$.
+**Proof of reflexivity:** Suppose $x \in A$. Since $A_1, A_2, \ldots, A_n$ is a partition of $A$, $x \in A_i$ for some $i$. Hence the statement "there is a subset $A_i$ of the partition such that $x \in A_i$ and $x \in A_i$" is true ($p$ and $p \wedge p$ are logically equivalent), and by definition of $R$, $`x \, R \, x`$.
 
 **Idea for symmetry.** For $x$ to be related to $y$ means that $x$ and $y$ are in the same subset. Then $y$ is in the same subset as $x$, so $y$ is related to $x$.
 
-**Proof of symmetry:** Suppose $x, y \in A$ and $x \, R \, y$. By definition of $R$, there is a subset $A_i$ of the partition with $x \in A_i$ and $y \in A_i$. Since $p \wedge q$ and $q \wedge p$ are logically equivalent, the statement "there is a subset $A_i$ of the partition such that $y \in A_i$ and $x \in A_i$" is also true. Hence, by definition of $R$, $y \, R \, x$.
+**Proof of symmetry:** Suppose $x, y \in A$ and $`x \, R \, y`$. By definition of $R$, there is a subset $A_i$ of the partition with $x \in A_i$ and $y \in A_i$. Since $p \wedge q$ and $q \wedge p$ are logically equivalent, the statement "there is a subset $A_i$ of the partition such that $y \in A_i$ and $x \in A_i$" is also true. Hence, by definition of $R$, $`y \, R \, x`$.
 
 **Idea for transitivity.** If $x$ and $y$ are in one subset and $y$ and $z$ are in one subset, the two subsets have the element $y$ in common. Distinct subsets of a partition are disjoint, so the two subsets must be equal, and hence $x$, $y$, and $z$ are all in the same subset.
 
-**Proof of transitivity:** Suppose $x, y, z \in A$, $x \, R \, y$, and $y \, R \, z$. By definition of $R$, there are subsets $A_i$ and $A_j$ of the partition with $x, y \in A_i$ and $y, z \in A_j$. Suppose $A_i \ne A_j$ in order to derive a contradiction. Since $\lbrace A_1, A_2, \ldots, A_n \rbrace$ is a partition, $A_i \cap A_j = \emptyset$. But $y \in A_i$ and $y \in A_j$, so $y \in A_i \cap A_j$, that is, $A_i \cap A_j \ne \emptyset$. This is a contradiction, so $A_i = A_j$. Hence $x$, $y$, and $z$ are all in $A_i$; in particular, $x$ and $z$ are both in $A_i$, so $x \, R \, z$ by definition of $R$.
+**Proof of transitivity:** Suppose $x, y, z \in A$, $`x \, R \, y`$, and $`y \, R \, z`$. By definition of $R$, there are subsets $A_i$ and $A_j$ of the partition with $x, y \in A_i$ and $y, z \in A_j$. Suppose $A_i \ne A_j$ in order to derive a contradiction. Since $\lbrace A_1, A_2, \ldots, A_n \rbrace$ is a partition, $A_i \cap A_j = \emptyset$. But $y \in A_i$ and $y \in A_j$, so $y \in A_i \cap A_j$, that is, $A_i \cap A_j \ne \emptyset$. This is a contradiction, so $A_i = A_j$. Hence $x$, $y$, and $z$ are all in $A_i$; in particular, $x$ and $z$ are both in $A_i$, so $`x \, R \, z`$ by definition of $R$.
 
 ### 3.2 Definition and Examples of Equivalence Relations
 
@@ -649,33 +649,33 @@ By Theorem 8.3.1, the relation induced by a partition is an equivalence relation
 
 **Example 8.3.2 (An Equivalence Relation on a Set of Subsets).** Let $X$ be the set of all nonempty subsets of $\lbrace 1, 2, 3 \rbrace$.
 
-$$
+```math
 X = \lbrace \lbrace 1 \rbrace, \lbrace 2 \rbrace, \lbrace 3 \rbrace, \lbrace 1, 2 \rbrace, \lbrace 1, 3 \rbrace, \lbrace 2, 3 \rbrace, \lbrace 1, 2, 3 \rbrace \rbrace
-$$
+```
 
-Define a relation $\mathbf{R}$ on $X$ by $A \, \mathbf{R} \, B$ when the least element of $A$ equals the least element of $B$, for all $A, B \in X$. Prove that $\mathbf{R}$ is an equivalence relation.
+Define a relation $\mathbf{R}$ on $X$ by $`A \, \mathbf{R} \, B`$ when the least element of $A$ equals the least element of $B$, for all $A, B \in X$. Prove that $\mathbf{R}$ is an equivalence relation.
 
-- **Reflexivity:** Let $A$ be a nonempty subset of $\lbrace 1, 2, 3 \rbrace$. [It must be shown that $A \, \mathbf{R} \, A$.] The least element of $A$ equals the least element of $A$, so by definition of $\mathbf{R}$, $A \, \mathbf{R} \, A$.
-- **Symmetry:** Suppose $A$ and $B$ are elements of $X$ with $A \, \mathbf{R} \, B$. [It must be shown that $B \, \mathbf{R} \, A$.] The least element of $A$ equals the least element of $B$, so the least element of $B$ equals the least element of $A$, and hence $B \, \mathbf{R} \, A$.
-- **Transitivity:** Suppose $A$, $B$, and $C$ are elements of $X$ with $A \, \mathbf{R} \, B$ and $B \, \mathbf{R} \, C$. [It must be shown that $A \, \mathbf{R} \, C$.] The least element of $A$ equals that of $B$, and the least element of $B$ equals that of $C$, so the least element of $A$ equals the least element of $C$. Hence $A \, \mathbf{R} \, C$.
+- **Reflexivity:** Let $A$ be a nonempty subset of $\lbrace 1, 2, 3 \rbrace$. [It must be shown that $`A \, \mathbf{R} \, A`$.] The least element of $A$ equals the least element of $A$, so by definition of $\mathbf{R}$, $`A \, \mathbf{R} \, A`$.
+- **Symmetry:** Suppose $A$ and $B$ are elements of $X$ with $`A \, \mathbf{R} \, B`$. [It must be shown that $`B \, \mathbf{R} \, A`$.] The least element of $A$ equals the least element of $B$, so the least element of $B$ equals the least element of $A$, and hence $`B \, \mathbf{R} \, A`$.
+- **Transitivity:** Suppose $A$, $B$, and $C$ are elements of $X$ with $`A \, \mathbf{R} \, B`$ and $`B \, \mathbf{R} \, C`$. [It must be shown that $`A \, \mathbf{R} \, C`$.] The least element of $A$ equals that of $B$, and the least element of $B$ equals that of $C$, so the least element of $A$ equals the least element of $C$. Hence $`A \, \mathbf{R} \, C`$.
 
 In this proof, the existence of least elements is guaranteed because every element of $X$ is a nonempty finite set.
 
-**Example 8.3.3 (Equivalence of Digital Logic Circuits).** Fix a number $n$ of inputs, and let $S$ be the set of all digital logic circuits with $n$ inputs (Chapter 2). Define a relation $\mathbf{E}$ on $S$ by $C_1 \, \mathbf{E} \, C_2$ when $C_1$ and $C_2$ have the same input/output table, for all circuits $C_1, C_2 \in S$; in this case circuit $C_1$ is said to be **equivalent** to circuit $C_2$. Prove that $\mathbf{E}$ is an equivalence relation.
+**Example 8.3.3 (Equivalence of Digital Logic Circuits).** Fix a number $n$ of inputs, and let $S$ be the set of all digital logic circuits with $n$ inputs (Chapter 2). Define a relation $\mathbf{E}$ on $S$ by $`C_1 \, \mathbf{E} \, C_2`$ when $C_1$ and $C_2$ have the same input/output table, for all circuits $C_1, C_2 \in S$; in this case circuit $C_1$ is said to be **equivalent** to circuit $C_2$. Prove that $\mathbf{E}$ is an equivalence relation.
 
-- **Reflexivity:** Let $C$ be a circuit in $S$. $C$ has the same input/output table as itself, so $C \, \mathbf{E} \, C$.
-- **Symmetry:** Suppose $C_1 \, \mathbf{E} \, C_2$. $C_1$ has the same input/output table as $C_2$, so $C_2$ has the same input/output table as $C_1$, and hence $C_2 \, \mathbf{E} \, C_1$.
-- **Transitivity:** Suppose $C_1 \, \mathbf{E} \, C_2$ and $C_2 \, \mathbf{E} \, C_3$. $C_1$ has the same input/output table as $C_2$, and $C_2$ as $C_3$, so $C_1$ has the same input/output table as $C_3$. Hence $C_1 \, \mathbf{E} \, C_3$.
+- **Reflexivity:** Let $C$ be a circuit in $S$. $C$ has the same input/output table as itself, so $`C \, \mathbf{E} \, C`$.
+- **Symmetry:** Suppose $`C_1 \, \mathbf{E} \, C_2`$. $C_1$ has the same input/output table as $C_2$, so $C_2$ has the same input/output table as $C_1$, and hence $`C_2 \, \mathbf{E} \, C_1`$.
+- **Transitivity:** Suppose $`C_1 \, \mathbf{E} \, C_2`$ and $`C_2 \, \mathbf{E} \, C_3`$. $C_1$ has the same input/output table as $C_2$, and $C_2$ as $C_3$, so $C_1$ has the same input/output table as $C_3$. Hence $`C_1 \, \mathbf{E} \, C_3`$.
 
 Since $\mathbf{E}$ is reflexive, symmetric, and transitive, it is an equivalence relation on $S$.
 
 Some implementations of programming languages allow identifiers of any length, so programmers can make variable names as descriptive as they need. A compiler for such a language may nevertheless read only a fixed number of leading characters and disregard the rest. For example, a compiler that reads only the first eight characters treats `NumberOfScrews` and `NumberOfBolts` as one identifier, since both begin with `NumberOf`. A programmer using such a language must therefore make sure that distinct identifiers differ somewhere in their first eight characters. Grouping identifiers in this manner defines an equivalence relation on the set of all possible identifiers.
 
-**Example 8.3.4 (A Relation on a Set of Identifiers).** Let $L$ be the set of identifiers permitted in some programming language, and define a relation $R$ on $L$ by $s \, R \, t$ when the first eight characters of $s$ equal the first eight characters of $t$, for all strings $s, t \in L$. Prove that $R$ is an equivalence relation.
+**Example 8.3.4 (A Relation on a Set of Identifiers).** Let $L$ be the set of identifiers permitted in some programming language, and define a relation $R$ on $L$ by $`s \, R \, t`$ when the first eight characters of $s$ equal the first eight characters of $t$, for all strings $s, t \in L$. Prove that $R$ is an equivalence relation.
 
-- **Reflexivity:** Let $s \in L$. The first eight characters of $s$ equal its own first eight characters, so $s \, R \, s$.
-- **Symmetry:** Suppose $s, t \in L$ and $s \, R \, t$. The first eight characters of $s$ equal those of $t$, so the first eight characters of $t$ equal those of $s$, and hence $t \, R \, s$.
-- **Transitivity:** Suppose $s, t, u \in L$, $s \, R \, t$, and $t \, R \, u$. The first eight characters of $s$ and $t$ are equal, and those of $t$ and $u$ are equal, so those of $s$ and $u$ are equal. Hence $s \, R \, u$.
+- **Reflexivity:** Let $s \in L$. The first eight characters of $s$ equal its own first eight characters, so $`s \, R \, s`$.
+- **Symmetry:** Suppose $s, t \in L$ and $`s \, R \, t`$. The first eight characters of $s$ equal those of $t$, so the first eight characters of $t$ equal those of $s$, and hence $`t \, R \, s`$.
+- **Transitivity:** Suppose $s, t, u \in L$, $`s \, R \, t`$, and $`t \, R \, u`$. The first eight characters of $s$ and $t$ are equal, and those of $t$ and $u$ are equal, so those of $s$ and $u$ are equal. Hence $`s \, R \, u`$.
 
 > **Note:** The proofs in the three examples share one structure. When a relation is defined by the equality of some value (the least element, the input/output table, the first eight characters), the reflexivity, symmetry, and transitivity of equality carry over, and the relation is an equivalence relation.
 
@@ -687,19 +687,19 @@ Given an equivalence relation on a set, one can pick an element $a$ of the set a
 
 In symbols, it is the following.
 
-$$
+```math
 [a] = \lbrace x \in A \mid x \, R \, a \rbrace
-$$
+```
 
-Element by element, for every $x \in A$, $x \in [a] \iff x \, R \, a$. When several equivalence relations on one set are under discussion, the equivalence class of $a$ for the relation $R$ is written $[a]_R$.
+Element by element, for every $x \in A$, $`x \in [a] \iff x \, R \, a`$. When several equivalence relations on one set are under discussion, the equivalence class of $a$ for the relation $R$ is written $`[a]_R`$.
 
 > **Caution:** A relation on a set (a set of ordered pairs), the underlying set on which it is defined, and the equivalence class of an element of the underlying set (a subset of the underlying set) are different objects. For example, in Example 8.3.5 below, the relation $R$ is a set of 9 ordered pairs, the underlying set $A$ is a set of 5 elements, and $[0]$ is the subset $\lbrace 0, 4 \rbrace$ of $A$.
 
 **Example 8.3.5 (Equivalence Classes of a Relation Given as a Set of Ordered Pairs).** Define a relation $R$ on $A = \lbrace 0, 1, 2, 3, 4 \rbrace$ as follows.
 
-$$
+```math
 R = \lbrace (0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4) \rbrace
-$$
+```
 
 The directed graph of $R$ is shown in Figure 13, and inspecting it shows that $R$ is an equivalence relation on $A$: every vertex has a loop, every arrow goes both ways, and elements connected to one another are all related to one another, so there is no incomplete directed triangle.
 
@@ -718,7 +718,7 @@ graph LR
 
 To find the distinct equivalence classes of $R$, first find the equivalence class of every element of $A$. $[a]$ is the set of those $x$ for which the ordered pair $(x, a)$ is in $R$.
 
-$$
+```math
 \begin{aligned}
 [0] &= \lbrace x \in A \mid x \, R \, 0 \rbrace = \lbrace 0, 4 \rbrace \\
 [1] &= \lbrace x \in A \mid x \, R \, 1 \rbrace = \lbrace 1, 3 \rbrace \\
@@ -726,7 +726,7 @@ $$
 [3] &= \lbrace x \in A \mid x \, R \, 3 \rbrace = \lbrace 1, 3 \rbrace \\
 [4] &= \lbrace x \in A \mid x \, R \, 4 \rbrace = \lbrace 0, 4 \rbrace
 \end{aligned}
-$$
+```
 
 Since $[0] = [4]$ and $[1] = [3]$, the distinct equivalence classes are the three sets $\lbrace 0, 4 \rbrace$, $\lbrace 1, 3 \rbrace$, and $\lbrace 2 \rbrace$.
 
@@ -738,21 +738,21 @@ Finding the distinct equivalence classes of an equivalence relation usually take
 - The class of $\lbrace 2 \rbrace$ is the set of all subsets whose least element is 2, so $[\lbrace 2 \rbrace] = \lbrace \lbrace 2 \rbrace, \lbrace 2, 3 \rbrace \rbrace$.
 - The only subset whose least element is 3 is $\lbrace 3 \rbrace$ itself, so $[\lbrace 3 \rbrace] = \lbrace \lbrace 3 \rbrace \rbrace$.
 
-All seven elements of $X$ fall into one of these three classes ($4 + 2 + 1 = 7$), so no class is missing, and the three classes are distinct.
+All seven elements of $X$ fall into one of these three classes ($`4 + 2 + 1 = 7`$), so no class is missing, and the three classes are distinct.
 
 **Example 8.3.7 (Equivalence Classes of Identifiers).** Describe the distinct equivalence classes of the relation $R$ (having the same first eight characters) of Example 8.3.4. For any string $s$ in $L$, its class is as follows.
 
-$$
+```math
 [s] = \lbrace t \in L \mid t \, R \, s \rbrace
-$$
+```
 
 That is, $[s]$ is the set of all strings in $L$ whose first eight characters equal the first eight characters of $s$. Hence the distinct equivalence classes of $R$ are sets of strings satisfying the following two conditions. First, all strings in one class have the same first eight characters. Second, two strings taken from two distinct classes differ somewhere in their first eight characters.
 
-**Example 8.3.8 (Equivalence Classes of the Identity Relation).** Let $A$ be any set, and define a relation $R$ on $A$ by $x \, R \, y \iff x = y$ for all $x, y \in A$. Generalizing the argument of Example 8.2.2 shows that $R$ is an equivalence relation. For any $a \in A$, the following holds.
+**Example 8.3.8 (Equivalence Classes of the Identity Relation).** Let $A$ be any set, and define a relation $R$ on $A$ by $`x \, R \, y \iff x = y`$ for all $x, y \in A$. Generalizing the argument of Example 8.2.2 shows that $R$ is an equivalence relation. For any $a \in A$, the following holds.
 
-$$
+```math
 [a] = \lbrace x \in A \mid x \, R \, a \rbrace = \lbrace x \in A \mid x = a \rbrace = \lbrace a \rbrace
-$$
+```
 
 This is because the only element of $A$ that equals $a$ is $a$. Moreover, if $x \ne a$ then $\lbrace x \rbrace \ne \lbrace a \rbrace$, so the classes of all elements are distinct. Hence the distinct equivalence classes of $R$ are all the single-element subsets of $A$.
 
@@ -760,15 +760,15 @@ This is because the only element of $A$ that equals $a$ is $a$. Moreover, if $x 
 
 In every case from Example 8.3.5 through Example 8.3.8, the distinct equivalence classes were mutually disjoint and their union was the entire domain $A$ of the relation. That is, the set of equivalence classes formed a partition of $A$. This is no accident: the equivalence classes of an equivalence relation always partition the domain. This fact is proved in stages through two lemmas. The first lemma says that two elements related by an equivalence relation have the same equivalence class.
 
-> **Key Point:** **Lemma 8.3.2.** Suppose $A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are elements of $A$. If $a \, R \, b$, then $[a] = [b]$.
+> **Key Point:** **Lemma 8.3.2.** Suppose $A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are elements of $A$. If $`a \, R \, b`$, then $[a] = [b]$.
 
 Since $[a]$ and $[b]$ are sets and two sets are equal if, and only if, each is a subset of the other, the proof consists of a proof of $[a] \subseteq [b]$ and a proof of $[b] \subseteq [a]$. Each inclusion is proved by taking an arbitrary element of the set on the left and showing that it belongs to the set on the right.
 
-**Proof:** Let $A$ be a set and $R$ an equivalence relation on $A$, and suppose $a$ and $b$ are elements of $A$ with $a \, R \, b$. [It must be shown that $[a] = [b]$.]
+**Proof:** Let $A$ be a set and $R$ an equivalence relation on $A$, and suppose $a$ and $b$ are elements of $A$ with $`a \, R \, b`$. [It must be shown that $[a] = [b]$.]
 
-**Proof that $[a] \subseteq [b]$:** Suppose $x \in [a]$. [It must be shown that $x \in [b]$.] Since $x \in [a]$, $x \, R \, a$ by definition of class. By hypothesis, $a \, R \, b$. Since $R$ is transitive, $x \, R \, a$ and $a \, R \, b$ give $x \, R \, b$. Hence $x \in [b]$ by definition of class.
+**Proof that $[a] \subseteq [b]$:** Suppose $x \in [a]$. [It must be shown that $x \in [b]$.] Since $x \in [a]$, $`x \, R \, a`$ by definition of class. By hypothesis, $`a \, R \, b`$. Since $R$ is transitive, $`x \, R \, a`$ and $`a \, R \, b`$ give $`x \, R \, b`$. Hence $x \in [b]$ by definition of class.
 
-**Proof that $[b] \subseteq [a]$:** Suppose $x \in [b]$. [It must be shown that $x \in [a]$.] By definition of class, $x \, R \, b$. By hypothesis, $a \, R \, b$, and since $R$ is symmetric, $b \, R \, a$. Since $R$ is transitive, $x \, R \, b$ and $b \, R \, a$ give $x \, R \, a$. Hence $x \in [a]$ by definition of class.
+**Proof that $[b] \subseteq [a]$:** Suppose $x \in [b]$. [It must be shown that $x \in [a]$.] By definition of class, $`x \, R \, b`$. By hypothesis, $`a \, R \, b`$, and since $R$ is symmetric, $`b \, R \, a`$. Since $R$ is transitive, $`x \, R \, b`$ and $`b \, R \, a`$ give $`x \, R \, a`$. Hence $x \in [a]$ by definition of class.
 
 Since $[a] \subseteq [b]$ and $[b] \subseteq [a]$, $[a] = [b]$ by definition of set equality.
 
@@ -776,11 +776,11 @@ The second lemma states that two equivalence classes of the same equivalence rel
 
 > **Key Point:** **Lemma 8.3.3.** If $A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are elements of $A$, then either $[a] \cap [b] = \emptyset$ or $[a] = [b]$.
 
-The statement of Lemma 8.3.3 has the form "if $p$ then ($q$ or $r$)", where $p$ is "$A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are elements of $A$", $q$ is "$[a] \cap [b] = \emptyset$", and $r$ is "$[a] = [b]$". This statement is logically equivalent to "if ($p$ and not $q$) then $r$", so it suffices to prove the following: if $A$ is a set, $R$ is an equivalence relation on $A$, $a$ and $b$ are elements of $A$, and $[a] \cap [b] \ne \emptyset$, then $[a] = [b]$.
+The statement of Lemma 8.3.3 has the form "if $p$ then ($q$ or $`r`$)", where $p$ is "$`A`$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are elements of $A$", $q$ is "$`[a] \cap [b] = \emptyset`$", and $r$ is "$`[a] = [b]`$". This statement is logically equivalent to "if ($p$ and not $`q`$) then $r$", so it suffices to prove the following: if $A$ is a set, $R$ is an equivalence relation on $A$, $a$ and $b$ are elements of $A$, and $[a] \cap [b] \ne \emptyset$, then $[a] = [b]$.
 
-> **Note:** "If $p$ then ($q$ or $r$)" is logically equivalent to $\sim p \vee q \vee r$, and "if ($p$ and not $q$) then $r$" is $\sim(p \wedge \sim q) \vee r$, which by De Morgan's laws is logically equivalent to $\sim p \vee q \vee r$. Hence the two statements are logically equivalent, and for the same reason one may instead prove "if ($p$ and not $r$) then $q$".
+> **Note:** "If $p$ then ($q$ or $`r`$)" is logically equivalent to $\sim p \vee q \vee r$, and "if ($p$ and not $`q`$) then $r$" is $\sim(p \wedge \sim q) \vee r$, which by De Morgan's laws is logically equivalent to $\sim p \vee q \vee r$. Hence the two statements are logically equivalent, and for the same reason one may instead prove "if ($p$ and not $`r`$) then $q$".
 
-**Proof:** Suppose $A$ is a set, $R$ is an equivalence relation on $A$, $a$ and $b$ are elements of $A$, and $[a] \cap [b] \ne \emptyset$. [It must be shown that $[a] = [b]$.] Since $[a] \cap [b] \ne \emptyset$, there is an element $x \in A$ with $x \in [a] \cap [b]$. By definition of intersection, $x \in [a]$ and $x \in [b]$, and by definition of class, $x \, R \, a$ and $x \, R \, b$. Since $R$ is an equivalence relation, it is symmetric, and $x \, R \, a$ gives $a \, R \, x$. Also $R$ is transitive, so $a \, R \, x$ and $x \, R \, b$ give $a \, R \, b$. Now $a$ and $b$ satisfy the hypothesis of Lemma 8.3.2, so by that lemma, $[a] = [b]$.
+**Proof:** Suppose $A$ is a set, $R$ is an equivalence relation on $A$, $a$ and $b$ are elements of $A$, and $[a] \cap [b] \ne \emptyset$. [It must be shown that $[a] = [b]$.] Since $[a] \cap [b] \ne \emptyset$, there is an element $x \in A$ with $x \in [a] \cap [b]$. By definition of intersection, $x \in [a]$ and $x \in [b]$, and by definition of class, $`x \, R \, a`$ and $`x \, R \, b`$. Since $R$ is an equivalence relation, it is symmetric, and $`x \, R \, a`$ gives $`a \, R \, x`$. Also $R$ is transitive, so $`a \, R \, x`$ and $`x \, R \, b`$ give $`a \, R \, b`$. Now $a$ and $b$ satisfy the hypothesis of Lemma 8.3.2, so by that lemma, $[a] = [b]$.
 
 > **Key Point:** **Theorem 8.3.4 (The Partition Induced by an Equivalence Relation).** If $A$ is a set and $R$ is an equivalence relation on $A$, then the distinct equivalence classes of $R$ form a partition of $A$; that is, the union of the equivalence classes is all of $A$, and the intersection of any two distinct classes is empty.
 
@@ -788,13 +788,13 @@ The proof is divided into two parts. The first part, that $A$ is the union of th
 
 **Proof:** Let $A$ be a set and $R$ an equivalence relation on $A$. To keep the notation simple, assume that $R$ has finitely many distinct equivalence classes, denoted $A_1, A_2, \ldots, A_n$, where $n$ is a positive integer; with infinitely many classes the same argument works with different indexing.
 
-**Proof that $A = A_1 \cup A_2 \cup \cdots \cup A_n$:** The two inclusions are shown in turn. First, to show $A \subseteq A_1 \cup \cdots \cup A_n$, let $x$ be any element of $A$. Since $R$ is reflexive, $x \, R \, x$, and by definition of class, $x \in [x]$. Since $x$ is in some equivalence class, it is in one of the distinct classes $A_1, A_2, \ldots, A_n$. That is, $x \in A_i$ for some $i$, and by definition of union, $x \in A_1 \cup \cdots \cup A_n$. Next, to show $A_1 \cup \cdots \cup A_n \subseteq A$, let $x \in A_1 \cup \cdots \cup A_n$. By definition of union, $x \in A_i$ for some $i$. Each $A_i$ is an equivalence class of $R$, and equivalence classes are subsets of $A$, so $A_i \subseteq A$ and hence $x \in A$. From the two inclusions, $A = A_1 \cup A_2 \cup \cdots \cup A_n$ by definition of set equality.
+**Proof that $A = A_1 \cup A_2 \cup \cdots \cup A_n$:** The two inclusions are shown in turn. First, to show $A \subseteq A_1 \cup \cdots \cup A_n$, let $x$ be any element of $A$. Since $R$ is reflexive, $`x \, R \, x`$, and by definition of class, $x \in [x]$. Since $x$ is in some equivalence class, it is in one of the distinct classes $A_1, A_2, \ldots, A_n$. That is, $x \in A_i$ for some $i$, and by definition of union, $x \in A_1 \cup \cdots \cup A_n$. Next, to show $A_1 \cup \cdots \cup A_n \subseteq A$, let $x \in A_1 \cup \cdots \cup A_n$. By definition of union, $x \in A_i$ for some $i$. Each $A_i$ is an equivalence class of $R$, and equivalence classes are subsets of $A$, so $A_i \subseteq A$ and hence $x \in A$. From the two inclusions, $A = A_1 \cup A_2 \cup \cdots \cup A_n$ by definition of set equality.
 
 **Proof that the distinct classes are mutually disjoint:** Let $A_i$ and $A_j$ be any two distinct equivalence classes of $R$. [It must be shown that $A_i \cap A_j = \emptyset$.] Since the two classes are distinct, $A_i \ne A_j$. Also, since $A_i$ and $A_j$ are equivalence classes of $R$, there are elements $a, b \in A$ with $A_i = [a]$ and $A_j = [b]$. By Lemma 8.3.3, either $[a] \cap [b] = \emptyset$ or $[a] = [b]$. But $A_i \ne A_j$, so $[a] \ne [b]$, and hence $[a] \cap [b] = \emptyset$, that is, $A_i \cap A_j = \emptyset$.
 
-> **Key Point:** Taken together, Theorems 8.3.1 and 8.3.4 say that a partition of a set $A$ induces an equivalence relation on $A$, and an equivalence relation on $A$ induces a partition of $A$ (its equivalence classes). Moreover, the relation induced by the partition into the classes of an equivalence relation $R$ is $R$ itself. If $x$ and $y$ are in the same class $[a]$, then $x \, R \, a$ and $a \, R \, y$, so $x \, R \, y$; conversely, if $x \, R \, y$, then $x \in [y]$ and $y \in [y]$. Hence a partition and an equivalence relation express the same information in two ways.
+> **Key Point:** Taken together, Theorems 8.3.1 and 8.3.4 say that a partition of a set $A$ induces an equivalence relation on $A$, and an equivalence relation on $A$ induces a partition of $A$ (its equivalence classes). Moreover, the relation induced by the partition into the classes of an equivalence relation $R$ is $R$ itself. If $x$ and $y$ are in the same class $[a]$, then $`x \, R \, a`$ and $`a \, R \, y`$, so $`x \, R \, y`$; conversely, if $`x \, R \, y`$, then $x \in [y]$ and $y \in [y]$. Hence a partition and an equivalence relation express the same information in two ways.
 
-**Example 8.3.9 (Equivalence Classes of Digital Logic Circuits).** Example 8.3.3 showed that equivalence of circuits is an equivalence relation. Now restrict attention to the set $S$ of digital logic circuits that have exactly two inputs and one output, and define a relation $\mathbf{E}$ on $S$ so that $C_1 \, \mathbf{E} \, C_2$ for any two circuits $C_1$ and $C_2$ with the same input/output table. Describe the classes of this relation, count the distinct classes, and find two different circuits that belong to the same class.
+**Example 8.3.9 (Equivalence Classes of Digital Logic Circuits).** Example 8.3.3 showed that equivalence of circuits is an equivalence relation. Now restrict attention to the set $S$ of digital logic circuits that have exactly two inputs and one output, and define a relation $\mathbf{E}$ on $S$ so that $`C_1 \, \mathbf{E} \, C_2`$ for any two circuits $C_1$ and $C_2$ with the same input/output table. Describe the classes of this relation, count the distinct classes, and find two different circuits that belong to the same class.
 
 The class of a circuit $C$ consists of every circuit with two input signals and one output signal whose input/output table coincides with that of $C$. Each such table has four rows, one for each of the input combinations 11, 10, 01, and 00. Table 5 is one example of such an input/output table.
 
@@ -832,16 +832,16 @@ graph LR
 
 Example 8.2.4 showed that congruence modulo 3 is reflexive, symmetric, and transitive, so it is an equivalence relation.
 
-**Example 8.3.10 (Equivalence Classes of Congruence Modulo 3).** Let $R$ be congruence modulo 3 on the set $\mathbf{Z}$ of all integers, that is, the relation with $m \, R \, n \iff 3 \mid (m - n)$ for all integers $m$ and $n$. Describe the distinct equivalence classes of $R$.
+**Example 8.3.10 (Equivalence Classes of Congruence Modulo 3).** Let $R$ be congruence modulo 3 on the set $\mathbf{Z}$ of all integers, that is, the relation with $`m \, R \, n \iff 3 \mid (m - n)`$ for all integers $m$ and $n$. Describe the distinct equivalence classes of $R$.
 
 For each integer $a$, applying the definition of class and then the definition of divides gives the following.
 
-$$
+```math
 \begin{aligned}
 [a] &= \lbrace x \in \mathbf{Z} \mid x \, R \, a \rbrace = \lbrace x \in \mathbf{Z} \mid 3 \mid (x - a) \rbrace \\
 &= \lbrace x \in \mathbf{Z} \mid \exists k \in \mathbf{Z}, \ x - a = 3k \rbrace = \lbrace x \in \mathbf{Z} \mid \exists k \in \mathbf{Z}, \ x = 3k + a \rbrace
 \end{aligned}
-$$
+```
 
 In particular, for $a = 0, 1, 2$ the classes are as in Table 6.
 
@@ -853,11 +853,11 @@ In particular, for $a = 0, 1, 2$ the classes are as in Table 6.
 
 *Table 6. The three equivalence classes of congruence modulo 3*
 
-Since $3 \, R \, 0$, Lemma 8.3.2 gives $[3] = [0]$. By the same reasoning, the following hold.
+Since $`3 \, R \, 0`$, Lemma 8.3.2 gives $[3] = [0]$. By the same reasoning, the following hold.
 
-$$
+```math
 [0] = [3] = [-3] = [6] = [-6] = \cdots, \quad [1] = [4] = [-2] = [7] = [-5] = \cdots, \quad [2] = [5] = [-1] = [8] = [-4] = \cdots
-$$
+```
 
 By the quotient-remainder theorem (Chapter 4), every integer can be written in exactly one of the forms $3k$, $3k + 1$, $3k + 2$, so every integer is in one of $[0]$, $[1]$, $[2]$. Hence there are exactly three distinct classes: the multiples of 3, the integers whose remainder on division by 3 is 1, and the integers whose remainder on division by 3 is 2.
 
@@ -865,13 +865,13 @@ Example 8.3.10 also illustrates an important point about equivalence classes: on
 
 > **Definition:** Let $R$ be an equivalence relation on a set $A$ and $S$ an equivalence class of $R$. An element $a$ with $[a] = S$ is called a **representative** of the class $S$.
 
-Every element of an equivalence class $S$ is a representative of $S$. If $S = [b]$ and $a \in S$, then $a \, R \, b$, so Lemma 8.3.2 gives $[a] = [b] = S$. For example, $-6$, 0, and 9 are all representatives of the class $[0]$ of congruence modulo 3.
+Every element of an equivalence class $S$ is a representative of $S$. If $S = [b]$ and $a \in S$, then $`a \, R \, b`$, so Lemma 8.3.2 gives $[a] = [b] = S$. For example, $-6$, 0, and 9 are all representatives of the class $[0]$ of congruence modulo 3.
 
 For congruence relations, the following notation, introduced by Gauss in his book *Disquisitiones Arithmeticae*, is widely used.
 
 > **Definition:** Let $m$ and $n$ be integers and $d$ a positive integer. $m$ is **congruent to $n$ modulo $d$**, written $m \equiv n \pmod{d}$, if, and only if, $d \mid (m - n)$. In symbols, $m \equiv n \pmod{d} \iff d \mid (m - n)$.
 
-For integers $m$ and $n$ and a positive integer $d$, $m \equiv n \pmod{d}$ if, and only if, $m \bmod d = n \bmod d$, that is, $m$ and $n$ leave the same remainder when divided by $d$. By the quotient-remainder theorem, writing $m = dq_1 + r_1$ and $n = dq_2 + r_2$ ($0 \le r_1, r_2 < d$) gives $m - n = d(q_1 - q_2) + (r_1 - r_2)$ with $-d < r_1 - r_2 < d$. Hence $d \mid (m - n)$ if, and only if, $d \mid (r_1 - r_2)$, and since the only multiple of $d$ strictly between $-d$ and $d$ is 0, this is the same as $r_1 = r_2$.
+For integers $m$ and $n$ and a positive integer $d$, $m \equiv n \pmod{d}$ if, and only if, $m \bmod d = n \bmod d$, that is, $m$ and $n$ leave the same remainder when divided by $d$. By the quotient-remainder theorem, writing $m = dq_1 + r_1$ and $n = dq_2 + r_2$ ($`0 \le r_1, r_2 < d`$) gives $m - n = d(q_1 - q_2) + (r_1 - r_2)$ with $-d < r_1 - r_2 < d$. Hence $d \mid (m - n)$ if, and only if, $d \mid (r_1 - r_2)$, and since the only multiple of $d$ strictly between $-d$ and $d$ is 0, this is the same as $r_1 = r_2$.
 
 **Example 8.3.11 (Evaluating Congruences).** Decide which of the following congruences are true and which are false.
 
@@ -892,9 +892,9 @@ Congruence explains integer arithmetic in computers. Chapter 2 used a simplified
 
 The result $100100000_2$ is 288, which is too large for an 8-bit representation. But the rule for two's complement computation says to discard the 1 in the ninth position from the right, the $2^8$ place. When this 1 is discarded, the result is $00100000_2 = 32$, the correct answer. The reason the method works is as follows. Read in decimal, the two's complements of 78 and $-46$ are 78 and $2^8 - 46$, and the following holds.
 
-$$
+```math
 78 + (2^8 - 46) = 2^8 + (78 - 46) \equiv 78 - 46 \pmod{2^8}
-$$
+```
 
 Hence reducing $78 + (2^8 - 46)$ modulo $2^8$ gives the correct result $78 - 46 = 32$. In binary notation, the bit in the $2^8$ place stands for $2^8$, so discarding that bit is the same as reducing modulo $2^8$.
 
@@ -904,27 +904,27 @@ Set aside the rules of fraction arithmetic for a moment and regard $\frac{1}{3}$
 
 **Example 8.3.12 (Rational Numbers Are Equivalence Classes).** Let $A$ be the set of all ordered pairs of integers whose second component is nonzero, that is, $A = \mathbf{Z} \times (\mathbf{Z} - \lbrace 0 \rbrace)$. Define a relation $R$ on $A$ as follows for all $(a, b), (c, d) \in A$.
 
-$$
+```math
 (a, b) \, R \, (c, d) \iff ad = bc
-$$
+```
 
-**Reflexivity and symmetry.** For every $(a, b) \in A$, $ab = ba$ by the commutative law of multiplication, so $(a, b) \, R \, (a, b)$. Also, if $(a, b) \, R \, (c, d)$, then $ad = bc$, and interchanging the two sides and using commutativity gives $cb = da$, so $(c, d) \, R \, (a, b)$.
+**Reflexivity and symmetry.** For every $(a, b) \in A$, $ab = ba$ by the commutative law of multiplication, so $`(a, b) \, R \, (a, b)`$. Also, if $`(a, b) \, R \, (c, d)`$, then $ad = bc$, and interchanging the two sides and using commutativity gives $cb = da$, so $`(c, d) \, R \, (a, b)`$.
 
-**Transitivity.** [It must be shown that for all $(a, b), (c, d), (e, f) \in A$, if $(a, b) \, R \, (c, d)$ and $(c, d) \, R \, (e, f)$, then $(a, b) \, R \, (e, f)$.] Suppose $(a, b)$, $(c, d)$, and $(e, f)$ are particular but arbitrarily chosen elements of $A$ with $(a, b) \, R \, (c, d)$ and $(c, d) \, R \, (e, f)$. By definition of $R$, the following two equations hold.
+**Transitivity.** [It must be shown that for all $(a, b), (c, d), (e, f) \in A$, if $`(a, b) \, R \, (c, d)`$ and $`(c, d) \, R \, (e, f)`$, then $`(a, b) \, R \, (e, f)`$.] Suppose $(a, b)$, $(c, d)$, and $(e, f)$ are particular but arbitrarily chosen elements of $A$ with $`(a, b) \, R \, (c, d)`$ and $`(c, d) \, R \, (e, f)`$. By definition of $R$, the following two equations hold.
 
-$$
+```math
 (1) \ ad = bc, \qquad (2) \ cf = de
-$$
+```
 
-Every ordered pair in $A$ has a nonzero second component, so $b \ne 0$, $d \ne 0$, and $f \ne 0$. Multiplying both sides of equation (1) by $f$ and both sides of equation (2) by $b$ gives $adf = bcf$ and $bcf = bde$. Since both equal $bcf$, $adf = bde$. Since $d \ne 0$, the cancellation law for multiplication allows $d$ to be canceled from both sides, giving $af = be$. Hence, by definition of $R$, $(a, b) \, R \, (e, f)$.
+Every ordered pair in $A$ has a nonzero second component, so $b \ne 0$, $d \ne 0$, and $f \ne 0$. Multiplying both sides of equation (1) by $f$ and both sides of equation (2) by $b$ gives $adf = bcf$ and $bcf = bde$. Since both equal $bcf$, $adf = bde$. Since $d \ne 0$, the cancellation law for multiplication allows $d$ to be canceled from both sides, giving $af = be$. Hence, by definition of $R$, $`(a, b) \, R \, (e, f)`$.
 
 > **Caution:** The proof of transitivity cancels $d$ using $d \ne 0$. If ordered pairs with second component 0 were allowed, transitivity would fail. For example, $(1, 2)$ would be related to $(0, 0)$ because $1 \cdot 0 = 2 \cdot 0$, and $(0, 0)$ would be related to $(3, 5)$ because $0 \cdot 5 = 0 \cdot 3$, but $(1, 2)$ would not be related to $(3, 5)$ because $1 \cdot 5 = 5 \ne 6 = 2 \cdot 3$.
 
 **Equivalence classes.** Two pairs are related exactly when the fractions they represent are equal, so each class consists of all pairs $(a, b)$ whose fractions $\frac{a}{b}$ share one common value, and there is exactly one class for each rational number. The class of $(1, 2)$, for example, is the following.
 
-$$
+```math
 [(1, 2)] = \lbrace (1, 2), (-1, -2), (2, 4), (-2, -4), (3, 6), (-3, -6), \ldots \rbrace
-$$
+```
 
 Indeed, $\frac{1}{2} = \frac{-1}{-2} = \frac{2}{4} = \frac{-2}{-4} = \frac{3}{6} = \frac{-3}{-6}$.
 
@@ -942,9 +942,9 @@ Suppose a computer science degree at some university requires a fixed list of co
 
 Section 2 defined reflexivity, symmetry, and transitivity; a fourth property of relations is antisymmetry. In an arrow diagram, antisymmetry means that an arrow from one element to a different element is never accompanied by an arrow going back in the reverse direction.
 
-> **Definition:** Let $R$ be a relation on a set $A$. $R$ is **antisymmetric** if, and only if, for all $a, b \in A$, if $a \, R \, b$ and $b \, R \, a$ then $a = b$.
+> **Definition:** Let $R$ be a relation on a set $A$. $R$ is **antisymmetric** if, and only if, for all $a, b \in A$, if $`a \, R \, b`$ and $`b \, R \, a`$ then $a = b$.
 
-Negating the definition, $R$ is not antisymmetric if, and only if, there are elements $a, b \in A$ with $a \, R \, b$ and $b \, R \, a$ but $a \ne b$.
+Negating the definition, $R$ is not antisymmetric if, and only if, there are elements $a, b \in A$ with $`a \, R \, b`$ and $`b \, R \, a`$ but $a \ne b$.
 
 > **Caution:** Being antisymmetric is not the same as not being symmetric. The relation $\lbrace (0, 0), (1, 1) \rbrace$ on the set $\lbrace 0, 1 \rbrace$ is both symmetric and antisymmetric, and the relation $\lbrace (0, 1), (1, 0), (0, 2) \rbrace$ on the set $\lbrace 0, 1, 2 \rbrace$ is neither symmetric nor antisymmetric. Antisymmetry is the condition that no two distinct elements have arrows in both directions between them, and loops have nothing to do with this condition.
 
@@ -968,18 +968,18 @@ graph LR
 
 *Figure 16. Directed graphs of the two relations of Example 8.5.1*
 
-- $R_1$ is not antisymmetric. $0 \, R_1 \, 2$ and $2 \, R_1 \, 0$, but $0 \ne 2$.
+- $R_1$ is not antisymmetric. $`0 \, R_1 \, 2`$ and $`2 \, R_1 \, 0`$, but $0 \ne 2$.
 - $R_2$ is antisymmetric. For $R_2$ not to be antisymmetric, there would have to be a pair of distinct elements each related to the other, and inspection of the graph shows that no such pair exists. None of the non-loop arrows $0 \to 1$, $0 \to 2$, $1 \to 2$ has a reverse arrow.
 
-**Example 8.5.2 (Testing for Antisymmetry of Divides Relations).** Let $R_1$ be the divides relation on the set $\mathbf{Z}^{+}$ of all positive integers, and let $R_2$ be the divides relation on the set $\mathbf{Z}$ of all integers. That is, $a \, R_1 \, b \iff a \mid b$ for all $a, b \in \mathbf{Z}^{+}$, and $a \, R_2 \, b \iff a \mid b$ for all $a, b \in \mathbf{Z}$.
+**Example 8.5.2 (Testing for Antisymmetry of Divides Relations).** Let $R_1$ be the divides relation on the set $\mathbf{Z}^{+}$ of all positive integers, and let $R_2$ be the divides relation on the set $\mathbf{Z}$ of all integers. That is, $`a \, R_1 \, b \iff a \mid b`$ for all $a, b \in \mathbf{Z}^{+}$, and $`a \, R_2 \, b \iff a \mid b`$ for all $a, b \in \mathbf{Z}$.
 
 **$R_1$ is antisymmetric.**
 
-**Proof:** Suppose $a$ and $b$ are positive integers with $a \, R_1 \, b$ and $b \, R_1 \, a$. [It must be shown that $a = b$.] By definition of $R_1$, $a \mid b$ and $b \mid a$. By definition of divides, there are integers $k_1$ and $k_2$ with $b = k_1 a$ and $a = k_2 b$. By substitution, $b = k_1 a = k_1 (k_2 b) = (k_1 k_2) b$, and since $b$ is positive and hence nonzero, dividing both sides by $b$ gives $k_1 k_2 = 1$. Also, since $a$ and $b$ are positive integers, $k_1 = b / a$ and $k_2 = a / b$ are positive, hence positive integers. The only product of two positive integers that equals 1 is $1 \cdot 1$, so $k_1 = k_2 = 1$, and therefore $a = k_2 b = 1 \cdot b = b$.
+**Proof:** Suppose $a$ and $b$ are positive integers with $`a \, R_1 \, b`$ and $`b \, R_1 \, a`$. [It must be shown that $a = b$.] By definition of $R_1$, $a \mid b$ and $b \mid a$. By definition of divides, there are integers $k_1$ and $k_2$ with $b = k_1 a$ and $a = k_2 b$. By substitution, $b = k_1 a = k_1 (k_2 b) = (k_1 k_2) b$, and since $b$ is positive and hence nonzero, dividing both sides by $b$ gives $k_1 k_2 = 1$. Also, since $a$ and $b$ are positive integers, $k_1 = b / a$ and $k_2 = a / b$ are positive, hence positive integers. The only product of two positive integers that equals 1 is $1 \cdot 1$, so $k_1 = k_2 = 1$, and therefore $a = k_2 b = 1 \cdot b = b$.
 
 **$R_2$ is not antisymmetric.**
 
-**Counterexample:** Let $a = 2$ and $b = -2$. Then $a \mid b$ because $-2 = (-1) \cdot 2$, and $b \mid a$ because $2 = (-1) \cdot (-2)$. Hence $a \, R_2 \, b$ and $b \, R_2 \, a$, but $a \ne b$.
+**Counterexample:** Let $a = 2$ and $b = -2$. Then $a \mid b$ because $-2 = (-1) \cdot 2$, and $b \mid a$ because $2 = (-1) \cdot (-2)$. Hence $`a \, R_2 \, b`$ and $`b \, R_2 \, a`$, but $a \ne b$.
 
 Example 8.5.2 shows that one defining rule can give an antisymmetric relation on a subset of a set and a relation that is not antisymmetric on the whole set. The key to the proof for $R_1$ was that $k_1$ and $k_2$ are positive; once negative numbers are allowed, $k_1 = k_2 = -1$ also becomes possible.
 
@@ -991,11 +991,11 @@ The less-than-or-equal-to relation on a set of real numbers and the subset relat
 
 **Example 8.5.3 (The Subset Relation).** Let $\mathcal{A}$ be any collection of sets, and define the subset relation $\subseteq$ on $\mathcal{A}$ as follows for all $U, V \in \mathcal{A}$.
 
-$$
+```math
 U \subseteq V \iff \forall x, \ x \in U \Rightarrow x \in V
-$$
+```
 
-$\subseteq$ is reflexive (every element of a set is an element of that set) and transitive (if $U \subseteq V$ and $V \subseteq W$, an element of $U$ is in $V$ and hence in $W$). For $\subseteq$ to be antisymmetric means that for all $U, V \in \mathcal{A}$, if $U \subseteq V$ and $V \subseteq U$ then $U = V$, which is exactly the definition of set equality. Hence $\subseteq$ is a partial order relation.
+$\subseteq$ is reflexive (every element of a set is an element of that set) and transitive (if $U \subseteq V$ and $V \subseteq W$, an element of $U$ is in $V$ and hence in $`W`$). For $\subseteq$ to be antisymmetric means that for all $U, V \in \mathcal{A}$, if $U \subseteq V$ and $V \subseteq U$ then $U = V$, which is exactly the definition of set equality. Hence $\subseteq$ is a partial order relation.
 
 **Example 8.5.4 (A Divides Relation on a Set of Positive Integers).** Let $A$ be a set of positive integers, and let $\mid$ be the divides relation on $A$, that is, $a \mid b \iff b = ka$ for some integer $k$, for all $a, b \in A$. Prove that $\mid$ is a partial order relation.
 
@@ -1013,7 +1013,7 @@ Since $\mid$ is reflexive, antisymmetric, and transitive, it is a partial order 
 
 Since $\le$ is reflexive, antisymmetric, and transitive, it is a partial order relation.
 
-> **Note:** **Notation.** Because $\le$ is the paradigm of partial order relations, a general partial order relation is often denoted by the symbol $\preceq$. The notation $x \preceq y$ is read "$x$ is less than or equal to $y$" or "$y$ is greater than or equal to $x$". Here less and greater refer not to the size of numbers but to positions in the given partial order.
+> **Note:** **Notation.** Because $\le$ is the paradigm of partial order relations, a general partial order relation is often denoted by the symbol $\preceq$. The notation $x \preceq y$ is read "$`x`$ is less than or equal to $y$" or "$`y`$ is greater than or equal to $x$". Here less and greater refer not to the size of numbers but to positions in the given partial order.
 
 ### 4.3 Lexicographic Order
 
@@ -1021,34 +1021,34 @@ A dictionary orders two words by scanning them from the left, one letter at a ti
 
 The same idea defines a lexicographic order on a set of strings over any set $A$ that has a partial order relation, as the following theorem states.
 
-> **Key Point:** **Theorem 8.5.1 (Lexicographic Order).** Let $A$ be a set with a partial order relation $R$, let $S$ be a set of strings over $A$, and define a relation $\preceq$ on $S$ as follows. Let $s$ and $t$ be any strings in $S$ of positive lengths $m$ and $n$, respectively, and let $s_k$ and $t_k$ be the $k$th characters of $s$ and $t$, respectively.
+> **Key Point:** **Theorem 8.5.1 (Lexicographic Order).** Let $A$ be a set with a partial order relation $R$, let $S$ be a set of strings over $A$, and define a relation $\preceq$ on $S$ as follows. Let $s$ and $t$ be any strings in $S$ of positive lengths $m$ and $n$, respectively, and let $s_k$ and $t_k$ be the $`k`$th characters of $s$ and $t$, respectively.
 > 1. If $m \le n$ and the first $m$ characters of $s$ and $t$ are the same, that is, $s$ is an initial part of $t$, then $s \preceq t$.
-> 2. If, for some positive integer $k \le \min(m, n)$, the first $k - 1$ characters of $s$ and $t$ are the same, $s_k \, R \, t_k$, and $s_k \ne t_k$, then $s \preceq t$.
+> 2. If, for some positive integer $k \le \min(m, n)$, the first $k - 1$ characters of $s$ and $t$ are the same, $`s_k \, R \, t_k`$, and $s_k \ne t_k$, then $s \preceq t$.
 > 3. If $\lambda$ is the null string, then $\lambda \preceq s$ for every $s \in S$.
 >
 > If no strings are related by $\preceq$ other than by these three conditions, then $\preceq$ is a partial order relation on $S$.
 
 > **Definition:** The partial order relation $\preceq$ of Theorem 8.5.1 is called the **lexicographic order** for $S$ that corresponds to the partial order $R$ on $A$.
 
-Proving Theorem 8.5.1 takes some careful bookkeeping but no new idea. For example, reflexivity follows at once from condition 1 with $t = s$ ($m = n$). Condition 1 corresponds to the dictionary rule that puts play before playhouse, and condition 2 to the rule that puts playhouse before playmate.
+Proving Theorem 8.5.1 takes some careful bookkeeping but no new idea. For example, reflexivity follows at once from condition 1 with $t = s$ ($`m = n`$). Condition 1 corresponds to the dictionary rule that puts play before playhouse, and condition 2 to the rule that puts playhouse before playmate.
 
 > **Note:** Theorem 8.5.1 in the textbook uses the letter $m$ in condition 2 as well, but there $m$ must be read not as the length of $s$ but as the position at which the two strings first differ. For example, $xxxyyy \preceq xy$ in Example 8.5.6 below holds by condition 2 with $k = 2$, because the strings first differ at the second character; reading that position as the length 6 of $s$ would make condition 2 inapplicable. The statement above makes this clear by writing the position separately as $k$.
 
-**Example 8.5.6 (Testing Strings for Lexicographic Order).** Let $R = \lbrace (x, x), (x, y), (y, y) \rbrace$ be a partial order relation on $A = \lbrace x, y \rbrace$; that is, $x \, R \, y$ but $y$ is not related to $x$. Let $S$ be the set of all strings over $A$, and let $\preceq$ be the lexicographic order for $S$ that corresponds to $R$. Table 7 gives the answers for several pairs.
+**Example 8.5.6 (Testing Strings for Lexicographic Order).** Let $R = \lbrace (x, x), (x, y), (y, y) \rbrace$ be a partial order relation on $A = \lbrace x, y \rbrace$; that is, $`x \, R \, y`$ but $y$ is not related to $x$. Let $S$ be the set of all strings over $A$, and let $\preceq$ be the lexicographic order for $S$ that corresponds to $R$. Table 7 gives the answers for several pairs.
 
 | Question | Answer | Reason |
 |:---|:---:|:---|
 | $x \preceq x$? | Yes | Condition 1: $m = n = 1$ and the first character is the same |
 | $x \preceq xx$? | Yes | Condition 1: $x$ is an initial part of $xx$ |
 | $yx \preceq yxy$? | Yes | Condition 1: $yx$ is an initial part of $yxy$ |
-| $xxxyyy \preceq xy$? | Yes | Condition 2: the first characters agree, and at the second character $x \, R \, y$ with $x \ne y$ |
+| $xxxyyy \preceq xy$? | Yes | Condition 2: the first characters agree, and at the second character $`x \, R \, y`$ with $x \ne y$ |
 | $x \preceq y$? | Yes | Condition 2: $k = 1$, and the condition that the first zero characters agree is vacuously true |
 | $\lambda \preceq xy$? | Yes | Condition 3 |
 | $xyy \preceq xyx$? | No | At the third character, where they first differ, $y$ is not related to $x$ by $R$ |
 
 *Table 7. Lexicographic order decisions of Example 8.5.6*
 
-In the last case, $xyy$ is not an initial part of $xyx$ either, so condition 1 does not apply. Rather, $x \, R \, y$ at the third character, so $xyx \preceq xyy$. Under the less-than-or-equal-to relation on real numbers, as under the dictionary order of words, every two elements can be compared; Section 4.5 calls such orders total orders.
+In the last case, $xyy$ is not an initial part of $xyx$ either, so condition 1 does not apply. Rather, $`x \, R \, y`$ at the third character, so $xyx \preceq xyy$. Under the less-than-or-equal-to relation on real numbers, as under the dictionary order of words, every two elements can be compared; Section 4.5 calls such orders total orders.
 
 ### 4.4 Hasse Diagrams
 
@@ -1094,9 +1094,9 @@ graph BT
 
 *Figure 18. Hasse diagram of the divides relation on the set {1, 2, 3, 9, 18}*
 
-**Example 8.5.7 (Constructing a Hasse Diagram).** Construct the Hasse diagram of the subset relation $\subseteq$ on $\mathcal{P}(\lbrace a, b, c \rbrace)$, that is, $U \subseteq V \iff \forall x, \ x \in U \Rightarrow x \in V$ for all $U, V \in \mathcal{P}(\lbrace a, b, c \rbrace)$.
+**Example 8.5.7 (Constructing a Hasse Diagram).** Construct the Hasse diagram of the subset relation $\subseteq$ on $\mathcal{P}(\lbrace a, b, c \rbrace)$, that is, $`U \subseteq V \iff \forall x, \ x \in U \Rightarrow x \in V`$ for all $U, V \in \mathcal{P}(\lbrace a, b, c \rbrace)$.
 
-When the directed graph is drawn so that all arrows except loops point upward, the sets with 0, 1, 2, and 3 elements form layers from the bottom, and there is an arrow from each set to every set containing it. Removing the loops, the arrows implied by transitivity (for example, $\emptyset \to \lbrace a, b \rbrace$ is implied by $\emptyset \to \lbrace a \rbrace \to \lbrace a, b \rbrace$), and the arrowheads leaves a line between two sets only when the larger set is obtained from the smaller one by adding exactly one element. The result is shown in Figure 19.
+When the directed graph is drawn so that all arrows except loops point upward, the sets with 0, 1, 2, and 3 elements form layers from the bottom, and there is an arrow from each set to every set containing it. Removing the loops, the arrows implied by transitivity (for example, $\emptyset \to \lbrace a, b \rbrace$ is implied by $`\emptyset \to \lbrace a \rbrace \to \lbrace a, b \rbrace`$), and the arrowheads leaves a line between two sets only when the larger set is obtained from the smaller one by adding exactly one element. The result is shown in Figure 19.
 
 ```mermaid
 graph BT
@@ -1175,7 +1175,7 @@ For any two real numbers $x$ and $y$, at least one of $x \le y$ and $y \le x$ ho
 
 A partial order relation under which every two elements are comparable is called a total order.
 
-> **Definition:** If $R$ is a partial order relation on a set $A$, and for any two elements $a$ and $b$ of $A$ either $a \, R \, b$ or $b \, R \, a$, then $R$ is called a **total order relation**, or a **total order**, on $A$.
+> **Definition:** If $R$ is a partial order relation on a set $A$, and for any two elements $a$ and $b$ of $A$ either $`a \, R \, b`$ or $`b \, R \, a`$, then $R$ is called a **total order relation**, or a **total order**, on $A$.
 
 The less-than-or-equal-to relation on any set of real numbers and the dictionary order of words are both total order relations, and the Hasse diagram of a total order relation is one vertical chain. Many partial orders of practical importance, however, contain noncomparable elements and therefore are not total orders. For instance, the subset relation on $\mathcal{P}(\lbrace a, b, c \rbrace)$ is not a total order because $\lbrace a, b \rbrace$ and $\lbrace a, c \rbrace$ are noncomparable. Divides relations are often not total orders either; in Figure 18, for example, neither of 2 and 3 divides the other. On a set of positive integers, the divides relation is a total order exactly when each element divides the next one once the elements are listed in increasing order, as in $\lbrace 1, 2, 4, 8 \rbrace$ or $\lbrace 2, 6, 12 \rbrace$.
 
@@ -1239,15 +1239,15 @@ graph BT
 
 The sets of $\mathcal{P}(\lbrace a, b, c \rbrace)$ can be entered into a computer in an order consistent with the subset relation $\subseteq$, that is, so that $U$ comes before $V$ whenever $U \subseteq V$. For instance, the following input order satisfies this condition.
 
-$$
+```math
 \emptyset, \ \lbrace a \rbrace, \ \lbrace b \rbrace, \ \lbrace c \rbrace, \ \lbrace a, b \rbrace, \ \lbrace a, c \rbrace, \ \lbrace b, c \rbrace, \ \lbrace a, b, c \rbrace
-$$
+```
 
 Another input order with the same property is the following.
 
-$$
+```math
 \emptyset, \ \lbrace a \rbrace, \ \lbrace b \rbrace, \ \lbrace a, b \rbrace, \ \lbrace c \rbrace, \ \lbrace b, c \rbrace, \ \lbrace a, c \rbrace, \ \lbrace a, b, c \rbrace
-$$
+```
 
 > **Definition:** Given partial order relations $\preceq$ and $\preceq'$ on a set $A$, $\preceq'$ is **compatible** with $\preceq$ if, and only if, for all $a$ and $b$ in $A$, if $a \preceq b$ then $a \preceq' b$.
 
@@ -1392,9 +1392,9 @@ graph LR
 
 The minimum time needed to assemble a car is found by moving through the diagram from left to right and recording the minimum completion time of each task. Task 1 takes 7 hours, so its minimum completion time is 7. Task 2 can start only when task 1 ends (at 7 hours) and then takes 6 more hours, so its time is $7 + 6 = 13$; similarly, task 3 gives $7 + 3 = 10$. Task 5 must wait until both tasks 2 and 3 are finished, so its minimum completion time is its own 3 hours added to the larger of their minimum completion times, 13 and 10: $3 + 13 = 16$. In general, the minimum completion time $F(k)$ of task $k$ is the following.
 
-$$
+```math
 F(k) = t(k) + \max \lbrace F(p) \mid p \in P(k) \rbrace
-$$
+```
 
 Here $t(k)$ is the time needed for task $k$ and $P(k)$ is the set of immediately preceding tasks of task $k$; if $P(k)$ is empty, the maximum part is taken to be 0. Table 10 computes the minimum completion times of all tasks with this formula.
 
@@ -1412,7 +1412,7 @@ Here $t(k)$ is the time needed for task $k$ and $P(k)$ is the set of immediately
 
 *Table 10. Computation of the minimum completion time of each task*
 
-This analysis shows that task 9 cannot be finished earlier than 26 hours after the start of assembly. Since the car is complete once task 9 is done, 26 hours is the minimum time for the whole process. Carrying out tasks 1, 2, 4, 8, and 9 one after another takes $7 + 6 + 6 + 2 + 5 = 26$ hours, which is exactly this minimum. Consequently, a delay in any of these five tasks delays the completion of the whole car, and the path through tasks 1, 2, 4, 8, and 9 is therefore called a **critical path**. The critical path can be found by tracing back, from each task, the immediately preceding task that gave the maximum (from 9, $F(8) = 21$; from 8, $F(4) = 19$; from 4, $F(2) = 13$; from 2, $F(1) = 7$).
+This analysis shows that task 9 cannot be finished earlier than 26 hours after the start of assembly. Since the car is complete once task 9 is done, 26 hours is the minimum time for the whole process. Carrying out tasks 1, 2, 4, 8, and 9 one after another takes $7 + 6 + 6 + 2 + 5 = 26$ hours, which is exactly this minimum. Consequently, a delay in any of these five tasks delays the completion of the whole car, and the path through tasks 1, 2, 4, 8, and 9 is therefore called a **critical path**. The critical path can be found by tracing back, from each task, the immediately preceding task that gave the maximum (from 9, $F(8) = 21$; from 8, $F(4) = 19$; from 4, $F(2) = 13$; from 2, $`F(1) = 7`$).
 
 > **Key Point:** PERT and CPM treat the precedence among tasks as a partial order and compute minimum completion times along the Hasse diagram. The total time is determined by the longest-running chain (the critical path), and tasks off the critical path can be delayed somewhat without affecting the overall schedule. For example, task 7 can be finished at 14 hours, but task 9 cannot start until 21 hours, so task 7 can be delayed by up to 7 hours.
 
@@ -1457,23 +1457,23 @@ This analysis shows that task 9 cannot be finished earlier than 26 hours after t
 
 | Concept | Key Summary |
 |:-----|:-----|
-| Relation | A relation from $A$ to $B$ is a subset of $A \times B$, and $x \, R \, y$ means $(x, y) \in R$. |
+| Relation | A relation from $A$ to $B$ is a subset of $A \times B$, and $`x \, R \, y`$ means $(x, y) \in R$. |
 | Inverse relation | $R^{-1}$ is the relation from $B$ to $A$ obtained by interchanging the two components of every ordered pair of $R$. |
-| Directed graph | A relation on a set is drawn with elements as vertices, related pairs as arrows, and $x \, R \, x$ as loops. |
+| Directed graph | A relation on a set is drawn with elements as vertices, related pairs as arrows, and $`x \, R \, x`$ as loops. |
 | $n$-ary relation | A subset of $A_1 \times \cdots \times A_n$, corresponding to a table of a relational database. |
-| Reflexivity | $x \, R \, x$ for every $x$, meaning that every vertex of the directed graph has a loop. |
-| Symmetry | If $x \, R \, y$ then $y \, R \, x$, meaning that every arrow has a reverse arrow. |
-| Transitivity | If $x \, R \, y$ and $y \, R \, z$ then $x \, R \, z$; it is vacuously true when no ordered pairs link up. |
+| Reflexivity | $`x \, R \, x`$ for every $x$, meaning that every vertex of the directed graph has a loop. |
+| Symmetry | If $`x \, R \, y`$ then $`y \, R \, x`$, meaning that every arrow has a reverse arrow. |
+| Transitivity | If $`x \, R \, y`$ and $`y \, R \, z`$ then $`x \, R \, z`$; it is vacuously true when no ordered pairs link up. |
 | Counterexample | The three properties are universal statements, so one counterexample suffices to show that a property fails. |
 | Transitive closure | The smallest transitive relation $R^t$ containing $R$, found by adding forced ordered pairs until no more arise. |
 | Relation induced by a partition | Relates two elements in the same subset and is reflexive, symmetric, and transitive (Theorem 8.3.1). |
 | Equivalence relation | A relation that is reflexive, symmetric, and transitive. |
-| Equivalence class | $[a] = \lbrace x \in A \mid x \, R \, a \rbrace$, and every element of a class is a representative of that class. |
-| Lemmas 8.3.2 and 8.3.3 | If $a \, R \, b$ then $[a] = [b]$, and two classes are either equal or disjoint. |
+| Equivalence class | $`[a] = \lbrace x \in A \mid x \, R \, a \rbrace`$, and every element of a class is a representative of that class. |
+| Lemmas 8.3.2 and 8.3.3 | If $`a \, R \, b`$ then $[a] = [b]$, and two classes are either equal or disjoint. |
 | Theorem 8.3.4 | The distinct classes of an equivalence relation partition the domain, and partitions and equivalence relations determine each other. |
 | Congruence modulo $d$ | $m \equiv n \pmod{d} \iff d \mid (m - n) \iff m \bmod d = n \bmod d$. |
-| Rational numbers | Each class of the equivalence relation $(a, b) \, R \, (c, d) \iff ad = bc$ corresponds to one rational number. |
-| Antisymmetry | If $a \, R \, b$ and $b \, R \, a$ then $a = b$; this differs from not being symmetric. |
+| Rational numbers | Each class of the equivalence relation $`(a, b) \, R \, (c, d) \iff ad = bc`$ corresponds to one rational number. |
+| Antisymmetry | If $`a \, R \, b`$ and $`b \, R \, a`$ then $a = b$; this differs from not being symmetric. |
 | Partial order | A relation that is reflexive, antisymmetric, and transitive, with $\le$ and $\subseteq$ as typical examples. |
 | Lexicographic order | A partial order that compares strings by initial parts and by the order of the first differing characters. |
 | Hasse diagram | The directed graph drawn with arrows pointing upward, with loops, arrows implied by transitivity, and arrowheads removed. |
@@ -1488,7 +1488,7 @@ This analysis shows that task 9 cannot be finished earlier than 26 hours after t
 
 ## Self-Check Questions
 
-1. **Inverse relation:** Let $A = \lbrace 2, 3, 5 \rbrace$ and $B = \lbrace 4, 6, 9, 10 \rbrace$, and let $R$ be the divides relation from $A$ to $B$ ($x \, R \, y \iff x \mid y$). Write $R$ and $R^{-1}$ as sets of ordered pairs, and decide whether $R^{-1}$ is a function from $B$ to $A$.
+1. **Inverse relation:** Let $A = \lbrace 2, 3, 5 \rbrace$ and $B = \lbrace 4, 6, 9, 10 \rbrace$, and let $R$ be the divides relation from $A$ to $B$ ($`x \, R \, y \iff x \mid y`$). Write $R$ and $R^{-1}$ as sets of ordered pairs, and decide whether $R^{-1}$ is a function from $B$ to $A$.
 
    <details>
    <summary>Answer</summary>
@@ -1506,12 +1506,12 @@ This analysis shows that task 9 cannot be finished earlier than 26 hours after t
 
    </details>
 
-3. **Proving an equivalence relation:** Define a relation $R$ on $\mathbf{Z}$ by $m \, R \, n \iff m + n$ is even. Prove that $R$ is an equivalence relation, and find its distinct equivalence classes.
+3. **Proving an equivalence relation:** Define a relation $R$ on $\mathbf{Z}$ by $`m \, R \, n \iff m + n`$ is even. Prove that $R$ is an equivalence relation, and find its distinct equivalence classes.
 
    <details>
    <summary>Answer</summary>
 
-   Reflexivity: for every integer $m$, $m + m = 2m$ is even, so $m \, R \, m$. Symmetry: if $m + n$ is even, so is $n + m = m + n$, so $n \, R \, m$. Transitivity: if $m + n = 2r$ and $n + p = 2s$ for integers $r$ and $s$, then $m + p = (m + n) + (n + p) - 2n = 2(r + s - n)$, and $r + s - n$ is an integer, so $m + p$ is even, that is, $m \, R \, p$. The sum of two integers is even if, and only if, they have the same parity, so the distinct classes are the two sets $[0]$ (all even integers) and $[1]$ (all odd integers), and $R$ is the same relation as congruence modulo 2.
+   Reflexivity: for every integer $m$, $m + m = 2m$ is even, so $`m \, R \, m`$. Symmetry: if $m + n$ is even, so is $n + m = m + n$, so $`n \, R \, m`$. Transitivity: if $m + n = 2r$ and $n + p = 2s$ for integers $r$ and $s$, then $m + p = (m + n) + (n + p) - 2n = 2(r + s - n)$, and $r + s - n$ is an integer, so $m + p$ is even, that is, $`m \, R \, p`$. The sum of two integers is even if, and only if, they have the same parity, so the distinct classes are the two sets $[0]$ (all even integers) and $[1]$ (all odd integers), and $R$ is the same relation as congruence modulo 2.
 
    </details>
 
@@ -1547,7 +1547,7 @@ This analysis shows that task 9 cannot be finished earlier than 26 hours after t
    <details>
    <summary>Answer</summary>
 
-   The order is $\lambda$, $a$, $aab$, $ab$, $b$, $ba$. The null string $\lambda$ comes first (condition 3). $a$ is an initial part of $aab$ and of $ab$ (condition 1). $aab$ and $ab$ first differ at the second character, and $a \, R \, b$, so $aab \preceq ab$ (condition 2). $ab$ and $b$ differ at the first character, and $a \, R \, b$, so $ab \preceq b$, and $b$ is an initial part of $ba$. Since $R$ is a total order, this lexicographic order is also a total order.
+   The order is $\lambda$, $a$, $aab$, $ab$, $b$, $ba$. The null string $\lambda$ comes first (condition 3). $a$ is an initial part of $aab$ and of $ab$ (condition 1). $aab$ and $ab$ first differ at the second character, and $`a \, R \, b`$, so $aab \preceq ab$ (condition 2). $ab$ and $b$ differ at the first character, and $`a \, R \, b`$, so $ab \preceq b$, and $b$ is an initial part of $ba$. Since $R$ is a total order, this lexicographic order is also a total order.
 
    </details>
 

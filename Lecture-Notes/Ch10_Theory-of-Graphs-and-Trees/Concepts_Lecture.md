@@ -112,9 +112,9 @@ This chapter also uses the following two kinds of graphs frequently.
 
 The edges of $K_n$ correspond to the ways of choosing two distinct vertices, so $K_n$ has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges. The symbol $\binom{n}{2}$, read n choose 2, is the number of subsets of size 2 of a set with $n$ elements (Chapter 9, Section 5). If the sum of the degrees of all the vertices of a graph is called its **total degree** and $\lvert E(G)\rvert$ denotes the number of edges, then the following holds.
 
-$$
+```math
 \sum_{v \in V(G)} \deg(v) = 2 \lvert E(G)\rvert
-$$
+```
 
 The reason is that each edge adds 1 to the degree of each of its two endpoints, and a loop adds 2 to the degree of its single endpoint, so in either case every edge contributes exactly 2 to the total degree. This fact is called the **handshake theorem**. Consequently the total degree is always even, and the number of vertices of odd degree is also even.
 
@@ -231,9 +231,9 @@ Every graph is the union of its connected components, and distinct connected com
 
 **Example 10.1.5 (Connected Components).** The graph $G$ of Figure 7 has connected components $H_1, H_2, H_3$, whose vertex sets and edge sets are as follows.
 
-$$
+```math
 V_1 = \lbrace v_1, v_2, v_3\rbrace,\ E_1 = \lbrace e_1, e_2\rbrace; \quad V_2 = \lbrace v_4\rbrace,\ E_2 = \emptyset; \quad V_3 = \lbrace v_5, v_6, v_7, v_8\rbrace,\ E_3 = \lbrace e_3, e_4, e_5\rbrace
-$$
+```
 
 The isolated vertex $v_4$ forms a connected component by itself.
 
@@ -310,11 +310,11 @@ Each pass through Step 3 increases the number of edges of $C$, and $G$ has finit
 
 *Figure 11. A constructed Euler circuit and the order in which it traverses the edges*
 
-**Example 10.1.7 (Finding an Euler Circuit).** The graph of Figure 11 has the 13 edges $ab, bc, cd, da, de, di, ef, eg, eh, fh, gh, hj, ji$ (here $xy$ denotes the edge joining $x$ and $y$). First check the conditions of Theorem 10.1.3.
+**Example 10.1.7 (Finding an Euler Circuit).** The graph of Figure 11 has the 13 edges $ab, bc, cd, da, de, di, ef, eg, eh, fh, gh, hj, ji$ (here $xy$ denotes the edge joining $x$ and $`y`$). First check the conditions of Theorem 10.1.3.
 
-$$
+```math
 \deg(a) = \deg(b) = \deg(c) = \deg(f) = \deg(g) = \deg(i) = \deg(j) = 2, \qquad \deg(d) = \deg(e) = \deg(h) = 4
-$$
+```
 
 Every vertex has positive even degree and the graph is connected, so by Theorem 10.1.3 the graph has an Euler circuit. Now follow the algorithm from the proof.
 
@@ -337,7 +337,7 @@ A corollary of Theorem 10.1.4 decides when there is a walk from one vertex of a 
 
 **Corollary 10.1.5.** Let $G$ be a graph, and let $v$ and $w$ be two distinct vertices of $G$. There is an Euler trail from $v$ to $w$ if, and only if, $G$ is connected, $v$ and $w$ have odd degree, and all other vertices of $G$ have positive even degree.
 
-The key to the proof is to add one new edge $e$ joining $v$ and $w$, which turns the question into one about Euler circuits. If $G$ has an Euler trail from $v$ to $w$, appending $e$ to return from $w$ to $v$ gives an Euler circuit of the graph obtained by adding $e$ to $G$. By Theorem 10.1.4 all degrees of that graph are positive and even; removing $e$ lowers only the degrees of $v$ and $w$ by 1, making them odd, while the other degrees stay positive and even. Moreover, the Euler trail passes through every vertex of $G$, so $G$ is connected. Conversely, if $G$ satisfies the conditions, the graph obtained by adding $e$ to $G$ is connected and all its degrees are positive and even, so it has an Euler circuit. Writing this circuit so that it starts at $v$ and $e$ is its last edge gives the form $v \cdots w\ e\ v$, and removing the final $e\ v$ leaves an Euler trail of $G$ from $v$ to $w$.
+The key to the proof is to add one new edge $e$ joining $v$ and $w$, which turns the question into one about Euler circuits. If $G$ has an Euler trail from $v$ to $w$, appending $e$ to return from $w$ to $v$ gives an Euler circuit of the graph obtained by adding $e$ to $G$. By Theorem 10.1.4 all degrees of that graph are positive and even; removing $e$ lowers only the degrees of $v$ and $w$ by 1, making them odd, while the other degrees stay positive and even. Moreover, the Euler trail passes through every vertex of $G$, so $G$ is connected. Conversely, if $G$ satisfies the conditions, the graph obtained by adding $e$ to $G$ is connected and all its degrees are positive and even, so it has an Euler circuit. Writing this circuit so that it starts at $v$ and $e$ is its last edge gives the form $`v \cdots w\ e\ v`$, and removing the final $`e\ v`$ leaves an Euler trail of $G$ from $v$ to $w$.
 
 ![Figure 12. The floor plan of a house with rooms A to K](../../images/Ch10_Floor-Plan.png)
 
@@ -349,7 +349,7 @@ The key to the proof is to add one new edge $e$ joining $v$ and $w$, which turns
 
 *Figure 13. The graph of the floor plan with rooms as vertices and doorways as edges*
 
-The graph is connected, A and B have degree 1, which is odd, E and H have degree 4, and every other vertex has degree 2, all positive and even. Corollary 10.1.5 therefore guarantees an Euler trail from A to B; one example is $A\ G\ H\ F\ E\ I\ H\ E\ K\ J\ D\ C\ B$, which traverses each of the 12 edges once.
+The graph is connected, A and B have degree 1, which is odd, E and H have degree 4, and every other vertex has degree 2, all positive and even. Corollary 10.1.5 therefore guarantees an Euler trail from A to B; one example is $`A\ G\ H\ F\ E\ I\ H\ E\ K\ J\ D\ C\ B`$, which traverses each of the 12 edges once.
 
 In the Königsberg graph all four vertices have odd degree, so it has neither an Euler circuit nor an Euler trail. The answer to Euler's original question, in which the starting and ending points may differ, is also "impossible."
 
@@ -367,7 +367,7 @@ In 1859 the Irish mathematician William Rowan Hamilton devised a puzzle built on
 
 An Euler circuit includes every vertex but may visit some vertices more than once, so it may not be a Hamiltonian circuit. Conversely, a Hamiltonian circuit need not include every edge, so it may not be an Euler circuit. Although the two definitions sound similar, their mathematics is very different. Theorem 10.1.4 gives a simple criterion for Euler circuits, but no comparably simple criterion is known for deciding whether a graph has a Hamiltonian circuit, nor is any efficient algorithm known for finding one.
 
-A simple test can, however, show that certain graphs have no Hamiltonian circuit. Suppose that a graph $G$ with two or more vertices has a Hamiltonian circuit $C: v_0 e_1 v_1 e_2 \cdots v_{n-1} e_n v_n\ (v_n = v_0)$. Since $C$ is a simple circuit, all the $e_i$ are distinct, and all the $v_j$ are distinct except that $v_0 = v_n$. Let $H$ be the subgraph formed by the vertices and edges of $C$. Then the following hold.
+A simple test can, however, show that certain graphs have no Hamiltonian circuit. Suppose that a graph $G$ with two or more vertices has a Hamiltonian circuit $`C: v_0 e_1 v_1 e_2 \cdots v_{n-1} e_n v_n\ (v_n = v_0)`$. Since $C$ is a simple circuit, all the $e_i$ are distinct, and all the $v_j$ are distinct except that $v_0 = v_n$. Let $H$ be the subgraph formed by the vertices and edges of $C$. Then the following hold.
 
 - $H$ has the same number of edges as vertices, because the edges $e_1, \ldots, e_n$ and the vertices $v_0, \ldots, v_{n-1}$ are all distinct.
 - By the definition of a Hamiltonian circuit, every vertex of $G$ is a vertex of $H$.
@@ -381,7 +381,7 @@ A simple test can, however, show that certain graphs have no Hamiltonian circuit
 3. $H$ has the same number of edges as vertices.
 4. Every vertex of $H$ has degree 2.
 
-If $G$ has only one vertex and has a Hamiltonian circuit, the circuit has the form $v\ e\ v$, where $v$ is the vertex and $e$ is a loop at $v$, and the subgraph consisting of $v$ and $e$ satisfies conditions 1-4. Hence the proposition holds in all cases. Its contrapositive, "if $G$ does not have a subgraph with properties 1-4, then $G$ does not have a Hamiltonian circuit," is used to show that a graph has no Hamiltonian circuit.
+If $G$ has only one vertex and has a Hamiltonian circuit, the circuit has the form $`v\ e\ v`$, where $v$ is the vertex and $e$ is a loop at $v$, and the subgraph consisting of $v$ and $e$ satisfies conditions 1-4. Hence the proposition holds in all cases. Its contrapositive, "if $G$ does not have a subgraph with properties 1-4, then $G$ does not have a Hamiltonian circuit," is used to show that a graph has no Hamiltonian circuit.
 
 ![Figure 15. A graph without a Hamiltonian circuit](../../images/Ch10_No-Hamiltonian-Circuit.png)
 
@@ -428,17 +428,17 @@ Matrices are two-dimensional analogues of sequences and are also called two-dime
 
 > **Definition:** An $m \times n$ **matrix** $\mathbf{A}$ over a set $S$ is a rectangular array of elements of $S$ arranged into $m$ **rows** and $n$ **columns**, written $\mathbf{A} = (a_{ij})$. The element $a_{ij}$ in row $i$ and column $j$ is called the $(i, j)$ **entry** of $\mathbf{A}$, and a matrix with $m$ rows and $n$ columns is said to have **size** $m \times n$.
 
-$$
+```math
 \mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1j} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2j} & \cdots & a_{2n} \\ \vdots & \vdots & & \vdots & & \vdots \\ a_{i1} & a_{i2} & \cdots & a_{ij} & \cdots & a_{in} \\ \vdots & \vdots & & \vdots & & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mj} & \cdots & a_{mn} \end{bmatrix}
-$$
+```
 
-The $i$th row of $\mathbf{A}$ is $\begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix}$, and the $j$th column consists of $a_{1j}, a_{2j}, \ldots, a_{mj}$ stacked from top to bottom. Two matrices $\mathbf{A}$ and $\mathbf{B}$ are equal if, and only if, they have the same size and all corresponding entries are equal, that is, $a_{ij} = b_{ij}$ for every $i = 1, \ldots, m$ and $j = 1, \ldots, n$. A matrix with equal numbers of rows and columns is a **square matrix**, and the entries $a_{11}, a_{22}, \ldots, a_{nn}$ of an $n \times n$ square matrix form its **main diagonal**.
+The $`i`$th row of $\mathbf{A}$ is $`\begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix}`$, and the $`j`$th column consists of $a_{1j}, a_{2j}, \ldots, a_{mj}$ stacked from top to bottom. Two matrices $\mathbf{A}$ and $\mathbf{B}$ are equal if, and only if, they have the same size and all corresponding entries are equal, that is, $a_{ij} = b_{ij}$ for every $i = 1, \ldots, m$ and $j = 1, \ldots, n$. A matrix with equal numbers of rows and columns is a **square matrix**, and the entries $a_{11}, a_{22}, \ldots, a_{nn}$ of an $n \times n$ square matrix form its **main diagonal**.
 
 **Example 10.2.1 (Matrix Terminology).** Consider the $3 \times 3$ matrix over the integers
 
-$$
+```math
 \mathbf{A} = \begin{bmatrix} 1 & 0 & -3 \\ 4 & -1 & 5 \\ -2 & 2 & 0 \end{bmatrix}
-$$
+```
 
 Its entry in row 2, column 3 is $a_{23} = 5$, its second column is $0, -1, 2$ from top to bottom, and the entries of its main diagonal are $1, -1, 0$.
 
@@ -448,11 +448,11 @@ Its entry in row 2, column 3 is $a_{23} = 5$, its second column is $0, -1, 2$ fr
 
 *Figure 17. A directed graph whose adjacency matrix is to be found*
 
-The directed graph of Figure 17 can be represented by the matrix $\mathbf{A} = (a_{ij})$ in which $a_{ij}$ is the number of arrows from $v_i$ to $v_j$. There is one arrow from $v_1$ to $v_1$ (the loop $e_1$), so $a_{11} = 1$; there is no arrow from $v_1$ to $v_2$, so $a_{12} = 0$; and there are two arrows $e_4, e_5$ from $v_2$ to $v_3$, so $a_{23} = 2$. Filling in every entry this way gives the following matrix. Labeling the rows and columns with the vertices makes it easy to read.
+The directed graph of Figure 17 can be represented by the matrix $\mathbf{A} = (a_{ij})$ in which $a_{ij}$ is the number of arrows from $v_i$ to $v_j$. There is one arrow from $v_1$ to $v_1$ (the loop $`e_1`$), so $a_{11} = 1$; there is no arrow from $v_1$ to $v_2$, so $a_{12} = 0$; and there are two arrows $e_4, e_5$ from $v_2$ to $v_3$, so $a_{23} = 2$. Filling in every entry this way gives the following matrix. Labeling the rows and columns with the vertices makes it easy to read.
 
-$$
+```math
 \mathbf{A} = \begin{array}{c|ccc} & v_1 & v_2 & v_3 \\ \hline v_1 & 1 & 0 & 0 \\ v_2 & 1 & 1 & 2 \\ v_3 & 1 & 0 & 0 \end{array}
-$$
+```
 
 > **Definition:** Let $G$ be a directed graph with ordered vertices $v_1, v_2, \ldots, v_n$. The **adjacency matrix** of $G$ is the $n \times n$ matrix $\mathbf{A} = (a_{ij})$ over the set of nonnegative integers such that $a_{ij}$ is the number of arrows from $v_i$ to $v_j$ for all $i, j = 1, 2, \ldots, n$.
 
@@ -464,17 +464,17 @@ Nonzero entries on the main diagonal indicate loops, and off-diagonal entries la
 
 **Example 10.2.2 (Vertex Order and the Adjacency Matrix).** The two directed graphs of Figure 18 have the same shape and differ only in the names of their vertices. In (a) there is no arrow out of $v_1$, so the first row is all 0. In (b) there is one loop at $v_1$ and one arrow from $v_1$ to $v_2$ and none to $v_3$, so the first row is $1, 1, 0$. Continuing in this way gives the two adjacency matrices.
 
-$$
+```math
 \text{(a)}\quad \mathbf{A} = \begin{array}{c|ccc} & v_1 & v_2 & v_3 \\ \hline v_1 & 0 & 0 & 0 \\ v_2 & 0 & 1 & 1 \\ v_3 & 2 & 1 & 0 \end{array} \qquad \text{(b)}\quad \mathbf{A} = \begin{array}{c|ccc} & v_1 & v_2 & v_3 \\ \hline v_1 & 1 & 1 & 0 \\ v_2 & 1 & 0 & 2 \\ v_3 & 0 & 0 & 0 \end{array}
-$$
+```
 
 Conversely, every square matrix whose entries are nonnegative integers is the adjacency matrix of some directed graph, which one can draw. Since the matrix says nothing about the names of the edges, however, that directed graph is not unique.
 
 **Example 10.2.3 (Obtaining a Directed Graph from a Matrix).** The task is to draw a directed graph whose adjacency matrix is the following.
 
-$$
+```math
 \mathbf{A} = \begin{array}{c|cccc} & v_1 & v_2 & v_3 & v_4 \\ \hline v_1 & 0 & 1 & 1 & 0 \\ v_2 & 1 & 1 & 0 & 2 \\ v_3 & 0 & 0 & 1 & 1 \\ v_4 & 2 & 1 & 0 & 0 \end{array}
-$$
+```
 
 Name the vertices $v_1, v_2, v_3, v_4$ and read the entries one by one. For instance, the entry 2 in row 4, column 1 calls for two arrows from $v_4$ to $v_1$, and the entry 0 in row 1, column 4 says that no arrow goes from $v_1$ to $v_4$. The 1s in row 2, column 2 and row 3, column 3 mean that $v_2$ and $v_3$ each have one loop. The resulting graph is Figure 19; its edges are left unnamed because the matrix does not fix their names.
 
@@ -484,7 +484,7 @@ Name the vertices $v_1, v_2, v_3, v_4$ and read the entries one by one. For inst
 
 ### 2.3 Adjacency Matrices of Undirected Graphs and Symmetric Matrices
 
-The adjacency matrix of an undirected graph is defined in the same way: order the vertices and set the $(i, j)$ entry to the number of edges connecting the $i$th and $j$th vertices.
+The adjacency matrix of an undirected graph is defined in the same way: order the vertices and set the $(i, j)$ entry to the number of edges connecting the $`i`$th and $`j`$th vertices.
 
 > **Definition:** Let $G$ be an undirected graph with ordered vertices $v_1, v_2, \ldots, v_n$. The **adjacency matrix** of $G$ is the $n \times n$ matrix $\mathbf{A} = (a_{ij})$ over the set of nonnegative integers such that $a_{ij}$ is the number of edges connecting $v_i$ and $v_j$ for all $i, j = 1, 2, \ldots, n$.
 
@@ -494,9 +494,9 @@ The adjacency matrix of an undirected graph is defined in the same way: order th
 
 **Example 10.2.4 (The Adjacency Matrix of an Undirected Graph).** In the graph of Figure 20, $v_1$ is joined to $v_2$ and to $v_4$ by one edge each. $v_2$ has the loop $e_3$, is joined to $v_3$ by the parallel edges $e_4, e_5$, and to $v_4$ by the edge $e_6$. $v_4$ has the loop $e_7$. Hence the adjacency matrix is as follows.
 
-$$
+```math
 \mathbf{A} = \begin{array}{c|cccc} & v_1 & v_2 & v_3 & v_4 \\ \hline v_1 & 0 & 1 & 0 & 1 \\ v_2 & 1 & 1 & 2 & 1 \\ v_3 & 0 & 2 & 0 & 0 \\ v_4 & 1 & 1 & 0 & 1 \end{array}
-$$
+```
 
 The entries of this matrix satisfy $a_{ij} = a_{ji}$ for all $i, j$; that is, the matrix looks the same when flipped across its main diagonal.
 
@@ -504,9 +504,9 @@ The entries of this matrix satisfy $a_{ij} = a_{ji}$ for all $i, j$; that is, th
 
 **Example 10.2.5 (Symmetric Matrices).** Of the following three matrices, only (b) is symmetric.
 
-$$
+```math
 \text{(a)}\ \begin{bmatrix} 1 & 0 \\ 1 & 2 \end{bmatrix} \qquad \text{(b)}\ \begin{bmatrix} 0 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 3 \end{bmatrix} \qquad \text{(c)}\ \begin{bmatrix} 2 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}
-$$
+```
 
 In (a), $a_{12} = 0$ but $a_{21} = 1$, so (a) is not symmetric. Matrix (c) is not even square, so the definition of a symmetric matrix does not apply to it.
 
@@ -524,83 +524,83 @@ The number of edges joining $v_i$ and $v_j$ equals the number of edges joining $
 
 The graph of Figure 21 consists of three connected components. With the vertices in the order $v_1, \ldots, v_7$, its adjacency matrix is as follows.
 
-$$
+```math
 \mathbf{A} = \begin{bmatrix} 1 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 2 & 0 & 0 & 0 & 0 \\ 1 & 2 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 & 2 & 0 \end{bmatrix}
-$$
+```
 
-This matrix consists of square blocks of different sizes ($3 \times 3$, $2 \times 2$, $2 \times 2$) down its diagonal and 0s everywhere else. This happens because no edge joins a vertex of one connected component to a vertex of another. For instance, $v_1, v_2, v_3$ share no edges with $v_4, \ldots, v_7$, so all entries of the first three rows from the fourth column on, and of the first three columns from the fourth row on, are 0. Writing $\mathbf{O}$ for a matrix whose entries are all 0, the matrix is a block diagonal matrix of the following form.
+This matrix consists of square blocks of different sizes ($3 \times 3$, $2 \times 2$, $`2 \times 2`$) down its diagonal and 0s everywhere else. This happens because no edge joins a vertex of one connected component to a vertex of another. For instance, $v_1, v_2, v_3$ share no edges with $v_4, \ldots, v_7$, so all entries of the first three rows from the fourth column on, and of the first three columns from the fourth row on, are 0. Writing $\mathbf{O}$ for a matrix whose entries are all 0, the matrix is a block diagonal matrix of the following form.
 
-$$
+```math
 \mathbf{A} = \begin{bmatrix} \mathbf{A}_1 & \mathbf{O} & \mathbf{O} \\ \mathbf{O} & \mathbf{A}_2 & \mathbf{O} \\ \mathbf{O} & \mathbf{O} & \mathbf{A}_3 \end{bmatrix}
-$$
+```
 
-**Theorem 10.2.1.** Let $G$ be a graph with connected components $G_1, G_2, \ldots, G_k$, where $G_i$ has $n_i$ vertices. If the vertices of each connected component are numbered consecutively, then the adjacency matrix of $G$ has the following form, where each $\mathbf{A}_i$ is the $n_i \times n_i$ adjacency matrix of $G_i$ and each $\mathbf{O}$ is a matrix whose entries are all 0.
+**Theorem 10.2.1.** Let $G$ be a graph with connected components $G_1, G_2, \ldots, G_k$, where $G_i$ has $n_i$ vertices. If the vertices of each connected component are numbered consecutively, then the adjacency matrix of $G$ has the following form, where each $`\mathbf{A}_i`$ is the $n_i \times n_i$ adjacency matrix of $G_i$ and each $\mathbf{O}$ is a matrix whose entries are all 0.
 
-$$
+```math
 \begin{bmatrix} \mathbf{A}_1 & \mathbf{O} & \mathbf{O} & \cdots & \mathbf{O} \\ \mathbf{O} & \mathbf{A}_2 & \mathbf{O} & \cdots & \mathbf{O} \\ \mathbf{O} & \mathbf{O} & \mathbf{A}_3 & \cdots & \mathbf{O} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ \mathbf{O} & \mathbf{O} & \mathbf{O} & \cdots & \mathbf{A}_k \end{bmatrix}
-$$
+```
 
 ### 2.5 Matrix Multiplication
 
 Matrix multiplication is an operation used in many contexts, including counting walks in graphs. Here only matrices with real entries are considered. The product of two matrices is built from scalar products of rows and columns.
 
-> **Definition:** Suppose the entries of matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers and the number $n$ of elements in the $i$th row of $\mathbf{A}$ equals the number of elements in the $j$th column of $\mathbf{B}$. The **scalar product** or **dot product** of the $i$th row of $\mathbf{A}$ and the $j$th column of $\mathbf{B}$ is the following real number.
+> **Definition:** Suppose the entries of matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers and the number $n$ of elements in the $`i`$th row of $\mathbf{A}$ equals the number of elements in the $`j`$th column of $\mathbf{B}$. The **scalar product** or **dot product** of the $`i`$th row of $\mathbf{A}$ and the $`j`$th column of $\mathbf{B}$ is the following real number.
 
-$$
+```math
 \begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix} \begin{bmatrix} b_{1j} \\ b_{2j} \\ \vdots \\ b_{nj} \end{bmatrix} = a_{i1} b_{1j} + a_{i2} b_{2j} + \cdots + a_{in} b_{nj}
-$$
+```
 
 **Example 10.2.6 (Multiplying a Row and a Column).** Multiply corresponding entries and add.
 
-$$
+```math
 \begin{bmatrix} 3 & 0 & -1 & 2 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \\ 3 \\ 0 \end{bmatrix} = 3 \cdot (-1) + 0 \cdot 2 + (-1) \cdot 3 + 2 \cdot 0 = -3 + 0 - 3 + 0 = -6
-$$
+```
 
-More generally, if the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$, the product $\mathbf{A}\mathbf{B}$ is defined. Its $(i, j)$ entry is the scalar product of the $i$th row of $\mathbf{A}$ and the $j$th column of $\mathbf{B}$.
+More generally, if the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$, the product $\mathbf{A}\mathbf{B}$ is defined. Its $(i, j)$ entry is the scalar product of the $`i`$th row of $\mathbf{A}$ and the $`j`$th column of $\mathbf{B}$.
 
 > **Definition:** Let $\mathbf{A} = (a_{ij})$ be an $m \times k$ matrix and $\mathbf{B} = (b_{ij})$ a $k \times n$ matrix with real entries. The (matrix) **product** of $\mathbf{A}$ times $\mathbf{B}$, denoted $\mathbf{A}\mathbf{B}$, is the $m \times n$ matrix $(c_{ij})$ whose $(i, j)$ entry is as follows for each $i = 1, \ldots, m$ and $j = 1, \ldots, n$.
 
-$$
+```math
 c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + \cdots + a_{ik} b_{kj} = \sum_{r=1}^{k} a_{ir} b_{rj}
-$$
+```
 
 **Example 10.2.7 (Computing a Matrix Product).** The task is to compute the product of the following two matrices.
 
-$$
+```math
 \mathbf{A} = \begin{bmatrix} 2 & 0 & 3 \\ -1 & 1 & 0 \end{bmatrix}, \qquad \mathbf{B} = \begin{bmatrix} 4 & 3 \\ 2 & 2 \\ -2 & -1 \end{bmatrix}
-$$
+```
 
 $\mathbf{A}$ has size $2 \times 3$ and $\mathbf{B}$ has size $3 \times 2$, so the number of columns of $\mathbf{A}$ and the number of rows of $\mathbf{B}$ are both 3; the product can be computed, and it is a $2 \times 2$ matrix. Its entries are as follows.
 
-$$
+```math
 \begin{aligned} c_{11} &= 2 \cdot 4 + 0 \cdot 2 + 3 \cdot (-2) = 8 + 0 - 6 = 2 \\ c_{12} &= 2 \cdot 3 + 0 \cdot 2 + 3 \cdot (-1) = 6 + 0 - 3 = 3 \\ c_{21} &= (-1) \cdot 4 + 1 \cdot 2 + 0 \cdot (-2) = -4 + 2 + 0 = -2 \\ c_{22} &= (-1) \cdot 3 + 1 \cdot 2 + 0 \cdot (-1) = -3 + 2 + 0 = -1 \end{aligned}
-$$
+```
 
 Hence the product is as follows.
 
-$$
+```math
 \mathbf{A}\mathbf{B} = \begin{bmatrix} 2 & 3 \\ -2 & -1 \end{bmatrix}
-$$
+```
 
 Matrix multiplication resembles multiplication of real numbers in some ways and differs from it in others. First, any two real numbers can be multiplied, but matrices can be multiplied only when their sizes are compatible. If $\mathbf{A}$ is $3 \times 2$ and $\mathbf{B}$ is $2 \times 4$, then $\mathbf{A}\mathbf{B}$ is defined, but $\mathbf{B}\mathbf{A}$ is not, because $\mathbf{B}$ has 4 columns and $\mathbf{A}$ has 3 rows. Second, multiplication of real numbers is commutative, whereas matrix multiplication is not.
 
-$$
+```math
 \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & 2 \\ 0 & 1 \end{bmatrix} \qquad \text{but} \qquad \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}
-$$
+```
 
 On the other hand, both are associative: $(\mathbf{A}\mathbf{B})\mathbf{C} = \mathbf{A}(\mathbf{B}\mathbf{C})$ whenever the products are defined. The proof below covers $2 \times 2$ matrices.
 
 **Example 10.2.8 (Associativity of Multiplication of $2 \times 2$ Matrices).** Let $\mathbf{A} = (a_{ij})$, $\mathbf{B} = (b_{ij})$, and $\mathbf{C} = (c_{ij})$ be arbitrary $2 \times 2$ matrices with real entries. All numbers of rows and columns are 2, so $\mathbf{A}\mathbf{B}$, $\mathbf{B}\mathbf{C}$, $(\mathbf{A}\mathbf{B})\mathbf{C}$, and $\mathbf{A}(\mathbf{B}\mathbf{C})$ are all defined. Let $\mathbf{A}\mathbf{B} = (d_{ij})$ and $\mathbf{B}\mathbf{C} = (e_{ij})$. Then for each $i, j = 1, 2$:
 
-$$
+```math
 \begin{aligned} ((\mathbf{A}\mathbf{B})\mathbf{C})_{ij} &= \sum_{r=1}^{2} d_{ir} c_{rj} = d_{i1} c_{1j} + d_{i2} c_{2j} && \text{definitions of product and } \Sigma \\ &= \Big(\sum_{r=1}^{2} a_{ir} b_{r1}\Big) c_{1j} + \Big(\sum_{r=1}^{2} a_{ir} b_{r2}\Big) c_{2j} && \text{definition of } \mathbf{A}\mathbf{B} \\ &= (a_{i1} b_{11} + a_{i2} b_{21}) c_{1j} + (a_{i1} b_{12} + a_{i2} b_{22}) c_{2j} && \text{definition of } \Sigma \\ &= a_{i1} b_{11} c_{1j} + a_{i2} b_{21} c_{1j} + a_{i1} b_{12} c_{2j} + a_{i2} b_{22} c_{2j} && \text{distributive law} \end{aligned}
-$$
+```
 
 The $(i, j)$ entry of $\mathbf{A}(\mathbf{B}\mathbf{C})$ is expanded in the same way.
 
-$$
+```math
 \begin{aligned} (\mathbf{A}(\mathbf{B}\mathbf{C}))_{ij} &= \sum_{r=1}^{2} a_{ir} e_{rj} = a_{i1} e_{1j} + a_{i2} e_{2j} \\ &= a_{i1} \Big(\sum_{r=1}^{2} b_{1r} c_{rj}\Big) + a_{i2} \Big(\sum_{r=1}^{2} b_{2r} c_{rj}\Big) \\ &= a_{i1} (b_{11} c_{1j} + b_{12} c_{2j}) + a_{i2} (b_{21} c_{1j} + b_{22} c_{2j}) \\ &= a_{i1} b_{11} c_{1j} + a_{i2} b_{21} c_{1j} + a_{i1} b_{12} c_{2j} + a_{i2} b_{22} c_{2j} \end{aligned}
-$$
+```
 
 The last line rearranges the terms using the commutativity of addition. The two results agree for all $i, j$, so all corresponding entries are equal and $(\mathbf{A}\mathbf{B})\mathbf{C} = \mathbf{A}(\mathbf{B}\mathbf{C})$.
 
@@ -608,21 +608,21 @@ The last line rearranges the terms using the commutativity of addition. The two 
 
 For real numbers, 1 is the identity element of multiplication. Some matrices play the same role for suitable matrix products. Multiplying out shows that the following hold for any real numbers $a, \ldots, i$.
 
-$$
+```math
 \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} a & b & c \\ d & e & f \end{bmatrix} = \begin{bmatrix} a & b & c \\ d & e & f \end{bmatrix}, \qquad \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}
-$$
+```
 
 Thus this $2 \times 2$ matrix behaves as an identity when it multiplies a $2 \times 3$ matrix from the left. It cannot be placed to the right of a $2 \times 3$ matrix at all, however, because the sizes do not match.
 
-> **Definition:** For each positive integer $n$, the $n \times n$ **identity matrix** $\mathbf{I}_n = (\delta_{ij})$ is the $n \times n$ matrix whose main diagonal entries are all 1 and whose other entries are all 0; it is written $\mathbf{I}$ when the size is clear from context. That is, for all $i, j = 1, 2, \ldots, n$, $\delta_{ij} = 1$ if $i = j$ and $\delta_{ij} = 0$ if $i \neq j$.
+> **Definition:** For each positive integer $n$, the $n \times n$ **identity matrix** $`\mathbf{I}_n = (\delta_{ij})`$ is the $n \times n$ matrix whose main diagonal entries are all 1 and whose other entries are all 0; it is written $\mathbf{I}$ when the size is clear from context. That is, for all $i, j = 1, 2, \ldots, n$, $\delta_{ij} = 1$ if $i = j$ and $\delta_{ij} = 0$ if $i \neq j$.
 
 The symbol $\delta_{ij}$ was introduced by the German mathematician Leopold Kronecker to make matrix computations more convenient and is called the **Kronecker delta**.
 
 **Example 10.2.9 (An Identity Matrix Acts as an Identity).** This example shows that if $\mathbf{A}$ is any $m \times n$ matrix and $\mathbf{I}$ is the $n \times n$ identity matrix, then $\mathbf{A}\mathbf{I} = \mathbf{A}$. Let $a_{ij}$ be the $(i, j)$ entry of $\mathbf{A}$. Then for each $i = 1, \ldots, m$ and $j = 1, \ldots, n$:
 
-$$
+```math
 \begin{aligned} (\mathbf{A}\mathbf{I})_{ij} &= \sum_{r=1}^{n} a_{ir} \delta_{rj} && \text{definition of matrix product} \\ &= a_{i1} \delta_{1j} + \cdots + a_{ij} \delta_{jj} + \cdots + a_{in} \delta_{nj} && \text{definition of } \Sigma \\ &= a_{ij} \delta_{jj} && \delta_{rj} = 0 \text{ whenever } r \neq j \\ &= a_{ij} && \delta_{jj} = 1 \end{aligned}
-$$
+```
 
 Hence all corresponding entries of $\mathbf{A}\mathbf{I}$ and $\mathbf{A}$ are equal, and $\mathbf{A}\mathbf{I} = \mathbf{A}$. In the same way one can show that $\mathbf{I}\mathbf{A} = \mathbf{A}$ when $\mathbf{I}$ is the $m \times m$ identity matrix.
 
@@ -632,9 +632,9 @@ Powers show the same mix of similarities and differences. Every real number has 
 
 **Example 10.2.10 (Powers of a Matrix).** The powers $\mathbf{A}^0, \mathbf{A}^1, \mathbf{A}^2, \mathbf{A}^3$ of the following matrix $\mathbf{A}$ are computed in turn from the definition.
 
-$$
+```math
 \begin{aligned} \mathbf{A} &= \begin{bmatrix} 1 & 2 \\ 2 & 0 \end{bmatrix} \\ \mathbf{A}^0 &= \mathbf{I} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \qquad \mathbf{A}^1 = \mathbf{A}\mathbf{A}^0 = \mathbf{A}\mathbf{I} = \mathbf{A} \\ \mathbf{A}^2 &= \mathbf{A}\mathbf{A}^1 = \begin{bmatrix} 1 & 2 \\ 2 & 0 \end{bmatrix} \begin{bmatrix} 1 & 2 \\ 2 & 0 \end{bmatrix} = \begin{bmatrix} 1 + 4 & 2 + 0 \\ 2 + 0 & 4 + 0 \end{bmatrix} = \begin{bmatrix} 5 & 2 \\ 2 & 4 \end{bmatrix} \\ \mathbf{A}^3 &= \mathbf{A}\mathbf{A}^2 = \begin{bmatrix} 1 & 2 \\ 2 & 0 \end{bmatrix} \begin{bmatrix} 5 & 2 \\ 2 & 4 \end{bmatrix} = \begin{bmatrix} 5 + 4 & 2 + 8 \\ 10 + 0 & 4 + 0 \end{bmatrix} = \begin{bmatrix} 9 & 10 \\ 10 & 4 \end{bmatrix} \end{aligned}
-$$
+```
 
 ### 2.7 Counting Walks of Length n
 
@@ -652,11 +652,11 @@ As defined in Section 1.3, the length of a walk is its number of edges, with a r
 
 Hence the answer is $1 + 1 + 4 = 6$. This number can be obtained directly from a product of adjacency matrices. The adjacency matrix $\mathbf{A}$ of the graph and $\mathbf{A}^2$ are as follows.
 
-$$
+```math
 \mathbf{A} = \begin{array}{c|ccc} & v_1 & v_2 & v_3 \\ \hline v_1 & 0 & 1 & 0 \\ v_2 & 1 & 1 & 2 \\ v_3 & 0 & 2 & 0 \end{array}, \qquad \mathbf{A}^2 = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 1 & 2 \\ 0 & 2 & 0 \end{bmatrix} \begin{bmatrix} 0 & 1 & 0 \\ 1 & 1 & 2 \\ 0 & 2 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 1 & 2 \\ 1 & 6 & 2 \\ 2 & 2 & 4 \end{bmatrix}
-$$
+```
 
-The entry of $\mathbf{A}^2$ in row 2, column 2 is 6, which equals the number of walks of length 2 from $v_2$ to $v_2$. This is no accident. The entry is the scalar product of row 2 and column 2 of $\mathbf{A}$, $1 \cdot 1 + 1 \cdot 1 + 2 \cdot 2$. The first term $1 \cdot 1$ is (the number of edges from $v_2$ to $v_1$) $\times$ (the number of edges from $v_1$ to $v_2$), so by the multiplication rule it is the number of pairs of edges going from $v_2$ to $v_1$ and back to $v_2$, that is, the number of walks of length 2 whose second vertex is $v_1$. For the same reason the $i$th term is the number of such walks whose second vertex is $v_i$, and the sum $1 + 1 + 4 = 6$ is the total number of walks. Generalizing this reasoning gives the following theorem.
+The entry of $\mathbf{A}^2$ in row 2, column 2 is 6, which equals the number of walks of length 2 from $v_2$ to $v_2$. This is no accident. The entry is the scalar product of row 2 and column 2 of $\mathbf{A}$, $1 \cdot 1 + 1 \cdot 1 + 2 \cdot 2$. The first term $1 \cdot 1$ is (the number of edges from $v_2$ to $`v_1`$) $\times$ (the number of edges from $v_1$ to $`v_2`$), so by the multiplication rule it is the number of pairs of edges going from $v_2$ to $v_1$ and back to $v_2$, that is, the number of walks of length 2 whose second vertex is $v_1$. For the same reason the $`i`$th term is the number of such walks whose second vertex is $v_i$, and the sum $1 + 1 + 4 = 6$ is the total number of walks. Generalizing this reasoning gives the following theorem.
 
 **Theorem 10.2.2.** If $G$ is a graph with vertices $v_1, v_2, \ldots, v_m$ and $\mathbf{A}$ is the adjacency matrix of $G$, then for each positive integer $n$ and all integers $i, j = 1, 2, \ldots, m$, the $(i, j)$ entry of $\mathbf{A}^n$ equals the number of walks of length $n$ from $v_i$ to $v_j$.
 
@@ -666,15 +666,15 @@ Basis step: Since $\mathbf{A}^1 = \mathbf{A}$, the $(i, j)$ entry of $\mathbf{A}
 
 Inductive step: Suppose $P(k)$ is true for some integer $k \geq 1$ (the inductive hypothesis). Let $\mathbf{A} = (a_{ij})$ and $\mathbf{A}^k = (b_{ij})$. Since $\mathbf{A}^{k+1} = \mathbf{A}\mathbf{A}^k$, the $(i, j)$ entry of $\mathbf{A}^{k+1}$ is the scalar product of row $i$ of $\mathbf{A}$ and column $j$ of $\mathbf{A}^k$.
 
-$$
+```math
 (\mathbf{A}^{k+1})_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + \cdots + a_{im} b_{mj}
-$$
+```
 
 Consider each term $a_{ir} b_{rj}$. Here $a_{ir}$ is the number of edges from $v_i$ to $v_r$, and by the inductive hypothesis $b_{rj}$ is the number of walks of length $k$ from $v_r$ to $v_j$. Joining an edge from $v_i$ to $v_r$ with a walk of length $k$ from $v_r$ to $v_j$ gives a walk of length $k+1$ whose second vertex is $v_r$, and every such walk decomposes uniquely in this way. So, by the multiplication rule, $a_{ir} b_{rj}$ is the number of walks of length $k+1$ from $v_i$ to $v_j$ whose second vertex is $v_r$. Every walk of length $k+1$ has exactly one of $v_1, \ldots, v_m$ as its second vertex, so, by the addition rule, the sum above is the total number of walks of length $k+1$ from $v_i$ to $v_j$. Hence $P(k+1)$ is true.
 
 Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$. ∎
 
-> **Key Point:** Raising the adjacency matrix to the $n$th power gives the numbers of walks of length $n$ for all pairs of vertices at once. For example, in the same graph the entry of $\mathbf{A}^3 = \mathbf{A}\mathbf{A}^2$ in row 2, column 3 is $1 \cdot 2 + 1 \cdot 2 + 2 \cdot 4 = 12$, so there are 12 walks of length 3 from $v_2$ to $v_3$.
+> **Key Point:** Raising the adjacency matrix to the $`n`$th power gives the numbers of walks of length $n$ for all pairs of vertices at once. For example, in the same graph the entry of $\mathbf{A}^3 = \mathbf{A}\mathbf{A}^2$ in row 2, column 3 is $1 \cdot 2 + 1 \cdot 2 + 2 \cdot 4 = 12$, so there are 12 walks of length 3 from $v_2$ to $v_3$.
 
 ---
 
@@ -704,11 +704,11 @@ For example, in $G$ the endpoints of $e_2$ are $v_2, v_3$, which correspond to $
 
 > **Definition:** Let $G$ and $G'$ be graphs with vertex sets $V(G), V(G')$ and edge sets $E(G), E(G')$, respectively. $G$ is **isomorphic** to $G'$ if, and only if, there exist one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that the following holds for every $v \in V(G)$ and $e \in E(G)$. In this case $g$ and $h$ are said to preserve the edge-endpoint functions, and the pair of correspondences is called an **isomorphism**.
 
-$$
+```math
 v \text{ is an endpoint of } e \iff g(v) \text{ is an endpoint of } h(e) \qquad (10.3.1)
-$$
+```
 
-Formula (10.3.1) says that "$v$ is an endpoint of $e$" and "$g(v)$ is an endpoint of $h(e)$" are equivalent. In words, $G$ and $G'$ are isomorphic when their vertices and their edges can be paired off by one-to-one correspondences so that paired edges always join paired vertices. Mathematicians often treat isomorphic objects as the same. For instance, if $G$ is a graph with five vertices in which every pair of vertices is joined by an edge, one often says "$G$ is $K_5$" rather than "$G$ is isomorphic to $K_5$."
+Formula (10.3.1) says that "$`v`$ is an endpoint of $e$" and "$`g(v)`$ is an endpoint of $h(e)$" are equivalent. In words, $G$ and $G'$ are isomorphic when their vertices and their edges can be paired off by one-to-one correspondences so that paired edges always join paired vertices. Mathematicians often treat isomorphic objects as the same. For instance, if $G$ is a graph with five vertices in which every pair of vertices is joined by an edge, one often says "$`G`$ is $K_5$" rather than "$`G`$ is isomorphic to $K_5$."
 
 ### 3.2 Showing That Two Graphs Are Isomorphic
 
@@ -716,10 +716,10 @@ Formula (10.3.1) says that "$v$ is an endpoint of $e$" and "$g(v)$ is an endpoin
 
 *Figure 24. Two isomorphic graphs G and G'*
 
-**Example 10.3.1 (Showing That Two Graphs Are Isomorphic).** The task is to show that the two graphs of Figure 24 are isomorphic. This requires one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that for all $v \in V(G)$ and $e \in E(G)$, "$v$ is an endpoint of $e$ $\iff$ $g(v)$ is an endpoint of $h(e)$." Finding such functions is partly trial and error and partly deduction.
+**Example 10.3.1 (Showing That Two Graphs Are Isomorphic).** The task is to show that the two graphs of Figure 24 are isomorphic. This requires one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that for all $v \in V(G)$ and $e \in E(G)$, "$`v`$ is an endpoint of $e$ $\iff$ $g(v)$ is an endpoint of $h(e)$." Finding such functions is partly trial and error and partly deduction.
 
 - $e_2$ and $e_3$ are parallel edges with the same endpoints, so $h(e_2)$ and $h(e_3)$ must also be parallel. The only parallel edges of $G'$ are $f_1, f_2$, so $\lbrace h(e_2), h(e_3)\rbrace = \lbrace f_1, f_2\rbrace$. Moreover, the endpoints $v_3, v_4$ of $e_2, e_3$ must go to the endpoints $w_1, w_5$ of $f_1, f_2$.
-- Four distinct edges ($e_1, e_4, e_5, e_7$) are incident on $v_1$, so four distinct edges must be incident on $g(v_1)$, because every edge incident on $g(v_1)$ is the image under $h$ of an edge incident on $v_1$ and $h$ is a one-to-one correspondence. The only vertex of $G'$ with four incident edges is $w_2$, so $g(v_1) = w_2$.
+- Four distinct edges ($`e_1, e_4, e_5, e_7`$) are incident on $v_1$, so four distinct edges must be incident on $g(v_1)$, because every edge incident on $g(v_1)$ is the image under $h$ of an edge incident on $v_1$ and $h$ is a one-to-one correspondence. The only vertex of $G'$ with four incident edges is $w_2$, so $g(v_1) = w_2$.
 - If $g(v_3) = w_1$ is chosen, then since $v_1$ and $v_3$ are the endpoints of $e_1$, $g(v_1) = w_2$ and $g(v_3) = w_1$ must be the endpoints of $h(e_1)$, so $h(e_1) = f_3$.
 
 Continuing in this way, making arbitrary choices where necessary, one obtains an isomorphism. One such pair is $g(v_1) = w_2$, $g(v_2) = w_3$, $g(v_3) = w_1$, $g(v_4) = w_5$, $g(v_5) = w_4$ together with the $h$ in the following table. The table also verifies (10.3.1) for each edge of $G$.
@@ -750,7 +750,7 @@ Graph isomorphism is a reflexive, symmetric, and transitive relation on a set of
 - Symmetric: Suppose $G$ is isomorphic to $G'$, and let $g, h$ be vertex and edge correspondences from $G$ to $G'$ that preserve the edge-endpoint functions. Since $g$ and $h$ are one-to-one correspondences, they have inverse functions $g^{-1}, h^{-1}$, which are vertex and edge correspondences from $G'$ to $G$ that preserve the edge-endpoint functions, because the equivalence (10.3.1) can be read backward. Hence $G'$ is isomorphic to $G$.
 - Transitive: Suppose $G$ is isomorphic to $G'$ and $G'$ is isomorphic to $G''$. If $g_1, h_1$ are endpoint-preserving correspondences from $G$ to $G'$ and $g_2, h_2$ are endpoint-preserving correspondences from $G'$ to $G''$, then the composites $g_2 \circ g_1$ and $h_2 \circ h_1$ are one-to-one correspondences that preserve endpoints from $G$ to $G''$. Indeed, if $v$ is an endpoint of $e$, then $g_1(v)$ is an endpoint of $h_1(e)$, hence $g_2(g_1(v))$ is an endpoint of $h_2(h_1(e))$, and the converse direction follows by the same reasoning. Hence $G$ is isomorphic to $G''$. ∎
 
-Because of the symmetry property, one can simply say "$G$ and $G'$ are isomorphic" instead of "$G$ is isomorphic to $G'$" or "$G'$ is isomorphic to $G$." An equivalence relation partitions a set into equivalence classes, so a collection of graphs splits into **isomorphism classes**, each consisting of mutually isomorphic graphs.
+Because of the symmetry property, one can simply say "$`G`$ and $G'$ are isomorphic" instead of "$`G`$ is isomorphic to $G'$" or "$`G'`$ is isomorphic to $G$." An equivalence relation partitions a set into equivalence classes, so a collection of graphs splits into **isomorphism classes**, each consisting of mutually isomorphic graphs.
 
 **Example 10.3.2 (Representatives of Isomorphism Classes).** The task is to list the graphs with two vertices and two edges up to isomorphism, that is, a set of representatives such that any graph with two vertices and two edges is isomorphic to one of them. The four representatives are shown in Figure 25. Labels are omitted because every way of labeling them yields isomorphic graphs.
 
@@ -791,7 +791,7 @@ Part 3 of Theorem 10.3.2 is proved here; the other parts can be proved by simila
 
 **Example 10.3.4 (Proof of Part 3 of Theorem 10.3.2).** Suppose $G$ and $G'$ are isomorphic and $G$ has a vertex $v$ of degree $k$. It must be shown that $G'$ has a vertex of degree $k$. Because the graphs are isomorphic, there are one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ that preserve the edge-endpoint functions; that is, for every edge $e$ and vertex $u$ of $G$, $u$ is an endpoint of $e$ if, and only if, $g(u)$ is an endpoint of $h(e)$.
 
-1. Let $e_1, e_2, \ldots, e_s$ be the distinct edges incident on $v$ in $G$ ($s \geq 0$). Then $h(e_1), \ldots, h(e_s)$ are $s$ distinct edges incident on $g(v)$ in $G'$: they are distinct because $h$ is one-to-one, and they are incident on $g(v)$ because endpoints are preserved.
+1. Let $e_1, e_2, \ldots, e_s$ be the distinct edges incident on $v$ in $G$ ($`s \geq 0`$). Then $h(e_1), \ldots, h(e_s)$ are $s$ distinct edges incident on $g(v)$ in $G'$: they are distinct because $h$ is one-to-one, and they are incident on $g(v)$ because endpoints are preserved.
 2. No other edges are incident on $g(v)$. If an edge $f$ is incident on $g(v)$, then since $h$ is onto, $f = h(e)$ for some $e$, and since endpoints are preserved, $v$ is an endpoint of $e$, so $e$ is one of $e_1, \ldots, e_s$. Hence the number of edges incident on $v$ equals the number of edges incident on $g(v)$.
 3. An edge $e$ is a loop at $v$ if, and only if, $h(e)$ is a loop at $g(v)$. A vertex $w$ is an endpoint of $e$ exactly when $g(w)$ is an endpoint of $h(e)$, and $g$ is a one-to-one correspondence, so $v$ is the only endpoint of $e$ exactly when $g(v)$ is the only endpoint of $h(e)$. Hence $v$ and $g(v)$ have the same number of loops.
 4. The degree of $v$ equals the number of non-loop edges incident on $v$ plus twice the number of loops at $v$. By 2 and 3 these two numbers are the same for $v$ and $g(v)$, so $\deg(g(v)) = \deg(v) = k$. ∎
@@ -806,9 +806,9 @@ When $G$ and $G'$ are both simple, each edge is determined by its pair of endpoi
 
 > **Definition:** If $G$ and $G'$ are simple graphs, then $G$ is **isomorphic** to $G'$ if, and only if, there exists a one-to-one correspondence $g: V(G) \to V(G')$ between their vertex sets such that the following holds for all vertices $u, v$ of $G$.
 
-$$
+```math
 \lbrace u, v\rbrace \text{ is an edge in } G \iff \lbrace g(u), g(v)\rbrace \text{ is an edge in } G' \qquad (10.3.2)
-$$
+```
 
 That is, two vertices of $G$ are joined by an edge exactly when the corresponding two vertices of $G'$ are joined by an edge.
 
@@ -923,7 +923,7 @@ In linguistics, **syntax** concerns the grammatical structure of a sentence, whi
 
 *Figure 31. The graphs of butane (left) and isobutane (right)*
 
-Both graphs in Figure 31 have four carbon atoms and ten hydrogen atoms, but the atoms are arranged differently. Molecules with the same chemical formula (here $\mathrm{C_4H_{10}}$) but different bonds are called **isomers**. A molecule that has as many hydrogen atoms as possible for its number of carbon atoms is called a saturated hydrocarbon, and Cayley showed that a saturated hydrocarbon with $k$ carbon atoms has $2k + 2$ hydrogen atoms. The first step is to prove that the graph of a saturated hydrocarbon molecule is a tree, which is done by contradiction.
+Both graphs in Figure 31 have four carbon atoms and ten hydrogen atoms, but the atoms are arranged differently. Molecules with the same chemical formula (here $`\mathrm{C_4H_{10}}`$) but different bonds are called **isomers**. A molecule that has as many hydrogen atoms as possible for its number of carbon atoms is called a saturated hydrocarbon, and Cayley showed that a saturated hydrocarbon with $k$ carbon atoms has $2k + 2$ hydrogen atoms. The first step is to prove that the graph of a saturated hydrocarbon molecule is a tree, which is done by contradiction.
 
 **Proof.** Suppose some hydrocarbon molecule has as many hydrogen atoms as possible for its number of carbon atoms, yet its graph $G$ is not a tree. Since $G$ is not a tree, it is not connected or it has a circuit. All the atoms of a molecule are connected to each other, so $G$ is connected, and therefore $G$ has a circuit. Each vertex on a circuit has degree at least 2, while a hydrogen vertex has degree 1, so the edges of the circuit join only carbon atoms. Now delete one edge of the circuit and attach a new hydrogen atom to each of the two carbon atoms at its ends (Figure 32). The new bonds replace the deleted one, so the number of bonds of each of the two carbon atoms is unchanged. The resulting molecule has the same number of carbon atoms and two more hydrogen atoms. This contradicts the assumption that the original molecule already had the largest possible number of hydrogen atoms for its carbon count. So the assumption is false, and $G$ is a tree. ∎
 
@@ -979,9 +979,9 @@ Inductive step: Suppose that $P(k)$ is true for some integer $k \geq 1$, that is
 
 Hence $T'$ is a tree, and by the inductive hypothesis it has $k - 1$ edges. Therefore:
 
-$$
+```math
 (\text{number of edges of } T) = (\text{number of edges of } T') + 1 = (k - 1) + 1 = k
-$$
+```
 
 This is what was to be shown. ∎
 
@@ -1001,7 +1001,7 @@ The second main theorem requires the following lemma, which is the same as Lemma
 
 **Lemma 10.4.3.** If $G$ is any connected graph, $C$ is any circuit in $G$, and any one of the edges of $C$ is removed from $G$, then the graph that remains is connected.
 
-The essential reason is that any two vertices of a circuit are connected by two different routes. If the circuit is drawn in the plane, one route goes clockwise and the other counterclockwise. For example, in the circuit of Figure 35 the clockwise path from $v_2$ to $v_3$ is $v_2 e_3 v_3$ and the counterclockwise path is $v_2 e_2 v_1 e_1 v_0 e_6 v_5 e_5 v_4 e_4 v_3$ (where $v_6 = v_0$).
+The essential reason is that any two vertices of a circuit are connected by two different routes. If the circuit is drawn in the plane, one route goes clockwise and the other counterclockwise. For example, in the circuit of Figure 35 the clockwise path from $v_2$ to $v_3$ is $v_2 e_3 v_3$ and the counterclockwise path is $v_2 e_2 v_1 e_1 v_0 e_6 v_5 e_5 v_4 e_4 v_3$ (where $`v_6 = v_0`$).
 
 ![Figure 35. The clockwise and counterclockwise paths joining two vertices of a circuit](../../images/Ch10_Circuit-Two-Paths.png)
 
@@ -1009,8 +1009,8 @@ The essential reason is that any two vertices of a circuit are connected by two 
 
 **Proof.** Suppose $G$ is a connected graph, $C$ is a circuit in $G$, and $e$ is an edge of $C$. Form the subgraph $G'$ of $G$ by removing $e$: $V(G') = V(G)$ and $E(G') = E(G) - \lbrace e\rbrace$. To show that $G'$ is connected, it is necessary to find, for any two vertices $u, w$ of $G'$, a walk in $G'$ from $u$ to $w$. Since $u$ and $w$ are vertices of $G$ and $G$ is connected, there is a walk $W$ in $G$ from $u$ to $w$.
 
-- Case 1 ($e$ is not an edge of $W$): The only edge of $G$ not in $G'$ is $e$, so $W$ is also a walk in $G'$.
-- Case 2 ($e$ is an edge of $W$): Write the circuit as $C: v_0 e_1 v_1 e_2 v_2 \cdots e_n v_n$ ($v_n = v_0$) and let $e = e_k$. Then $W$ contains the segment $v_{k-1} e_k v_k$ or $v_k e_k v_{k-1}$. If $W$ contains $v_{k-1} e_k v_k$, replace that segment by the walk around the circuit in the opposite direction, $W': v_{k-1} e_{k-1} v_{k-2} \cdots v_0 e_n v_{n-1} \cdots e_{k+1} v_k$. If $W$ contains $v_k e_k v_{k-1}$, replace it by the walk around the circuit in the forward direction, $W'': v_k e_{k+1} v_{k+1} \cdots v_n e_1 v_1 e_2 \cdots e_{k-1} v_{k-1}$. For instance, to patch in $W'$, take the section of $W$ from $u$ to $v_{k-1}$, then $W'$, then the section of $W$ from $v_k$ to $w$. The walks $W'$ and $W''$ use only edges of $C$ other than $e_k$. If the new walk still contains $e$, repeat the process. The number of occurrences of $e$ in $W$ is finite, so eventually one obtains a walk from $u$ to $w$ that does not contain $e$, that is, a walk in $G'$.
+- Case 1 ($e$ is not an edge of $`W`$): The only edge of $G$ not in $G'$ is $e$, so $W$ is also a walk in $G'$.
+- Case 2 ($e$ is an edge of $`W`$): Write the circuit as $C: v_0 e_1 v_1 e_2 v_2 \cdots e_n v_n$ ($`v_n = v_0`$) and let $e = e_k$. Then $W$ contains the segment $v_{k-1} e_k v_k$ or $v_k e_k v_{k-1}$. If $W$ contains $v_{k-1} e_k v_k$, replace that segment by the walk around the circuit in the opposite direction, $W': v_{k-1} e_{k-1} v_{k-2} \cdots v_0 e_n v_{n-1} \cdots e_{k+1} v_k$. If $W$ contains $v_k e_k v_{k-1}$, replace it by the walk around the circuit in the forward direction, $W'': v_k e_{k+1} v_{k+1} \cdots v_n e_1 v_1 e_2 \cdots e_{k-1} v_{k-1}$. For instance, to patch in $W'$, take the section of $W$ from $u$ to $v_{k-1}$, then $W'$, then the section of $W$ from $v_k$ to $w$. The walks $W'$ and $W''$ use only edges of $C$ other than $e_k$. If the new walk still contains $e$, repeat the process. The number of occurrences of $e$ in $W$ is finite, so eventually one obtains a walk from $u$ to $w$ that does not contain $e$, that is, a walk in $G'$.
 
 In both cases there is a walk in $G'$ from $u$ to $w$, and since $u$ and $w$ were arbitrary, $G'$ is connected. ∎
 
@@ -1034,9 +1034,9 @@ Theorem 10.4.4 is not a full converse of Theorem 10.4.2. Every connected graph w
 
 **Proof (by contradiction).** Suppose there is a circuit-free graph $G$ with $n$ vertices and $m$ edges, where $m \geq n$. Let $G_1, G_2, \ldots, G_k$ be the connected components of $G$, with $n_1, n_2, \ldots, n_k$ vertices, respectively. The connected components divide up the vertices, so $\sum_{i=1}^{k} n_i = n$. Since $G$ has no circuit, none of the components has a circuit, and since each is connected, each is a tree. So by Theorem 10.4.2, $G_i$ has $n_i - 1$ edges, and since the edges of $G$ are those of its components, the following holds.
 
-$$
+```math
 (\text{number of edges of } G) = \sum_{i=1}^{k} (n_i - 1) = (n_1 + n_2 + \cdots + n_k) - \underbrace{(1 + 1 + \cdots + 1)}_{k \text{ ones}} = n - k < n
-$$
+```
 
 The last inequality holds because $k \geq 1$. This contradicts the hypothesis that the number of edges $m$ is at least $n$, so $G$ has a circuit. ∎
 
@@ -1131,9 +1131,9 @@ For a full binary tree, the count of internal vertices determines both the total
 
 (1) Split the vertices of $T$ into two disjoint groups: those with a parent and those without. The root is the only vertex without a parent. In a full binary tree each parent has exactly two children, and the parents are precisely the internal vertices, so the vertices having a parent are twice as many as the parents, namely $2k$. Hence:
 
-$$
+```math
 (\text{number of vertices of } T) = (\text{vertices with a parent}) + (\text{vertices without a parent}) = 2k + 1
-$$
+```
 
 (2) The number of vertices of $T$ is also the number of internal vertices plus the number of leaves, so $(\text{number of vertices of } T) = k + (\text{number of leaves})$. Equating the two expressions gives $2k + 1 = k + (\text{number of leaves})$, and solving gives $(2k + 1) - k = k + 1$ leaves. ∎
 
@@ -1154,9 +1154,9 @@ Inductive step: Suppose that for some integer $k \geq 0$, $P(i)$ is true for eve
 - Case 1 ($v$ has only one child): Without loss of generality, assume the child is a left child $v_L$, the root of the left subtree $T_L$ (Figure 41 (a)). Let $t_L$ be the number of leaves of $T_L$. The height of $T_L$ is $k$, one less than the height of $T$, so by the inductive hypothesis $t_L \leq 2^k$. Since $v$ has only one child, it has degree 1 and is a leaf, and the other leaves of $T$ are among the leaves of $T_L$. Hence $t \leq t_L + 1$. Also $2^k \geq 2^0 = 1$ because $k \geq 0$. Therefore $t \leq t_L + 1 \leq 2^k + 1 \leq 2^k + 2^k = 2 \cdot 2^k = 2^{k+1}$.
 - Case 2 ($v$ has two children): $v$ has a left child $v_L$ and a right child $v_R$, the roots of a left subtree $T_L$ and a right subtree $T_R$ (Figure 41 (b)). Since $T$ is a binary tree, so are $T_L$ and $T_R$. Let $t_L, t_R$ be their numbers of leaves and $h_L, h_R$ their heights. Since $T$ has height $k + 1$, $h_L \leq k$ and $h_R \leq k$, so by the inductive hypothesis $t_L \leq 2^{h_L}$ and $t_R \leq 2^{h_R}$. The vertex $v$ has degree 2 and is not a leaf, and every leaf of $T$ is a leaf of $T_L$ or of $T_R$, so $t \leq t_L + t_R$. Therefore:
 
-$$
+```math
 t \leq t_L + t_R \leq 2^{h_L} + 2^{h_R} \leq 2^k + 2^k = 2 \cdot 2^k = 2^{k+1}
-$$
+```
 
 ![Figure 41. Binary trees whose root has one child (a) and two children (b)](../../images/Ch10_Binary-Tree-Root-Cases.png)
 
@@ -1287,7 +1287,7 @@ Output: T (a minimum spanning tree for G)
 
 In Step 1, $T$ starts as a graph with all the vertices and no edges. In Step 2, $E$ is the set of edges not yet examined and $m$ is the number of edges in $T$. The loop of Step 3 continues until $T$ has $n - 1$ edges. Steps 3a and 3b take out the lightest remaining edge, and Step 3c adds it to $T$ only if it does not create a circuit in $T$.
 
-**Example 10.6.2 (Action of Kruskal's Algorithm).** Kruskal's algorithm is applied to the graph of Figure 43 ($n = 8$). Examining the edges in order of weight gives the following.
+**Example 10.6.2 (Action of Kruskal's Algorithm).** Kruskal's algorithm is applied to the graph of Figure 43 ($`n = 8`$). Examining the edges in order of weight gives the following.
 
 | Iteration | Edge considered | Weight | Action | Reason |
 |:-----|:-----|:-----|:-----|:-----|
@@ -1327,9 +1327,9 @@ Next, $T$ is shown to have minimum total weight. Among the minimum spanning tree
 3. $w(e) \leq w(e')$. If $w(e') < w(e)$, the algorithm would have examined $e'$ before $e$, and since $e'$ is not in $T$, it was rejected then because it formed a circuit with edges already in $T$. Those edges were added before $e$, so they are all in $T_1$; since $e'$ is also in $T_1$, $T_1$ would contain a circuit, a contradiction.
 4. Hence the following holds.
 
-$$
+```math
 w(T_2) = w(T_1) - \underbrace{\big(w(e') - w(e)\big)}_{\geq 0} \leq w(T_1)
-$$
+```
 
 Since $T_1$ is a minimum spanning tree, the spanning tree $T_2$ with $w(T_2) \leq w(T_1)$ is also a minimum spanning tree. But $T_2$ is obtained from $T_1$ by removing the edge $e'$, which is not in $T$, and adding the edge $e$ of $T$, so it has one more edge in common with $T$ than $T_1$ does. This contradicts the choice of $T_1$ as a minimum spanning tree with the maximum number of edges in common with $T$. Hence $T = T_1$, and $T$ is a minimum spanning tree. ∎
 
@@ -1399,7 +1399,7 @@ Hence $T = T_1$, and $T$ is a minimum spanning tree. ∎
 **Example 10.6.4 (Finding All Minimum Spanning Trees).** The task is to find all minimum spanning trees for the graph $G$ on the left of Figure 46, using Kruskal's algorithm and Prim's algorithm starting at vertex $a$, and to record the order in which edges are added.
 
 - Kruskal's algorithm: after adding $\lbrace d, f\rbrace$ (1) and $\lbrace a, c\rbrace$ (2), it meets the edges $\lbrace a, b\rbrace$ and $\lbrace b, c\rbrace$ of weight 3. Whichever is added first, the other would form a circuit through $a, b, c$ and is rejected. Then $\lbrace c, d\rbrace$ (4) and $\lbrace d, e\rbrace$ (5) are added, giving five edges, and the algorithm stops. So the edges are added in the order $\lbrace d, f\rbrace, \lbrace a, c\rbrace, \lbrace a, b\rbrace, \lbrace c, d\rbrace, \lbrace d, e\rbrace$ or $\lbrace d, f\rbrace, \lbrace a, c\rbrace, \lbrace b, c\rbrace, \lbrace c, d\rbrace, \lbrace d, e\rbrace$.
-- Prim's algorithm (starting at $a$): the lightest edge at $a$, $\lbrace a, c\rbrace$ (2), is added. Among the next candidates, $\lbrace a, b\rbrace$ and $\lbrace b, c\rbrace$ of weight 3 are lightest, so one of them is added. Then $\lbrace c, d\rbrace$ (4), $\lbrace d, f\rbrace$ (1), and $\lbrace d, e\rbrace$ (5) are added in turn. So the order is $\lbrace a, c\rbrace, \lbrace a, b\rbrace, \lbrace c, d\rbrace, \lbrace d, f\rbrace, \lbrace d, e\rbrace$ or $\lbrace a, c\rbrace, \lbrace b, c\rbrace, \lbrace c, d\rbrace, \lbrace d, f\rbrace, \lbrace d, e\rbrace$.
+- Prim's algorithm (starting at $`a`$): the lightest edge at $a$, $\lbrace a, c\rbrace$ (2), is added. Among the next candidates, $\lbrace a, b\rbrace$ and $\lbrace b, c\rbrace$ of weight 3 are lightest, so one of them is added. Then $\lbrace c, d\rbrace$ (4), $\lbrace d, f\rbrace$ (1), and $\lbrace d, e\rbrace$ (5) are added in turn. So the order is $\lbrace a, c\rbrace, \lbrace a, b\rbrace, \lbrace c, d\rbrace, \lbrace d, f\rbrace, \lbrace d, e\rbrace$ or $\lbrace a, c\rbrace, \lbrace b, c\rbrace, \lbrace c, d\rbrace, \lbrace d, f\rbrace, \lbrace d, e\rbrace$.
 
 Hence there are two minimum spanning trees, (a) and (b) in Figure 46, each with total weight $1 + 2 + 3 + 4 + 5 = 15$.
 
@@ -1482,19 +1482,19 @@ Dijkstra's algorithm adds vertices one after another until $z$ has been added. T
 
 **Proof (by mathematical induction).** Let $G$ be a connected weighted graph without loops or parallel edges in which every edge has positive weight. Let $T$ be the graph built by the algorithm and $L(u)$ the label given by the algorithm to vertex $u$, and for each integer $n \geq 0$ let $P(n)$ be the following sentence.
 
-$P(n)$: After the $n$th iteration of the while loop, (1) $T$ is a tree, and (2) for every vertex $v$ in $T$, $L(v)$ is the length of a shortest path in $G$ from $a$ to $v$.
+$P(n)$: After the $`n`$th iteration of the while loop, (1) $T$ is a tree, and (2) for every vertex $v$ in $T$, $L(v)$ is the length of a shortest path in $G$ from $a$ to $v$.
 
 Mathematical induction shows that $P(n)$ is true from $n = 0$ through the termination of the algorithm.
 
 Basis step: For $n = 0$, $T$ consists of the vertex $a$ alone with no edges, so it is a tree. Moreover, the initial value 0 of $L(a)$ is the length of the shortest path from $a$ to $a$. Hence $P(0)$ is true.
 
-Inductive step: Suppose $P(k)$ is true for some integer $k \geq 0$ (the inductive hypothesis). Suppose that in the $(k+1)$st iteration the vertex $v$ and the edge $\lbrace x, v\rbrace$ are added to $T$, where $x = D(v)$ is a vertex already in $T$. Attaching a new vertex to a tree by a single edge creates no circuit and keeps the graph connected, so the new $T$ is a tree. Labels change only for vertices outside $T$, so by the inductive hypothesis, for each vertex $y$ that was in $T$ before $v$ was added, $L(y)$ is still the length of a shortest path. So it remains to show that $L(v)$ is the length of a shortest path from $a$ to $v$.
+Inductive step: Suppose $P(k)$ is true for some integer $k \geq 0$ (the inductive hypothesis). Suppose that in the $`(k+1)`$st iteration the vertex $v$ and the edge $\lbrace x, v\rbrace$ are added to $T$, where $x = D(v)$ is a vertex already in $T$. Attaching a new vertex to a tree by a single edge creates no circuit and keeps the graph connected, so the new $T$ is a tree. Labels change only for vertices outside $T$, so by the inductive hypothesis, for each vertex $y$ that was in $T$ before $v$ was added, $L(y)$ is still the length of a shortest path. So it remains to show that $L(v)$ is the length of a shortest path from $a$ to $v$.
 
 By the algorithm, $L(v) = L(x) + w(x, v)$. Write $\mathrm{LSP}(a, v)$ for the length of a shortest path from $a$ to $v$. Take any shortest path from $a$ to $v$. It starts at $a$, which is in $T$, and ends at $v$, which was outside $T$ before being added, so it has a first edge $\lbrace s, t\rbrace$ leaving $T$, with $s \in V(T)$ and $t \notin V(T)$. Then the following holds.
 
-$$
+```math
 \begin{aligned} \mathrm{LSP}(a, v) &\geq \mathrm{LSP}(a, s) + w(s, t) && \text{the part from } t \text{ to } v \text{ has length} \geq 0 \\ &= L(s) + w(s, t) && \text{inductive hypothesis, since } s \in V(T) \\ &\geq L(t) && \text{after } s \text{ was added, step 4b made } L(t) \text{ at most this} \\ &\geq L(x) + w(x, v) && t \text{ is in the fringe and } v \text{ has the smallest label} \end{aligned}
-$$
+```
 
 The first line holds because the part of the shortest path from $a$ to $s$ has length at least $\mathrm{LSP}(a, s)$, and the part from $t$ to $v$ has length at least 0 because all weights are positive. In the third line, labels only decrease, so $L(t) \leq L(s) + w(s, t)$ continues to hold after $s$ is added. In the fourth line, $t$ is adjacent to the vertex $s$ of $T$, so it is in the fringe, and Step 4c chose $v$ with the smallest label in the fringe, so $L(v) = L(x) + w(x, v) \leq L(t)$. On the other hand, $L(x) + w(x, v)$ is the length of the walk from $a$ to $v$ formed by a shortest path from $a$ to $x$ followed by the edge $\lbrace x, v\rbrace$, so $\mathrm{LSP}(a, v) \leq L(x) + w(x, v)$. The two inequalities give $\mathrm{LSP}(a, v) = L(x) + w(x, v) = L(v)$. Hence $P(k+1)$ is true.
 
@@ -1541,7 +1541,7 @@ The algorithm terminates as soon as $z$ is in $T$, and it has been shown that th
 | Traveling salesman problem | The problem of finding a Hamiltonian circuit of minimum total distance; $K_n$ has $(n-1)!/2$ Hamiltonian circuits, so checking them all is impractical. |
 | Adjacency matrix | $a_{ij}$ is the number of arrows from $v_i$ to $v_j$ (directed) or of edges joining $v_i$ and $v_j$ (undirected), and the adjacency matrix of an undirected graph is symmetric. |
 | Adjacency matrix and components | Numbering the vertices of each component consecutively makes the adjacency matrix block diagonal, with the components' adjacency matrices on the diagonal. |
-| Matrix multiplication | $(\mathbf{A}\mathbf{B})_{ij} = \sum_{r} a_{ir} b_{rj}$; it is associative but not commutative. |
+| Matrix multiplication | $`(\mathbf{A}\mathbf{B})_{ij} = \sum_{r} a_{ir} b_{rj}`$; it is associative but not commutative. |
 | Counting walks | The $(i, j)$ entry of $\mathbf{A}^n$ is the number of walks of length $n$ from $v_i$ to $v_j$ (Theorem 10.2.2). |
 | Graph isomorphism | Two graphs are isomorphic if there is a pair of one-to-one correspondences of vertices and edges that preserves the edge-endpoint functions, and graph isomorphism is an equivalence relation. |
 | Isomorphic invariants | Numbers of vertices and edges, degrees, circuits, connectedness, Euler and Hamiltonian circuits, and so on; they are used to show that two graphs are not isomorphic. |
@@ -1652,6 +1652,6 @@ The algorithm terminates as soon as $z$ is in $T$, and it has been shown that th
     <details>
     <summary>Answer</summary>
 
-    Initially $L(a) = 0$. The neighbors of $a$ get $L(b) = 3$ and $L(c) = 2$, so $c$ is added ($D(c) = a$). Updating the neighbors of $c$ leaves $L(b) = \min(3, 2 + 3) = 3$ unchanged and gives $L(d) = 6$ and $L(e) = 8$. The smallest, $b$ (3), is added, but its neighbors $a, c$ are already in $T$. Next $d$ (6) is added, giving $L(f) = 6 + 1 = 7$ and leaving $L(e) = \min(8, 6 + 5) = 8$ unchanged. In the fringe $\lbrace e, f\rbrace$, $L(f) = 7$ is smallest, so $f$ is added and the algorithm ends. Following $D$ backward gives the shortest path $acdf$, of length $2 + 4 + 1 = 7$.
+    Initially $L(a) = 0$. The neighbors of $a$ get $L(b) = 3$ and $L(c) = 2$, so $c$ is added ($`D(c) = a`$). Updating the neighbors of $c$ leaves $L(b) = \min(3, 2 + 3) = 3$ unchanged and gives $L(d) = 6$ and $L(e) = 8$. The smallest, $b$ (3), is added, but its neighbors $a, c$ are already in $T$. Next $d$ (6) is added, giving $L(f) = 6 + 1 = 7$ and leaving $L(e) = \min(8, 6 + 5) = 8$ unchanged. In the fringe $\lbrace e, f\rbrace$, $L(f) = 7$ is smallest, so $f$ is added and the algorithm ends. Following $D$ backward gives the shortest path $acdf$, of length $2 + 4 + 1 = 7$.
 
     </details>

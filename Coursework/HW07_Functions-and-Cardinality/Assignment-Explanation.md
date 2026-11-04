@@ -39,7 +39,7 @@
 
 **Problem.** The function $S: \mathbf{Z}^{+} \to \mathbf{Z}^{+}$ assigns to each positive integer the sum of its positive divisors. Compute $S(1)$, $S(15)$, $S(17)$, $S(5)$, $S(18)$, and $S(21)$.
 
-**Concepts used.** As defined in [Chapter 7, Section 1](../../Lecture-Notes/Ch07_Properties-of-Functions/Concepts_Lecture.md), a function is a rule that assigns to each element of the domain exactly one element of the co-domain. Here the rule is given in words rather than by a formula, so the values are computed by following the rule literally. A positive integer $d$ divides $n$ ($d \mid n$) when there is an integer $k$ with $n = dk$ (Chapter 4).
+**Concepts used.** As defined in [Chapter 7, Section 1](../../Lecture-Notes/Ch07_Properties-of-Functions/Concepts_Lecture.md), a function is a rule that assigns to each element of the domain exactly one element of the co-domain. Here the rule is given in words rather than by a formula, so the values are computed by following the rule literally. A positive integer $d$ divides $n$ ($`d \mid n`$) when there is an integer $k$ with $n = dk$ (Chapter 4).
 
 **Solution.** The positive divisors of $n$ are the integers from $1$ to $n$ that divide $n$. If $d$ is a divisor, so is $n/d$, so divisors come in pairs $d$ and $n/d$. Hence it suffices to find the divisors $d \le \sqrt{n}$ and attach their partners, and no divisor is missed. For example, the divisors of $18$ that are at most $\sqrt{18} \approx 4.24$ are $1, 2, 3$, and their partners are $18, 9, 6$.
 
@@ -56,7 +56,7 @@
 
 Therefore $S(1) = 1$, $S(15) = 24$, $S(17) = 18$, $S(5) = 6$, $S(18) = 39$, and $S(21) = 32$.
 
-The positive divisors of a prime $p$ are only $1$ and $p$, so $S(p) = p + 1$; $S(17) = 18$ and $S(5) = 6$ are examples. Conversely, if $S(n) = n + 1$, then $n \neq 1$ (because $S(1) = 1$), and $n$ has no divisors other than $1$ and $n$, so $n$ is prime. Thus for a positive integer $n$, $S(n) = n + 1$ if and only if $n$ is prime.
+The positive divisors of a prime $p$ are only $1$ and $p$, so $S(p) = p + 1$; $S(17) = 18$ and $S(5) = 6$ are examples. Conversely, if $S(n) = n + 1$, then $n \neq 1$ (because $`S(1) = 1`$), and $n$ has no divisors other than $1$ and $n$, so $n$ is prime. Thus for a positive integer $n$, $S(n) = n + 1$ if and only if $n$ is prime.
 
 ---
 
@@ -74,9 +74,9 @@ The positive divisors of a prime $p$ are only $1$ and $p$, so $S(p) = p + 1$; $S
 2. Take any real number $x$. Since $F$ and $G$ are functions into $\mathbf{R}$, $F(x)$ and $G(x)$ are real numbers.
 3. Applying the definition of the product function, the commutative law of real multiplication, and the definition of the product function again gives the following equalities.
 
-$$
+```math
 (F \cdot G)(x) = F(x) \cdot G(x) = G(x) \cdot F(x) = (G \cdot F)(x)
-$$
+```
 
 Since $x$ was an arbitrary real number, the two functions take the same value at every real number $x$. By Theorem 7.1.1, $F \cdot G = G \cdot F$.
 
@@ -90,9 +90,9 @@ Since $x$ was an arbitrary real number, the two functions take the same value at
 
 **Problem.** Using only the definition $b^{-x} = \frac{1}{b^x}$ of a negative exponent and the definition of logarithm, show that the following identity always holds for a positive real number $b$ with $b \neq 1$ and a positive real number $u$.
 
-$$
+```math
 \log_b\left(\frac{1}{u}\right) = -\log_b(u)
-$$
+```
 
 **Concepts used.** The logarithmic function of Chapter 7, Section 1 (Example 7.1.8) follows the definition below. The key to the proof is to name the unknown logarithm with a variable and to move between exponential form and logarithmic form using this definition.
 
@@ -133,7 +133,7 @@ The negations fix the form of a counterexample. $F$ is not one-to-one when there
 
 Therefore $f$ is one-to-one.
 
-> **Caution:** A proof that a function is one-to-one must **assume equal outputs and conclude equal inputs**. Showing that "$n_1 = n_2$ implies $2n_1 = 2n_2$" only confirms that equal inputs have equal outputs, that is, that $f$ is a function. This direction holds for every function and says nothing about being one-to-one. For example, the constant function $g(n) = 0$ satisfies "$n_1 = n_2$ implies $g(n_1) = g(n_2)$", yet it is not one-to-one.
+> **Caution:** A proof that a function is one-to-one must **assume equal outputs and conclude equal inputs**. Showing that "$`n_1 = n_2`$ implies $2n_1 = 2n_2$" only confirms that equal inputs have equal outputs, that is, that $f$ is a function. This direction holds for every function and says nothing about being one-to-one. For example, the constant function $g(n) = 0$ satisfies "$`n_1 = n_2`$ implies $g(n_1) = g(n_2)$", yet it is not one-to-one.
 
 **Solution (a)(ii).** $f$ is not onto. A counterexample is the element $1$ of the co-domain $\mathbf{Z}$.
 
@@ -169,7 +169,7 @@ $f$ and $h$ have the same rule and differ only in the co-domain. Being onto depe
 
 **Step 1: simplify the condition.** Let real numbers $x_1$ and $x_2$ satisfy $f(x_1) = f(x_2)$ and simplify. Both denominators are positive, so multiplying both sides by them preserves equivalence.
 
-$$
+```math
 \begin{aligned}
 \frac{x_1}{x_1^2 + 1} = \frac{x_2}{x_2^2 + 1}
 &\iff x_1(x_2^2 + 1) = x_2(x_1^2 + 1) \\
@@ -177,15 +177,15 @@ $$
 &\iff x_1 x_2 (x_2 - x_1) - (x_2 - x_1) = 0 \\
 &\iff (x_2 - x_1)(x_1 x_2 - 1) = 0
 \end{aligned}
-$$
+```
 
 **Step 2: interpret.** A product of two real numbers is $0$, so $x_2 - x_1 = 0$ or $x_1 x_2 - 1 = 0$. Hence $f(x_1) = f(x_2)$ holds not only when $x_1 = x_2$ but also when $x_1 x_2 = 1$. Choose $x_1 = 2$ and $x_2 = \frac{1}{2}$ as a pair with $x_1 x_2 = 1$ and $x_1 \neq x_2$.
 
 **Step 3: check the counterexample.** Compute both values directly.
 
-$$
+```math
 f(2) = \frac{2}{2^2 + 1} = \frac{2}{5}, \qquad f\left(\frac{1}{2}\right) = \frac{\frac{1}{2}}{\frac{1}{4} + 1} = \frac{\frac{1}{2}}{\frac{5}{4}} = \frac{1}{2} \cdot \frac{4}{5} = \frac{2}{5}
-$$
+```
 
 Since $2 \neq \frac{1}{2}$ but $f(2) = f\left(\frac{1}{2}\right)$, $f$ is not one-to-one.
 
@@ -195,9 +195,9 @@ Since $2 \neq \frac{1}{2}$ but $f(2) = f\left(\frac{1}{2}\right)$, $f$ is not on
 
 Graphically, a function from the reals to the reals is one-to-one if and only if every horizontal line meets its graph in at most one point. In Figure 1 the horizontal line $y = \frac{2}{5}$ meets the graph at the two points $x = \frac{1}{2}$ and $x = 2$. In general, the following holds for every nonzero real number $x$, so every $x$ with $x \neq \pm 1$ and $x \neq 0$ shares its value with the different number $\frac{1}{x}$.
 
-$$
+```math
 f\left(\frac{1}{x}\right) = \frac{\frac{1}{x}}{\frac{1}{x^2} + 1} = \frac{\frac{1}{x}}{\frac{1 + x^2}{x^2}} = \frac{x^2}{x(1 + x^2)} = \frac{x}{x^2 + 1} = f(x)
-$$
+```
 
 ---
 
@@ -370,7 +370,7 @@ Therefore $f$ is a one-to-one correspondence from $S$ to $U$, and $S$ and $U$ ha
 
 *Figure 2. How f(x) = 2x sends points of the interval (0, 1) to points of the interval (0, 2)*
 
-> **Caution:** In the one-to-one part, showing that "$x_1 = x_2$ implies $2x_1 = 2x_2$" is not a proof. That only says $f$ is a function; what must be assumed is $f(x_1) = f(x_2)$, and what must be derived is $x_1 = x_2$. In the onto part, besides computing $f\left(\frac{y}{2}\right) = y$, one must check that $\frac{y}{2}$ lies in the domain $S$.
+> **Caution:** In the one-to-one part, showing that "$`x_1 = x_2`$ implies $2x_1 = 2x_2$" is not a proof. That only says $f$ is a function; what must be assumed is $f(x_1) = f(x_2)$, and what must be derived is $x_1 = x_2$. In the onto part, besides computing $f\left(\frac{y}{2}\right) = y$, one must check that $\frac{y}{2}$ lies in the domain $S$.
 
 As Figure 2 shows, $f$ stretches the interval to twice its length, yet it neither loses nor adds any points. In the same way, for $a < b$ and $c < d$, the linear function $x \mapsto c + \frac{d - c}{b - a}(x - a)$ is a one-to-one correspondence between the open intervals $(a, b)$ and $(c, d)$, so all open intervals have the same cardinality regardless of their lengths.
 

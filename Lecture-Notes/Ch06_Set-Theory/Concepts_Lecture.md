@@ -85,13 +85,13 @@ For a set $S$ and an object $a$, the following notation is used.
 
 If $S$ is a set and $P(x)$ is a property (a predicate) that is true or false for each element of $S$, then **set-builder notation** defines a new set $A$ as follows.
 
-$$
+```math
 A = \lbrace x \in S \mid P(x) \rbrace
-$$
+```
 
 This is read "the set of all $x$ in $S$ such that $P(x)$." The condition that the elements must satisfy is written after the vertical bar $\mid$. For example, $\lbrace x \in \mathbf{Z} \mid -2 < x < 3 \rbrace$ is the set of all integers greater than $-2$ and less than 3, namely $\lbrace -1, 0, 1, 2 \rbrace$.
 
-> **Caution:** $\lbrace x \in S \mid P(x) \rbrace$ is a set, not a single element. If the words "the set of all" are dropped and it is read as "$x$ such that $P(x)$," it sounds as if it denoted one element satisfying the condition.
+> **Caution:** $\lbrace x \in S \mid P(x) \rbrace$ is a set, not a single element. If the words "the set of all" are dropped and it is read as "$`x`$ such that $P(x)$," it sounds as if it denoted one element satisfying the condition.
 
 ### 1.2 Subsets: Proof and Disproof
 
@@ -99,15 +99,15 @@ The subset relation defined in Chapter 1 can be restated as a universal conditio
 
 > **Definition:** If every element of a set $A$ is an element of a set $B$, then $A$ is a **subset** of $B$, written $A \subseteq B$.
 
-$$
+```math
 A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)
-$$
+```
 
 Since the negation of a universal statement is existential (Chapter 3), saying that one set is not a subset of another is the following existential statement.
 
-$$
+```math
 A \not\subseteq B \iff \exists x\ (x \in A \land x \notin B)
-$$
+```
 
 Thus proving $A \subseteq B$ requires an argument that handles every element of $A$, whereas disproving $A \subseteq B$ requires only one element that is in $A$ and not in $B$.
 
@@ -128,9 +128,9 @@ Because the definition of subset is a universal conditional statement, a subset 
 
 **Example 6.1.2 (Proving and Disproving Subset Relations).** Define two sets as follows.
 
-$$
+```math
 A = \lbrace m \in \mathbf{Z} \mid \exists r \in \mathbf{Z},\ m = 6r + 12 \rbrace, \qquad B = \lbrace n \in \mathbf{Z} \mid \exists s \in \mathbf{Z},\ n = 3s \rbrace
-$$
+```
 
 Listing a few elements helps build intuition. Substituting $r = -2, -1, 0, 1$ shows that $A$ contains $0, 6, 12, 18$, and since $6r + 12 = 6(r + 2)$, $A$ is the set of all multiples of 6. $B$ is the set of all multiples of 3, $\lbrace \ldots, -3, 0, 3, 6, \ldots \rbrace$.
 
@@ -146,9 +146,9 @@ Listing a few elements helps build intuition. Substituting $r = -2, -1, 0, 1$ sh
 
 (c) **Disproof that $B \subseteq A$.** It suffices to find one element that is in $B$ but not in $A$. Take $x = 3$. Since $3 = 3 \cdot 1$, $3 \in B$. If $3 \in A$, there would be an integer $r$ with $6r + 12 = 3$, and solving this equation gives the following.
 
-$$
+```math
 6r + 12 = 3 \ \Rightarrow\ 2r + 4 = 1 \ \Rightarrow\ 2r = -3 \ \Rightarrow\ r = -\tfrac{3}{2}
-$$
+```
 
 The first step divides both sides by 3, the second subtracts 4 from both sides, and the third divides both sides by 2. Since $-\frac{3}{2}$ is not an integer, $3 \notin A$. Therefore $3 \in B$ and $3 \notin A$, so $B \not\subseteq A$.
 
@@ -158,17 +158,17 @@ By the **axiom of extension**, two sets are equal if, and only if, they have exa
 
 > **Definition:** If every element of $A$ is in $B$ and every element of $B$ is in $A$, then $A$ **equals** $B$, written $A = B$.
 
-$$
+```math
 A = B \iff A \subseteq B \land B \subseteq A
-$$
+```
 
 Thus, to prove that two sets are equal, one must prove $A \subseteq B$ and $B \subseteq A$ separately.
 
 **Example 6.1.3 (Set Equality).** Define two sets as follows.
 
-$$
+```math
 A = \lbrace m \in \mathbf{Z} \mid \exists a \in \mathbf{Z},\ m = 2a \rbrace, \qquad B = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b - 2 \rbrace
-$$
+```
 
 $A = B$. The proof is divided into two parts.
 
@@ -178,7 +178,7 @@ $A = B$. The proof is divided into two parts.
 
 Since both subset relations hold, $A = B$ by the definition of set equality. Both sets are the set of all even integers.
 
-> **Note:** The variable names inside set-builder notation only mark places. Replacing $m$ and $a$ in the definition of $A$ by $n$ and $b$, respectively, gives $A = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b \rbrace$, the same set. The replacement must, however, be made consistently everywhere in the expression.
+> **Note:** The variable names inside set-builder notation only mark places. Replacing $m$ and $a$ in the definition of $A$ by $n$ and $b$, respectively, gives $`A = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b \rbrace`$, the same set. The replacement must, however, be made consistently everywhere in the expression.
 
 ### 1.4 Venn Diagrams
 
@@ -214,14 +214,14 @@ Most mathematical discussions take place within some context. For example, if al
 
 Symbolically:
 
-$$
+```math
 \begin{aligned}
 A \cup B &= \lbrace x \in U \mid x \in A \lor x \in B \rbrace \\
 A \cap B &= \lbrace x \in U \mid x \in A \land x \in B \rbrace \\
 B - A &= \lbrace x \in U \mid x \in B \land x \notin A \rbrace \\
 A^c &= \lbrace x \in U \mid x \notin A \rbrace
 \end{aligned}
-$$
+```
 
 The Italian mathematician Giuseppe Peano introduced the symbols $\in$, $\cup$, and $\cap$ in 1889. Figure 4 shows the result of each of the four operations as a shaded region. The outer rectangle is the universal set $U$.
 
@@ -265,13 +265,13 @@ A parenthesis excludes the endpoint and a bracket includes it. The symbols $\inf
 - $B - A$: the real numbers with $0 \le x < 1$ that do not satisfy $-1 < x \le 0$. The only point of $B$ that lies in $A$ is 0, so $B - A = (0, 1)$.
 - $A^c$: apply the definition of a double inequality and De Morgan's law as follows.
 
-$$
+```math
 \begin{aligned}
 x \in A^c &\iff \sim(-1 < x \le 0) \\
 &\iff \sim(-1 < x \land x \le 0) \\
 &\iff x \le -1 \lor x > 0
 \end{aligned}
-$$
+```
 
 Hence $A^c = (-\infty, -1] \cup (0, \infty)$.
 
@@ -287,22 +287,22 @@ Union and intersection extend naturally to three or more sets.
 
 With quantifiers:
 
-$$
+```math
 \begin{aligned}
 \bigcup_{i=0}^{n} A_i &= \lbrace x \in U \mid \exists i \in \lbrace 0, 1, \ldots, n \rbrace,\ x \in A_i \rbrace \\
 \bigcup_{i=0}^{\infty} A_i &= \lbrace x \in U \mid \exists i \in \mathbf{Z}^{\text{nonneg}},\ x \in A_i \rbrace \\
 \bigcap_{i=0}^{n} A_i &= \lbrace x \in U \mid \forall i \in \lbrace 0, 1, \ldots, n \rbrace,\ x \in A_i \rbrace \\
 \bigcap_{i=0}^{\infty} A_i &= \lbrace x \in U \mid \forall i \in \mathbf{Z}^{\text{nonneg}},\ x \in A_i \rbrace
 \end{aligned}
-$$
+```
 
 Here $\mathbf{Z}^{\text{nonneg}}$ is the set of all nonnegative integers. $\bigcup_{i=0}^{n} A_i$ is read "the union of the $A_i$ for $i$ from 0 to $n$" and is also written $A_0 \cup A_1 \cup \cdots \cup A_n$. Likewise, $\bigcap_{i=0}^{n} A_i$ is also written $A_0 \cap A_1 \cap \cdots \cap A_n$. It is worth noting that union corresponds to the existential quantifier and intersection to the universal quantifier.
 
 **Example 6.1.7 (Union and Intersection of Infinitely Many Intervals).** For each positive integer $i$, define the following interval.
 
-$$
+```math
 A_i = \lbrace x \in \mathbf{R} \mid -\tfrac{1}{i} < x < \tfrac{1}{i} \rbrace = \left(-\tfrac{1}{i}, \tfrac{1}{i}\right)
-$$
+```
 
 $A_1 = (-1, 1)$, $A_2 = (-\frac{1}{2}, \frac{1}{2})$, $A_3 = (-\frac{1}{3}, \frac{1}{3})$, and the intervals shrink as $i$ grows, so $A_1 \supseteq A_2 \supseteq A_3 \supseteq \cdots$.
 
@@ -360,13 +360,13 @@ If a region $A$ is divided by boundary lines into $A_1, A_2, A_3, A_4$ as in Fig
 
 (b) In the set of integers $\mathbf{Z}$, consider the following three sets.
 
-$$
+```math
 \begin{aligned}
 T_0 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k \rbrace \\
 T_1 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k + 1 \rbrace \\
 T_2 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k + 2 \rbrace
 \end{aligned}
-$$
+```
 
 By the quotient-remainder theorem of Chapter 4, every integer $n$ can be written in exactly one of the forms $n = 3k$, $n = 3k + 1$, $n = 3k + 2$ for some integer $k$. Since every integer has at least one of the three forms, every integer is in one of $T_0$, $T_1$, $T_2$, and so $\mathbf{Z} = T_0 \cup T_1 \cup T_2$. Since no integer has two of the forms at once, no integer is in two of the sets, and so the three sets are mutually disjoint. Moreover, $0 \in T_0$, $1 \in T_1$, and $2 \in T_2$, so none of the three sets is empty. Therefore $\lbrace T_0, T_1, T_2 \rbrace$ is a partition of $\mathbf{Z}$.
 
@@ -386,9 +386,9 @@ It is often useful to collect all subsets of a given set. The **power set axiom*
 
 Hence:
 
-$$
+```math
 \mathcal{P}(\lbrace x, y \rbrace) = \lbrace \emptyset, \lbrace x \rbrace, \lbrace y \rbrace, \lbrace x, y \rbrace \rbrace
-$$
+```
 
 The power set of a two-element set has $4 = 2^2$ elements. The general fact that the power set of a set with $n$ elements has $2^n$ elements is proved in Section 3.3.
 
@@ -499,7 +499,7 @@ Consider proving Theorem 6.2.1(1)(a), $A \cap B \subseteq A$. The statement is u
 - **Starting point:** Suppose $A$ and $B$ are particular but arbitrarily chosen sets.
 - **To show:** $A \cap B \subseteq A$.
 
-By the definition of subset, $A \cap B \subseteq A$ is the same as $\forall x\ (x \in A \cap B \rightarrow x \in A)$, so it suffices to suppose that $x$ is any element of $A \cap B$ and show that $x \in A$. The gap between the two is filled with the procedural version of intersection and the rules of logic. The following two tables give the proofs of Theorem 6.2.1(1)(a) and (2)(a) step by step, with the reason for each step.
+By the definition of subset, $A \cap B \subseteq A$ is the same as $`\forall x\ (x \in A \cap B \rightarrow x \in A)`$, so it suffices to suppose that $x$ is any element of $A \cap B$ and show that $x \in A$. The gap between the two is filled with the procedural version of intersection and the rules of logic. The following two tables give the proofs of Theorem 6.2.1(1)(a) and (2)(a) step by step, with the reason for each step.
 
 | Statement | Reason |
 |:-----|:-----|
@@ -566,11 +566,11 @@ Consider proving Theorem 6.2.2(3)(a), that for all sets $A$, $B$, and $C$, $A \c
 
 The statement is universal, so the method of generalizing from the generic particular is used. The starting point is to take $A$, $B$, and $C$ to be arbitrarily chosen sets, and what must be shown is $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$. For the two sets to be equal, both of the following inclusions must hold.
 
-$$
+```math
 A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C) \qquad \text{and} \qquad (A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)
-$$
+```
 
-The first inclusion is $\forall x\ (x \in A \cup (B \cap C) \rightarrow x \in (A \cup B) \cap (A \cup C))$, so suppose $x \in A \cup (B \cap C)$ and show $x \in (A \cup B) \cap (A \cup C)$. For the second inclusion, likewise suppose $x \in (A \cup B) \cap (A \cup C)$ and show $x \in A \cup (B \cap C)$. Figure 7 shows the structure of this proof as nested boxes. What remains is to fill in the gaps (the vertical dots) in the two inner boxes.
+The first inclusion is $`\forall x\ (x \in A \cup (B \cap C) \rightarrow x \in (A \cup B) \cap (A \cup C))`$, so suppose $x \in A \cup (B \cap C)$ and show $x \in (A \cup B) \cap (A \cup C)$. For the second inclusion, likewise suppose $x \in (A \cup B) \cap (A \cup C)$ and show $x \in A \cup (B \cap C)$. Figure 7 shows the structure of this proof as nested boxes. What remains is to fill in the gaps (the vertical dots) in the two inner boxes.
 
 ```mermaid
 flowchart TB
@@ -599,15 +599,15 @@ Filling in the gaps uses the procedural version of union in both directions. Kno
 
 **(1) Proof that $A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)$.** Let $x \in A \cup (B \cap C)$. By the definition of union, $x \in A$ or $x \in B \cap C$.
 
-- **Case 1 ($x \in A$):** By the definition of union, $x \in A \cup B$ and $x \in A \cup C$. Hence $x \in (A \cup B) \cap (A \cup C)$ by the definition of intersection.
-- **Case 2 ($x \in B \cap C$):** By the definition of intersection, $x \in B$ and $x \in C$. Since $x \in B$, $x \in A \cup B$ by the definition of union, and since $x \in C$, $x \in A \cup C$. Hence $x \in (A \cup B) \cap (A \cup C)$ by the definition of intersection.
+- **Case 1 ($`x \in A`$):** By the definition of union, $x \in A \cup B$ and $x \in A \cup C$. Hence $x \in (A \cup B) \cap (A \cup C)$ by the definition of intersection.
+- **Case 2 ($`x \in B \cap C`$):** By the definition of intersection, $x \in B$ and $x \in C$. Since $x \in B$, $x \in A \cup B$ by the definition of union, and since $x \in C$, $x \in A \cup C$. Hence $x \in (A \cup B) \cap (A \cup C)$ by the definition of intersection.
 
 In both cases $x \in (A \cup B) \cap (A \cup C)$. Since $x$ was an arbitrary element of $A \cup (B \cap C)$, $A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)$ by the definition of subset.
 
 **(2) Proof that $(A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$.** Let $x \in (A \cup B) \cap (A \cup C)$. Consider the two cases $x \in A$ and $x \notin A$.
 
-- **Case 1 ($x \in A$):** By the definition of union, immediately $x \in A \cup (B \cap C)$.
-- **Case 2 ($x \notin A$):** By the definition of intersection, $x \in A \cup B$ and $x \in A \cup C$. Since $x \in A \cup B$, $x$ is in at least one of $A$ and $B$, and since $x \notin A$, $x \in B$ (elimination). For the same reason, $x \in A \cup C$ and $x \notin A$ give $x \in C$. Hence $x \in B \cap C$ by the definition of intersection, and $x \in A \cup (B \cap C)$ by the definition of union.
+- **Case 1 ($`x \in A`$):** By the definition of union, immediately $x \in A \cup (B \cap C)$.
+- **Case 2 ($`x \notin A`$):** By the definition of intersection, $x \in A \cup B$ and $x \in A \cup C$. Since $x \in A \cup B$, $x$ is in at least one of $A$ and $B$, and since $x \notin A$, $x \in B$ (elimination). For the same reason, $x \in A \cup C$ and $x \notin A$ give $x \in C$. Hence $x \in B \cap C$ by the definition of intersection, and $x \in A \cup (B \cap C)$ by the definition of union.
 
 In both cases $x \in A \cup (B \cap C)$, so $(A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$ by the definition of subset.
 
@@ -662,7 +662,7 @@ Hence $A^c \cap B^c \subseteq (A \cup B)^c$.
 
 **Conclusion.** Since both inclusions have been proved, $(A \cup B)^c = A^c \cap B^c$ by the definition of set equality. ∎
 
-The proofs of the two directions retrace the same steps in reverse, because each step is an equivalence ($\iff$). Part (9)(b), $(A \cap B)^c = A^c \cup B^c$, is proved in the same way, using De Morgan's law for the negation of a conjunction.
+The proofs of the two directions retrace the same steps in reverse, because each step is an equivalence ($`\iff`$). Part (9)(b), $(A \cap B)^c = A^c \cup B^c$, is proved in the same way, using De Morgan's law for the negation of a conjunction.
 
 ### 2.7 Intersection and Union with a Subset
 
@@ -682,7 +682,7 @@ Section 1.8 introduced a set with no elements but deferred the proof that only o
 
 **Proof (by contradiction).** Suppose the negation of the theorem is true. That is, suppose there are a set $E$ with no elements and a set $A$ such that $E \not\subseteq A$. Then by the definition of subset, there must be an element of $E$ that is not an element of $A$. But $E$ has no elements, so there can be no such element. This is a contradiction. Hence the supposition that there are a set $E$ with no elements and a set $A$ with $E \not\subseteq A$ is false, and the theorem is true. ∎
 
-The theorem can also be understood through vacuous truth (Chapters 2 and 3). $E \subseteq A$ is the same as $\forall x\ (x \in E \rightarrow x \in A)$, and since $E$ has no elements, the hypothesis $x \in E$ is false for every $x$, so this conditional statement is vacuously true.
+The theorem can also be understood through vacuous truth (Chapters 2 and 3). $E \subseteq A$ is the same as $`\forall x\ (x \in E \rightarrow x \in A)`$, and since $E$ has no elements, the hypothesis $x \in E$ is false for every $x$, so this conditional statement is vacuously true.
 
 > **Key Point:** **Corollary 6.2.5 (Uniqueness of the Empty Set).** There is only one set with no elements.
 
@@ -722,21 +722,21 @@ The distributive law generalizes to intersections of finitely many sets. The not
 
 > **Key Point:** **A Generalized Distributive Law.** For every positive integer $n$ and all sets $A$, $B_1, B_2, \ldots, B_n$, the following holds.
 
-$$
+```math
 A \cup \left( \bigcap_{i=1}^{n} B_i \right) = \bigcap_{i=1}^{n} (A \cup B_i)
-$$
+```
 
 **Proof.** Suppose $A$ and $B_1, \ldots, B_n$ are any sets and $n$ is a positive integer.
 
 **Part 1: $A \cup \left( \bigcap_{i=1}^{n} B_i \right) \subseteq \bigcap_{i=1}^{n} (A \cup B_i)$.** Let $x$ be any element of $A \cup \left( \bigcap_{i=1}^{n} B_i \right)$. By the definition of union, $x \in A$ or $x \in \bigcap_{i=1}^{n} B_i$.
 
-- **Case 1 ($x \in A$):** By the definition of union, $x \in A \cup B_i$ for every integer $i = 1, \ldots, n$. Hence $x \in \bigcap_{i=1}^{n} (A \cup B_i)$ by the definition of general intersection.
-- **Case 2 ($x \in \bigcap_{i=1}^{n} B_i$):** By the definition of general intersection, $x \in B_i$ for every $i = 1, \ldots, n$. By the definition of union, $x \in A \cup B_i$ for every $i$, so $x \in \bigcap_{i=1}^{n} (A \cup B_i)$.
+- **Case 1 ($`x \in A`$):** By the definition of union, $x \in A \cup B_i$ for every integer $i = 1, \ldots, n$. Hence $x \in \bigcap_{i=1}^{n} (A \cup B_i)$ by the definition of general intersection.
+- **Case 2 ($`x \in \bigcap_{i=1}^{n} B_i`$):** By the definition of general intersection, $x \in B_i$ for every $i = 1, \ldots, n$. By the definition of union, $x \in A \cup B_i$ for every $i$, so $x \in \bigcap_{i=1}^{n} (A \cup B_i)$.
 
 **Part 2: $\bigcap_{i=1}^{n} (A \cup B_i) \subseteq A \cup \left( \bigcap_{i=1}^{n} B_i \right)$.** Let $x$ be any element of $\bigcap_{i=1}^{n} (A \cup B_i)$. By the definition of intersection, $x \in A \cup B_i$ for every $i = 1, \ldots, n$. Consider the cases $x \in A$ and $x \notin A$.
 
-- **Case 1 ($x \in A$):** By the definition of union, $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$.
-- **Case 2 ($x \notin A$):** Since $x \in A \cup B_i$ for every $i$ and $x \notin A$, $x \in B_i$ for every $i$. Hence $x \in \bigcap_{i=1}^{n} B_i$ by the definition of intersection, and $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$ by the definition of union.
+- **Case 1 ($`x \in A`$):** By the definition of union, $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$.
+- **Case 2 ($`x \notin A`$):** Since $x \in A \cup B_i$ for every $i$ and $x \notin A$, $x \in B_i$ for every $i$. Hence $x \in \bigcap_{i=1}^{n} B_i$ by the definition of intersection, and $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$ by the definition of union.
 
 **Conclusion.** Since both inclusions have been proved, the two sets are equal by the definition of set equality. ∎
 
@@ -754,9 +754,9 @@ A single instance that makes a universal statement false, called a **counterexam
 
 **Example 6.3.1 (Finding a Counterexample for a Set Identity).** Is the following property true?
 
-$$
+```math
 \text{For all sets } A, B, C,\ (A - B) \cup (B - C) = A - C
-$$
+```
 
 The property is true if, and only if, the equation holds for all sets $A$, $B$, and $C$. So the property is false if, and only if, there are sets $A$, $B$, and $C$ for which the equation does not hold.
 
@@ -823,19 +823,19 @@ The left column lists the 4 subsets of $X - \lbrace z \rbrace = \lbrace x, y \rb
 
 Let $X$ be a set with $k + 1$ elements. Since $k + 1 \ge 1$, an element $z$ of $X$ can be chosen. Every subset of $X$ either contains $z$ or does not. The subsets that do not contain $z$ are exactly the subsets of $X - \lbrace z \rbrace$, and each subset $A$ that does not contain $z$ is matched with the subset $A \cup \lbrace z \rbrace$ that contains $z$. Hence there are as many subsets that contain $z$ as there are that do not, and the number of subsets of $X$ is twice the number of subsets of $X - \lbrace z \rbrace$. Since $X - \lbrace z \rbrace$ has $k$ elements, it has $2^k$ subsets by the inductive hypothesis. Therefore the following holds.
 
-$$
+```math
 \begin{aligned}
 (\text{the number of subsets of } X) &= 2 \cdot (\text{the number of subsets of } X - \lbrace z \rbrace) \\
 &= 2 \cdot 2^k \\
 &= 2^{k+1}
 \end{aligned}
-$$
+```
 
 The second line substitutes the inductive hypothesis, and the third line uses a law of exponents. Thus $P(k + 1)$ is true. Since both the basis step and the inductive step have been proved, the theorem holds. ∎
 
 That the matching preserves counts can be checked as follows. Adding $\lbrace z \rbrace$ to two different subsets $A_1 \ne A_2$ that do not contain $z$ gives different results, since $A_1 = (A_1 \cup \lbrace z \rbrace) - \lbrace z \rbrace$. Also, every subset $D$ that contains $z$ arises from $D - \lbrace z \rbrace$, which does not contain $z$. In other words, the matching is a one-to-one correspondence between the two groups (Chapter 7).
 
-> **Note:** If the elements are listed as $x_1, x_2, \ldots, x_n$, each subset $S$ can be matched with the bit string of length $n$ whose $i$th bit is 1 exactly when $x_i \in S$. For example, in $\lbrace x, y, z \rbrace$, the subset $\lbrace x, z \rbrace$ corresponds to 101 and $\emptyset$ to 000. There are $2^n$ bit strings of length $n$ (the multiplication rule of Chapter 9), so there are $2^n$ subsets. Representing the subsets of a small set as integer bit masks in a program is exactly this correspondence.
+> **Note:** If the elements are listed as $x_1, x_2, \ldots, x_n$, each subset $S$ can be matched with the bit string of length $n$ whose $`i`$th bit is 1 exactly when $x_i \in S$. For example, in $\lbrace x, y, z \rbrace$, the subset $\lbrace x, z \rbrace$ corresponds to 101 and $\emptyset$ to 000. There are $2^n$ bit strings of length $n$ (the multiplication rule of Chapter 9), so there are $2^n$ subsets. Representing the subsets of a small set as integer bit masks in a program is exactly this correspondence.
 
 ### 3.4 Algebraic Proofs of Set Identities
 
@@ -843,21 +843,21 @@ Let $U$ be a universal set. The identities of Theorem 6.2.2 hold for every eleme
 
 This works because each known property is a universal statement: as with the laws of ordinary algebra, every variable in a set law may be replaced by any set whatsoever. For example, the distributive law
 
-$$
+```math
 A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-$$
+```
 
 is a template into which any three sets can be placed. If $A_1$, $A_2$, and $A_3$ are particular sets, placing $A_1$ in the role of $A$, $A_2$ in the role of $B$, and $A_3$ in the role of $C$ gives the following.
 
-$$
+```math
 A_1 \cap (A_2 \cup A_3) = (A_1 \cap A_2) \cup (A_1 \cap A_3)
-$$
+```
 
 Compound sets can also be substituted for the variables. If $W$, $X$, $Y$, $Z$ are any sets, placing $W \cap X$ in the role of $A$, $Y$ in the role of $B$, and $Z$ in the role of $C$ gives the following.
 
-$$
+```math
 (W \cap X) \cap (Y \cup Z) = ((W \cap X) \cap Y) \cup ((W \cap X) \cap Z)
-$$
+```
 
 Proving a new identity by applying the identities of Theorem 6.2.2 one step at a time in this way is called an **algebraic proof**.
 
@@ -875,7 +875,7 @@ Proving a new identity by applying the identities of Theorem 6.2.2 one step at a
 
 The commutative law is used in step 2 because distributive law 3(b) is stated in the form $A \cap (B \cup C)$, with the common factor on the left. Step 4, for the same reason, puts the result into the form $X \cap Y^c$ of the set difference law.
 
-**Example 6.3.3 (Deriving a Set Identity Using Properties of $\emptyset$).** Give an algebraic proof that for all sets $A$ and $B$, $A - (A \cap B) = A - B$. Let $A$ and $B$ be any sets.
+**Example 6.3.3 (Deriving a Set Identity Using Properties of $`\emptyset`$).** Give an algebraic proof that for all sets $A$ and $B$, $A - (A \cap B) = A - B$. Let $A$ and $B$ be any sets.
 
 | Step | Expression | Reason (Theorem 6.2.2) |
 |:-----|:-----|:-----|
@@ -897,9 +897,9 @@ An algebraic proof often looks simpler than an element proof, but sometimes an e
 
 **Example 6.3.4 (The Associative Law for Four Sets).** Prove, using only properties from Theorem 6.2.2, that for all sets $A_1$, $A_2$, $A_3$, and $A_4$ the following holds.
 
-$$
+```math
 ((A_1 \cup A_2) \cup A_3) \cup A_4 = A_1 \cup ((A_2 \cup A_3) \cup A_4)
-$$
+```
 
 | Step | Expression | Reason |
 |:-----|:-----|:-----|
@@ -920,7 +920,7 @@ The logical equivalences of Chapter 2 and the set properties of this chapter are
 
 ### 4.1 Logical Equivalences and Set Properties Side by Side
 
-The following table places the logical equivalences of Chapter 2 (statement variables $p$, $q$, $r$) side by side with the set properties of Theorem 6.2.2 (sets $A$, $B$, $C$). $\mathbf{t}$ is a tautology, $\mathbf{c}$ is a contradiction, and $\sim$ is negation.
+The following table places the logical equivalences of Chapter 2 (statement variables $p$, $q$, $`r`$) side by side with the set properties of Theorem 6.2.2 (sets $A$, $B$, $`C`$). $\mathbf{t}$ is a tautology, $\mathbf{c}$ is a contradiction, and $\sim$ is negation.
 
 | Law | Logical equivalence | Set property |
 |:-----|:-----|:-----|
@@ -1039,9 +1039,9 @@ The duality principle holds because the axioms are paired with their duals. Give
 
 **Proof.** Suppose $B$ is a Boolean algebra and $a$ is any element of $B$. Then the following hold.
 
-$$
+```math
 \overline{a} + a = a + \overline{a} = 1, \qquad \overline{a} \cdot a = a \cdot \overline{a} = 0
-$$
+```
 
 In each, the first equality is a commutative law (axiom 1(a), 1(b)) and the second is a complement law (axiom 5(a), 5(b)). Thus $a$ satisfies the two equations $\overline{a} + a = 1$ and $\overline{a} \cdot a = 0$ that the complement of $\overline{a}$ must satisfy. Since the complement of $\overline{a}$ is unique by Theorem 6.4.1(1), $\overline{(\overline{a})} = a$. ∎
 
@@ -1065,9 +1065,9 @@ Around 1900, abstract set theory had become so widely accepted that many mathema
 
 **Russell's paradox.** A typical set does not belong to itself: the set of all integers, for instance, is not itself an integer. Self-membership is nevertheless conceivable; the set of all abstract ideas is arguably an abstract idea and would then be one of its own elements. Now suppose that every property is allowed to define a set. Then one can form the set $S$ whose elements are exactly the sets that do not belong to themselves, as follows.
 
-$$
+```math
 S = \lbrace A \mid A \text{ is a set and } A \notin A \rbrace
-$$
+```
 
 Does $S$ belong to $S$? Either answer forces the opposite one.
 
@@ -1093,9 +1093,9 @@ Russell's paradox is resolved in the same way: $S$ is not a set. A genuine set, 
 
 Fix a universal set $U$ and assume that every set under discussion is a subset of $U$. Define the following.
 
-$$
+```math
 S = \lbrace A \mid A \subseteq U \land A \notin A \rbrace
-$$
+```
 
 In Russell's paradox, both $S \in S \rightarrow S \notin S$ and $S \notin S \rightarrow S \in S$ were proved, giving the contradiction $S \in S \land S \notin S$. With this definition, the following happens.
 
@@ -1188,7 +1188,7 @@ The restrictions that keep set theory free of Russell's paradox also exclude som
 | Concept | Key Summary |
 |:-----|:-----|
 | Set-builder notation | $\lbrace x \in S \mid P(x) \rbrace$ is the set of all elements of $S$ that satisfy $P(x)$. |
-| Subset | $A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)$; to disprove it, find one element in $A$ that is not in $B$. |
+| Subset | $`A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)`$; to disprove it, find one element in $A$ that is not in $B$. |
 | Element argument | To show $X \subseteq Y$, take an arbitrary element $x$ of $X$ and show $x \in Y$. |
 | Set equality | $A = B \iff A \subseteq B \land B \subseteq A$, so the inclusions in both directions are proved separately. |
 | Set operations | $A \cup B$ is defined by or, $A \cap B$ by and, $B - A$ by being in $B$ and not in $A$, and $A^c$ by being in the universal set $U$ and not in $A$. |
@@ -1213,7 +1213,7 @@ The restrictions that keep set theory free of Russell's paradox also exclude som
 
 ## Self-Check Questions
 
-1. **Element argument and disproof:** Let $A = \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 10k + 4 \rbrace$ and $B = \lbrace n \in \mathbf{Z} \mid \exists j \in \mathbf{Z},\ n = 2j \rbrace$. Prove $A \subseteq B$ and disprove $B \subseteq A$.
+1. **Element argument and disproof:** Let $`A = \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 10k + 4 \rbrace`$ and $`B = \lbrace n \in \mathbf{Z} \mid \exists j \in \mathbf{Z},\ n = 2j \rbrace`$. Prove $A \subseteq B$ and disprove $B \subseteq A$.
 
    <details>
    <summary>Answer</summary>

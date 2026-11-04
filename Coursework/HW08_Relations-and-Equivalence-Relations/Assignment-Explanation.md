@@ -38,24 +38,24 @@
 
 ## 1. Exercise 8.1.3: Congruence Modulo 3
 
-**Problem.** The relation $T$ on $\mathbf{Z}$ is given by $m \, T \, n \iff 3 \mid (m - n)$. (a) Decide whether each of $10 \, T \, 1$, $1 \, T \, 10$, $(2, 2) \in T$, and $(8, 1) \in T$ holds, and give five integers $n$ satisfying each of (b) $n \, T \, 0$, (c) $n \, T \, 1$, and (d) $n \, T \, 2$.
+**Problem.** The relation $T$ on $\mathbf{Z}$ is given by $`m \, T \, n \iff 3 \mid (m - n)`$. (a) Decide whether each of $`10 \, T \, 1`$, $`1 \, T \, 10`$, $(2, 2) \in T$, and $(8, 1) \in T$ holds, and give five integers $n$ satisfying each of (b) $`n \, T \, 0`$, (c) $`n \, T \, 1`$, and (d) $`n \, T \, 2`$.
 
-**Concepts used.** By [Chapter 8, Section 1](../../Lecture-Notes/Ch08_Properties-of-Relations/Concepts_Lecture.md), a **relation** $R$ from a set $A$ to a set $B$ is a subset of the Cartesian product $A \times B$, and $x \, R \, y$ means $(x, y) \in R$. This relation $T$ is called **congruence modulo 3**, and $3 \mid (m - n)$ means that there is an integer $k$ with $m - n = 3k$ (Chapter 4).
+**Concepts used.** By [Chapter 8, Section 1](../../Lecture-Notes/Ch08_Properties-of-Relations/Concepts_Lecture.md), a **relation** $R$ from a set $A$ to a set $B$ is a subset of the Cartesian product $A \times B$, and $`x \, R \, y`$ means $(x, y) \in R$. This relation $T$ is called **congruence modulo 3**, and $3 \mid (m - n)$ means that there is an integer $k$ with $m - n = 3k$ (Chapter 4).
 
 **Solution (a).** Check whether the difference of each pair is a multiple of 3.
 
-- $10 - 1 = 9 = 3 \cdot 3$, so $10 \, T \, 1$.
-- $1 - 10 = -9 = 3 \cdot (-3)$, so $1 \, T \, 10$. A negative difference is fine as long as it is an integer multiple of 3.
+- $10 - 1 = 9 = 3 \cdot 3$, so $`10 \, T \, 1`$.
+- $1 - 10 = -9 = 3 \cdot (-3)$, so $`1 \, T \, 10`$. A negative difference is fine as long as it is an integer multiple of 3.
 - $2 - 2 = 0 = 3 \cdot 0$, so $(2, 2) \in T$.
 - $8 - 1 = 7$, and there is no integer $k$ with $7 = 3k$, so $(8, 1) \notin T$.
 
-**Solution (b), (c), (d).** $n \, T \, r$ means that there is an integer $k$ with $n - r = 3k$, that is, $n = 3k + r$. Substituting several integers for $k$ yields five examples each.
+**Solution (b), (c), (d).** $`n \, T \, r`$ means that there is an integer $k$ with $n - r = 3k$, that is, $n = 3k + r$. Substituting several integers for $k$ yields five examples each.
 
-| Condition | Equivalent form | Five examples ($k = -2, -1, 0, 1, 2$) |
+| Condition | Equivalent form | Five examples ($`k = -2, -1, 0, 1, 2`$) |
 |:---|:---|:---|
-| $n \, T \, 0$ | $n = 3k$ | $-6, -3, 0, 3, 6$ |
-| $n \, T \, 1$ | $n = 3k + 1$ | $-5, -2, 1, 4, 7$ |
-| $n \, T \, 2$ | $n = 3k + 2$ | $-4, -1, 2, 5, 8$ |
+| $`n \, T \, 0`$ | $n = 3k$ | $-6, -3, 0, 3, 6$ |
+| $`n \, T \, 1`$ | $n = 3k + 1$ | $-5, -2, 1, 4, 7$ |
+| $`n \, T \, 2`$ | $n = 3k + 2$ | $-4, -1, 2, 5, 8$ |
 
 *Table 1. Form and examples of integers with n T 0, n T 1, and n T 2*
 
@@ -67,13 +67,13 @@ Any five integers satisfying the condition are a correct answer; for example, $0
 
 ## 2. Exercise 8.1.8: Strings with the Same First Two Characters
 
-**Problem.** On the set $A$ of all strings of length 4 made of $a$ and $b$, two strings are related by $R$ when their first two characters agree. Decide whether each of the following holds: (a) $abaa \, R \, abba$, (b) $aabb \, R \, bbaa$, (c) $aaaa \, R \, aaab$, (d) $baaa \, R \, abaa$.
+**Problem.** On the set $A$ of all strings of length 4 made of $a$ and $b$, two strings are related by $R$ when their first two characters agree. Decide whether each of the following holds: (a) $`abaa \, R \, abba`$, (b) $`aabb \, R \, bbaa`$, (c) $`aaaa \, R \, aaab`$, (d) $`baaa \, R \, abaa`$.
 
 **Concepts used.** The relation is defined in words, so read the first two characters of each string and compare them. The last two characters do not affect the decision.
 
 **Solution.**
 
-| Part | First two characters of $s$ | First two characters of $t$ | Is $s \, R \, t$? |
+| Part | First two characters of $s$ | First two characters of $t$ | Is $`s \, R \, t`$? |
 |:---:|:---:|:---:|:---:|
 | (a) $abaa$, $abba$ | $ab$ | $ab$ | Yes |
 | (b) $aabb$, $bbaa$ | $aa$ | $bb$ | No |
@@ -90,9 +90,9 @@ In (d) both strings consist of three $a$'s and one $b$, but comparing the first 
 
 ## 3. Exercise 8.1.15: The Directed Graph of a Divisibility Relation
 
-**Problem.** Represent the divisibility relation $x \, R \, y \iff x \mid y$ on $A = \lbrace 2, 3, 4, 5, 6, 7, 8 \rbrace$ by a directed graph.
+**Problem.** Represent the divisibility relation $`x \, R \, y \iff x \mid y`$ on $A = \lbrace 2, 3, 4, 5, 6, 7, 8 \rbrace$ by a directed graph.
 
-**Concepts used.** By Chapter 8, Section 1, a relation on a set $A$ can be represented by a **directed graph**: each element of $A$ becomes a vertex, and for every ordered pair with $x \, R \, y$ an arrow is drawn from $x$ to $y$. If $x \, R \, x$, a **loop** is drawn from $x$ back to itself.
+**Concepts used.** By Chapter 8, Section 1, a relation on a set $A$ can be represented by a **directed graph**: each element of $A$ becomes a vertex, and for every ordered pair with $`x \, R \, y`$ an arrow is drawn from $x$ to $y$. If $`x \, R \, x`$, a **loop** is drawn from $x$ back to itself.
 
 **Solution.** First find all ordered pairs in $R$. For each $x$, list the multiples of $x$ that lie in $A$.
 
@@ -159,7 +159,7 @@ $R \cap S$ is not a line or a curve but a finite set of two points. When graphin
 
 **Concepts used.** The three properties of Chapter 8, Section 2 and their negations are as follows. A counterexample showing that a property fails is an element satisfying the existential statement of the corresponding negation.
 
-> **Definition:** A relation $R$ on a set $A$ is **reflexive** if $x \, R \, x$ for every $x \in A$. It is **symmetric** if for all $x, y \in A$, $x \, R \, y$ implies $y \, R \, x$. It is **transitive** if for all $x, y, z \in A$, $x \, R \, y$ and $y \, R \, z$ imply $x \, R \, z$.
+> **Definition:** A relation $R$ on a set $A$ is **reflexive** if $`x \, R \, x`$ for every $x \in A$. It is **symmetric** if for all $x, y \in A$, $`x \, R \, y`$ implies $`y \, R \, x`$. It is **transitive** if for all $x, y, z \in A$, $`x \, R \, y`$ and $`y \, R \, z`$ imply $`x \, R \, z`$.
 
 | Property | Condition under which the property fails (form of a counterexample) |
 |:---|:---|
@@ -195,23 +195,23 @@ graph LR
 
 ## 6. Exercise 8.2.11: The Relation of a Nonnegative Product
 
-**Problem.** The relation $x \, D \, y \iff xy \ge 0$ on $\mathbf{R}$ relates two real numbers whose product is nonnegative. Decide whether $D$ is reflexive, symmetric, and transitive, with reasons.
+**Problem.** The relation $`x \, D \, y \iff xy \ge 0`$ on $\mathbf{R}$ relates two real numbers whose product is nonnegative. Decide whether $D$ is reflexive, symmetric, and transitive, with reasons.
 
 **Concepts used.** The three definitions of Chapter 8, Section 2 and properties of real numbers (squares are nonnegative, and multiplication is commutative) are used.
 
 **Solution.** $D$ is reflexive and symmetric but not transitive.
 
-**Reflexive.** Let $x$ be any real number. The square of a real number is nonnegative, so $x \cdot x = x^2 \ge 0$, and by the definition of $D$, $x \, D \, x$.
+**Reflexive.** Let $x$ be any real number. The square of a real number is nonnegative, so $x \cdot x = x^2 \ge 0$, and by the definition of $D$, $`x \, D \, x`$.
 
-**Symmetric.** Let $x$ and $y$ be real numbers with $x \, D \, y$. By definition, $xy \ge 0$. Real multiplication is commutative, so $yx = xy \ge 0$, and hence $y \, D \, x$.
+**Symmetric.** Let $x$ and $y$ be real numbers with $`x \, D \, y`$. By definition, $xy \ge 0$. Real multiplication is commutative, so $yx = xy \ge 0$, and hence $`y \, D \, x`$.
 
 **Not transitive.** Let $x = 1$, $y = 0$, $z = -1$.
 
-- $xy = 1 \cdot 0 = 0 \ge 0$, so $x \, D \, y$.
-- $yz = 0 \cdot (-1) = 0 \ge 0$, so $y \, D \, z$.
-- $xz = 1 \cdot (-1) = -1 < 0$, so $x \, D \, z$ does not hold.
+- $xy = 1 \cdot 0 = 0 \ge 0$, so $`x \, D \, y`$.
+- $yz = 0 \cdot (-1) = 0 \ge 0$, so $`y \, D \, z`$.
+- $xz = 1 \cdot (-1) = -1 < 0$, so $`x \, D \, z`$ does not hold.
 
-$xy \ge 0$ means that one of $x$ and $y$ is 0 or that both have the same sign. Because 0 is related to every real number, it acts as a bridge between positive and negative numbers, and this is what breaks transitivity. If the $y$ in the counterexample is replaced by a nonzero number, transitivity does not fail. In fact, if $D$ is restricted to the set of nonzero real numbers, $x \, D \, y$ becomes "$x$ and $y$ have the same sign", which is transitive, and $D$ becomes an equivalence relation whose two equivalence classes are the positive numbers and the negative numbers.
+$xy \ge 0$ means that one of $x$ and $y$ is 0 or that both have the same sign. Because 0 is related to every real number, it acts as a bridge between positive and negative numbers, and this is what breaks transitivity. If the $y$ in the counterexample is replaced by a nonzero number, transitivity does not fail. In fact, if $D$ is restricted to the set of nonzero real numbers, $`x \, D \, y`$ becomes "$`x`$ and $y$ have the same sign", which is transitive, and $D$ becomes an equivalence relation whose two equivalence classes are the positive numbers and the negative numbers.
 
 ---
 
@@ -219,25 +219,25 @@ $xy \ge 0$ means that one of $x$ and $y$ is 0 or that both have the same sign. B
 
 ## 7. Exercise 8.2.23: The Subset Relation on a Power Set
 
-**Problem.** On the power set $\mathcal{P}(X)$ of a nonempty set $X$, decide whether the subset relation $A \, \mathbf{S} \, B \iff A \subseteq B$ is reflexive, symmetric, and transitive.
+**Problem.** On the power set $\mathcal{P}(X)$ of a nonempty set $X$, decide whether the subset relation $`A \, \mathbf{S} \, B \iff A \subseteq B`$ is reflexive, symmetric, and transitive.
 
-**Concepts used.** The definition of subset from Chapter 6 ($A \subseteq B$ means every element of $A$ is an element of $B$) and the transitivity of subsets in Theorem 6.2.1 are used. The **power set** $\mathcal{P}(X)$ is the set of all subsets of $X$, and it always contains $\emptyset$ and $X$ itself.
+**Concepts used.** The definition of subset from Chapter 6 ($A \subseteq B$ means every element of $A$ is an element of $`B`$) and the transitivity of subsets in Theorem 6.2.1 are used. The **power set** $\mathcal{P}(X)$ is the set of all subsets of $X$, and it always contains $\emptyset$ and $X$ itself.
 
 **Solution.** $\mathbf{S}$ is reflexive and transitive but not symmetric.
 
-**Reflexive.** If $A \in \mathcal{P}(X)$, every element of $A$ is an element of $A$, so $A \subseteq A$, and hence $A \, \mathbf{S} \, A$.
+**Reflexive.** If $A \in \mathcal{P}(X)$, every element of $A$ is an element of $A$, so $A \subseteq A$, and hence $`A \, \mathbf{S} \, A`$.
 
 **Not symmetric.** Let $A = \emptyset$ and $B = X$.
 
 1. Both sets are subsets of $X$, so they are elements of $\mathcal{P}(X)$.
-2. The empty set is a subset of every set (Theorem 6.2.4), so $\emptyset \subseteq X$, that is, $A \, \mathbf{S} \, B$.
-3. $X$ is nonempty, so there is an element $x \in X$, and $x \notin \emptyset$. Hence $X \not\subseteq \emptyset$, that is, $B \, \mathbf{S} \, A$ does not hold.
+2. The empty set is a subset of every set (Theorem 6.2.4), so $\emptyset \subseteq X$, that is, $`A \, \mathbf{S} \, B`$.
+3. $X$ is nonempty, so there is an element $x \in X$, and $x \notin \emptyset$. Hence $X \not\subseteq \emptyset$, that is, $`B \, \mathbf{S} \, A`$ does not hold.
 
-**Transitive.** Let $A, B, C \in \mathcal{P}(X)$ with $A \, \mathbf{S} \, B$ and $B \, \mathbf{S} \, C$. Then $A \subseteq B$ and $B \subseteq C$, so by the transitivity of subsets in Theorem 6.2.1, $A \subseteq C$, that is, $A \, \mathbf{S} \, C$.
+**Transitive.** Let $A, B, C \in \mathcal{P}(X)$ with $`A \, \mathbf{S} \, B`$ and $`B \, \mathbf{S} \, C`$. Then $A \subseteq B$ and $B \subseteq C$, so by the transitivity of subsets in Theorem 6.2.1, $A \subseteq C$, that is, $`A \, \mathbf{S} \, C`$.
 
-> **Caution:** A counterexample to symmetry must be available for **every** $X$ satisfying the hypothesis. The only hypothesis is that "$X$ is nonempty", so $X$ may have just one element. For example, if $X = \lbrace a \rbrace$, then $\mathcal{P}(X) = \lbrace \emptyset, \lbrace a \rbrace \rbrace$, and a counterexample such as $\lbrace a \rbrace \subseteq \lbrace a, b \rbrace$ does not exist in $\mathcal{P}(X)$. In contrast, $\emptyset$ and $X$ are elements of $\mathcal{P}(X)$ for every $X$.
+> **Caution:** A counterexample to symmetry must be available for **every** $X$ satisfying the hypothesis. The only hypothesis is that "$`X`$ is nonempty", so $X$ may have just one element. For example, if $X = \lbrace a \rbrace$, then $\mathcal{P}(X) = \lbrace \emptyset, \lbrace a \rbrace \rbrace$, and a counterexample such as $\lbrace a \rbrace \subseteq \lbrace a, b \rbrace$ does not exist in $\mathcal{P}(X)$. In contrast, $\emptyset$ and $X$ are elements of $\mathcal{P}(X)$ for every $X$.
 
-The hypothesis "$X$ is nonempty" is used only in the counterexample to symmetry. If $X = \emptyset$, then $\mathcal{P}(X) = \lbrace \emptyset \rbrace$ and $\mathbf{S} = \lbrace (\emptyset, \emptyset) \rbrace$, so $\mathbf{S}$ is symmetric. Moreover, $A \subseteq B$ and $B \subseteq A$ imply $A = B$, so $\mathbf{S}$ is antisymmetric; being also reflexive and transitive, it is a partial order relation of the kind studied in Chapter 8, Section 4 (Section 8.5 of the textbook).
+The hypothesis "$`X`$ is nonempty" is used only in the counterexample to symmetry. If $X = \emptyset$, then $\mathcal{P}(X) = \lbrace \emptyset \rbrace$ and $\mathbf{S} = \lbrace (\emptyset, \emptyset) \rbrace$, so $\mathbf{S}$ is symmetric. Moreover, $A \subseteq B$ and $B \subseteq A$ imply $A = B$, so $\mathbf{S}$ is antisymmetric; being also reflexive and transitive, it is a partial order relation of the kind studied in Chapter 8, Section 4 (Section 8.5 of the textbook).
 
 ---
 
@@ -247,18 +247,18 @@ The hypothesis "$X$ is nonempty" is used only in the counterexample to symmetry.
 
 **Problem.** Prove, or refute with a counterexample, that the inverse relation $R^{-1}$ of a transitive relation $R$ on a set $A$ is always transitive.
 
-**Concepts used.** The **inverse relation** of Chapter 8, Section 1 reverses every ordered pair of $R$. That is, $R^{-1} = \lbrace (y, x) \in A \times A \mid (x, y) \in R \rbrace$, and for all $x, y \in A$, $x \, R^{-1} \, y \iff y \, R \, x$.
+**Concepts used.** The **inverse relation** of Chapter 8, Section 1 reverses every ordered pair of $R$. That is, $R^{-1} = \lbrace (y, x) \in A \times A \mid (x, y) \in R \rbrace$, and for all $x, y \in A$, $`x \, R^{-1} \, y \iff y \, R \, x`$.
 
 **Solution.** $R^{-1}$ is always transitive.
 
-1. Suppose $R$ is transitive, and let $x, y, z \in A$ satisfy $x \, R^{-1} \, y$ and $y \, R^{-1} \, z$. [It must be shown that $x \, R^{-1} \, z$.]
-2. By the definition of inverse relation, $x \, R^{-1} \, y$ means $y \, R \, x$, and $y \, R^{-1} \, z$ means $z \, R \, y$.
-3. Placing the two facts in the order $z \, R \, y$, $y \, R \, x$ gives exactly the hypothesis of transitivity of $R$. Hence, by the transitivity of $R$, $z \, R \, x$.
-4. By the definition of inverse relation, $z \, R \, x$ means $x \, R^{-1} \, z$.
+1. Suppose $R$ is transitive, and let $x, y, z \in A$ satisfy $`x \, R^{-1} \, y`$ and $`y \, R^{-1} \, z`$. [It must be shown that $`x \, R^{-1} \, z`$.]
+2. By the definition of inverse relation, $`x \, R^{-1} \, y`$ means $`y \, R \, x`$, and $`y \, R^{-1} \, z`$ means $`z \, R \, y`$.
+3. Placing the two facts in the order $`z \, R \, y`$, $`y \, R \, x`$ gives exactly the hypothesis of transitivity of $R$. Hence, by the transitivity of $R$, $`z \, R \, x`$.
+4. By the definition of inverse relation, $`z \, R \, x`$ means $`x \, R^{-1} \, z`$.
 
 Therefore $R^{-1}$ is transitive.
 
-> **Key Point:** To apply transitivity in step 3, the two facts must be placed in an order in which the middle element links them. Written in the order $y \, R \, x$, $z \, R \, y$, they do not link; reordered as $z \, R \, y$, $y \, R \, x$, the middle $y$ links them and yields $z \, R \, x$.
+> **Key Point:** To apply transitivity in step 3, the two facts must be placed in an order in which the middle element links them. Written in the order $`y \, R \, x`$, $`z \, R \, y`$, they do not link; reordered as $`z \, R \, y`$, $`y \, R \, x`$, the middle $y$ links them and yields $`z \, R \, x`$.
 
 In the same way, if $R$ is reflexive then $R^{-1}$ is reflexive, and if $R$ is symmetric then $R^{-1}$ is symmetric (Exercises 8.2.34 and 8.2.35). In terms of directed graphs, the graph of $R^{-1}$ is the graph of $R$ with every arrow reversed, so the picture of transitivity, "whenever two arrows can be followed in succession there is a shortcut arrow", is preserved with only the directions reversed.
 
@@ -270,17 +270,17 @@ In the same way, if $R$ is reflexive then $R^{-1}$ is reflexive, and if $R$ is s
 
 **Problem.** An equivalence relation $R$ on $A = \lbrace 0, 1, 2, 3, 4 \rbrace$ is given below.
 
-$$
+```math
 R = \lbrace (0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4) \rbrace
-$$
+```
 
 Find the classes $[0]$, $[1]$, $[2]$, $[3]$, then give the number of distinct equivalence classes and list them all.
 
 **Concepts used.** The definitions and results of Chapter 8, Section 3 are used.
 
-> **Definition:** A relation that is reflexive, symmetric, and transitive is an **equivalence relation**. For an equivalence relation $R$ and $a \in A$, the **equivalence class** of $a$ is $[a] = \lbrace x \in A \mid x \, R \, a \rbrace$.
+> **Definition:** A relation that is reflexive, symmetric, and transitive is an **equivalence relation**. For an equivalence relation $R$ and $a \in A$, the **equivalence class** of $a$ is $`[a] = \lbrace x \in A \mid x \, R \, a \rbrace`$.
 
-By Lemma 8.3.2, if $a \, R \, b$ then $[a] = [b]$, and by Lemma 8.3.3, two equivalence classes are either equal or disjoint. By Theorem 8.3.4, the distinct equivalence classes form a partition of $A$. Hence, to find the distinct equivalence classes, compute the class of each element and then merge the classes that are equal.
+By Lemma 8.3.2, if $`a \, R \, b`$ then $[a] = [b]$, and by Lemma 8.3.3, two equivalence classes are either equal or disjoint. By Theorem 8.3.4, the distinct equivalence classes form a partition of $A$. Hence, to find the distinct equivalence classes, compute the class of each element and then merge the classes that are equal.
 
 **Solution.** Drawing the directed graph of $R$ shows at once how the elements are grouped.
 
@@ -320,9 +320,9 @@ Since $[0] = [4]$ and $[1] = [3]$, there are **3** distinct equivalence classes:
 
 ## 10. Exercise 8.3.8: Equivalence Classes of Subsets with the Same Number of Elements
 
-**Problem.** On $\mathcal{P}(X)$ with $X = \lbrace a, b, c \rbrace$, the relation $U \, R \, V \iff N(U) = N(V)$ relates subsets with the same number of elements. Find all distinct equivalence classes of $R$.
+**Problem.** On $\mathcal{P}(X)$ with $X = \lbrace a, b, c \rbrace$, the relation $`U \, R \, V \iff N(U) = N(V)`$ relates subsets with the same number of elements. Find all distinct equivalence classes of $R$.
 
-**Concepts used.** $R$ is defined by the equality of numbers "$N(U) = N(V)$", so it is an equivalence relation. Equality of numbers is reflexive ($N(U) = N(U)$), symmetric (if $N(U) = N(V)$ then $N(V) = N(U)$), and transitive (if $N(U) = N(V)$ and $N(V) = N(W)$ then $N(U) = N(W)$). The class $[U]$ consists of all subsets of $X$ with the same number of elements as $U$.
+**Concepts used.** $R$ is defined by the equality of numbers "$`N(U) = N(V)`$", so it is an equivalence relation. Equality of numbers is reflexive ($`N(U) = N(U)`$), symmetric (if $N(U) = N(V)$ then $`N(V) = N(U)`$), and transitive (if $N(U) = N(V)$ and $N(V) = N(W)$ then $`N(U) = N(W)`$). The class $[U]$ consists of all subsets of $X$ with the same number of elements as $U$.
 
 **Solution.** Divide the $2^3 = 8$ subsets of $X$ according to their number of elements, which is 0, 1, 2, or 3.
 
@@ -377,27 +377,27 @@ Therefore $[35] = [-7] = [0]$, $[3] = [17]$, and $[12] = [-2]$.
 
 ## 12. Exercise 8.3.20: Congruence Modulo 4
 
-**Problem.** For the relation $m \, E \, n \iff 4 \mid (m - n)$ on $\mathbf{Z}$, (1) prove that $E$ is an equivalence relation, and (2) describe its distinct equivalence classes.
+**Problem.** For the relation $`m \, E \, n \iff 4 \mid (m - n)`$ on $\mathbf{Z}$, (1) prove that $E$ is an equivalence relation, and (2) describe its distinct equivalence classes.
 
 **Concepts used.** The definition of equivalence relation (reflexive, symmetric, transitive), the definition of divisibility, the definition of equivalence class, and the quotient-remainder theorem are used.
 
 **Solution (1).** Prove the three properties in turn.
 
-- **Reflexive.** Let $m$ be any integer. Since $m - m = 0 = 4 \cdot 0$, $4 \mid (m - m)$, and hence $m \, E \, m$.
-- **Symmetric.** Let integers $m$ and $n$ satisfy $m \, E \, n$. Then there is an integer $k$ with $m - n = 4k$. Multiplying both sides by $-1$ gives $n - m = 4(-k)$, and $-k$ is an integer, so $4 \mid (n - m)$, that is, $n \, E \, m$.
-- **Transitive.** Let integers $m$, $n$, $p$ satisfy $m \, E \, n$ and $n \, E \, p$. Then there are integers $k$ and $l$ with $m - n = 4k$ and $n - p = 4l$. Adding the two equations gives $m - p = (m - n) + (n - p) = 4k + 4l = 4(k + l)$, and $k + l$ is an integer, so $4 \mid (m - p)$, that is, $m \, E \, p$.
+- **Reflexive.** Let $m$ be any integer. Since $m - m = 0 = 4 \cdot 0$, $4 \mid (m - m)$, and hence $`m \, E \, m`$.
+- **Symmetric.** Let integers $m$ and $n$ satisfy $`m \, E \, n`$. Then there is an integer $k$ with $m - n = 4k$. Multiplying both sides by $-1$ gives $n - m = 4(-k)$, and $-k$ is an integer, so $4 \mid (n - m)$, that is, $`n \, E \, m`$.
+- **Transitive.** Let integers $m$, $n$, $p$ satisfy $`m \, E \, n`$ and $`n \, E \, p`$. Then there are integers $k$ and $l$ with $m - n = 4k$ and $n - p = 4l$. Adding the two equations gives $m - p = (m - n) + (n - p) = 4k + 4l = 4(k + l)$, and $k + l$ is an integer, so $4 \mid (m - p)$, that is, $`m \, E \, p`$.
 
 Therefore $E$ is an equivalence relation.
 
 **Solution (2).** Starting from the definition, rewrite the class of an arbitrary integer $a$.
 
-$$
+```math
 \begin{aligned}
 [a] &= \lbrace x \in \mathbf{Z} \mid x \, E \, a \rbrace \\
 &= \lbrace x \in \mathbf{Z} \mid 4 \mid (x - a) \rbrace \\
 &= \lbrace x \in \mathbf{Z} \mid x = 4k + a \text{ for some integer } k \rbrace
 \end{aligned}
-$$
+```
 
 In particular, substituting $a = 0, 1, 2, 3$ gives the following four classes.
 
@@ -420,12 +420,12 @@ The quotient-remainder theorem explains why these four classes are distinct and 
 
 | Concept | Key Summary |
 |:-----|:-----|
-| Relation | A relation from $A$ to $B$ is a subset of $A \times B$, and $(x, y) \in R$ is written $x \, R \, y$. |
-| Directed graph | A relation on a set is drawn with the elements as vertices, an arrow from $x$ to $y$ for $x \, R \, y$, and a loop for $x \, R \, x$. |
+| Relation | A relation from $A$ to $B$ is a subset of $A \times B$, and $(x, y) \in R$ is written $`x \, R \, y`$. |
+| Directed graph | A relation on a set is drawn with the elements as vertices, an arrow from $x$ to $y$ for $`x \, R \, y`$, and a loop for $`x \, R \, x`$. |
 | Reflexivity, symmetry, transitivity | The three properties are universal conditional statements, so a proof starts from arbitrary elements and a disproof needs only one set of elements satisfying the negation. |
 | Scope of a counterexample | A counterexample must exist in every case satisfying the hypotheses; for the subset relation on a power set, $\emptyset$ and $X$ form such a counterexample. |
-| Inverse relation | $x \, R^{-1} \, y \iff y \, R \, x$, and the inverse relation preserves reflexivity, symmetry, and transitivity. |
-| Equivalence relation and class | An equivalence relation is reflexive, symmetric, and transitive; $[a] = \lbrace x \in A \mid x \, R \, a \rbrace$, and $a \, R \, b$ implies $[a] = [b]$. |
+| Inverse relation | $`x \, R^{-1} \, y \iff y \, R \, x`$, and the inverse relation preserves reflexivity, symmetry, and transitivity. |
+| Equivalence relation and class | An equivalence relation is reflexive, symmetric, and transitive; $`[a] = \lbrace x \in A \mid x \, R \, a \rbrace`$, and $`a \, R \, b`$ implies $[a] = [b]$. |
 | Distinct equivalence classes | Compute the class of each element and merge equal sets; the distinct classes form a partition of the set. |
 | Congruence modulo $d$ | $[m] = [n]$ if and only if $m$ and $n$ leave the same nonnegative remainder upon division by $d$, and there are $d$ distinct classes, one for each remainder. |
 
@@ -440,7 +440,7 @@ The quotient-remainder theorem explains why these four classes are distinct and 
    <details>
    <summary>Answer</summary>
 
-   It is not reflexive: $(2, 2) \notin R$ (nor is $(3, 3)$). It is symmetric: the reversal $(2, 1)$ of $(1, 2)$ is in $R$, and $(1, 1)$ is its own reversal. It is not transitive: $(2, 1) \in R$ and $(1, 2) \in R$, but $(2, 2) \notin R$.
+   It is not reflexive: $(2, 2) \notin R$ (nor is $`(3, 3)`$). It is symmetric: the reversal $(2, 1)$ of $(1, 2)$ is in $R$, and $(1, 1)$ is its own reversal. It is not transitive: $(2, 1) \in R$ and $(1, 2) \in R$, but $(2, 2) \notin R$.
 
    </details>
 
@@ -449,20 +449,20 @@ The quotient-remainder theorem explains why these four classes are distinct and 
    <details>
    <summary>Answer</summary>
 
-   This counterexample lies in $\mathcal{P}(X)$ only when $X$ contains both $a$ and $b$. The problem assumes only that "$X$ is nonempty", which includes the case of a one-element set such as $X = \lbrace a \rbrace$; then $\lbrace a, b \rbrace \notin \mathcal{P}(X)$ and the counterexample does not exist. The counterexample that works for every $X$ is the pair $(\emptyset, X)$, with $\emptyset \subseteq X$ but $X \not\subseteq \emptyset$.
+   This counterexample lies in $\mathcal{P}(X)$ only when $X$ contains both $a$ and $b$. The problem assumes only that "$`X`$ is nonempty", which includes the case of a one-element set such as $X = \lbrace a \rbrace$; then $\lbrace a, b \rbrace \notin \mathcal{P}(X)$ and the counterexample does not exist. The counterexample that works for every $X$ is the pair $(\emptyset, X)$, with $\emptyset \subseteq X$ but $X \not\subseteq \emptyset$.
 
    </details>
 
-3. **Inverse relation:** For the relation $x \, R \, y \iff x \mid y$ on $\mathbf{Z}^{+}$, describe $R^{-1}$ in words and decide whether $R^{-1}$ is transitive.
+3. **Inverse relation:** For the relation $`x \, R \, y \iff x \mid y`$ on $\mathbf{Z}^{+}$, describe $R^{-1}$ in words and decide whether $R^{-1}$ is transitive.
 
    <details>
    <summary>Answer</summary>
 
-   $x \, R^{-1} \, y \iff y \mid x$, that is, "$x$ is a multiple of $y$". Since $R$ is transitive (transitivity of divisibility, Theorem 4.4.3), Exercise 8.2.36 shows that $R^{-1}$ is also transitive.
+   $`x \, R^{-1} \, y \iff y \mid x`$, that is, "$`x`$ is a multiple of $y$". Since $R$ is transitive (transitivity of divisibility, Theorem 4.4.3), Exercise 8.2.36 shows that $R^{-1}$ is also transitive.
 
    </details>
 
-4. **Finding a class:** For the relation $m \, R \, n \iff 5 \mid (m - n)$ on $\mathbf{Z}$, choose the class equal to $[-3]$ among $[0]$, $[1]$, $[2]$, $[3]$, $[4]$.
+4. **Finding a class:** For the relation $`m \, R \, n \iff 5 \mid (m - n)`$ on $\mathbf{Z}$, choose the class equal to $[-3]$ among $[0]$, $[1]$, $[2]$, $[3]$, $[4]$.
 
    <details>
    <summary>Answer</summary>
@@ -471,7 +471,7 @@ The quotient-remainder theorem explains why these four classes are distinct and 
 
    </details>
 
-5. **Deciding an equivalence relation:** Decide whether the relation $x \, R \, y \iff x - y \in \mathbf{Z}$ on $\mathbf{R}$ is an equivalence relation, and describe $[0.5]$.
+5. **Deciding an equivalence relation:** Decide whether the relation $`x \, R \, y \iff x - y \in \mathbf{Z}`$ on $\mathbf{R}$ is an equivalence relation, and describe $[0.5]$.
 
    <details>
    <summary>Answer</summary>
@@ -485,6 +485,6 @@ The quotient-remainder theorem explains why these four classes are distinct and 
    <details>
    <summary>Answer</summary>
 
-   No. The relation $R = \emptyset$ on $A = \lbrace 1, 2 \rbrace$ contains no ordered pairs, so the conditional statements defining symmetry and transitivity are vacuously true and $R$ is symmetric and transitive, but $(1, 1) \notin R$, so it is not reflexive. The argument "$x \, R \, y$ gives $y \, R \, x$, and transitivity gives $x \, R \, x$" works only when some $y$ is related to $x$.
+   No. The relation $R = \emptyset$ on $A = \lbrace 1, 2 \rbrace$ contains no ordered pairs, so the conditional statements defining symmetry and transitivity are vacuously true and $R$ is symmetric and transitive, but $(1, 1) \notin R$, so it is not reflexive. The argument "$`x \, R \, y`$ gives $`y \, R \, x`$, and transitivity gives $`x \, R \, x`$" works only when some $y$ is related to $x$.
 
    </details>

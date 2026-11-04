@@ -73,7 +73,7 @@ Chapter 2 analyzed compound statements, which are simple statements joined by th
 - Socrates is a man.
 - $\therefore$ Socrates is mortal.
 
-The argument is intuitively correct. However, translating the three sentences into the language of compound statements only gives three unrelated simple statements $p$, $q$, and $r$, so the truth table method of Chapter 2 cannot show that "$p$ and $q$, therefore $r$" is valid. To analyze arguments like this one, statements must be split into smaller parts, in the way sentences are split into subjects and predicates, and the special role of words that denote quantities, such as "all" and "some", must be understood.
+The argument is intuitively correct. However, translating the three sentences into the language of compound statements only gives three unrelated simple statements $p$, $q$, and $r$, so the truth table method of Chapter 2 cannot show that "$`p`$ and $q$, therefore $r$" is valid. To analyze arguments like this one, statements must be split into smaller parts, in the way sentences are split into subjects and predicates, and the special role of words that denote quantities, such as "all" and "some", must be understood.
 
 > **Definition:** The symbolic analysis of predicates and quantified statements is called the **predicate calculus**. The symbolic analysis of compound statements studied in Chapter 2 is called the **statement calculus** (or **propositional calculus**).
 
@@ -83,13 +83,13 @@ The sentence $x^2 + 2 = 11$ is not a statement, because it may be true or false 
 
 In grammar, a sentence divides into a subject and a predicate, the predicate being whatever the sentence says about the subject. For the sentence "James is a student at Bedford College", the subject is "James" and the predicate is "is a student at Bedford College"; deleting the subject leaves exactly the predicate.
 
-In logic, predicates are obtained by removing some or all of the nouns from a sentence. For instance, let $P$ stand for "is a student at Bedford College" and $Q$ for "is a student at". Then the sentences "$x$ is a student at Bedford College" and "$x$ is a student at $y$" are symbolized as $P(x)$ and $Q(x, y)$. Here $P$ and $Q$ are **predicate symbols**, and $x$ and $y$, which take values in appropriate sets, are **predicate variables**. When concrete values are substituted for the predicate variables, a statement results. For simplicity, a predicate symbol together with suitable predicate variables is called a predicate; other treatments of logic call such objects **propositional functions** or **open sentences**.
+In logic, predicates are obtained by removing some or all of the nouns from a sentence. For instance, let $P$ stand for "is a student at Bedford College" and $Q$ for "is a student at". Then the sentences "$`x`$ is a student at Bedford College" and "$`x`$ is a student at $y$" are symbolized as $P(x)$ and $Q(x, y)$. Here $P$ and $Q$ are **predicate symbols**, and $x$ and $y$, which take values in appropriate sets, are **predicate variables**. When concrete values are substituted for the predicate variables, a statement results. For simplicity, a predicate symbol together with suitable predicate variables is called a predicate; other treatments of logic call such objects **propositional functions** or **open sentences**.
 
 > **Definition:** A **predicate** is a sentence with finitely many variables that turns into a statement once each variable is replaced by a specific value. The **domain** of a predicate variable is the set of values allowed to replace that variable.
 
-For example, if $P(x)$ is the predicate "$x > 3$", that is, "$x$ is greater than 3", then $P(x)$ itself is not a statement. But $P(4)$, obtained by substituting 4 for $x$, is a true statement because $4 > 3$, and $P(2)$ is a false statement because $2 > 3$ is false.
+For example, if $P(x)$ is the predicate "$`x > 3`$", that is, "$`x`$ is greater than 3", then $P(x)$ itself is not a statement. But $P(4)$, obtained by substituting 4 for $x$, is a true statement because $4 > 3$, and $P(2)$ is a false statement because $2 > 3$ is false.
 
-**Example 3.1.1 (Finding Truth Values of a Predicate).** Let $P(x)$ be the predicate "$x^2 > x$" with domain the set $\mathbf{R}$ of all real numbers. Write $P(2)$, $P(\frac{1}{2})$, and $P(-\frac{1}{2})$, and find the truth value of each.
+**Example 3.1.1 (Finding Truth Values of a Predicate).** Let $P(x)$ be the predicate "$`x^2 > x`$" with domain the set $\mathbf{R}$ of all real numbers. Write $P(2)$, $P(\frac{1}{2})$, and $P(-\frac{1}{2})$, and find the truth value of each.
 
 **Solution.** Substituting each value for $x$ and evaluating the inequality gives the following.
 
@@ -99,7 +99,7 @@ For example, if $P(x)$ is the predicate "$x > 3$", that is, "$x$ is greater than
 | $P(\frac{1}{2})$ | $(\frac{1}{2})^2 > \frac{1}{2}$ | $\frac{1}{4} > \frac{1}{2}$ | False |
 | $P(-\frac{1}{2})$ | $(-\frac{1}{2})^2 > -\frac{1}{2}$ | $\frac{1}{4} > -\frac{1}{2}$ | True |
 
-*Table 1. Results of substituting three values into the predicate $x^2 > x$*
+*Table 1. Predicate $`x^2 > x`$: results of substituting three values*
 
 If $0 < x < 1$, multiplying $x$ by the positive number $x$, which is less than 1, gives an $x^2$ that is smaller than $x$, so $P(\frac{1}{2})$ is false. In general, $x^2 > x$ is equivalent to $x(x - 1) > 0$, and since the two factors must have the same sign, it holds exactly when $x < 0$ or $x > 1$.
 
@@ -109,7 +109,7 @@ Substituting any element of the domain into a predicate of one variable produces
 
 For example, the only integers whose square is 1 are $-1$ and 1, so $\lbrace x \in \mathbf{Z} \mid x^2 = 1 \rbrace = \lbrace -1, 1 \rbrace$. For the predicate of Example 3.1.1, the truth set is $\lbrace x \in \mathbf{R} \mid x < 0 \text{ or } x > 1 \rbrace$.
 
-**Example 3.1.2 (Finding the Truth Set of a Predicate).** Let $Q(n)$ be the predicate "$n$ is a factor of 8". Find the truth set of $Q(n)$ if (a) the domain of $n$ is $\mathbf{Z}^{+}$, the set of all positive integers, and (b) the domain of $n$ is $\mathbf{Z}$, the set of all integers.
+**Example 3.1.2 (Finding the Truth Set of a Predicate).** Let $Q(n)$ be the predicate "$`n`$ is a factor of 8". Find the truth set of $Q(n)$ if (a) the domain of $n$ is $\mathbf{Z}^{+}$, the set of all positive integers, and (b) the domain of $n$ is $\mathbf{Z}$, the set of all integers.
 
 **Solution.**
 
@@ -120,27 +120,27 @@ For example, the only integers whose square is 1 are $-1$ and 1, so $\lbrace x \
 
 ### 1.3 The Universal Quantifier
 
-A predicate becomes a statement when every one of its variables receives a specific value. For example, giving $x$ the value 35 turns "$x$ is divisible by 5" into a true statement, since $35 = 5 \cdot 7$. A second way is to attach **quantifiers**, words of quantity such as "some" and "all" that state for how many elements of the domain the predicate holds. Quantifiers entered symbolic logic as a formal notion in the late nineteenth century, through the independent work of the American philosopher and logician Charles Sanders Peirce and the German logician Gottlob Frege.
+A predicate becomes a statement when every one of its variables receives a specific value. For example, giving $x$ the value 35 turns "$`x`$ is divisible by 5" into a true statement, since $35 = 5 \cdot 7$. A second way is to attach **quantifiers**, words of quantity such as "some" and "all" that state for how many elements of the domain the predicate holds. Quantifiers entered symbolic logic as a formal notion in the late nineteenth century, through the independent work of the American philosopher and logician Charles Sanders Peirce and the German logician Gottlob Frege.
 
 The symbol $\forall$ is called the **universal quantifier**. According to context it is read "for every", "for each", "for any", "given any", or "for all". It asserts that a property holds for every element of a given domain. For example, "All human beings are mortal" is written as follows.
 
 $\forall$ human beings $x$, $x$ is mortal.
 
-This is read "For every human being $x$, $x$ is mortal." If $H$ is the set of all human beings, the statement can be written more formally as "$\forall x \in H$, $x$ is mortal." Think of $x$ as an individual but generic object, with all the properties shared by every human being and no other properties.
+This is read "For every human being $x$, $x$ is mortal." If $H$ is the set of all human beings, the statement can be written more formally as "$`\forall x \in H`$, $x$ is mortal." Think of $x$ as an individual but generic object, with all the properties shared by every human being and no other properties.
 
-In a universal statement, the domain of the predicate variable is usually indicated either between the $\forall$ symbol and the variable name ($\forall$ human being $x$) or immediately after the variable name ($\forall x \in H$). In sentences that mix symbols and words, one $\forall$ can refer to two or more variables. For instance, "For all real numbers $x$ and $y$, $x + y = y + x$" is written "$\forall$ real numbers $x$ and $y$, $x + y = y + x$". More formal versions of symbolic logic attach a separate $\forall$ to each variable: $\forall x \in \mathbf{R}\,(\forall y \in \mathbf{R}\,(x + y = y + x))$.
+In a universal statement, the domain of the predicate variable is usually indicated either between the $\forall$ symbol and the variable name ($\forall$ human being $`x`$) or immediately after the variable name ($`\forall x \in H`$). In sentences that mix symbols and words, one $\forall$ can refer to two or more variables. For instance, "For all real numbers $x$ and $y$, $x + y = y + x$" is written "$`\forall`$ real numbers $x$ and $y$, $x + y = y + x$". More formal versions of symbolic logic attach a separate $\forall$ to each variable: $`\forall x \in \mathbf{R}\,(\forall y \in \mathbf{R}\,(x + y = y + x))`$.
 
-> **Definition:** Let $Q(x)$ be a predicate and $D$ the domain of $x$. A **universal statement** is a statement of the form $\forall x \in D,\ Q(x)$. It is true if, and only if, $Q(x)$ is true for each individual $x$ in $D$, and it is false if, and only if, $Q(x)$ is false for at least one $x$ in $D$. A value of $x$ for which $Q(x)$ is false is called a **counterexample** to the universal statement.
+> **Definition:** Let $Q(x)$ be a predicate and $D$ the domain of $x$. A **universal statement** is a statement of the form $`\forall x \in D,\ Q(x)`$. It is true if, and only if, $Q(x)$ is true for each individual $x$ in $D$, and it is false if, and only if, $Q(x)$ is false for at least one $x$ in $D$. A value of $x$ for which $Q(x)$ is false is called a **counterexample** to the universal statement.
 
 **Example 3.1.3 (Truth and Falsity of Universal Statements).**
 
-- (a) Let $D = \lbrace 1, 2, 3, 4, 5 \rbrace$, and consider the statement $\forall x \in D,\ x^2 \geq x$. Write one way to read this statement out loud, and show that it is true.
-- (b) Find a counterexample to show that the statement $\forall x \in \mathbf{R},\ x^2 \geq x$ is false.
+- (a) Let $D = \lbrace 1, 2, 3, 4, 5 \rbrace$, and consider the statement $`\forall x \in D,\ x^2 \geq x`$. Write one way to read this statement out loud, and show that it is true.
+- (b) Find a counterexample to show that the statement $`\forall x \in \mathbf{R},\ x^2 \geq x`$ is false.
 
 **Solution.**
 
-- (a) It is read "For every $x$ in the set $D$, $x^2$ is greater than or equal to $x$." Substituting the elements of $D$ one by one gives $1^2 = 1 \geq 1$, $2^2 = 4 \geq 2$, $3^2 = 9 \geq 3$, $4^2 = 16 \geq 4$, and $5^2 = 25 \geq 5$, so $x^2 \geq x$ is true for every element of $D$. Hence $\forall x \in D,\ x^2 \geq x$ is true.
-- (b) The statement claims that $x^2 \geq x$ for every real number $x$. But when $x = \frac{1}{2}$, $(\frac{1}{2})^2 = \frac{1}{4}$ and $\frac{1}{4} \not\geq \frac{1}{2}$. So $x = \frac{1}{2}$ is a counterexample, and $\forall x \in \mathbf{R},\ x^2 \geq x$ is false. Every real number with $0 < x < 1$ is a counterexample, but a single counterexample suffices to show falsity.
+- (a) It is read "For every $x$ in the set $D$, $x^2$ is greater than or equal to $x$." Substituting the elements of $D$ one by one gives $1^2 = 1 \geq 1$, $2^2 = 4 \geq 2$, $3^2 = 9 \geq 3$, $4^2 = 16 \geq 4$, and $5^2 = 25 \geq 5$, so $x^2 \geq x$ is true for every element of $D$. Hence $`\forall x \in D,\ x^2 \geq x`$ is true.
+- (b) The statement claims that $x^2 \geq x$ for every real number $x$. But when $x = \frac{1}{2}$, $(\frac{1}{2})^2 = \frac{1}{4}$ and $\frac{1}{4} \not\geq \frac{1}{2}$. So $x = \frac{1}{2}$ is a counterexample, and $`\forall x \in \mathbf{R},\ x^2 \geq x`$ is false. Every real number with $0 < x < 1$ is a counterexample, but a single counterexample suffices to show falsity.
 
 The technique used in (a) is called the **method of exhaustion**. It shows the truth of the predicate separately for each individual element of the domain, and in principle it can be used whenever the domain of the predicate variable is finite. Digital computers have made this method far easier to use, and expert systems and knowledge-based systems use it to answer many of the questions posed to them. Because most sets in mathematics are infinite, however, the method can rarely be used to derive general mathematical results.
 
@@ -150,7 +150,7 @@ The symbol $\exists$ denotes "there exists" and is called the **existential quan
 
 $\exists$ a person $p$ such that $p$ is a student in Math 140.
 
-If $P$ is the set of all people, it is written more formally as "$\exists p \in P$ such that $p$ is a student in Math 140." The domain is indicated either between the $\exists$ symbol and the variable name or immediately after the variable name, and the words such that are inserted just before the predicate. The words such that mean "satisfying the following condition". As in "$\exists$ integers $m$ and $n$ such that $m + n = m \cdot n$", one $\exists$ can refer to both variables $m$ and $n$. More formal versions of symbolic logic do not write out such that (although it is understood) and attach a separate $\exists$ to each variable: $\exists m \in \mathbf{Z}\,(\exists n \in \mathbf{Z}\,(m + n = m \cdot n))$.
+If $P$ is the set of all people, it is written more formally as "$`\exists p \in P`$ such that $p$ is a student in Math 140." The domain is indicated either between the $\exists$ symbol and the variable name or immediately after the variable name, and the words such that are inserted just before the predicate. The words such that mean "satisfying the following condition". As in "$`\exists`$ integers $m$ and $n$ such that $m + n = m \cdot n$", one $\exists$ can refer to both variables $m$ and $n$. More formal versions of symbolic logic do not write out such that (although it is understood) and attach a separate $\exists$ to each variable: $`\exists m \in \mathbf{Z}\,(\exists n \in \mathbf{Z}\,(m + n = m \cdot n))`$.
 
 > **Definition:** Let $Q(x)$ be a predicate and $D$ the domain of $x$. An **existential statement** is a statement of the form $\exists x \in D \text{ such that } Q(x)$. It is true if, and only if, $Q(x)$ is true for at least one $x$ in $D$, and it is false if, and only if, $Q(x)$ is false for all $x$ in $D$.
 
@@ -168,7 +168,7 @@ Comparing the two definitions summarizes what must be done to decide the truth v
 
 | Statement | How to Show It Is True | How to Show It Is False |
 |:-----|:-----|:-----|
-| $\forall x \in D,\ Q(x)$ | Show that $Q(x)$ is true for every $x$ in $D$ | Find one $x$ (a counterexample) for which $Q(x)$ is false |
+| $`\forall x \in D,\ Q(x)`$ | Show that $Q(x)$ is true for every $x$ in $D$ | Find one $x$ (a counterexample) for which $Q(x)$ is false |
 | $\exists x \in D \text{ such that } Q(x)$ | Find one $x$ for which $Q(x)$ is true | Show that $Q(x)$ is false for every $x$ in $D$ |
 
 *Table 2. How to decide the truth values of universal and existential statements*
@@ -177,12 +177,12 @@ Comparing the two definitions summarizes what must be done to decide the truth v
 
 To make sense of mathematical concepts that are new, it is important to be able to translate formal language, written in symbols, into everyday informal language. Conversely, when thinking out a complicated problem, it is equally important to be able to translate informal language into formal language.
 
-**Example 3.1.5 (Translating from Formal to Informal Language).** Rewrite the following formal statements in a variety of equivalent but more informal ways, without using the symbol $\forall$ or $\exists$: (a) $\forall x \in \mathbf{R},\ x^2 \geq 0$, (b) $\forall x \in \mathbf{R},\ x^2 \neq -1$, (c) $\exists m \in \mathbf{Z}^{+} \text{ such that } m^2 = m$.
+**Example 3.1.5 (Translating from Formal to Informal Language).** Rewrite the following formal statements in a variety of equivalent but more informal ways, without using the symbol $\forall$ or $\exists$: (a) $`\forall x \in \mathbf{R},\ x^2 \geq 0`$, (b) $`\forall x \in \mathbf{R},\ x^2 \neq -1`$, (c) $\exists m \in \mathbf{Z}^{+} \text{ such that } m^2 = m$.
 
 | Formal Statement | Equivalent Informal Sentences |
 |:-----|:-----|
-| (a) $\forall x \in \mathbf{R},\ x^2 \geq 0$ | Every real number has a nonnegative square. Or: All real numbers have nonnegative squares. Or: Any real number has a nonnegative square. Or: The square of each real number is nonnegative. |
-| (b) $\forall x \in \mathbf{R},\ x^2 \neq -1$ | All real numbers have squares that do not equal $-1$. Or: No real numbers have squares equal to $-1$. |
+| (a) $`\forall x \in \mathbf{R},\ x^2 \geq 0`$ | Every real number has a nonnegative square. Or: All real numbers have nonnegative squares. Or: Any real number has a nonnegative square. Or: The square of each real number is nonnegative. |
+| (b) $`\forall x \in \mathbf{R},\ x^2 \neq -1`$ | All real numbers have squares that do not equal $-1$. Or: No real numbers have squares equal to $-1$. |
 | (c) $\exists m \in \mathbf{Z}^{+} \text{ such that } m^2 = m$ | There is a positive integer whose square is equal to itself. Or: At least one positive integer can be found that equals its own square. Or: Some positive integer equals its own square. Or: Some positive integers equal their own squares. |
 
 *Table 3. Formal statements translated into equivalent informal sentences*
@@ -191,7 +191,7 @@ As in the second sentence of (b), the words none are or no ... are are equivalen
 
 > **Caution:** In ordinary language, the last sentence of (c), "Some positive integers equal their own squares", may be taken to mean that there are at least two such positive integers. In mathematics, the last two sentences are understood to mean the same thing, namely "there is at least one".
 
-A universal or existential statement can also be restated informally by moving the quantifying words to the end of the sentence: "For any real number $x$, $x^2$ is nonnegative" becomes "$x^2$ is nonnegative for any real number $x$". A quantifier placed after the rest of the sentence in this way is called a **trailing quantifier**. Because quantifying words can appear at the end of a sentence as well as at the beginning, they must be searched for throughout the sentence when it is formalized.
+A universal or existential statement can also be restated informally by moving the quantifying words to the end of the sentence: "For any real number $x$, $x^2$ is nonnegative" becomes "$`x^2`$ is nonnegative for any real number $x$". A quantifier placed after the rest of the sentence in this way is called a **trailing quantifier**. Because quantifying words can appear at the end of a sentence as well as at the beginning, they must be searched for throughout the sentence when it is formalized.
 
 **Example 3.1.6 (Trailing Quantifiers).** Rewrite the following statements so that the quantifier trails the rest of the sentence.
 
@@ -214,13 +214,17 @@ The sentences "All triangles have three sides" and "Every triangle has three sid
 
 It can reasonably be argued that the most important form of statement in mathematics is the following **universal conditional statement**.
 
-$$\forall x,\ P(x) \to Q(x)$$
+```math
+\forall x,\ P(x) \to Q(x)
+```
 
 This is read "For every $x$, if $P(x)$ then $Q(x)$." Universal conditional statements are very common in mathematics, computer science, and many other fields, and familiarity with this form is essential for learning to speak mathematics.
 
 **Example 3.1.8 (Writing Universal Conditional Statements Informally).** Rewrite the following statement informally, without quantifiers or variables.
 
-$$\forall x \in \mathbf{R},\ x > 2 \to x^2 > 4$$
+```math
+\forall x \in \mathbf{R},\ x > 2 \to x^2 > 4
+```
 
 **Solution.**
 
@@ -229,7 +233,7 @@ $$\forall x \in \mathbf{R},\ x > 2 \to x^2 > 4$$
 - Or: The square of any real number greater than 2 is greater than 4.
 - Or: The squares of all real numbers greater than 2 are greater than 4.
 
-**Example 3.1.9 (Writing Universal Conditional Statements Formally).** Rewrite each of the following statements in the form "$\forall$ \_\_\_\_, if \_\_\_\_ then \_\_\_\_".
+**Example 3.1.9 (Writing Universal Conditional Statements Formally).** Rewrite each of the following statements in the form "$`\forall`$ \_\_\_\_, if \_\_\_\_ then \_\_\_\_".
 
 - (a) If a real number is an integer, then it is a rational number. → $\forall$ real number $x$, if $x$ is an integer, then $x$ is a rational number. Or: $\forall x \in \mathbf{R}$, if $x \in \mathbf{Z}$ then $x \in \mathbf{Q}$.
 - (b) All bytes have eight bits. → $\forall x$, if $x$ is a byte, then $x$ has eight bits.
@@ -237,13 +241,13 @@ $$\forall x \in \mathbf{R},\ x > 2 \to x^2 > 4$$
 
 As in (b) and (c), it is common to omit explicit identification of the domain of predicate variables in universal conditional statements.
 
-Careful thought about the meaning of universal conditional statements gives a deeper understanding of why the truth table for an if-then statement was defined as it was in Chapter 2. Experience and intuition say that "$\forall$ real number $x$, if $x > 2$ then $x^2 > 4$" is true. That means "if $x > 2$ then $x^2 > 4$" must be true for every real number $x$, including the values of $x$ that make the hypothesis $x > 2$ false.
+Careful thought about the meaning of universal conditional statements gives a deeper understanding of why the truth table for an if-then statement was defined as it was in Chapter 2. Experience and intuition say that "$`\forall`$ real number $x$, if $x > 2$ then $x^2 > 4$" is true. That means "if $x > 2$ then $x^2 > 4$" must be true for every real number $x$, including the values of $x$ that make the hypothesis $x > 2$ false.
 
 | $x$ | Hypothesis $x > 2$ | Conclusion $x^2 > 4$ | Conditional "if $x > 2$ then $x^2 > 4$" |
 |:-----|:-----|:-----|:-----|
-| 3 | True | True ($9 > 4$) | Must be true |
+| 3 | True | True ($`9 > 4`$) | Must be true |
 | 1 | False | False ($1 > 4$ is false) | Must be true |
-| $-3$ | False | True ($9 > 4$) | Must be true |
+| $-3$ | False | True ($`9 > 4`$) | Must be true |
 
 *Table 5. Three real numbers substituted into a true universal conditional statement*
 
@@ -251,28 +255,32 @@ For $x = 1$ the hypothesis and the conclusion are both false, and for $x = -3$ t
 
 ### 1.7 Equivalent Forms of Universal and Existential Statements
 
-Since every integer is a real number, "$\forall$ real number $x$, if $x$ is an integer then $x$ is rational" says exactly what "$\forall$ integer $x$, $x$ is rational" says; informally, both read "All integers are rational." More generally, a statement of the following form
+Since every integer is a real number, "$`\forall`$ real number $x$, if $x$ is an integer then $x$ is rational" says exactly what "$`\forall`$ integer $x$, $x$ is rational" says; informally, both read "All integers are rational." More generally, a statement of the following form
 
-$$\forall x \in U,\ P(x) \to Q(x)$$
+```math
+\forall x \in U,\ P(x) \to Q(x)
+```
 
 can always be rewritten in the following form by narrowing $U$ to the subset $D$ consisting of all values of $x$ that make $P(x)$ true.
 
-$$\forall x \in D,\ Q(x)$$
+```math
+\forall x \in D,\ Q(x)
+```
 
-Conversely, a statement of the form $\forall x \in D,\ Q(x)$ can be rewritten as "$\forall x$, if $x$ is in $D$ then $Q(x)$." The two forms express the same content and differ only in where the domain is stated.
+Conversely, a statement of the form $`\forall x \in D,\ Q(x)`$ can be rewritten as "$`\forall x`$, if $x$ is in $D$ then $Q(x)$." The two forms express the same content and differ only in where the domain is stated.
 
-**Example 3.1.10 (Equivalent Forms for Universal Statements).** Rewrite "All squares are rectangles" in the two forms "$\forall x$, if \_\_\_\_ then \_\_\_\_" and "$\forall$ \_\_\_\_ $x$, \_\_\_\_".
+**Example 3.1.10 (Equivalent Forms for Universal Statements).** Rewrite "All squares are rectangles" in the two forms "$`\forall x`$, if \_\_\_\_ then \_\_\_\_" and "$`\forall`$ \_\_\_\_ $x$, \_\_\_\_".
 
-**Solution.** "$\forall x$, if $x$ is a square then $x$ is a rectangle" and "$\forall$ square $x$, $x$ is a rectangle".
+**Solution.** "$`\forall x`$, if $x$ is a square then $x$ is a rectangle" and "$`\forall`$ square $x$, $x$ is a rectangle".
 
-Similarly, a statement of the form "$\exists x$ such that $P(x)$ and $Q(x)$" can be rewritten as "$\exists x \in D$ such that $Q(x)$", where $D$ is the set of all $x$ for which $P(x)$ is true.
+Similarly, a statement of the form "$`\exists x`$ such that $P(x)$ and $Q(x)$" can be rewritten as "$`\exists x \in D`$ such that $Q(x)$", where $D$ is the set of all $x$ for which $P(x)$ is true.
 
-**Example 3.1.11 (Equivalent Forms for Existential Statements).** A **prime number** is an integer greater than 1 whose only positive integer factors are 1 and the number itself. Consider the statement "There is an integer that is both prime and even." Let $\text{Prime}(n)$ be "$n$ is prime" and $\text{Even}(n)$ be "$n$ is even", and rewrite the statement in the two forms (a) "$\exists n$ such that \_\_\_\_ $\wedge$ \_\_\_\_" and (b) "$\exists$ \_\_\_\_ $n$ such that \_\_\_\_".
+**Example 3.1.11 (Equivalent Forms for Existential Statements).** A **prime number** is an integer greater than 1 whose only positive integer factors are 1 and the number itself. Consider the statement "There is an integer that is both prime and even." Let $\text{Prime}(n)$ be "$`n`$ is prime" and $\text{Even}(n)$ be "$`n`$ is even", and rewrite the statement in the two forms (a) "$`\exists n`$ such that \_\_\_\_ $\wedge$ \_\_\_\_" and (b) "$`\exists`$ \_\_\_\_ $n$ such that \_\_\_\_".
 
 **Solution.**
 
 - (a) $\exists n \text{ such that } \text{Prime}(n) \wedge \text{Even}(n)$.
-- (b) There are two answers: "$\exists$ a prime number $n$ such that $\text{Even}(n)$" and "$\exists$ an even number $n$ such that $\text{Prime}(n)$".
+- (b) There are two answers: "$`\exists`$ a prime number $n$ such that $\text{Even}(n)$" and "$`\exists`$ an even number $n$ such that $\text{Prime}(n)$".
 
 Since $n = 2$ is both prime and even, the statement is true.
 
@@ -293,7 +301,7 @@ Both statements use the variable name $x$, but the $x$ in Statement 1 serves a d
 
 > **Definition:** A variable associated with a quantifier and controlled by it is said to be **bound** by that quantifier, and it is called a **bound variable**. The **scope** of the variable begins where the quantifier introduces it and ends at the end of the quantified statement.
 
-Renaming a bound variable consistently does not change the meaning of the statement. For example, $\forall x \in \mathbf{Z},\ x^2 \geq 0$ and $\forall y \in \mathbf{Z},\ y^2 \geq 0$ are the same statement.
+Renaming a bound variable consistently does not change the meaning of the statement. For example, $`\forall x \in \mathbf{Z},\ x^2 \geq 0`$ and $`\forall y \in \mathbf{Z},\ y^2 \geq 0`$ are the same statement.
 
 The way variables are used in mathematics is similar to the way they are used in programming. A variable in a program also serves as a placeholder, creating a location in (actual or virtual) memory into which its values can be placed. In addition, the way a variable is bound in a program is similar to the way a mathematical variable is bound in a statement. Compare the following two Python programs.
 
@@ -342,20 +350,20 @@ Consider the following statement.
 
 If a number is an integer, then it is a rational number.
 
-As shown in Section 1.7, this statement is equivalent to a universal statement. However, it does not contain the telltale word "all", "every", or "any". The only clue that indicates its universal quantification is the indefinite article a. This is an example of **implicit quantification**. In symbols it is $\forall x \in \mathbf{Z},\ x \in \mathbf{Q}$. In the same way, "An integer divisible by 2 is even" means "$\forall x \in \mathbf{Z}$, if $x$ is divisible by 2, then $x$ is even." Implicit quantification simplifies language by omitting explicit quantifiers and letting the context supply them.
+As shown in Section 1.7, this statement is equivalent to a universal statement. However, it does not contain the telltale word "all", "every", or "any". The only clue that indicates its universal quantification is the indefinite article a. This is an example of **implicit quantification**. In symbols it is $`\forall x \in \mathbf{Z},\ x \in \mathbf{Q}`$. In the same way, "An integer divisible by 2 is even" means "$`\forall x \in \mathbf{Z}`$, if $x$ is divisible by 2, then $x$ is even." Implicit quantification simplifies language by omitting explicit quantifiers and letting the context supply them.
 
-Existential quantification can also be implicit. For instance, the statement "The number 24 can be written as a sum of two even integers" is expressed formally as "$\exists$ even integers $m$ and $n$ such that $24 = m + n$."
+Existential quantification can also be implicit. For instance, the statement "The number 24 can be written as a sum of two even integers" is expressed formally as "$`\exists`$ even integers $m$ and $n$ such that $24 = m + n$."
 
 Mathematical writing contains many examples of implicitly quantified statements. Some occur, as in the first example above, through the presence of the word a or an; others occur where the general context of a sentence supplies part of its meaning. For example, in an algebra course in which the letter $x$ always denotes a real number, the predicate "if $x > 2$ then $x^2 > 4$" is interpreted to mean the same as the statement "For every real number $x$, if $x > 2$ then $x^2 > 4$." Mathematicians often use a double arrow to indicate this implicit quantification, writing $x > 2 \Rightarrow x^2 > 4$.
 
 > **Definition:** Let $P(x)$ and $Q(x)$ be predicates, and suppose the common domain of $x$ is $D$.
 >
-> - The notation $P(x) \Rightarrow Q(x)$ means that every element in the truth set of $P(x)$ is in the truth set of $Q(x)$. This is the same as $\forall x,\ P(x) \to Q(x)$.
-> - The notation $P(x) \Leftrightarrow Q(x)$ means that $P(x)$ and $Q(x)$ have identical truth sets. This is the same as $\forall x,\ P(x) \leftrightarrow Q(x)$.
+> - The notation $P(x) \Rightarrow Q(x)$ means that every element in the truth set of $P(x)$ is in the truth set of $Q(x)$. This is the same as $`\forall x,\ P(x) \to Q(x)`$.
+> - The notation $P(x) \Leftrightarrow Q(x)$ means that $P(x)$ and $Q(x)$ have identical truth sets. This is the same as $`\forall x,\ P(x) \leftrightarrow Q(x)`$.
 
 In other words, $P(x) \Rightarrow Q(x)$ means that the truth set of $P(x)$ is a subset of the truth set of $Q(x)$, and $P(x) \Leftrightarrow Q(x)$ means that each truth set is a subset of the other. Note that $\to$ and $\leftrightarrow$ are connectives that build statements, whereas $\Rightarrow$ and $\Leftrightarrow$ are notations asserting that a relation between predicates holds throughout the domain.
 
-**Example 3.1.12 (Using $\Rightarrow$ and $\Leftrightarrow$).** Let the domain of $n$ be $\mathbf{Z}^{+}$, the set of positive integers, and let the predicates $Q(n)$, $R(n)$, and $S(n)$ be as in the following table. Use the symbols $\Rightarrow$ and $\Leftrightarrow$ to indicate true relationships among the three predicates.
+**Example 3.1.12 (Using $\Rightarrow$ and $`\Leftrightarrow`$).** Let the domain of $n$ be $\mathbf{Z}^{+}$, the set of positive integers, and let the predicates $Q(n)$, $R(n)$, and $S(n)$ be as in the following table. Use the symbols $\Rightarrow$ and $\Leftrightarrow$ to indicate true relationships among the three predicates.
 
 | Predicate | Meaning | Truth Set |
 |:-----|:-----|:-----|
@@ -367,9 +375,9 @@ In other words, $P(x) \Rightarrow Q(x)$ means that the truth set of $P(x)$ is a 
 
 **Solution.**
 
-1. As noted in Example 3.1.2, the truth set of $Q(n)$ is $\lbrace 1, 2, 4, 8 \rbrace$, and by similar reasoning the truth set of $R(n)$ is $\lbrace 1, 2, 4 \rbrace$. Every element in the truth set of $R(n)$ is in the truth set of $Q(n)$, so $\forall n \in \mathbf{Z}^{+},\ R(n) \to Q(n)$ is true. Hence $R(n) \Rightarrow Q(n)$, that is, "$n$ is a factor of 4 $\Rightarrow$ $n$ is a factor of 8".
-2. The positive integers satisfying $S(n)$ are 1, 2, 3, 4 (those less than 5) with 3 removed, namely 1, 2, 4, so the truth set of $S(n)$ is $\lbrace 1, 2, 4 \rbrace$, identical to the truth set of $R(n)$. Hence $\forall n \in \mathbf{Z}^{+},\ R(n) \leftrightarrow S(n)$ is true, and $R(n) \Leftrightarrow S(n)$, that is, "$n$ is a factor of 4 $\Leftrightarrow$ $n < 5$ and $n \neq 3$".
-3. Every element in the truth set of $S(n)$ is in the truth set of $Q(n)$, so $\forall n \in \mathbf{Z}^{+},\ S(n) \to Q(n)$ is true. Hence $S(n) \Rightarrow Q(n)$, that is, "$n < 5$ and $n \neq 3$ $\Rightarrow$ $n$ is a factor of 8".
+1. As noted in Example 3.1.2, the truth set of $Q(n)$ is $\lbrace 1, 2, 4, 8 \rbrace$, and by similar reasoning the truth set of $R(n)$ is $\lbrace 1, 2, 4 \rbrace$. Every element in the truth set of $R(n)$ is in the truth set of $Q(n)$, so $`\forall n \in \mathbf{Z}^{+},\ R(n) \to Q(n)`$ is true. Hence $R(n) \Rightarrow Q(n)$, that is, "$`n`$ is a factor of 4 $\Rightarrow$ $n$ is a factor of 8".
+2. The positive integers satisfying $S(n)$ are 1, 2, 3, 4 (those less than 5) with 3 removed, namely 1, 2, 4, so the truth set of $S(n)$ is $\lbrace 1, 2, 4 \rbrace$, identical to the truth set of $R(n)$. Hence $`\forall n \in \mathbf{Z}^{+},\ R(n) \leftrightarrow S(n)`$ is true, and $R(n) \Leftrightarrow S(n)$, that is, "$`n`$ is a factor of 4 $\Leftrightarrow$ $n < 5$ and $n \neq 3$".
+3. Every element in the truth set of $S(n)$ is in the truth set of $Q(n)$, so $`\forall n \in \mathbf{Z}^{+},\ S(n) \to Q(n)`$ is true. Hence $S(n) \Rightarrow Q(n)$, that is, "$`n < 5`$ and $n \neq 3$ $\Rightarrow$ $n$ is a factor of 8".
 
 On the other hand, $8$ is in the truth set of $Q(n)$ but not in that of $R(n)$, so $Q(n) \Rightarrow R(n)$ does not hold.
 
@@ -384,7 +392,7 @@ Whether a statement is quantified universally or existentially crucially determi
 
 **Tarski's World** is a computer program developed by the information scientists Jon Barwise and John Etchemendy for teaching and learning the principles of formal logic. It is described in their book *The Language of First-Order Logic*, and it is named after the logician Alfred Tarski. The program shows blocks of various sizes, shapes, and colors located on a grid, and lets the user describe the arrangement with logical operators and predicates.
 
-The two-dimensional version uses predicates such as the following. $\text{Triangle}(x)$ means "$x$ is a triangle", $\text{Blue}(y)$ means "$y$ is blue", and $\text{RightOf}(x, y)$ means "$x$ is to the right of $y$ (but possibly in a different row)". Similarly, $\text{Square}$, $\text{Circle}$, $\text{Gray}$, and $\text{Black}$ describe shapes and colors. Individual objects are given names such as $a$, $b$, or $c$.
+The two-dimensional version uses predicates such as the following. $\text{Triangle}(x)$ means "$`x`$ is a triangle", $\text{Blue}(y)$ means "$`y`$ is blue", and $\text{RightOf}(x, y)$ means "$`x`$ is to the right of $y$ (but possibly in a different row)". Similarly, $\text{Square}$, $\text{Circle}$, $\text{Gray}$, and $\text{Black}$ describe shapes and colors. Individual objects are given names such as $a$, $b$, or $c$.
 
 **Example 3.1.13 (Investigating Tarski's World).** Figure 1 shows an arrangement of objects in a two-dimensional Tarski world. The numbers above and to the left of the grid are the column and row numbers.
 
@@ -412,8 +420,8 @@ The objects in the figure are listed in the following table.
 
 Let the domain of all variables be the set of objects in Figure 1, and determine the truth or falsity of each of the following statements.
 
-- (a) $\forall t,\ \text{Triangle}(t) \to \text{Blue}(t)$
-- (b) $\forall x,\ \text{Blue}(x) \to \text{Triangle}(x)$
+- (a) $`\forall t,\ \text{Triangle}(t) \to \text{Blue}(t)`$
+- (b) $`\forall x,\ \text{Blue}(x) \to \text{Triangle}(x)`$
 - (c) $\exists y \text{ such that } \text{Square}(y) \wedge \text{RightOf}(d, y)$
 - (d) $\exists z \text{ such that } \text{Square}(z) \wedge \text{Gray}(z)$
 
@@ -438,14 +446,16 @@ This section continues Section 1 with the rules for negating quantified statemen
 
 Consider the statement "All mathematicians wear glasses." Many people would say that its negation is "No mathematicians wear glasses", but if even one mathematician does not wear glasses, the sweeping statement that all mathematicians wear glasses is false. So a correct negation is "There is at least one mathematician who does not wear glasses." The general form of the negation of a universal statement follows immediately from the definition of negation and the definitions of the truth values of universal and existential statements.
 
-> **Key Point:** **Theorem 3.2.1 (Negation of a Universal Statement).** The negation of a statement of the form $\forall x \in D,\ Q(x)$ is logically equivalent to a statement of the form $\exists x \in D \text{ such that } \sim Q(x)$.
+> **Key Point:** **Theorem 3.2.1 (Negation of a Universal Statement).** The negation of a statement of the form $`\forall x \in D,\ Q(x)`$ is logically equivalent to a statement of the form $\exists x \in D \text{ such that } \sim Q(x)$.
 
-$$\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)$$
+```math
+\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)
+```
 
 **Proof.** The proof shows that the two statements always have the same truth value.
 
-1. $\sim(\forall x \in D,\ Q(x))$ is true exactly when $\forall x \in D,\ Q(x)$ is false (definition of negation).
-2. $\forall x \in D,\ Q(x)$ is false exactly when $Q(x)$ is false for at least one $x$ in $D$ (definition of a universal statement).
+1. $`\sim(\forall x \in D,\ Q(x))`$ is true exactly when $`\forall x \in D,\ Q(x)`$ is false (definition of negation).
+2. $`\forall x \in D,\ Q(x)`$ is false exactly when $Q(x)$ is false for at least one $x$ in $D$ (definition of a universal statement).
 3. $Q(x)$ is false exactly when $\sim Q(x)$ is true, so this is the same as $\sim Q(x)$ being true for at least one $x$ in $D$ (definition of negation).
 4. The existence of such an $x$ is exactly the truth of $\exists x \in D \text{ such that } \sim Q(x)$ (definition of an existential statement).
 
@@ -455,18 +465,20 @@ Thus **the negation of a universal statement ("all are") is logically equivalent
 
 Now consider the statement "Some snowflakes are the same." For this statement to be false means that not a single snowflake is the same as any other. In other words, its negation is "No snowflakes are the same" or "All snowflakes are different." The general form of the negation of an existential statement also follows immediately from the definitions.
 
-> **Key Point:** **Theorem 3.2.2 (Negation of an Existential Statement).** The negation of a statement of the form $\exists x \in D \text{ such that } Q(x)$ is logically equivalent to a statement of the form $\forall x \in D,\ \sim Q(x)$.
+> **Key Point:** **Theorem 3.2.2 (Negation of an Existential Statement).** The negation of a statement of the form $\exists x \in D \text{ such that } Q(x)$ is logically equivalent to a statement of the form $`\forall x \in D,\ \sim Q(x)`$.
 
-$$\sim(\exists x \in D \text{ such that } Q(x)) \equiv \forall x \in D,\ \sim Q(x)$$
+```math
+\sim(\exists x \in D \text{ such that } Q(x)) \equiv \forall x \in D,\ \sim Q(x)
+```
 
-**Proof.** $\sim(\exists x \in D \text{ such that } Q(x))$ is true exactly when the existential statement is false (definition of negation), which happens exactly when $Q(x)$ is false for every $x$ in $D$ (definition of an existential statement). Since $Q(x)$ is false exactly when $\sim Q(x)$ is true, this is the same as $\sim Q(x)$ being true for every $x$ in $D$, that is, $\forall x \in D,\ \sim Q(x)$ being true (definition of a universal statement).
+**Proof.** $\sim(\exists x \in D \text{ such that } Q(x))$ is true exactly when the existential statement is false (definition of negation), which happens exactly when $Q(x)$ is false for every $x$ in $D$ (definition of an existential statement). Since $Q(x)$ is false exactly when $\sim Q(x)$ is true, this is the same as $\sim Q(x)$ being true for every $x$ in $D$, that is, $`\forall x \in D,\ \sim Q(x)`$ being true (definition of a universal statement).
 
 Thus **the negation of an existential statement ("some are") is logically equivalent to a universal statement ("none are" or "all are not").** The two theorems, with informal readings, are summarized below.
 
 | Statement | Negation | Informal Reading of the Negation |
 |:-----|:-----|:-----|
-| $\forall x \in D,\ Q(x)$ | $\exists x \in D \text{ such that } \sim Q(x)$ | Not all $x$ satisfy $Q(x)$. That is, there exists an $x$ for which $Q(x)$ does not hold. |
-| $\exists x \in D \text{ such that } Q(x)$ | $\forall x \in D,\ \sim Q(x)$ | There does not exist an $x$ satisfying $Q(x)$. That is, for all $x$, $Q(x)$ does not hold. |
+| $`\forall x \in D,\ Q(x)`$ | $\exists x \in D \text{ such that } \sim Q(x)$ | Not all $x$ satisfy $Q(x)$. That is, there exists an $x$ for which $Q(x)$ does not hold. |
+| $\exists x \in D \text{ such that } Q(x)$ | $`\forall x \in D,\ \sim Q(x)`$ | There does not exist an $x$ satisfying $Q(x)$. That is, for all $x$, $Q(x)$ does not hold. |
 
 *Table 8. Rules for negating universal and existential statements*
 
@@ -477,8 +489,8 @@ Thus **the negation of an existential statement ("some are") is logically equiva
 
 **Solution.**
 
-- (a) Applying the rule for the negation of a universal statement gives "$\exists$ a prime $p$ such that $p$ is not odd." Since the prime 2 is not odd, the negation is true and the original statement is false.
-- (b) Applying the rule for the negation of an existential statement gives "$\forall$ triangles $T$, the sum of the angles of $T$ does not equal $200^\circ$." Since the angles of a triangle always sum to $180^\circ$, the negation is true.
+- (a) Applying the rule for the negation of a universal statement gives "$`\exists`$ a prime $p$ such that $p$ is not odd." Since the prime 2 is not odd, the negation is true and the original statement is false.
+- (b) Applying the rule for the negation of an existential statement gives "$`\forall`$ triangles $T$, the sum of the angles of $T$ does not equal $200^\circ$." Since the angles of a triangle always sum to $180^\circ$, the negation is true.
 
 Special care is needed to avoid mistakes when writing negations of statements that are given informally. One way to avoid error is to rewrite the statement formally first and take the negation using the formal rule.
 
@@ -489,8 +501,8 @@ Special care is needed to avoid mistakes when writing negations of statements th
 
 **Solution.**
 
-- (a) The formal version is "$\forall$ politicians $x$, $x$ is not honest." The formal negation is "$\exists$ a politician $x$ such that $x$ is honest", and the informal negation is "Some politicians are honest."
-- (b) The original English sentence, The number 1,357 is not divisible by any integer between 1 and 37, has a trailing quantifier. Written formally it becomes "$\forall$ integer $n$ between 1 and 37, 1,357 is not divisible by $n$." The formal negation is "$\exists$ an integer $n$ between 1 and 37 such that 1,357 is divisible by $n$", and the informal negation is "The number 1,357 is divisible by some integer between 1 and 37."
+- (a) The formal version is "$`\forall`$ politicians $x$, $x$ is not honest." The formal negation is "$`\exists`$ a politician $x$ such that $x$ is honest", and the informal negation is "Some politicians are honest."
+- (b) The original English sentence, The number 1,357 is not divisible by any integer between 1 and 37, has a trailing quantifier. Written formally it becomes "$`\forall`$ integer $n$ between 1 and 37, 1,357 is not divisible by $n$." The formal negation is "$`\exists`$ an integer $n$ between 1 and 37 such that 1,357 is divisible by $n$", and the informal negation is "The number 1,357 is divisible by some integer between 1 and 37."
 
 Which side is true in (b) can be checked by computation. Since $1357 = 23 \times 59$ and 23 is an integer between 1 and 37, the negation is true and the original statement is false.
 
@@ -512,11 +524,11 @@ Another important way to avoid error when taking negations, whether the statemen
 
 Negations of universal conditional statements are of special importance in mathematics. Their form is derived from facts already established, as follows.
 
-1. By the rule for negating a universal statement (Theorem 3.2.1), $\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } \sim(P(x) \to Q(x))$.
+1. By the rule for negating a universal statement (Theorem 3.2.1), $`\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } \sim(P(x) \to Q(x))`$.
 2. As shown in Chapter 2, the negation of an if-then statement is logically equivalent to an and statement: $\sim(P(x) \to Q(x)) \equiv P(x) \wedge \sim Q(x)$.
-3. Substituting the equivalence in step 2 into step 1 gives $\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } (P(x) \wedge \sim Q(x))$.
+3. Substituting the equivalence in step 2 into step 1 gives $`\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } (P(x) \wedge \sim Q(x))`$.
 
-> **Key Point:** **Negation of a Universal Conditional Statement.** $\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)$. That is, the negation of a universal conditional statement is an existential statement saying that there is at least one $x$ for which the hypothesis is true and the conclusion is false.
+> **Key Point:** **Negation of a Universal Conditional Statement.** $`\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)`$. That is, the negation of a universal conditional statement is an existential statement saying that there is at least one $x$ for which the hypothesis is true and the conclusion is false.
 
 **Example 3.2.4 (Negating Universal Conditional Statements).** Write a formal negation for statement (a) and an informal negation for statement (b).
 
@@ -525,32 +537,38 @@ Negations of universal conditional statements are of special importance in mathe
 
 **Solution.**
 
-- (a) "$\exists$ a person $p$ such that $p$ is blond and $p$ does not have blue eyes."
+- (a) "$`\exists`$ a person $p$ such that $p$ is blond and $p$ does not have blue eyes."
 - (b) Statement (b) is an implicitly quantified universal conditional statement about all computer programs. Its negation is "There is at least one computer program that has more than 100,000 lines and does not contain a bug."
 
-> **Caution:** The negation of a universal conditional statement is not a conditional statement. Writing it as "$\exists x$ such that $P(x) \to \sim Q(x)$" or as "$\forall x,\ P(x) \to \sim Q(x)$" is wrong. The negation is an existential statement that joins the hypothesis and the negated conclusion with "and".
+> **Caution:** The negation of a universal conditional statement is not a conditional statement. Writing it as "$`\exists x`$ such that $P(x) \to \sim Q(x)$" or as "$`\forall x,\ P(x) \to \sim Q(x)`$" is wrong. The negation is an existential statement that joins the hypothesis and the negated conclusion with "and".
 
 ### 2.3 Quantifiers, Conjunction, and Disjunction
 
-The negation of a $\forall$ statement is a $\exists$ statement, and the negation of a $\exists$ statement is a $\forall$ statement. These facts are analogous to De Morgan's laws, which state that the negation of a conjunction ($\wedge$) is a disjunction ($\vee$) and that the negation of a disjunction is a conjunction. The similarity is not accidental: universal statements are generalizations of and statements, and existential statements are generalizations of or statements.
+The negation of a $\forall$ statement is a $\exists$ statement, and the negation of a $\exists$ statement is a $\forall$ statement. These facts are analogous to De Morgan's laws, which state that the negation of a conjunction ($`\wedge`$) is a disjunction ($`\vee`$) and that the negation of a disjunction is a conjunction. The similarity is not accidental: universal statements are generalizations of and statements, and existential statements are generalizations of or statements.
 
 If $Q(x)$ is a predicate and the domain $D$ of $x$ is the finite set $\lbrace x_1, x_2, \ldots, x_n \rbrace$, then the following hold.
 
-$$\forall x \in D,\ Q(x) \equiv Q(x_1) \wedge Q(x_2) \wedge \cdots \wedge Q(x_n)$$
+```math
+\forall x \in D,\ Q(x) \equiv Q(x_1) \wedge Q(x_2) \wedge \cdots \wedge Q(x_n)
+```
 
-$$\exists x \in D \text{ such that } Q(x) \equiv Q(x_1) \vee Q(x_2) \vee \cdots \vee Q(x_n)$$
+```math
+\exists x \in D \text{ such that } Q(x) \equiv Q(x_1) \vee Q(x_2) \vee \cdots \vee Q(x_n)
+```
 
-For example, let $Q(x)$ be "$x \cdot x = x$" and $D = \lbrace 0, 1 \rbrace$. Then $\forall x \in D,\ Q(x)$ can be rewritten as "$\forall$ binary digits $x$, $x \cdot x = x$", which is equivalent to "$0 \cdot 0 = 0$ and $1 \cdot 1 = 1$", written in symbols as $Q(0) \wedge Q(1)$. Both equations hold, so the statement is true.
+For example, let $Q(x)$ be "$`x \cdot x = x`$" and $D = \lbrace 0, 1 \rbrace$. Then $`\forall x \in D,\ Q(x)`$ can be rewritten as "$`\forall`$ binary digits $x$, $x \cdot x = x$", which is equivalent to "$`0 \cdot 0 = 0`$ and $1 \cdot 1 = 1$", written in symbols as $Q(0) \wedge Q(1)$. Both equations hold, so the statement is true.
 
-Similarly, let $Q(x)$ be "$x + x = x$" and $D = \lbrace 0, 1 \rbrace$. Then $\exists x \in D \text{ such that } Q(x)$ can be rewritten as "$\exists$ a binary digit $x$ such that $x + x = x$", which is equivalent to "$0 + 0 = 0$ or $1 + 1 = 1$", written in symbols as $Q(0) \vee Q(1)$. Although $1 + 1 = 2 \neq 1$, the equation $0 + 0 = 0$ holds, so the disjunction is true and the existential statement is true.
+Similarly, let $Q(x)$ be "$`x + x = x`$" and $D = \lbrace 0, 1 \rbrace$. Then $\exists x \in D \text{ such that } Q(x)$ can be rewritten as "$`\exists`$ a binary digit $x$ such that $x + x = x$", which is equivalent to "$`0 + 0 = 0`$ or $1 + 1 = 1$", written in symbols as $Q(0) \vee Q(1)$. Although $1 + 1 = 2 \neq 1$, the equation $0 + 0 = 0$ holds, so the disjunction is true and the existential statement is true.
 
 When the domain is finite, this correspondence recovers Theorem 3.2.1 from De Morgan's laws.
 
-$$\sim(\forall x \in D,\ Q(x)) \equiv \sim(Q(x_1) \wedge \cdots \wedge Q(x_n)) \equiv \sim Q(x_1) \vee \cdots \vee \sim Q(x_n) \equiv \exists x \in D \text{ such that } \sim Q(x)$$
+```math
+\sim(\forall x \in D,\ Q(x)) \equiv \sim(Q(x_1) \wedge \cdots \wedge Q(x_n)) \equiv \sim Q(x_1) \vee \cdots \vee \sim Q(x_n) \equiv \exists x \in D \text{ such that } \sim Q(x)
+```
 
 The first equivalence comes from the correspondence above, the second from De Morgan's laws, and the third from the correspondence between existential statements and disjunctions.
 
-> **Caution:** This correspondence shows that $\forall$ distributes over $\wedge$ and $\exists$ distributes over $\vee$: $\forall x\,(P(x) \wedge Q(x)) \equiv (\forall x\, P(x)) \wedge (\forall x\, Q(x))$ and $\exists x\,(P(x) \vee Q(x)) \equiv (\exists x\, P(x)) \vee (\exists x\, Q(x))$. The mixed combinations, however, are not equivalent. With domain $\mathbf{Z}$, $P(x)$ "$x$ is even", and $Q(x)$ "$x$ is odd", the statement $\exists x\,(P(x) \wedge Q(x))$ is false, but $(\exists x\, P(x)) \wedge (\exists x\, Q(x))$ is true. Also, $\forall x\,(P(x) \vee Q(x))$ is true, but $(\forall x\, P(x)) \vee (\forall x\, Q(x))$ is false.
+> **Caution:** This correspondence shows that $\forall$ distributes over $\wedge$ and $\exists$ distributes over $\vee$: $`\forall x\,(P(x) \wedge Q(x)) \equiv (\forall x\, P(x)) \wedge (\forall x\, Q(x))`$ and $`\exists x\,(P(x) \vee Q(x)) \equiv (\exists x\, P(x)) \vee (\exists x\, Q(x))`$. The mixed combinations, however, are not equivalent. With domain $\mathbf{Z}$, $P(x)$ "$`x`$ is even", and $Q(x)$ "$`x`$ is odd", the statement $`\exists x\,(P(x) \wedge Q(x))`$ is false, but $`(\exists x\, P(x)) \wedge (\exists x\, Q(x))`$ is true. Also, $`\forall x\,(P(x) \vee Q(x))`$ is true, but $`(\forall x\, P(x)) \vee (\forall x\, Q(x))`$ is false.
 
 ### 2.4 Vacuous Truth of Universal Statements
 
@@ -562,13 +580,13 @@ Consider a bowl sitting on a table, next to which is a pile of five blue and fiv
 
 Now consider the case in which no balls at all are placed in the bowl, as in Figure 2 (b). Is the statement "All the balls in the bowl are blue" true or false? The statement is false if, and only if, its negation is true. Its negation is "There exists a ball in the bowl that is not blue." The only way this negation can be true is for there actually to be a nonblue ball in the bowl, and there is none. Hence the negation is false, and the statement is true "by default".
 
-Let $D$ be the set of all ten balls, $P(x)$ "$x$ is in the bowl", and $Q(x)$ "$x$ is blue". Then the statement is $\forall x \in D,\ P(x) \to Q(x)$. When the bowl is empty, $P(x)$ is false for every $x$, so each conditional $P(x) \to Q(x)$ is true regardless of $Q(x)$, and hence the universal statement is true.
+Let $D$ be the set of all ten balls, $P(x)$ "$`x`$ is in the bowl", and $Q(x)$ "$`x`$ is blue". Then the statement is $`\forall x \in D,\ P(x) \to Q(x)`$. When the bowl is empty, $P(x)$ is false for every $x$, so each conditional $P(x) \to Q(x)$ is true regardless of $Q(x)$, and hence the universal statement is true.
 
 > **Definition:** A statement of the form $\forall x \in D$, if $P(x)$ then $Q(x)$ is called **vacuously true** or **true by default** if, and only if, $P(x)$ is false for every $x$ in $D$. In that case, the conditional $P(x) \to Q(x)$ is true for each $x$ regardless of the truth value of $Q(x)$.
 
 > **Note:** In ordinary language, the words "in general" mean that something is usually, but not always, the case (in general I take the bus, but today I walked). In mathematics, the words "in general" signal that what follows is a generalization that always holds true.
 
-By the same principle, if the domain is the empty set $\emptyset$, then $\forall x \in \emptyset,\ Q(x)$ is always true, because there can be no counterexample, and $\exists x \in \emptyset \text{ such that } Q(x)$ is always false, because no element can satisfy the condition. The Python built-in functions `all` and `any` follow the same convention: `all` returns `True` when the given iterable is empty, and `any` returns `False` when it is empty [1].
+By the same principle, if the domain is the empty set $\emptyset$, then $`\forall x \in \emptyset,\ Q(x)`$ is always true, because there can be no counterexample, and $\exists x \in \emptyset \text{ such that } Q(x)$ is always false, because no element can satisfy the condition. The Python built-in functions `all` and `any` follow the same convention: `all` returns `True` when the given iterable is empty, and `any` returns `False` when it is empty [1].
 
 ```python
 balls_in_bowl = []                                       # the bowl is empty
@@ -595,7 +613,7 @@ As seen in Chapter 2, a conditional statement has a contrapositive, a converse, 
 
 **Example 3.2.5 (Contrapositive, Converse, and Inverse of a Universal Conditional Statement).** Write a formal and an informal contrapositive, converse, and inverse for "If a real number is greater than 2, then its square is greater than 4."
 
-**Solution.** The formal version of the statement is $\forall x \in \mathbf{R}$, if $x > 2$ then $x^2 > 4$. Using the equivalence of "$x \not> a$" and "$x \leq a$" for all real numbers $x$ and $a$ gives the following.
+**Solution.** The formal version of the statement is $\forall x \in \mathbf{R}$, if $x > 2$ then $x^2 > 4$. Using the equivalence of "$`x \not> a`$" and "$`x \leq a`$" for all real numbers $x$ and $a$ gives the following.
 
 | Statement | Formal Version | Informal Version | Truth Value and Reason |
 |:-----|:-----|:-----|:-----|
@@ -610,15 +628,21 @@ Chapter 2 showed that a conditional statement is logically equivalent to its con
 
 **Equivalence with the contrapositive.** Let $P(x)$ and $Q(x)$ be any predicates and $D$ the domain of $x$. Since $p \to q \equiv \sim q \to \sim p$ (Chapter 2), any particular $x$ in $D$ that makes "if $P(x)$ then $Q(x)$" true also makes "if $\sim Q(x)$ then $\sim P(x)$" true, and conversely. Hence "if $P(x)$ then $Q(x)$" is true for all $x$ in $D$ if, and only if, "if $\sim Q(x)$ then $\sim P(x)$" is true for all $x$ in $D$. That is, a universal conditional statement is logically equivalent to its contrapositive.
 
-$$\forall x \in D,\ P(x) \to Q(x) \equiv \forall x \in D,\ \sim Q(x) \to \sim P(x)$$
+```math
+\forall x \in D,\ P(x) \to Q(x) \equiv \forall x \in D,\ \sim Q(x) \to \sim P(x)
+```
 
 **Nonequivalence with the converse and inverse.** In Table 9, the original statement is true but its converse is false. Since a universal conditional statement can have a different truth value from its converse, it is not logically equivalent to its converse. In the same table the inverse is also false, so a universal conditional statement is not logically equivalent to its inverse either.
 
-$$\forall x \in D,\ P(x) \to Q(x) \not\equiv \forall x \in D,\ Q(x) \to P(x)$$
+```math
+\forall x \in D,\ P(x) \to Q(x) \not\equiv \forall x \in D,\ Q(x) \to P(x)
+```
 
-$$\forall x \in D,\ P(x) \to Q(x) \not\equiv \forall x \in D,\ \sim P(x) \to \sim Q(x)$$
+```math
+\forall x \in D,\ P(x) \to Q(x) \not\equiv \forall x \in D,\ \sim P(x) \to \sim Q(x)
+```
 
-> **Note:** The contrapositive of the converse $\forall x,\ Q(x) \to P(x)$ is $\forall x,\ \sim P(x) \to \sim Q(x)$, which is the inverse. Hence the converse and the inverse are logically equivalent to each other, and in Table 9 they indeed have the same truth value.
+> **Note:** The contrapositive of the converse $`\forall x,\ Q(x) \to P(x)`$ is $`\forall x,\ \sim P(x) \to \sim Q(x)`$, which is the inverse. Hence the converse and the inverse are logically equivalent to each other, and in Table 9 they indeed have the same truth value.
 
 ### 2.6 Necessary and Sufficient Conditions, Only If
 
@@ -626,17 +650,17 @@ The definitions of necessary, sufficient, and "only if" can also be extended to 
 
 > **Definition:**
 >
-> - "$\forall x$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$\forall x$, if $r(x)$ then $s(x)$".
-> - "$\forall x$, $r(x)$ is a **necessary condition** for $s(x)$" means "$\forall x$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$\forall x$, if $s(x)$ then $r(x)$".
-> - "$\forall x$, $r(x)$ **only if** $s(x)$" means "$\forall x$, if $\sim s(x)$ then $\sim r(x)$", which by the contrapositive is equivalent to "$\forall x$, if $r(x)$ then $s(x)$".
+> - "$`\forall x`$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$`\forall x`$, if $r(x)$ then $s(x)$".
+> - "$`\forall x`$, $r(x)$ is a **necessary condition** for $s(x)$" means "$`\forall x`$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $s(x)$ then $r(x)$".
+> - "$`\forall x`$, $r(x)$ **only if** $s(x)$" means "$`\forall x`$, if $\sim s(x)$ then $\sim r(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $r(x)$ then $s(x)$".
 
 The three expressions are summarized as universal conditional statements below.
 
 | Expression | Universal Conditional Statement | Equivalent Form by the Contrapositive |
 |:-----|:-----|:-----|
-| $r(x)$ is a sufficient condition for $s(x)$ | $\forall x,\ r(x) \to s(x)$ | $\forall x,\ \sim s(x) \to \sim r(x)$ |
-| $r(x)$ is a necessary condition for $s(x)$ | $\forall x,\ s(x) \to r(x)$ | $\forall x,\ \sim r(x) \to \sim s(x)$ |
-| $r(x)$ only if $s(x)$ | $\forall x,\ r(x) \to s(x)$ | $\forall x,\ \sim s(x) \to \sim r(x)$ |
+| $r(x)$ is a sufficient condition for $s(x)$ | $`\forall x,\ r(x) \to s(x)`$ | $`\forall x,\ \sim s(x) \to \sim r(x)`$ |
+| $r(x)$ is a necessary condition for $s(x)$ | $`\forall x,\ s(x) \to r(x)`$ | $`\forall x,\ \sim r(x) \to \sim s(x)`$ |
+| $r(x)$ only if $s(x)$ | $`\forall x,\ r(x) \to s(x)`$ | $`\forall x,\ \sim s(x) \to \sim r(x)`$ |
 
 *Table 10. Sufficient condition, necessary condition, and only if written as universal conditional statements*
 
@@ -647,12 +671,12 @@ The three expressions are summarized as universal conditional statements below.
 
 **Solution.**
 
-- (a) A formal version is "$\forall x$, if $x$ is a square, then $x$ is a rectangle." With implicit universal quantification it is "If a figure is a square, then it is a rectangle."
-- (b) A formal version is "$\forall$ person $x$, if $x$ is younger than 35, then $x$ cannot be president of the United States." By the equivalence between a statement and its contrapositive, it can also be written "$\forall$ person $x$, if $x$ is president of the United States, then $x$ is at least 35 years old."
+- (a) A formal version is "$`\forall x`$, if $x$ is a square, then $x$ is a rectangle." With implicit universal quantification it is "If a figure is a square, then it is a rectangle."
+- (b) A formal version is "$`\forall`$ person $x$, if $x$ is younger than 35, then $x$ cannot be president of the United States." By the equivalence between a statement and its contrapositive, it can also be written "$`\forall`$ person $x$, if $x$ is president of the United States, then $x$ is at least 35 years old."
 
 **Example 3.2.7 (Only If).** Rewrite "A product of two numbers is 0 only if one of the numbers is 0" as a universal conditional statement.
 
-**Solution.** By definition, "$r$ only if $s$" means "if not $s$, then not $r$", so informally the answer is "If it is not the case that one of two numbers is 0, then the product of the numbers is not 0." By De Morgan's laws, "it is not the case that one of two numbers is 0" is the same as "neither of the two numbers is 0", so the sentence can be written "If neither of two numbers is 0, then the product of the numbers is not 0." By the equivalence between a statement and its contrapositive, it can also be written "If a product of two numbers is 0, then one of the numbers is 0." Formally, $\forall a, b \in \mathbf{R}$, if $ab = 0$ then $a = 0$ or $b = 0$.
+**Solution.** By definition, "$`r`$ only if $s$" means "if not $s$, then not $r$", so informally the answer is "If it is not the case that one of two numbers is 0, then the product of the numbers is not 0." By De Morgan's laws, "it is not the case that one of two numbers is 0" is the same as "neither of the two numbers is 0", so the sentence can be written "If neither of two numbers is 0, then the product of the numbers is not 0." By the equivalence between a statement and its contrapositive, it can also be written "If a product of two numbers is 0, then one of the numbers is 0." Formally, $\forall a, b \in \mathbf{R}$, if $ab = 0$ then $a = 0$ or $b = 0$.
 
 ---
 
@@ -675,7 +699,9 @@ Because many important technical statements contain both $\exists$ and $\forall$
 
 For instance, consider a statement of the following form.
 
-$$\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)$$
+```math
+\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)
+```
 
 To show that such a statement is true, one must be able to meet the following challenge.
 
@@ -686,7 +712,9 @@ To show that such a statement is true, one must be able to meet the following ch
 
 Now consider a statement of the following form, in which $\exists$ comes before $\forall$.
 
-$$\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)$$
+```math
+\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)
+```
 
 To show that such a statement is true, the prover must name one single element $x$ of $D$ with the following property.
 
@@ -751,7 +779,7 @@ Show that the following statement is true in this world: "For every triangle $x$
 
 *Table 13. Check of a triangle to the right of all the circles*
 
-> **Key Point:** **Interpreting statements with two different quantifiers.** To establish the truth of $\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)$, let an arbitrary element $x$ of $D$ be chosen by someone else, and then find a $y$ in $E$ that works for that particular $x$. To establish the truth of $\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)$, find one particular $x$ in $D$ that works for every $y$ in $E$ that anyone might choose.
+> **Key Point:** **Interpreting statements with two different quantifiers.** To establish the truth of $`\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)`$, let an arbitrary element $x$ of $D$ be chosen by someone else, and then find a $y$ in $E$ that works for that particular $x$. To establish the truth of $`\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)`$, find one particular $x$ in $D$ that works for every $y$ in $E$ that anyone might choose.
 
 ### 3.2 Interpreting Statements with Several Quantifiers
 
@@ -817,11 +845,13 @@ The reason that $0 < x/2 < x$ follows from the properties of the real numbers.
 2. Adding $x$ to both sides of $0 < x$ gives $x < 2x$. Hence $0 < x < 2x$.
 3. Multiply each part of this inequality by the positive number $\frac{1}{2}$. Multiplying by a positive number does not change the direction of an inequality, so $0 < x/2 < x$.
 
-Notice that this statement is the negation of "$\exists$ a positive real number $m$ such that $\forall$ positive real number $n$, $m \leq n$" (there is a smallest positive real number). Applying the negation rule of Section 3.5 gives "$\forall$ positive real number $m$, $\exists$ a positive real number $n$ such that $m > n$", which differs from the answer above only in the names of the variables.
+Notice that this statement is the negation of "$`\exists`$ a positive real number $m$ such that $\forall$ positive real number $n$, $m \leq n$" (there is a smallest positive real number). Applying the negation rule of Section 3.5 gives "$`\forall`$ positive real number $m$, $\exists$ a positive real number $n$ such that $m > n$", which differs from the answer above only in the names of the variables.
 
 **Example 3.3.7 (The Definition of Limit of a Sequence).** The definition of the limit of a sequence, studied in calculus, uses both quantifiers $\forall$ and $\exists$ and also if-then. The statement that the limit of the sequence $a_n$ as $n$ goes to infinity equals $L$ is written $\lim_{n \to \infty} a_n = L$, and it means that the values of $a_n$ become **arbitrarily** close to $L$ as $n$ gets larger and larger without bound. More precisely, given any positive number $\varepsilon$, an integer $N$ can be found such that whenever $n$ is larger than $N$, the number $a_n$ sits between $L - \varepsilon$ and $L + \varepsilon$ on the number line. Symbolically:
 
-$$\forall \varepsilon > 0,\ \exists \text{ an integer } N \text{ such that } \forall \text{ integer } n,\ n > N \to L - \varepsilon < a_n < L + \varepsilon$$
+```math
+\forall \varepsilon > 0,\ \exists \text{ an integer } N \text{ such that } \forall \text{ integer } n,\ n > N \to L - \varepsilon < a_n < L + \varepsilon
+```
 
 Because the definition nests three quantifiers and a conditional, it is often found difficult on first reading, and a concrete sequence helps. Let $a_n = 1 + (-1)^n \frac{1.6}{n}$, $L = 1$, and $\varepsilon = 0.25$. Then $\lvert a_n - 1 \rvert = \frac{1.6}{n}$, so $L - \varepsilon < a_n < L + \varepsilon$ is equivalent to $\frac{1.6}{n} < 0.25$, that is, $n > 6.4$. Hence with $N = 6$, every integer $n > 6$ puts $a_n$ inside the band (Figure 6). If $\varepsilon$ is reduced to $0.1$, the condition becomes $\frac{1.6}{n} < 0.1$, that is, $n > 16$, so $N = 16$ is needed.
 
@@ -829,7 +859,7 @@ Because the definition nests three quantifiers and a conditional, it is often fo
 
 *Figure 6. Terms of a sequence converging to 1 and a band of width ε, with every term after n > N inside the band*
 
-> **[Calculus]** Treating limits of sequences rigorously with this $\varepsilon$-$N$ definition is the starting point of calculus and analysis. Because $\forall \varepsilon$ comes before $\exists N$ in the definition, $N$ is chosen after $\varepsilon$ is given, and a different $N$ may be used for each $\varepsilon$. In the example above, reducing $\varepsilon$ from 0.25 to 0.1 increased the required $N$ from 6 to 16.
+> **[Calculus]** Treating limits of sequences rigorously with this $\varepsilon$-$`N`$ definition is the starting point of calculus and analysis. Because $\forall \varepsilon$ comes before $\exists N$ in the definition, $N$ is chosen after $\varepsilon$ is given, and a different $N$ may be used for each $\varepsilon$. In the example above, reducing $\varepsilon$ from 0.25 to 0.1 increased the required $N$ from 6 to 16.
 
 ### 3.4 Ambiguous Language
 
@@ -841,30 +871,34 @@ So it is with ambiguous language. Once the factory guide's sentence at the begin
 
 Statements with several quantifiers can be negated with the same rules used for simpler quantified statements. Recall the following two rules.
 
-$$\sim(\forall x \in D,\ P(x)) \equiv \exists x \in D \text{ such that } \sim P(x)$$
+```math
+\sim(\forall x \in D,\ P(x)) \equiv \exists x \in D \text{ such that } \sim P(x)
+```
 
-$$\sim(\exists x \in D \text{ such that } P(x)) \equiv \forall x \in D,\ \sim P(x)$$
+```math
+\sim(\exists x \in D \text{ such that } P(x)) \equiv \forall x \in D,\ \sim P(x)
+```
 
 Applying these rules from the outermost quantifier inward gives the following.
 
-1. $\sim(\forall x \in D,\ \exists y \in E \text{ such that } P(x, y))$
+1. $`\sim(\forall x \in D,\ \exists y \in E \text{ such that } P(x, y))`$
 2. $\equiv \exists x \in D \text{ such that } \sim(\exists y \in E \text{ such that } P(x, y))$ (rule for negating a universal statement)
-3. $\equiv \exists x \in D \text{ such that } \forall y \in E,\ \sim P(x, y)$ (rule for negating an existential statement)
+3. $`\equiv \exists x \in D \text{ such that } \forall y \in E,\ \sim P(x, y)`$ (rule for negating an existential statement)
 
 In the same way, the following is obtained.
 
-1. $\sim(\exists x \in D \text{ such that } \forall y \in E,\ P(x, y))$
-2. $\equiv \forall x \in D,\ \sim(\forall y \in E,\ P(x, y))$ (rule for negating an existential statement)
-3. $\equiv \forall x \in D,\ \exists y \in E \text{ such that } \sim P(x, y)$ (rule for negating a universal statement)
+1. $`\sim(\exists x \in D \text{ such that } \forall y \in E,\ P(x, y))`$
+2. $`\equiv \forall x \in D,\ \sim(\forall y \in E,\ P(x, y))`$ (rule for negating an existential statement)
+3. $`\equiv \forall x \in D,\ \exists y \in E \text{ such that } \sim P(x, y)`$ (rule for negating a universal statement)
 
 > **Key Point:** **Negations of statements with two different quantifiers.**
 >
-> - $\sim(\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)) \equiv \exists x \in D \text{ such that } \forall y \in E,\ \sim P(x, y)$
-> - $\sim(\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)) \equiv \forall x \in D,\ \exists y \in E \text{ such that } \sim P(x, y)$
+> - $`\sim(\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)) \equiv \exists x \in D \text{ such that } \forall y \in E,\ \sim P(x, y)`$
+> - $`\sim(\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)) \equiv \forall x \in D,\ \exists y \in E \text{ such that } \sim P(x, y)`$
 >
 > That is, each time the negation moves inside a quantifier, $\forall$ and $\exists$ are exchanged, the order of the quantifiers stays the same, and the negation finally attaches to the innermost predicate.
 
-When quantifiers of the same kind follow one another, applying the same rule twice gives $\sim(\forall x \in D,\ \forall y \in E,\ P(x, y)) \equiv \exists x \in D \text{ such that } \exists y \in E \text{ such that } \sim P(x, y)$ and $\sim(\exists x \in D \text{ such that } \exists y \in E \text{ such that } P(x, y)) \equiv \forall x \in D,\ \forall y \in E,\ \sim P(x, y)$.
+When quantifiers of the same kind follow one another, applying the same rule twice gives $`\sim(\forall x \in D,\ \forall y \in E,\ P(x, y)) \equiv \exists x \in D \text{ such that } \exists y \in E \text{ such that } \sim P(x, y)`$ and $`\sim(\exists x \in D \text{ such that } \exists y \in E \text{ such that } P(x, y)) \equiv \forall x \in D,\ \forall y \in E,\ \sim P(x, y)`$.
 
 **Example 3.3.8 (Negating Statements in a Tarski World).** Refer again to the Tarski world of Figure 4. Write a negation for each of the following statements, and determine which is true, the given statement or its negation.
 
@@ -873,8 +907,8 @@ When quantifiers of the same kind follow one another, applying the same rule twi
 
 **Solution.**
 
-- (a) The first version of the negation is "$\exists$ a square $x$ such that $\sim$($\exists$ a circle $y$ such that $x$ and $y$ have the same color)", and the final version is "$\exists$ a square $x$ such that $\forall$ circle $y$, $x$ and $y$ do not have the same color." The negation is true. Square $e$ is black, and the circles $a$, $b$, and $c$ are blue, gray, and blue, so no circle is black. That is, there is a square, $e$, that does not have the same color as any circle.
-- (b) The given statement is "$\exists$ a triangle $x$ such that $\forall$ square $y$, $x$ is to the right of $y$." The first version of the negation is "$\forall$ triangle $x$, $\sim$($\forall$ square $y$, $x$ is to the right of $y$)", and the final version is "$\forall$ triangle $x$, $\exists$ a square $y$ such that $x$ is not to the right of $y$." The negation is true. The triangles $d$, $f$, and $i$ are in columns 4, 3, and 4, so none of them is to the right of square $g$ or square $j$, which are in column 5.
+- (a) The first version of the negation is "$`\exists`$ a square $x$ such that $\sim$($\exists$ a circle $y$ such that $x$ and $y$ have the same color)", and the final version is "$`\exists`$ a square $x$ such that $\forall$ circle $y$, $x$ and $y$ do not have the same color." The negation is true. Square $e$ is black, and the circles $a$, $b$, and $c$ are blue, gray, and blue, so no circle is black. That is, there is a square, $e$, that does not have the same color as any circle.
+- (b) The given statement is "$`\exists`$ a triangle $x$ such that $\forall$ square $y$, $x$ is to the right of $y$." The first version of the negation is "$`\forall`$ triangle $x$, $\sim$($\forall$ square $y$, $x$ is to the right of $`y`$)", and the final version is "$`\forall`$ triangle $x$, $\exists$ a square $y$ such that $x$ is not to the right of $y$." The negation is true. The triangles $d$, $f$, and $i$ are in columns 4, 3, and 4, so none of them is to the right of square $g$ or square $j$, which are in column 5.
 
 ### 3.6 Order of Quantifiers
 
@@ -887,9 +921,9 @@ Only the order of the quantifiers differs, yet the meanings are far apart. The f
 
 > **Key Point:** In a statement containing both $\forall$ and $\exists$, changing the order of the quantifiers can significantly change the meaning of the statement.
 
-When two adjacent quantifiers are **of the same type**, however, they may be interchanged without changing the meaning. For example, the commutative property of addition of real numbers, "$\forall$ real number $x$, $\forall$ real number $y$, $x + y = y + x$", means the same as "$\forall$ real number $y$, $\forall$ real number $x$, $x + y = y + x$". Thus the property can be expressed a little less formally as "$\forall$ real numbers $x$ and $y$, $x + y = y + x$".
+When two adjacent quantifiers are **of the same type**, however, they may be interchanged without changing the meaning. For example, the commutative property of addition of real numbers, "$`\forall`$ real number $x$, $\forall$ real number $y$, $x + y = y + x$", means the same as "$`\forall`$ real number $y$, $\forall$ real number $x$, $x + y = y + x$". Thus the property can be expressed a little less formally as "$`\forall`$ real numbers $x$ and $y$, $x + y = y + x$".
 
-> **Note:** There is a one-way implication between the two orders. If $\exists x\ \forall y,\ P(x, y)$ is true, then the one $x$ that makes it true works for every $y$, so $\forall y\ \exists x,\ P(x, y)$ is also true. The converse does not hold in general. In the love example above, if the second statement is true then the first is also true, but the truth of the first does not make the second true.
+> **Note:** There is a one-way implication between the two orders. If $`\exists x\ \forall y,\ P(x, y)`$ is true, then the one $x$ that makes it true works for every $y$, so $`\forall y\ \exists x,\ P(x, y)`$ is also true. The converse does not hold in general. In the love example above, if the second statement is true then the first is also true, but the truth of the first does not make the second true.
 
 **Example 3.3.9 (Quantifier Order in a Tarski World).** In the Tarski world of Figure 4, determine whether the following two statements have the same truth value.
 
@@ -906,12 +940,12 @@ Statement (b) claims that one particular triangle differs in color from every sq
 
 In some areas of computer science, logical statements are expressed in purely symbolic notation. The notation describes all properties of variables with predicates and omits the words such that in existential statements. When figuring out the meaning of a formal statement, it helps to think the words such that each time they are appropriate. The formalism depends on the following facts.
 
-- "$\forall x$ in $D$, $P(x)$" can be written as $\forall x\,(x \in D \to P(x))$.
-- "$\exists x$ in $D$ such that $P(x)$" can be written as $\exists x\,(x \in D \wedge P(x))$.
+- "$`\forall x`$ in $D$, $P(x)$" can be written as $`\forall x\,(x \in D \to P(x))`$.
+- "$`\exists x`$ in $D$ such that $P(x)$" can be written as $`\exists x\,(x \in D \wedge P(x))`$.
 
-> **Caution:** $\forall$ must be paired with $\to$, and $\exists$ with $\wedge$. The formula $\forall x\,(\text{Circle}(x) \wedge \text{Above}(x, f))$ says "every object is a circle and is above $f$", which is not what is intended. The formula $\exists x\,(\text{Square}(x) \to \text{Black}(x))$ is true as soon as there is one object that is not a square, because the conditional with a false hypothesis is true for that object, so it is true even when there is no black square.
+> **Caution:** $\forall$ must be paired with $\to$, and $\exists$ with $\wedge$. The formula $`\forall x\,(\text{Circle}(x) \wedge \text{Above}(x, f))`$ says "every object is a circle and is above $f$", which is not what is intended. The formula $`\exists x\,(\text{Square}(x) \to \text{Black}(x))`$ is true as soon as there is one object that is not a square, because the conditional with a false hypothesis is true for that object, so it is true even when there is no black square.
 
-**Example 3.3.10 (Formalizing Statements in a Tarski World).** Consider once more the Tarski world of Figure 4. Let $\text{Triangle}(x)$, $\text{Circle}(x)$, and $\text{Square}(x)$ mean "$x$ is a triangle", "$x$ is a circle", and "$x$ is a square"; let $\text{Blue}(x)$, $\text{Gray}(x)$, and $\text{Black}(x)$ mean "$x$ is blue", "$x$ is gray", and "$x$ is black". Let $\text{RightOf}(x, y)$, $\text{Above}(x, y)$, and $\text{SameColor}(x, y)$ mean "$x$ is to the right of $y$", "$x$ is above $y$", and "$x$ has the same color as $y$", and use the notation $x = y$ for the predicate "$x$ is equal to $y$". Let the common domain $D$ of all variables be the set of all objects in the Tarski world. Use formal logical notation to write each of the following statements, and write a formal negation for each statement.
+**Example 3.3.10 (Formalizing Statements in a Tarski World).** Consider once more the Tarski world of Figure 4. Let $\text{Triangle}(x)$, $\text{Circle}(x)$, and $\text{Square}(x)$ mean "$`x`$ is a triangle", "$`x`$ is a circle", and "$`x`$ is a square"; let $\text{Blue}(x)$, $\text{Gray}(x)$, and $\text{Black}(x)$ mean "$`x`$ is blue", "$`x`$ is gray", and "$`x`$ is black". Let $\text{RightOf}(x, y)$, $\text{Above}(x, y)$, and $\text{SameColor}(x, y)$ mean "$`x`$ is to the right of $y$", "$`x`$ is above $y$", and "$`x`$ has the same color as $y$", and use the notation $x = y$ for the predicate "$`x`$ is equal to $y$". Let the common domain $D$ of all variables be the set of all objects in the Tarski world. Use formal logical notation to write each of the following statements, and write a formal negation for each statement.
 
 - (a) For every circle $x$, $x$ is above $f$.
 - (b) There is a square $x$ such that $x$ is black.
@@ -920,35 +954,35 @@ In some areas of computer science, logical statements are expressed in purely sy
 
 **Solution.**
 
-(a) The statement is $\forall x\,(\text{Circle}(x) \to \text{Above}(x, f))$. Its negation is derived as follows.
+(a) The statement is $`\forall x\,(\text{Circle}(x) \to \text{Above}(x, f))`$. Its negation is derived as follows.
 
-1. $\sim(\forall x\,(\text{Circle}(x) \to \text{Above}(x, f)))$
-2. $\equiv \exists x\, \sim(\text{Circle}(x) \to \text{Above}(x, f))$ (by the law for negating a $\forall$ statement)
-3. $\equiv \exists x\,(\text{Circle}(x) \wedge \sim\text{Above}(x, f))$ (by the law for negating an if-then statement)
+1. $`\sim(\forall x\,(\text{Circle}(x) \to \text{Above}(x, f)))`$
+2. $`\equiv \exists x\, \sim(\text{Circle}(x) \to \text{Above}(x, f))`$ (by the law for negating a $\forall$ statement)
+3. $`\equiv \exists x\,(\text{Circle}(x) \wedge \sim\text{Above}(x, f))`$ (by the law for negating an if-then statement)
 
-(b) The statement is $\exists x\,(\text{Square}(x) \wedge \text{Black}(x))$. Its negation is derived as follows.
+(b) The statement is $`\exists x\,(\text{Square}(x) \wedge \text{Black}(x))`$. Its negation is derived as follows.
 
-1. $\sim(\exists x\,(\text{Square}(x) \wedge \text{Black}(x)))$
-2. $\equiv \forall x\, \sim(\text{Square}(x) \wedge \text{Black}(x))$ (by the law for negating a $\exists$ statement)
-3. $\equiv \forall x\,(\sim\text{Square}(x) \vee \sim\text{Black}(x))$ (by De Morgan's law)
+1. $`\sim(\exists x\,(\text{Square}(x) \wedge \text{Black}(x)))`$
+2. $`\equiv \forall x\, \sim(\text{Square}(x) \wedge \text{Black}(x))`$ (by the law for negating a $\exists$ statement)
+3. $`\equiv \forall x\,(\sim\text{Square}(x) \vee \sim\text{Black}(x))`$ (by De Morgan's law)
 
-(c) The statement is $\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y)))$. Its negation is derived as follows.
+(c) The statement is $`\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y)))`$. Its negation is derived as follows.
 
-1. $\sim(\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y))))$
-2. $\equiv \exists x\, \sim(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y)))$ (by the law for negating a $\forall$ statement)
-3. $\equiv \exists x\,(\text{Circle}(x) \wedge \sim(\exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y))))$ (by the law for negating an if-then statement)
-4. $\equiv \exists x\,(\text{Circle}(x) \wedge \forall y\, \sim(\text{Square}(y) \wedge \text{SameColor}(x, y)))$ (by the law for negating a $\exists$ statement)
-5. $\equiv \exists x\,(\text{Circle}(x) \wedge \forall y\,(\sim\text{Square}(y) \vee \sim\text{SameColor}(x, y)))$ (by De Morgan's law)
+1. $`\sim(\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y))))`$
+2. $`\equiv \exists x\, \sim(\text{Circle}(x) \to \exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y)))`$ (by the law for negating a $\forall$ statement)
+3. $`\equiv \exists x\,(\text{Circle}(x) \wedge \sim(\exists y\,(\text{Square}(y) \wedge \text{SameColor}(x, y))))`$ (by the law for negating an if-then statement)
+4. $`\equiv \exists x\,(\text{Circle}(x) \wedge \forall y\, \sim(\text{Square}(y) \wedge \text{SameColor}(x, y)))`$ (by the law for negating a $\exists$ statement)
+5. $`\equiv \exists x\,(\text{Circle}(x) \wedge \forall y\,(\sim\text{Square}(y) \vee \sim\text{SameColor}(x, y)))`$ (by De Morgan's law)
 
-(d) The statement is $\exists x\,(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y)))$. Its negation is derived as follows.
+(d) The statement is $`\exists x\,(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y)))`$. Its negation is derived as follows.
 
-1. $\sim(\exists x\,(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y))))$
-2. $\equiv \forall x\, \sim(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y)))$ (by the law for negating a $\exists$ statement)
-3. $\equiv \forall x\,(\sim\text{Square}(x) \vee \sim(\forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y))))$ (by De Morgan's law)
-4. $\equiv \forall x\,(\sim\text{Square}(x) \vee \exists y\, \sim(\text{Triangle}(y) \to \text{RightOf}(x, y)))$ (by the law for negating a $\forall$ statement)
-5. $\equiv \forall x\,(\sim\text{Square}(x) \vee \exists y\,(\text{Triangle}(y) \wedge \sim\text{RightOf}(x, y)))$ (by the law for negating an if-then statement)
+1. $`\sim(\exists x\,(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y))))`$
+2. $`\equiv \forall x\, \sim(\text{Square}(x) \wedge \forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y)))`$ (by the law for negating a $\exists$ statement)
+3. $`\equiv \forall x\,(\sim\text{Square}(x) \vee \sim(\forall y\,(\text{Triangle}(y) \to \text{RightOf}(x, y))))`$ (by De Morgan's law)
+4. $`\equiv \forall x\,(\sim\text{Square}(x) \vee \exists y\, \sim(\text{Triangle}(y) \to \text{RightOf}(x, y)))`$ (by the law for negating a $\forall$ statement)
+5. $`\equiv \forall x\,(\sim\text{Square}(x) \vee \exists y\,(\text{Triangle}(y) \wedge \sim\text{RightOf}(x, y)))`$ (by the law for negating an if-then statement)
 
-If $\text{Above}(x, y)$ is interpreted in the same way as $\text{RightOf}$, as "$x$ is in a higher row than $y$ (but possibly in a different column)", then all four statements are true in the world of Figure 4 and all four negations are false. (a) The circles $a$ (row 1), $b$ and $c$ (row 2) are all above $f$ in row 3. (b) $e$ is a black square. (c) The circles $a$ and $c$ (blue) have the square $j$ (blue), and $b$ (gray) has $g$ or $h$ (gray). (d) The square $g$ or $j$ in column 5 is to the right of the triangles $d$, $f$, and $i$ (columns 4, 3, and 4).
+If $\text{Above}(x, y)$ is interpreted in the same way as $\text{RightOf}$, as "$`x`$ is in a higher row than $y$ (but possibly in a different column)", then all four statements are true in the world of Figure 4 and all four negations are false. (a) The circles $a$ (row 1), $b$ and $c$ (row 2) are all above $f$ in row 3. (b) $e$ is a black square. (c) The circles $a$ and $c$ (blue) have the square $j$ (blue), and $b$ (gray) has $g$ or $h$ (gray). (d) The square $g$ or $j$ in column 5 is to the right of the triangles $d$, $f$, and $i$ (columns 4, 3, and 4).
 
 Fully formal notation has a cost: it is long and far from intuition, so a slip made while using it can easily go unnoticed. Its benefit is that operations such as negation become purely mechanical, to the point that a computer can carry them out. With practice, formal manipulation and intuition check each other, each catching errors the other misses. This notation is the working language of several areas of computer science, among them artificial intelligence, program verification, and automata theory and formal languages.
 
@@ -982,17 +1016,17 @@ isabove(b2, b3)     isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)
 1. ?color(b1, blue)          2. ?isabove(X, w1)
 ```
 
-The statements `isabove(g, b1)` and `color(g, gray)` are interpreted as "$g$ is above $b_1$" and "$g$ is colored gray". The statement `isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)` is interpreted as "For all $X$, $Y$, and $Z$, if $X$ is above $Y$ and $Y$ is above $Z$, then $X$ is above $Z$." In this program, names that begin with a capital letter are variables.
+The statements `isabove(g, b1)` and `color(g, gray)` are interpreted as "$`g`$ is above $b_1$" and "$`g`$ is colored gray". The statement `isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)` is interpreted as "For all $X$, $Y$, and $Z$, if $X$ is above $Y$ and $Y$ is above $Z$, then $X$ is above $Z$." In this program, names that begin with a capital letter are variables.
 
-Question 1, `?color(b1, blue)`, asks whether block $b_1$ is colored blue, and Prolog answers Yes. Question 2, `?isabove(X, w1)`, asks for all blocks $X$ for which the predicate "$X$ is above $w_1$" is true, and Prolog answers by listing all such blocks: `X = b1, X = g`. The solution `X = b1` is found by merely searching the given facts. However, `X = g` must be **inferred** from the facts `isabove(g, b1)` and `isabove(b1, w1)` and the rule `isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)`. Substituting $g$, $b_1$, and $w_1$ for $X$, $Y$, and $Z$ in the rule is the universal instantiation of Section 4.1, and drawing the conclusion from the two facts is modus ponens.
+Question 1, `?color(b1, blue)`, asks whether block $b_1$ is colored blue, and Prolog answers Yes. Question 2, `?isabove(X, w1)`, asks for all blocks $X$ for which the predicate "$`X`$ is above $w_1$" is true, and Prolog answers by listing all such blocks: `X = b1, X = g`. The solution `X = b1` is found by merely searching the given facts. However, `X = g` must be **inferred** from the facts `isabove(g, b1)` and `isabove(b1, w1)` and the rule `isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)`. Substituting $g$, $b_1$, and $w_1$ for $X$, $Y$, and $Z$ in the rule is the universal instantiation of Section 4.1, and drawing the conclusion from the two facts is modus ponens.
 
 If the following questions are added to the program, Prolog gives the answers in the table.
 
 | Question | Meaning | Answer |
 |:-----|:-----|:-----|
 | (a) `?isabove(b2, w1)` | Is $b_2$ above $w_1$? | No |
-| (b) `?color(w1, X)` | For what colors $X$ is "$w_1$ is colored $X$" true? | `X = white` |
-| (c) `?color(X, blue)` | For what blocks $X$ is "$X$ is colored blue" true? | `X = b1, X = b2, X = b3` |
+| (b) `?color(w1, X)` | For what colors $X$ is "$`w_1`$ is colored $X$" true? | `X = white` |
+| (c) `?color(X, blue)` | For what blocks $X$ is "$`X`$ is colored blue" true? | `X = b1, X = b2, X = b3` |
 
 *Table 15. Questions added to the block program and Prolog's answers*
 
@@ -1008,7 +1042,7 @@ In (a), $b_2$ is in a different column from $w_1$, so `isabove(b2, w1)` cannot b
 
 ### 4.1 Universal Instantiation
 
-> **Definition:** **Universal instantiation** is the rule that a property holding for **every** element of a set holds for **each particular** element of that set. In symbols, if $\forall x \in D,\ Q(x)$ is true and $a$ is a particular element of $D$, then $Q(a)$ is true.
+> **Definition:** **Universal instantiation** is the rule that a property holding for **every** element of a set holds for **each particular** element of that set. In symbols, if $`\forall x \in D,\ Q(x)`$ is true and $a$ is a particular element of $D$, then $Q(a)$ is true.
 
 The name reflects that the particular case is obtained as an instance of the general, universal fact. The rule is valid simply because of what it means for a universal statement to be true. The best-known example is the following argument.
 
@@ -1025,7 +1059,9 @@ For example, suppose $r^{k+1} \cdot r$ must be simplified, where $r$ is a partic
 
 The computation then proceeds as follows.
 
-$$r^{k+1} \cdot r = r^{k+1} \cdot r^1 = r^{(k+1)+1} = r^{k+2}$$
+```math
+r^{k+1} \cdot r = r^{k+1} \cdot r^1 = r^{(k+1)+1} = r^{k+2}
+```
 
 The first equality is step 1, the second is step 2, and the last is basic algebra. The reasoning behind steps 1 and 2 is broken down below.
 
@@ -1060,7 +1096,7 @@ If the major premise were phrased as "Everything that makes $P(x)$ true makes $Q
 - $k$ is a particular integer that is even.
 - $\therefore$ $k^2$ is even.
 
-**Solution.** The major premise can be rewritten as "$\forall x$, if $x$ is an even integer then $x^2$ is even." Let $E(x)$ be "$x$ is an even integer", let $S(x)$ be "$x^2$ is even", and let $k$ stand for a particular integer that is even. Then the argument has the following form.
+**Solution.** The major premise can be rewritten as "$`\forall x`$, if $x$ is an even integer then $x^2$ is even." Let $E(x)$ be "$`x`$ is an even integer", let $S(x)$ be "$`x^2`$ is even", and let $k$ stand for a particular integer that is even. Then the argument has the following form.
 
 - $\forall x$, if $E(x)$ then $S(x)$.
 - $E(k)$, for a particular $k$.
@@ -1077,11 +1113,13 @@ This argument has the form of universal modus ponens and is therefore valid.
 
 ### 4.3 Universal Modus Ponens in a Proof
 
-Chapter 4 discusses methods of proving quantified statements. Here, a proof that the sum of any two even integers is even serves as an example. It uses the definition of even integer: an integer is **even** if, and only if, it equals twice some integer. Formally, "$\forall$ integer $x$, $x$ is even if, and only if, $\exists$ an integer $k$ such that $x = 2k$."
+Chapter 4 discusses methods of proving quantified statements. Here, a proof that the sum of any two even integers is even serves as an example. It uses the definition of even integer: an integer is **even** if, and only if, it equals twice some integer. Formally, "$`\forall`$ integer $x$, $x$ is even if, and only if, $\exists$ an integer $k$ such that $x = 2k$."
 
 Suppose $m$ and $n$ are particular but arbitrarily chosen even integers. Then $m = 2r$ for some integer $r$⁽¹⁾, and $n = 2s$ for some integer $s$⁽²⁾. Hence
 
-$$m + n = 2r + 2s = 2(r + s)$$
+```math
+m + n = 2r + 2s = 2(r + s)
+```
 
 where the first equality holds by substitution and the second by factoring out the 2⁽³⁾. Now $r + s$ is an integer⁽⁴⁾, and so $2(r + s)$ is even⁽⁵⁾. Thus $m + n$ is even.
 
@@ -1120,7 +1158,7 @@ A second key rule of inference is **universal modus tollens**, which is valid be
 - Zeus is not mortal.
 - $\therefore$ Zeus is not human.
 
-**Solution.** The major premise can be rewritten as "$\forall x$, if $x$ is human then $x$ is mortal." Let $H(x)$ be "$x$ is human", let $M(x)$ be "$x$ is mortal", and let $Z$ stand for Zeus. The argument becomes the following.
+**Solution.** The major premise can be rewritten as "$`\forall x`$, if $x$ is human then $x$ is mortal." Let $H(x)$ be "$`x`$ is human", let $M(x)$ be "$`x`$ is mortal", and let $Z$ stand for Zeus. The argument becomes the following.
 
 - $\forall x$, if $H(x)$ then $M(x)$.
 - $\sim M(Z)$
@@ -1147,7 +1185,7 @@ The validity of universal instantiation comes straight from the meaning of a uni
 1. Suppose the major and minor premises are both true. [It must be shown that the conclusion $Q(a)$ is also true.]
 2. By the minor premise, $P(a)$ is true for a particular value of $a$.
 3. By the major premise and universal instantiation, the statement "If $P(a)$ then $Q(a)$" is true for that particular $a$.
-4. Since "If $P(a)$ then $Q(a)$" and "$P(a)$" are both true, $Q(a)$ is true by modus ponens. [This is what was to be shown.]
+4. Since "If $P(a)$ then $Q(a)$" and "$`P(a)`$" are both true, $Q(a)$ is true by modus ponens. [This is what was to be shown.]
 
 Universal modus tollens is valid in the same way. If the major premise and the minor premise $\sim Q(a)$ are true, then "If $P(a)$ then $Q(a)$" is true by universal instantiation, and from it and $\sim Q(a)$, $\sim P(a)$ is true by modus tollens.
 
@@ -1159,13 +1197,13 @@ Consider the following statement.
 
 All integers are rational numbers.
 
-Formally, it is "$\forall$ integer $n$, $n$ is a rational number." Draw the integers and the rational numbers as two disks; the statement is true exactly when the integers disk lies wholly inside the rationals disk, as in Figure 8.
+Formally, it is "$`\forall`$ integer $n$, $n$ is a rational number." Draw the integers and the rational numbers as two disks; the statement is true exactly when the integers disk lies wholly inside the rationals disk, as in Figure 8.
 
 ![Figure 8. The integers disk inside the rational numbers disk](../../images/Ch03_Diagram-Integers-Rationals.png)
 
 *Figure 8. The integers disk inside the rational numbers disk*
 
-Since $\forall x \in D,\ Q(x)$ and "$\forall x$, if $x$ is in $D$ then $Q(x)$" are logically equivalent, a picture of this kind represents either one. Pictures that draw sets as disks in order to analyze arguments are called **diagrams for arguments** (Euler diagrams). The German mathematician and philosopher Gottfried Wilhelm Leibniz may have been the first to use them for this purpose.
+Since $`\forall x \in D,\ Q(x)`$ and "$`\forall x`$, if $x$ is in $D$ then $Q(x)$" are logically equivalent, a picture of this kind represents either one. Pictures that draw sets as disks in order to analyze arguments are called **diagrams for arguments** (Euler diagrams). The German mathematician and philosopher Gottfried Wilhelm Leibniz may have been the first to use them for this purpose.
 
 To test an argument with diagrams, draw every arrangement in which both premises are true, and check whether the conclusion is true in each of them.
 
@@ -1219,7 +1257,7 @@ The next form would be valid only if a conditional statement were logically equi
 
 *Table 21. The inverse error in quantified form*
 
-The inverse error can also be seen in a diagram. In Figure 10, a dot outside the human beings disk but inside the mortals disk is not a human being ($\sim P(a)$) and yet is mortal ($Q(a)$). Hence the conclusion "it is not a human being, so it is not mortal" does not follow necessarily.
+The inverse error can also be seen in a diagram. In Figure 10, a dot outside the human beings disk but inside the mortals disk is not a human being ($`\sim P(a)`$) and yet is mortal ($`Q(a)`$). Hence the conclusion "it is not a human being, so it is not mortal" does not follow necessarily.
 
 **Example 3.4.7 (An Argument with "No").** Use diagrams to test the following argument for validity.
 
@@ -1235,13 +1273,13 @@ The inverse error can also be seen in a diagram. In Figure 10, a dot outside the
 
 Because the disks do not overlap, the dot cannot be in the polynomial functions disk. The premises therefore force the conclusion, and the argument is valid.
 
-Example 3.4.7 can also be solved another way. Transform "No polynomial functions have horizontal asymptotes" into the equivalent statement "$\forall x$, if $x$ is a polynomial function, then $x$ does not have a horizontal asymptote." Then the argument has the following form.
+Example 3.4.7 can also be solved another way. Transform "No polynomial functions have horizontal asymptotes" into the equivalent statement "$`\forall x`$, if $x$ is a polynomial function, then $x$ does not have a horizontal asymptote." Then the argument has the following form.
 
 - $\forall x$, if $P(x)$ then $Q(x)$.
 - $\sim Q(a)$, for a particular $a$.
 - $\therefore \sim P(a)$
 
-Here $P(x)$ is "$x$ is a polynomial function" and $Q(x)$ is "$x$ does not have a horizontal asymptote." This argument is valid by universal modus tollens.
+Here $P(x)$ is "$`x`$ is a polynomial function" and $Q(x)$ is "$`x`$ does not have a horizontal asymptote." This argument is valid by universal modus tollens.
 
 > **Note:** If, as in calculus, the line $y = L$ is defined to be a horizontal asymptote when $\lim_{x \to \infty} f(x) = L$ or $\lim_{x \to -\infty} f(x) = L$, then a constant function $f(x) = c$ is a polynomial function with the horizontal asymptote $y = c$. Hence the major premise is true only for nonconstant polynomial functions. Since validity is determined by the argument form alone, the conclusion that the argument is valid does not change, but with the major premise as stated the argument is not sound.
 
@@ -1257,9 +1295,9 @@ Combining this form with universal instantiation gives the valid argument form c
 
 | Part | Formal Version | Informal Version |
 |:-----|:-----|:-----|
-| Premise 1 | $\forall x,\ P(x) \to Q(x)$ | Any $x$ that makes $P(x)$ true makes $Q(x)$ true. |
-| Premise 2 | $\forall x,\ Q(x) \to R(x)$ | Any $x$ that makes $Q(x)$ true makes $R(x)$ true. |
-| Conclusion | $\therefore \forall x,\ P(x) \to R(x)$ | $\therefore$ Any $x$ that makes $P(x)$ true makes $R(x)$ true. |
+| Premise 1 | $`\forall x,\ P(x) \to Q(x)`$ | Any $x$ that makes $P(x)$ true makes $Q(x)$ true. |
+| Premise 2 | $`\forall x,\ Q(x) \to R(x)`$ | Any $x$ that makes $Q(x)$ true makes $R(x)$ true. |
+| Conclusion | $`\therefore \forall x,\ P(x) \to R(x)`$ | $\therefore$ Any $x$ that makes $P(x)$ true makes $R(x)$ true. |
 
 *Table 22. The form of universal transitivity*
 
@@ -1295,7 +1333,7 @@ $\therefore$ $\forall x$, if $x$ is a triangle, then $x$ is above all the circle
 
 The premises should be arranged in a chain in which the conclusion of each premise is the hypothesis of the next. The chain must start with the hypothesis of the argument's conclusion and end with the conclusion of the argument's conclusion. Some premises may have to be replaced by their contrapositives to make the links match.
 
-Here Premise 1 starts with "$x$ is a triangle" and Premise 2 ends with "$x$ is above all the circles", so Premise 1 goes first, Premise 2 goes last, and Premise 3 goes between them. Premise 3 itself does not link the other two, but its contrapositive does.
+Here Premise 1 starts with "$`x`$ is a triangle" and Premise 2 ends with "$`x`$ is above all the circles", so Premise 1 goes first, Premise 2 goes last, and Premise 3 goes between them. Premise 3 itself does not link the other two, but its contrapositive does.
 
 - Premise 1: $\forall x$, if $x$ is a triangle, then $x$ is blue.
 - Premise 3 (contrapositive): $\forall x$, if $x$ is blue, then $x$ is to the right of all the squares.
@@ -1305,7 +1343,7 @@ Putting Premise 1 and Premise 3 (contrapositive) together by universal transitiv
 
 - Statement 4: $\forall x$, if $x$ is a triangle, then $x$ is to the right of all the squares.
 
-Putting Statement 4 together with Premise 2 by universal transitivity gives "$\forall x$, if $x$ is a triangle, then $x$ is above all the circles." This is the conclusion of the argument.
+Putting Statement 4 together with Premise 2 by universal transitivity gives "$`\forall x`$, if $x$ is a triangle, then $x$ is above all the circles." This is the conclusion of the argument.
 
 ```mermaid
 flowchart LR
@@ -1349,13 +1387,13 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
 
 | Statement | Judgment and Reason |
 |:-----|:-----|
-| The only counterexample to $\forall x \in \mathbf{R},\ x^2 \geq x$ is $x = \frac{1}{2}$. | **F.** Every real number with $0 < x < 1$ is a counterexample. For instance, if $x = \frac{1}{3}$, then $x^2 = \frac{1}{9} < \frac{1}{3}$. |
-| If the domain $D$ is the empty set, then $\forall x \in D,\ Q(x)$ is true whatever $Q(x)$ is. | **T.** The negation $\exists x \in D \text{ such that } \sim Q(x)$ is false because $D$ has no elements, so the original statement is vacuously true. |
+| The only counterexample to $`\forall x \in \mathbf{R},\ x^2 \geq x`$ is $x = \frac{1}{2}$. | **F.** Every real number with $0 < x < 1$ is a counterexample. For instance, if $x = \frac{1}{3}$, then $x^2 = \frac{1}{9} < \frac{1}{3}$. |
+| If the domain $D$ is the empty set, then $`\forall x \in D,\ Q(x)`$ is true whatever $Q(x)$ is. | **T.** The negation $\exists x \in D \text{ such that } \sim Q(x)$ is false because $D$ has no elements, so the original statement is vacuously true. |
 | The negation of "All computer programs are finite" is "All computer programs are infinite." | **F.** The negation is "There is at least one computer program that is not finite." The given sentence is a much stronger statement than the negation. |
-| $\sim(\forall x,\ P(x) \to Q(x))$ is equivalent to $\exists x \text{ such that } P(x) \to \sim Q(x)$. | **F.** The negation of a conditional is a conjunction, so it is equivalent to $\exists x \text{ such that } P(x) \wedge \sim Q(x)$. |
+| $`\sim(\forall x,\ P(x) \to Q(x))`$ is equivalent to $\exists x \text{ such that } P(x) \to \sim Q(x)$. | **F.** The negation of a conditional is a conjunction, so it is equivalent to $\exists x \text{ such that } P(x) \wedge \sim Q(x)$. |
 | A universal conditional statement and its contrapositive always have the same truth value. | **T.** For each $x$, $p \to q \equiv \sim q \to \sim p$, so the two universal statements are logically equivalent. |
-| "$r(x)$ only if $s(x)$" means $\forall x,\ s(x) \to r(x)$. | **F.** It means $\forall x,\ r(x) \to s(x)$. That is, $s(x)$ is a necessary condition for $r(x)$. |
-| If $\forall x\ \exists y,\ P(x, y)$ is true, then $\exists y\ \forall x,\ P(x, y)$ is also true. | **F.** Even if everyone loves someone, there need not be one person who is loved by everyone. |
+| "$`r(x)`$ only if $s(x)$" means $`\forall x,\ s(x) \to r(x)`$. | **F.** It means $`\forall x,\ r(x) \to s(x)`$. That is, $s(x)$ is a necessary condition for $r(x)$. |
+| If $`\forall x\ \exists y,\ P(x, y)`$ is true, then $`\exists y\ \forall x,\ P(x, y)`$ is also true. | **F.** Even if everyone loves someone, there need not be one person who is loved by everyone. |
 | In a diagram for arguments, if the conclusion is true in one arrangement satisfying the premises, the argument is valid. | **F.** The conclusion must be true in every arrangement satisfying the premises. In Example 3.4.6 there is an arrangement in which the conclusion is false. |
 | Universal modus ponens is the argument form obtained by combining universal instantiation with modus ponens. | **T.** Applying universal instantiation to the major premise gives $P(a) \to Q(a)$, and the minor premise $P(a)$ with modus ponens gives $Q(a)$. |
 
@@ -1369,29 +1407,29 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
 |:-----|:-----|
 | Predicate | A sentence with finitely many variables that becomes a statement once values replace the variables. |
 | Domain and truth set | The domain is the set of values that may be substituted for a variable, and the truth set $\lbrace x \in D \mid P(x) \rbrace$ is the set of elements that make the predicate true. |
-| Universal statement | $\forall x \in D,\ Q(x)$ is true when $Q(x)$ is true for every $x$ in $D$, and a single counterexample makes it false. |
+| Universal statement | $`\forall x \in D,\ Q(x)`$ is true when $Q(x)$ is true for every $x$ in $D$, and a single counterexample makes it false. |
 | Existential statement | $\exists x \in D \text{ such that } Q(x)$ is true when at least one $x$ satisfies $Q(x)$, and false when $Q(x)$ is false for every $x$. |
 | Method of exhaustion | A method that decides the truth value of a statement by checking every element of a finite domain one by one. |
-| Universal conditional statement | A statement of the form $\forall x,\ P(x) \to Q(x)$, equivalent to $\forall x \in D,\ Q(x)$ with the domain narrowed to the truth set of $P(x)$. |
+| Universal conditional statement | A statement of the form $`\forall x,\ P(x) \to Q(x)`$, equivalent to $`\forall x \in D,\ Q(x)`$ with the domain narrowed to the truth set of $P(x)$. |
 | Bound variables and scope | A variable attached to a quantifier keeps the same meaning when renamed consistently, and its scope runs from where it is introduced to the end of the statement. |
 | Implicit quantification | Quantification indicated by context without explicit quantifiers; $P(x) \Rightarrow Q(x)$ means inclusion of truth sets and $P(x) \Leftrightarrow Q(x)$ means equality of truth sets. |
-| Negation of quantified statements | $\sim(\forall x,\ Q(x)) \equiv \exists x \text{ such that } \sim Q(x)$ and $\sim(\exists x \text{ such that } Q(x)) \equiv \forall x,\ \sim Q(x)$. |
-| Negation of universal conditionals | $\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)$. |
+| Negation of quantified statements | $`\sim(\forall x,\ Q(x)) \equiv \exists x \text{ such that } \sim Q(x)`$ and $`\sim(\exists x \text{ such that } Q(x)) \equiv \forall x,\ \sim Q(x)`$. |
+| Negation of universal conditionals | $`\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)`$. |
 | Quantifiers, conjunction, and disjunction | On a finite domain a universal statement is a conjunction and an existential statement is a disjunction, so the negation rules generalize De Morgan's laws. |
-| Vacuous truth | If the hypothesis $P(x)$ is false for every $x$, then $\forall x \in D,\ P(x) \to Q(x)$ is true regardless of $Q(x)$. |
+| Vacuous truth | If the hypothesis $P(x)$ is false for every $x$, then $`\forall x \in D,\ P(x) \to Q(x)`$ is true regardless of $Q(x)$. |
 | Contrapositive, converse, inverse | A universal conditional statement is equivalent to its contrapositive but not to its converse or inverse, and the converse and inverse are equivalent to each other. |
-| Necessary, sufficient, only if | $r$ is a sufficient condition for $s$ means $\forall x,\ r(x) \to s(x)$, a necessary condition means $\forall x,\ s(x) \to r(x)$, and "$r(x)$ only if $s(x)$" means $\forall x,\ r(x) \to s(x)$. |
-| Interpreting multiple quantifiers | The actions of the quantifiers are performed in the order they occur; in $\forall x\ \exists y$ the $y$ may depend on $x$, and in $\exists x\ \forall y$ one $x$ must work for every $y$. |
+| Necessary, sufficient, only if | $r$ is a sufficient condition for $s$ means $`\forall x,\ r(x) \to s(x)`$, a necessary condition means $`\forall x,\ s(x) \to r(x)`$, and "$`r(x)`$ only if $s(x)$" means $`\forall x,\ r(x) \to s(x)`$. |
+| Interpreting multiple quantifiers | The actions of the quantifiers are performed in the order they occur; in $`\forall x\ \exists y`$ the $y$ may depend on $x$, and in $`\exists x\ \forall y`$ one $x$ must work for every $y$. |
 | Negating multiple quantifiers | Each time the negation moves inward, $\forall$ and $\exists$ are exchanged, the order is kept, and the innermost predicate is negated. |
 | Order of quantifiers | Swapping different quantifiers can change the meaning and truth value, but quantifiers of the same kind may be swapped freely. |
-| Formal logical notation | $\forall x \in D,\ P(x)$ is written $\forall x\,(x \in D \to P(x))$, and an existential statement is written $\exists x\,(x \in D \wedge P(x))$. |
+| Formal logical notation | $`\forall x \in D,\ P(x)`$ is written $`\forall x\,(x \in D \to P(x))`$, and an existential statement is written $`\exists x\,(x \in D \wedge P(x))`$. |
 | Prolog | A logic programming language that answers questions by built-in search and inference once facts and rules are stated. |
 | Universal instantiation | A property true of every element of a set is true of any particular element of the set. |
-| Universal modus ponens and tollens | Valid forms that derive $Q(a)$ from $\forall x,\ P(x) \to Q(x)$ and $P(a)$, and $\sim P(a)$ from $\sim Q(a)$. |
+| Universal modus ponens and tollens | Valid forms that derive $Q(a)$ from $`\forall x,\ P(x) \to Q(x)`$ and $P(a)$, and $\sim P(a)$ from $\sim Q(a)$. |
 | Validity and soundness | An argument form is valid if any predicates that make the premises true make the conclusion true, and an argument is sound if it is valid and all its premises are true. |
 | Diagrams for arguments | Validity is tested by drawing sets as disks and checking that the conclusion is true in every arrangement the premises allow. |
 | Converse and inverse errors | Invalid argument forms that derive $P(a)$ from $Q(a)$, and $\sim Q(a)$ from $\sim P(a)$. |
-| Universal transitivity | A valid form that derives $\forall x,\ P(x) \to R(x)$ from $\forall x,\ P(x) \to Q(x)$ and $\forall x,\ Q(x) \to R(x)$. |
+| Universal transitivity | A valid form that derives $`\forall x,\ P(x) \to R(x)`$ from $`\forall x,\ P(x) \to Q(x)`$ and $`\forall x,\ Q(x) \to R(x)`$. |
 | Abduction | Reasoning that observes $Q(a)$ and infers $P(a)$ as a plausible explanation; its conclusion is a hypothesis to be checked. |
 
 ---
@@ -1400,7 +1438,7 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
 
 ## Self-Check Questions
 
-1. **Truth set:** For the predicate $P(x)$ "$x^2 > x$" with domain $\mathbf{R}$, find the truth set of $P(x)$, and check whether the three values 2, $\frac{1}{2}$, and $-\frac{1}{2}$ of Example 3.1.1 belong to it.
+1. **Truth set:** For the predicate $P(x)$ "$`x^2 > x`$" with domain $\mathbf{R}$, find the truth set of $P(x)$, and check whether the three values 2, $\frac{1}{2}$, and $-\frac{1}{2}$ of Example 3.1.1 belong to it.
 
    <details>
    <summary>Answer</summary>
@@ -1409,12 +1447,12 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
 
    </details>
 
-2. **Method of exhaustion:** Let $D = \lbrace -1, 0, 1, 2 \rbrace$. Find the truth value of each statement: (a) $\forall x \in D,\ x^3 \geq x$ (b) $\forall x \in D,\ x^2 > x$ (c) $\exists x \in D \text{ such that } x^2 = x + 2$
+2. **Method of exhaustion:** Let $D = \lbrace -1, 0, 1, 2 \rbrace$. Find the truth value of each statement: (a) $`\forall x \in D,\ x^3 \geq x`$ (b) $`\forall x \in D,\ x^2 > x`$ (c) $\exists x \in D \text{ such that } x^2 = x + 2$
 
    <details>
    <summary>Answer</summary>
 
-   (a) True. Since $(-1)^3 = -1 \geq -1$, $0^3 = 0 \geq 0$, $1^3 = 1 \geq 1$, and $2^3 = 8 \geq 2$, every element of $D$ satisfies the inequality. (b) False. For $x = 0$, $0 > 0$ is false, so 0 is a counterexample ($x = 1$ is also a counterexample). (c) True. For $x = -1$, $(-1)^2 = 1$ and $-1 + 2 = 1$, so the equation holds ($x = 2$ also works, with $4 = 4$).
+   (a) True. Since $(-1)^3 = -1 \geq -1$, $0^3 = 0 \geq 0$, $1^3 = 1 \geq 1$, and $2^3 = 8 \geq 2$, every element of $D$ satisfies the inequality. (b) False. For $x = 0$, $0 > 0$ is false, so 0 is a counterexample ($x = 1$ is also a counterexample). (c) True. For $x = -1$, $(-1)^2 = 1$ and $-1 + 2 = 1$, so the equation holds ($x = 2$ also works, with $`4 = 4`$).
 
    </details>
 
@@ -1423,16 +1461,16 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
    <details>
    <summary>Answer</summary>
 
-   The formal statement is "$\forall$ student $s$, $\exists$ a course $c$ such that $s$ received an A in $c$." Each time the negation moves inward the quantifier changes, so the formal negation is "$\exists$ a student $s$ such that $\forall$ course $c$, $s$ did not receive an A in $c$." The informal negation is "There is a student who did not receive an A in any course."
+   The formal statement is "$`\forall`$ student $s$, $\exists$ a course $c$ such that $s$ received an A in $c$." Each time the negation moves inward the quantifier changes, so the formal negation is "$`\exists`$ a student $s$ such that $\forall$ course $c$, $s$ did not receive an A in $c$." The informal negation is "There is a student who did not receive an A in any course."
 
    </details>
 
-4. **Negation and variants:** For the statement "$\forall$ integer $n$, if $n$ is divisible by 6, then $n$ is divisible by 3", write the negation, contrapositive, converse, and inverse, and find the truth value of each.
+4. **Negation and variants:** For the statement "$`\forall`$ integer $n$, if $n$ is divisible by 6, then $n$ is divisible by 3", write the negation, contrapositive, converse, and inverse, and find the truth value of each.
 
    <details>
    <summary>Answer</summary>
 
-   The original statement is true (if $n = 6k$, then $n = 3(2k)$). The negation is "$\exists$ an integer $n$ such that $n$ is divisible by 6 and $n$ is not divisible by 3", which is false. The contrapositive is "$\forall$ integer $n$, if $n$ is not divisible by 3, then $n$ is not divisible by 6", which is equivalent to the original and therefore true. The converse is "$\forall$ integer $n$, if $n$ is divisible by 3, then $n$ is divisible by 6", which is false with counterexample $n = 3$. The inverse is "$\forall$ integer $n$, if $n$ is not divisible by 6, then $n$ is not divisible by 3", which is also false with counterexample $n = 3$.
+   The original statement is true (if $n = 6k$, then $`n = 3(2k)`$). The negation is "$`\exists`$ an integer $n$ such that $n$ is divisible by 6 and $n$ is not divisible by 3", which is false. The contrapositive is "$`\forall`$ integer $n$, if $n$ is not divisible by 3, then $n$ is not divisible by 6", which is equivalent to the original and therefore true. The converse is "$`\forall`$ integer $n$, if $n$ is divisible by 3, then $n$ is divisible by 6", which is false with counterexample $n = 3$. The inverse is "$`\forall`$ integer $n$, if $n$ is not divisible by 6, then $n$ is not divisible by 3", which is also false with counterexample $n = 3$.
 
    </details>
 
@@ -1441,16 +1479,16 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
    <details>
    <summary>Answer</summary>
 
-   (a) "$r$ is a sufficient condition for $s$" is $\forall x,\ r(x) \to s(x)$, so it is "$\forall$ integer $n$, if $n$ is divisible by 4, then $n$ is even." (b) "$r$ is a necessary condition for $s$" is $\forall x,\ s(x) \to r(x)$; here $r$ is being even and $s$ is being divisible by 4, so it is again "$\forall$ integer $n$, if $n$ is divisible by 4, then $n$ is even." (c) "$r$ only if $s$" is $\forall x,\ r(x) \to s(x)$; here $r$ is being divisible by 4 and $s$ is being even, so it is the same statement. The statement is true, because if $n = 4k$, then $n = 2(2k)$.
+   (a) "$`r`$ is a sufficient condition for $s$" is $`\forall x,\ r(x) \to s(x)`$, so it is "$`\forall`$ integer $n$, if $n$ is divisible by 4, then $n$ is even." (b) "$`r`$ is a necessary condition for $s$" is $`\forall x,\ s(x) \to r(x)`$; here $r$ is being even and $s$ is being divisible by 4, so it is again "$`\forall`$ integer $n$, if $n$ is divisible by 4, then $n$ is even." (c) "$`r`$ only if $s$" is $`\forall x,\ r(x) \to s(x)`$; here $r$ is being divisible by 4 and $s$ is being even, so it is the same statement. The statement is true, because if $n = 4k$, then $n = 2(2k)$.
 
    </details>
 
-6. **Order of quantifiers:** Let $D = E = \lbrace 1, 2, 3 \rbrace$. Find the truth values of (a) $\forall x \in D,\ \exists y \in E \text{ such that } x + y = 4$ and (b) $\exists y \in E \text{ such that } \forall x \in D,\ x + y = 4$, and write the negation of (b).
+6. **Order of quantifiers:** Let $D = E = \lbrace 1, 2, 3 \rbrace$. Find the truth values of (a) $`\forall x \in D,\ \exists y \in E \text{ such that } x + y = 4`$ and (b) $`\exists y \in E \text{ such that } \forall x \in D,\ x + y = 4`$, and write the negation of (b).
 
    <details>
    <summary>Answer</summary>
 
-   (a) is true. Choose $y = 3$ for $x = 1$, $y = 2$ for $x = 2$, and $y = 1$ for $x = 3$; $y$ may depend on $x$. (b) is false. For one $y$ to satisfy $x + y = 4$ for all three values of $x$, the equations $y = 3$, $y = 2$, and $y = 1$ would have to hold at the same time, which is impossible. The negation of (b) is $\forall y \in E,\ \exists x \in D \text{ such that } x + y \neq 4$, which is true. For instance, $x = 1$ works for $y = 1$, $x = 1$ for $y = 2$, and $x = 2$ for $y = 3$.
+   (a) is true. Choose $y = 3$ for $x = 1$, $y = 2$ for $x = 2$, and $y = 1$ for $x = 3$; $y$ may depend on $x$. (b) is false. For one $y$ to satisfy $x + y = 4$ for all three values of $x$, the equations $y = 3$, $y = 2$, and $y = 1$ would have to hold at the same time, which is impossible. The negation of (b) is $`\forall y \in E,\ \exists x \in D \text{ such that } x + y \neq 4`$, which is true. For instance, $x = 1$ works for $y = 1$, $x = 1$ for $y = 2$, and $x = 2$ for $y = 3$.
 
    </details>
 
@@ -1459,11 +1497,11 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
    <details>
    <summary>Answer</summary>
 
-   The statement is $\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Triangle}(y) \wedge \sim\text{SameColor}(x, y)))$. Its negation is $\exists x\,(\text{Circle}(x) \wedge \forall y\,(\sim\text{Triangle}(y) \vee \text{SameColor}(x, y)))$. The original statement is true. For circles $a$ and $c$ (blue), choose triangle $d$ (black) or $f$ or $i$ (gray); for circle $b$ (gray), choose triangle $d$ (black).
+   The statement is $`\forall x\,(\text{Circle}(x) \to \exists y\,(\text{Triangle}(y) \wedge \sim\text{SameColor}(x, y)))`$. Its negation is $`\exists x\,(\text{Circle}(x) \wedge \forall y\,(\sim\text{Triangle}(y) \vee \text{SameColor}(x, y)))`$. The original statement is true. For circles $a$ and $c$ (blue), choose triangle $d$ (black) or $f$ or $i$ (gray); for circle $b$ (gray), choose triangle $d$ (black).
 
    </details>
 
-8. **Diagrams and validity:** With the major premise "All squares are rectangles", decide the validity of (a) the argument that derives "$F$ is a square" from the minor premise "Figure $F$ is a rectangle", and (b) the argument that derives "$G$ is not a square" from the minor premise "Figure $G$ is not a rectangle".
+8. **Diagrams and validity:** With the major premise "All squares are rectangles", decide the validity of (a) the argument that derives "$`F`$ is a square" from the minor premise "Figure $F$ is a rectangle", and (b) the argument that derives "$`G`$ is not a square" from the minor premise "Figure $G$ is not a rectangle".
 
    <details>
    <summary>Answer</summary>
@@ -1477,16 +1515,16 @@ From these facts the doctor can conclude only that pneumonia is a strong possibi
    <details>
    <summary>Answer</summary>
 
-   As conditionals, Premise 1 is "$\forall x$, if $x$ has a compile error, then $x$ does not run", Premise 2 is "$\forall x$, if $x$ passes its tests, then $x$ runs", and the conclusion is "$\forall x$, if $x$ has a compile error, then $x$ does not pass its tests." To make the conclusion of Premise 1, "does not run", the hypothesis of the next premise, rewrite Premise 2 as its contrapositive: "$\forall x$, if $x$ does not run, then $x$ does not pass its tests." Putting Premise 1 and the rewritten Premise 2 together by universal transitivity gives the conclusion, so the argument is valid.
+   As conditionals, Premise 1 is "$`\forall x`$, if $x$ has a compile error, then $x$ does not run", Premise 2 is "$`\forall x`$, if $x$ passes its tests, then $x$ runs", and the conclusion is "$`\forall x`$, if $x$ has a compile error, then $x$ does not pass its tests." To make the conclusion of Premise 1, "does not run", the hypothesis of the next premise, rewrite Premise 2 as its contrapositive: "$`\forall x`$, if $x$ does not run, then $x$ does not pass its tests." Putting Premise 1 and the rewritten Premise 2 together by universal transitivity gives the conclusion, so the argument is valid.
 
    </details>
 
-10. **Vacuous truth:** When the domain $D$ is the empty set, find the truth values of $\forall x \in D,\ Q(x)$ and $\exists x \in D \text{ such that } Q(x)$, and explain the reason with the negation rules.
+10. **Vacuous truth:** When the domain $D$ is the empty set, find the truth values of $`\forall x \in D,\ Q(x)`$ and $\exists x \in D \text{ such that } Q(x)$, and explain the reason with the negation rules.
 
     <details>
     <summary>Answer</summary>
 
-    $\forall x \in D,\ Q(x)$ is true. Its negation is $\exists x \in D \text{ such that } \sim Q(x)$, and since $D$ has no elements, no $x$ can satisfy the condition, so the negation is false. On the other hand, $\exists x \in D \text{ such that } Q(x)$ is false because $D$ can contain no element satisfying $Q(x)$, and its negation $\forall x \in D,\ \sim Q(x)$ is vacuously true.
+    $`\forall x \in D,\ Q(x)`$ is true. Its negation is $\exists x \in D \text{ such that } \sim Q(x)$, and since $D$ has no elements, no $x$ can satisfy the condition, so the negation is false. On the other hand, $\exists x \in D \text{ such that } Q(x)$ is false because $D$ can contain no element satisfying $Q(x)$, and its negation $`\forall x \in D,\ \sim Q(x)`$ is vacuously true.
 
     </details>
 

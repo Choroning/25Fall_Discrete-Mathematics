@@ -91,9 +91,9 @@ Reading the remainders from bottom to top gives 110111, the same as before. The 
 
 **Solution.** $10111_2$ has five places, so from the left the place values are $2^4, 2^3, 2^2, 2^1, 2^0$.
 
-$$
+```math
 10111_2 = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 16 + 0 + 4 + 2 + 1 = 23
-$$
+```
 
 Therefore $10111_2 = 23_{10}$. Converting 23 back to binary notation by the method of Exercise 2.5.2 gives $23 = 16 + 4 + 2 + 1$, that is, $10111_2$ again.
 
@@ -128,7 +128,7 @@ Therefore $10111_2 = 23_{10}$. Converting 23 back to binary notation by the meth
 | Second number | | | 1 | 1 | 1 | 0 | 1 |
 | Sum | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 
-*Table 3. Place-by-place computation of $101101_2 + 11101_2$*
+*Table 3. $`101101_2 + 11101_2`$: place-by-place computation*
 
 Therefore $101101_2 + 11101_2 = 1001010_2$. In decimal notation, $101101_2 = 32 + 8 + 4 + 1 = 45$ and $11101_2 = 16 + 8 + 4 + 1 = 29$, so $45 + 29 = 74$, and $1001010_2 = 64 + 8 + 2 = 74$ confirms the result.
 
@@ -190,7 +190,7 @@ Therefore $00101110_2 = 2E_{16}$. In decimal notation, $00101110_2 = 32 + 8 + 4 
 - (c) For every real number $r$, $-r$ is a negative real number.
 - (d) Every real number is an integer.
 
-**Concepts used.** A **universal statement** $\forall x \in D,\ Q(x)$ is true only if $Q(x)$ is true for every element of $D$, and it is false if there is at least one element that makes $Q(x)$ false, that is, a **counterexample** ([Chapter 3, Section 1](../../Lecture-Notes/Ch03_The-Logic-of-Quantified-Statements/Concepts_Lecture.md)). A real number $x$ is positive if $x > 0$ and negative if $x < 0$.
+**Concepts used.** A **universal statement** $`\forall x \in D,\ Q(x)`$ is true only if $Q(x)$ is true for every element of $D$, and it is false if there is at least one element that makes $Q(x)$ false, that is, a **counterexample** ([Chapter 3, Section 1](../../Lecture-Notes/Ch03_The-Logic-of-Quantified-Statements/Concepts_Lecture.md)). A real number $x$ is positive if $x > 0$ and negative if $x < 0$.
 
 **Solution.**
 
@@ -231,9 +231,9 @@ $(-2, 1)$ satisfies $-2 < 1 \le 2$, and $(-3, 2)$, $(-1, 1)$, and $(-5, -4)$ als
 
 **Problem.** Disprove the following statement with a counterexample.
 
-$$
+```math
 \forall \text{ real numbers } x, y,\quad \sqrt{x + y} = \sqrt{x} + \sqrt{y}
-$$
+```
 
 **Concepts used.** A universal statement is disproved by a single counterexample (Chapter 3, Section 1). The square root $\sqrt{t}$ is defined as a real number when $t \ge 0$, so look for a counterexample among values with $x \ge 0$ and $y \ge 0$.
 
@@ -247,7 +247,7 @@ $$
 
 ## 9. Exercise 3.1.17: The Form of Existential Statements
 
-**Problem.** Rewrite each statement in the form "$\exists$ \_\_\_\_ $x$ such that \_\_\_\_".
+**Problem.** Rewrite each statement in the form "$`\exists`$ \_\_\_\_ $x$ such that \_\_\_\_".
 
 - (a) Some exercises have answers.
 - (b) Some real numbers are rational.
@@ -267,23 +267,23 @@ Statement (b) is true because real numbers that are rational, such as $\frac{1}{
 
 ## 10. Exercise 3.1.26: Combining Universal and Existential Statements
 
-**Problem.** For the statement "All integers are rational numbers but some rational numbers are not integers", (a) write it in the form "$\forall x$, if \_\_\_\_ then \_\_\_\_, but $\exists$ \_\_\_\_ $x$ such that \_\_\_\_", and (b) letting $\text{Ratl}(x)$ be "$x$ is a rational number" and $\text{Int}(x)$ be "$x$ is an integer", write it using only the symbols $\text{Ratl}(x)$, $\text{Int}(x)$, $\forall$, $\exists$, $\wedge$, $\vee$, $\sim$, and $\to$.
+**Problem.** For the statement "All integers are rational numbers but some rational numbers are not integers", (a) write it in the form "$`\forall x`$, if \_\_\_\_ then \_\_\_\_, but $\exists$ \_\_\_\_ $x$ such that \_\_\_\_", and (b) letting $\text{Ratl}(x)$ be "$`x`$ is a rational number" and $\text{Int}(x)$ be "$`x`$ is an integer", write it using only the symbols $\text{Ratl}(x)$, $\text{Int}(x)$, $\forall$, $\exists$, $\wedge$, $\vee$, $\sim$, and $\to$.
 
-**Concepts used.** "All A are B" is translated into the **universal conditional statement** "$\forall x$, if $x$ is A then $x$ is B". "Some A are not B" is translated into the existential statement "$\exists x$ such that $x$ is A and $x$ is not B" (Chapter 3, Section 1). In logic, "but" is the conjunction $\wedge$, the same as "and".
+**Concepts used.** "All A are B" is translated into the **universal conditional statement** "$`\forall x`$, if $x$ is A then $x$ is B". "Some A are not B" is translated into the existential statement "$`\exists x`$ such that $x$ is A and $x$ is not B" (Chapter 3, Section 1). In logic, "but" is the conjunction $\wedge$, the same as "and".
 
 **Solution.**
 
 (a) $\forall x$, if $x$ is an integer then $x$ is a rational number, but $\exists$ a rational number $x$ such that $x$ is not an integer.
 
-(b) The first part is the universal conditional statement $\forall x\,(\text{Int}(x) \to \text{Ratl}(x))$. The second part says "there is an $x$ that is rational and not an integer", so it is $\exists x\,(\text{Ratl}(x) \wedge \sim\text{Int}(x))$. Replace "but" by $\wedge$ to join the two parts.
+(b) The first part is the universal conditional statement $`\forall x\,(\text{Int}(x) \to \text{Ratl}(x))`$. The second part says "there is an $x$ that is rational and not an integer", so it is $`\exists x\,(\text{Ratl}(x) \wedge \sim\text{Int}(x))`$. Replace "but" by $\wedge$ to join the two parts.
 
-$$
+```math
 \big(\forall x\,(\text{Int}(x) \to \text{Ratl}(x))\big) \wedge \big(\exists x\,(\text{Ratl}(x) \wedge \sim\text{Int}(x))\big)
-$$
+```
 
 The first part is true because every integer $n$ can be written as $\frac{n}{1}$, and the second part is true because $\frac{1}{2}$ is rational but not an integer. Hence the original statement is true.
 
-> **Caution:** Writing the second part with $\to$, as in $\exists x\,(\text{Ratl}(x) \to \sim\text{Int}(x))$, changes the meaning. This formula is true as soon as there is any $x$ that is not rational, such as $\sqrt{2}$, because the hypothesis is then false; so it does not express "there is a number that is rational and not an integer". In an existential statement, conditions are joined by $\wedge$.
+> **Caution:** Writing the second part with $\to$, as in $`\exists x\,(\text{Ratl}(x) \to \sim\text{Int}(x))`$, changes the meaning. This formula is true as soon as there is any $x$ that is not rational, such as $\sqrt{2}$, because the hypothesis is then false; so it does not express "there is a number that is rational and not an integer". In an existential statement, conditions are joined by $\wedge$.
 
 ---
 
@@ -302,9 +302,9 @@ The first part is true because every integer $n$ can be written as $\frac{n}{1}$
 - (g) No animals that are not dogs are loyal.
 - (h) Some animals that are not dogs are loyal.
 
-**Concepts used.** By Theorem 3.2.1, the negation of a universal statement $\forall x \in D,\ Q(x)$ is logically equivalent to the existential statement $\exists x \in D \text{ such that } \sim Q(x)$ (Chapter 3, Section 2). That is, the negation of "every $x$ has the property" is "there is at least one $x$ that does not have the property".
+**Concepts used.** By Theorem 3.2.1, the negation of a universal statement $`\forall x \in D,\ Q(x)`$ is logically equivalent to the existential statement $\exists x \in D \text{ such that } \sim Q(x)$ (Chapter 3, Section 2). That is, the negation of "every $x$ has the property" is "there is at least one $x$ that does not have the property".
 
-**Solution.** The original statement is "$\forall$ dogs $x$, $x$ is loyal", so its negation is "$\exists$ a dog $x$ such that $x$ is not loyal". Write each choice formally and compare it with this negation.
+**Solution.** The original statement is "$`\forall`$ dogs $x$, $x$ is loyal", so its negation is "$`\exists`$ a dog $x$ such that $x$ is not loyal". Write each choice formally and compare it with this negation.
 
 | Item | Formal expression | Negation? |
 |:---:|:-----|:-----|
@@ -327,21 +327,21 @@ Hence the negations are **(c) and (f)**. The negation of a statement must be fal
 
 ## 12. Exercise 3.2.9: Negation of a Universal Conditional I
 
-**Problem.** Write a negation of the statement "$\forall$ real numbers $x$, if $x > 3$ then $x^2 > 9$".
+**Problem.** Write a negation of the statement "$`\forall`$ real numbers $x$, if $x > 3$ then $x^2 > 9$".
 
 **Concepts used.** The negation of a universal conditional statement is the following (Chapter 3, Section 2).
 
-$$
+```math
 \sim\big(\forall x \in D,\ P(x) \to Q(x)\big) \equiv \exists x \in D \text{ such that } P(x) \wedge \sim Q(x)
-$$
+```
 
 This equivalence is obtained by turning $\forall$ into $\exists$ with Theorem 3.2.1 and then applying the negation of a conditional, $\sim(p \to q) \equiv p \wedge \sim q$. The hypothesis is kept, only the conclusion is negated, and the two parts are joined by $\wedge$.
 
-**Solution.** $P(x)$ is "$x > 3$" and $Q(x)$ is "$x^2 > 9$". For real numbers, the negation of $x^2 > 9$ is $x^2 \le 9$, so the negation is the following.
+**Solution.** $P(x)$ is "$`x > 3`$" and $Q(x)$ is "$`x^2 > 9`$". For real numbers, the negation of $x^2 > 9$ is $x^2 \le 9$, so the negation is the following.
 
-$$
+```math
 \exists \text{ a real number } x \text{ such that } x > 3 \text{ and } x^2 \le 9
-$$
+```
 
 In words, "there is a real number greater than 3 whose square is at most 9".
 
@@ -353,11 +353,11 @@ In words, "there is a real number greater than 3 whose square is at most 9".
 
 ## 13. Exercise 3.2.10: Negation of a Universal Conditional II
 
-**Problem.** Write a negation of the statement "$\forall$ computer programs $P$, if $P$ compiles without error messages, then $P$ is correct".
+**Problem.** Write a negation of the statement "$`\forall`$ computer programs $P$, if $P$ compiles without error messages, then $P$ is correct".
 
 **Concepts used.** Use the same rule for negating a universal conditional statement as in Exercise 3.2.9.
 
-**Solution.** The hypothesis is "$P$ compiles without error messages" and the conclusion is "$P$ is correct". Turn $\forall$ into $\exists$, keep the hypothesis, negate the conclusion, and join them with $\wedge$.
+**Solution.** The hypothesis is "$`P`$ compiles without error messages" and the conclusion is "$`P`$ is correct". Turn $\forall$ into $\exists$, keep the hypothesis, negate the conclusion, and join them with $\wedge$.
 
 $\exists$ a computer program $P$ such that $P$ compiles without error messages and $P$ is not correct.
 
@@ -371,9 +371,9 @@ In words, "there is a computer program that compiles without error messages but 
 
 **Problem.** Rewrite "Being divisible by 8 is a sufficient condition for being divisible by 4" in if-then form.
 
-**Concepts used.** "$\forall x$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$\forall x$, if $r(x)$ then $s(x)$" (Chapter 3, Section 2). A sufficient condition is one whose truth alone guarantees that the other condition holds.
+**Concepts used.** "$`\forall x`$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$`\forall x`$, if $r(x)$ then $s(x)$" (Chapter 3, Section 2). A sufficient condition is one whose truth alone guarantees that the other condition holds.
 
-**Solution.** $r(n)$ is "$n$ is divisible by 8" and $s(n)$ is "$n$ is divisible by 4". Take the set of all integers as the domain.
+**Solution.** $r(n)$ is "$`n`$ is divisible by 8" and $s(n)$ is "$`n`$ is divisible by 4". Take the set of all integers as the domain.
 
 $\forall$ integers $n$, if $n$ is divisible by 8, then $n$ is divisible by 4.
 
@@ -387,9 +387,9 @@ Informally, "If a number is divisible by 8, then it is divisible by 4". This sta
 
 **Problem.** Rewrite "Being on time each day is a necessary condition for keeping this job" in if-then form.
 
-**Concepts used.** "$\forall x$, $r(x)$ is a **necessary condition** for $s(x)$" means "$\forall x$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$\forall x$, if $s(x)$ then $r(x)$" (Chapter 3, Section 2). A necessary condition is one without which the other condition cannot hold.
+**Concepts used.** "$`\forall x`$, $r(x)$ is a **necessary condition** for $s(x)$" means "$`\forall x`$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $s(x)$ then $r(x)$" (Chapter 3, Section 2). A necessary condition is one without which the other condition cannot hold.
 
-**Solution.** Take the set of all people as the domain, and let $r(x)$ be "$x$ is on time each day" and $s(x)$ be "$x$ keeps this job". The negation of $r(x)$ is "$x$ is not on time on some day". By the definition, the statement can be written in the following two ways, which are contrapositives of each other and hence equivalent.
+**Solution.** Take the set of all people as the domain, and let $r(x)$ be "$`x`$ is on time each day" and $s(x)$ be "$`x`$ keeps this job". The negation of $r(x)$ is "$`x`$ is not on time on some day". By the definition, the statement can be written in the following two ways, which are contrapositives of each other and hence equivalent.
 
 - $\forall$ people $x$, if $x$ is not on time on some day, then $x$ will not keep this job.
 - $\forall$ people $x$, if $x$ keeps this job, then $x$ is on time each day.
@@ -411,12 +411,12 @@ Informally, "If a number is divisible by 8, then it is divisible by 4". This sta
 | Hexadecimal notation | Since $16 = 2^4$, group binary digits in fours from the right and replace each group by a hexadecimal digit 0-F. |
 | Truth of a universal statement | It is true only if true for every element, and false if there is a single counterexample. |
 | Conditional predicate | A predicate of the form $P(x) \to Q(x)$ is false only at values where the hypothesis is true and the conclusion is false. |
-| Form of an existential statement | "Some A are B" is written "$\exists$ an A $x$ such that $x$ is B". |
-| Combining universal and existential | "All A are B" is $\forall x\,(A(x) \to B(x))$, and "some A are not B" is $\exists x\,(A(x) \wedge \sim B(x))$. |
-| Negation of a universal statement | $\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)$. |
-| Negation of a universal conditional | $\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)$. |
-| Sufficient condition | "$r$ is a sufficient condition for $s$" means "if $r$ then $s$". |
-| Necessary condition | "$r$ is a necessary condition for $s$" means "if $\sim r$ then $\sim s$", that is, "if $s$ then $r$". |
+| Form of an existential statement | "Some A are B" is written "$`\exists`$ an A $x$ such that $x$ is B". |
+| Combining universal and existential | "All A are B" is $`\forall x\,(A(x) \to B(x))`$, and "some A are not B" is $`\exists x\,(A(x) \wedge \sim B(x))`$. |
+| Negation of a universal statement | $`\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)`$. |
+| Negation of a universal conditional | $`\sim(\forall x,\ P(x) \to Q(x)) \equiv \exists x \text{ such that } P(x) \wedge \sim Q(x)`$. |
+| Sufficient condition | "$`r`$ is a sufficient condition for $s$" means "if $r$ then $s$". |
+| Necessary condition | "$`r`$ is a necessary condition for $s$" means "if $\sim r$ then $\sim s$", that is, "if $s$ then $r$". |
 
 ---
 
@@ -456,7 +456,7 @@ Informally, "If a number is divisible by 8, then it is divisible by 4". This sta
    <details>
    <summary>Answer</summary>
 
-   The negation is "$\exists$ an integer $n$ such that $n$ is prime and $n$ is not odd". Since $n = 2$ is prime and even, the negation is true and the original statement is false.
+   The negation is "$`\exists`$ an integer $n$ such that $n$ is prime and $n$ is not odd". Since $n = 2$ is prime and even, the negation is true and the original statement is false.
 
    </details>
 
@@ -465,11 +465,11 @@ Informally, "If a number is divisible by 8, then it is divisible by 4". This sta
    <details>
    <summary>Answer</summary>
 
-   "$\forall$ figures $x$, if $x$ does not have four sides, then $x$ is not a square", and its contrapositive, "$\forall$ figures $x$, if $x$ is a square, then $x$ has four sides".
+   "$`\forall`$ figures $x$, if $x$ does not have four sides, then $x$ is not a square", and its contrapositive, "$`\forall`$ figures $x$, if $x$ is a square, then $x$ has four sides".
 
    </details>
 
-6. **Counterexample:** Decide whether the statement "$\forall x \in \mathbf{R},\ x^2 \ge x$" is true.
+6. **Counterexample:** Decide whether the statement "$`\forall x \in \mathbf{R},\ x^2 \ge x`$" is true.
 
    <details>
    <summary>Answer</summary>

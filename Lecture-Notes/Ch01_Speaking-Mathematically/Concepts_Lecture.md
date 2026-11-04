@@ -98,9 +98,9 @@ Variables are used mainly for the following two purposes.
 
 As an example of the first use, consider the question whether there is a number such that doubling it and adding 3 gives the same result as squaring it. The words "the number" become more ambiguous as a sentence grows longer. Introducing a variable $x$ makes the question short and clear.
 
-$$
+```math
 \text{Is there a number } x \text{ such that } 2x + 3 = x^2 \text{?}
-$$
+```
 
 To stress the placeholder role, one may also write it with an empty box as $2 \cdot \square + 3 = \square^2$. Trying several values in the box shows that some make the two sides equal and others do not. Indeed, rearranging gives $x^2 - 2x - 3 = 0$, that is, $(x - 3)(x + 1) = 0$, so $x = 3$ or $x = -1$. For $x = 3$ the left side is $2 \cdot 3 + 3 = 9$ and the right side is $3^2 = 9$; for $x = -1$ the left side is $2 \cdot (-1) + 3 = 1$ and the right side is $(-1)^2 = 1$.
 
@@ -135,15 +135,15 @@ In the conditional example, $378 = 18 \times 21$ and $378 = 6 \times 63$, so bot
 
 Universal and existential statements are written symbolically as follows. The symbol $\forall$ is read "for all" and $\exists$ is read "there exists".
 
-$$
+```math
 \forall x \in A,\ P(x)
-$$
+```
 
 This means that the property $P(x)$ holds for every element $x$ in the set $A$.
 
-$$
+```math
 \exists y \in B \text{ such that } P(y)
-$$
+```
 
 This means that the set $B$ contains at least one element $y$ for which the property $P(y)$ is true. "Such that" is commonly abbreviated s.t. The exact grammar and meaning of these symbols are treated in Chapter 3; in this chapter they serve only as a concise shorthand for sentences.
 
@@ -173,9 +173,9 @@ All four sentences express the same statement. The ability to translate among th
 
 **Example 1.1.2 (Rewriting a Universal Conditional Statement).** Rewrite the following statement in five forms.
 
-$$
+```math
 \forall x \in \mathbf{R},\ \text{if } x \ne 0 \text{ then } x^2 > 0
-$$
+```
 
 That is, for every real number $x$, if $x$ is nonzero then $x^2$ is positive.
 
@@ -185,11 +185,11 @@ That is, for every real number $x$, if $x$ is nonzero then $x^2$ is positive.
 - (d) The square of any nonzero real number is positive.
 - (e) All nonzero real numbers have positive squares.
 
-> **Caution:** A variable $x$ introduced in the first part of a sentence must also be used in the second part. Writing "if $x$ is a nonzero real number, then the square is positive" leaves unclear what is being squared. Writing "$x^2$ is positive" as in (c) links the conclusion to the $x$ introduced earlier.
+> **Caution:** A variable $x$ introduced in the first part of a sentence must also be used in the second part. Writing "if $x$ is a nonzero real number, then the square is positive" leaves unclear what is being squared. Writing "$`x^2`$ is positive" as in (c) links the conclusion to the $x$ introduced earlier.
 
 ### 1.4 Universal Existential Statements
 
-> **Definition:** A **universal existential statement** is a statement whose first part says that a certain property is true for all objects of a given type (universal) and whose second part asserts the existence of something (existential). Symbolically it has the form $\forall x \in A,\ \exists y \in B \text{ such that } P(x, y)$, meaning that every $x$ has at least one matching $y$.
+> **Definition:** A **universal existential statement** is a statement whose first part says that a certain property is true for all objects of a given type (universal) and whose second part asserts the existence of something (existential). Symbolically it has the form $`\forall x \in A,\ \exists y \in B \text{ such that } P(x, y)`$, meaning that every $x$ has at least one matching $y$.
 
 > **Definition:** For a number $b$ to be an **additive inverse** of a number $a$ means that $a + b = 0$.
 
@@ -215,7 +215,7 @@ In (c) the lid $L$ may depend on the pot $P$. The statement is true even if each
 
 ### 1.5 Existential Universal Statements
 
-> **Definition:** An **existential universal statement** is a statement whose first part asserts that a certain object exists (existential) and whose second part says that the object satisfies a certain property for all things of a certain kind (universal). Symbolically it has the form $\exists y \in B \text{ such that } \forall x \in A,\ P(x, y)$, meaning that there is one $y$ that works for every $x$ at once.
+> **Definition:** An **existential universal statement** is a statement whose first part asserts that a certain object exists (existential) and whose second part says that the object satisfies a certain property for all things of a certain kind (universal). Symbolically it has the form $`\exists y \in B \text{ such that } \forall x \in A,\ P(x, y)`$, meaning that there is one $y$ that works for every $x$ at once.
 
 Consider the following statement.
 
@@ -236,18 +236,18 @@ This statement is true: 1 is a positive integer, and $1 \le n$ for every positiv
 
 The statement says that the class has an oldest person. If the class is a finite nonempty set, it is always true. Since $q$ may be $p$ itself in (c), the phrase must be "at least as old as" rather than "older than".
 
-> **Caution:** Swapping the universal and existential parts changes the meaning. $\forall x \in \mathbf{R},\ \exists y \in \mathbf{R} \text{ such that } x + y = 0$ is true, because for each $x$ one may choose $y = -x$. In contrast, $\exists y \in \mathbf{R} \text{ such that } \forall x \in \mathbf{R},\ x + y = 0$ is false. If such a $y$ existed, then $x = 0$ would give $0 + y = 0$, so $y = 0$; but then $x = 1$ gives $1 + 0 = 1 \ne 0$, a contradiction. For the same reason, the statement that every pot has a lid differs from the statement that one lid fits every pot.
+> **Caution:** Swapping the universal and existential parts changes the meaning. $`\forall x \in \mathbf{R},\ \exists y \in \mathbf{R} \text{ such that } x + y = 0`$ is true, because for each $x$ one may choose $y = -x$. In contrast, $`\exists y \in \mathbf{R} \text{ such that } \forall x \in \mathbf{R},\ x + y = 0`$ is false. If such a $y$ existed, then $x = 0$ would give $0 + y = 0$, so $y = 0$; but then $x = 1$ gives $1 + 0 = 1 \ne 0$, a contradiction. For the same reason, the statement that every pot has a lid differs from the statement that one lid fits every pot.
 
 The forms seen so far are summarized below.
 
 | Kind | Symbolic Form | Example |
 |:-----|:-----|:-----|
-| Universal statement | $\forall x \in A,\ P(x)$ | All positive numbers are greater than zero |
+| Universal statement | $`\forall x \in A,\ P(x)`$ | All positive numbers are greater than zero |
 | Conditional statement | If $P$ then $Q$ | If 378 is divisible by 18, then 378 is divisible by 6 |
 | Existential statement | $\exists y \in B \text{ s.t. } P(y)$ | There is a prime number that is even |
 | Universal conditional statement | $\forall x \in A$, if $P(x)$ then $Q(x)$ | For every animal $a$, if $a$ is a dog, then $a$ is a mammal |
-| Universal existential statement | $\forall x \in A,\ \exists y \in B \text{ s.t. } P(x, y)$ | Every real number has an additive inverse |
-| Existential universal statement | $\exists y \in B \text{ s.t. } \forall x \in A,\ P(x, y)$ | There is a positive integer that is less than or equal to every positive integer |
+| Universal existential statement | $`\forall x \in A,\ \exists y \in B \text{ s.t. } P(x, y)`$ | Every real number has an additive inverse |
+| Existential universal statement | $`\exists y \in B \text{ s.t. } \forall x \in A,\ P(x, y)`$ | There is a positive integer that is less than or equal to every positive integer |
 
 *Table 2. Kinds of statements and their symbolic forms*
 
@@ -255,9 +255,9 @@ The forms seen so far are summarized below.
 
 Some of the most important mathematical concepts can only be defined with all three phrases "for every", "there is", and "if-then". A typical example is the limit of a sequence. For a sequence of real numbers $a_1, a_2, a_3, \ldots$, saying that the limit of $a_n$ as $n$ approaches infinity is $L$ means the following.
 
-$$
+```math
 \forall \varepsilon \in \mathbf{R}^{+},\ \exists N \in \mathbf{Z} \text{ such that } \forall n \in \mathbf{Z},\ \text{if } n > N \text{ then } -\varepsilon < a_n - L < \varepsilon
-$$
+```
 
 That is, for every positive real number $\varepsilon$, there is an integer $N$ such that for every integer $n$, if $n > N$ then $-\varepsilon < a_n - L < \varepsilon$. The definition stacks a universal part for $\varepsilon$, an existential part for $N$, a universal part for $n$, and a conditional statement, in that order. Because $N$ is determined after $\varepsilon$ is chosen, $N$ may depend on $\varepsilon$.
 
@@ -284,7 +284,7 @@ When there are many or infinitely many elements, an **ellipsis** $\ldots$ shows 
 
 According to the **axiom of extension**, a set is completely determined by what its elements are. The order in which the elements are listed and whether some elements are listed more than once do not affect the set.
 
-The set with no elements is called the **empty set** and is written $\emptyset$. In set-roster notation, $\emptyset = \lbrace \ \rbrace$. Properties of the empty set are treated in detail in Chapter 6.
+The set with no elements is called the **empty set** and is written $\emptyset$. In set-roster notation, $`\emptyset = \lbrace \ \rbrace`$. Properties of the empty set are treated in detail in Chapter 6.
 
 **Example 1.2.1 (Using the Set-Roster Notation).**
 
@@ -312,7 +312,7 @@ Frequently used sets of numbers have special symbols.
 
 The superscripts $+$, $-$, and nonneg indicate that only the positive, negative, or nonnegative elements are included. $\mathbf{Z}$ is the first letter of the German word Zahlen, meaning numbers. When written by hand, the bold letters are replaced by the double-struck forms $\mathbb{R}$, $\mathbb{Q}$, and $\mathbb{Z}$. A **rational number** is a number that can be written as a quotient of integers; it is defined precisely in Chapter 4.
 
-> **Caution:** $\mathbf{Z}$ is a symbol for the set of all integers, not a shorthand for the word integer. Writing "$x$ is $\mathbf{Z}$" is wrong; write "$x \in \mathbf{Z}$" or "$x$ is an integer".
+> **Caution:** $\mathbf{Z}$ is a symbol for the set of all integers, not a shorthand for the word integer. Writing "$`x`$ is $\mathbf{Z}$" is wrong; write "$`x \in \mathbf{Z}`$" or "$`x`$ is an integer".
 
 Some authors call the set of nonnegative integers the set of natural numbers $\mathbf{N}$, while others call only the positive integers natural numbers. To prevent confusion, this chapter also avoids the phrase natural numbers and distinguishes $\mathbf{Z}^{+}$ from $\mathbf{Z}^{\text{nonneg}}$.
 
@@ -330,7 +330,9 @@ Another way to specify a set is to state the condition its elements must satisfy
 
 > **Definition:** **Set-builder notation**: Let $S$ be a set and let $P(x)$ be a property that elements of $S$ may or may not satisfy. The set of all elements $x$ in $S$ such that $P(x)$ is true is denoted as follows.
 >
-> $$\lbrace x \in S \mid P(x) \rbrace$$
+> ```math
+> \lbrace x \in S \mid P(x) \rbrace
+> ```
 
 The left-hand brace is read "the set of all" and the vertical line is read "such that". The expression is therefore read as the set of all elements $x$ in $S$ such that $P(x)$ is true. A vertical line stands for "such that" only inside set-builder notation. In all other mathematical contexts, "such that" is abbreviated as s.t., s.th., or the symbol $\ni$.
 
@@ -354,15 +356,17 @@ The most basic relation between sets is that of subset.
 
 > **Definition:** If $A$ and $B$ are sets, then $A$ is called a **subset** of $B$, written $A \subseteq B$, if, and only if, every element of $A$ is also an element of $B$. Symbolically:
 >
-> $$A \subseteq B \iff \text{for every } x, \text{ if } x \in A \text{ then } x \in B$$
+> ```math
+> A \subseteq B \iff \text{for every } x, \text{ if } x \in A \text{ then } x \in B
+> ```
 >
 > The phrases $A$ is contained in $B$ and $B$ contains $A$ are alternative ways of saying the same thing.
 
 Negating the definition of subset, for a set $A$ not to be a subset of a set $B$ means that there is at least one element of $A$ that is not an element of $B$.
 
-$$
+```math
 A \nsubseteq B \iff \text{there is at least one element } x \text{ such that } x \in A \text{ and } x \notin B
-$$
+```
 
 > **Definition:** Let $A$ and $B$ be sets. $A$ is a **proper subset** of $B$, written $A \subsetneq B$, if, and only if, every element of $A$ is in $B$ but there is at least one element of $B$ that is not in $A$.
 
@@ -384,7 +388,7 @@ In Figure 3(b), the element $y$ is in $B$ but not in $A$, so $A$ is a proper sub
 
 Combining (e) with the definition of proper subset, every set is a subset of itself, but no set is a proper subset of itself, because $A$ cannot have an element that is not in $A$.
 
-**Example 1.2.4 (Distinction between $\in$ and $\subseteq$).** Of the following statements, only (a), (d), and (f) are true.
+**Example 1.2.4 (Distinction between $\in$ and $`\subseteq`$).** Of the following statements, only (a), (d), and (f) are true.
 
 | Statement | Result | Reason |
 |:-----|:-----|:-----|
@@ -405,9 +409,9 @@ When Cantor's set theory appeared in the late nineteenth century, it began to se
 
 In 1914, Norbert Wiener and Felix Hausdorff each gave definitions of an ordered pair as a certain type of set, but both were somewhat awkward. In 1921, Kazimierz Kuratowski published the following definition, which has since become standard.
 
-$$
+```math
 (a, b) = \lbrace \lbrace a \rbrace, \lbrace a, b \rbrace \rbrace
-$$
+```
 
 The elements of this set are $\lbrace a \rbrace$ and $\lbrace a, b \rbrace$. If $a \ne b$, the two elements are distinct sets, and $a$ is in both sets whereas $b$ is in only one. This difference distinguishes $a$ as the first element and $b$ as the second element. If $a = b$, the set becomes $\lbrace \lbrace a \rbrace, \lbrace a, a \rbrace \rbrace = \lbrace \lbrace a \rbrace \rbrace$, and $a$ is both the first and the second element.
 
@@ -420,7 +424,9 @@ In both cases $a = c$ and $b = d$, so Kuratowski's definition distinguishes orde
 
 > **Definition:** Given elements $a$ and $b$, the symbol $(a, b)$ denotes the **ordered pair** consisting of $a$ and $b$ together with the specification that $a$ is the **first element** and $b$ is the **second element**. Two ordered pairs $(a, b)$ and $(c, d)$ are equal if, and only if, $a = c$ and $b = d$.
 >
-> $$(a, b) = (c, d) \iff a = c \text{ and } b = d$$
+> ```math
+> (a, b) = (c, d) \iff a = c \text{ and } b = d
+> ```
 
 **Example 1.2.5 (Ordered Pairs).**
 
@@ -432,7 +438,9 @@ The ordered n-tuple generalizes the notation for an ordered pair to any finite n
 
 > **Definition:** Let $n$ be a positive integer and let $x_1, x_2, \ldots, x_n$ be (not necessarily distinct) elements. The **ordered n-tuple** $(x_1, x_2, \ldots, x_n)$ consists of $x_1, x_2, \ldots, x_n$ together with the ordering: first $x_1$, then $x_2$, and so forth up to $x_n$. An ordered 2-tuple is called an ordered pair, and an ordered 3-tuple is called an **ordered triple**. Two ordered n-tuples are equal if, and only if, all corresponding components are equal.
 >
-> $$(x_1, x_2, \ldots, x_n) = (y_1, y_2, \ldots, y_n) \iff x_1 = y_1,\ x_2 = y_2,\ \ldots,\ x_n = y_n$$
+> ```math
+> (x_1, x_2, \ldots, x_n) = (y_1, y_2, \ldots, y_n) \iff x_1 = y_1,\ x_2 = y_2,\ \ldots,\ x_n = y_n
+> ```
 
 **Example 1.2.6 (Ordered n-Tuples).**
 
@@ -445,7 +453,9 @@ The ordered n-tuple generalizes the notation for an ordered pair to any finite n
 
 > **Definition:** Given sets $A_1, A_2, \ldots, A_n$, the **Cartesian product** of $A_1, A_2, \ldots, A_n$, denoted $A_1 \times A_2 \times \cdots \times A_n$, is the set of all ordered n-tuples $(a_1, a_2, \ldots, a_n)$ where $a_1 \in A_1$, $a_2 \in A_2$, $\ldots$, $a_n \in A_n$.
 >
-> $$A_1 \times A_2 \times \cdots \times A_n = \lbrace (a_1, a_2, \ldots, a_n) \mid a_1 \in A_1,\ a_2 \in A_2,\ \ldots,\ a_n \in A_n \rbrace$$
+> ```math
+> A_1 \times A_2 \times \cdots \times A_n = \lbrace (a_1, a_2, \ldots, a_n) \mid a_1 \in A_1,\ a_2 \in A_2,\ \ldots,\ a_n \in A_n \rbrace
+> ```
 >
 > In particular, $A_1 \times A_2 = \lbrace (a_1, a_2) \mid a_1 \in A_1 \text{ and } a_2 \in A_2 \rbrace$ is the Cartesian product of $A_1$ and $A_2$.
 
@@ -453,43 +463,43 @@ The ordered n-tuple generalizes the notation for an ordered pair to any finite n
 
 (a) The first component is taken from $A$ and the second from $B$.
 
-$$
+```math
 A \times B = \lbrace (x, 1), (y, 1), (x, 2), (y, 2), (x, 3), (y, 3) \rbrace
-$$
+```
 
 (b) Reversing the order, the first component comes from $B$.
 
-$$
+```math
 B \times A = \lbrace (1, x), (1, y), (2, x), (2, y), (3, x), (3, y) \rbrace
-$$
+```
 
 (c) The product of a set with itself is also defined.
 
-$$
+```math
 A \times A = \lbrace (x, x), (x, y), (y, x), (y, y) \rbrace
-$$
+```
 
 (d) $A \times B$ has 6 elements, the number of elements of $A$, 2, times the number of elements of $B$, 3. $B \times A$ also has $3 \times 2 = 6$ elements, and $A \times A$ has $2 \times 2 = 4$. This is why it makes sense to call a Cartesian product a product, and the counting principle is generalized as the multiplication rule in Chapter 9.
 
 (e) Since $A \times B$ is a set, it may itself be used to make up another Cartesian product. $(A \times B) \times C$ is the set of ordered pairs whose first component is an element of $A \times B$, that is, an ordered pair.
 
-$$
+```math
 \begin{aligned}
 (A \times B) \times C &= \lbrace (u, v) \mid u \in A \times B \text{ and } v \in C \rbrace \\
 &= \lbrace ((x, 1), a), ((x, 2), a), ((x, 3), a), ((y, 1), a), ((y, 2), a), ((y, 3), a), \\
 &\qquad ((x, 1), b), ((x, 2), b), ((x, 3), b), ((y, 1), b), ((y, 2), b), ((y, 3), b) \rbrace
 \end{aligned}
-$$
+```
 
 (f) $A \times B \times C$ is superficially similar to $(A \times B) \times C$ but is not the same mathematical object. $(A \times B) \times C$ is a set of ordered pairs one of whose components is itself an ordered pair, whereas $A \times B \times C$ is a set of ordered triples.
 
-$$
+```math
 \begin{aligned}
 A \times B \times C &= \lbrace (u, v, w) \mid u \in A,\ v \in B, \text{ and } w \in C \rbrace \\
 &= \lbrace (x, 1, a), (x, 2, a), (x, 3, a), (y, 1, a), (y, 2, a), (y, 3, a), \\
 &\qquad (x, 1, b), (x, 2, b), (x, 3, b), (y, 1, b), (y, 2, b), (y, 3, b) \rbrace
 \end{aligned}
-$$
+```
 
 Both sets have $2 \times 3 \times 2 = 12$ elements, but, for example, $((x, 1), a)$ is an ordered pair and $(x, 1, a)$ is an ordered triple, so they are different elements.
 
@@ -511,9 +521,9 @@ For example, the ordered triple $(a, b, a)$ written as a string is $aba$, which 
 
 **Example 1.2.8 (Strings).** Let $A = \lbrace a, b \rbrace$. List all the strings of length 3 over $A$ in which some character appears at least twice. The answer consists of the following 8 strings.
 
-$$
+```math
 aab,\ aba,\ baa,\ aaa,\ bba,\ bab,\ abb,\ bbb
-$$
+```
 
 A string of length 3 over $A$ puts $a$ or $b$ in each position, so there are $2 \times 2 \times 2 = 8$ such strings in all. In other words, every string of length 3 satisfies the condition. With only two characters for three positions, some two positions must hold the same character; this argument is the pigeonhole principle of Chapter 9.
 
@@ -543,13 +553,13 @@ There are many kinds of relationships in the world. Two people are related by bl
 
 The objects of mathematics may be related in various ways as well. Sets $A$ and $B$ may be related if $A$ is a subset of $B$, if $A$ is not a subset of $B$, or if $A$ and $B$ have at least one element in common. Numbers $x$ and $y$ may be related if $x < y$, if $x$ is a factor of $y$, or if $x^2 + y^2 = 1$. Two identifiers in a computer program may be related if they have the same first eight characters, or if the same memory location is used to store their values when the program is executed.
 
-As a concrete example, let $A = \lbrace 0, 1, 2 \rbrace$ and $B = \lbrace 1, 2, 3 \rbrace$, and say that an element $x$ in $A$ is related to an element $y$ in $B$ if, and only if, $x < y$. Writing $x \mathrel{R} y$ as shorthand for the sentence "$x$ is related to $y$", the following hold.
+As a concrete example, let $A = \lbrace 0, 1, 2 \rbrace$ and $B = \lbrace 1, 2, 3 \rbrace$, and say that an element $x$ in $A$ is related to an element $y$ in $B$ if, and only if, $x < y$. Writing $x \mathrel{R} y$ as shorthand for the sentence "$`x`$ is related to $y$", the following hold.
 
-$$
+```math
 0 \mathrel{R} 1,\quad 0 \mathrel{R} 2,\quad 0 \mathrel{R} 3,\quad 1 \mathrel{R} 2,\quad 1 \mathrel{R} 3,\quad 2 \mathrel{R} 3
-$$
+```
 
-These hold because $0 < 1$, $0 < 2$, $0 < 3$, $1 < 2$, $1 < 3$, and $2 < 3$. On the other hand, writing $x \not\mathrel{R} y$ for the sentence "$x$ is not related to $y$" gives $1 \not\mathrel{R} 1$, $2 \not\mathrel{R} 1$, and $2 \not\mathrel{R} 2$, because $1 \not< 1$, $2 \not< 1$, and $2 \not< 2$.
+These hold because $0 < 1$, $0 < 2$, $0 < 3$, $1 < 2$, $1 < 3$, and $2 < 3$. On the other hand, writing $x \not\mathrel{R} y$ for the sentence "$`x`$ is not related to $y$" gives $1 \not\mathrel{R} 1$, $2 \not\mathrel{R} 1$, and $2 \not\mathrel{R} 2$, because $1 \not< 1$, $2 \not< 1$, and $2 \not< 2$.
 
 As seen in Section 2.6, $A \times B = \lbrace (x, y) \mid x \in A \text{ and } y \in B \rbrace$, which here has $3 \times 3 = 9$ elements. Marking the ordered pairs whose components are related gives the following.
 
@@ -563,9 +573,9 @@ As seen in Section 2.6, $A \times B = \lbrace (x, y) \mid x \in A \text{ and } y
 
 Collecting only the ordered pairs whose components are related gives the following set.
 
-$$
+```math
 \lbrace (0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3) \rbrace
-$$
+```
 
 Knowing which ordered pairs lie in this set is equivalent to knowing which elements are related to which. The relation itself can therefore be thought of as the totality of ordered pairs whose elements are related by the given condition. The formal definition of relation based on this idea was introduced by the American mathematician and logician C. S. Peirce in the nineteenth century.
 
@@ -573,13 +583,15 @@ Knowing which ordered pairs lie in this set is equivalent to knowing which eleme
 
 > **Definition:** Let $A$ and $B$ be sets. A **relation** $R$ from $A$ to $B$ is a subset of $A \times B$. Given an ordered pair $(x, y)$ in $A \times B$, $x$ is related to $y$ by $R$, written $x \mathrel{R} y$, if, and only if, $(x, y)$ is in $R$. The set $A$ is called the **domain** of $R$ and the set $B$ is called its **co-domain**.
 >
-> $$x \mathrel{R} y \iff (x, y) \in R, \qquad x \not\mathrel{R} y \iff (x, y) \notin R$$
+> ```math
+> x \mathrel{R} y \iff (x, y) \in R, \qquad x \not\mathrel{R} y \iff (x, y) \notin R
+> ```
 
 **Example 1.3.1 (A Relation as a Subset).** Let $A = \lbrace 1, 2 \rbrace$ and $B = \lbrace 1, 2, 3 \rbrace$, and define a relation $R$ from $A$ to $B$ as follows: for any $(x, y) \in A \times B$,
 
-$$
+```math
 (x, y) \in R \iff \frac{x - y}{2} \text{ is an integer}
-$$
+```
 
 (a) $A \times B = \lbrace (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3) \rbrace$. To determine the elements of $R$, examine whether each ordered pair in $A \times B$ satisfies the defining condition.
 
@@ -604,9 +616,9 @@ $\frac{x - y}{2}$ is an integer exactly when $x - y$ is even, that is, when $x$ 
 
 **Example 1.3.2 (The Circle Relation).** Define a relation $C$ from $\mathbf{R}$ to $\mathbf{R}$ as follows: for any $(x, y) \in \mathbf{R} \times \mathbf{R}$,
 
-$$
+```math
 (x, y) \in C \iff x^2 + y^2 = 1.
-$$
+```
 
 (a) Decide whether several ordered pairs are in $C$. $x \mathrel{C} y$ means the same as $(x, y) \in C$.
 
@@ -640,9 +652,9 @@ Suppose $R$ is a relation from a set $A$ to a set $B$. The **arrow diagram** for
 1. Represent the elements of $A$ as points in one region and the elements of $B$ as points in another region.
 2. For each $x$ in $A$ and $y$ in $B$, draw an arrow from $x$ to $y$ if, and only if, $x$ is related to $y$ by $R$.
 
-$$
+```math
 \text{draw an arrow from } x \text{ to } y \iff x \mathrel{R} y \iff (x, y) \in R
-$$
+```
 
 The relation $x < y$ of Section 3.1 drawn as an arrow diagram is shown in Figure 6.
 
@@ -652,9 +664,9 @@ The relation $x < y$ of Section 3.1 drawn as an arrow diagram is shown in Figure
 
 **Example 1.3.3 (Arrow Diagrams of Relations).** Let $A = \lbrace 1, 2, 3 \rbrace$ and $B = \lbrace 1, 3, 5 \rbrace$, and define relations $S$ and $T$ from $A$ to $B$ as follows: for every $(x, y) \in A \times B$,
 
-$$
+```math
 (x, y) \in S \iff x < y, \qquad T = \lbrace (2, 1), (2, 5) \rbrace.
-$$
+```
 
 $S$ is a "less than" relation. Of the nine ordered pairs in $A \times B$, the five with $x < y$ are $(1, 3)$, $(1, 5)$, $(2, 3)$, $(2, 5)$, and $(3, 5)$, so $S = \lbrace (1, 3), (1, 5), (2, 3), (2, 5), (3, 5) \rbrace$. The pairs $(1, 1)$, $(2, 1)$, $(3, 1)$, and $(3, 3)$ are not in $S$ because $1 < 1$, $2 < 1$, $3 < 1$, and $3 < 3$ are false.
 
@@ -662,7 +674,7 @@ $S$ is a "less than" relation. Of the nine ordered pairs in $A \times B$, the fi
 
 *Figure 7. Arrow diagrams of the relations S and T of Example 1.3.3*
 
-These relations illustrate that several arrows may come out of the same element of $A$ pointing in different directions (1 and 2 in $S$, and 2 in $T$). It is also quite possible for an element of $A$ to have no arrow coming out of it (1 and 3 in $T$).
+These relations illustrate that several arrows may come out of the same element of $A$ pointing in different directions (1 and 2 in $S$, and 2 in $`T`$). It is also quite possible for an element of $A$ to have no arrow coming out of it (1 and 3 in $`T`$).
 
 ### 3.4 Functions
 
@@ -680,7 +692,7 @@ Stated less formally, a relation $F$ from $A$ to $B$ is a function if, and only 
 
 In most mathematical situations a function is thought of as sending elements of one set, the domain, to elements of another set, the co-domain. If $F$ is a function from $A$ to $B$, then for a given element $x$ of $A$, property 1 guarantees that at least one element of $B$ is related to $x$, and property 2 guarantees that there is at most one such element. Hence each element of the domain corresponds to exactly one element of the co-domain, and that element can be given a special name.
 
-> **Definition:** If $F$ is a function from $A$ to $B$, then for any element $x$ in $A$, the unique element of $B$ that is related to $x$ by $F$ is denoted $F(x)$, which is read "$F$ of $x$". That is, $x \mathrel{F} y \iff y = F(x)$.
+> **Definition:** If $F$ is a function from $A$ to $B$, then for any element $x$ in $A$, the unique element of $B$ that is related to $x$ by $F$ is denoted $F(x)$, which is read "$`F`$ of $x$". That is, $x \mathrel{F} y \iff y = F(x)$.
 
 **Example 1.3.4 (Functions and Relations on Finite Sets).** Let $A = \lbrace 2, 4, 6 \rbrace$ and $B = \lbrace 1, 3, 5 \rbrace$. Determine which of the relations $R$, $S$, and $T$ below are functions from $A$ to $B$.
 
@@ -745,23 +757,23 @@ A function is an entity in its own right. It can be thought of as a certain rela
 
 A relation is a subset of a Cartesian product, and a function is a special kind of relation. Specifically, if $f$ and $g$ are functions from a set $A$ to a set $B$, then the following hold.
 
-$$
+```math
 f = \lbrace (x, y) \in A \times B \mid y = f(x) \rbrace, \qquad g = \lbrace (x, y) \in A \times B \mid y = g(x) \rbrace
-$$
+```
 
 Two functions are equal when these two sets are equal, which gives the following equality condition.
 
-$$
+```math
 f = g \iff f(x) = g(x) \text{ for all } x \text{ in } A
-$$
+```
 
 **Example 1.3.7 (Equality of Functions).** Define functions $f$ and $g$ from $\mathbf{R}$ to $\mathbf{R}$ by the following formulas for every $x \in \mathbf{R}$.
 
-$$
+```math
 f(x) = |x|, \qquad g(x) = \sqrt{x^2}
-$$
+```
 
-$f = g$, because the absolute value of any real number equals the square root of its square. Using the fact that the symbol $\sqrt{\ }$ denotes the nonnegative square root, check this by cases.
+$f = g$, because the absolute value of any real number equals the square root of its square. Using the fact that the symbol $`\sqrt{\ }`$ denotes the nonnegative square root, check this by cases.
 
 1. If $x \ge 0$, then $x$ is a nonnegative square root of $x^2$, so $\sqrt{x^2} = x = |x|$.
 2. If $x < 0$, then $-x > 0$ and $(-x)^2 = x^2$, so $\sqrt{x^2} = -x$, and by the definition of absolute value $|x| = -x$. Hence $\sqrt{x^2} = |x|$.
@@ -873,7 +885,7 @@ A graph is usually pictured with dots for vertices and line segments or curves f
 
 - Edges incident on $v_1$: $e_1$, $e_2$, $e_3$
 - Vertices adjacent to $v_1$: $v_2$, $v_3$
-- Edges adjacent to $e_1$: $e_2$, $e_3$, $e_4$ ($e_2$ and $e_3$ share the endpoint $v_1$ with $e_1$, and $e_4$ shares $v_2$)
+- Edges adjacent to $e_1$: $e_2$, $e_3$, $e_4$ ($e_2$ and $e_3$ share the endpoint $v_1$ with $e_1$, and $e_4$ shares $`v_2`$)
 - Loops: $e_6$, $e_7$
 - Parallel edges: $e_2$ and $e_3$
 - Vertices adjacent to themselves: $v_5$, $v_6$
@@ -1017,9 +1029,9 @@ graph LR
 
 Finding a way from the initial state to the goal in the graph solves the puzzle. One such sequence is the following.
 
-$$
+```math
 (vvccB /) \to (vc / Bvc) \to (vvcB / c) \to (c / Bvvc) \to (ccB / vv) \to (/ Bvvcc)
-$$
+```
 
 In words, one vegetarian and one cannibal cross, the vegetarian returns alone, the two vegetarians cross, the cannibal returns alone, and finally the two cannibals cross. Since there are two ways between the initial state and $(vvcB / c)$ and two ways between $(c / Bvvc)$ and the goal, there are $2 \times 2 = 4$ solutions with five moves. From $(vvc / Bc)$ and $(cc / Bvv)$ the only move leads back to the initial state, so these two states are dead ends.
 
@@ -1049,7 +1061,7 @@ In Figure 21(a), one loop and three ordinary edges are incident on $v$. The end 
 - $\deg(v_2) = 2$, since both $e_1$ and $e_2$ are incident on $v_2$.
 - $\deg(v_3) = 4$, since $e_1$ and $e_2$ are incident on $v_3$ and the loop $e_3$ is also incident on $v_3$, contributing 2 to the degree. Thus $1 + 1 + 2 = 4$.
 
-In the same way, the degrees in the graph of Example 1.4.1 (Figure 14) are $\deg(v_1) = 3$ ($e_1$, $e_2$, $e_3$), $\deg(v_2) = 2$ ($e_1$, $e_4$), $\deg(v_3) = 3$ ($e_2$, $e_3$, $e_4$), $\deg(v_4) = 0$, $\deg(v_5) = 1 + 2 = 3$ ($e_5$ and the loop $e_6$), and $\deg(v_6) = 1 + 2 = 3$ ($e_5$ and the loop $e_7$). The sum of the degrees is $3 + 2 + 3 + 0 + 3 + 3 = 14$, twice the number of edges, 7; in Example 1.4.8 as well, $0 + 2 + 4 = 6$ is twice the number of edges, 3. That this holds for every graph is proved in Chapter 10.
+In the same way, the degrees in the graph of Example 1.4.1 (Figure 14) are $\deg(v_1) = 3$ ($e_1$, $e_2$, $`e_3`$), $\deg(v_2) = 2$ ($e_1$, $`e_4`$), $\deg(v_3) = 3$ ($e_2$, $e_3$, $`e_4`$), $\deg(v_4) = 0$, $\deg(v_5) = 1 + 2 = 3$ ($e_5$ and the loop $`e_6`$), and $\deg(v_6) = 1 + 2 = 3$ ($e_5$ and the loop $`e_7`$). The sum of the degrees is $3 + 2 + 3 + 0 + 3 + 3 = 14$, twice the number of edges, 7; in Example 1.4.8 as well, $0 + 2 + 4 = 6$ is twice the number of edges, 3. That this holds for every graph is proved in Chapter 10.
 
 ### 4.8 Graph Coloring
 
@@ -1175,7 +1187,7 @@ A variety of problems can be modeled by representing their features with a graph
 | $\emptyset$ and $\lbrace \emptyset \rbrace$ are the same set. | **F.** $\emptyset$ has no elements, while $\lbrace \emptyset \rbrace$ has the single element $\emptyset$. |
 | Every set is a proper subset of itself. | **F.** Every set is a subset of itself, but it cannot have an element outside itself, so it is not a proper subset of itself. |
 | If $A = \lbrace 1, 2 \rbrace$ and $B = \lbrace a \rbrace$, then $A \times B = B \times A$. | **F.** $(1, a) \in A \times B$, but the elements of $B \times A$ have first component $a$, so $(1, a) \notin B \times A$. |
-| $\forall x \in \mathbf{R},\ \exists y \in \mathbf{R} \text{ s.t. } x + y = 0$ and $\exists y \in \mathbf{R} \text{ s.t. } \forall x \in \mathbf{R},\ x + y = 0$ mean the same thing. | **F.** The first is true with $y = -x$, but the second demands a single $y$ that works for every $x$, so it is false. |
+| $`\forall x \in \mathbf{R},\ \exists y \in \mathbf{R} \text{ s.t. } x + y = 0`$ and $`\exists y \in \mathbf{R} \text{ s.t. } \forall x \in \mathbf{R},\ x + y = 0`$ mean the same thing. | **F.** The first is true with $y = -x$, but the second demands a single $y$ that works for every $x$, so it is false. |
 | In the arrow diagram of a function, exactly one arrow must enter each element of the co-domain. | **F.** The condition is that exactly one arrow leaves each element of the domain. An element of the co-domain may receive several arrows or none. |
 | A graph with no edges satisfies the definition of a graph. | **T.** Only $V(G)$ must be nonempty; $E(G)$ may be empty. |
 | A loop adds 2 to the degree of its endpoint. | **T.** In the definition of degree, a loop is counted twice. |
@@ -1191,13 +1203,13 @@ A variety of problems can be modeled by representing their features with a graph
 | Variable | A temporary name for an object, used to compute with an object whose value is unknown or to speak generally about all elements of a set. |
 | Universal, conditional, and existential statements | A statement that a property is true for all elements, a statement that if one thing is true then another is also true, and a statement that at least one thing has the property, respectively. |
 | Universal conditional statement | A statement of the form for every $x$, if $P(x)$ then $Q(x)$, which can be rewritten to look purely conditional or purely universal. |
-| Universal existential and existential universal statements | In $\forall x\ \exists y$ each $x$ may have its own $y$, while in $\exists y\ \forall x$ one $y$ must work for every $x$, so swapping the order changes the meaning. |
+| Universal existential and existential universal statements | In $`\forall x\ \exists y`$ each $x$ may have its own $y$, while in $`\exists y\ \forall x`$ one $y$ must work for every $x$, so swapping the order changes the meaning. |
 | Sets and set-roster notation | A set is determined only by its elements (axiom of extension), so the order of listing and repetitions do not matter. |
 | Set-builder notation | $\lbrace x \in S \mid P(x) \rbrace$ is the set of all elements of $S$ for which $P(x)$ is true; the same condition with a different $S$ gives a different set. |
 | Subset and proper subset | $A \subseteq B$ means that every element of $A$ is in $B$; a proper subset additionally requires at least one element of $B$ that is not in $A$. |
 | $\in$ and $\subseteq$ | $\in$ relates an element to a set, while $\subseteq$ relates a set to a set. |
 | Ordered pairs and ordered n-tuples | $(a, b) = (c, d)$ holds only when $a = c$ and $b = d$; Kuratowski defined $(a, b)$ as $\lbrace \lbrace a \rbrace, \lbrace a, b \rbrace \rbrace$. |
-| Cartesian product | $A_1 \times \cdots \times A_n$ is the set of all ordered n-tuples whose $i$th component is in $A_i$; $(A \times B) \times C$ and $A \times B \times C$ are different objects. |
+| Cartesian product | $A_1 \times \cdots \times A_n$ is the set of all ordered n-tuples whose $`i`$th component is in $A_i$; $(A \times B) \times C$ and $A \times B \times C$ are different objects. |
 | String | A string of length $n$ over a finite set $A$ is an ordered n-tuple written without parentheses or commas; the null string $\lambda$ has length 0. |
 | Relation | A relation from $A$ to $B$ is a subset of $A \times B$, and $x \mathrel{R} y$ means $(x, y) \in R$. $A$ is the domain and $B$ the co-domain. |
 | Arrow diagram | A relation is pictured by drawing an arrow from $x$ to $y$ if, and only if, $x \mathrel{R} y$. |
@@ -1220,7 +1232,7 @@ A variety of problems can be modeled by representing their features with a graph
    <details>
    <summary>Answer</summary>
 
-   As a universal existential statement: for every integer $n$, there is an integer $m$ such that $m > n$, that is, $\forall n \in \mathbf{Z},\ \exists m \in \mathbf{Z} \text{ s.t. } m > n$. It is true because $m = n + 1$ works for each $n$. Swapping the order gives $\exists m \in \mathbf{Z} \text{ s.t. } \forall n \in \mathbf{Z},\ m > n$, the statement that some integer $m$ is larger than every integer. If such an $m$ existed, taking $n = m$ would require $m > m$, a contradiction. Hence it is false.
+   As a universal existential statement: for every integer $n$, there is an integer $m$ such that $m > n$, that is, $`\forall n \in \mathbf{Z},\ \exists m \in \mathbf{Z} \text{ s.t. } m > n`$. It is true because $m = n + 1$ works for each $n$. Swapping the order gives $`\exists m \in \mathbf{Z} \text{ s.t. } \forall n \in \mathbf{Z},\ m > n`$, the statement that some integer $m$ is larger than every integer. If such an $m$ existed, taking $n = m$ would require $m > m$, a contradiction. Hence it is false.
 
    </details>
 
@@ -1238,7 +1250,7 @@ A variety of problems can be modeled by representing their features with a graph
    <details>
    <summary>Answer</summary>
 
-   The elements of $X$ are the three objects $1$, $\lbrace 1 \rbrace$, and $\lbrace 2, 3 \rbrace$. (a) True: $\lbrace 1 \rbrace$ is in the list of elements. (b) True: the only element of $\lbrace 1 \rbrace$, namely 1, is an element of $X$. (c) False: the element 2 of $\lbrace 2 \rbrace$ is not an element of $X$ (2 is only an element of $\lbrace 2, 3 \rbrace$). (d) True: the only element of $\lbrace \lbrace 2, 3 \rbrace \rbrace$, namely $\lbrace 2, 3 \rbrace$, is an element of $X$.
+   The elements of $X$ are the three objects $1$, $\lbrace 1 \rbrace$, and $\lbrace 2, 3 \rbrace$. (a) True: $\lbrace 1 \rbrace$ is in the list of elements. (b) True: the only element of $\lbrace 1 \rbrace$, namely 1, is an element of $X$. (c) False: the element 2 of $\lbrace 2 \rbrace$ is not an element of $X$ (2 is only an element of $`\lbrace 2, 3 \rbrace`$). (d) True: the only element of $\lbrace \lbrace 2, 3 \rbrace \rbrace$, namely $\lbrace 2, 3 \rbrace$, is an element of $X$.
 
    </details>
 
@@ -1292,7 +1304,7 @@ A variety of problems can be modeled by representing their features with a graph
    <details>
    <summary>Answer</summary>
 
-   The loop is $e_4$, which has one endpoint; the parallel edges are $e_1$ and $e_2$, which have the same set of endpoints; and the isolated vertex is $v_4$, which is an endpoint of no edge. The degrees are $\deg(v_1) = 2$ ($e_1$, $e_2$), $\deg(v_2) = 3$ ($e_1$, $e_2$, $e_3$), $\deg(v_3) = 1 + 2 = 3$ ($e_3$ and the loop $e_4$), and $\deg(v_4) = 0$. The sum of the degrees, $2 + 3 + 3 + 0 = 8$, is twice the number of edges, 4.
+   The loop is $e_4$, which has one endpoint; the parallel edges are $e_1$ and $e_2$, which have the same set of endpoints; and the isolated vertex is $v_4$, which is an endpoint of no edge. The degrees are $\deg(v_1) = 2$ ($e_1$, $`e_2`$), $\deg(v_2) = 3$ ($e_1$, $e_2$, $`e_3`$), $\deg(v_3) = 1 + 2 = 3$ ($e_3$ and the loop $`e_4`$), and $\deg(v_4) = 0$. The sum of the degrees, $2 + 3 + 3 + 0 = 8$, is twice the number of edges, 4.
 
    </details>
 

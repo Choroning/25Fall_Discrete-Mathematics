@@ -46,9 +46,9 @@
 
 Hence the term with index $k$ is $(-1)^k r^k$, and since $k$ runs from 0 to 5 the sum is written as follows.
 
-$$
+```math
 1 - r + r^2 - r^3 + r^4 - r^5 = \sum_{k=0}^{5} (-1)^k r^k
-$$
+```
 
 **Answer.** $\sum_{k=0}^{5} (-1)^k r^k$. Expanding the summation reproduces the last row of Table 1, so it equals the original expression.
 
@@ -66,9 +66,9 @@ $$
 
 **Concept used.** Theorem 5.2.2 (the sum of a geometric sequence) in [Chapter 5, Section 2](../../Lecture-Notes/Ch05_Sequences-Mathematical-Induction-and-Recursion/Concepts_Lecture.md) states that the following holds for any real number $r$ except 1 and any integer $n \ge 0$, and it is proved there by mathematical induction.
 
-$$
+```math
 \sum_{i=0}^{n} r^i = \frac{r^{n+1} - 1}{r - 1} \qquad (r \ne 1)
-$$
+```
 
 In addition, the generalized distributive law $c \cdot \sum_{i} a_i = \sum_{i} c \cdot a_i$ of Theorem 5.1.1 lets a common factor be moved outside a summation.
 
@@ -77,18 +77,18 @@ In addition, the generalized distributive law $c \cdot \sum_{i} a_i = \sum_{i} c
 1. The exponents are $m, m+1, \ldots, m+n$, so for each $i = 0, 1, \ldots, n$ there is exactly one term with exponent $m + i$. Hence there are $n + 1$ terms and $S = \sum_{i=0}^{n} ar^{m+i}$.
 2. By the laws of exponents $ar^{m+i} = ar^m \cdot r^i$, so the generalized distributive law moves the common factor $ar^m$ outside.
 
-$$
+```math
 S = \sum_{i=0}^{n} ar^{m+i} = \sum_{i=0}^{n} ar^m \cdot r^i = ar^m \sum_{i=0}^{n} r^i
-$$
+```
 
 3. If $r \ne 1$, Theorem 5.2.2 applies, so $S = ar^m \cdot \frac{r^{n+1} - 1}{r - 1}$.
 4. If $r = 1$, the denominator $r - 1$ is 0 and Theorem 5.2.2 does not apply. In this case every term is $a \cdot 1^{m+i} = a$ and there are $n + 1$ terms, so $S = a(n + 1)$.
 
 **Answer.**
 
-$$
+```math
 ar^m + ar^{m+1} + \cdots + ar^{m+n} = \begin{cases} ar^m \cdot \dfrac{r^{n+1} - 1}{r - 1} & (r \ne 1) \\ a(n + 1) & (r = 1) \end{cases}
-$$
+```
 
 For example, with $a = 3$, $r = 2$, $m = 2$, $n = 3$, direct addition gives $12 + 24 + 48 + 96 = 180$, and the formula gives $3 \cdot 2^2 \cdot \frac{2^4 - 1}{2 - 1} = 12 \cdot 15 = 180$. With $a = 5$, $r = 1$, $m = 7$, $n = 3$, the sum is $5 + 5 + 5 + 5 = 20 = 5 \cdot 4$.
 
@@ -138,18 +138,18 @@ $P(1)$ is $2 < 2$, which is false. So although $P(n)$ is defined for every posit
 
 **Inductive step: show that for every integer $k \ge 2$, if $P(k)$ then $P(k+1)$.** Suppose $k$ is an integer with $k \ge 2$ and the inductive hypothesis $2^k < (k+1)!$ is true. It must be shown that $2^{k+1} < (k+2)!$.
 
-$$
+```math
 \begin{aligned}
 2^{k+1} &= 2 \cdot 2^k && \text{(1)} \\
 &< 2 \cdot (k+1)! && \text{(2)} \\
 &< (k+2) \cdot (k+1)! && \text{(3)} \\
 &= (k+2)! && \text{(4)}
 \end{aligned}
-$$
+```
 
 Step (1) is a law of exponents, and step (2) multiplies both sides of the inductive hypothesis by the positive number 2. Step (3) uses the fact that $k \ge 2$ gives $k + 2 \ge 4 > 2$ and $(k+1)! > 0$, so $2 \cdot (k+1)! < (k+2) \cdot (k+1)!$, and step (4) is the definition of factorial. By the transitivity of order, $2^{k+1} < (k+2)!$, so $P(k+1)$ is true. Since both the basis step and the inductive step have been proved, $2^n < (n+1)!$ for every integer $n \ge 2$.
 
-> **Caution:** $P(k)$ is a sentence (an inequality), not a number. Do not write "$P(k) = 2^k$"; write the whole property, as in "$P(k)$: $2^k < (k+1)!$". Also, writing $P(k+1)$ replaces $n$ by the parenthesized $(k+1)$, so $(n+1)!$ becomes $((k+1)+1)! = (k+2)!$. Writing it as $(k+1)! + 1$ is wrong.
+> **Caution:** $P(k)$ is a sentence (an inequality), not a number. Do not write "$`P(k) = 2^k`$"; write the whole property, as in "$`P(k)`$: $2^k < (k+1)!$". Also, writing $P(k+1)$ replaces $n$ by the parenthesized $(k+1)$, so $(n+1)!$ becomes $((k+1)+1)! = (k+2)!$. Writing it as $(k+1)! + 1$ is wrong.
 
 > **Note:** Step (3) needs only $k + 2 > 2$, that is, $k \ge 1$, so the inductive step itself also holds for $k = 1$. The proof still cannot start at $n = 1$ because $P(1)$ is false and the basis step fails. This example shows that neither of the two steps of mathematical induction can be omitted.
 

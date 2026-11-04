@@ -94,7 +94,7 @@ graph TD
 
 - **(a)** The path from the root to $v_8$ is $v_0 v_1 v_5 v_8$, with three edges, so the level of $v_8$ is 3.
 - **(b)** The path from the root $v_0$ to itself has no edge, so the level of $v_0$ is 0.
-- **(c)** The maximum level is 5, attained by $v_{18}$ and $v_{19}$ (path $v_0 v_2 v_6 v_{12} v_{17} v_{18}$), so the height is 5.
+- **(c)** The maximum level is 5, attained by $v_{18}$ and $v_{19}$ (path $`v_0 v_2 v_6 v_{12} v_{17} v_{18}`$), so the height is 5.
 - **(d)** The vertices adjacent to $v_{10}$ (level 3) at level 4 are $v_{14}, v_{15}, v_{16}$, so these are the children of $v_{10}$.
 - **(e)** The vertex adjacent to $v_5$ (level 2) at level 1 is $v_1$, so the parent of $v_5$ is $v_1$.
 - **(f)** The children of $v_0$, the parent of $v_1$, are $v_1$ and $v_2$, so the sibling of $v_1$ is $v_2$.
@@ -149,7 +149,7 @@ The internal vertices are the five vertices $a, b, c, d, e$, each with exactly t
 
 1. $G$ has four vertices, so a spanning tree has $4 - 1 = 3$ edges. $G$ has four edges, so a spanning tree is obtained by removing one edge.
 2. Removing the edge $bc$ isolates $c$ and disconnects the graph, so $bc$ must belong to every spanning tree.
-3. Every circuit of $G$ runs around the triangle $a\,b\,d\,a$ formed by the three edges $ab$, $bd$, and $ad$. Removing one of these three edges destroys the circuit, and removing an edge of a circuit leaves a connected graph connected (Lemma 10.4.3 in [Chapter 10, Section 4](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Hence the remaining graph is a connected graph with three edges and is a tree.
+3. Every circuit of $G$ runs around the triangle $`a\,b\,d\,a`$ formed by the three edges $ab$, $bd$, and $ad$. Removing one of these three edges destroys the circuit, and removing an edge of a circuit leaves a connected graph connected (Lemma 10.4.3 in [Chapter 10, Section 4](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Hence the remaining graph is a connected graph with three edges and is a tree.
 
 Therefore the spanning trees are the following three.
 
@@ -163,7 +163,7 @@ Therefore the spanning trees are the following three.
 
 There are $\binom{4}{3} = 4$ ways to choose three of the four edges, and only $\lbrace ab, ad, bd\rbrace$, the choice without $bc$, fails to be a spanning tree, which confirms the answer of 3.
 
-> **Note:** $T_1$ ($d\,a\,b\,c$) and $T_3$ ($a\,d\,b\,c$) are both path-shaped and hence isomorphic to each other, but as subgraphs of $G$ they have different edge sets, so they are different spanning trees. $T_2$ is a star with three edges meeting at $b$.
+> **Note:** $T_1$ ($`d\,a\,b\,c`$) and $T_3$ ($`a\,d\,b\,c`$) are both path-shaped and hence isomorphic to each other, but as subgraphs of $G$ they have different edge sets, so they are different spanning trees. $T_2$ is a star with three edges meeting at $b$.
 
 ---
 
@@ -199,14 +199,14 @@ When the algorithm stops, $L(z)$ is the length of a shortest path, and following
 
 *Table 3. Step-by-step action of Dijkstra's algorithm*
 
-- **Step 1** ($v = a$): The neighbors $b$ and $d$ of $a$ enter the fringe. Since $0 + 2 = 2$, $L(b) = 2$ and $D(b) = a$, and since $0 + 1 = 1$, $L(d) = 1$ and $D(d) = a$. The vertex $d$ with the smallest label is added to $T$ together with the edge $ad$.
-- **Step 2** ($v = d$): The vertices $c$ and $e$, adjacent to $d$ and not in $T$, enter the fringe, so $F = \lbrace b, c, e\rbrace$. The labels become $L(c) = 1 + 5 = 6$ and $L(e) = 1 + 10 = 11$, with $D(c) = D(e) = d$. Since $b$ is not adjacent to $d$, $L(b) = 2$ is unchanged. The smallest, $b$, is added together with the edge $ab$.
-- **Step 3** ($v = b$): The only vertex adjacent to $b$ and not in $T$ is $c$. Since $2 + 3 = 5 < 6$, change to $L(c) = 5$ and $D(c) = b$. Since $e$ is not adjacent to $b$, $L(e) = 11$ is unchanged. The smallest, $c$, is added together with the edge $bc$.
-- **Step 4** ($v = c$): The vertices adjacent to $c$ and not in $T$ are $e$ and $z$. Since $5 + 1 = 6 < 11$, $L(e) = 6$ and $D(e) = c$, and since $5 + 8 = 13 < \infty$, $L(z) = 13$ and $D(z) = c$. The smallest, $e$, is added together with the edge $ce$.
-- **Step 5** ($v = e$): The only vertex adjacent to $e$ and not in $T$ is $z$. Since $6 + 2 = 8 < 13$, change to $L(z) = 8$ and $D(z) = e$. Since $F = \lbrace z\rbrace$, $z$ is added together with the edge $ez$.
+- **Step 1** ($`v = a`$): The neighbors $b$ and $d$ of $a$ enter the fringe. Since $0 + 2 = 2$, $L(b) = 2$ and $D(b) = a$, and since $0 + 1 = 1$, $L(d) = 1$ and $D(d) = a$. The vertex $d$ with the smallest label is added to $T$ together with the edge $ad$.
+- **Step 2** ($`v = d`$): The vertices $c$ and $e$, adjacent to $d$ and not in $T$, enter the fringe, so $F = \lbrace b, c, e\rbrace$. The labels become $L(c) = 1 + 5 = 6$ and $L(e) = 1 + 10 = 11$, with $D(c) = D(e) = d$. Since $b$ is not adjacent to $d$, $L(b) = 2$ is unchanged. The smallest, $b$, is added together with the edge $ab$.
+- **Step 3** ($`v = b`$): The only vertex adjacent to $b$ and not in $T$ is $c$. Since $2 + 3 = 5 < 6$, change to $L(c) = 5$ and $D(c) = b$. Since $e$ is not adjacent to $b$, $L(e) = 11$ is unchanged. The smallest, $c$, is added together with the edge $bc$.
+- **Step 4** ($`v = c`$): The vertices adjacent to $c$ and not in $T$ are $e$ and $z$. Since $5 + 1 = 6 < 11$, $L(e) = 6$ and $D(e) = c$, and since $5 + 8 = 13 < \infty$, $L(z) = 13$ and $D(z) = c$. The smallest, $e$, is added together with the edge $ce$.
+- **Step 5** ($`v = e`$): The only vertex adjacent to $e$ and not in $T$ is $z$. Since $6 + 2 = 8 < 13$, change to $L(z) = 8$ and $D(z) = e$. Since $F = \lbrace z\rbrace$, $z$ is added together with the edge $ez$.
 - **Step 6**: Since $z \in V(T)$, the loop ends.
 
-The length of a shortest path is $L(z) = 8$. Following $D(z) = e$, $D(e) = c$, $D(c) = b$, and $D(b) = a$ backward, the shortest path is $a\,b\,c\,e\,z$, with length $2 + 3 + 1 + 2 = 8$.
+The length of a shortest path is $L(z) = 8$. Following $D(z) = e$, $D(e) = c$, $D(c) = b$, and $D(b) = a$ backward, the shortest path is $`a\,b\,c\,e\,z`$, with length $2 + 3 + 1 + 2 = 8$.
 
 ![Figure 5. Shortest path a b c e z from a to z (thick lines)](../../images/HW12_Dijkstra-Shortest-Path.png)
 
@@ -298,13 +298,13 @@ Since $x_1$ and $x_2$ were arbitrary elements of $S$ with $x_1 < x_2$, $f + g$ i
 
 **Concepts used.** Let $f$ and $g$ be real-valued functions defined on the same set of nonnegative integers, with $g(n) \ge 0$ for $n \ge r$ for some positive real number $r$ ([Chapter 11, Section 2](../../Lecture-Notes/Ch11_Analysis-of-Algorithm-Efficiency/Concepts_Lecture.md)). The following three definitions are the notations for orders.
 
-1. **Ω-notation:** $f(n)$ is $\Omega(g(n))$ if there are positive real numbers $A$ and $a \ge r$ such that $A\,g(n) \le f(n)$ for every integer $n \ge a$. It means that $f$ is of order at least $g$.
-2. **O-notation:** $f(n)$ is $O(g(n))$ if there are positive real numbers $B$ and $b \ge r$ such that $0 \le f(n) \le B\,g(n)$ for every integer $n \ge b$. It means that $f$ is of order at most $g$.
-3. **Θ-notation:** $f(n)$ is $\Theta(g(n))$ if there are positive real numbers $A$, $B$, and $k \ge r$ such that $A\,g(n) \le f(n) \le B\,g(n)$ for every integer $n \ge k$. It means that $f$ is of order $g$.
+1. **Ω-notation:** $f(n)$ is $\Omega(g(n))$ if there are positive real numbers $A$ and $a \ge r$ such that $`A\,g(n) \le f(n)`$ for every integer $n \ge a$. It means that $f$ is of order at least $g$.
+2. **O-notation:** $f(n)$ is $O(g(n))$ if there are positive real numbers $B$ and $b \ge r$ such that $`0 \le f(n) \le B\,g(n)`$ for every integer $n \ge b$. It means that $f$ is of order at most $g$.
+3. **Θ-notation:** $f(n)$ is $\Theta(g(n))$ if there are positive real numbers $A$, $B$, and $k \ge r$ such that $`A\,g(n) \le f(n) \le B\,g(n)`$ for every integer $n \ge k$. It means that $f$ is of order $g$.
 
 Given an inequality, match it with the form of a definition and read off the constants.
 
-**Solution.** With $f(n) = n - \lfloor n/2 \rfloor + 1$ and $g(n) = n$, the given inequality says that $A\,g(n) \le f(n)$ for every integer $n \ge a$ with $A = \frac{1}{2}$ and $a = 1$. This is exactly the definition of Ω-notation, so the following holds.
+**Solution.** With $f(n) = n - \lfloor n/2 \rfloor + 1$ and $g(n) = n$, the given inequality says that $`A\,g(n) \le f(n)`$ for every integer $n \ge a$ with $A = \frac{1}{2}$ and $a = 1$. This is exactly the definition of Ω-notation, so the following holds.
 
 **Answer:** $n - \lfloor n/2 \rfloor + 1$ is $\Omega(n)$.
 
@@ -322,9 +322,9 @@ The inequality itself can also be checked. By the definition of the floor, $\lfl
 
 **Problem.** For every integer $n \ge 3$, $0 \le n - \left\lfloor \frac{n}{2} \right\rfloor + 1 \le n$. Express this fact using O-notation.
 
-**Concepts used.** Use the definition of O-notation in Section 8. The inequality $0 \le f(n) \le B\,g(n)$ of the definition says that $f(n)$ is nonnegative and does not exceed a constant multiple of $g(n)$.
+**Concepts used.** Use the definition of O-notation in Section 8. The inequality $`0 \le f(n) \le B\,g(n)`$ of the definition says that $f(n)$ is nonnegative and does not exceed a constant multiple of $g(n)$.
 
-**Solution.** With $f(n) = n - \lfloor n/2 \rfloor + 1$ and $g(n) = n$, the given inequality says that $0 \le f(n) \le B\,g(n)$ for every integer $n \ge b$ with $B = 1$ and $b = 3$. Hence the following holds.
+**Solution.** With $f(n) = n - \lfloor n/2 \rfloor + 1$ and $g(n) = n$, the given inequality says that $`0 \le f(n) \le B\,g(n)`$ for every integer $n \ge b$ with $B = 1$ and $b = 3$. Hence the following holds.
 
 **Answer:** $n - \lfloor n/2 \rfloor + 1$ is $O(n)$.
 
@@ -342,7 +342,7 @@ The inequality can also be checked. By Exercise 11.2.4, $f(n) > n/2 \ge 0$, so t
 
 **Concepts used.** Use the definition of Θ-notation in Section 8. When the lower and upper bounds are constant multiples of the same function $g(n)$, $f(n)$ is of order $g(n)$.
 
-**Solution.** With $f(n) = 3n(n - 2)$ and $g(n) = n^2$, the given inequality says that $A\,g(n) \le f(n) \le B\,g(n)$ for every integer $n \ge k$ with $A = 1$, $B = 4$, and $k = 3$. Hence the following holds.
+**Solution.** With $f(n) = 3n(n - 2)$ and $g(n) = n^2$, the given inequality says that $`A\,g(n) \le f(n) \le B\,g(n)`$ for every integer $n \ge k$ with $A = 1$, $B = 4$, and $k = 3$. Hence the following holds.
 
 **Answer:** $3n(n - 2)$ is $\Theta(n^2)$.
 
@@ -364,13 +364,17 @@ The inequality can also be checked. On the left, $3n(n - 2) - n^2 = 2n^2 - 6n = 
 
 **(b)** That $A$ is more efficient means that $A$ performs fewer operations. Since $n$ is a positive integer, dividing both sides by $n^2 > 0$ does not change the direction of the inequality.
 
-$$10^6 n^2 < n^3 \iff 10^6 < n$$
+```math
+10^6 n^2 < n^3 \iff 10^6 < n
+```
 
 Therefore $A$ is more efficient when $n > 10^6 = 1{,}000{,}000$. At $n = 10^6$ the two numbers of operations are equal, and for $n < 10^6$ the algorithm $B$, despite its larger order, is the more efficient one.
 
 **(c)** That $B$ is at least 100 times more efficient means that the number of operations of $A$ is at least 100 times that of $B$.
 
-$$100\,n^3 \le 10^6 n^2 \iff n \le 10^4$$
+```math
+100\,n^3 \le 10^6 n^2 \iff n \le 10^4
+```
 
 Therefore $B$ is at least 100 times more efficient than $A$ when $1 \le n \le 10^4 = 10{,}000$.
 
@@ -378,7 +382,7 @@ Therefore $B$ is at least 100 times more efficient than $A$ when $1 \le n \le 10
 
 *Figure 9. Numbers of operations of the two algorithms (logarithmic scale)*
 
-In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the graph of $100\,n^3$ crosses the graph of $A$ at $n = 10^4$. On a logarithmic scale the slope is the exponent of the order, so $B$ (slope 3) eventually overtakes $A$ (slope 2), but because of the constant $10^6$ this happens very late. Choosing an algorithm by order alone may select the slower algorithm for the input sizes actually encountered.
+In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the graph of $`100\,n^3`$ crosses the graph of $A$ at $n = 10^4$. On a logarithmic scale the slope is the exponent of the order, so $B$ (slope 3) eventually overtakes $A$ (slope 2), but because of the constant $10^6$ this happens very late. Choosing an algorithm by order alone may select the slower algorithm for the input sizes actually encountered.
 
 ---
 
@@ -391,11 +395,11 @@ In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the gra
 | Rooted tree terminology | The level is the number of edges on the path to the root, and the height is the maximum level. A child is an adjacent vertex one level down, siblings share a parent, and the descendants of a vertex are the vertices whose path to the root passes through it. |
 | Full binary tree | With $k$ internal vertices there are $2k + 1$ vertices and $k + 1$ leaves. For $k = 5$ there are 11 vertices and 6 leaves. |
 | Spanning tree | A subgraph that contains every vertex and is a tree. With $n$ vertices it has $n - 1$ edges, so it is found by removing edges of circuits one at a time. |
-| Dijkstra's algorithm | Add the fringe vertex with the smallest label to the tree, and recompute only the labels of the vertices adjacent to it. In the example the shortest path is $a\,b\,c\,e\,z$, of length 8. |
+| Dijkstra's algorithm | Add the fringe vertex with the smallest label to the tree, and recompute only the labels of the vertices adjacent to it. In the example the shortest path is $`a\,b\,c\,e\,z`$, of length 8. |
 | Graph of a function | $f(a)$ is the height at $x = a$, and the solutions of $f(x) = c$ are the $x$-coordinates where the horizontal line $y = c$ meets the graph. |
 | Ceiling function | $\lceil x \rceil = n \iff n - 1 < x \le n$, so each step has an open circle at its left end and a filled dot at its right end. |
 | Sum of increasing functions | Adding $f(x_1) < f(x_2)$ and $g(x_1) < g(x_2)$ gives $(f + g)(x_1) < (f + g)(x_2)$, so the sum is increasing. |
-| Ω, O, and Θ | $A\,g(n) \le f(n)$ gives $\Omega(g(n))$, $0 \le f(n) \le B\,g(n)$ gives $O(g(n))$, and both give $\Theta(g(n))$; the inequalities need hold only for sufficiently large $n$. |
+| Ω, O, and Θ | $`A\,g(n) \le f(n)`$ gives $\Omega(g(n))$, $`0 \le f(n) \le B\,g(n)`$ gives $O(g(n))$, and both give $\Theta(g(n))$; the inequalities need hold only for sufficiently large $n$. |
 | Translating inequalities | $n - \lfloor n/2 \rfloor + 1$ is $\Omega(n)$ and $O(n)$, hence $\Theta(n)$, and $3n(n - 2)$ is $\Theta(n^2)$. |
 | Order and actual efficiency | $10^6 n^2$ and $n^3$ cross at $n = 10^6$. An algorithm of smaller order is not always faster; constants and input sizes must be considered together. |
 
@@ -437,7 +441,7 @@ In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the gra
    <details>
    <summary>Answer</summary>
 
-   In step 2, $L(e) = 1 + 3 = 4$, and $L(e)$ decreases no further. After $e$ is added, $L(z) = 4 + 2 = 6$, so the shortest path is $a\,d\,e\,z$, of length 6. This is shorter than the length 8 of the original path $a\,b\,c\,e\,z$.
+   In step 2, $L(e) = 1 + 3 = 4$, and $L(e)$ decreases no further. After $e$ is added, $L(z) = 4 + 2 = 6$, so the shortest path is $`a\,d\,e\,z`$, of length 6. This is shorter than the length 8 of the original path $`a\,b\,c\,e\,z`$.
 
    </details>
 

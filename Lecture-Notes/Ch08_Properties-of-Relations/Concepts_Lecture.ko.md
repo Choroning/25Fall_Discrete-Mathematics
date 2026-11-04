@@ -1249,7 +1249,7 @@ $\mathcal{P}(\lbrace a, b, c \rbrace)$의 집합들은 부분집합 관계 $\sub
 \emptyset, \ \lbrace a \rbrace, \ \lbrace b \rbrace, \ \lbrace a, b \rbrace, \ \lbrace c \rbrace, \ \lbrace b, c \rbrace, \ \lbrace a, c \rbrace, \ \lbrace a, b, c \rbrace
 ```
 
-> **용어 정의:** 집합 $A$ 위의 부분 순서 관계 $\preceq$와 $\preceq'$이 주어졌을 때, $A$의 모든 $a$, $b$에 대해 $a \preceq b$이면 $a \preceq' b$일 때, 그리고 그때에만 $\preceq'$이 $\preceq$와 **호환된다(compatible)** 고 한다.
+> **용어 정의:** 집합 $A$ 위의 부분 순서 관계 $\preceq$와 $\preceq'$이 주어졌을 때, $A$의 모든 $a$, $b$에 대해 $a \preceq b$이면 $a \preceq' b$일 때, 그리고 그때에만 $\preceq'$이 $\preceq$와 **호환(compatible)** 관계에 있다고 한다.
 
 집합 $A$가 유한하면, $A$ 위의 임의의 부분 순서 관계 $\preceq$에 대해 $\preceq$와 호환되는 $A$ 위의 전순서 $\preceq'$이 항상 존재한다. 주어진 순서와 호환되는 전순서를 위상 정렬이라고 한다.
 

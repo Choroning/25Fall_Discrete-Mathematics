@@ -929,7 +929,7 @@ A **finite set** is a set that is either empty or in one-to-one correspondence w
 
 ### 4.1 Sets with the Same Cardinality
 
-> **Definition:** Let $A$ and $B$ be any sets. **$A$ has the same cardinality as $B$** if, and only if, there is a one-to-one correspondence from $A$ to $B$. In other words, $A$ has the same cardinality as $B$ if, and only if, there is a function $f$ from $A$ to $B$ that is one-to-one and onto.
+> **Definition:** **Same cardinality.** Let $A$ and $B$ be any sets. $A$ has the same cardinality as $B$ if, and only if, there is a one-to-one correspondence from $A$ to $B$. In other words, $A$ has the same cardinality as $B$ if, and only if, there is a function $f$ from $A$ to $B$ that is one-to-one and onto.
 
 The following theorem lists basic properties of cardinality; most of them are consequences of the theorems on one-to-one and onto functions proved earlier.
 
@@ -943,7 +943,7 @@ The following theorem lists basic properties of cardinality; most of them are co
 
 Because of Theorem 7.4.1(b), the direction does not matter, and one can simply say that two sets have the same cardinality without saying which set has the same cardinality as the other.
 
-> **Definition:** **$A$ and $B$ have the same cardinality** if, and only if, $A$ has the same cardinality as $B$ or $B$ has the same cardinality as $A$.
+> **Definition:** **Two sets with the same cardinality.** $A$ and $B$ have the same cardinality if, and only if, $A$ has the same cardinality as $B$ or $B$ has the same cardinality as $A$.
 
 The next example exhibits a key feature of infinite sets: an infinite set can have the same cardinality as one of its proper subsets. Intuition suggests that the integers are twice as numerous as the even integers, yet the elements of the two sets can be paired off perfectly, so by definition their cardinalities are equal.
 

@@ -96,7 +96,7 @@ The proofs in this chapter use the following facts without proof.
 - There is no integer between 0 and 1.
 - The set of all integers is **closed** under addition, subtraction, and multiplication. That is, sums, differences, and products of two integers are integers.
 
-> **Caution:** The integers are not closed under division. $3 \div 2 = 3/2$ is not an integer, and $3 \div 0$ is not even a number. This is why definitions and proofs about integers are expressed with multiplication instead of division (for example, $n = 2k$).
+> **Caution:** The integers are not closed under division. $3 \div 2 = 3/2$ is not an integer, and $3 \div 0$ is not even a number. This is why definitions and proofs about integers are expressed with multiplication instead of division (for example, $`n = 2k`$).
 
 ### 1.2 Even, Odd, Prime, and Composite Integers
 
@@ -137,7 +137,7 @@ The integer $6 = 2 \cdot 3$ is a product of two smaller positive integers. On th
 
 > **Definition:** An integer $n$ is **prime** if, and only if, $n > 1$ and for all positive integers $r$ and $s$ with $n = rs$, one of $r$ and $s$ equals $n$. An integer $n$ is **composite** if, and only if, $n > 1$ and $n = rs$ for some integers $r$ and $s$ with $1 < r < n$ and $1 < s < n$. Symbolically, for each integer $n$ with $n > 1$:
 >
-> - $n$ is prime $\iff$ for all positive integers $r$ and $s$ with $n = rs$, ($r = 1$ and $s = n$) or ($r = n$ and $s = 1$)
+> - $n$ is prime $\iff$ for all positive integers $r$ and $s$ with $n = rs$, ($r = 1$ and $`s = n`$) or ($r = n$ and $`s = 1`$)
 > - $n$ is composite $\iff$ there exist positive integers $r$ and $s$ with $n = rs$, $1 < r < n$, and $1 < s < n$
 
 **Example 4.1.2 (Prime and Composite Numbers).**
@@ -153,9 +153,9 @@ The integer $6 = 2 \cdot 3$ is a product of two smaller positive integers. On th
 
 As defined in Chapter 3, an existential statement
 
-$$
+```math
 \exists x \in D \text{ such that } Q(x)
-$$
+```
 
 is true if, and only if, $Q(x)$ is true for at least one $x$ in $D$. One way to prove it is to actually find an $x$ in $D$ that makes $Q(x)$ true; another is to give a set of directions for finding such an $x$. Both methods are called **constructive proofs of existence**. The logical principle behind them is **existential generalization**: if a property is known to be true for a particular object, one may conclude that there exists an object with that property.
 
@@ -168,15 +168,15 @@ A **nonconstructive proof of existence** shows either (a) that the existence of 
 
 ### 1.4 Disproving Universal Statements by Counterexample
 
-To **disprove** a statement means to show that it is false. Showing that a statement of the form $\forall x \in D,\ P(x) \to Q(x)$ is false is the same as showing that its negation is true, and the negation is the existential statement
+To **disprove** a statement means to show that it is false. Showing that a statement of the form $`\forall x \in D,\ P(x) \to Q(x)`$ is false is the same as showing that its negation is true, and the negation is the existential statement
 
-$$
+```math
 \exists x \in D \text{ such that } P(x) \wedge \sim Q(x)
-$$
+```
 
 To show that an existential statement is true one usually gives an example. Because this example is used to show that the original statement is false, it is called a **counterexample**.
 
-> **Key Point:** **Disproof by counterexample.** To disprove a statement of the form $\forall x \in D,\ P(x) \to Q(x)$, find one $x$ in $D$ for which the hypothesis $P(x)$ is true and the conclusion $Q(x)$ is false. Such an $x$ is called a counterexample.
+> **Key Point:** **Disproof by counterexample.** To disprove a statement of the form $`\forall x \in D,\ P(x) \to Q(x)`$, find one $x$ in $D$ for which the hypothesis $P(x)$ is true and the conclusion $Q(x)$ is false. Such an $x$ is called a counterexample.
 
 **Example 4.1.4 (Disproof by Counterexample).** Disprove the statement "For all real numbers $a$ and $b$, if $a^2 = b^2$ then $a = b$." It suffices to find real numbers $a$ and $b$ for which the hypothesis $a^2 = b^2$ is true and the conclusion $a = b$ is false. The fact that both positive and negative numbers have positive squares is the clue. Let $a = 1$ and $b = -1$. Then $a^2 = 1^2 = 1$ and $b^2 = (-1)^2 = 1$, so $a^2 = b^2$, but $a \ne b$ since $1 \ne -1$. One counterexample suffices; $2$ and $-2$, or $0.5$ and $-0.5$, are counterexamples as well.
 
@@ -188,9 +188,9 @@ If a property holds in many cases and one guesses that it holds in all cases but
 
 Most mathematical statements to be proved are universal, and it is convenient to think of them in the following standard form (Chapters 1 and 3).
 
-$$
+```math
 \forall x \in D,\ P(x) \to Q(x)
-$$
+```
 
 When $D$ is finite or only finitely many elements satisfy $P(x)$, the statement can be proved by the **method of exhaustion**, which checks those elements one by one.
 
@@ -229,7 +229,7 @@ Applying this principle to a property of the form "if $P(x)$ then $Q(x)$" gives 
 
 > **Key Point:** **Method of direct proof.**
 >
-> 1. Express the statement to be proved in the form $\forall x \in D,\ P(x) \to Q(x)$. This step is often done mentally.
+> 1. Express the statement to be proved in the form $`\forall x \in D,\ P(x) \to Q(x)`$. This step is often done mentally.
 > 2. Start the proof by supposing $x$ is a particular but arbitrarily chosen element of $D$ for which the hypothesis $P(x)$ is true. This step is often abbreviated as supposing $x \in D$ and $P(x)$.
 > 3. Show that the conclusion $Q(x)$ is true by using definitions, previously established results, and the rules of logical inference.
 
@@ -259,12 +259,12 @@ Now $m + n = 2r + 2s$, and what must be shown is that $m + n$ equals 2 times som
 
 **Proof.** Suppose $m$ and $n$ are particular but arbitrarily chosen even integers. [It must be shown that $m + n$ is even.] By definition of even, $m = 2r$ and $n = 2s$ for some integers $r$ and $s$. Then the following holds.
 
-$$
+```math
 \begin{aligned}
 m + n &= 2r + 2s \\
 &= 2(r + s)
 \end{aligned}
-$$
+```
 
 The first equality is by substitution, and the second is by factoring out 2. Let $t = r + s$. Then $t$ is an integer because it is a sum of integers (another use of existential instantiation). Hence $m + n = 2t$ for the integer $t$, and by definition of even, $m + n$ is even. [This is what was to be shown.]
 
@@ -276,8 +276,8 @@ The forms of statements discussed so far and the methods for proving and disprov
 
 | Form of statement | How to show it is true | How to show it is false |
 |:-----|:-----|:-----|
-| Existential statement $\exists x \in D \text{ such that } Q(x)$ | Constructive proof of existence (find an example or give directions for finding one), nonconstructive proof of existence | Prove its negation, the universal statement $\forall x \in D,\ \sim Q(x)$ (Section 2.5) |
-| Universal statement $\forall x \in D,\ P(x) \to Q(x)$ | Method of exhaustion (finite cases), generalizing from the generic particular (direct proof), indirect proof (Section 7) | Give one counterexample |
+| Existential statement $\exists x \in D \text{ such that } Q(x)$ | Constructive proof of existence (find an example or give directions for finding one), nonconstructive proof of existence | Prove its negation, the universal statement $`\forall x \in D,\ \sim Q(x)`$ (Section 2.5) |
+| Universal statement $`\forall x \in D,\ P(x) \to Q(x)`$ | Method of exhaustion (finite cases), generalizing from the generic particular (direct proof), indirect proof (Section 7) | Give one counterexample |
 
 *Table 4. Methods of proof and disproof by the form of the statement*
 
@@ -343,7 +343,7 @@ The following are the most common mistakes in writing proofs.
 3. **Jumping to a conclusion.** This means alleging the truth of something without an adequate reason. The argument "Since $m$ and $n$ are even, $m = 2r$ and $n = 2s$ for some integers $r$ and $s$. Then $m + n = 2r + 2s$. So $m + n$ is even" jumps to the conclusion without finding an integer that, when doubled, equals $m + n$.
 4. **Assuming what is to be proved.** This is a variation of jumping to a conclusion. Writing "When odd integers are multiplied, the product is odd. Hence $mn$ is odd" while proving that the product of two odd integers is odd uses the very thing to be proved as a reason.
 5. **Confusing what is known with what is still to be shown.** This is a more subtle mistake that occurs when the conclusion is restated with a variable. In showing that the product of two odd integers is odd, writing "It must be shown that $mn$ is odd. This means that there exists an integer $s$ such that $mn = 2s + 1$. Also $m = 2a + 1$ and $n = 2b + 1$. Then $mn = (2a + 1)(2b + 1) = 2s + 1$, so $mn$ is odd" treats the existence of $s$ as already known, although it is guaranteed only once $mn$ is known to be odd. Writing "This means it must be shown that there exists an integer $s$ such that $mn = 2s + 1$" would have avoided the mistake. The best way is not to introduce a variable into a proof unless it is part of the hypothesis or deducible from it.
-6. **Using any where some is meant.** "Suppose $m$ is any odd integer" is correct, but continuing with "By definition of odd, $m = 2a + 1$ for any integer $a$" is wrong. $a$ cannot be just any integer; solving $m = 2a + 1$ for $a$ shows that the only possible value is $(m - 1)/2$. The correct sentence is "$m = 2a + 1$ for some integer $a$" or "there exists an integer $a$ such that $m = 2a + 1$."
+6. **Using any where some is meant.** "Suppose $m$ is any odd integer" is correct, but continuing with "By definition of odd, $m = 2a + 1$ for any integer $a$" is wrong. $a$ cannot be just any integer; solving $m = 2a + 1$ for $a$ shows that the only possible value is $(m - 1)/2$. The correct sentence is "$`m = 2a + 1`$ for some integer $a$" or "there exists an integer $a$ such that $m = 2a + 1$."
 7. **Using if where because is meant.** "Suppose $p$ is a prime number. If $p$ is prime, then $p$ cannot be written as a product of two smaller positive integers" reads as if it doubts the primeness of $p$, which is already known from the first sentence. One should write "Because $p$ is prime, $p$ cannot be written as a product of two smaller positive integers." This is not a serious error in itself, but it reflects imprecise thinking that can cause problems later in a proof.
 
 > **Caution:** A reader of a proof should never be in doubt about what has already been shown and what still needs to be shown. Make the status of assumptions and conclusions clear in every sentence.
@@ -390,9 +390,9 @@ The negation of an existential statement is universal. Hence, to show that an ex
 
 **Proof.** Suppose $n$ is a particular but arbitrarily chosen positive integer. [It will be shown that $n^2 + 3n + 2$ is not prime.] Factoring gives the following.
 
-$$
+```math
 n^2 + 3n + 2 = (n + 1)(n + 2)
-$$
+```
 
 $n + 1$ and $n + 2$ are integers because they are sums of integers, and since $n \ge 1$, $n + 1 \ge 2 > 1$ and $n + 2 \ge 3 > 1$. Hence $n^2 + 3n + 2$ is a product of two integers greater than 1, and because both factors are greater than 1, each is smaller than the product itself. Therefore $n^2 + 3n + 2$ is not prime. For example, if $n = 1$ then $1 + 3 + 2 = 6 = 2 \cdot 3$, and if $n = 4$ then $16 + 12 + 2 = 30 = 5 \cdot 6$.
 
@@ -402,7 +402,7 @@ A **conjecture** is a statement that is believed to be true but has been neither
 
 | Conjecture | Content | Outcome |
 |:-----|:-----|:-----|
-| Fermat's last theorem | For integers $n \ge 3$, there are no positive integers $x$, $y$, $z$ with $x^n + y^n = z^n$ (for $n = 2$ there are many solutions, such as $3^2 + 4^2 = 5^2$ and $5^2 + 12^2 = 13^2$) | Fermat (1601-1665) wrote in the margin of a book that he had found a proof, but no proof survived. In 1986 Kenneth Ribet showed that the theorem follows from another conjecture (the Taniyama-Shimura conjecture), and Andrew Wiles announced a proof in 1993. An error found during checking was fixed with Richard Taylor in 1994, and the proof was published in 1995 |
+| Fermat's last theorem | For integers $n \ge 3$, there are no positive integers $x$, $y$, $z$ with $x^n + y^n = z^n$ (for $n = 2$ there are many solutions, such as $3^2 + 4^2 = 5^2$ and $`5^2 + 12^2 = 13^2`$) | Fermat (1601-1665) wrote in the margin of a book that he had found a proof, but no proof survived. In 1986 Kenneth Ribet showed that the theorem follows from another conjecture (the Taniyama-Shimura conjecture), and Andrew Wiles announced a proof in 1993. An error found during checking was fixed with Richard Taylor in 1994, and the proof was published in 1995 |
 | Goldbach conjecture | Every even integer greater than 2 can be written as a sum of two primes | It has been verified by computer up to at least $10^{18}$ but has not been proved. There is an unbridgeable gap between finite verification and infinity |
 | Euler's conjecture | $a^4 + b^4 + c^4 = d^4$ has no positive integer solutions | It looked good for many numbers, but Noam Elkies showed it false in 1987. A counterexample found by Roger Frye in a computer search is $95800^4 + 217519^4 + 414560^4 = 422481^4$ |
 
@@ -440,14 +440,14 @@ The word rational contains the word ratio, and a rational number is one that can
 
 Reason for (h): Let $x = 0.12121212\ldots$. Then $100x = 12.12121212\ldots$. Subtracting the two equations cancels the repeating part after the decimal point.
 
-$$
+```math
 \begin{aligned}
 100x - x &= 12.12121212\ldots - 0.12121212\ldots = 12 \\
 100x - x &= 99x
 \end{aligned}
-$$
+```
 
-Hence $99x = 12$ and $x = 12/99$, a ratio of two nonzero integers, so it is rational (in lowest terms it is $4/33$). The same method shows that every repeating decimal is rational, and conversely every rational number can be written as a terminating or repeating decimal (Chapter 9).
+Hence $99x = 12$ and $x = 12/99$, a ratio of two nonzero integers, so it is rational (in lowest terms it is $`4/33`$). The same method shows that every repeating decimal is rational, and conversely every rational number can be written as a terminating or repeating decimal (Chapter 9).
 
 Reason for (i): Since $m$ and $n$ are integers, so are $m + n$ and $mn$ (sums and products of integers are integers). Also $mn \ne 0$ by the following property.
 
@@ -473,15 +473,15 @@ For example, suppose A claims that every integer is rational, and B asks A to sh
 
 By definition of rational, saying that $r$ and $s$ are rational means that $r = a/b$ and $s = c/d$ for some integers $a$, $b$, $c$, and $d$ with $b \ne 0$ and $d \ne 0$. Substitution gives the following.
 
-$$
+```math
 r + s = \frac{a}{b} + \frac{c}{d} \qquad (4.3.1)
-$$
+```
 
 To show that $r + s$ is rational, this value must be written as a single ratio of two integers with a nonzero denominator. Rewriting the right-hand side of equation (4.3.1) with a common denominator gives the following.
 
-$$
+```math
 \frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{bc}{bd} = \frac{ad + bc}{bd}
-$$
+```
 
 Is this fraction a ratio of integers? Yes: products and sums of integers are integers, so $ad + bc$ and $bd$ are integers. Is the denominator $bd$ nonzero? Yes: $b \ne 0$ and $d \ne 0$, so $bd \ne 0$ by the zero product property. Hence $r + s$ is rational.
 
@@ -489,9 +489,9 @@ Is this fraction a ratio of integers? Yes: products and sums of integers are int
 
 **Proof.** Suppose $r$ and $s$ are any rational numbers. [It must be shown that $r + s$ is rational.] By definition of rational, $r = a/b$ and $s = c/d$ for some integers $a$, $b$, $c$, and $d$ with $b \ne 0$ and $d \ne 0$. Thus the following holds.
 
-$$
+```math
 r + s = \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
-$$
+```
 
 The first equality is by substitution and the second by basic algebra. Let $p = ad + bc$ and $q = bd$. Then $p$ and $q$ are integers because $a$, $b$, $c$, and $d$ are integers and products and sums of integers are integers. Also $q \ne 0$ by the zero product property. Hence $r + s = p/q$ where $p$ and $q$ are integers and $q \ne 0$, so $r + s$ is rational by definition of rational. [This is what was to be shown.]
 
@@ -531,7 +531,7 @@ When children first learn that 12 divided by 3 is 4, they learn it to mean that 
 
 ### 4.1 Definition of Divisibility
 
-> **Definition:** For integers $n$ and $d$, $n$ is **divisible** by $d$ if, and only if, $n$ equals $d$ times some integer and $d \ne 0$. This is written $d \mid n$ and read "$d$ divides $n$." Symbolically, for integers $n$ and $d$:
+> **Definition:** For integers $n$ and $d$, $n$ is **divisible** by $d$ if, and only if, $n$ equals $d$ times some integer and $d \ne 0$. This is written $d \mid n$ and read "$`d`$ divides $n$." Symbolically, for integers $n$ and $d$:
 >
 > - $d \mid n \iff$ there exists an integer $k$ with $n = dk$ and $d \ne 0$
 >
@@ -582,13 +582,13 @@ Hence $m = 1$ or $m = -1$, and the only divisors of 1 are 1 and $-1$.
 
 Writing the definition of divisibility with the existential quantifier gives $d \mid n \iff \exists k \in \mathbf{Z} \text{ such that } n = dk \wedge d \ne 0$. Since the negation of an existential statement is universal, $d$ does not divide $n$ if, and only if, $n \ne dk$ for every integer $k$ or $d = 0$. When $d \ne 0$, this means that the quotient $n/d$ is not an integer.
 
-$$
+```math
 d \nmid n \iff \frac{n}{d} \notin \mathbf{Z} \qquad (n, d \in \mathbf{Z},\ d \ne 0)
-$$
+```
 
 **Example 4.4.4 (Checking Nondivisibility).** Does $4 \mid 15$? No. $15/4 = 3.75$ is not an integer.
 
-> **Caution:** Do not confuse $a \mid b$ with $a/b$. $a \mid b$ is a **sentence**, "$a$ divides $b$," meaning that there is an integer $k$ with $b = ak$. Dividing both sides by $a$ gives $b/a = k$, so when $a \ne 0$, $a \mid b$ is equivalent to $b/a$ being an integer. On the other hand, $a/b$ is a **number**, the result of dividing $a$ by $b$, which may or may not be an integer. In particular, writing $4 \mid (3 + 5) = 4 \mid 8$ gives the meaningless sentence "4 divides the quantity 3 plus 5 equals 4 divides 8."
+> **Caution:** Do not confuse $a \mid b$ with $a/b$. $a \mid b$ is a **sentence**, "$`a`$ divides $b$," meaning that there is an integer $k$ with $b = ak$. Dividing both sides by $a$ gives $b/a = k$, so when $a \ne 0$, $a \mid b$ is equivalent to $b/a$ being an integer. On the other hand, $a/b$ is a **number**, the result of dividing $a$ by $b$, which may or may not be an integer. In particular, writing $4 \mid (3 + 5) = 4 \mid 8$ gives the meaningless sentence "4 divides the quantity 3 plus 5 equals 4 divides 8."
 
 **Example 4.4.5 (Prime Numbers and Divisibility).** A prime number can also be defined as follows: an integer $n$ with $n > 1$ is prime if, and only if, its only positive divisors are 1 and $n$ itself.
 
@@ -603,9 +603,9 @@ One of the most useful properties of divisibility is transitivity. If a first nu
 
 Since $a \mid b$, $b = ar$ for some integer $r$ (4.4.1), and since $b \mid c$, $c = bs$ for some integer $s$ (4.4.2). Equation (4.4.2) expresses $c$ in terms of $b$, and equation (4.4.1) expresses $b$ in terms of $a$, so substituting (4.4.1) into (4.4.2) gives an equation expressing $c$ in terms of $a$.
 
-$$
+```math
 c = bs = (ar)s = a(rs)
-$$
+```
 
 The last equality is the associative law for multiplication. Now that $c$ is expressed as $a$ times something, it remains only to check that this something, $rs$, is an integer. It is, because it is a product of two integers.
 
@@ -625,7 +625,7 @@ The idea of the next theorem is simple. Start with an integer greater than 1. If
 2. If $n$ is not prime, then as in Example 4.1.2(b), $n = r_0 s_0$ for some integers $r_0$ and $s_0$ with $1 < r_0 < n$ and $1 < s_0 < n$. By definition of divisibility, $r_0 \mid n$.
 3. If $r_0$ is prime, then $r_0$ is a prime number dividing $n$, and the proof is complete. If $r_0$ is not prime, then $r_0 = r_1 s_1$ for some integers $r_1$ and $s_1$ with $1 < r_1 < r_0$ and $1 < s_1 < r_0$. By definition, $r_1 \mid r_0$, and since already $r_0 \mid n$, transitivity gives $r_1 \mid n$.
 4. If $r_1$ is prime, the proof is complete; otherwise write $r_1 = r_2 s_2$ in the same way and obtain $r_2 \mid n$ from $r_2 \mid r_1$ and $r_1 \mid n$. Repeat this process until a prime factor is found.
-5. Each new factor is less than the previous one (which is less than $n$) and greater than 1, and there are fewer than $n$ integers between 1 and $n$, so the process ends in a finite number of steps. The result is a sequence $r_0, r_1, \ldots, r_k$ with $k \ge 0$, $1 < r_k < r_{k-1} < \cdots < r_1 < r_0 < n$, and $r_i \mid n$ for each $i = 0, 1, \ldots, k$.
+5. Each new factor is less than the previous one (which is less than $`n`$) and greater than 1, and there are fewer than $n$ integers between 1 and $n$, so the process ends in a finite number of steps. The result is a sequence $r_0, r_1, \ldots, r_k$ with $k \ge 0$, $1 < r_k < r_{k-1} < \cdots < r_1 < r_0 < n$, and $r_i \mid n$ for each $i = 0, 1, \ldots, k$.
 6. The condition for termination is that $r_k$ is prime, so $r_k$ is a prime number that divides $n$. [This is what was to be shown.]
 
 > **Note:** Strictly speaking, the claim in step 5 that the process must end is justified by an axiom for the integers called the well-ordering principle. The well-ordering principle and a proof of the same theorem by strong mathematical induction are discussed in Chapter 5.
@@ -654,9 +654,9 @@ To show that a proposed divisibility property is not universally true, one need 
 
 By definition of divisibility, $b = ha$ and $a = kb$ for some integers $h$ and $k$. Combining the two equations gives the following.
 
-$$
+```math
 b = ha = h(kb) = (hk)b
-$$
+```
 
 Since $b \mid a$, $b \ne 0$, and canceling $b$ from the two ends gives $1 = hk$. That is, $h$ and $k$ are divisors of 1, so by Theorem 4.4.2 they are both 1 or both $-1$. If $h = k = 1$ then $b = a$, but if $h = k = -1$ then $b = -a$, and since $a \ne 0$, $a \ne b$. This analysis suggests that a counterexample can be found by taking $b = -a$.
 
@@ -672,9 +672,9 @@ According to this theorem, an integer greater than 1 is either prime or can be w
 
 **Theorem 4.4.5 (Unique Factorization of Integers Theorem, Fundamental Theorem of Arithmetic).** Given any integer $n > 1$, there exist a positive integer $k$, distinct prime numbers $p_1, p_2, \ldots, p_k$, and positive integers $e_1, e_2, \ldots, e_k$ such that
 
-$$
+```math
 n = p_1^{e_1} p_2^{e_2} p_3^{e_3} \cdots p_k^{e_k}
-$$
+```
 
 and any other expression for $n$ as a product of prime numbers is identical to this one except, perhaps, for the order in which the factors are written.
 
@@ -686,18 +686,18 @@ Because of the fundamental theorem of arithmetic, every integer greater than 1 c
 
 **Example 4.4.8 (Writing Integers in Standard Factored Form).** Write 3,300 in standard factored form. First find all the factors, then write them in ascending order.
 
-$$
+```math
 \begin{aligned}
 3300 &= 100 \cdot 33 = 4 \cdot 25 \cdot 3 \cdot 11 \\
 &= 2 \cdot 2 \cdot 5 \cdot 5 \cdot 3 \cdot 11 = 2^2 \cdot 3^1 \cdot 5^2 \cdot 11^1
 \end{aligned}
-$$
+```
 
 **Example 4.4.9 (Using Unique Factorization to Solve a Problem).** Suppose an integer $m$ satisfies the following.
 
-$$
+```math
 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot m = 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11 \cdot 10
-$$
+```
 
 Does $17 \mid m$? Yes. Since 17 is one of the prime factors of the right-hand side, it must also be among the prime factors of the left-hand side by the fundamental theorem of arithmetic. But 17 equals no prime factor of 8, 7, 6, 5, 4, 3, or 2 (their prime factors are all at most 7). Hence 17 must occur as a prime factor of $m$, and $17 \mid m$. Indeed, computing gives $m = 24310 = 17 \cdot 1430$.
 
@@ -715,13 +715,13 @@ The **quotient-remainder theorem** says that when any integer $n$ is divided by 
 
 **Theorem 4.5.1 (The Quotient-Remainder Theorem).** Given any integer $n$ and positive integer $d$, there exist unique integers $q$ and $r$ such that
 
-$$
+```math
 n = dq + r, \qquad 0 \le r < d
-$$
+```
 
 The proof that $q$ and $r$ exist uses the well-ordering principle of Chapter 5, and the uniqueness part can be shown by proof by contradiction.
 
-If $n$ is positive, the theorem can be seen on the number line as follows. Step forward by $d$ through $0, d, 2d, 3d, \ldots$ and stop at the last multiple $qd$ that does not exceed $n$; the distance from $qd$ to $n$ is the remainder $r$. If $n$ is negative, $r$ must still be nonnegative, so $d$ is multiplied by a negative integer $q$ to bring $dq$ either exactly to $n$ ($r = 0$) or to a point below $n$, and the positive integer $r$ is added to come back up to $n$.
+If $n$ is positive, the theorem can be seen on the number line as follows. Step forward by $d$ through $0, d, 2d, 3d, \ldots$ and stop at the last multiple $qd$ that does not exceed $n$; the distance from $qd$ to $n$ is the remainder $r$. If $n$ is negative, $r$ must still be nonnegative, so $d$ is multiplied by a negative integer $q$ to bring $dq$ either exactly to $n$ ($`r = 0`$) or to a point below $n$, and the positive integer $r$ is added to come back up to $n$.
 
 ![Figure 2. Number lines showing the quotient and remainder when n = 14 and n = -14 are divided by d = 4](../../images/Ch04_Quotient-Remainder-Number-Line.png)
 
@@ -743,7 +743,7 @@ If $n$ is positive, the theorem can be seen on the number line as follows. Step 
 
 > **Definition:** Given an integer $n$ and a positive integer $d$, **$n$ div $d$** is the integer quotient obtained when $n$ is divided by $d$, and **$n$ mod $d$** is the nonnegative integer remainder obtained when $n$ is divided by $d$. Symbolically, if $n$ and $d$ are integers and $d > 0$:
 >
-> - $n \text{ div } d = q$ and $n \text{ mod } d = r$ $\iff$ $n = dq + r$ (where $q$ and $r$ are integers and $0 \le r < d$)
+> - $n \text{ div } d = q$ and $n \text{ mod } d = r$ $\iff$ $n = dq + r$ (where $q$ and $r$ are integers and $`0 \le r < d`$)
 
 By the quotient-remainder theorem, $n \text{ mod } d$ is one of $0, 1, \ldots, d - 1$. Also, a necessary and sufficient condition for an integer $n$ to be divisible by $d$ is that $n \text{ mod } d = 0$. The word mod and this meaning come from the word modulus introduced by Gauss in 1801.
 
@@ -756,23 +756,23 @@ Many programming languages provide operators for quotients and remainders, but t
 
 *Table 8. Mathematical div and mod compared with the results of the Python and Java operators*
 
-> **Caution:** When computing remainders of values that may be negative in Java or C, the result can be negative. If the mathematical $n$ mod $d$ (with $d > 0$) is needed, correct a negative result by adding $d$. For example, in Java `-54 % 4` is $-2$, and $-2 + 4 = 2$ is the mathematical remainder.
+> **Caution:** When computing remainders of values that may be negative in Java or C, the result can be negative. If the mathematical $n$ mod $d$ (with $`d > 0`$) is needed, correct a negative result by adding $d$. For example, in Java `-54 % 4` is $-2$, and $-2 + 4 = 2$ is the mathematical remainder.
 
 **Example 4.5.2 (Computing div and mod by Hand or with a Four-Function Calculator).** Compute $32$ div $9$ and $32$ mod $9$. Dividing by hand, $9 \times 3 = 27$ and $32 - 27 = 5$, so $32 = 9 \cdot 3 + 5$, that is, $32$ div $9 = 3$ and $32$ mod $9 = 5$. With a four-function calculator, for a nonnegative integer $n$ and a positive integer $d$, compute $n \div d$ and discard the part after the decimal point to get $n$ div $d$. Substituting $q = n$ div $d$ and $r = n$ mod $d$ into $n = dq + r$ gives $n = d \cdot (n \text{ div } d) + n \text{ mod } d$, so the remainder is obtained from the following formula.
 
-$$
+```math
 n \text{ mod } d = n - d \cdot (n \text{ div } d)
-$$
+```
 
 Discarding the fractional part of $32 \div 9 = 3.555\ldots$ gives $32$ div $9 = 3$, and $32$ mod $9 = 32 - 9 \cdot 3 = 32 - 27 = 5$.
 
-**Example 4.5.3 (Computing the Day of the Week).** If today is Tuesday and neither this year nor next year is a leap year, what day of the week will it be 1 year from today? A year that is not a leap year has 365 days, and a week has 7 days. Since $365 = 52 \cdot 7 + 1$, $365$ div $7 = 52$ and $365$ mod $7 = 1$. Fifty-two weeks, or 364 days, from today will be a Tuesday, so 365 days from today will be the next day, Wednesday. In general, number the days Sunday = 0, Monday = 1, ..., Saturday = 6, let $\text{Day}_T$ be the day of the week today and $\text{Day}_N$ the day of the week in $N$ days; then the following holds.
+**Example 4.5.3 (Computing the Day of the Week).** If today is Tuesday and neither this year nor next year is a leap year, what day of the week will it be 1 year from today? A year that is not a leap year has 365 days, and a week has 7 days. Since $365 = 52 \cdot 7 + 1$, $365$ div $7 = 52$ and $365$ mod $7 = 1$. Fifty-two weeks, or 364 days, from today will be a Tuesday, so 365 days from today will be the next day, Wednesday. In general, number the days Sunday = 0, Monday = 1, ..., Saturday = 6, let $`\text{Day}_T`$ be the day of the week today and $`\text{Day}_N`$ the day of the week in $N$ days; then the following holds.
 
-$$
+```math
 \text{Day}_N = (\text{Day}_T + N) \text{ mod } 7 \qquad (4.5.1)
-$$
+```
 
-Tuesday is 2, so $(2 + 365) \text{ mod } 7 = 367 \text{ mod } 7 = 3$ (since $367 = 7 \cdot 52 + 3$), and 3 is Wednesday.
+Tuesday is 2, so $(2 + 365) \text{ mod } 7 = 367 \text{ mod } 7 = 3$ (since $`367 = 7 \cdot 52 + 3`$), and 3 is Wednesday.
 
 **Example 4.5.4 (Solving Problems about mod).**
 
@@ -780,23 +780,23 @@ Tuesday is 2, so $(2 + 365) \text{ mod } 7 = 367 \text{ mod } 7 = 3$ (since $367
 
 **Proof.** Suppose $n$ is any positive integer. Let the decimal representation of $n$ be $d_k d_{k-1} \cdots d_2 d_1 d_0$, where $d_0, d_1, \ldots, d_k$ are integers from 0 to 9 inclusive, $d_k \ne 0$, and the following holds.
 
-$$
+```math
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0
-$$
+```
 
 $d_0$ is the digit in the ones place. Factoring 10 out of every term but the last gives the following.
 
-$$
+```math
 n = 10 \cdot (d_k \cdot 10^{k-1} + d_{k-1} \cdot 10^{k-2} + \cdots + d_2 \cdot 10 + d_1) + d_0
-$$
+```
 
 The expression in parentheses is an integer and $0 \le d_0 < 10$, so by the uniqueness in the quotient-remainder theorem, $n$ mod $10 = d_0$. For example, $4738 = 10 \cdot 473 + 8$, so $4738$ mod $10 = 8$.
 
 (b) Suppose $m$ is an integer with $m$ mod $11 = 6$. What is $4m$ mod $11$? The remainder of $m$ divided by 11 is 6, so there is an integer $q$ with $m = 11q + 6$. Hence the following holds.
 
-$$
+```math
 4m = 44q + 24 = 44q + 22 + 2 = 11(4q + 2) + 2
-$$
+```
 
 Since $4q + 2$ is an integer and $0 \le 2 < 11$, $4m$ mod $11 = 2$. For example, if $m = 17$, then $17 = 11 \cdot 1 + 6$ and $4m = 68 = 11 \cdot 6 + 2$.
 
@@ -863,28 +863,28 @@ Why should such an $m$ exist? $n^2 = 8m + 1$ says that $(n^2 - 1)/8$ is an integ
 
 **Proof.** Suppose $n$ is a particular but arbitrarily chosen odd integer. By the quotient-remainder theorem with divisor 4, $n$ has one of the forms $4q$, $4q + 1$, $4q + 2$, $4q + 3$ for some integer $q$. Since $n$ is odd and $4q = 2(2q)$ and $4q + 2 = 2(2q + 1)$ are even, $n$ has the form $4q + 1$ or $4q + 3$.
 
-**Case 1 ($n = 4q + 1$ for some integer $q$):** [An integer $m$ such that $n^2 = 8m + 1$ must be found.] Substituting and expanding gives the following.
+**Case 1 ($n = 4q + 1$ for some integer $`q`$):** [An integer $m$ such that $n^2 = 8m + 1$ must be found.] Substituting and expanding gives the following.
 
-$$
+```math
 \begin{aligned}
 n^2 &= (4q + 1)^2 = (4q + 1)(4q + 1) \\
 &= 16q^2 + 8q + 1 \\
 &= 8(2q^2 + q) + 1
 \end{aligned}
-$$
+```
 
 Let $m = 2q^2 + q$. Then $m$ is an integer because $2$ and $q$ are integers and sums and products of integers are integers, and $n^2 = 8m + 1$.
 
-**Case 2 ($n = 4q + 3$ for some integer $q$):** [An integer $m$ such that $n^2 = 8m + 1$ must be found.] Substituting and expanding gives the following.
+**Case 2 ($n = 4q + 3$ for some integer $`q`$):** [An integer $m$ such that $n^2 = 8m + 1$ must be found.] Substituting and expanding gives the following.
 
-$$
+```math
 \begin{aligned}
 n^2 &= (4q + 3)^2 = (4q + 3)(4q + 3) \\
 &= 16q^2 + 24q + 9 \\
 &= 16q^2 + 24q + (8 + 1) \\
 &= 8(2q^2 + 3q + 1) + 1
 \end{aligned}
-$$
+```
 
 Splitting 9 into $8 + 1$ is motivated by the goal of writing the expression as 8 times some integer plus 1. Let $m = 2q^2 + 3q + 1$. Then $m$ is an integer because $1$, $2$, $3$, and $q$ are integers, and $n^2 = 8m + 1$.
 
@@ -907,9 +907,9 @@ The **triangle inequality** states that the absolute value of a sum never exceed
 
 **Proof.** Suppose $r$ is any real number, and divide into the three cases $r = 0$, $r > 0$, and $r < 0$.
 
-- **Case 1 ($r = 0$):** By definition of absolute value, $\lvert r \rvert = r = 0$. Since $0 = -0$, $-\lvert r \rvert = 0 = r = \lvert r \rvert$, and so $-\lvert r \rvert \le r \le \lvert r \rvert$.
-- **Case 2 ($r > 0$):** By definition of absolute value, $\lvert r \rvert = r$. Also, since $r$ is positive and $-\lvert r \rvert = -r$ is negative, $-\lvert r \rvert < r$. Hence $-\lvert r \rvert \le r \le \lvert r \rvert$.
-- **Case 3 ($r < 0$):** By definition of absolute value, $\lvert r \rvert = -r$, and multiplying both sides by $-1$ gives $-\lvert r \rvert = r$. Also, since $r$ is negative and $\lvert r \rvert$ is positive, $r < \lvert r \rvert$. Hence in this case too $-\lvert r \rvert \le r \le \lvert r \rvert$.
+- **Case 1 ($`r = 0`$):** By definition of absolute value, $\lvert r \rvert = r = 0$. Since $0 = -0$, $-\lvert r \rvert = 0 = r = \lvert r \rvert$, and so $-\lvert r \rvert \le r \le \lvert r \rvert$.
+- **Case 2 ($`r > 0`$):** By definition of absolute value, $\lvert r \rvert = r$. Also, since $r$ is positive and $-\lvert r \rvert = -r$ is negative, $-\lvert r \rvert < r$. Hence $-\lvert r \rvert \le r \le \lvert r \rvert$.
+- **Case 3 ($`r < 0`$):** By definition of absolute value, $\lvert r \rvert = -r$, and multiplying both sides by $-1$ gives $-\lvert r \rvert = r$. Also, since $r$ is negative and $\lvert r \rvert$ is positive, $r < \lvert r \rvert$. Hence in this case too $-\lvert r \rvert \le r \le \lvert r \rvert$.
 
 In every case $-\lvert r \rvert \le r \le \lvert r \rvert$. [This is what was to be shown.]
 
@@ -917,9 +917,9 @@ In every case $-\lvert r \rvert \le r \le \lvert r \rvert$. [This is what was to
 
 **Proof.** Suppose $r$ is any real number. Using the facts that $r > 0$ implies $-r < 0$ and $r < 0$ implies $-r > 0$, divide into three cases.
 
-- **Case 1 ($r > 0$):** Since $-r < 0$, the definition of absolute value gives $\lvert -r \rvert = -(-r) = r$, and since $r > 0$, $\lvert r \rvert = r$. Hence $\lvert -r \rvert = \lvert r \rvert$.
-- **Case 2 ($r = 0$):** Since $-r = 0$, $\lvert -r \rvert = 0 = \lvert r \rvert$.
-- **Case 3 ($r < 0$):** Since $-r > 0$, $\lvert -r \rvert = -r$, and since $r < 0$, $\lvert r \rvert = -r$. Hence $\lvert -r \rvert = \lvert r \rvert$.
+- **Case 1 ($`r > 0`$):** Since $-r < 0$, the definition of absolute value gives $\lvert -r \rvert = -(-r) = r$, and since $r > 0$, $\lvert r \rvert = r$. Hence $\lvert -r \rvert = \lvert r \rvert$.
+- **Case 2 ($`r = 0`$):** Since $-r = 0$, $\lvert -r \rvert = 0 = \lvert r \rvert$.
+- **Case 3 ($`r < 0`$):** Since $-r > 0$, $\lvert -r \rvert = -r$, and since $r < 0$, $\lvert r \rvert = -r$. Hence $\lvert -r \rvert = \lvert r \rvert$.
 
 In every case $\lvert -r \rvert = \lvert r \rvert$.
 
@@ -927,8 +927,8 @@ In every case $\lvert -r \rvert = \lvert r \rvert$.
 
 **Proof.** Suppose $x$ and $y$ are any real numbers, and divide into two cases according to the sign of $x + y$. The proof uses the property of inequalities that if $a \le c$ and $b \le d$, then $a + b \le c + d$.
 
-- **Case 1 ($x + y \ge 0$):** $\lvert x + y \rvert = x + y$. By Lemma 4.5.4, $x \le \lvert x \rvert$ and $y \le \lvert y \rvert$, and adding the two inequalities gives $\lvert x + y \rvert = x + y \le \lvert x \rvert + \lvert y \rvert$.
-- **Case 2 ($x + y < 0$):** $\lvert x + y \rvert = -(x + y) = (-x) + (-y)$. Applying Lemma 4.5.4 to $-x$ and $-y$ and using Lemma 4.5.5 gives $-x \le \lvert -x \rvert = \lvert x \rvert$ and $-y \le \lvert -y \rvert = \lvert y \rvert$. Adding the two inequalities gives $\lvert x + y \rvert = (-x) + (-y) \le \lvert x \rvert + \lvert y \rvert$.
+- **Case 1 ($`x + y \ge 0`$):** $\lvert x + y \rvert = x + y$. By Lemma 4.5.4, $x \le \lvert x \rvert$ and $y \le \lvert y \rvert$, and adding the two inequalities gives $\lvert x + y \rvert = x + y \le \lvert x \rvert + \lvert y \rvert$.
+- **Case 2 ($`x + y < 0`$):** $\lvert x + y \rvert = -(x + y) = (-x) + (-y)$. Applying Lemma 4.5.4 to $-x$ and $-y$ and using Lemma 4.5.5 gives $-x \le \lvert -x \rvert = \lvert x \rvert$ and $-y \le \lvert -y \rvert = \lvert y \rvert$. Adding the two inequalities gives $\lvert x + y \rvert = (-x) + (-y) \le \lvert x \rvert + \lvert y \rvert$.
 
 In both cases $\lvert x + y \rvert \le \lvert x \rvert + \lvert y \rvert$. [This is what was to be shown.]
 
@@ -952,7 +952,7 @@ Imagine a real number sitting on the number line. Its floor and ceiling are the 
 >
 > - $\lceil x \rceil = n \iff n - 1 < x \le n$
 
-Viewed as functions sending $x$ to an integer, $x \mapsto \lfloor x \rfloor$ is the **floor function** and $x \mapsto \lceil x \rceil$ is the **ceiling function**. The floor is the largest integer less than or equal to $x$, and the ceiling is the smallest integer greater than or equal to $x$. Some calculators denote $\lfloor x \rfloor$ by INT($x$).
+Viewed as functions sending $x$ to an integer, $x \mapsto \lfloor x \rfloor$ is the **floor function** and $x \mapsto \lceil x \rceil$ is the **ceiling function**. The floor is the largest integer less than or equal to $x$, and the ceiling is the smallest integer greater than or equal to $x$. Some calculators denote $\lfloor x \rfloor$ by INT($`x`$).
 
 ![Figure 4. Number lines showing the floor and ceiling of x = 6.25 and x = -1.5](../../images/Ch04_Floor-Ceiling-Number-Line.png)
 
@@ -987,20 +987,20 @@ In Figure 5, a filled dot is an endpoint at which the value is taken and an open
 
 **Example 4.6.4 (Disproving an Alleged Property of Floor).** Is the statement "For all real numbers $x$ and $y$, $\lfloor x + y \rfloor = \lfloor x \rfloor + \lfloor y \rfloor$" true or false? It is false. As a counterexample, take $x = y = \frac{1}{2}$.
 
-$$
+```math
 \lfloor x \rfloor + \lfloor y \rfloor = \left\lfloor \tfrac{1}{2} \right\rfloor + \left\lfloor \tfrac{1}{2} \right\rfloor = 0 + 0 = 0, \qquad \lfloor x + y \rfloor = \left\lfloor \tfrac{1}{2} + \tfrac{1}{2} \right\rfloor = \lfloor 1 \rfloor = 1
-$$
+```
 
 Hence it is not always the case that $\lfloor x + y \rfloor = \lfloor x \rfloor + \lfloor y \rfloor$.
 
 This counterexample can be found by the following reasoning. A positive number $x$ is the sum of its integer part $\lfloor x \rfloor$ and its fractional part. For example, in $2.6 = 2 + 0.6$, 2 is the integer part and 0.6 is the fractional part. If $a$, $b$, and $c$ denote the fractional parts of the positive numbers $x$, $y$, and $x + y$, then $0 \le a, b, c < 1$ and the following two equations hold.
 
-$$
+```math
 \begin{aligned}
 x + y &= \lfloor x \rfloor + \lfloor y \rfloor + (a + b) \\
 x + y &= \lfloor x + y \rfloor + c
 \end{aligned}
-$$
+```
 
 Comparing the two equations shows that a counterexample arises when $x$ and $y$ are chosen so that $a + b \ge 1$. For $x = y = \frac{1}{2}$, $a + b = 1$.
 
@@ -1042,15 +1042,15 @@ For example, $\lfloor 7/2 \rfloor = \lfloor 3.5 \rfloor = 3 = (7 - 1)/2$, and $\
 
 Given an integer $n$ and a positive integer $d$, the quotient-remainder theorem guarantees unique integers $q$ and $r$ with $n = dq + r$ and $0 \le r < d$. The next theorem shows that $q$ and $r$ can be expressed with the floor function.
 
-$$
+```math
 q = \left\lfloor \frac{n}{d} \right\rfloor, \qquad r = n - d \cdot \left\lfloor \frac{n}{d} \right\rfloor
-$$
+```
 
 Thus, if a calculator or programming language has floor built in but not div and mod, div and mod can be defined as follows for an integer $n$ and a positive integer $d$.
 
-$$
+```math
 n \text{ div } d = \left\lfloor \frac{n}{d} \right\rfloor, \qquad n \text{ mod } d = n - d \cdot \left\lfloor \frac{n}{d} \right\rfloor \qquad (4.6.1)
-$$
+```
 
 Also, since $d$ divides $n$ if, and only if, $n$ mod $d = 0$, in floor notation $d \mid n \iff n = d \cdot \lfloor n/d \rfloor$.
 
@@ -1066,12 +1066,12 @@ Also, since $d$ divides $n$ if, and only if, $n$ mod $d = 0$, in floor notation 
 
 **Example 4.6.6 (Computing div and mod).** Use the floor notation to compute 3,850 div 17 and 3,850 mod 17. By formula (4.6.1):
 
-$$
+```math
 \begin{aligned}
 3850 \text{ div } 17 &= \lfloor 3850/17 \rfloor = \lfloor 226.4705882\ldots \rfloor = 226 \\
 3850 \text{ mod } 17 &= 3850 - 17 \cdot \lfloor 3850/17 \rfloor = 3850 - 17 \cdot 226 = 3850 - 3842 = 8
 \end{aligned}
-$$
+```
 
 The same formulas work for negative numbers. For $n = -54$ and $d = 4$, $\lfloor -54/4 \rfloor = \lfloor -13.5 \rfloor = -14$ and $-54 - 4 \cdot (-14) = -54 + 56 = 2$, which agree with $q = -14$ and $r = 2$ in Table 7.
 
@@ -1116,9 +1116,9 @@ After a contradiction is reached, the logic is always the same: there is a contr
 
 **Proof.** [The negation of the theorem is supposed to be true.] Suppose not. That is, suppose there is at least one integer $n$ that is both even and odd. [A contradiction must be deduced.] By definition of even, $n = 2a$ for some integer $a$, and by definition of odd, $n = 2b + 1$ for some integer $b$. Equating the two expressions for $n$ and rearranging gives the following.
 
-$$
+```math
 2a = 2b + 1 \implies 2a - 2b = 1 \implies 2(a - b) = 1 \implies a - b = \frac{1}{2}
-$$
+```
 
 Since $a$ and $b$ are integers, the difference $a - b$ must also be an integer. But $a - b = 1/2$, and $1/2$ is not an integer. Thus $a - b$ is an integer and $a - b$ is not an integer, which is a contradiction. [This contradiction shows that the supposition is false and, hence, that the theorem is true.]
 
@@ -1133,15 +1133,15 @@ To show that a certain object does not have a certain property, one may need to 
 
 It has been supposed that $r$ is rational, $s$ is irrational, and $r + s$ is rational. By the definitions of rational and irrational, there are convenient expressions to substitute for $r$ and $r + s$, but about $s$ one can say only that it cannot be written as a quotient of integers, because there is no convenient expression to substitute for an irrational number.
 
-$$
+```math
 r = \frac{a}{b} \quad (4.7.1), \qquad r + s = \frac{c}{d} \quad (4.7.2), \qquad a, b, c, d \in \mathbf{Z},\ b \ne 0,\ d \ne 0
-$$
+```
 
 Substituting (4.7.1) into (4.7.2) and subtracting $a/b$ from both sides gives the following.
 
-$$
+```math
 s = \frac{c}{d} - \frac{a}{b} = \frac{bc}{bd} - \frac{ad}{bd} = \frac{bc - ad}{bd}
-$$
+```
 
 $bc - ad$ and $bd$ are integers because products and differences of integers are integers, and $bd \ne 0$ by the zero product property. Hence $s$ is a quotient of two integers with a nonzero denominator, so it is rational, which contradicts the supposition that $s$ is irrational.
 
@@ -1155,8 +1155,8 @@ The second form of indirect argument, **proof by contraposition**, is based on t
 
 > **Key Point:** **Method of proof by contraposition.**
 >
-> 1. Express the statement to be proved in the form $\forall x \in D,\ P(x) \to Q(x)$. This step may be done mentally.
-> 2. Rewrite it as the contrapositive $\forall x \in D,\ \sim Q(x) \to \sim P(x)$, that is, for every $x \in D$, if $Q(x)$ is false then $P(x)$ is false. This step may also be done mentally.
+> 1. Express the statement to be proved in the form $`\forall x \in D,\ P(x) \to Q(x)`$. This step may be done mentally.
+> 2. Rewrite it as the contrapositive $`\forall x \in D,\ \sim Q(x) \to \sim P(x)`$, that is, for every $x \in D$, if $Q(x)$ is false then $P(x)$ is false. This step may also be done mentally.
 > 3. Prove the contrapositive by a direct proof. (a) Suppose $x$ is a particular but arbitrarily chosen element of $D$ such that $Q(x)$ is false. (b) Show that $P(x)$ is false.
 
 **Example 4.7.4 (If the Square of an Integer Is Even, Then the Integer Is Even).** Prove that for every integer $n$, if $n^2$ is even then $n$ is even. First form the contrapositive.
@@ -1173,9 +1173,9 @@ A straightforward computation proves this statement directly.
 
 **Proof (by contraposition).** Suppose $n$ is any odd integer. [It must be shown that $n^2$ is odd.] By definition of odd, $n = 2k + 1$ for some integer $k$. Substitution and algebra give the following.
 
-$$
+```math
 n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
-$$
+```
 
 $2k^2 + 2k$ is an integer because products and sums of integers are integers. Hence $n^2$ equals 2 times some integer plus 1, and by definition of odd, $n^2$ is odd. [This is what was to be shown.]
 
@@ -1183,7 +1183,7 @@ $2k^2 + 2k$ is an integer because products and sums of integers are integers. He
 
 ### 7.3 Relation between Proof by Contradiction and Proof by Contraposition
 
-Every proof by contraposition can be recast in the language of proof by contradiction. A proof by contraposition proves $\forall x \in D,\ P(x) \to Q(x)$ by giving a direct proof of the equivalent statement $\forall x \in D,\ \sim Q(x) \to \sim P(x)$. That is, it supposes an arbitrary element $x$ of $D$ with $\sim Q(x)$ and shows $\sim P(x)$.
+Every proof by contraposition can be recast in the language of proof by contradiction. A proof by contraposition proves $`\forall x \in D,\ P(x) \to Q(x)`$ by giving a direct proof of the equivalent statement $`\forall x \in D,\ \sim Q(x) \to \sim P(x)`$. That is, it supposes an arbitrary element $x$ of $D$ with $\sim Q(x)$ and shows $\sim P(x)$.
 
 ```mermaid
 flowchart LR
@@ -1209,7 +1209,7 @@ For example, Proposition 4.7.4 can be proved by contradiction as follows.
 
 | Criterion | Proof by contraposition | Proof by contradiction |
 |:-----|:-----|:-----|
-| Starting point | An arbitrary $x$ with $\sim Q(x)$ | The negation of the statement (there exists $x$ with $P(x)$ and $\sim Q(x)$) |
+| Starting point | An arbitrary $x$ with $\sim Q(x)$ | The negation of the statement (there exists $x$ with $P(x)$ and $`\sim Q(x)`$) |
 | Goal | The specific conclusion $\sim P(x)$ | Any contradiction whatsoever |
 | Advantage | The conclusion to be shown is clear, and one avoids taking (possibly incorrectly) the negation of a complicated statement | The proof is done once any contradiction is obtained, and it applies more widely |
 | Disadvantage | It can be used only for universal conditional statements | It may be hard to know which contradiction to aim for |
@@ -1217,7 +1217,7 @@ For example, Proposition 4.7.4 can be proved by contradiction as follows.
 
 *Table 11. Comparison of proof by contraposition and proof by contradiction*
 
-Every statement that can be proved by contraposition can also be proved by contradiction, but the converse is not true. A statement such as "$\sqrt{2}$ is irrational" is not a conditional statement, so it can be proved by contradiction but not by contraposition.
+Every statement that can be proved by contraposition can also be proved by contradiction, but the converse is not true. A statement such as "$`\sqrt{2}`$ is irrational" is not a conditional statement, so it can be proved by contradiction but not by contraposition.
 
 ### 7.4 Proof as a Problem-Solving Tool
 
@@ -1254,9 +1254,9 @@ This section proves two of the most famous theorems in mathematics: that $\sqrt{
 
 The mathematicians of ancient Greece believed that for any two line segments $A$ and $B$, a unit of length could be chosen so that $A$ is exactly $m$ units long and $B$ is exactly $n$ units long for some integers $m$ and $n$. The two segments are then said to be **commensurable** with respect to that unit. In that case, denoting the lengths of $A$ and $B$ by $\ell_A$ and $\ell_B$, the ratio of the two lengths equals a ratio of integers.
 
-$$
+```math
 \frac{\ell_A}{\ell_B} = \frac{m}{n}
-$$
+```
 
 A line segment of length $\sqrt{2}$ is easy to obtain: draw the diagonal of a square whose sides have length 1.
 
@@ -1266,28 +1266,28 @@ A line segment of length $\sqrt{2}$ is easy to obtain: draw the diagonal of a sq
 
 By the Pythagorean theorem, $c^2 = 1^2 + 1^2 = 2$, so $c = \sqrt{2}$. If the belief of the Greeks were correct, the ratio of the lengths of the diagonal and the side would be a ratio of integers $m/n$, so $c/1 = \sqrt{2} = m/n$, and $\sqrt{2}$ would be a ratio of two integers, that is, rational. In the fifth or fourth century B.C.E., the followers of Pythagoras discovered that $\sqrt{2}$ is not rational, and this discovery shook their belief that whole numbers describe all phenomena.
 
-The following proof was known to Aristotle and is similar to the one in the tenth book of Euclid's Elements. The proof begins by supposing the negation, that $\sqrt{2}$ is rational. Then there are integers $m$ and $n$ with $\sqrt{2} = m/n$. If $m$ and $n$ have common factors, they can be canceled to obtain a fraction equal to $m/n$ whose numerator and denominator have no common factors (for example, $18/12 = (6 \cdot 3)/(6 \cdot 2) = 3/2$). Thus, **without loss of generality**, one may assume that $m$ and $n$ have no common factors in the first place. One then derives the contradiction that $m$ and $n$ have the common factor 2. The proof uses Proposition 4.7.4 (if the square of an integer is even, then the integer is even).
+The following proof was known to Aristotle and is similar to the one in the tenth book of Euclid's Elements. The proof begins by supposing the negation, that $\sqrt{2}$ is rational. Then there are integers $m$ and $n$ with $\sqrt{2} = m/n$. If $m$ and $n$ have common factors, they can be canceled to obtain a fraction equal to $m/n$ whose numerator and denominator have no common factors (for example, $`18/12 = (6 \cdot 3)/(6 \cdot 2) = 3/2`$). Thus, **without loss of generality**, one may assume that $m$ and $n$ have no common factors in the first place. One then derives the contradiction that $m$ and $n$ have the common factor 2. The proof uses Proposition 4.7.4 (if the square of an integer is even, then the integer is even).
 
 **Theorem 4.8.1 (Irrationality of √2).** $\sqrt{2}$ is irrational.
 
 **Proof (by contradiction).** [The negation is supposed to be true.] Suppose not. That is, suppose $\sqrt{2}$ is rational. Then there are integers $m$ and $n$ with no common factors such that the following holds [dividing $m$ and $n$ by any common factors if necessary]. [A contradiction must be derived.]
 
-$$
+```math
 \sqrt{2} = \frac{m}{n} \qquad (4.8.1)
-$$
+```
 
 1. Squaring both sides of equation (4.8.1) gives $2 = m^2/n^2$, or equivalently:
 
-$$
+```math
 m^2 = 2n^2 \qquad (4.8.2)
-$$
+```
 
 2. Equation (4.8.2) says that $m^2$ is 2 times the integer $n^2$, so $m^2$ is even by definition of even. By Proposition 4.7.4, $m$ is even. File this fact away for later.
 3. Since $m$ is even, by definition of even the following holds for some integer $k$.
 
-$$
+```math
 m = 2k \qquad (4.8.3)
-$$
+```
 
 4. Substituting equation (4.8.3) into equation (4.8.2) gives $m^2 = (2k)^2 = 4k^2 = 2n^2$, and dividing both sides of the rightmost equation by 2 gives $n^2 = 2k^2$.
 5. Hence $n^2$ is even, and by Proposition 4.7.4, $n$ is even.
@@ -1297,15 +1297,15 @@ $$
 
 Once the irrationality of $\sqrt{2}$ is known, the irrationality of other real numbers can be derived from it.
 
-**Example 4.8.1 (Irrationality of $1 + 3\sqrt{2}$).** Prove by contradiction that $1 + 3\sqrt{2}$ is irrational. The key observation is that if $1 + 3\sqrt{2}$ could be written as a ratio of integers, then so could $\sqrt{2}$, which is impossible by Theorem 4.8.1.
+**Example 4.8.1 (Irrationality of $`1 + 3\sqrt{2}`$).** Prove by contradiction that $1 + 3\sqrt{2}$ is irrational. The key observation is that if $1 + 3\sqrt{2}$ could be written as a ratio of integers, then so could $\sqrt{2}$, which is impossible by Theorem 4.8.1.
 
 **Proposition 4.8.2.** $1 + 3\sqrt{2}$ is irrational.
 
 **Proof.** Suppose not. That is, suppose $1 + 3\sqrt{2}$ is rational. [A contradiction must be derived.] By definition of rational, $1 + 3\sqrt{2} = a/b$ for some integers $a$ and $b$ with $b \ne 0$. Subtracting 1 from both sides, substituting $1 = b/b$, and using the rule for subtracting fractions with a common denominator gives the following.
 
-$$
+```math
 3\sqrt{2} = \frac{a}{b} - 1 = \frac{a}{b} - \frac{b}{b} = \frac{a - b}{b}
-$$
+```
 
 Dividing both sides by 3 gives $\sqrt{2} = \frac{a - b}{3b}$. Since $a$ and $b$ are integers and differences and products of integers are integers, $a - b$ and $3b$ are integers, and $3b \ne 0$ by the zero product property. Hence $\sqrt{2}$ is a quotient of the two integers $a - b$ and $3b$ with a nonzero denominator, so it is rational by definition of rational. This contradicts the fact that $\sqrt{2}$ is irrational. [This contradiction shows that the supposition is false.] Hence $1 + 3\sqrt{2}$ is irrational.
 
@@ -1317,9 +1317,9 @@ A prime number is an integer greater than 1 that cannot be written as a product 
 
 **Proof (by contradiction).** Suppose not. That is, suppose there exist an integer $a$ and a prime number $p$ such that $p \mid a$ and $p \mid (a + 1)$. By definition of divisibility, there are integers $r$ and $s$ with $a = pr$ and $a + 1 = ps$. Then the following holds.
 
-$$
+```math
 1 = (a + 1) - a = ps - pr = p(s - r)
-$$
+```
 
 Since $s - r$ is an integer, $p \mid 1$. But by Theorem 4.4.2 the only divisors of 1 are 1 and $-1$, so $p \le 1$, while $p > 1$ because $p$ is prime. Thus $p \le 1$ and $p > 1$, which is a contradiction. [Hence the supposition is false and the proposition is true.]
 
@@ -1332,9 +1332,9 @@ The idea of Euclid's proof is as follows. Supposing the set of primes is finite,
 1. Then some prime $p$ is the largest of all the primes, and the primes can be listed in ascending order as $2, 3, 5, 7, 11, \ldots, p$.
 2. Let $N$ be the product of all the primes plus 1.
 
-$$
+```math
 N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdots p) + 1
-$$
+```
 
 3. Since $N > 1$, Theorem 4.4.4 says that $N$ is divisible by some prime number $q$.
 4. Because $q$ is prime, it equals one of the primes in the list $2, 3, 5, 7, 11, \ldots, p$. Hence, by definition of divisibility, $q$ divides $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdots p$.
@@ -1392,12 +1392,12 @@ The table below shows how the methods of this chapter apply to various kinds of 
 |:-----|:-----|
 | 1 is prime. | **F.** The definition of prime requires $n > 1$. Counting 1 as prime would break the uniqueness of prime factorization. |
 | 0 is even. | **T.** $0 = 2 \cdot 0$ and 0 is an integer. |
-| To disprove $\forall x \in D,\ P(x) \to Q(x)$, it suffices to find one $x$ for which $P(x)$ is false. | **F.** A counterexample must be an $x$ for which $P(x)$ is true and $Q(x)$ is false. If $P(x)$ is false, the conditional is true for that $x$. |
+| To disprove $`\forall x \in D,\ P(x) \to Q(x)`$, it suffices to find one $x$ for which $P(x)$ is false. | **F.** A counterexample must be an $x$ for which $P(x)$ is true and $Q(x)$ is false. If $P(x)$ is false, the conditional is true for that $x$. |
 | $d \mid 0$ for every integer $d$. | **F.** $d \ne 0$ is required. A nonzero integer $k$ divides 0 because $0 = k \cdot 0$, but by definition 0 divides no number. |
 | $-17$ mod $5$ is 3. | **T.** $-17 = 5 \cdot (-4) + 3$ and $0 \le 3 < 5$. Java's `-17 % 5` gives $-2$. |
 | For every real number $x$, $\lfloor x \rfloor$ is $x$ with the digits after the decimal point discarded. | **F.** It differs for negative numbers. $\lfloor -2.5 \rfloor = -3$, but discarding the digits after the decimal point gives $-2$. |
 | The sum of two irrational numbers is always irrational. | **F.** $\sqrt{2}$ and $-\sqrt{2}$ are irrational, but their sum is the rational number 0. |
-| Every statement that can be proved by contradiction can also be proved by contraposition. | **F.** Proof by contraposition applies only to universal conditional statements. "$\sqrt{2}$ is irrational" is not in conditional form, so proof by contraposition does not apply to it as stated, whereas proof by contradiction does. |
+| Every statement that can be proved by contradiction can also be proved by contraposition. | **F.** Proof by contraposition applies only to universal conditional statements. "$`\sqrt{2}`$ is irrational" is not in conditional form, so proof by contraposition does not apply to it as stated, whereas proof by contradiction does. |
 
 ---
 
@@ -1411,7 +1411,7 @@ The table below shows how the methods of this chapter apply to various kinds of 
 | Even and odd | An integer $n$ is even if $n = 2k$ and odd if $n = 2k + 1$ for some integer $k$. Definitions are used in both directions. |
 | Prime and composite | An integer greater than 1 is prime if it cannot be written as a product of two smaller positive integers and composite if it can. 1 is neither. |
 | Proving existential statements | There are constructive proofs, which find an example or give directions for finding one, and nonconstructive proofs, which only show existence. |
-| Counterexample | To disprove $\forall x \in D,\ P(x) \to Q(x)$, find one $x$ with $P(x)$ true and $Q(x)$ false. |
+| Counterexample | To disprove $`\forall x \in D,\ P(x) \to Q(x)`$, find one $x$ with $P(x)$ true and $Q(x)$ false. |
 | Method of exhaustion | Checking every case, possible when the domain is finite and small. |
 | Generalizing from the generic particular | If a particular but arbitrarily chosen element satisfies a property, every element does. |
 | Direct proof | Suppose $x \in D$ and $P(x)$, and show $Q(x)$ using definitions and previously established results. |
@@ -1438,7 +1438,7 @@ The table below shows how the methods of this chapter apply to various kinds of 
 | Floor of n/2 | It is $n/2$ if $n$ is even and $(n - 1)/2$ if $n$ is odd. |
 | Floor and div, mod | $n$ div $d = \lfloor n/d \rfloor$ and $n$ mod $d = n - d \cdot \lfloor n/d \rfloor$. |
 | Proof by contradiction | If assuming the negation of a statement leads to a contradiction, the statement is true. It suits showing that no object exists or that an object lacks a property. |
-| Proof by contraposition | Instead of $\forall x,\ P(x) \to Q(x)$, prove directly the equivalent $\forall x,\ \sim Q(x) \to \sim P(x)$. |
+| Proof by contraposition | Instead of $`\forall x,\ P(x) \to Q(x)`$, prove directly the equivalent $`\forall x,\ \sim Q(x) \to \sim P(x)`$. |
 | Relation of the two indirect proofs | Every proof by contraposition can be turned into a proof by contradiction, but the converse does not hold. |
 | Irrationality of √2 | Supposing a fraction $m/n$ in lowest terms makes both $m$ and $n$ even, a contradiction. |
 | Infinitude of the primes | The product of all the primes plus 1 must be divisible by a prime not on the list, so the list of primes cannot be finite. |
@@ -1509,7 +1509,7 @@ The table below shows how the methods of this chapter apply to various kinds of 
    <details>
    <summary>Answer</summary>
 
-   There is an integer $q$ with $m = 9q + 7$, so $5m = 45q + 35 = 45q + 27 + 8 = 9(5q + 3) + 8$. Since $5q + 3$ is an integer and $0 \le 8 < 9$, $5m$ mod $9 = 8$. For the day of the week, Wednesday = 3 in formula (4.5.1), so $(3 + 100)$ mod $7 = 103$ mod $7 = 5$ (since $103 = 7 \cdot 14 + 5$), and 5 is Friday.
+   There is an integer $q$ with $m = 9q + 7$, so $5m = 45q + 35 = 45q + 27 + 8 = 9(5q + 3) + 8$. Since $5q + 3$ is an integer and $0 \le 8 < 9$, $5m$ mod $9 = 8$. For the day of the week, Wednesday = 3 in formula (4.5.1), so $(3 + 100)$ mod $7 = 103$ mod $7 = 5$ (since $`103 = 7 \cdot 14 + 5`$), and 5 is Friday.
 
    </details>
 

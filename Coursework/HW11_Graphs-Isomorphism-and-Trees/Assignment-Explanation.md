@@ -73,7 +73,7 @@ By definition every path is a trail, every simple circuit is a circuit, and ever
 
 - **(a)** The edge $e_2$ is traversed twice, as $v_1 \to v_2$ and as $v_2 \to v_1$, so the walk is not a trail and hence not a path. Its start $v_1$ differs from its end $v_0$, so it is not closed either. It is a walk of none of the special kinds.
 - **(b)** The edges $e_3, e_4, e_6, e_7$ are all different, no vertex repeats except $v_2$, which is both the start and the end, and the walk starts and ends at $v_2$. Hence it is a simple circuit.
-- **(c)** It starts and ends at $v_4$, so it is a closed walk, but it traverses the edge $e_5$ twice, first ($v_4 v_2$) and last ($v_2 v_4$), so it is not a circuit.
+- **(c)** It starts and ends at $v_4$, so it is a closed walk, but it traverses the edge $e_5$ twice, first ($`v_4 v_2`$) and last ($`v_2 v_4`$), so it is not a circuit.
 - **(d)** It is closed and its six edges are all different, so it is a circuit. However, $v_2$ appears in the middle (as the fourth vertex) besides the start and the end, so it is not a simple circuit.
 - **(e)** Its six edges are all different, so it is a trail, but $v_2$ appears twice, as the third and sixth vertices, so it is not a path. Its start $v_0$ differs from its end $v_1$, so it is not closed.
 - **(f)** Its three edges and four vertices are all different, so it is a path. A path is also a trail.
@@ -97,7 +97,7 @@ By definition every path is a trail, every simple circuit is a circuit, and ever
 1. Choose the vertex set $W$ as a nonempty subset of $V(G)$.
 2. Choose any number (from none to all) of the edges whose endpoints both lie in $W$. An edge with an endpoint outside $W$ cannot be included.
 
-If $e(W)$ edges have both endpoints in $W$, step 2 can be done in $2^{e(W)}$ ways, so the number of subgraphs is the sum of $2^{e(W)}$ over all $W$. The example in [Chapter 10, Section 1](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md) (vertices $v_1$ and $v_2$, two edges joining them, and a loop at $v_1$) counts 11 subgraphs, in agreement with this sum $2 + 1 + 8 = 11$; among the 11 are the subgraph with both vertices and no edge and the one with both vertices and only the loop.
+If $e(W)$ edges have both endpoints in $W$, step 2 can be done in $2^{e(W)}$ ways, so the number of subgraphs is the sum of $2^{e(W)}$ over all $W$. The example in [Chapter 10, Section 1](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md) (vertices $v_1$ and $v_2$, two edges joining them, and a loop at $`v_1`$) counts 11 subgraphs, in agreement with this sum $2 + 1 + 8 = 11$; among the 11 are the subgraph with both vertices and no edge and the one with both vertices and only the loop.
 
 **Solution.** For each graph, the edges that can be included for each vertex set are as follows.
 
@@ -134,7 +134,7 @@ If $e(W)$ edges have both endpoints in $W$, step 2 can be done in $2^{e(W)}$ way
 
 *Table 4. The 17 subgraphs of graph (c)*
 
-> **Caution:** Even when all vertices are chosen, only some of the edges may be chosen. Hence in (c) the subgraphs with vertex set $\lbrace v_1, v_2, v_3\rbrace$ are the one with no edge, three with one edge, three with two edges, and the original graph, eight in all (Nos. 10-17 in Table 4). Assuming that choosing all vertices forces all edges omits seven of them and counts only $3 + 6 + 1 = 10$, and assuming that every edge between two chosen vertices is always included counts only 7, one for each vertex set. The latter is a separate notion called an **induced subgraph**; the definition of a subgraph has no such condition, so the answer is 17. Conversely, including an edge whose endpoint is missing (for example, the edge $e_1$ with vertex set $\lbrace v_1\rbrace$) does not give a graph and is not allowed.
+> **Caution:** Even when all vertices are chosen, only some of the edges may be chosen. Hence in (c) the subgraphs with vertex set $\lbrace v_1, v_2, v_3\rbrace$ are the one with no edge, three with one edge, three with two edges, and the original graph, eight in all (Nos. 10-17 in Table 4). Assuming that choosing all vertices forces all edges omits seven of them and counts only $3 + 6 + 1 = 10$, and assuming that every edge between two chosen vertices is always included counts only 7, one for each vertex set. The latter is a separate notion called an **induced subgraph**; the definition of a subgraph has no such condition, so the answer is 17. Conversely, including an edge whose endpoint is missing (for example, the edge $e_1$ with vertex set $`\lbrace v_1\rbrace`$) does not give a graph and is not allowed.
 
 ---
 
@@ -152,21 +152,29 @@ If $e(W)$ edges have both endpoints in $W$, step 2 can be done in $2^{e(W)}$ way
 
 **Solution.** List the edges of each graph with their endpoints, and count the edges for each pair of vertices.
 
-**(a)** The edges are $e_1 = \lbrace v_1, v_4\rbrace$, $e_2$ (a loop at $v_4$), $e_3 = \lbrace v_1, v_3\rbrace$, and the parallel edges $e_4$ and $e_5$ joining $v_2$ and $v_3$. Hence $a_{14} = a_{41} = 1$, $a_{44} = 1$, $a_{13} = a_{31} = 1$, and $a_{23} = a_{32} = 2$, and all other entries are 0.
+**(a)** The edges are $e_1 = \lbrace v_1, v_4\rbrace$, $e_2$ (a loop at $`v_4`$), $e_3 = \lbrace v_1, v_3\rbrace$, and the parallel edges $e_4$ and $e_5$ joining $v_2$ and $v_3$. Hence $a_{14} = a_{41} = 1$, $a_{44} = 1$, $a_{13} = a_{31} = 1$, and $a_{23} = a_{32} = 2$, and all other entries are 0.
 
-$$\begin{bmatrix} 0 & 0 & 1 & 1 \\ 0 & 0 & 2 & 0 \\ 1 & 2 & 0 & 0 \\ 1 & 0 & 0 & 1 \end{bmatrix}$$
+```math
+\begin{bmatrix} 0 & 0 & 1 & 1 \\ 0 & 0 & 2 & 0 \\ 1 & 2 & 0 & 0 \\ 1 & 0 & 0 & 1 \end{bmatrix}
+```
 
-**(b)** The edges are $e_1$ (a loop at $v_1$), $e_2$ (a loop at $v_2$), the parallel edges $e_3$ and $e_4$ joining $v_2$ and $v_4$, $e_5 = \lbrace v_2, v_3\rbrace$, and $e_6$ (a loop at $v_3$). Apart from its loop, $v_1$ is not joined to any vertex, so the first row and column are all 0 except $a_{11} = 1$.
+**(b)** The edges are $e_1$ (a loop at $`v_1`$), $e_2$ (a loop at $`v_2`$), the parallel edges $e_3$ and $e_4$ joining $v_2$ and $v_4$, $e_5 = \lbrace v_2, v_3\rbrace$, and $e_6$ (a loop at $`v_3`$). Apart from its loop, $v_1$ is not joined to any vertex, so the first row and column are all 0 except $a_{11} = 1$.
 
-$$\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 1 & 2 \\ 0 & 1 & 1 & 0 \\ 0 & 2 & 0 & 0 \end{bmatrix}$$
+```math
+\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 1 & 2 \\ 0 & 1 & 1 & 0 \\ 0 & 2 & 0 & 0 \end{bmatrix}
+```
 
 **(c)** Name the vertices of $K_4$ $v_1, v_2, v_3, v_4$ (left of Figure 4). There is one edge between any two distinct vertices and no loop, so the diagonal entries are 0 and all other entries are 1.
 
-$$\begin{bmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix}$$
+```math
+\begin{bmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix}
+```
 
 **(d)** Split the vertices of $K_{2,3}$ into the parts $v_1, v_2$ and $w_1, w_2, w_3$, and list them in the order $v_1, v_2, w_1, w_2, w_3$ (right of Figure 4). There is no edge between two vertices of the same part and one edge between two vertices of different parts.
 
-$$\begin{bmatrix} 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 1 & 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 & 0 \end{bmatrix}$$
+```math
+\begin{bmatrix} 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 1 & 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 & 0 \end{bmatrix}
+```
 
 ![Figure 4. Complete graph K4 and complete bipartite graph K2,3](../../images/HW11_K4-and-K23.png)
 
@@ -184,9 +192,11 @@ The adjacency matrix depends on the order of the vertices. For instance, listing
 
 **Problem.** For each of the two matrices below, draw a graph that has it as its adjacency matrix.
 
-$$\text{(a)}\ \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 2 \\ 1 & 2 & 0 \end{bmatrix} \qquad \text{(b)}\ \begin{bmatrix} 0 & 2 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+```math
+\text{(a)}\ \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 2 \\ 1 & 2 & 0 \end{bmatrix} \qquad \text{(b)}\ \begin{bmatrix} 0 & 2 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+```
 
-**Concepts used.** Regard the rows and columns as corresponding to the vertices $v_1, v_2, v_3$, and draw $a_{ij}$ edges joining $v_i$ and $v_j$ ([Chapter 10, Section 2](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Since the matrix is symmetric, $a_{ij}$ and $a_{ji}$ describe the same edges. Hence it suffices to read the entries on and above the diagonal ($i \le j$), and the diagonal entry $a_{ii}$ is the number of loops at $v_i$.
+**Concepts used.** Regard the rows and columns as corresponding to the vertices $v_1, v_2, v_3$, and draw $a_{ij}$ edges joining $v_i$ and $v_j$ ([Chapter 10, Section 2](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Since the matrix is symmetric, $a_{ij}$ and $a_{ji}$ describe the same edges. Hence it suffices to read the entries on and above the diagonal ($`i \le j`$), and the diagonal entry $a_{ii}$ is the number of loops at $v_i$.
 
 **Solution.**
 
@@ -212,17 +222,21 @@ An adjacency matrix gives only the number of edges for each pair of vertices, so
 
 **Solution.** Let $A = (a_{ij})$ be an $m \times m$ symmetric matrix, and let $i$ and $j$ be arbitrary integers with $1 \le i, j \le m$. By the definition of matrix multiplication, the two entries of $A^2 = AA$ are as follows.
 
-$$(A^2)_{ij} = \sum_{k=1}^{m} a_{ik} a_{kj}, \qquad (A^2)_{ji} = \sum_{k=1}^{m} a_{jk} a_{ki}$$
+```math
+(A^2)_{ij} = \sum_{k=1}^{m} a_{ik} a_{kj}, \qquad (A^2)_{ji} = \sum_{k=1}^{m} a_{jk} a_{ki}
+```
 
 Since $A$ is symmetric, $a_{ik} = a_{ki}$ and $a_{kj} = a_{jk}$ for every $k$. Substituting these and using the commutative law for multiplication of real numbers gives the following for each $k$.
 
-$$a_{ik} a_{kj} = a_{ki} a_{jk} = a_{jk} a_{ki}$$
+```math
+a_{ik} a_{kj} = a_{ki} a_{jk} = a_{jk} a_{ki}
+```
 
-The two sums add the same terms over $k = 1$ to $m$, so $(A^2)_{ij} = (A^2)_{ji}$. Since $i$ and $j$ were arbitrary, $A^2$ is a symmetric matrix.
+The two sums add the same terms over $k = 1$ to $m$, so $`(A^2)_{ij} = (A^2)_{ji}`$. Since $i$ and $j$ were arbitrary, $A^2$ is a symmetric matrix.
 
-For example, if $A = \begin{bmatrix} 1 & 2 \\ 2 & 3 \end{bmatrix}$, then $A^2 = \begin{bmatrix} 1 + 4 & 2 + 6 \\ 2 + 6 & 4 + 9 \end{bmatrix} = \begin{bmatrix} 5 & 8 \\ 8 & 13 \end{bmatrix}$, which is symmetric.
+For example, if $`A = \begin{bmatrix} 1 & 2 \\ 2 & 3 \end{bmatrix}`$, then $`A^2 = \begin{bmatrix} 1 + 4 & 2 + 6 \\ 2 + 6 & 4 + 9 \end{bmatrix} = \begin{bmatrix} 5 & 8 \\ 8 & 13 \end{bmatrix}`$, which is symmetric.
 
-> **Note:** A short proof uses the transpose. Symmetry means $A^T = A$, and the transpose of a product is $(AB)^T = B^T A^T$, so $(A^2)^T = (AA)^T = A^T A^T = AA = A^2$. In graph terms, if $A$ is the adjacency matrix of an undirected graph, then $(A^2)_{ij}$ is the number of walks of length 2 from $v_i$ to $v_j$ (Theorem 10.2.2 in [Chapter 10, Section 2](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Following a walk backward gives a walk of the same length from $v_j$ to $v_i$, so it is natural that $(A^2)_{ij} = (A^2)_{ji}$.
+> **Note:** A short proof uses the transpose. Symmetry means $A^T = A$, and the transpose of a product is $(AB)^T = B^T A^T$, so $(A^2)^T = (AA)^T = A^T A^T = AA = A^2$. In graph terms, if $A$ is the adjacency matrix of an undirected graph, then $`(A^2)_{ij}`$ is the number of walks of length 2 from $v_i$ to $v_j$ (Theorem 10.2.2 in [Chapter 10, Section 2](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Following a walk backward gives a walk of the same length from $v_j$ to $v_i$, so it is natural that $`(A^2)_{ij} = (A^2)_{ji}`$.
 
 ---
 
@@ -236,7 +250,7 @@ For example, if $A = \begin{bmatrix} 1 & 2 \\ 2 & 3 \end{bmatrix}$, then $A^2 = 
 
 *Figure 6. Two graphs G and G' with parallel edges*
 
-**Concepts used.** Two graphs $G$ and $G'$ are **isomorphic** if there are one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that, for all $v \in V(G)$ and $e \in E(G)$, "$v$ is an endpoint of $e$" is equivalent to "$g(v)$ is an endpoint of $h(e)$" ([Chapter 10, Section 3](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). A property preserved by isomorphism is called an **isomorphic invariant**; examples are the number of vertices, the number of edges, the number of vertices of degree $k$, having a circuit of length $k$, and connectedness (Theorem 10.3.2). One differing invariant proves that the graphs are not isomorphic, but agreement of all invariants does not by itself make them isomorphic. To show isomorphism, $g$ and $h$ must actually be constructed.
+**Concepts used.** Two graphs $G$ and $G'$ are **isomorphic** if there are one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that, for all $v \in V(G)$ and $e \in E(G)$, "$`v`$ is an endpoint of $e$" is equivalent to "$`g(v)`$ is an endpoint of $h(e)$" ([Chapter 10, Section 3](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). A property preserved by isomorphism is called an **isomorphic invariant**; examples are the number of vertices, the number of edges, the number of vertices of degree $k$, having a circuit of length $k$, and connectedness (Theorem 10.3.2). One differing invariant proves that the graphs are not isomorphic, but agreement of all invariants does not by itself make them isomorphic. To show isomorphism, $g$ and $h$ must actually be constructed.
 
 **Solution.**
 
@@ -267,12 +281,12 @@ Both $g$ and $h$ are one-to-one correspondences, and in every row of Table 5 the
 
 *Figure 7. Two simple graphs G and G'*
 
-**Concepts used.** In a simple graph an edge is determined by the pair of its endpoints, so $G$ and $G'$ are isomorphic if there is a one-to-one correspondence $g: V(G) \to V(G')$ such that, for all vertices $u$ and $v$, "$\lbrace u, v\rbrace$ is an edge of $G$" is equivalent to "$\lbrace g(u), g(v)\rbrace$ is an edge of $G'$" ([Chapter 10, Section 3](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). If the two graphs have the same number of edges, it suffices to check that every edge of $G$ is sent to an edge of $G'$. Since $g$ is one-to-one, different edges go to different edges, and since the numbers of edges are equal, every edge of $G'$ is the image of some edge, so the condition in the other direction also holds.
+**Concepts used.** In a simple graph an edge is determined by the pair of its endpoints, so $G$ and $G'$ are isomorphic if there is a one-to-one correspondence $g: V(G) \to V(G')$ such that, for all vertices $u$ and $v$, "$`\lbrace u, v\rbrace`$ is an edge of $G$" is equivalent to "$`\lbrace g(u), g(v)\rbrace`$ is an edge of $G'$" ([Chapter 10, Section 3](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). If the two graphs have the same number of edges, it suffices to check that every edge of $G$ is sent to an edge of $G'$. Since $g$ is one-to-one, different edges go to different edges, and since the numbers of edges are equal, every edge of $G'$ is the image of some edge, so the condition in the other direction also holds.
 
 **Solution.**
 
 1. **Comparing invariants.** The edges of $G$ are the seven edges $ab, af, bc, fc, fe, cd, ed$, and the edges of $G'$ are the seven edges $uv, uz, vy, wz, wx, xy, zy$. Both graphs have six vertices. In $G$, the vertices $c$ and $f$ have degree 3 and the other four have degree 2; in $G'$, $y$ and $z$ have degree 3 and the other four have degree 2. Moreover, the two degree-3 vertices $c$ and $f$ of $G$ are adjacent, and so are $y$ and $z$ in $G'$.
-2. **Understanding the structure.** In $G$, $f$ and $c$ are joined directly by the edge $fc$ and also by the paths $f\,a\,b\,c$ and $f\,e\,d\,c$, each passing through two vertices of degree 2. In $G'$, $z$ and $y$ are likewise joined by the edge $zy$ and by the paths $z\,u\,v\,y$ and $z\,w\,x\,y$. The crossing of the edges $vy$ and $wz$ in the drawing of $G'$ is only a matter of how it is drawn and has nothing to do with the structure.
+2. **Understanding the structure.** In $G$, $f$ and $c$ are joined directly by the edge $fc$ and also by the paths $`f\,a\,b\,c`$ and $`f\,e\,d\,c`$, each passing through two vertices of degree 2. In $G'$, $z$ and $y$ are likewise joined by the edge $zy$ and by the paths $`z\,u\,v\,y`$ and $`z\,w\,x\,y`$. The crossing of the edges $vy$ and $wz$ in the drawing of $G'$ is only a matter of how it is drawn and has nothing to do with the structure.
 3. **Vertex correspondence $g$.** Matching this structure, let $g(f) = z$, $g(c) = y$, $g(a) = u$, $g(b) = v$, $g(e) = w$, and $g(d) = x$.
 4. **Checking the edges.** Move all seven edges of $G$.
 
@@ -380,7 +394,7 @@ The solid part of Figure 10 is a tree with nine vertices and eight edges. Adding
 | Subgraphs | Choose a nonempty vertex set $W$ and any edges with both endpoints in $W$, so the number is $\sum_W 2^{e(W)}$. A triangle has 17 subgraphs. |
 | Adjacency matrix | $a_{ij}$ is the number of edges joining $v_i$ and $v_j$, and a loop counts as 1 on the diagonal. The adjacency matrix of an undirected graph is symmetric. |
 | Graph from a matrix | Read only the entries on and above the diagonal and draw $a_{ij}$ edges. A diagonal entry is a number of loops. |
-| Square of a symmetric matrix | $(A^2)_{ij} = \sum_k a_{ik}a_{kj} = \sum_k a_{jk}a_{ki} = (A^2)_{ji}$, so the square of a symmetric matrix is symmetric. |
+| Square of a symmetric matrix | $`(A^2)_{ij} = \sum_k a_{ik}a_{kj} = \sum_k a_{jk}a_{ki} = (A^2)_{ji}`$, so the square of a symmetric matrix is symmetric. |
 | Isomorphism | Graphs are isomorphic if one-to-one correspondences $g$ and $h$ preserve the endpoint relation. Degrees must be preserved, so they narrow down the candidates. |
 | Isomorphic invariants | The numbers of vertices and edges, degrees, lengths of circuits, and connectedness are invariants. One differing invariant shows non-isomorphism; showing isomorphism requires constructing and checking a correspondence. |
 | Leaves and internal vertices | In a tree with at least two vertices, vertices of degree 1 are leaves and vertices of degree 2 or more are internal vertices. |
@@ -401,7 +415,7 @@ The solid part of Figure 10 is a tree with nine vertices and eight edges. Adding
 
    </details>
 
-2. **Number of subgraphs:** How many subgraphs does the path-shaped graph with vertices $v_1$, $v_2$, $v_3$ and edges $e_1$ (joining $v_1$ and $v_2$) and $e_2$ (joining $v_2$ and $v_3$) have?
+2. **Number of subgraphs:** How many subgraphs does the path-shaped graph with vertices $v_1$, $v_2$, $v_3$ and edges $e_1$ (joining $v_1$ and $`v_2`$) and $e_2$ (joining $v_2$ and $`v_3`$) have?
 
    <details>
    <summary>Answer</summary>
@@ -424,11 +438,11 @@ The solid part of Figure 10 is a tree with nine vertices and eight edges. Adding
    <details>
    <summary>Answer</summary>
 
-   Not always. Since $(AB)^T = B^T A^T = BA$, $AB$ is symmetric exactly when $AB = BA$. For example, if $A = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $B = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, then $AB = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$, which is not symmetric. For $A^2$, $A$ commutes with itself, so the square is always symmetric.
+   Not always. Since $(AB)^T = B^T A^T = BA$, $AB$ is symmetric exactly when $AB = BA$. For example, if $`A = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}`$ and $`B = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`$, then $`AB = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}`$, which is not symmetric. For $A^2$, $A$ commutes with itself, so the square is always symmetric.
 
    </details>
 
-5. **Proving non-isomorphism:** Are the two simple graphs with four vertices and three edges, the path $a\,b\,c\,d$ and the star in which one vertex is joined to the other three, isomorphic?
+5. **Proving non-isomorphism:** Are the two simple graphs with four vertices and three edges, the path $`a\,b\,c\,d`$ and the star in which one vertex is joined to the other three, isomorphic?
 
    <details>
    <summary>Answer</summary>

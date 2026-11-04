@@ -41,12 +41,12 @@
 
 **Solution.** Observe that 3 can be factored out of the last factor $3k + 3$.
 
-$$
+```math
 \begin{aligned}
 (3k+1)(3k+2)(3k+3) &= (3k+1)(3k+2) \cdot 3(k+1) && \text{(1)} \\
 &= 3 \cdot \big[(3k+1)(3k+2)(k+1)\big] && \text{(2)}
 \end{aligned}
-$$
+```
 
 Step (1) writes $3k + 3 = 3(k+1)$ by the distributive law, and step (2) moves 3 to the front by the commutative and associative laws of multiplication. Now let $m = (3k+1)(3k+2)(k+1)$. Since $k$ is an integer and sums and products of integers are integers, $m$ is an integer. Hence $(3k+1)(3k+2)(3k+3) = 3m$ with $3 \ne 0$, and by the definition of divisibility 3 divides $(3k+1)(3k+2)(3k+3)$.
 
@@ -113,7 +113,7 @@ In the earlier example $r = 2$ and $s = 3$, so $t = 2 \cdot 2 - 3 \cdot 3 = -5$,
 
 ## 4. Exercise 4.4.44: Numbers Ending in 0 and Divisibility by 5
 
-**Problem.** Show that a nonnegative integer $n$ whose decimal representation has last digit 0 is divisible by 5 ($5 \mid n$). The hint is that a nonnegative integer $n$ with last digit $d_0$ can be written as $n = 10m + d_0$ for some integer $m$.
+**Problem.** Show that a nonnegative integer $n$ whose decimal representation has last digit 0 is divisible by 5 ($`5 \mid n`$). The hint is that a nonnegative integer $n$ with last digit $d_0$ can be written as $n = 10m + d_0$ for some integer $m$.
 
 **Concept used.** The definitions of decimal representation and of divisibility.
 
@@ -121,9 +121,9 @@ In the earlier example $r = 2$ and $s = 3$, so $t = 2 \cdot 2 - 3 \cdot 3 = -5$,
 
 For example, $2{,}530 = 2 \cdot 10^3 + 5 \cdot 10^2 + 3 \cdot 10 + 0$. The equation in the hint is obtained by factoring 10 out of all terms except the last term $d_0$.
 
-$$
+```math
 n = 10\big(d_k \cdot 10^{k-1} + \cdots + d_2 \cdot 10 + d_1\big) + d_0 = 10m + d_0
-$$
+```
 
 The quantity $m$ in parentheses is a sum of products of integers, so it is an integer. If $k = 0$, the parentheses contain no terms and $m = 0$.
 
@@ -149,7 +149,7 @@ For example, $2{,}530 = 10 \cdot 253 = 5 \cdot 506$.
 
 **Problem.** For a positive integer $d$ and an integer $n$ with $d \mid n$, find the remainder that the quotient-remainder theorem gives when $n$ is divided by $d$.
 
-**Concept used.** The quotient-remainder theorem (Theorem 4.5.1) from [Chapter 4, Section 5](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md). For any integer $n$ and positive integer $d$ there exist **unique** integers $q$ and $r$ with $n = dq + r$ and $0 \le r < d$; this $q$ is called the quotient ($n$ div $d$) and $r$ the remainder ($n$ mod $d$).
+**Concept used.** The quotient-remainder theorem (Theorem 4.5.1) from [Chapter 4, Section 5](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md). For any integer $n$ and positive integer $d$ there exist **unique** integers $q$ and $r$ with $n = dq + r$ and $0 \le r < d$; this $q$ is called the quotient ($n$ div $`d`$) and $r$ the remainder ($n$ mod $`d`$).
 
 **Solution.**
 
@@ -209,7 +209,7 @@ For example, $k = 3$ gives $\lceil 3.5 \rceil = 4$.
 
 **Problem.** Show that $\lfloor n/2 \rfloor = n/2$ for every even integer $n$.
 
-**Concept used.** The definition of even ($n = 2m$ for some integer $m$) and the definition of floor (for a real number $x$ and an integer $n$, $\lfloor x \rfloor = n \iff n \le x < n + 1$).
+**Concept used.** The definition of even ($n = 2m$ for some integer $`m`$) and the definition of floor (for a real number $x$ and an integer $n$, $`\lfloor x \rfloor = n \iff n \le x < n + 1`$).
 
 **Proof.**
 
@@ -221,7 +221,7 @@ For example, $k = 3$ gives $\lceil 3.5 \rceil = 4$.
 
 For example, $n = 10$ gives $\lfloor 5 \rfloor = 5 = 10/2$, and $n = -6$ gives $\lfloor -3 \rfloor = -3 = -6/2$.
 
-> **Note:** This result is the even case of Theorem 4.6.2 (the floor of $n/2$). For an odd integer $n = 2m + 1$, $n/2 = m + \frac{1}{2}$ and $m \le m + \frac{1}{2} < m + 1$, so $\lfloor n/2 \rfloor = m = \frac{n - 1}{2}$. These two formulas are used in analyzing algorithms that halve an interval, such as binary search and merge sort.
+> **Note:** This result is the even case of Theorem 4.6.2 (the floor of $`n/2`$). For an odd integer $n = 2m + 1$, $n/2 = m + \frac{1}{2}$ and $m \le m + \frac{1}{2} < m + 1$, so $\lfloor n/2 \rfloor = m = \frac{n - 1}{2}$. These two formulas are used in analyzing algorithms that halve an interval, such as binary search and merge sort.
 
 ---
 
@@ -231,7 +231,7 @@ For example, $n = 10$ gives $\lfloor 5 \rfloor = 5 = 10/2$, and $n = -6$ gives $
 
 **Problem.** Determine whether $6 - 7\sqrt{2}$ is irrational, and support the answer with a proof or a disproof.
 
-**Concept used.** A real number $r$ is a **rational number** if $r = a/b$ for some integers $a, b$ with $b \ne 0$, and a real number that is not rational is an **irrational number**. By Theorem 4.8.1 in [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md), $\sqrt{2}$ is irrational. Being irrational is the negative statement "not rational", so proof by contradiction, which supposes the negation of the conclusion and derives a contradiction, is the natural method. It is the same method as the proof of Proposition 4.8.2 (the irrationality of $1 + 3\sqrt{2}$).
+**Concept used.** A real number $r$ is a **rational number** if $r = a/b$ for some integers $a, b$ with $b \ne 0$, and a real number that is not rational is an **irrational number**. By Theorem 4.8.1 in [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md), $\sqrt{2}$ is irrational. Being irrational is the negative statement "not rational", so proof by contradiction, which supposes the negation of the conclusion and derives a contradiction, is the natural method. It is the same method as the proof of Proposition 4.8.2 (the irrationality of $`1 + 3\sqrt{2}`$).
 
 **Answer.** It is irrational.
 
@@ -241,12 +241,12 @@ For example, $n = 10$ gives $\lfloor 5 \rfloor = 5 = 10/2$, and $n = -6$ gives $
 2. By the definition of rational, there are integers $a, b$ with $6 - 7\sqrt{2} = \frac{a}{b}$ and $b \ne 0$.
 3. Solve this equation for $\sqrt{2}$.
 
-$$
+```math
 \begin{aligned}
 7\sqrt{2} &= 6 - \frac{a}{b} = \frac{6b - a}{b} && \text{(1)} \\
 \sqrt{2} &= \frac{6b - a}{7b} && \text{(2)}
 \end{aligned}
-$$
+```
 
 Step (1) adds $7\sqrt{2} - \frac{a}{b}$ to both sides of the equation in step 2 and uses a common denominator, and step (2) divides both sides by 7.
 
@@ -266,7 +266,7 @@ Step (1) adds $7\sqrt{2} - \frac{a}{b}$ to both sides of the equation in step 2 
 
 **Problem.** For $N = 2 \cdot 3 \cdot 5 \cdot 7 + 1$, find the remainders of $N$ on division by 2, 3, 5, and 7, with justification.
 
-**Concept used.** The uniqueness part of the quotient-remainder theorem (the same reasoning as in Section 5) and Proposition 4.8.3 of [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md) (for any integer $a$ and any prime $p$, if $p \mid a$ then $p \nmid (a + 1)$). $N$ has the same form as the number in the proof that the primes are infinite (Theorem 4.8.4).
+**Concept used.** The uniqueness part of the quotient-remainder theorem (the same reasoning as in Section 5) and Proposition 4.8.3 of [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md) (for any integer $a$ and any prime $p$, if $p \mid a$ then $`p \nmid (a + 1)`$). $N$ has the same form as the number in the proof that the primes are infinite (Theorem 4.8.4).
 
 **Solution.** First, $N = 210 + 1 = 211$. Starting with the divisor 2, factor 2 out of $N$ to write $N = 2 \cdot (3 \cdot 5 \cdot 7) + 1 = 2 \cdot 105 + 1$. Since 105 is an integer and $0 \le 1 < 2$, this equation has the form of the quotient-remainder theorem, and by uniqueness the quotient is 105 and the remainder is 1. For the other three primes, factor out that prime in the same way.
 

@@ -110,13 +110,13 @@ To generalize this analysis, some terms are defined. A process is called **rando
 
 When an experiment has finitely many outcomes, all equally likely, the probability of an event is the number of outcomes it contains divided by the total number of outcomes. This fact can be derived from the probability axioms introduced in Section 8; here it is accepted as a principle.
 
-> **Key Point:** **Equally likely probability formula.** If $S$ is a finite sample space in which all outcomes are equally likely and $E$ is an event in $S$, then the probability of $E$, denoted $P(E)$, is (the number of outcomes in $E$) / (the total number of outcomes in $S$).
+> **Key Point:** **Equally likely probability formula.** If $S$ is a finite sample space in which all outcomes are equally likely and $E$ is an event in $S$, then the probability of $E$, denoted $P(E)$, is (the number of outcomes in $`E`$) / (the total number of outcomes in $`S`$).
 
 Writing $N(A)$ for the number of elements of a finite set $A$, the formula becomes the following.
 
-$$
+```math
 P(E) = \frac{N(E)}{N(S)}
-$$
+```
 
 > **Caution:** This formula applies only when all outcomes of the sample space are equally likely. If the sample space of the two-coin experiment is taken to be {0 heads, 1 head, 2 heads}, the three outcomes are not equally likely, so assigning each a probability of one-third is wrong. The sample space must be chosen so that its outcomes are equally likely (Table 2).
 
@@ -171,7 +171,7 @@ Of the three equally likely cases, switching wins in 2 and staying wins in 1. So
 
 The simplest kind of counting is counting the elements of a list. The integers from 5 through 12 are 5, 6, 7, 8, 9, 10, 11, 12, and counting them one by one gives 8.
 
-In general, consider how many integers there are from $m$ through $n$ for integers $m \le n$. Here $n = m + (n - m)$ with $n - m \ge 0$. The first element of the list is $m + 0$, the second is $m + 1$, the third is $m + 2$, and in general $m + i$ is the $(i+1)$st element. The last element $n = m + (n - m)$ is the $(n - m + 1)$st element, so the list has $n - m + 1$ elements.
+In general, consider how many integers there are from $m$ through $n$ for integers $m \le n$. Here $n = m + (n - m)$ with $n - m \ge 0$. The first element of the list is $m + 0$, the second is $m + 1$, the third is $m + 2$, and in general $m + i$ is the $`(i+1)`$st element. The last element $n = m + (n - m)$ is the $`(n - m + 1)`$st element, so the list has $n - m + 1$ elements.
 
 > **Key Point:** **Theorem 9.1.1 (The Number of Elements in a List).** If $m$ and $n$ are integers and $m \le n$, then there are $n - m + 1$ integers from $m$ to $n$ inclusive.
 
@@ -235,7 +235,7 @@ graph LR
 *Figure 1. Possibility tree of a tournament that ends after two wins in a row or three wins in total*
 
 1. There are 10 paths from the root to the leaves, so the tournament can be played in 10 ways. From the top they are A-A, A-B-A-A, A-B-A-B-A, A-B-A-B-B, A-B-B, B-A-A, B-A-B-A-A, B-A-B-A-B, B-A-B-B, and B-B; A wins in 5 of them and B in the other 5. At least 2 and at most 5 games are needed to determine the winner.
-2. Assuming the 10 ways of playing are equally likely, five games are needed in the 4 cases A-B-A-B-A, A-B-A-B-B, B-A-B-A-A, and B-A-B-A-B, so the probability is $4/10 = 2/5 = 40\%$.
+2. Assuming the 10 ways of playing are equally likely, five games are needed in the 4 cases A-B-A-B-A, A-B-A-B-B, B-A-B-A-A, and B-A-B-A-B, so the probability is $`4/10 = 2/5 = 40\%`$.
 
 ### 2.2 The Multiplication Rule
 
@@ -265,7 +265,7 @@ graph LR
 
 The topmost path represents pairing input/output unit A with central processing unit X, and the next path pairing A with Y. The number of pairings equals the number of leaves, and for each of the four choices in step 1 there are three choices in step 2, so the count is $3 + 3 + 3 + 3 = 4 \cdot 3 = 12$. The multiplication rule generalizes this observation.
 
-> **Key Point:** **Theorem 9.2.1 (The Multiplication Rule).** If an operation consists of $k$ steps and the first step can be performed in $n_1$ ways, the second step in $n_2$ ways (regardless of how the first step was performed), ..., and the $k$th step in $n_k$ ways (regardless of how the preceding steps were performed), then the entire operation can be performed in $n_1 n_2 \cdots n_k$ ways.
+> **Key Point:** **Theorem 9.2.1 (The Multiplication Rule).** If an operation consists of $k$ steps and the first step can be performed in $n_1$ ways, the second step in $n_2$ ways (regardless of how the first step was performed), ..., and the $`k`$th step in $n_k$ ways (regardless of how the preceding steps were performed), then the entire operation can be performed in $n_1 n_2 \cdots n_k$ ways.
 
 Seen through a possibility tree, the rule is evident. The first step has $n_1$ branches, each of which is followed by $n_2$ branches for the second step, so there are $n_1 n_2$ paths through the second step, and repeating the argument gives $n_1 n_2 \cdots n_k$ leaves. A formal proof uses mathematical induction on the number of steps $k$. An operation with $k+1$ steps can be viewed as a two-step operation, "all of the first $k$ steps" followed by "the last step"; by the inductive hypothesis the first $k$ steps can be performed in $n_1 \cdots n_k$ ways, and each of these is followed by $n_{k+1}$ ways for the last step.
 
@@ -386,7 +386,7 @@ graph LR
 
 > **Definition:** A **permutation** of a set of objects is an ordering of the objects in a row.
 
-For example, the permutations of the elements a, b, c are the 6 orderings abc, acb, cba, bac, bca, cab. Forming a permutation of a set with $n$ elements is an $n$-step operation: "choose an element to write first," "choose an element to write second," ..., "choose an element to write $n$th." Step 1 can choose any element, so there are $n$ ways; step 2 can choose any element except the one chosen in step 1, so there are $n - 1$ ways; each step has one fewer way than the preceding one, and at the last step only one element is left. By the multiplication rule the number of permutations is $n(n-1)(n-2) \cdots 2 \cdot 1 = n!$.
+For example, the permutations of the elements a, b, c are the 6 orderings abc, acb, cba, bac, bca, cab. Forming a permutation of a set with $n$ elements is an $n$-step operation: "choose an element to write first," "choose an element to write second," ..., "choose an element to write $`n`$th." Step 1 can choose any element, so there are $n$ ways; step 2 can choose any element except the one chosen in step 1, so there are $n - 1$ ways; each step has one fewer way than the preceding one, and at the last step only one element is left. By the multiplication rule the number of permutations is $n(n-1)(n-2) \cdots 2 \cdot 1 = n!$.
 
 > **Key Point:** **Theorem 9.2.2.** For any integer $n$ with $n \ge 1$, the number of permutations of a set with $n$ elements is $n!$.
 
@@ -394,7 +394,7 @@ For example, the permutations of the elements a, b, c are the 6 orderings abc, a
 
 1. The number of ways to arrange the eight letters in a row equals the number of permutations of a set of eight elements, $8! = 40{,}320$.
 2. If the letters CO must remain next to each other in this order as a unit, treat CO as a single object and arrange the seven objects CO, M, P, U, T, E, R, which gives $7! = 5{,}040$ ways.
-3. When the letters are arranged at random, the probability that CO remains together in this order is $5{,}040 / 40{,}320 = 1/8 = 12.5\%$.
+3. When the letters are arranged at random, the probability that CO remains together in this order is $`5{,}040 / 40{,}320 = 1/8 = 12.5\%`$.
 
 **Example 9.2.8 (Seating Around a Circle).** Six diplomats are to be seated around a circular table. The table has no head, so it does not matter who sits in which chair; only the positions relative to each other matter. That is, two seatings are considered the same if one is a rotation of the other. Calling the diplomats A, B, C, D, E, and F, since only relative positions matter, seat A anywhere (say, the top seat) and arrange the other five relative to A. The five diplomats B through F can be seated in the remaining five seats in $5! = 120$ ways.
 
@@ -408,23 +408,25 @@ There are six ways to select two letters from {a, b, c} and write them in order:
 
 > **Key Point:** **Theorem 9.2.3.** If $n$ and $r$ are integers and $1 \le r \le n$, then the number of r-permutations of a set of $n$ elements is given by the following formula.
 >
-> $$P(n, r) = n(n-1)(n-2)\cdots(n-r+1) = \frac{n!}{(n-r)!}$$
+> ```math
+> P(n, r) = n(n-1)(n-2)\cdots(n-r+1) = \frac{n!}{(n-r)!}
+> ```
 
 **Proof.** Forming an r-permutation is an $r$-step operation. Step 1 chooses the first element in $n$ ways, step 2 chooses from the elements other than the first in $n - 1$ ways, and step 3 has $n - 2$ ways. In this way each step has one fewer way than the preceding step. Just before step $r$, $r - 1$ elements have already been chosen, so $n - (r - 1) = n - r + 1$ elements remain. By the multiplication rule, $P(n, r) = n(n-1)(n-2)\cdots(n-r+1)$. Moreover,
 
-$$
+```math
 \frac{n!}{(n-r)!} = \frac{n(n-1)\cdots(n-r+1)\,(n-r)(n-r-1)\cdots 2 \cdot 1}{(n-r)(n-r-1)\cdots 2 \cdot 1} = n(n-1)\cdots(n-r+1)
-$$
+```
 
 so the two expressions are equal. ∎
 
 The second version is easier to remember, but in a computation it is unwise to evaluate $n!$ and $(n-r)!$ first and then divide. Factorials grow so fast that even for small $n$ and $r$ they can exceed a calculator's capacity for exact arithmetic. For example, with $n = 15$ and $r = 2$, $15! = 1{,}307{,}674{,}368{,}000$ and $13! = 6{,}227{,}020{,}800$, but cancelling first simplifies the computation as follows.
 
-$$
+```math
 \frac{15!}{13!} = \frac{15 \cdot 14 \cdot 13!}{13!} = 15 \cdot 14 = 210
-$$
+```
 
-$P(n, r)$ is also written ${}_nP_r$, $P_{n,r}$, ${}^nP_r$, and so on.
+$P(n, r)$ is also written $`{}_nP_r`$, $P_{n,r}$, ${}^nP_r$, and so on.
 
 **Example 9.2.9 (Evaluating r-Permutations).**
 
@@ -437,11 +439,11 @@ $P(n, r)$ is also written ${}_nP_r$, $P_{n,r}$, ${}^nP_r$, and so on.
 1. The number of ways to choose three letters and write them in a row is the number of 3-permutations of a set of five elements, $P(5, 3) = \dfrac{5!}{2!} = 5 \cdot 4 \cdot 3 = 60$.
 2. If the first letter must be B, place B first and choose two of the remaining four letters Y, T, E, S for the second and third positions, which gives $P(4, 2) = 4 \cdot 3 = 12$ ways.
 
-**Example 9.2.11 (Proving a Property of $P(n, r)$).** Show that $P(n, 2) + P(n, 1) = n^2$ for every integer $n \ge 2$. Let $n$ be any integer with $n \ge 2$. By Theorem 9.2.3,
+**Example 9.2.11 (Proving a Property of $`P(n, r)`$).** Show that $P(n, 2) + P(n, 1) = n^2$ for every integer $n \ge 2$. Let $n$ be any integer with $n \ge 2$. By Theorem 9.2.3,
 
-$$
+```math
 P(n, 2) = \frac{n!}{(n-2)!} = \frac{n(n-1)(n-2)!}{(n-2)!} = n(n-1), \qquad P(n, 1) = \frac{n!}{(n-1)!} = \frac{n \cdot (n-1)!}{(n-1)!} = n
-$$
+```
 
 so $P(n, 2) + P(n, 1) = n(n-1) + n = n^2 - n + n = n^2$.
 
@@ -457,7 +459,9 @@ This section treats problems solved by counting the elements of the union, diffe
 
 > **Key Point:** **Theorem 9.3.1 (The Addition Rule).** If a finite set $A$ equals the union of $k$ distinct mutually disjoint subsets $A_1, A_2, \ldots, A_k$, then the following holds.
 >
-> $$N(A) = N(A_1) + N(A_2) + \cdots + N(A_k)$$
+> ```math
+> N(A) = N(A_1) + N(A_2) + \cdots + N(A_k)
+> ```
 
 Each element of $A$ lies in exactly one of the subsets, so adding the counts of the subsets counts each element exactly once. A formal proof uses mathematical induction starting from the case of two sets.
 
@@ -478,9 +482,9 @@ One important consequence of the addition rule is that knowing the size of a set
 
 The second question can also be solved as follows.
 
-$$
+```math
 P(S - A) = \frac{N(S - A)}{N(S)} = \frac{N(S) - N(A)}{N(S)} = \frac{N(S)}{N(S)} - \frac{N(A)}{N(S)} = 1 - P(A) \approx 1 - 0.842 = 0.158
-$$
+```
 
 The first equality is the equally likely probability formula, the second the difference rule, the third the laws of fractions, and the fourth the equally likely probability formula again. This computation illustrates a general property of probability. The **complement** $A^c = S - A$ of an event $A$ is the event that $A$ does not occur, and its probability is 1 minus the probability of $A$. Section 8 derives this formula from the probability axioms.
 
@@ -497,9 +501,9 @@ The first equality is the equally likely probability formula, the second the dif
 
 The set of candidate identifiers is partitioned into the eight subsets of lengths 1 through 8. A candidate of length $\ell$ chooses the first character in 53 ways and each of the remaining $\ell - 1$ characters in 63 ways, so by the multiplication rule there are $53 \cdot 63^{\ell - 1}$ of them. By the addition rule and the formula for the sum of a geometric sequence from Chapter 5, the number of candidates is as follows.
 
-$$
+```math
 53 + 53 \cdot 63 + 53 \cdot 63^2 + \cdots + 53 \cdot 63^7 = 53 \cdot \frac{63^8 - 1}{63 - 1} = 212{,}133{,}167{,}002{,}880
-$$
+```
 
 The 31 reserved keywords have various lengths but all lie among these candidates, so by the difference rule there are $212{,}133{,}167{,}002{,}880 - 31 = 212{,}133{,}167{,}002{,}849$ actual identifiers.
 
@@ -532,9 +536,13 @@ In Figure 5(a), $N(A)$ counts the elements only in $A$ and the elements in both 
 
 > **Key Point:** **Theorem 9.3.3 (The Inclusion/Exclusion Rule for Two or Three Sets).** If $A$, $B$, and $C$ are any finite sets, then the following hold.
 >
-> $$N(A \cup B) = N(A) + N(B) - N(A \cap B)$$
+> ```math
+> N(A \cup B) = N(A) + N(B) - N(A \cap B)
+> ```
 >
-> $$N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C)$$
+> ```math
+> N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C)
+> ```
 
 The following table confirms that the formula for three sets counts each element exactly once. The numbers in Figure 5(b) are how many times the elements of each region are counted by $N(A) + N(B) + N(C)$.
 
@@ -660,7 +668,7 @@ A rational number is a number that can be written as a ratio of integers, that i
 
 Because the remainder 4 reappears in the division, the subsequent sequence of quotients and remainders repeats forever, and so does the decimal expansion: $4/33 = 0.\overline{12}$. In general, what guarantees that such a repetition always occurs when one integer is divided by another is the quotient-remainder theorem of Chapter 4 together with the pigeonhole principle. The following analysis uses a natural extension of the pigeonhole principle: a function from an infinite set to a finite set cannot be one-to-one.
 
-**Example 9.4.4 (The Decimal Expansion of a Fraction).** Consider the decimal expansion of a fraction $a/b$ for positive integers $a$ and $b$. Let $r_0 = a$, and let $r_1, r_2, r_3, \ldots$ be the successive remainders obtained in the long division. At each step, 10 times the remainder $r_i$ is divided by $b$, giving one quotient digit and the next remainder $r_{i+1}$ (if $a \ge b$, the first step instead divides $a$ itself by $b$, giving the integer part and $r_1$).
+**Example 9.4.4 (The Decimal Expansion of a Fraction).** Consider the decimal expansion of a fraction $a/b$ for positive integers $a$ and $b$. Let $r_0 = a$, and let $r_1, r_2, r_3, \ldots$ be the successive remainders obtained in the long division. At each step, 10 times the remainder $r_i$ is divided by $b$, giving one quotient digit and the next remainder $r_{i+1}$ (if $a \ge b$, the first step instead divides $a$ itself by $b$, giving the integer part and $`r_1`$).
 
 1. By the quotient-remainder theorem, each remainder is between 0 and $b - 1$ inclusive.
 2. If some remainder $r_i$ is 0, the division terminates, so $a/b$ has a terminating decimal expansion.
@@ -759,15 +767,15 @@ The truth of the pigeonhole principle depends essentially on the sets being fini
 2. By the definition of function, no element of $X$ is sent to more than one element of $Y$. So each element of $X$ is in only one of the inverse image sets, and the inverse image sets are mutually disjoint.
 3. By the addition rule, the following holds.
 
-$$
+```math
 N(X) = N(f^{-1}(y_1)) + N(f^{-1}(y_2)) + \cdots + N(f^{-1}(y_m)) \qquad (9.4.1)
-$$
+```
 
 Now suppose, contrary to what is to be shown, that $f$ is one-to-one. Then each set $f^{-1}(y_i)$ has at most one element, so the following holds.
 
-$$
+```math
 N(f^{-1}(y_1)) + N(f^{-1}(y_2)) + \cdots + N(f^{-1}(y_m)) \le \underbrace{1 + 1 + \cdots + 1}_{m\text{ terms}} = m \qquad (9.4.2)
-$$
+```
 
 Putting (9.4.1) and (9.4.2) together gives $n = N(X) \le m = N(Y)$, which contradicts the fact that $n > m$. So the supposition that $f$ is one-to-one is false, and $f$ is not one-to-one. ∎
 
@@ -779,17 +787,17 @@ An important theorem follows from the pigeonhole principle: a function between t
 
 **If $f$ is one-to-one, then $f$ is onto.** Suppose $f$ is one-to-one. Then $f(x_1), f(x_2), \ldots, f(x_m)$ are all distinct. Let $S$ be the set of elements of $Y$ that are not the image of any element of $X$; then the sets $\lbrace f(x_1) \rbrace, \lbrace f(x_2) \rbrace, \ldots, \lbrace f(x_m) \rbrace$ and $S$ are mutually disjoint, and their union is $Y$. By the addition rule,
 
-$$
+```math
 N(Y) = N(\lbrace f(x_1) \rbrace) + \cdots + N(\lbrace f(x_m) \rbrace) + N(S) = \underbrace{1 + \cdots + 1}_{m\text{ terms}} + N(S) = m + N(S)
-$$
+```
 
 because each $\lbrace f(x_i) \rbrace$ is a singleton set. Since $N(Y) = m$, this gives $m = m + N(S)$, and subtracting $m$ from both sides gives $N(S) = 0$. So $S$ is empty, every element of $Y$ is the image of some element of $X$, and $f$ is onto.
 
 **If $f$ is onto, then $f$ is one-to-one.** Suppose $f$ is onto. Then $f^{-1}(y_i) \ne \emptyset$ for each $i = 1, 2, \ldots, m$, so $N(f^{-1}(y_i)) \ge 1$. As in the proof of Theorem 9.4.1, $X$ is the union of the mutually disjoint sets $f^{-1}(y_1), \ldots, f^{-1}(y_m)$, so by the addition rule the following holds.
 
-$$
+```math
 N(X) = N(f^{-1}(y_1)) + N(f^{-1}(y_2)) + \cdots + N(f^{-1}(y_m)) \ge m \qquad (9.4.3)
-$$
+```
 
 If any one of the sets $f^{-1}(y_i)$ had two or more elements, the sum in (9.4.3) would be greater than $m$. But this cannot happen, because $N(X) = m$. Hence each set $f^{-1}(y_i)$ has exactly one element, and $f$ is one-to-one. ∎
 
@@ -815,7 +823,7 @@ Suppose 5 members of a group of 12 are to be chosen to work as a team on a speci
 
 > **Definition:** Let $n$ and $r$ be nonnegative integers with $r \le n$. An **r-combination** of a set of $n$ elements is a subset of $r$ of the $n$ elements. The symbol $\binom{n}{r}$, read **n choose r**, denotes the number of subsets of size $r$ (r-combinations) that can be formed from a set of $n$ elements.
 
-Calculators and other references sometimes use symbols such as $C(n, r)$, ${}_nC_r$, $C_{n,r}$, or ${}^nC_r$ instead of $\binom{n}{r}$. A formula for computing $\binom{n}{r}$ is derived below, but it is best to think of the symbol first of all as a way to count the subsets of size $r$ of a set of $n$ elements.
+Calculators and other references sometimes use symbols such as $C(n, r)$, $`{}_nC_r`$, $C_{n,r}$, or ${}^nC_r$ instead of $\binom{n}{r}$. A formula for computing $\binom{n}{r}$ is derived below, but it is best to think of the symbol first of all as a way to count the subsets of size $r$ of a set of $n$ elements.
 
 **Example 9.5.1 (3-Combinations).** Consider the set consisting of the four people Ann, Bob, Cyd, and Dan.
 
@@ -868,29 +876,31 @@ graph LR
 
 Step 1 can be performed in $\binom{4}{2}$ ways, and step 2 in $2!$ ways, the number of ways to arrange two elements. The number of ways to perform the whole process equals the number of 2-permutations, $P(4, 2)$, so the multiplication rule gives the following equation.
 
-$$
+```math
 P(4, 2) = \binom{4}{2} \cdot 2! \quad\Longrightarrow\quad \binom{4}{2} = \frac{P(4, 2)}{2!} = \frac{4!}{2!\,(4-2)!} = \frac{12}{2} = 6
-$$
+```
 
 The same reasoning applies in general. To form an r-permutation of a set of $n$ elements, first choose a subset of $r$ of the $n$ elements ($\binom{n}{r}$ ways), and then choose an ordering of the $r$ elements ($r!$ ways). So $P(n, r) = \binom{n}{r} \cdot r!$, and solving for $\binom{n}{r}$ and substituting $P(n, r) = \frac{n!}{(n-r)!}$ gives the following.
 
-$$
+```math
 \binom{n}{r} = \frac{P(n, r)}{r!} = \frac{n!/(n-r)!}{r!} = \frac{n!}{r!\,(n-r)!}
-$$
+```
 
-> **Key Point:** **Theorem 9.5.1 (Computational Formula for $\binom{n}{r}$).** If $n$ and $r$ are nonnegative integers with $r \le n$, then the number of subsets of size $r$ (r-combinations) that can be chosen from a set of $n$ elements is given by the following formula.
+> **Key Point:** **Theorem 9.5.1 (Computational Formula for $`\binom{n}{r}`$).** If $n$ and $r$ are nonnegative integers with $r \le n$, then the number of subsets of size $r$ (r-combinations) that can be chosen from a set of $n$ elements is given by the following formula.
 >
-> $$\binom{n}{r} = \frac{P(n, r)}{r!} = \frac{n!}{r!\,(n-r)!}$$
+> ```math
+> \binom{n}{r} = \frac{P(n, r)}{r!} = \frac{n!}{r!\,(n-r)!}
+> ```
 
-The argument above proves the theorem in all cases where $n$ and $r$ are positive. If $r = 0$ and $n$ is any nonnegative integer, $\binom{n}{0}$ is the number of subsets of size 0 of a set with $n$ elements. As seen in Chapter 6, there is only one set with no elements, the empty set, so $\binom{n}{0} = 1$. The formula also gives $\frac{n!}{0!\,(n-0)!} = \frac{n!}{1 \cdot n!} = 1$ because $0! = 1$, so the theorem holds for all nonnegative integers $n$ and $r$ with $r \le n$. The definition $0! = 1$ once again makes the formula consistent.
+The argument above proves the theorem in all cases where $n$ and $r$ are positive. If $r = 0$ and $n$ is any nonnegative integer, $\binom{n}{0}$ is the number of subsets of size 0 of a set with $n$ elements. As seen in Chapter 6, there is only one set with no elements, the empty set, so $\binom{n}{0} = 1$. The formula also gives $`\frac{n!}{0!\,(n-0)!} = \frac{n!}{1 \cdot n!} = 1`$ because $0! = 1$, so the theorem holds for all nonnegative integers $n$ and $r$ with $r \le n$. The definition $0! = 1$ once again makes the formula consistent.
 
 ### 5.3 Team Selection Problems
 
 **Example 9.5.4 (Calculating the Number of Teams).** Return to the original problem of choosing a team of 5 from 12 people. Each five-person team is a subset of size 5 of the 12 people, so by Theorem 9.5.1 the number of distinct teams is the following.
 
-$$
+```math
 \binom{12}{5} = \frac{12!}{5!\,(12-5)!} = \frac{12 \cdot 11 \cdot 10 \cdot 9 \cdot 8 \cdot 7!}{(5 \cdot 4 \cdot 3 \cdot 2 \cdot 1) \cdot 7!} = 11 \cdot 9 \cdot 8 = 792
-$$
+```
 
 Here $12 \cdot 10 = 120$ in the numerator was cancelled against $5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$ in the denominator.
 
@@ -907,11 +917,11 @@ The set of possible teams is partitioned into two disjoint subsets, "teams conta
 1. **Addition rule:** Split the teams that do not include both C and D into three subsets: "teams containing C but not D," "teams containing D but not C," and "teams containing neither C nor D." A team in the first subset needs 4 more people from the remaining 10, so there are $\binom{10}{4} = \frac{10 \cdot 9 \cdot 8 \cdot 7}{4 \cdot 3 \cdot 2 \cdot 1} = 210$; the second subset also has 210 for the same reason; and the third has 252 as in the previous example. So there are $210 + 210 + 252 = 672$ teams.
 2. **Difference rule:** The set of teams that do not contain both C and D is the difference between the set of all five-person teams and the set of teams containing both C and D. There are $\binom{12}{5} = 792$ five-person teams in all and $\binom{10}{3} = 120$ teams containing both C and D, so there are $792 - 120 = 672$ teams.
 
-Before the next example, the meanings of "at least" and "at most" are made precise. **At least $n$** means "$n$ or more," and **at most $n$** means "$n$ or fewer." For instance, choosing at least 2 elements from a set of 3 means choosing 2 or 3, and choosing at most 2 means choosing 0, 1, or 2.
+Before the next example, the meanings of "at least" and "at most" are made precise. **At least $n$** means "$`n`$ or more," and **at most $n$** means "$`n`$ or fewer." For instance, choosing at least 2 elements from a set of 3 means choosing 2 or 3, and choosing at most 2 means choosing 0, 1, or 2.
 
 **Example 9.5.7 (Teams with Members of Two Types).** Suppose the group of 12 consists of 5 men and 7 women.
 
-1. **Five-person teams of 3 men and 2 women:** Think of forming a team as two steps, "Step 1: choose the men" and "Step 2: choose the women." There are $\binom{5}{3}$ ways to choose 3 of the 5 men and $\binom{7}{2}$ ways to choose 2 of the 7 women. By the multiplication rule there are $\binom{5}{3}\binom{7}{2} = \frac{5!}{3!\,2!} \cdot \frac{7!}{2!\,5!} = 10 \cdot 21 = 210$ such teams.
+1. **Five-person teams of 3 men and 2 women:** Think of forming a team as two steps, "Step 1: choose the men" and "Step 2: choose the women." There are $\binom{5}{3}$ ways to choose 3 of the 5 men and $\binom{7}{2}$ ways to choose 2 of the 7 women. By the multiplication rule there are $`\binom{5}{3}\binom{7}{2} = \frac{5!}{3!\,2!} \cdot \frac{7!}{2!\,5!} = 10 \cdot 21 = 210`$ such teams.
 2. **Five-person teams with at least 1 man (difference rule):** This set is the set of all five-person teams minus the set of teams with no men. A team with no men consists of 5 of the 7 women, so there are $\binom{7}{5} = \frac{7 \cdot 6}{2 \cdot 1} = 21$ of them, and hence $792 - 21 = 771$ teams.
 3. **Five-person teams with at least 1 man (addition rule):** Partition this set by the number of men, and compute the size of each subset as in part 1; the results are shown in the following table.
 
@@ -933,8 +943,8 @@ By the addition rule there are $175 + 350 + 210 + 35 + 1 = 771$ teams, the same 
 
 **Example 9.5.8 (An Application to Graphs).** A graph with no loops and no parallel edges is called a **simple graph**.
 
-1. A **complete bipartite graph** $K_{m,n}$ is a simple graph whose vertices can be divided into two nonoverlapping sets, a set $V$ of $m$ vertices and a set $W$ of $n$ vertices, such that there is exactly one edge between each vertex of $V$ and each vertex of $W$, and there is no edge between two vertices of $V$ or between two vertices of $W$. Label the vertices of $V$ as $v_1, \ldots, v_m$, and consider the $m$-step operation whose $k$th step, for each $k = 1, \ldots, m$, is "draw one edge from $v_k$ to each of the $n$ vertices of $W$." Each step creates $n$ edges, so by the multiplication rule $K_{m,n}$ has $mn$ edges.
-2. A **complete graph** $K_n$ is a simple graph with $n$ vertices and exactly one edge between each pair of distinct vertices. If $n = 1$ there are no edges, and $\frac{1 \cdot (1-1)}{2} = 0$. If $n \ge 2$, there is exactly one edge for each pair of distinct vertices, so the number of edges equals the number of subsets of size 2 of the set of $n$ vertices. Hence $K_n$ has $\binom{n}{2} = \frac{n!}{2!\,(n-2)!} = \frac{n(n-1)}{2}$ edges.
+1. A **complete bipartite graph** $K_{m,n}$ is a simple graph whose vertices can be divided into two nonoverlapping sets, a set $V$ of $m$ vertices and a set $W$ of $n$ vertices, such that there is exactly one edge between each vertex of $V$ and each vertex of $W$, and there is no edge between two vertices of $V$ or between two vertices of $W$. Label the vertices of $V$ as $v_1, \ldots, v_m$, and consider the $m$-step operation whose $`k`$th step, for each $k = 1, \ldots, m$, is "draw one edge from $v_k$ to each of the $n$ vertices of $W$." Each step creates $n$ edges, so by the multiplication rule $K_{m,n}$ has $mn$ edges.
+2. A **complete graph** $K_n$ is a simple graph with $n$ vertices and exactly one edge between each pair of distinct vertices. If $n = 1$ there are no edges, and $\frac{1 \cdot (1-1)}{2} = 0$. If $n \ge 2$, there is exactly one edge for each pair of distinct vertices, so the number of edges equals the number of subsets of size 2 of the set of $n$ vertices. Hence $K_n$ has $`\binom{n}{2} = \frac{n!}{2!\,(n-2)!} = \frac{n(n-1)}{2}`$ edges.
 
 ```mermaid
 graph LR
@@ -977,9 +987,9 @@ graph LR
 
 1. **Number of hands with two pairs:** Think of forming a hand with two pairs as four steps. Step 1 chooses the two denominations of the pairs, step 2 chooses two cards of the smaller denomination, step 3 chooses two cards of the larger denomination, and step 4 chooses one card from those remaining. There are 13 denominations, so step 1 can be performed in $\binom{13}{2}$ ways. Each denomination has four cards, one in each suit, so steps 2 and 3 can each be performed in $\binom{4}{2}$ ways. The fifth card is chosen from the $11 \cdot 4 = 44$ cards of the 11 denominations not used in the pairs, so step 4 can be performed in $\binom{44}{1}$ ways. The number of hands with two pairs is therefore the following.
 
-$$
+```math
 \binom{13}{2}\binom{4}{2}\binom{4}{2}\binom{44}{1} = \frac{13 \cdot 12}{2} \cdot \frac{4 \cdot 3}{2} \cdot \frac{4 \cdot 3}{2} \cdot 44 = 78 \cdot 6 \cdot 6 \cdot 44 = 123{,}552
-$$
+```
 
 2. **Probability of two pairs:** There are $\binom{52}{5} = 2{,}598{,}960$ five-card hands in all, so if all hands are equally likely, the probability of two pairs is $123{,}552 / 2{,}598{,}960 \approx 0.0475$, that is, about 4.75%.
 
@@ -998,19 +1008,21 @@ $$
 
 By the multiplication rule the count is the following.
 
-$$
+```math
 \binom{11}{4}\binom{7}{4}\binom{3}{2}\binom{1}{1} = \frac{11!}{4!\,7!} \cdot \frac{7!}{4!\,3!} \cdot \frac{3!}{2!\,1!} \cdot \frac{1!}{1!\,0!} = \frac{11!}{4!\,4!\,2!\,1!} = 330 \cdot 35 \cdot 3 \cdot 1 = 34{,}650
-$$
+```
 
 Changing the order in which the letters are placed does not change the answer. The same reasoning gives the following theorem.
 
 > **Key Point:** **Theorem 9.5.2 (Permutations with Sets of Indistinguishable Objects).** Suppose a collection consists of $n$ objects of which $n_1$ are of type 1 and indistinguishable from each other, $n_2$ are of type 2 and indistinguishable from each other, ..., and $n_k$ are of type $k$ and indistinguishable from each other, and suppose $n_1 + n_2 + \cdots + n_k = n$. Then the number of distinguishable permutations of the $n$ objects is the following.
 >
-> $$\binom{n}{n_1}\binom{n - n_1}{n_2}\binom{n - n_1 - n_2}{n_3}\cdots\binom{n - n_1 - n_2 - \cdots - n_{k-1}}{n_k} = \frac{n!}{n_1!\,n_2!\,n_3!\cdots n_k!}$$
+> ```math
+> \binom{n}{n_1}\binom{n - n_1}{n_2}\binom{n - n_1 - n_2}{n_3}\cdots\binom{n - n_1 - n_2 - \cdots - n_{k-1}}{n_k} = \frac{n!}{n_1!\,n_2!\,n_3!\cdots n_k!}
+> ```
 
-The last equality comes from cancellation between adjacent factors. For example, in $\binom{n}{n_1}\binom{n-n_1}{n_2} = \frac{n!}{n_1!\,(n-n_1)!} \cdot \frac{(n-n_1)!}{n_2!\,(n-n_1-n_2)!}$ the factor $(n - n_1)!$ cancels, and the denominator of the last factor leaves $(n - n_1 - \cdots - n_k)! = 0! = 1$.
+The last equality comes from cancellation between adjacent factors. For example, in $`\binom{n}{n_1}\binom{n-n_1}{n_2} = \frac{n!}{n_1!\,(n-n_1)!} \cdot \frac{(n-n_1)!}{n_2!\,(n-n_1-n_2)!}`$ the factor $(n - n_1)!$ cancels, and the denominator of the last factor leaves $(n - n_1 - \cdots - n_k)! = 0! = 1$.
 
-> **Note:** The same result can be seen as follows. If the copies of each letter are numbered, as in $S_1, S_2, \ldots$, so that all are distinguishable, there are $n!$ arrangements. When the numbers are erased, the arrangements that become identical come in groups of $n_1!\,n_2!\cdots n_k!$, the number of ways to permute the copies within each type, so the number of distinguishable arrangements is $n! / (n_1!\,n_2!\cdots n_k!)$. For MISSISSIPPI this is $11! / (4!\,4!\,2!\,1!) = 39{,}916{,}800 / 1{,}152 = 34{,}650$.
+> **Note:** The same result can be seen as follows. If the copies of each letter are numbered, as in $S_1, S_2, \ldots$, so that all are distinguishable, there are $n!$ arrangements. When the numbers are erased, the arrangements that become identical come in groups of $`n_1!\,n_2!\cdots n_k!`$, the number of ways to permute the copies within each type, so the number of distinguishable arrangements is $`n! / (n_1!\,n_2!\cdots n_k!)`$. For MISSISSIPPI this is $`11! / (4!\,4!\,2!\,1!) = 39{,}916{,}800 / 1{,}152 = 34{,}650`$.
 
 ### 5.6 Advice on Counting and Double Counting
 
@@ -1072,13 +1084,13 @@ The number 20 can be predicted without making a list. Regard 1, 2, 3, 4 as categ
 
 The bars are the boundaries between categories, and the number of crosses between two bars (or before the first or after the last bar) is the number chosen from that category. Distinct strings of three bars and three crosses represent distinct selections, and every selection is represented by one such string. So the number of selections equals the number of ways to choose 3 positions for the crosses in a string of length 6, because once the positions of the crosses are fixed, the bars occupy the other three positions.
 
-$$
+```math
 \binom{6}{3} = \frac{6!}{3!\,(6-3)!} = \frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 20
-$$
+```
 
 This agrees with the complete enumeration. In general, an r-combination with repetition allowed chosen from a set of $n$ elements is represented by a string of $n - 1$ vertical bars, which separate the $n$ categories, and $r$ crosses, which represent the $r$ chosen elements. The number of crosses in each category is the number of times the corresponding element is repeated. The number of such strings is the number of ways to choose the $r$ positions for the crosses among $r + (n - 1)$ positions, so by Theorem 9.5.1 it is $\binom{r + n - 1}{r}$.
 
-> **Key Point:** **Theorem 9.6.1.** The number of r-combinations with repetition allowed (multisets of size $r$) that can be selected from a set of $n$ elements is $\binom{r + n - 1}{r}$. This equals the number of ways $r$ objects can be selected from $n$ categories of objects with repetition allowed.
+> **Key Point:** **Theorem 9.6.1.** The number of r-combinations with repetition allowed (multisets of size $`r`$) that can be selected from a set of $n$ elements is $\binom{r + n - 1}{r}$. This equals the number of ways $r$ objects can be selected from $n$ categories of objects with repetition allowed.
 
 > **Note:** Since $\binom{r + n - 1}{r} = \binom{r + n - 1}{n - 1}$ (Section 7.1), choosing the $n - 1$ positions for the bars instead of the crosses gives the same value.
 
@@ -1088,19 +1100,19 @@ This agrees with the complete enumeration. In general, an r-combination with rep
 
 1. **Number of possible selections:** Regard the five types of soft drinks as $n = 5$ categories and the 15 cans as $r = 15$ objects. Each selection is represented by a string of $5 - 1 = 4$ bars separating the categories and 15 crosses representing the cans. For example, `×××|×××××××||×××|××` selects 3 cans of type 1, 7 of type 2, 0 of type 3, 3 of type 4, and 2 of type 5. So the number of selections is the number of strings of length 19.
 
-$$
+```math
 \binom{15 + 5 - 1}{15} = \binom{19}{15} = \frac{19!}{15!\,4!} = \frac{19 \cdot 18 \cdot 17 \cdot 16}{4 \cdot 3 \cdot 2 \cdot 1} = 3{,}876
-$$
+```
 
 2. **Selections with at least 6 cans of root beer:** If root beer is one of the five types, imagine choosing 6 cans of root beer first and then choosing the other 9 cans freely. The choice of the other 9 cans is represented by a string of 9 crosses and 4 bars. For example, if root beer is type 1, `×××||××|××××|` selects, in addition to the first 6, 3 more cans of root beer, 0 of type 2, 2 of type 3, 4 of type 4, and 0 of type 5. So the number of selections is the number of strings of length 13.
 
-$$
+```math
 \binom{9 + 5 - 1}{9} = \binom{13}{9} = \frac{13!}{9!\,4!} = \frac{13 \cdot 12 \cdot 11 \cdot 10}{4 \cdot 3 \cdot 2 \cdot 1} = 715
-$$
+```
 
 3. **Selections when only 5 cans of root beer are available:** If the store has only 5 cans of root beer but at least 15 cans of each other type, the possible selections are those with 5 or fewer cans of root beer. Let $T$ be the set of all selections assuming at least 15 cans of each type, $R_{\le 5}$ the set of those with 5 or fewer cans of root beer, and $R_{\ge 6}$ the set of those with 6 or more; then $T = R_{\le 5} \cup R_{\ge 6}$ and $R_{\le 5} \cap R_{\ge 6} = \emptyset$. By parts 1 and 2 and the difference rule, $N(R_{\le 5}) = N(T) - N(R_{\ge 6}) = 3{,}876 - 715 = 3{,}161$.
 
-**Example 9.6.3 (Counting Triples $(i, j, k)$ with $1 \le i \le j \le k \le n$).** If $n$ is a positive integer, how many triples of integers from 1 through $n$ are there whose elements are written in increasing order but are not necessarily distinct, that is, triples $(i, j, k)$ with $1 \le i \le j \le k \le n$?
+**Example 9.6.3 (Counting Triples $(i, j, k)$ with $`1 \le i \le j \le k \le n`$).** If $n$ is a positive integer, how many triples of integers from 1 through $n$ are there whose elements are written in increasing order but are not necessarily distinct, that is, triples $(i, j, k)$ with $1 \le i \le j \le k \le n$?
 
 Such a triple is represented by a string of $n - 1$ bars and 3 crosses, with the positions of the crosses indicating which integers from 1 through $n$ are in the triple. For $n = 5$ it looks as follows.
 
@@ -1114,9 +1126,9 @@ Such a triple is represented by a string of $n - 1$ bars and 3 crosses, with the
 
 So the number of triples is the number of strings of $n - 1$ bars and 3 crosses.
 
-$$
+```math
 \binom{3 + (n-1)}{3} = \binom{n+2}{3} = \frac{(n+2)!}{3!\,(n-1)!} = \frac{(n+2)(n+1)n\,(n-1)!}{3!\,(n-1)!} = \frac{n(n+1)(n+2)}{6}
-$$
+```
 
 This result can also be obtained by applying Theorem 9.6.1 directly. The elements of a 3-combination with repetition allowed chosen from the integers 1 through $n$ can be written in increasing order in only one way, so such triples correspond one-to-one with the 3-combinations with repetition allowed.
 
@@ -1138,17 +1150,17 @@ Because $i$ runs from 1 to $j$, always $i \le j$, and because $j$ runs from 1 to
 
 Think of the number 10 as divided into 10 individual units and the variables $x_1, x_2, x_3, x_4$ as four categories into which the units are placed. The number of units in category $x_i$ is the value of $x_i$ in a solution. So each solution is represented by a string of 3 bars separating the categories and 10 crosses representing the units. For example, `××|×××××||×××` represents the solution $x_1 = 2$, $x_2 = 5$, $x_3 = 0$, $x_4 = 3$, and `××××|××××××||` represents $x_1 = 4$, $x_2 = 6$, $x_3 = 0$, $x_4 = 0$. The number of solutions is the following.
 
-$$
+```math
 \binom{10 + 3}{10} = \binom{13}{10} = \frac{13!}{10!\,3!} = \frac{13 \cdot 12 \cdot 11}{3 \cdot 2 \cdot 1} = 286
-$$
+```
 
 **Example 9.6.6 (Additional Constraints on the Number of Solutions).** How many integer solutions does $x_1 + x_2 + x_3 + x_4 = 10$ have if each $x_i \ge 1$?
 
-Imagine first putting one cross into each of the four categories, and then distributing the remaining 6 crosses among the categories. Such a distribution is represented by a string of 3 bars and 6 crosses. For example, `×××||××|×` adds, to the one already present, 3 crosses to $x_1$ ($x_1 = 4$), 0 to $x_2$ ($x_2 = 1$), 2 to $x_3$ ($x_3 = 3$), and 1 to $x_4$ ($x_4 = 2$). So the number of solutions is the following.
+Imagine first putting one cross into each of the four categories, and then distributing the remaining 6 crosses among the categories. Such a distribution is represented by a string of 3 bars and 6 crosses. For example, `×××||××|×` adds, to the one already present, 3 crosses to $x_1$ ($`x_1 = 4`$), 0 to $x_2$ ($`x_2 = 1`$), 2 to $x_3$ ($`x_3 = 3`$), and 1 to $x_4$ ($`x_4 = 2`$). So the number of solutions is the following.
 
-$$
+```math
 \binom{6 + 3}{6} = \binom{9}{6} = \frac{9!}{6!\,3!} = \frac{9 \cdot 8 \cdot 7}{3 \cdot 2 \cdot 1} = 84
-$$
+```
 
 Alternatively, since each $x_i \ge 1$, introduce new variables $y_i = x_i - 1$ for $i = 1, 2, 3, 4$; then each $y_i \ge 0$ and $y_1 + y_2 + y_3 + y_4 = 6$. So the number of solutions of the original equation in positive integers equals the number of solutions of this equation in nonnegative integers, $\binom{6 + 3}{6} = 84$.
 
@@ -1175,27 +1187,27 @@ This section derives several formulas for values of $\binom{n}{r}$. The most imp
 
 ### 7.1 Some Values of Binomial Coefficients
 
-Theorem 9.5.1 can be viewed as a general template. Whatever nonnegative integers are placed in the boxes, if the integer in the lower box is no greater than the integer in the upper box, then $\binom{\square}{\lozenge} = \frac{\square!}{\lozenge!\,(\square - \lozenge)!}$.
+Theorem 9.5.1 can be viewed as a general template. Whatever nonnegative integers are placed in the boxes, if the integer in the lower box is no greater than the integer in the upper box, then $`\binom{\square}{\lozenge} = \frac{\square!}{\lozenge!\,(\square - \lozenge)!}`$.
 
-**Example 9.7.1 (Values of $\binom{n}{n}$, $\binom{n}{n-1}$, $\binom{n}{n-2}$).** Use Theorem 9.5.1 to show the following for every integer $n \ge 0$.
+**Example 9.7.1 (Values of $\binom{n}{n}$, $\binom{n}{n-1}$, $`\binom{n}{n-2}`$).** Use Theorem 9.5.1 to show the following for every integer $n \ge 0$.
 
-$$
+```math
 \binom{n}{n} = 1 \quad (9.7.1), \qquad \binom{n}{n-1} = n \;\; (n \ge 1) \quad (9.7.2), \qquad \binom{n}{n-2} = \frac{n(n-1)}{2} \;\; (n \ge 2) \quad (9.7.3)
-$$
+```
 
 Substitute into the definition in each case and cancel.
 
-$$
+```math
 \begin{aligned}
 \binom{n}{n} &= \frac{n!}{n!\,(n-n)!} = \frac{1}{0!} = 1 \\
 \binom{n}{n-1} &= \frac{n!}{(n-1)!\,(n-(n-1))!} = \frac{n \cdot (n-1)!}{(n-1)!\,1!} = n \\
 \binom{n}{n-2} &= \frac{n!}{(n-2)!\,(n-(n-2))!} = \frac{n(n-1)\,(n-2)!}{(n-2)!\,2!} = \frac{n(n-1)}{2}
 \end{aligned}
-$$
+```
 
-The first line uses $0! = 1$. The fact $\binom{n}{n} = 1$ agrees with the fact that a set with $n$ elements has just one subset of size $n$, namely itself. In the same way one can show $\binom{n}{0} = 1$ ($n \ge 0$) and $\binom{n}{1} = n$ ($n \ge 1$), which agree with the facts that the only subset of size 0 is the empty set and that the subsets of size 1 are the $n$ subsets consisting of one element each.
+The first line uses $0! = 1$. The fact $\binom{n}{n} = 1$ agrees with the fact that a set with $n$ elements has just one subset of size $n$, namely itself. In the same way one can show $\binom{n}{0} = 1$ ($`n \ge 0`$) and $\binom{n}{1} = n$ ($`n \ge 1`$), which agree with the facts that the only subset of size 0 is the empty set and that the subsets of size 1 are the $n$ subsets consisting of one element each.
 
-**Example 9.7.2 ($\binom{n}{r} = \binom{n}{n-r}$).** For all nonnegative integers $n$ and $r$ with $r \le n$, this identity follows immediately by substitution into Theorem 9.5.1, because $\frac{n!}{r!\,(n-r)!}$ and $\frac{n!}{(n-r)!\,(n-(n-r))!}$ are the same expression. It can also be derived by a counting argument, interpreting it as saying that a set $A$ with $n$ elements has exactly as many subsets of size $r$ as it has subsets of size $n - r$.
+**Example 9.7.2 ($`\binom{n}{r} = \binom{n}{n-r}`$).** For all nonnegative integers $n$ and $r$ with $r \le n$, this identity follows immediately by substitution into Theorem 9.5.1, because $`\frac{n!}{r!\,(n-r)!}`$ and $`\frac{n!}{(n-r)!\,(n-(n-r))!}`$ are the same expression. It can also be derived by a counting argument, interpreting it as saying that a set $A$ with $n$ elements has exactly as many subsets of size $r$ as it has subsets of size $n - r$.
 
 A subset of size $r$ can be specified either by saying which $r$ elements lie in it or by saying which $n - r$ elements lie outside it. If $A$ has $k$ subsets of size $r$, $B_1, B_2, \ldots, B_k$, each $B_i$ can be paired with its complement $A - B_i$, which has size $n - r$. Distinct subsets have distinct complements, and each subset $C$ of size $n - r$ is the complement of the subset $A - C$ of size $r$, so this pairing is a one-to-one correspondence between all subsets of size $r$ and all subsets of size $n - r$. Hence the two counts are equal and $\binom{n}{r} = \binom{n}{n-r}$. An argument like this, which obtains an identity by pairing or counting objects in different ways, is called a combinatorial argument.
 
@@ -1203,9 +1215,9 @@ A subset of size $r$ can be specified either by saying which $r$ elements lie in
 
 **Pascal's formula**, named after the seventeenth-century French mathematician and philosopher Blaise Pascal, is one of the most famous and useful formulas in **combinatorics**, the field that studies counting and listing problems. It expresses $\binom{n+1}{r}$ in terms of $\binom{n}{r-1}$ and $\binom{n}{r}$.
 
-$$
+```math
 \binom{n+1}{r} = \binom{n}{r-1} + \binom{n}{r} \qquad (n, r\text{ positive integers with } r \le n)
-$$
+```
 
 This formula makes it easy to compute higher rows from lower ones: if all the values $\binom{n}{r}$ are known, then $\binom{n+1}{r}$ can be computed for every $r$ with $0 < r \le n$. The table that displays this is **Pascal's triangle**. It is also called the arithmetic triangle because Chinese and Persian mathematicians used it centuries before Pascal, but since Pascal discovered it independently and published a treatise exploring many of its properties in 1654, it has generally been called Pascal's triangle.
 
@@ -1225,26 +1237,26 @@ Each entry of the triangle is a value of $\binom{n}{r}$. Pascal's formula says t
 
 **Example 9.7.3 (Calculating $\binom{n}{r}$ with Pascal's Triangle).** By Pascal's formula, $\binom{6}{2}$ and $\binom{6}{3}$ are obtained from the values in row 5.
 
-$$
+```math
 \binom{6}{2} = \binom{5}{1} + \binom{5}{2} = 5 + 10 = 15, \qquad \binom{6}{3} = \binom{5}{2} + \binom{5}{3} = 10 + 10 = 20
-$$
+```
 
 > **Key Point:** **Theorem 9.7.1 (Pascal's Formula).** Let $n$ and $r$ be positive integers with $r \le n$. Then $\binom{n+1}{r} = \binom{n}{r-1} + \binom{n}{r}$.
 
 **Proof (algebraic version).** Let $n$ and $r$ be positive integers with $r \le n$; the right-hand side is shown to equal the left-hand side. By Theorem 9.5.1,
 
-$$
+```math
 \binom{n}{r-1} + \binom{n}{r} = \frac{n!}{(r-1)!\,(n-r+1)!} + \frac{n!}{r!\,(n-r)!}
-$$
+```
 
-To add the fractions a common denominator is needed, so multiply the numerator and denominator of the left fraction by $r$ and those of the right fraction by $n - r + 1$. Since $r \cdot (r-1)! = r!$ and $(n - r + 1) \cdot (n-r)! = (n - r + 1)!$, both denominators become $r!\,(n-r+1)!$.
+To add the fractions a common denominator is needed, so multiply the numerator and denominator of the left fraction by $r$ and those of the right fraction by $n - r + 1$. Since $r \cdot (r-1)! = r!$ and $(n - r + 1) \cdot (n-r)! = (n - r + 1)!$, both denominators become $`r!\,(n-r+1)!`$.
 
-$$
+```math
 \begin{aligned}
 \binom{n}{r-1} + \binom{n}{r} &= \frac{n! \cdot r}{r!\,(n-r+1)!} + \frac{n! \cdot (n-r+1)}{r!\,(n-r+1)!} = \frac{n!\,(r + n - r + 1)}{r!\,(n-r+1)!} \\
 &= \frac{n!\,(n+1)}{r!\,((n+1)-r)!} = \frac{(n+1)!}{r!\,((n+1)-r)!} = \binom{n+1}{r}
 \end{aligned}
-$$
+```
 
 This is what was to be shown. ∎
 
@@ -1256,9 +1268,9 @@ This is what was to be shown. ∎
 
 **Example 9.7.4 (Deriving New Formulas from Pascal's Formula).** For nonnegative integers $n$ and $r$ with $2 \le r \le n$, express $\binom{n+2}{r}$ in terms of $\binom{n}{r}$, $\binom{n}{r-1}$, and $\binom{n}{r-2}$. By Pascal's formula, $\binom{n+2}{r} = \binom{n+1}{r-1} + \binom{n+1}{r}$, and applying Pascal's formula again to the two terms on the right and substituting gives the following.
 
-$$
+```math
 \binom{n+2}{r} = \left[\binom{n}{r-2} + \binom{n}{r-1}\right] + \left[\binom{n}{r-1} + \binom{n}{r}\right] = \binom{n}{r-2} + 2\binom{n}{r-1} + \binom{n}{r}
-$$
+```
 
 For example, with $n = 5$ and $r = 3$ the left side is $\binom{7}{3} = 35$ and the right side is $5 + 2 \cdot 10 + 10 = 35$.
 
@@ -1268,26 +1280,28 @@ An algebraic expression that is the sum of two terms, like $a + b$, is called a 
 
 Consider the first few powers. By the distributive law, take the sum of all products formed by choosing one term from each factor.
 
-$$
+```math
 \begin{aligned}
 (a+b)^2 &= (a+b)(a+b) = aa + ab + ba + bb \\
 (a+b)^3 &= (a+b)(a+b)(a+b) = aaa + aab + aba + abb + baa + bab + bba + bbb
 \end{aligned}
-$$
+```
 
 Now look closely at $(a + b)^4 = (a+b)(a+b)(a+b)(a+b)$. Each term of the expansion is the product of one of the two terms of the first factor, one of the two terms of the second, one of the two terms of the third, and one of the two terms of the fourth. For example, $abab$ is the term that takes $a$ from the first and third factors and $b$ from the second and fourth. Each factor offers two choices, $a$ or $b$, so by the multiplication rule the expansion has $2^4 = 16$ terms.
 
 Some of these are like terms that can be combined. For example, by the methods of Section 5 there are $\binom{4}{1} = 4$ orderings of three $a$'s and one $b$, namely $aaab$, $aaba$, $abaa$, $baaa$, and by the commutative and associative laws all of them equal $a^3b$. So when like terms are combined, the coefficient of $a^3b$ is $\binom{4}{1}$. Similarly, the orderings $aabb$, $abab$, $abba$, $baab$, $baba$, $bbaa$ of two $a$'s and two $b$'s number $\binom{4}{2} = 6$ and all equal $a^2b^2$, so its coefficient is $\binom{4}{2}$, and the coefficient of $ab^3$ is $\binom{4}{3}$. There is only one way to order four $a$'s and only one way to order four $b$'s, so the coefficients of $a^4$ and $b^4$ are $1 = \binom{4}{0}$ and $1 = \binom{4}{4}$. This gives the following.
 
-$$
+```math
 (a+b)^4 = \binom{4}{0}a^4 + \binom{4}{1}a^3b + \binom{4}{2}a^2b^2 + \binom{4}{3}ab^3 + \binom{4}{4}b^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
-$$
+```
 
 The binomial theorem generalizes this formula to an arbitrary nonnegative integer $n$.
 
 > **Key Point:** **Theorem 9.7.2 (Binomial Theorem).** Given any real numbers $a$ and $b$ and any nonnegative integer $n$, the following holds.
 >
-> $$(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k = a^n + \binom{n}{1}a^{n-1}b + \binom{n}{2}a^{n-2}b^2 + \cdots + \binom{n}{n-1}ab^{n-1} + b^n$$
+> ```math
+> (a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k = a^n + \binom{n}{1}a^{n-1}b + \binom{n}{2}a^{n-2}b^2 + \cdots + \binom{n}{n-1}ab^{n-1} + b^n
+> ```
 
 The second expression equals the first because $\binom{n}{0} = \binom{n}{n} = 1$ for every nonnegative integer $n$ and $b^0 = 1$, $a^{n-n} = 1$. Both proofs of the binomial theorem require a precise definition of integer power.
 
@@ -1297,41 +1311,41 @@ The second expression equals the first because $\binom{n}{0} = \binom{n}{n} = 1$
 
 **Proof (algebraic version).** Fix real numbers $a$ and $b$, and for each nonnegative integer $n$ let $Q(n)$ be the equation $(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k$. The proof uses mathematical induction and calls on Pascal's formula at a crucial point.
 
-1. **Basis step:** If $n = 0$, the left-hand side is $(a+b)^0 = 1$ by the definition of power. The right-hand side is $\binom{0}{0}a^0b^0 = \frac{0!}{0!\,0!} \cdot 1 \cdot 1 = 1$ (since $0! = 1$, $a^0 = 1$, and $b^0 = 1$). Hence $Q(0)$ is true.
+1. **Basis step:** If $n = 0$, the left-hand side is $(a+b)^0 = 1$ by the definition of power. The right-hand side is $`\binom{0}{0}a^0b^0 = \frac{0!}{0!\,0!} \cdot 1 \cdot 1 = 1`$ (since $0! = 1$, $a^0 = 1$, and $`b^0 = 1`$). Hence $Q(0)$ is true.
 2. **Inductive step:** Suppose $Q(m)$ is true for an integer $m \ge 0$, that is, $(a+b)^m = \sum_{k=0}^{m}\binom{m}{k}a^{m-k}b^k$ (inductive hypothesis); it remains to show $Q(m+1)$.
 
 By the definition of power, the inductive hypothesis, the generalized distributive law, and the equalities $a \cdot a^{m-k} = a^{m+1-k}$ and $b \cdot b^k = b^{k+1}$, which also follow from the definition of power, the following holds.
 
-$$
+```math
 \begin{aligned}
 (a+b)^{m+1} &= (a+b) \cdot (a+b)^m = (a+b)\sum_{k=0}^{m}\binom{m}{k}a^{m-k}b^k \\
 &= \sum_{k=0}^{m}\binom{m}{k}a^{m+1-k}b^k + \sum_{k=0}^{m}\binom{m}{k}a^{m-k}b^{k+1}
 \end{aligned}
-$$
+```
 
 In the second sum, change variables to $j = k + 1$. When $k = 0$, $j = 1$; when $k = m$, $j = m + 1$; and since $k = j - 1$, the general term is $\binom{m}{j-1}a^{m-(j-1)}b^j = \binom{m}{j-1}a^{m+1-j}b^j$. Since $j$ is a dummy variable, it can be renamed $k$.
 
-$$
+```math
 \sum_{k=0}^{m}\binom{m}{k}a^{m-k}b^{k+1} = \sum_{j=1}^{m+1}\binom{m}{j-1}a^{m+1-j}b^{j} = \sum_{k=1}^{m+1}\binom{m}{k-1}a^{m+1-k}b^{k}
-$$
+```
 
 The purpose of this change is to make the exponents of $a$ and $b$ agree in the two sums so that they can be added term by term. Writing separately the $k = 0$ term of the first sum and the $k = m + 1$ term of the second sum gives the following.
 
-$$
+```math
 \begin{aligned}
 (a+b)^{m+1} &= \binom{m}{0}a^{m+1} + \sum_{k=1}^{m}\left[\binom{m}{k} + \binom{m}{k-1}\right]a^{m+1-k}b^k + \binom{m}{m}b^{m+1} \\
 &= a^{m+1} + \sum_{k=1}^{m}\binom{m+1}{k}a^{m+1-k}b^k + b^{m+1} \\
 &= \sum_{k=0}^{m+1}\binom{m+1}{k}a^{(m+1)-k}b^k
 \end{aligned}
-$$
+```
 
 Going from the first line to the second uses $\binom{m}{0} = \binom{m}{m} = 1$ and Pascal's formula $\binom{m}{k} + \binom{m}{k-1} = \binom{m+1}{k}$ for $1 \le k \le m$. If $m = 0$, the middle sum is an empty sum with no terms. The last line puts the first and last terms back into the sum, since $\binom{m+1}{0} = \binom{m+1}{m+1} = 1$. This is $Q(m+1)$. Hence, by mathematical induction, the binomial theorem holds for every nonnegative integer $n$. ∎
 
-> **Note:** The crux of this proof is easier to see without summation notation. In $(a+b)^{m+1} = (a+b)(a+b)^m$, the terms containing $a^{m+1-k}b^k$ arise only in two ways: from multiplying the term $\binom{m}{k}a^{m-k}b^k$ of $(a+b)^m$ by $a$, and from multiplying the term $\binom{m}{k-1}a^{m-(k-1)}b^{k-1}$ by $b$ (because $m + 1 - k = m - (k-1)$). So the coefficient is $\binom{m}{k} + \binom{m}{k-1}$, which equals $\binom{m+1}{k}$ by Pascal's formula.
+> **Note:** The crux of this proof is easier to see without summation notation. In $(a+b)^{m+1} = (a+b)(a+b)^m$, the terms containing $a^{m+1-k}b^k$ arise only in two ways: from multiplying the term $\binom{m}{k}a^{m-k}b^k$ of $(a+b)^m$ by $a$, and from multiplying the term $\binom{m}{k-1}a^{m-(k-1)}b^{k-1}$ by $b$ (because $`m + 1 - k = m - (k-1)`$). So the coefficient is $\binom{m}{k} + \binom{m}{k-1}$, which equals $\binom{m+1}{k}$ by Pascal's formula.
 
 > **Definition:** If $n$ and $r$ are nonnegative integers with $r \le n$, then $\binom{n}{r}$ is called a **binomial coefficient**, since it appears as one of the coefficients when the binomial $(a + b)^n$ is expanded.
 
-**Proof (combinatorial version).** This combinatorial argument works only for $n \ge 1$; the case $n = 0$ was already verified in the algebraic proof. For real numbers $a$, $b$ and an integer $n \ge 1$, expanding $(a + b)^n$ gives terms that are products of $n$ letters, each obtained by choosing $a$ or $b$ from one of the $n$ factors. For each $k = 0, 1, 2, \ldots, n$, the product $a^{n-k}b^k = \underbrace{a \cdots a}_{n-k}\underbrace{b \cdots b}_{k}$ occurs in the expansion as many times as there are orderings of $n - k$ $a$'s and $k$ $b$'s. This number is $\binom{n}{k}$, the number of ways to choose the $k$ positions for the $b$'s among the $n$ positions (the other $n - k$ positions are filled with $a$'s). So when like terms are combined, the coefficient of $a^{n-k}b^k$ is $\binom{n}{k}$, and $(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k$. ∎
+**Proof (combinatorial version).** This combinatorial argument works only for $n \ge 1$; the case $n = 0$ was already verified in the algebraic proof. For real numbers $a$, $b$ and an integer $n \ge 1$, expanding $(a + b)^n$ gives terms that are products of $n$ letters, each obtained by choosing $a$ or $b$ from one of the $n$ factors. For each $k = 0, 1, 2, \ldots, n$, the product $`a^{n-k}b^k = \underbrace{a \cdots a}_{n-k}\underbrace{b \cdots b}_{k}`$ occurs in the expansion as many times as there are orderings of $n - k$ $a$'s and $k$ $b$'s. This number is $\binom{n}{k}$, the number of ways to choose the $k$ positions for the $b$'s among the $n$ positions (the other $n - k$ positions are filled with $a$'s). So when like terms are combined, the coefficient of $a^{n-k}b^k$ is $\binom{n}{k}$, and $(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k$. ∎
 
 ### 7.4 Applications of the Binomial Theorem
 
@@ -1339,25 +1353,25 @@ Going from the first line to the second uses $\binom{m}{0} = \binom{m}{m} = 1$ a
 
 1. Expanding $(a + b)^5$ gives the following.
 
-$$
+```math
 (a+b)^5 = \sum_{k=0}^{5}\binom{5}{k}a^{5-k}b^k = a^5 + \binom{5}{1}a^4b + \binom{5}{2}a^3b^2 + \binom{5}{3}a^2b^3 + \binom{5}{4}ab^4 + b^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5
-$$
+```
 
 2. Since $(x - 4y)^4 = (x + (-4y))^4$, substitute $a = x$ and $b = -4y$ into the binomial theorem. The key is to include the negative sign in $b$.
 
-$$
+```math
 \begin{aligned}
 (x - 4y)^4 &= \sum_{k=0}^{4}\binom{4}{k}x^{4-k}(-4y)^k = x^4 + \binom{4}{1}x^3(-4y) + \binom{4}{2}x^2(-4y)^2 + \binom{4}{3}x(-4y)^3 + (-4y)^4 \\
 &= x^4 + 4x^3(-4y) + 6x^2(16y^2) + 4x(-64y^3) + 256y^4 \\
 &= x^4 - 16x^3y + 96x^2y^2 - 256xy^3 + 256y^4
 \end{aligned}
-$$
+```
 
 **Example 9.7.6 (Deriving a Combinatorial Identity from the Binomial Theorem).** Show the following for each integer $n \ge 0$.
 
-$$
+```math
 2^n = \sum_{k=0}^{n}\binom{n}{k} = \binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \cdots + \binom{n}{n}
-$$
+```
 
 Since $2 = 1 + 1$, $2^n = (1 + 1)^n$. Substituting $a = 1$ and $b = 1$ into the binomial theorem gives $1^{n-k} = 1$ and $1^k = 1$, so $2^n = \sum_{k=0}^{n}\binom{n}{k} \cdot 1 \cdot 1 = \sum_{k=0}^{n}\binom{n}{k}$.
 
@@ -1365,9 +1379,9 @@ Since $2 = 1 + 1$, $2^n = (1 + 1)^n$. Substituting $a = 1$ and $b = 1$ into the 
 
 **Example 9.7.8 (Using the Binomial Theorem to Simplify a Sum).** Express the sum $\sum_{k=0}^{n}\binom{n}{k}9^k$ in closed form, without a summation symbol or an ellipsis. Since 1 raised to any power is still 1, multiplying each term by $1^{n-k}$ does not change its value. So applying the binomial theorem with $a = 1$ and $b = 9$ gives the following.
 
-$$
+```math
 \sum_{k=0}^{n}\binom{n}{k}9^k = \sum_{k=0}^{n}\binom{n}{k}1^{n-k}9^k = (1 + 9)^n = 10^n
-$$
+```
 
 For example, with $n = 2$, $1 + 2 \cdot 9 + 81 = 100 = 10^2$.
 
@@ -1388,7 +1402,7 @@ A sample space is the set of all outcomes of a random process or experiment, and
 > **Key Point:** **Probability axioms.** Let $S$ be a sample space. A **probability function** $P$ from the set of all events in $S$ to the set of real numbers satisfies the following three axioms for all events $A$ and $B$ in $S$.
 > 1. $0 \le P(A) \le 1$.
 > 2. $P(\emptyset) = 0$ and $P(S) = 1$.
-> 3. If $A$ and $B$ are disjoint (that is, if $A \cap B = \emptyset$), then the probability of the union of $A$ and $B$ is $P(A \cup B) = P(A) + P(B)$.
+> 3. If $A$ and $B$ are disjoint (that is, if $`A \cap B = \emptyset`$), then the probability of the union of $A$ and $B$ is $P(A \cup B) = P(A) + P(B)$.
 
 Applying axiom 3 repeatedly gives $P(A_1 \cup A_2 \cup \cdots \cup A_n) = P(A_1) + P(A_2) + \cdots + P(A_n)$ for any number of mutually disjoint events. This can be shown by mathematical induction on the number of events, using the fact that $A_1 \cup \cdots \cup A_{n-1}$ and $A_n$ are disjoint. As an example in which the outcomes are not equally likely, for a loaded coin with probability 0.6 of heads, the function on the sample space {H, T} given by $P(\emptyset) = 0$, $P(\lbrace H \rbrace) = 0.6$, $P(\lbrace T \rbrace) = 0.4$, and $P(\lbrace H, T \rbrace) = 1$ satisfies all three axioms.
 
@@ -1398,25 +1412,29 @@ Applying axiom 3 repeatedly gives $P(A_1 \cup A_2 \cup \cdots \cup A_n) = P(A_1)
 
 > **Key Point:** **Probability of the complement of an event.** If $A$ is any event in a sample space $S$, then the following holds.
 >
-> $$P(A^c) = 1 - P(A) \qquad (9.8.1)$$
+> ```math
+> P(A^c) = 1 - P(A) \qquad (9.8.1)
+> ```
 
 It is important to check that Kolmogorov's axioms agree with the results of the equally likely probability formula. Let $S$ be a finite sample space with outcomes $a_1, a_2, a_3, \ldots, a_n$; the sets $\lbrace a_1 \rbrace, \lbrace a_2 \rbrace, \ldots, \lbrace a_n \rbrace$, each with one element, are mutually disjoint and their union is $S$. Since $P(S) = 1$, applying axiom 3 repeatedly gives the following.
 
-$$
+```math
 P(\lbrace a_1 \rbrace \cup \lbrace a_2 \rbrace \cup \cdots \cup \lbrace a_n \rbrace) = \sum_{k=1}^{n}P(\lbrace a_k \rbrace) = 1
-$$
+```
 
 If all outcomes are equally likely, there is a positive real number $c$ with $P(\lbrace a_1 \rbrace) = P(\lbrace a_2 \rbrace) = \cdots = P(\lbrace a_n \rbrace) = c$, so $1 = \sum_{k=1}^{n}c = nc$ and $c = 1/n$. Hence for any event $A$ with outcomes $a_{i_1}, a_{i_2}, \ldots, a_{i_m}$ the following holds, which is the equally likely probability formula.
 
-$$
+```math
 P(A) = \sum_{k=1}^{m}P(\lbrace a_{i_k} \rbrace) = \sum_{k=1}^{m}\frac{1}{n} = \frac{m}{n} = \frac{N(A)}{N(S)}
-$$
+```
 
 ### 8.2 The Probability of a General Union of Two Events
 
 > **Key Point:** **Probability of a general union of two events.** If $S$ is any sample space and $A$ and $B$ are any events in $S$, then the following holds.
 >
-> $$P(A \cup B) = P(A) + P(B) - P(A \cap B) \qquad (9.8.2)$$
+> ```math
+> P(A \cup B) = P(A) + P(B) - P(A \cap B) \qquad (9.8.2)
+> ```
 
 This formula is the probabilistic counterpart of the inclusion/exclusion rule of Section 3.3, and it holds even when the outcomes are not equally likely. The proof uses the following auxiliary fact.
 
@@ -1433,21 +1451,21 @@ If $U \subseteq V$, then $V$ is the union of the two disjoint events $U$ and $V 
 
 **Step 2: computing the probability.** By step 1, the extension of axiom 3, and the probability of a difference applied to $A \cap B \subseteq A$ and $A \cap B \subseteq B$, the following holds.
 
-$$
+```math
 \begin{aligned}
 P(A \cup B) &= P(A - (A \cap B)) + P(B - (A \cap B)) + P(A \cap B) \\
 &= [P(A) - P(A \cap B)] + [P(B) - P(A \cap B)] + P(A \cap B) \\
 &= P(A) + P(B) - P(A \cap B)
 \end{aligned}
-$$
+```
 
 ∎
 
 **Example 9.8.4 (Computing the Probability of a General Union of Two Events).** One card is drawn at random from an ordinary deck of 52. What is the probability that the drawn card is a face card (jack, queen, or king) or a red card (heart or diamond)? Let $A$ be the event that a face card is chosen and $B$ the event that a red card is chosen; the event in question is $A \cup B$. Each suit has three face cards, so $N(A) = 4 \cdot 3 = 12$; half the cards are red, so $N(B) = 26$; and hearts and diamonds each have three face cards, so $N(A \cap B) = 6$. By formula (9.8.2), the probability is the following.
 
-$$
+```math
 P(A \cup B) = P(A) + P(B) - P(A \cap B) = \frac{12}{52} + \frac{26}{52} - \frac{6}{52} = \frac{32}{52} \approx 0.615
-$$
+```
 
 So the probability is approximately 61.5%.
 
@@ -1469,36 +1487,36 @@ Each of the 500,000 tickets has the same chance of carrying a winning number, so
 
 Since every $p_k$ is $\frac{1}{500{,}000}$, the common factor can be taken out of the sum by the properties of summation from Chapter 5, and the expected value is the following.
 
-$$
+```math
 \begin{aligned}
 \sum_{k=1}^{500{,}000}a_k p_k &= \frac{1}{500{,}000}\sum_{k=1}^{500{,}000}a_k = \frac{999{,}995 + 10 \cdot 995 + 1{,}000 \cdot 495 + 10{,}000 \cdot 5 + (-5) \cdot 488{,}989}{500{,}000} \\
 &= \frac{999{,}995 + 9{,}950 + 495{,}000 + 50{,}000 - 2{,}444{,}945}{500{,}000} = \frac{1{,}554{,}945 - 2{,}444{,}945}{500{,}000} = \frac{-890{,}000}{500{,}000} = -1.78
 \end{aligned}
-$$
+```
 
 In other words, a person who plays this lottery for a very long time will win some money occasionally but on average loses 1.78 dollars per ticket. The same value results from computing with the five distinct net gains and their probabilities $\frac{1}{500{,}000}$, $\frac{10}{500{,}000}$, $\frac{1{,}000}{500{,}000}$, $\frac{10{,}000}{500{,}000}$, and $\frac{488{,}989}{500{,}000}$.
 
 **Example 9.8.6 (Gambler's Ruin).** A gambler repeatedly bets 1 dollar that a coin will come up heads. Each time the coin comes up heads the gambler wins 1 dollar, and each time it comes up tails the gambler loses 1 dollar. The gambler quits either when ruined (having lost all the money) or upon reaching $M$ dollars, where $M$ is a positive integer decided in advance. Let $P_n$ be the probability that the gambler is ruined when starting with $n$ dollars. If the coin is fair (equally likely to come up heads or tails), the following holds.
 
-$$
+```math
 P_{k-1} = \frac{1}{2}P_k + \frac{1}{2}P_{k-2} \qquad (\text{integers } k \text{ with } 2 \le k \le M)
-$$
+```
 
 This is because a gambler with $k - 1$ dollars is equally likely to win or lose 1 dollar, and the probability of ruin becomes $P_k$ after a win and $P_{k-2}$ after a loss. Also $P_0 = 1$, because a gambler with 0 dollars is already ruined, and $P_M = 0$, because a gambler with $M$ dollars quits and so has no chance of being ruined. The next step is to find an explicit formula for $P_n$ and to see how the gambler should choose $M$ to reduce the chance of ruin.
 
 Multiplying both sides of the recurrence by 2 gives $2P_{k-1} = P_k + P_{k-2}$, which rearranges to the following.
 
-$$
+```math
 P_k - P_{k-1} = P_{k-1} - P_{k-2} \qquad (2 \le k \le M)
-$$
+```
 
 That is, the difference between neighboring terms is the same for every $k$. Calling the common difference $d$, $P_1 - P_0 = P_2 - P_1 = \cdots = P_M - P_{M-1} = d$, and adding the differences in turn gives $P_n = P_0 + nd = 1 + nd$ for every integer $n$ with $0 \le n \le M$. From $P_M = 0$, $1 + Md = 0$, so $d = -\frac{1}{M}$, which gives the following.
 
-$$
+```math
 P_n = 1 - \frac{n}{M} = \frac{M - n}{M} \qquad (\text{integers } n \text{ with } 0 \le n \le M)
-$$
+```
 
-The same result also follows from the general method for linear recurrences with constant coefficients (the double root $t = 1$ of the characteristic equation $t^2 - 2t + 1 = 0$ gives the form $P_n = C + Dn$). For example, a gambler who starts with 20 dollars and quits upon reaching 100 dollars or going broke is ruined with probability $P_{20} = \frac{100 - 20}{100} = 80\%$. The larger $M$ is relative to $n$, the closer $P_n$ is to 1. In other words, the larger the target the gambler sets, the more likely the gambler is to go broke, and the more modest the target, the more likely it is to be reached.
+The same result also follows from the general method for linear recurrences with constant coefficients (the double root $t = 1$ of the characteristic equation $t^2 - 2t + 1 = 0$ gives the form $`P_n = C + Dn`$). For example, a gambler who starts with 20 dollars and quits upon reaching 100 dollars or going broke is ruined with probability $`P_{20} = \frac{100 - 20}{100} = 80\%`$. The larger $M$ is relative to $n$, the closer $P_n$ is to 1. In other words, the larger the target the gambler sets, the more likely the gambler is to go broke, and the more modest the target, the more likely it is to be reached.
 
 ---
 
@@ -1514,9 +1532,9 @@ Consider a couple with two children, where each child is a boy or a girl with eq
 
 Three combinations, BB, BG, and GB, have at least one boy, and in one of them, BB, the other child is also a boy. Once it is known that there is at least one boy, only these three combinations remain possible, and they can be treated as a new sample space of three equally likely outcomes. It is therefore reasonable to assign probability $1/3$ to the other child also being a boy under this information. The following computation in the original sample space of four outcomes gives the same result.
 
-$$
+```math
 \frac{P(\text{at least one child is a boy and the other child is also a boy})}{P(\text{at least one child is a boy})} = \frac{1/4}{3/4} = \frac{1}{3}
-$$
+```
 
 > **Caution:** The answer depends on whether the information given is "at least one child is a boy" or "the older child is a boy." If the older child is known to be a boy, the possible combinations are BB and BG, so the probability that the other child is a boy is $1/2$. When computing a conditional probability, first determine exactly which event the given information describes.
 
@@ -1524,7 +1542,9 @@ Generalizing this observation leads to the following definition.
 
 > **Definition:** Let $A$ and $B$ be events in a sample space $S$. If $P(A) \ne 0$, then the **conditional probability** of $B$ given $A$, denoted $P(B \mid A)$, is the following.
 >
-> $$P(B \mid A) = \frac{P(A \cap B)}{P(A)} \qquad (9.9.1)$$
+> ```math
+> P(B \mid A) = \frac{P(A \cap B)}{P(A)} \qquad (9.9.1)
+> ```
 
 **Example 9.9.1 (Computing a Conditional Probability).** A pair of fair dice, one blue and one gray, is rolled. What is the probability that the sum of the numbers is 8, given that both numbers are even? The sample space is the set of 36 outcomes as in Section 1.2, and $ab$ denotes the outcome in which the blue die shows $a$ and the gray die shows $b$. Let $A$ be the event that both numbers are even and $B$ the event that the sum is 8.
 
@@ -1534,22 +1554,22 @@ Generalizing this observation leads to the following definition.
 
 Without the condition the probability of a sum of 8 is $5/36 \approx 0.14$, but given that both numbers are even it rises to $1/3$.
 
-Multiplying both sides of formula (9.9.1) by $P(A)$ gives a formula for the probability of an intersection, and dividing both sides of that formula by $P(B \mid A)$ (when $P(B \mid A) \ne 0$) gives a formula for $P(A)$.
+Multiplying both sides of formula (9.9.1) by $P(A)$ gives a formula for the probability of an intersection, and dividing both sides of that formula by $P(B \mid A)$ (when $`P(B \mid A) \ne 0`$) gives a formula for $P(A)$.
 
-$$
+```math
 P(A \cap B) = P(B \mid A) \cdot P(A) \quad (9.9.2), \qquad P(A) = \frac{P(A \cap B)}{P(B \mid A)} \quad (9.9.3)
-$$
+```
 
 **Example 9.9.2 (Representing Conditional Probabilities with a Tree Diagram).** An urn holds 5 blue and 7 gray balls. Two balls are taken out at random one at a time, and the first is not put back before the second is drawn. Write $B_1$ for the event that the first ball drawn is blue and $B_2$ for the event that the second is blue; their complements $B_1^c$ and $B_2^c$ are the events that the first ball and the second ball, respectively, are not blue.
 
 1. **Probabilities of the paths:** Since 5 of the 12 balls are blue, $P(B_1) = \frac{5}{12}$ and $P(B_1^c) = \frac{7}{12}$. If the first ball is blue, the urn has 4 blue and 7 gray balls left, so $P(B_2 \mid B_1) = \frac{4}{11}$ and $P(B_2^c \mid B_1) = \frac{7}{11}$. If the first ball is not blue, 5 blue and 6 gray balls remain, so $P(B_2 \mid B_1^c) = \frac{5}{11}$ and $P(B_2^c \mid B_1^c) = \frac{6}{11}$. By formula (9.9.2), the probabilities of the four paths are the following.
 
-$$
+```math
 \begin{aligned}
 P(B_1 \cap B_2) &= P(B_2 \mid B_1) \cdot P(B_1) = \frac{4}{11} \cdot \frac{5}{12} = \frac{20}{132}, & P(B_1 \cap B_2^c) &= \frac{7}{11} \cdot \frac{5}{12} = \frac{35}{132} \\
 P(B_1^c \cap B_2) &= P(B_2 \mid B_1^c) \cdot P(B_1^c) = \frac{5}{11} \cdot \frac{7}{12} = \frac{35}{132}, & P(B_1^c \cap B_2^c) &= \frac{6}{11} \cdot \frac{7}{12} = \frac{42}{132}
 \end{aligned}
-$$
+```
 
 The following tree diagram makes these computations convenient. Each branch carries a conditional probability, and the probability of a path is the product of the branch probabilities along it. The four path probabilities add up to $\frac{20 + 35 + 35 + 42}{132} = 1$.
 
@@ -1594,9 +1614,11 @@ Let $A$ be the event that the ball is blue, $B_1$ the event that it came from th
 
 Thus a blue ball came from the first urn with probability about 40.7%. Generalizing the steps of this computation gives Bayes' theorem. The theorem bears the name of Thomas Bayes, an English Presbyterian minister who put considerable effort into mathematics; it appeared in print in 1763, after his death.
 
-> **Key Point:** **Theorem 9.9.1 (Bayes' Theorem).** Suppose a sample space $S$ is a union of mutually disjoint events $B_1, B_2, B_3, \ldots, B_n$, suppose $A$ is an event in $S$, and suppose $A$ and every $B_k$ ($1 \le k \le n$) have nonzero probabilities. Then the following holds.
+> **Key Point:** **Theorem 9.9.1 (Bayes' Theorem).** Suppose a sample space $S$ is a union of mutually disjoint events $B_1, B_2, B_3, \ldots, B_n$, suppose $A$ is an event in $S$, and suppose $A$ and every $B_k$ ($`1 \le k \le n`$) have nonzero probabilities. Then the following holds.
 >
-> $$P(B_k \mid A) = \frac{P(A \mid B_k)P(B_k)}{P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2) + \cdots + P(A \mid B_n)P(B_n)}$$
+> ```math
+> P(B_k \mid A) = \frac{P(A \mid B_k)P(B_k)}{P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2) + \cdots + P(A \mid B_n)P(B_n)}
+> ```
 
 **Proof.** Generalize the steps of the urn problem above.
 
@@ -1611,23 +1633,23 @@ Bayes' theorem is a way to compute "the probability that the cause is $B_k$ when
 
 Consider a screening test for a disease found in 5 people in 1,000, with a false positive rate of 3% and a false negative rate of 1%. That is, a person who has the disease tests positive 99% of the time, and a person who does not have it tests negative 97% of the time. Choose a person at random from those screened, and let $A$ be the event that the person tests positive, $B_1$ the event that the person has the disease, and $B_2$ the event that the person does not. Then the following hold.
 
-$$
+```math
 P(A \mid B_1) = 0.99, \quad P(A^c \mid B_1) = 0.01, \quad P(A^c \mid B_2) = 0.97, \quad P(A \mid B_2) = 0.03, \quad P(B_1) = 0.005, \quad P(B_2) = 0.995
-$$
+```
 
 1. **Probability that a person who tests positive actually has the disease:** By Bayes' theorem, it is the following.
 
-$$
+```math
 P(B_1 \mid A) = \frac{P(A \mid B_1)P(B_1)}{P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2)} = \frac{(0.99)(0.005)}{(0.99)(0.005) + (0.03)(0.995)} = \frac{0.00495}{0.00495 + 0.02985} = \frac{0.00495}{0.0348} \approx 0.1422
-$$
+```
 
 That is, a person with a positive test result actually has the disease with probability of only about 14.2%.
 
 2. **Probability that a person who tests negative does not have the disease:** By Bayes' theorem, it is the following.
 
-$$
+```math
 P(B_2 \mid A^c) = \frac{P(A^c \mid B_2)P(B_2)}{P(A^c \mid B_1)P(B_1) + P(A^c \mid B_2)P(B_2)} = \frac{(0.97)(0.995)}{(0.01)(0.005) + (0.97)(0.995)} = \frac{0.96515}{0.9652} \approx 0.999948
-$$
+```
 
 That is, a person with a negative test result does not have the disease with probability of about 99.995%.
 
@@ -1641,7 +1663,7 @@ These results are easier to understand in terms of numbers of people rather than
 
 *Table 16. Expected numbers of 100,000 screened people by disease status and test result*
 
-Of the 3,480 people who test positive, only 495 have the disease, giving $495 / 3{,}480 \approx 14.2\%$, and of the 96,520 who test negative, 96,515 do not have the disease, giving $96{,}515 / 96{,}520 \approx 99.995\%$. When a disease is rare, people without it are overwhelmingly numerous, so even a small false positive rate of 3% produces far more false positives than actual patients. Numbers like these are common when a screening test costs far less than an accurate test and still comes out positive for almost everyone who has the disease. Screening first means that only a small fraction of the population needs the expensive accurate test, while a person who has the disease is only rarely told that he or she does not have it.
+Of the 3,480 people who test positive, only 495 have the disease, giving $`495 / 3{,}480 \approx 14.2\%`$, and of the 96,520 who test negative, 96,515 do not have the disease, giving $`96{,}515 / 96{,}520 \approx 99.995\%`$. When a disease is rare, people without it are overwhelmingly numerous, so even a small false positive rate of 3% produces far more false positives than actual patients. Numbers like these are common when a screening test costs far less than an accurate test and still comes out positive for almost everyone who has the disease. Screening first means that only a small fraction of the population needs the expensive accurate test, while a person who has the disease is only rarely told that he or she does not have it.
 
 > **Caution:** In general, $P(B \mid A)$ and $P(A \mid B)$ are different. In this example, the probability $P(A \mid B_1)$ that a person with the disease tests positive is 0.99, but the probability $P(B_1 \mid A)$ that a person who tests positive has the disease is about 0.14. Confusing the two is a very common error, and the difference grows as the prior probability $P(B_1)$ becomes smaller.
 
@@ -1649,9 +1671,9 @@ Of the 3,480 people who test positive, only 495 have the disease, giving $495 / 
 
 If a fair coin is tossed twice, it is intuitively clear that the result of the first toss does not affect the result of the second, and vice versa. If $A$ is the event of heads on the first toss and $B$ the event of heads on the second, the two events should be independent in the sense that $P(A \mid B) = P(A)$ and $P(B \mid A) = P(B)$. Indeed, if the coin is fair, the four outcomes HH, HT, TH, TT are equally likely, and $A$ = {HH, HT}, $B$ = {TH, HH}, $A \cap B$ = {HH}, so the following hold.
 
-$$
+```math
 P(A) = P(B) = \frac{2}{4} = \frac{1}{2}, \qquad P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{1/4}{1/2} = \frac{1}{2} = P(A), \qquad P(B \mid A) = \frac{P(A \cap B)}{P(A)} = \frac{1/4}{1/2} = \frac{1}{2} = P(B)
-$$
+```
 
 To obtain a more convenient form for the definition of independence, observe the following.
 
@@ -1669,14 +1691,14 @@ So defining independence by the following product formula eliminates the require
 
 **Example 9.9.5 (Complements of Independent Events).** Suppose $A$ and $B$ are independent events in a sample space $S$. Show that $A$ and $B^c$ are also independent. By the set identities of Chapter 6, for all sets $A$ and $B$, $(A \cap B) \cup (A \cap B^c) = A$ and $(A \cap B) \cap (A \cap B^c) = \emptyset$. So by axiom 3, $P(A \cap B) + P(A \cap B^c) = P(A)$, and solving for $P(A \cap B^c)$ gives the following.
 
-$$
+```math
 \begin{aligned}
 P(A \cap B^c) &= P(A) - P(A \cap B) \\
 &= P(A) - P(A) \cdot P(B) && (\text{because } A \text{ and } B \text{ are independent}) \\
 &= P(A)\,(1 - P(B)) && (\text{factoring out } P(A)) \\
 &= P(A) \cdot P(B^c) && (\text{formula } 9.8.1)
 \end{aligned}
-$$
+```
 
 So $A$ and $B^c$ are independent. Applying this result again shows that if $A$ and $B$ are independent, then so are $A^c$ and $B$, and $A^c$ and $B^c$.
 
@@ -1713,17 +1735,17 @@ The definition of mutual independence for any collection of $n \ge 2$ events gen
 
 **Example 9.9.9 (Tossing a Loaded Coin Ten Times).** A loaded coin that lands heads with probability 0.6 (and so tails with probability 0.4) is tossed ten times. As in the previous example, it is reasonable to assume that the results of the ten tosses are mutually independent.
 
-1. **Probability of exactly eight heads:** For $i = 1, 2, \ldots, 10$, let $H_i$ be the event of heads on the $i$th toss and $T_i$ the event of tails on the $i$th toss. Writing HHHHHHHHTT for the event $H_1 \cap H_2 \cap \cdots \cap H_8 \cap T_9 \cap T_{10}$ in which the first eight tosses are heads and the last two are tails, the definition of mutual independence gives $P(\text{HHHHHHHHTT}) = (0.6)^8(0.4)^2$. By the commutative law of multiplication the same probability results if the eight heads occur on any other tosses; for example, $P(\text{HHTHHHHHTH}) = (0.6)^2(0.4)(0.6)^5(0.4)(0.6) = (0.6)^8(0.4)^2$. There are as many ways to obtain eight heads in ten tosses as there are subsets of eight toss numbers chosen from the ten, $\binom{10}{8}$, and the different ways are mutually exclusive, so the probability is the following.
+1. **Probability of exactly eight heads:** For $i = 1, 2, \ldots, 10$, let $H_i$ be the event of heads on the $`i`$th toss and $T_i$ the event of tails on the $`i`$th toss. Writing HHHHHHHHTT for the event $H_1 \cap H_2 \cap \cdots \cap H_8 \cap T_9 \cap T_{10}$ in which the first eight tosses are heads and the last two are tails, the definition of mutual independence gives $P(\text{HHHHHHHHTT}) = (0.6)^8(0.4)^2$. By the commutative law of multiplication the same probability results if the eight heads occur on any other tosses; for example, $P(\text{HHTHHHHHTH}) = (0.6)^2(0.4)(0.6)^5(0.4)(0.6) = (0.6)^8(0.4)^2$. There are as many ways to obtain eight heads in ten tosses as there are subsets of eight toss numbers chosen from the ten, $\binom{10}{8}$, and the different ways are mutually exclusive, so the probability is the following.
 
-$$
+```math
 P(\text{8 heads}) = \binom{10}{8}(0.6)^8(0.4)^2 = 45 \times 0.01679616 \times 0.16 \approx 0.1209
-$$
+```
 
 2. **Probability of at least eight heads:** By similar reasoning, $P(\text{9 heads}) = \binom{10}{9}(0.6)^9(0.4) \approx 0.0403$ and $P(\text{10 heads}) = \binom{10}{10}(0.6)^{10} \approx 0.0060$. Eight, nine, and ten heads are disjoint events, so the probability is the following.
 
-$$
+```math
 P(\text{at least 8 heads}) = \binom{10}{8}(0.6)^8(0.4)^2 + \binom{10}{9}(0.6)^9(0.4) + \binom{10}{10}(0.6)^{10} \approx 0.1209 + 0.0403 + 0.0060 \approx 0.167
-$$
+```
 
 That is, about 16.7%.
 
@@ -1731,7 +1753,7 @@ That is, about 16.7%.
 
 *Figure 16. Binomial probabilities of k heads when a coin with probability 0.6 of heads is tossed ten times*
 
-Note the occurrence of binomial coefficients in the solution of this example. When a random process is repeated with mutually independent repetitions, each having the same two possible outcomes (for example, success and failure) with the same probabilities each time, the probability that an outcome of probability $p$ occurs exactly $k$ times in $n$ repetitions is $\binom{n}{k}p^k(1 - p)^{n-k}$ (with $0 \le p \le 1$), and probabilities of this form are called **binomial probabilities**.
+Note the occurrence of binomial coefficients in the solution of this example. When a random process is repeated with mutually independent repetitions, each having the same two possible outcomes (for example, success and failure) with the same probabilities each time, the probability that an outcome of probability $p$ occurs exactly $k$ times in $n$ repetitions is $\binom{n}{k}p^k(1 - p)^{n-k}$ (with $`0 \le p \le 1`$), and probabilities of this form are called **binomial probabilities**.
 
 > **[Probability and Statistics]** The probability distribution of the number of successes in $n$ independent trials with success probability $p$ is called the binomial distribution $B(n, p)$, and its expected value is $np$. The expected number of heads 1.2 for two tosses of the loaded coin in Section 9.3 equals $2 \times 0.6$, and the distribution in Figure 16 has expected value $10 \times 0.6 = 6$.
 
@@ -1750,7 +1772,7 @@ The following table applies the counting principles of this chapter to new situa
 | Ways to form a 3-person committee from 7 people | r-combination (unordered, no repetition) | $\binom{7}{3} = 35$ |
 | Ways to choose 5 candies from 3 kinds | r-combination with repetition allowed | $\binom{5 + 3 - 1}{5} = \binom{7}{5} = 21$ |
 | Number of integers from 1 through 100 that are multiples of 2 or of 3 | inclusion/exclusion rule | $50 + 33 - 16 = 67$ |
-| Ways to arrange the letters of the word BANANA | permutations with indistinguishable objects | $\frac{6!}{3!\,2!\,1!} = 60$ |
+| Ways to arrange the letters of the word BANANA | permutations with indistinguishable objects | $`\frac{6!}{3!\,2!\,1!} = 60`$ |
 | Must two of 367 people share a birthday (366 possible, including February 29)? | pigeonhole principle | yes, since $367 > 366$ |
 
 *Table 17. Counting principles applied to new situations and their results*
@@ -1761,7 +1783,7 @@ The following table applies the counting principles of this chapter to new situa
 |:-----|:-----|
 | Two disjoint events with nonzero probabilities are independent. | **F.** $P(A \cap B) = 0 \ne P(A) \cdot P(B)$, so the two events are dependent. |
 | To use the multiplication rule, the choices at each step must be the same regardless of earlier steps. | **F.** The choices themselves may differ; only the **number** of choices must be constant (PINs without repetition). |
-| For nonnegative integers $n$ and $r$ with $r \le n$, $\binom{n}{r} = \binom{n}{n-r}$. | **T.** Subsets of size $r$ correspond one-to-one with their complements (of size $n - r$). |
+| For nonnegative integers $n$ and $r$ with $r \le n$, $\binom{n}{r} = \binom{n}{n-r}$. | **T.** Subsets of size $r$ correspond one-to-one with their complements (of size $`n - r`$). |
 | Among any 13 people, two must have been born in the same month. | **T.** By the pigeonhole principle, a function from 13 people to 12 months cannot be one-to-one. |
 | $P(B \mid A) = P(A \mid B)$ always holds. | **F.** In the medical test example, $P(A \mid B_1) = 0.99$ but $P(B_1 \mid A) \approx 0.14$. |
 | There are $n^r$ ways to choose $r$ items from $n$ kinds without regard to order with repetition allowed. | **F.** $n^r$ counts ordered selections; without order there are $\binom{r + n - 1}{r}$ ways. |
@@ -1786,7 +1808,7 @@ The following table applies the counting principles of this chapter to new situa
 | Pigeonhole principle | A function from a finite set to a smaller finite set is not one-to-one. It underlies the fact that decimal expansions of rational numbers terminate or repeat. |
 | Generalized pigeonhole principle | If $km < n$, some pigeonhole holds $k + 1$ or more pigeons. The contrapositive form says that if each inverse image has at most $k$ elements, then $n \le km$. |
 | One-to-one and onto for finite sets | A function between finite sets of the same size is one-to-one if, and only if, it is onto. This fails for infinite sets. |
-| r-combinations | The number of subsets of size $r$ is $\binom{n}{r} = P(n, r)/r! = n!/(r!\,(n-r)!)$. |
+| r-combinations | The number of subsets of size $r$ is $`\binom{n}{r} = P(n, r)/r! = n!/(r!\,(n-r)!)`$. |
 | Permutations with indistinguishable objects | $n$ objects with $n_1, \ldots, n_k$ of each type have $n!/(n_1!\cdots n_k!)$ distinguishable permutations. |
 | Double counting | When using the multiplication rule, check that no outcome appears on more than one branch of the tree. |
 | r-combinations with repetition allowed | Represented by strings of $n - 1$ bars and $r$ crosses, they number $\binom{r + n - 1}{r}$. |
@@ -1856,7 +1878,7 @@ The following table applies the counting principles of this chapter to new situa
    <details>
    <summary>Answer</summary>
 
-   The six letters are one L, two E's, two T's, and one R. By Theorem 9.5.2 there are $\frac{6!}{1!\,2!\,2!\,1!} = \frac{720}{4} = 180$ ways.
+   The six letters are one L, two E's, two T's, and one R. By Theorem 9.5.2 there are $`\frac{6!}{1!\,2!\,2!\,1!} = \frac{720}{4} = 180`$ ways.
 
    </details>
 

@@ -151,9 +151,9 @@ The height of the graph of $Mf$ at $x$ is $f(x)$ multiplied by $M$. So if the gr
 
 The **absolute value function** $A$ is defined for each real number $x$ as follows.
 
-$$
+```math
 A(x) = |x| = \begin{cases} x & (x \geq 0) \\ -x & (x < 0) \end{cases}
-$$
+```
 
 For $x \geq 0$ the graph of $A$ is the same as the line $y = x$ of slope 1 through the origin, and for $x < 0$ it is the same as the line $y = -x$ of slope $-1$ through the origin.
 
@@ -169,7 +169,7 @@ Tracing the graph from left to right, the height continually decreases to the le
 
 *Figure 7. Comparison of function values when x1 < x2 for an increasing function and a decreasing function*
 
-> **Caution:** Increasing and decreasing depend on the set $S$. The absolute value function is neither an increasing function nor a decreasing function, but it is increasing on the set of positive real numbers and decreasing on the set of negative real numbers. Also, because the inequality in the definition is strict ($f(x_1) < f(x_2)$), a constant function is neither increasing nor decreasing on any set with two or more elements.
+> **Caution:** Increasing and decreasing depend on the set $S$. The absolute value function is neither an increasing function nor a decreasing function, but it is increasing on the set of positive real numbers and decreasing on the set of negative real numbers. Also, because the inequality in the definition is strict ($`f(x_1) < f(x_2)`$), a constant function is neither increasing nor decreasing on any set with two or more elements.
 
 Both increasing and decreasing functions are one-to-one (one-to-one functions are in Chapter 7). If $f$ is increasing and $x_1 \neq x_2$, one of the two is smaller, so they can be named so that $x_1 < x_2$. Then $f(x_1) < f(x_2)$, and hence $f(x_1) \neq f(x_2)$. For a decreasing function the argument is the same with the inequality reversed.
 
@@ -211,9 +211,9 @@ The symbols $\Theta$ and $\Omega$ are the uppercase Greek letters theta and omeg
 
 The idea of the three notations is as follows. Suppose $f$ and $g$ are real-valued functions of an integer variable $n$ and $g(n) \geq 0$ for every integer $n$ greater than some positive real number.
 
-1. If, for sufficiently large $n$, the values of $f$ are greater than or equal to those of some positive multiple of $g$, then $f$ is of **order** at least $g$, written "$f(n)$ is $\Omega(g(n))$."
-2. If, for sufficiently large $n$, the values of $f$ are nonnegative and less than or equal to those of some positive multiple of $g$, then $f$ is of order at most $g$, written "$f(n)$ is $O(g(n))$."
-3. If, for sufficiently large $n$, the values of $f$ lie between two positive multiples of $g$, then $f$ is of order $g$, written "$f(n)$ is $\Theta(g(n))$."
+1. If, for sufficiently large $n$, the values of $f$ are greater than or equal to those of some positive multiple of $g$, then $f$ is of **order** at least $g$, written "$`f(n)`$ is $\Omega(g(n))$."
+2. If, for sufficiently large $n$, the values of $f$ are nonnegative and less than or equal to those of some positive multiple of $g$, then $f$ is of order at most $g$, written "$`f(n)`$ is $O(g(n))$."
+3. If, for sufficiently large $n$, the values of $f$ lie between two positive multiples of $g$, then $f$ is of order $g$, written "$`f(n)`$ is $\Theta(g(n))$."
 
 ![Figure 9. Positions of f, Ag, and Bg when f(n) is big-Omega, big-O, and big-Theta of g(n)](../../images/Ch11_Order-Notations.png)
 
@@ -223,15 +223,15 @@ The order notations were first defined for functions on intervals of real number
 
 > **Definition:** Let $f$ and $g$ be real-valued functions defined on the same set of nonnegative integers, with $g(n) \geq 0$ for every integer $n \geq r$, where $r$ is a positive real number.
 >
-> 1. If there exist a positive real number $A$ and a positive real number $a \geq r$ such that $A g(n) \leq f(n)$ for every integer $n \geq a$, then $f$ is of **order at least $g$**, written $f(n)$ is $\Omega(g(n))$ ("$f$ of $n$ is big-Omega of $g$ of $n$").
-> 2. If there exist a positive real number $B$ and a positive real number $b \geq r$ such that $0 \leq f(n) \leq B g(n)$ for every integer $n \geq b$, then $f$ is of **order at most $g$**, written $f(n)$ is $O(g(n))$ ("$f$ of $n$ is big-O of $g$ of $n$").
-> 3. If there exist positive real numbers $A$ and $B$ and a positive real number $k \geq r$ such that $A g(n) \leq f(n) \leq B g(n)$ for every integer $n \geq k$, then $f$ is of **order $g$**, written $f(n)$ is $\Theta(g(n))$ ("$f$ of $n$ is big-Theta of $g$ of $n$").
+> 1. If there exist a positive real number $A$ and a positive real number $a \geq r$ such that $A g(n) \leq f(n)$ for every integer $n \geq a$, then $f$ is of **order at least $g$**, written $f(n)$ is $\Omega(g(n))$ ("$`f`$ of $n$ is big-Omega of $g$ of $n$").
+> 2. If there exist a positive real number $B$ and a positive real number $b \geq r$ such that $0 \leq f(n) \leq B g(n)$ for every integer $n \geq b$, then $f$ is of **order at most $g$**, written $f(n)$ is $O(g(n))$ ("$`f`$ of $n$ is big-O of $g$ of $n$").
+> 3. If there exist positive real numbers $A$ and $B$ and a positive real number $k \geq r$ such that $A g(n) \leq f(n) \leq B g(n)$ for every integer $n \geq k$, then $f$ is of **order $g$**, written $f(n)$ is $\Theta(g(n))$ ("$`f`$ of $n$ is big-Theta of $g$ of $n$").
 
-**Remark on notation.** Chapter 7 kept a function $f$ separate from its value $f(n)$, but order notation customarily ignores this distinction. In "$f(n)$ is $\Theta(g(n))$," the expressions $f(n)$ and $g(n)$ stand for the functions $f$ and $g$ that they define. For example, "$3n^2 + 4n + 5$ is $\Theta(n^2)$" means that $f$ is of order $g$, where $f(n) = 3n^2 + 4n + 5$ and $g(n) = n^2$ for every integer $n \geq 1$.
+**Remark on notation.** Chapter 7 kept a function $f$ separate from its value $f(n)$, but order notation customarily ignores this distinction. In "$`f(n)`$ is $\Theta(g(n))$," the expressions $f(n)$ and $g(n)$ stand for the functions $f$ and $g$ that they define. For example, "$`3n^2 + 4n + 5`$ is $\Theta(n^2)$" means that $f$ is of order $g$, where $f(n) = 3n^2 + 4n + 5$ and $g(n) = n^2$ for every integer $n \geq 1$.
 
-> **Caution:** The "is" in "$f(n)$ is $O(g(n))$" is not an equality. Other references write $f(n) = O(g(n))$ with the same meaning, but this only says that $f$ satisfies the condition of O-notation, so the two sides cannot be swapped. For example, $n$ and $n^2$ are both $O(n^2)$, but $n \neq n^2$.
+> **Caution:** The "is" in "$`f(n)`$ is $O(g(n))$" is not an equality. Other references write $f(n) = O(g(n))$ with the same meaning, but this only says that $f$ satisfies the condition of O-notation, so the two sides cannot be swapped. For example, $n$ and $n^2$ are both $O(n^2)$, but $n \neq n^2$.
 
-> **Note:** Negating a definition is useful for showing that a relation does not hold. The negation of "$f(n)$ is $O(g(n))$" is "however a positive real number $B$ and $b \geq r$ are chosen, there is an integer $n \geq b$ with $f(n) < 0$ or $f(n) > B g(n)$." The proofs in Section 2.7 use this form.
+> **Note:** Negating a definition is useful for showing that a relation does not hold. The negation of "$`f(n)`$ is $O(g(n))$" is "however a positive real number $B$ and $b \geq r$ are chosen, there is an integer $n \geq b$ with $f(n) < 0$ or $f(n) > B g(n)$." The proofs in Section 2.7 use this form.
 
 ### 2.3 Translating Inequalities into Order Notation
 
@@ -239,24 +239,24 @@ The definitions of the order notations have the form "there exist constants and 
 
 **Example 11.2.1 (Translating to Θ-Notation).** Express in Θ-notation the statement that the following holds for every integer $n \geq 3$.
 
-$$
+```math
 4n^6 \leq 17n^6 - 45n^3 + 2n + 8 \leq 30n^6
-$$
+```
 
-**Solution.** Let $A = 4$, $B = 30$, and $k = 3$. Then the statement becomes "$An^6 \leq 17n^6 - 45n^3 + 2n + 8 \leq Bn^6$ for every integer $n \geq k$." Since $g(n) = n^6$ is nonnegative, this is exactly the definition of Θ-notation, and $17n^6 - 45n^3 + 2n + 8$ is $\Theta(n^6)$.
+**Solution.** Let $A = 4$, $B = 30$, and $k = 3$. Then the statement becomes "$`An^6 \leq 17n^6 - 45n^3 + 2n + 8 \leq Bn^6`$ for every integer $n \geq k$." Since $g(n) = n^6$ is nonnegative, this is exactly the definition of Θ-notation, and $17n^6 - 45n^3 + 2n + 8$ is $\Theta(n^6)$.
 
 **Example 11.2.2 (Translating to Ω- and O-Notations and Deducing Θ-Notation).** Consider the following statements.
 
-$$
+```math
 \text{(a)}\ \ \frac{11}{4}n^2 \leq 3\left\lfloor \frac{n}{4} \right\rfloor^2 + 5n^2 \ \ (n \geq 2), \qquad \text{(b)}\ \ 0 \leq 3\left\lfloor \frac{n}{4} \right\rfloor^2 + 5n^2 \leq 6n^2 \ \ (n \geq 1)
-$$
+```
 
 Express (a) in Ω-notation and (b) in O-notation, and (c) explain why $3\lfloor n/4 \rfloor^2 + 5n^2$ is $\Theta(n^2)$.
 
 **Solution.**
 
-- (a) With $A = \frac{11}{4}$ and $a = 2$, the statement reads "$An^2 \leq 3\lfloor n/4 \rfloor^2 + 5n^2$ for every integer $n \geq a$," so $3\lfloor n/4 \rfloor^2 + 5n^2$ is $\Omega(n^2)$.
-- (b) With $B = 6$ and $b = 1$, the statement reads "$0 \leq 3\lfloor n/4 \rfloor^2 + 5n^2 \leq Bn^2$ for every integer $n \geq b$," so $3\lfloor n/4 \rfloor^2 + 5n^2$ is $O(n^2)$.
+- (a) With $A = \frac{11}{4}$ and $a = 2$, the statement reads "$`An^2 \leq 3\lfloor n/4 \rfloor^2 + 5n^2`$ for every integer $n \geq a$," so $3\lfloor n/4 \rfloor^2 + 5n^2$ is $\Omega(n^2)$.
+- (b) With $B = 6$ and $b = 1$, the statement reads "$`0 \leq 3\lfloor n/4 \rfloor^2 + 5n^2 \leq Bn^2`$ for every integer $n \geq b$," so $3\lfloor n/4 \rfloor^2 + 5n^2$ is $O(n^2)$.
 - (c) Let $A = \frac{11}{4}$ and $B = 6$, and let $k$ be the larger of $a$ and $b$, namely $k = 2$. When $n \geq k$, both inequalities in (a) and (b) hold, so $An^2 \leq 3\lfloor n/4 \rfloor^2 + 5n^2 \leq Bn^2$, and by the definition of Θ-notation $3\lfloor n/4 \rfloor^2 + 5n^2$ is $\Theta(n^2)$.
 
 The inequalities (a) and (b) themselves are easy to check. (a) holds because $3\lfloor n/4 \rfloor^2 \geq 0$ and $5n^2 \geq \frac{11}{4}n^2$. (b) holds because $n \geq 1$ gives $0 \leq \lfloor n/4 \rfloor \leq n/4$, so $3\lfloor n/4 \rfloor^2 \leq \frac{3}{16}n^2 \leq n^2$.
@@ -269,8 +269,8 @@ Part (c) of the previous example shows that if $f$ is known to be of order at mo
 
 **Proof.** The two directions are shown separately.
 
-- ($\Rightarrow$) If $f(n)$ is $\Theta(g(n))$, there are positive real numbers $A$, $B$, and $k \geq r$ with $A g(n) \leq f(n) \leq B g(n)$ for $n \geq k$. Taking $a = k$, the left inequality shows that $f(n)$ is $\Omega(g(n))$. Taking $b = k$, since $g(n) \geq 0$ for $n \geq k \geq r$ and $A > 0$, it follows that $0 \leq A g(n) \leq f(n) \leq B g(n)$, so $f(n)$ is $O(g(n))$.
-- ($\Leftarrow$) Since $f(n)$ is $\Omega(g(n))$, there are $A$ and $a$ with $A g(n) \leq f(n)$ for $n \geq a$; since it is $O(g(n))$, there are $B$ and $b$ with $0 \leq f(n) \leq B g(n)$ for $n \geq b$. Let $k = \max(a, b)$. Then $k \geq r$ and both inequalities hold for $n \geq k$, so $A g(n) \leq f(n) \leq B g(n)$. Hence $f(n)$ is $\Theta(g(n))$.
+- ($`\Rightarrow`$) If $f(n)$ is $\Theta(g(n))$, there are positive real numbers $A$, $B$, and $k \geq r$ with $A g(n) \leq f(n) \leq B g(n)$ for $n \geq k$. Taking $a = k$, the left inequality shows that $f(n)$ is $\Omega(g(n))$. Taking $b = k$, since $g(n) \geq 0$ for $n \geq k \geq r$ and $A > 0$, it follows that $0 \leq A g(n) \leq f(n) \leq B g(n)$, so $f(n)$ is $O(g(n))$.
+- ($`\Leftarrow`$) Since $f(n)$ is $\Omega(g(n))$, there are $A$ and $a$ with $A g(n) \leq f(n)$ for $n \geq a$; since it is $O(g(n))$, there are $B$ and $b$ with $0 \leq f(n) \leq B g(n)$ for $n \geq b$. Let $k = \max(a, b)$. Then $k \geq r$ and both inequalities hold for $n \geq k$, so $A g(n) \leq f(n) \leq B g(n)$. Hence $f(n)$ is $\Theta(g(n))$.
 
 ### 2.5 Orders of Power Functions
 
@@ -280,7 +280,7 @@ If $1 \leq n$, multiplying both sides by the positive number $n$ gives $n \leq n
 
 **Theorem 11.2.2.** For any positive rational numbers $r$ and $s$ and any integer $n \geq 1$, if $r \leq s$, then $n^r \leq n^s$.
 
-**Proof.** Since $n^s = n^r \cdot n^{s-r}$ and $n^r > 0$, it suffices to show $n^{s-r} \geq 1$. Write the nonnegative rational number $s - r$ as $p/q$ with $p$ a nonnegative integer and $q$ a positive integer. Since $n \geq 1$, $n^p \geq 1$. The number $n^{p/q}$ is a positive number whose $q$th power is $n^p$; if $n^{p/q} < 1$, then $n^p$, a product of $q$ positive numbers less than 1, would also be less than 1, a contradiction. Hence $n^{p/q} \geq 1$.
+**Proof.** Since $n^s = n^r \cdot n^{s-r}$ and $n^r > 0$, it suffices to show $n^{s-r} \geq 1$. Write the nonnegative rational number $s - r$ as $p/q$ with $p$ a nonnegative integer and $q$ a positive integer. Since $n \geq 1$, $n^p \geq 1$. The number $n^{p/q}$ is a positive number whose $`q`$th power is $n^p$; if $n^{p/q} < 1$, then $n^p$, a product of $q$ positive numbers less than 1, would also be less than 1, a contradiction. Hence $n^{p/q} \geq 1$.
 
 The inequality $n^r \leq n^s$ for $n \geq 1$ also holds when the exponents are irrational positive real numbers, and the later theorems use this fact for positive real exponents.
 
@@ -301,9 +301,9 @@ Theorem 11.2.2 makes it possible to find a big-Omega and a big-O for polynomial 
 - (a) It must be shown that $15n^3 + 11n^2 + 9$ is at least some positive multiple of $n^3$ for sufficiently large $n$. When $n \geq 1$, $11n^2 + 9$ is positive, so $15n^3 \leq 15n^3 + 11n^2 + 9$. With $A = 15$ and $a = 1$, $An^3 \leq 15n^3 + 11n^2 + 9$ for every integer $n \geq a$, so by the definition of Ω-notation $15n^3 + 11n^2 + 9$ is $\Omega(n^3)$.
 - (b) It must be shown that $15n^3 + 11n^2 + 9$ is nonnegative and at most some positive multiple of $n^3$ for sufficiently large $n$. All terms are positive, so $0 \leq 15n^3 + 11n^2 + 9$ for $n \geq 1$. Also, when $n \geq 1$, Theorem 11.2.2 gives $n^2 \leq n^3$ and $1 \leq n^3$, so $11n^2 \leq 11n^3$ and $9 \leq 9n^3$. Therefore the following holds.
 
-$$
+```math
 15n^3 + 11n^2 + 9 \leq 15n^3 + 11n^3 + 9n^3 = 35n^3 \qquad (n \geq 1)
-$$
+```
 
 With $B = 35$ and $b = 1$, $0 \leq 15n^3 + 11n^2 + 9 \leq Bn^3$ for every integer $n \geq b$, so $15n^3 + 11n^2 + 9$ is $O(n^3)$.
 
@@ -313,15 +313,15 @@ With $B = 35$ and $b = 1$, $0 \leq 15n^3 + 11n^2 + 9 \leq Bn^3$ for every intege
 
 **Method 1 (ad hoc calculation).** Choose $A = \frac{1}{2}$ and follow the chain of equivalences below.
 
-$$
+```math
 \frac{1}{2}n^4 \leq n^4 - 5n - 8 \iff 5n + 8 \leq \frac{1}{2}n^4 \iff \frac{10}{n^2} + \frac{16}{n^3} \leq n
-$$
+```
 
 The first equivalence comes from adding $5n + 8 - \frac{1}{2}n^4$ to both sides, and the second from multiplying both sides by the positive number $\frac{2}{n^3}$. Both operations preserve the direction of the inequality, so the three inequalities are equivalent, and any $n$ satisfying the last also satisfies the first. A little trial and error shows that the last inequality holds for $n \geq 3$. If $n \geq 3$, then $\frac{1}{n} \leq \frac{1}{3}$, so:
 
-$$
+```math
 \frac{10}{n^2} + \frac{16}{n^3} \leq \frac{10}{3^2} + \frac{16}{3^3} = \frac{46}{27} < 2 < 3 \leq n
-$$
+```
 
 Therefore $\frac{1}{2}n^4 \leq n^4 - 5n - 8$ for every integer $n \geq 3$. With $A = \frac{1}{2}$ and $a = 3$, $n^4 - 5n - 8$ is $\Omega(n^4)$.
 
@@ -333,25 +333,25 @@ Therefore $\frac{1}{2}n^4 \leq n^4 - 5n - 8$ for every integer $n \geq 3$. With 
 
 Then $An^m \leq P(n)$ for every integer $n \geq a$. For $n^4 - 5n - 8$, the leading coefficient is 1 and the sum of the absolute values of the other coefficients is $|-5| + |-8| = 13$, so $A = \frac{1}{2}$ and $a = \max(1, \frac{2}{1} \cdot 13) = 26$. To check, if $n \geq 26$ then $n \geq 2(|-5| + |-8|)$, and multiplying both sides by $\frac{1}{2}n^3$ gives the following.
 
-$$
+```math
 \frac{1}{2}n^4 \geq (|-5| + |-8|)n^3 = 5n^3 + 8n^3 \geq 5n + 8
-$$
+```
 
 The last inequality holds because $n \geq 1$ implies $5n^3 \geq 5n$ and $8n^3 \geq 8$. Subtracting $5n + 8$ from both sides and adding $\frac{1}{2}n^4$ gives $n^4 - 5n - 8 \geq \frac{1}{2}n^4$ for $n \geq 26$, so $n^4 - 5n - 8$ is $\Omega(n^4)$.
 
 Method 2 works for every polynomial for the following reason. Let $m \geq 1$, and let $S$ be the sum of the absolute values of the coefficients other than $a_m$. If $n \geq 1$, then $a_i n^i \geq -|a_i| n^i \geq -|a_i| n^{m-1}$ for each $i \leq m - 1$, so $P(n) \geq a_m n^m - S n^{m-1}$. If $n \geq \frac{2S}{a_m}$, then $S n^{m-1} \leq \frac{a_m}{2} n^m$, so $P(n) \geq a_m n^m - \frac{a_m}{2} n^m = \frac{a_m}{2} n^m$. If $m = 0$, then $P(n) = a_0 \geq \frac{a_0}{2}$, so the claim holds directly.
 
-> **Caution:** Methods 1 and 2 give different starting points ($a = 3$ and $a = 26$). The definitions of the order notations only require that suitable constants and a starting point exist, so these values are not unique, and either one leads to the same conclusion.
+> **Caution:** Methods 1 and 2 give different starting points ($a = 3$ and $`a = 26`$). The definitions of the order notations only require that suitable constants and a starting point exist, so these values are not unique, and either one leads to the same conclusion.
 
 **Solution (b).** If $n \geq 1$, the following holds.
 
-$$
+```math
 n^4 - 5n - 8 \leq n^4 + 5n + 8 \leq n^4 + 5n^4 + 8n^4 = 14n^4
-$$
+```
 
 The first inequality holds because $5n + 8$ is positive for $n \geq 1$, so $-5n - 8 < 5n + 8$; the second holds because Theorem 11.2.2 gives $n \leq n^4$ and $1 \leq n^4$. Also, by (a), $\frac{1}{2}n^4 \leq n^4 - 5n - 8$ for $n \geq 3$, and $0 \leq \frac{1}{2}n^4$, so $0 \leq n^4 - 5n - 8 \leq 14n^4$ for every integer $n \geq 3$. With $B = 14$ and $b = 3$, $n^4 - 5n - 8$ is $O(n^4)$.
 
-> **Caution:** O-notation also requires $0 \leq f(n)$. Since $n^4 - 5n - 8$ is negative at $n = 1$ ($-12$) and at $n = 2$ ($-2$), $b = 1$ does not satisfy the definition; the starting point must lie where the function values are nonnegative, such as $b = 3$.
+> **Caution:** O-notation also requires $0 \leq f(n)$. Since $n^4 - 5n - 8$ is negative at $n = 1$ ($`-12`$) and at $n = 2$ ($`-2`$), $b = 1$ does not satisfy the definition; the starting point must lie where the function values are nonnegative, such as $b = 3$.
 
 **Example 11.2.5 (Big-Theta for Polynomials).** (a) $15n^3 + 11n^2 + 9$ is $\Theta(n^3)$. (b) $n^4 - 5n - 8$ is $\Theta(n^4)$.
 
@@ -375,15 +375,15 @@ By this theorem, knowing that one function is big-O of another gives only partia
 
 This result is confirmed by the following chain of equivalences. The last equivalence comes from dividing both sides by the positive number $n^3$.
 
-$$
+```math
 g(n) \geq f(n) \iff n^4 - 5n - 8 \geq 15n^3 + 11n^2 + 9 \iff n^4 \geq 15n^3 + 11n^2 + 5n + 17 \iff n \geq 15 + \frac{11}{n} + \frac{5}{n^2} + \frac{17}{n^3}
-$$
+```
 
 When $n \geq 16$, $\frac{1}{n} \leq \frac{1}{16}$, so the right side of the last inequality does not exceed the following.
 
-$$
+```math
 15 + \frac{11}{16} + \frac{5}{16^2} + \frac{17}{16^3} \approx 15.71 \leq 16 \leq n
-$$
+```
 
 Therefore $n^4 - 5n - 8 \geq 15n^3 + 11n^2 + 9$ for every integer $n \geq 16$. At $n = 15$, $g(15) = 50{,}542 < 53{,}109 = f(15)$, so 16 is the smallest integer from which the inequality holds. Consequently, one can draw bands around the two graphs so that for $n \geq 16$ the band around $g$ lies entirely above the band around $f$.
 
@@ -391,13 +391,13 @@ Therefore $n^4 - 5n - 8 \geq 15n^3 + 11n^2 + 9$ for every integer $n \geq 16$. A
 
 **Solution.** The argument is by contradiction. Suppose there is a positive real number $r < 4$ such that $g(n)$ is $O(n^r)$. Then there are positive real numbers $B$ and $b$ with $0 \leq g(n) \leq B n^r$ for every integer $n \geq b$. Also, since $g(n)$ is $\Omega(n^4)$, there are positive real numbers $A$ and $a$ with $A n^4 \leq g(n)$ for every integer $n \geq a$. Let $t$ be the larger of $a$ and $b$. Then for every integer $n \geq t$ the following hold in turn.
 
-$$
+```math
 A n^4 \leq g(n) \leq B n^r \implies \frac{n^4}{n^r} \leq \frac{B}{A} \implies n^{4-r} \leq \frac{B}{A} \implies n \leq \left(\frac{B}{A}\right)^{1/(4-r)}
-$$
+```
 
-The first step uses transitivity of order and division of both sides by the positive number $A n^r$, the second uses the laws of exponents, and the last takes the $(4 - r)$th root of both sides. Since $r < 4$, $4 - r > 0$, and the right side $(B/A)^{1/(4-r)}$ is a fixed positive real number. But $n$ ranges over all integers greater than or equal to $t$, so it takes values larger than this fixed number. This is a contradiction, so the supposition is false, and $g(n)$ is not $O(n^r)$ for any positive real number $r < 4$.
+The first step uses transitivity of order and division of both sides by the positive number $A n^r$, the second uses the laws of exponents, and the last takes the $`(4 - r)`$th root of both sides. Since $r < 4$, $4 - r > 0$, and the right side $(B/A)^{1/(4-r)}$ is a fixed positive real number. But $n$ ranges over all integers greater than or equal to $t$, so it takes values larger than this fixed number. This is a contradiction, so the supposition is false, and $g(n)$ is not $O(n^r)$ for any positive real number $r < 4$.
 
-The next theorem generalizes this example and is proved in the same way (replace $4$ by $m$ and $r$ by $p$).
+The next theorem generalizes this example and is proved in the same way (replace $4$ by $m$ and $r$ by $`p`$).
 
 **Theorem 11.2.4 (Showing That a Big-O Relationship Does Not Hold).** If $f$ is a real-valued function defined on a set of nonnegative integers, $m$ is a positive integer, and $f(n)$ is $\Omega(n^m)$, then $f(n)$ is not $O(n^p)$ for any positive real number $p < m$.
 
@@ -411,21 +411,21 @@ Unlike O-notation, Θ-notation gives tight bounds that hold function values from
 
 **Proof (using limits).** Since $\lim_{n \to \infty} \frac{1}{n^i} = 0$ for every integer $i \geq 1$, the following holds.
 
-$$
+```math
 \lim_{n \to \infty} \frac{a_m n^m + a_{m-1} n^{m-1} + \cdots + a_1 n + a_0}{n^m} = \lim_{n \to \infty} \left( a_m + \frac{a_{m-1}}{n} + \frac{a_{m-2}}{n^2} + \cdots + \frac{a_1}{n^{m-1}} + \frac{a_0}{n^m} \right) = a_m
-$$
+```
 
 By the definition of limit, for any real number $\varepsilon > 0$ there is an integer $K$ such that the following holds for every integer $n > K$.
 
-$$
+```math
 a_m - \varepsilon < a_m + \frac{a_{m-1}}{n} + \cdots + \frac{a_1}{n^{m-1}} + \frac{a_0}{n^m} < a_m + \varepsilon
-$$
+```
 
 In particular, with $\varepsilon = \frac{a_m}{2}$, there is an integer $k$ such that for every integer $n > k$ the middle expression is greater than $\frac{a_m}{2}$ and less than $\frac{3a_m}{2}$. Multiplying all parts by the positive number $n^m$ gives the following.
 
-$$
+```math
 \frac{a_m}{2} n^m < a_m n^m + a_{m-1} n^{m-1} + \cdots + a_1 n + a_0 < \frac{3a_m}{2} n^m \qquad (n > k)
-$$
+```
 
 Let $A = \frac{a_m}{2}$ and $B = \frac{3a_m}{2}$, and take as the starting point the larger of $k + 1$ and 1. For every integer $n$ from that point on, $n^m \geq 0$ and the inequality above holds, so by the definition of Θ-notation $a_m n^m + \cdots + a_1 n + a_0$ is $\Theta(n^m)$.
 
@@ -437,17 +437,17 @@ Let $A = \frac{a_m}{2}$ and $B = \frac{3a_m}{2}$, and take as the starting point
 
 **Solution.** (a) By direct application of the theorem on polynomial orders, $7n^5 + 5n^3 - n + 4$ is $\Theta(n^5)$. (b) Expanding gives the following, so $g(n)$ is $\Theta(n^2)$.
 
-$$
+```math
 g(n) = \frac{(n-1)(n+1)}{4} = \frac{1}{4}(n^2 - 1) = \frac{1}{4}n^2 - \frac{1}{4}
-$$
+```
 
 **Example 11.2.9 (An Order for the Sum of the First $n$ Integers).** Sums of the form $1 + 2 + 3 + \cdots + n$ arise in the analysis of algorithms such as selection sort in Section 3.5. Show that $1 + 2 + \cdots + n$ is $\Theta(n^2)$ for a positive integer variable $n$.
 
 **Solution.** By the formula for the sum of the first $n$ integers (Chapter 5), the following holds for each positive integer $n$.
 
-$$
+```math
 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2} = \frac{1}{2}n^2 + \frac{1}{2}n
-$$
+```
 
 By the theorem on polynomial orders, $\frac{1}{2}n^2 + \frac{1}{2}n$ is $\Theta(n^2)$, so $1 + 2 + \cdots + n$ is $\Theta(n^2)$.
 
@@ -467,15 +467,15 @@ The following theorems give useful properties of the order notations and are app
 
 **Proof of Theorem 11.2.7(c).** By definition there are positive real numbers $A_1$, $B_1$, $k_1 \geq r$ and $A_2$, $B_2$, $k_2 \geq r$ such that the following hold.
 
-$$
+```math
 A_1 g(n) \leq f(n) \leq B_1 g(n) \ \ (n \geq k_1), \qquad A_2 h(n) \leq g(n) \leq B_2 h(n) \ \ (n \geq k_2)
-$$
+```
 
 Let $A = A_1 A_2$, $B = B_1 B_2$, and $k = \max(k_1, k_2)$. Then for every integer $n \geq k$, by transitivity of order and equality, the following holds. The two outer inequalities hold because multiplying by $A_1 > 0$ or $B_1 > 0$ does not change the direction of an inequality.
 
-$$
+```math
 A h(n) = A_1 (A_2 h(n)) \leq A_1 g(n) \leq f(n) \leq B_1 g(n) \leq B_1 (B_2 h(n)) = B h(n)
-$$
+```
 
 Hence $f(n)$ is $\Theta(h(n))$.
 
@@ -518,13 +518,13 @@ graph LR
 
 **Solution.** Suppose sequential search is applied to an input array $a[1], a[2], \ldots, a[n]$ to find an item $x$.
 
-- **Best case:** if $x$ is the first item of the array, only one comparison between $x$ and the array items is made. So in the best case sequential search is $\Theta(1)$ (note $\Theta(1) = \Theta(n^0)$).
+- **Best case:** if $x$ is the first item of the array, only one comparison between $x$ and the array items is made. So in the best case sequential search is $\Theta(1)$ (note $`\Theta(1) = \Theta(n^0)`$).
 - **Worst case:** if $x = a[n]$ or $x$ is not in the array, $n$ comparisons are needed. So in the worst case sequential search is $\Theta(n)$.
 - **Average case:** since $x$ is as likely to be in the first half of the array as in the second half, the average number of comparisons is about $\frac{n}{2}$, and $\frac{n}{2}$ is $\Theta(n)$. More precisely, if $x$ is in the array and is equally likely to be at each of the $n$ positions with probability $\frac{1}{n}$, the expected number of comparisons (Chapter 9) is as follows.
 
-$$
+```math
 \sum_{i=1}^{n} i \cdot \frac{1}{n} = \frac{1}{n} \cdot \frac{n(n+1)}{2} = \frac{n+1}{2}
-$$
+```
 
 Since $\frac{n+1}{2}$ is also $\Theta(n)$, the average-case order of sequential search is also $n$.
 
@@ -538,7 +538,7 @@ What counts as an elementary operation depends on the problem the compared algor
 
 The same algorithm runs at different speeds in different programming languages and on different machines, and some operations take longer than others. Such details can matter in practice when an algorithm or a computer is actually being chosen. When the computer is fixed and the only question is whether one algorithm clearly outperforms another, however, a rough estimate suffices. No elementary operation takes longer than the slowest one, so the running time of an algorithm is roughly proportional to the number of elementary operations it performs.
 
-Suppose two algorithms $A$ and $B$ do the same job and, for an input of size $n$, $A$ performs between $10n$ and $20n$ elementary operations and $B$ between $2n^2$ and $4n^2$ (at least for large $n$). Then in the worst case $A$ is $\Theta(n)$ (the worst-case order of $A$ is $n$), and in the worst case $B$ is $\Theta(n^2)$. Let Max A be the maximum number of operations of $A$ and Min B the minimum number of operations of $B$. Then Max A $= 20n$ and Min B $= 2n^2$, and Table 1 shows the difference between the two algorithms as $n$ grows.
+Suppose two algorithms $A$ and $B$ do the same job and, for an input of size $n$, $A$ performs between $10n$ and $20n$ elementary operations and $B$ between $2n^2$ and $4n^2$ (at least for large $`n`$). Then in the worst case $A$ is $\Theta(n)$ (the worst-case order of $A$ is $`n`$), and in the worst case $B$ is $\Theta(n^2)$. Let Max A be the maximum number of operations of $A$ and Min B the minimum number of operations of $B$. Then Max A $= 20n$ and Min B $= 2n^2$, and Table 1 shows the difference between the two algorithms as $n$ grows.
 
 | $n$ | Max A $= 20n$ | Min B $= 2n^2$ | Min B $-$ Max A $= 2n^2 - 20n$ |
 |:-----|-----:|-----:|-----:|
@@ -606,15 +606,15 @@ next i
 
 So the inner loop runs the following number of times in all, and the number of elementary operations is twice that (the sum formula is in Chapter 5).
 
-$$
+```math
 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}, \qquad 2 \cdot \frac{n(n+1)}{2} = n(n+1)
-$$
+```
 
 The columns of the table can also be counted another way. Each column corresponds to one pair of integers $(i, j)$ with $1 \leq j \leq i \leq n$, and such pairs correspond one-to-one to the ways of choosing two values, with repetition allowed, from the $n$ categories $1, 2, \ldots, n$. By the formula for the number of r-combinations with repetition allowed in Chapter 9, that number is as follows. Here $\binom{n}{r}$, read n choose r, is the number of subsets of size $r$ of a set with $n$ elements.
 
-$$
+```math
 \binom{n + 2 - 1}{2} = \binom{n+1}{2} = \frac{(n+1)!}{2!\,(n-1)!} = \frac{(n+1)n}{2}
-$$
+```
 
 Here the second count takes more work than the first, but it becomes the easier route once loops are nested three or more deep. (b) By the theorem on polynomial orders, $n(n+1) = n^2 + n$ is $\Theta(n^2)$, so this algorithm segment is $\Theta(n^2)$.
 
@@ -630,9 +630,9 @@ next i
 
 **Solution.** (a) Each pass does one subtraction, and the number of passes equals the number of integers from $\lfloor n/2 \rfloor$ to $n$, which is $n - \lfloor n/2 \rfloor + 1$. If $n$ is even, $\lfloor n/2 \rfloor = \frac{n}{2}$, and if $n$ is odd, $\lfloor n/2 \rfloor = \frac{n-1}{2}$, so the number of operations is as follows for even $n$ (left) and odd $n$ (right).
 
-$$
+```math
 n - \frac{n}{2} + 1 = \frac{n+2}{2}, \qquad n - \frac{n-1}{2} + 1 = \frac{2n - (n - 1) + 2}{2} = \frac{n+3}{2}
-$$
+```
 
 (b) By the theorem on polynomial orders, $\frac{n+2}{2}$ and $\frac{n+3}{2}$ are both $\Theta(n)$, so regardless of whether $n$ is even or odd, this algorithm segment is $\Theta(n)$.
 
@@ -651,7 +651,7 @@ $$
 
 *Figure 13. Step k of insertion sort*
 
-**Algorithm 11.3.1 (Insertion Sort).** This algorithm takes an array $a[1], a[2], \ldots, a[n]$ ($n \geq 1$) and rearranges the same values in ascending order. The output array is also denoted $a[1], a[2], \ldots, a[n]$. In the $k$th step, $a[1], \ldots, a[k-1]$ is already in ascending order, and $a[k]$ is inserted into its correct position relative to it.
+**Algorithm 11.3.1 (Insertion Sort).** This algorithm takes an array $a[1], a[2], \ldots, a[n]$ ($`n \geq 1`$) and rearranges the same values in ascending order. The output array is also denoted $a[1], a[2], \ldots, a[n]$. In the $`k`$th step, $a[1], \ldots, a[k-1]$ is already in ascending order, and $a[k]$ is inserted into its correct position relative to it.
 
 ```text
 Input: n [a positive integer], a[1], a[2], ..., a[n] [an array of data items capable of being ordered]
@@ -711,41 +711,41 @@ Applying insertion sort to the array $a[1] = 6$, $a[2] = 3$, $a[3] = 5$, $a[4] =
 
 *Table 5. Trace table of insertion sort on the array 6, 3, 5, 7, 2*
 
-The comparisons of insertion sort are counted by the following convention. In step $k$, each comparison `x < a[j]` of $x$ with a preceding item counts once, and when $x$ travels all the way to the front so that $j$ becomes 0 and the loop ends, the test `j ≠ 0` that detects this also counts once. With this convention, when $a[k]$ goes into position $j$ ($1 \leq j \leq k$) in step $k$, the number of comparisons is always $k - j + 1$. If $j \geq 2$, there are $k - j$ true comparisons and 1 false comparison; if $j = 1$, there are $k - 1$ true comparisons and 1 test that detects the front.
+The comparisons of insertion sort are counted by the following convention. In step $k$, each comparison `x < a[j]` of $x$ with a preceding item counts once, and when $x$ travels all the way to the front so that $j$ becomes 0 and the loop ends, the test `j ≠ 0` that detects this also counts once. With this convention, when $a[k]$ goes into position $j$ ($`1 \leq j \leq k`$) in step $k$, the number of comparisons is always $k - j + 1$. If $j \geq 2$, there are $k - j$ true comparisons and 1 false comparison; if $j = 1$, there are $k - 1$ true comparisons and 1 test that detects the front.
 
 **Example 11.3.6 (A Worst-Case Order for Insertion Sort).** (a) Find the maximum number of comparisons when insertion sort is applied to an array $a[1], \ldots, a[n]$. (b) Find a worst-case order for insertion sort with the theorem on polynomial orders.
 
-**Solution.** (a) The number of comparisons $k - j + 1$ in step $k$ reaches its maximum $k$ when $a[k]$ goes to the front ($j = 1$), that is, when $a[k]$ is less than every one of $a[1], \ldots, a[k-1]$. This happens in every step when the array is initially in reverse (descending) order. Since $k$ goes from 2 to $n$, the maximum number of comparisons is as follows.
+**Solution.** (a) The number of comparisons $k - j + 1$ in step $k$ reaches its maximum $k$ when $a[k]$ goes to the front ($`j = 1`$), that is, when $a[k]$ is less than every one of $a[1], \ldots, a[k-1]$. This happens in every step when the array is initially in reverse (descending) order. Since $k$ goes from 2 to $n$, the maximum number of comparisons is as follows.
 
-$$
+```math
 2 + 3 + \cdots + n = (1 + 2 + 3 + \cdots + n) - 1 = \frac{n(n+1)}{2} - 1 = \frac{1}{2}n^2 + \frac{1}{2}n - 1
-$$
+```
 
 The first equality adds and subtracts 1, the second is the sum formula (Chapter 5), and the third is algebra. (b) By the theorem on polynomial orders, $\frac{1}{2}n^2 + \frac{1}{2}n - 1$ is $\Theta(n^2)$, so the worst-case order of insertion sort is $n^2$.
 
 > **Note:** If the test that detects the front is left out and only the comparisons `x < a[j]` are counted, the maximum in step $k$ is $k - 1$ and the sum is $1 + 2 + \cdots + (n - 1) = \frac{n(n-1)}{2}$. Either way the leading term is $\frac{1}{2}n^2$, so the worst-case order is the same, $\Theta(n^2)$. Figure 8 and Table 17 in Section 5.4 use this count $\frac{n(n-1)}{2}$.
 
-The best case occurs when the array is already in ascending order. Then in each step $a[k]$ is already in place ($j = k$), so one comparison per step, $n - 1$ in all, suffices, and in the best case insertion sort is $\Theta(n)$.
+The best case occurs when the array is already in ascending order. Then in each step $a[k]$ is already in place ($`j = k`$), so one comparison per step, $n - 1$ in all, suffices, and in the best case insertion sort is $\Theta(n)$.
 
 **Example 11.3.7 (An Average-Case Order for Insertion Sort).** (a) Find the average number of comparisons when insertion sort is applied to an array $a[1], \ldots, a[n]$. (b) Find an average-case order for insertion sort.
 
 **Solution.** (a) For each positive integer $n$, let $E_n$ be the average, or expected, number of comparisons used to sort $a[1], \ldots, a[n]$ with insertion sort. For each integer $k = 2, 3, \ldots, n$, the expected number of comparisons used to sort $a[1], \ldots, a[k]$ equals the expected number used to sort $a[1], \ldots, a[k-1]$ plus the expected number used to place $a[k]$ into its correct position among them. So, letting $c_k$ be the expected number of comparisons used to place $a[k]$, the following relation holds.
 
-$$
+```math
 E_k = E_{k-1} + c_k
-$$
+```
 
 Also, $E_1 = 0$ because when the array has just one item, the outer loop is not executed at all. Assuming all input orderings are equally likely, when the while loop places $a[k]$, $a[k]$ is equally likely to belong in any one of the first $k$ positions, each with probability $\frac{1}{k}$. If it belongs in position $j$, $k - j + 1$ comparisons are needed, so by the definition of expected value (Chapter 9) the expected number of comparisons used to place $a[k]$ is as follows.
 
-$$
+```math
 c_k = \sum_{j=1}^{k} \frac{1}{k}(k - j + 1) = \frac{1}{k}\bigl(k + (k-1) + \cdots + 2 + 1\bigr) = \frac{1}{k} \cdot \frac{k(k+1)}{2} = \frac{k+1}{2}
-$$
+```
 
 The first equality moves the constant $\frac{1}{k}$ outside the sum and writes the sum out, and the second is the sum formula. Hence $E_1 = 0$ and $E_k = E_{k-1} + \frac{k+1}{2}$ for every integer $k \geq 2$. Substituting this recurrence for $k = 2$ through $n$ and adding gives the following.
 
-$$
+```math
 E_n = \sum_{k=2}^{n} \frac{k+1}{2} = \frac{1}{2}\left( \sum_{k=2}^{n} k + (n - 1) \right) = \frac{1}{2}\left( \frac{n(n+1)}{2} - 1 + n - 1 \right) = \frac{n^2 + 3n - 4}{4}
-$$
+```
 
 For example, $E_2 = \frac{4 + 6 - 4}{4} = \frac{3}{2}$, which equals $E_1 + \frac{3}{2}$. (b) By the theorem on polynomial orders, $\frac{n^2 + 3n - 4}{4} = \frac{1}{4}n^2 + \frac{3}{4}n - 1$ is $\Theta(n^2)$, so the average-case order of insertion sort is also $n^2$.
 
@@ -790,9 +790,9 @@ Output: a[1], a[2], ..., a[n] [in ascending order]
 
 **Order of selection sort.** In step $k$ the inner loop iterates $n - k$ times, from $i = k + 1$ to $n$, and each iteration performs the comparison `a[i] < a[IndexOfMin]` of the if-then statement once. So the total number of these comparisons is as follows.
 
-$$
+```math
 \sum_{k=1}^{n-1} (n - k) = (n - 1) + (n - 2) + \cdots + 1 = \frac{n(n-1)}{2} = \frac{1}{2}n^2 - \frac{1}{2}n
-$$
+```
 
 This number depends on $n$ alone and not on the contents of the input array, so by part 1 of the definition in Section 3.2 selection sort is $\Theta(n^2)$. That is, the best, worst, and average cases are all $\Theta(n^2)$. In the example above $n = 5$, so $4 + 3 + 2 + 1 = 10$ comparisons are made. Counting also the comparison `IndexOfMin ≠ k` made once per step adds $n - 1$, but the count is still $\frac{n(n-1)}{2} + (n - 1)$ regardless of the input, and the order is the same.
 
@@ -818,19 +818,19 @@ next i
 Output: polyval [a real number]
 ```
 
-In the $i$th iteration, the inner loop multiplies $a[i]$ by $x$ $i$ times to form the term $a[i]x^i$, and the outer loop adds that term to `polyval`. So the $i$th iteration performs $i$ multiplications and 1 addition, and the total number $s_n$ of additions and multiplications for a polynomial of degree $n$ is as follows.
+In the $`i`$th iteration, the inner loop multiplies $a[i]$ by $x$ $i$ times to form the term $a[i]x^i$, and the outer loop adds that term to `polyval`. So the $`i`$th iteration performs $i$ multiplications and 1 addition, and the total number $s_n$ of additions and multiplications for a polynomial of degree $n$ is as follows.
 
-$$
+```math
 s_n = \sum_{i=1}^{n} (i + 1) = \frac{n(n+1)}{2} + n = \frac{n^2 + 3n}{2}
-$$
+```
 
 By the theorem on polynomial orders, term-by-term polynomial evaluation is $\Theta(n^2)$.
 
 **Algorithm 11.3.4 (Horner's Rule).** This algorithm evaluates the polynomial by alternating multiplications and additions according to the nested parenthesization below.
 
-$$
+```math
 \Bigl(\bigl(\cdots\bigl((a[n]x + a[n-1])x + a[n-2]\bigr)x + \cdots + a[2]\bigr)x + a[1]\Bigr)x + a[0]
-$$
+```
 
 Each stage multiplies the current value of `polyval` by $x$ and then adds the next coefficient down.
 
@@ -912,17 +912,17 @@ The logarithmic function with base $b$ is the inverse of the exponential functio
 
 If the base $b$ is greater than 1, the logarithmic function is increasing. That is, if $b > 1$, then for all positive numbers $x_1$ and $x_2$ the following holds.
 
-$$
+```math
 x_1 < x_2 \implies \log_b x_1 < \log_b x_2 \qquad (11.4.1)
-$$
+```
 
 This is because if $\log_b x_1 \geq \log_b x_2$, then, since $y \mapsto b^y$ is increasing for $b > 1$, $x_1 = b^{\log_b x_1} \geq b^{\log_b x_2} = x_2$, contradicting $x_1 < x_2$. In contrast to the explosive growth of the exponential function, the logarithmic function grows very slowly. For example, $\log_2 1{,}024$ is only 10 and $\log_2 1{,}048{,}576$ is just 20, so the graph reaches large heights only very far out along the horizontal axis.
 
 The computations in this section use the properties of logarithms from Chapter 7. If $b$ and $c$ are positive real numbers not equal to 1, $x$ and $y$ are positive real numbers, and $a$ is a real number, then the following hold.
 
-$$
+```math
 \log_b(xy) = \log_b x + \log_b y, \quad \log_b \frac{x}{y} = \log_b x - \log_b y, \quad \log_b (x^a) = a \log_b x, \quad \log_c x = \frac{\log_b x}{\log_b c}
-$$
+```
 
 ### 4.3 Logarithms of Numbers between Two Consecutive Powers of 2
 
@@ -930,9 +930,9 @@ The following property follows from the fact that the logarithmic function with 
 
 **Property (11.4.2).** If $k$ is an integer and $x$ is a real number with $2^k \leq x < 2^{k+1}$, then $\lfloor \log_2 x \rfloor = k$.
 
-**Proof.** Suppose $k$ is an integer and $x$ is a real number with $2^k \leq x < 2^{k+1}$. Because the logarithmic function with base 2 is increasing, $\log_2(2^k) \leq \log_2 x < \log_2(2^{k+1})$. But $\log_2(2^k) = k$, since 2 must be raised to the $k$th power to get $2^k$, and for the same reason $\log_2(2^{k+1}) = k + 1$. Hence $k \leq \log_2 x < k + 1$, and by the definition of the floor function, $\lfloor \log_2 x \rfloor = k$.
+**Proof.** Suppose $k$ is an integer and $x$ is a real number with $2^k \leq x < 2^{k+1}$. Because the logarithmic function with base 2 is increasing, $\log_2(2^k) \leq \log_2 x < \log_2(2^{k+1})$. But $\log_2(2^k) = k$, since 2 must be raised to the $`k`$th power to get $2^k$, and for the same reason $\log_2(2^{k+1}) = k + 1$. Hence $k \leq \log_2 x < k + 1$, and by the definition of the floor function, $\lfloor \log_2 x \rfloor = k$.
 
-For a positive number, the floor simply drops the fractional part (for instance, $\lfloor 2.82 \rfloor = 2$). Property (11.4.2) therefore says in words that when a positive number $x$ lies between the consecutive integer powers $2^k$ and $2^{k+1}$ of 2, the floor of $\log_2 x$ is $k$, the exponent of the smaller power. For example, $2^3 = 8 \leq 13 < 16 = 2^4$, so $\lfloor \log_2 13 \rfloor = 3$ ($\log_2 13 \approx 3.70$). Figure 16 shows that if $x$ lies in the interval $[2^k, 2^{k+1})$, then $\log_2 x$ lies in the interval $[k, k+1)$.
+For a positive number, the floor simply drops the fractional part (for instance, $`\lfloor 2.82 \rfloor = 2`$). Property (11.4.2) therefore says in words that when a positive number $x$ lies between the consecutive integer powers $2^k$ and $2^{k+1}$ of 2, the floor of $\log_2 x$ is $k$, the exponent of the smaller power. For example, $2^3 = 8 \leq 13 < 16 = 2^4$, so $\lfloor \log_2 13 \rfloor = 3$ ($`\log_2 13 \approx 3.70`$). Figure 16 shows that if $x$ lies in the interval $[2^k, 2^{k+1})$, then $\log_2 x$ lies in the interval $[k, k+1)$.
 
 ![Figure 16. The floor of log2 x when x lies between 2 to the k and 2 to the k+1](../../images/Ch11_Floor-of-Log2.png)
 
@@ -952,15 +952,15 @@ For example, $\lfloor \log_2 8 \rfloor = 3 = \lfloor \log_2 9 \rfloor$.
 
 How many binary digits (bits) are needed to represent a positive integer $n$ in binary notation? As seen in Chapter 5, every positive integer $n$ can be written in exactly one way as follows, where $k$ is a nonnegative integer and each of $c_0, c_1, \ldots, c_{k-1}$ is 0 or 1.
 
-$$
+```math
 n = 2^k + c_{k-1} \cdot 2^{k-1} + \cdots + c_2 \cdot 2^2 + c_1 \cdot 2 + c_0
-$$
+```
 
 Then the binary representation of $n$ is $1c_{k-1}c_{k-2} \cdots c_2 c_1 c_0$, so the number of binary digits needed is $k + 1$. This is now expressed as a function of $n$. Since each $c_i \leq 1$, the formula for the sum of a geometric sequence (Chapter 5) gives the following.
 
-$$
+```math
 n \leq 2^k + 2^{k-1} + \cdots + 2^2 + 2 + 1 = \frac{2^{k+1} - 1}{2 - 1} = 2^{k+1} - 1 < 2^{k+1}
-$$
+```
 
 Also, since each $c_i \geq 0$, $2^k \leq n$. Putting the two inequalities together gives $2^k \leq n < 2^{k+1}$, and by property (11.4.2), $k = \lfloor \log_2 n \rfloor$. Therefore the number of binary digits needed to represent $n$ is $\lfloor \log_2 n \rfloor + 1$.
 
@@ -968,9 +968,9 @@ Also, since each $c_i \geq 0$, $2^k \leq n$. Putting the two inequalities togeth
 
 **Solution.** Using the change-of-base formula and approximate values of common logarithms gives the following.
 
-$$
+```math
 \log_2 52{,}837 = \frac{\log_{10} 52{,}837}{\log_{10} 2} \approx \frac{4.722938151}{0.3010299957} \approx 15.7
-$$
+```
 
 Thus the binary representation of 52,837 has $\lfloor 15.7 \rfloor + 1 = 15 + 1 = 16$ binary digits. Indeed, $2^{15} = 32{,}768 \leq 52{,}837 < 65{,}536 = 2^{16}$, and $52{,}837 = 1100111001100101_2$ has 16 digits.
 
@@ -980,9 +980,9 @@ Many recurrence relations that are important in computer science have solutions 
 
 **Example 11.4.4 (A Recurrence Relation with a Logarithmic Solution).** Define a sequence $a_1, a_2, a_3, \ldots$ recursively as follows.
 
-$$
+```math
 a_1 = 1, \qquad a_k = 2a_{\lfloor k/2 \rfloor} \quad (k \geq 2)
-$$
+```
 
 (a) Use iteration to guess an explicit formula for this sequence. (b) Use strong mathematical induction to confirm that the formula in (a) is correct.
 
@@ -1007,9 +1007,9 @@ $$
 
 Whenever the subscript $n$ lies between two powers of 2, $a_n$ equals the smaller power. More precisely:
 
-$$
+```math
 2^i \leq n < 2^{i+1} \implies a_n = 2^i \qquad (11.4.8)
-$$
+```
 
 If $n$ satisfies $2^i \leq n < 2^{i+1}$, then by property (11.4.2) $i = \lfloor \log_2 n \rfloor$, so substituting into (11.4.8) suggests that $a_n = 2^{\lfloor \log_2 n \rfloor}$.
 
@@ -1021,17 +1021,17 @@ If $n$ satisfies $2^i \leq n < 2^{i+1}$, then by property (11.4.2) $i = \lfloor 
 
 Case 1 ($k$ is even): since $k + 1$ is odd, $\lfloor (k+1)/2 \rfloor = k/2$. Because $k$ is even and $k \geq 1$, $k \geq 2$, so $1 \leq k/2 < k$ and the inductive hypothesis applies to $k/2$.
 
-$$
+```math
 a_{k+1} = 2a_{k/2} = 2 \cdot 2^{\lfloor \log_2(k/2) \rfloor} = 2^{\lfloor \log_2 k - 1 \rfloor + 1} = 2^{\lfloor \log_2 k \rfloor - 1 + 1} = 2^{\lfloor \log_2 k \rfloor} = 2^{\lfloor \log_2(k+1) \rfloor}
-$$
+```
 
 The reasons for the equalities are, in order: (1) the definition of the sequence and $\lfloor (k+1)/2 \rfloor = k/2$, (2) the inductive hypothesis, (3) the laws of exponents and $\log_2(k/2) = \log_2 k - \log_2 2 = \log_2 k - 1$, (4) the case $m = -1$ of the property $\lfloor x + m \rfloor = \lfloor x \rfloor + m$ for an integer $m$ (Chapter 4), (5) arithmetic, and (6) property (11.4.3), since $k + 1$ is an odd integer greater than 1, which gives $\lfloor \log_2 k \rfloor = \lfloor \log_2(k+1) \rfloor$.
 
 Case 2 ($k$ is odd): since $k + 1$ is even, $\lfloor (k+1)/2 \rfloor = (k+1)/2$. Since $k \geq 1$, $(k+1)/2 \geq 1$, and since $k + 1 \leq 2k$, $(k+1)/2 \leq k$, so the inductive hypothesis applies to $(k+1)/2$.
 
-$$
+```math
 a_{k+1} = 2a_{(k+1)/2} = 2 \cdot 2^{\lfloor \log_2((k+1)/2) \rfloor} = 2^{\lfloor \log_2(k+1) - 1 \rfloor + 1} = 2^{\lfloor \log_2(k+1) \rfloor}
-$$
+```
 
 The reasons are the same as in case 1: the definition of the sequence, the inductive hypothesis, the laws of exponents with $\log_2((k+1)/2) = \log_2(k+1) - 1$, and $\lfloor x - 1 \rfloor = \lfloor x \rfloor - 1$, in order.
 
@@ -1041,17 +1041,17 @@ In either case $a_{k+1} = 2^{\lfloor \log_2(k+1) \rfloor}$, so the inductive ste
 
 How do logarithmic and exponential functions compare with power functions? Once $x$ is large enough, the graph of a logarithmic function with base greater than 1 stays below the graph of every power function with a positive exponent, and the graph of an exponential function with base greater than 1 stays above all of them. Stated as inequalities: for all real numbers $b$ and $r$ with $b > 1$ and $r > 0$, there is a positive real number $s$ such that the following hold for every real number $x \geq s$.
 
-$$
+```math
 \log_b x \leq x^r \quad (11.4.9), \qquad x^r \leq b^x \quad (11.4.10)
-$$
+```
 
 In O-notation, for all real numbers $b$ and $r$ with $b > 1$ and $r > 0$, (11.4.11) $\log_b n$ is $O(n^r)$, and (11.4.12) $n^r$ is $O(b^n)$.
 
 The function defined by $f(x) = x \log_b x$ for $x > 0$ also appears constantly in algorithm analysis. For large $x$ its graph lies between the graph of the identity function and the graph of the squaring function; precisely, for every real number $b > 1$ there is a positive real number $s$ such that the following holds for every real number $x \geq s$.
 
-$$
+```math
 x \leq x \log_b x \leq x^2 \qquad (11.4.13)
-$$
+```
 
 In O-notation, for every real number $b > 1$, (11.4.14) $n$ is $O(n \log_b n)$ and $n \log_b n$ is $O(n^2)$. Some of these facts need calculus for a proof, but some special cases follow from the algebra of inequalities alone. For example, $n < 2^n$ for every integer $n \geq 1$ (by mathematical induction, Chapter 5), so $\log_2 n < n$ by property (11.4.1). Also, the $s$ in (11.4.9) can be very large when $r$ is small. With $r = 0.1$, at $x = 2^{60}$, $\log_2 x = 60 \leq 64 = 2^6 = x^{0.1}$, but at $x = 2^{50}$, $\log_2 x = 50 > 32 = x^{0.1}$.
 
@@ -1065,11 +1065,11 @@ Figure 17 illustrates the relationships among some power functions, the logarith
 
 **Solution.** (a) By the change-of-base formula, the following holds.
 
-$$
+```math
 \log_b n = \frac{\log_c n}{\log_c b} = \frac{1}{\log_c b} \log_c n
-$$
+```
 
-Since $b > 1$ and $c > 1$, $\log_c b > 0$ and $\frac{1}{\log_c b} > 0$. By Theorem 11.2.7(a), $\log_c n$ is $\Theta(\log_c n)$, so by Theorem 11.2.8(c), $\frac{1}{\log_c b} \log_c n$, that is, $\log_b n$, is $\Theta(\log_c n)$. The same reasoning with $b$ and $c$ interchanged shows that $\log_c n$ is $\Theta(\log_b n)$. Thus $\log_b n$ and $\log_c n$ have the same order. (b) By Theorem 11.2.7(a), $n$ is $\Theta(n)$ and $n \log_2 n$ is $\Theta(n \log_2 n)$. Also, by (11.4.13) there is a positive real number $s$ such that $n \leq n \log_2 n$ for every integer $n \geq s$ (indeed, $\log_2 n \geq 1$ when $n \geq 2$). Hence, by Theorem 11.2.9(c), $n + n \log_2 n$ is $\Theta(n \log_2 n)$.
+Since $b > 1$ and $c > 1$, $\log_c b > 0$ and $\frac{1}{\log_c b} > 0$. By Theorem 11.2.7(a), $\log_c n$ is $\Theta(\log_c n)$, so by Theorem 11.2.8(c), $\frac{1}{\log_c b} \log_c n$, that is, $\log_b n$, is $\Theta(\log_c n)$. The same reasoning with $b$ and $c$ interchanged shows that $\log_c n$ is $\Theta(\log_b n)$. Thus $\log_b n$ and $\log_c n$ have the same order. (b) By Theorem 11.2.7(a), $n$ is $\Theta(n)$ and $n \log_2 n$ is $\Theta(n \log_2 n)$. Also, by (11.4.13) there is a positive real number $s$ such that $n \leq n \log_2 n$ for every integer $n \geq s$ (indeed, $\log_2 n \geq 1$ when $`n \geq 2`$). Hence, by Theorem 11.2.9(c), $n + n \log_2 n$ is $\Theta(n \log_2 n)$.
 
 > **Key Point:** Changing the base of a logarithm only changes a positive constant multiple, so the base does not affect the order. For this reason a logarithmic order is sometimes written without the base, as $\Theta(\log n)$.
 
@@ -1077,9 +1077,9 @@ Since $b > 1$ and $c > 1$, $\log_c b > 0$ and $\frac{1}{\log_c b} > 0$. By Theor
 
 **Solution.** For any positive integer $n$, $(n-1) \leq n$, $(n-2) \leq n$, $\ldots$, $2 \leq n$, and $1 \leq n$, so the following holds. Both sides are products of $n$ factors.
 
-$$
+```math
 n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1 \leq n \cdot n \cdot n \cdots n \cdot n = n^n
-$$
+```
 
 Let $B = 1$ and $b = 1$. Since $n! \geq 0$ for $n \geq b$, $0 \leq n! \leq n^n$ for every integer $n \geq b$, and by the definition of O-notation $n!$ is $O(n^n)$.
 
@@ -1087,7 +1087,7 @@ Let $B = 1$ and $b = 1$. Since $n! \geq 0$ for $n \geq b$, $0 \leq n! \leq n^n$ 
 
 Sums of the form $1 + \frac{1}{2} + \cdots + \frac{1}{n}$ are called **harmonic sums**. They turn up in the analysis of several algorithms, quick sort among them. The next example shows a logarithmic order emerging from such a sum and relies on the following fact from calculus: the region under the graph of $y = \frac{1}{x}$ between $x = 1$ and $x = n$ has area $\ln n$, where $\ln n = \log_e n$ is the natural logarithm.
 
-> **[Calculus]** The fact above is the definite integral $\int_1^n \frac{1}{x}\,dx = \ln n - \ln 1 = \ln n$, because an antiderivative of $\frac{1}{x}$ is $\ln x$ and $\ln 1 = 0$. Also, since $\frac{1}{x}$ is decreasing for $x > 0$, on each interval $[i, i+1]$ the height of the graph is largest at the left endpoint and smallest at the right endpoint.
+> **[Calculus]** The fact above is the definite integral $`\int_1^n \frac{1}{x}\,dx = \ln n - \ln 1 = \ln n`$, because an antiderivative of $\frac{1}{x}$ is $\ln x$ and $\ln 1 = 0$. Also, since $\frac{1}{x}$ is decreasing for $x > 0$, on each interval $[i, i+1]$ the height of the graph is largest at the left endpoint and smallest at the right endpoint.
 
 **Example 11.4.7 (Order of a Harmonic Sum).** Show that $1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}$ is $\Theta(\ln n)$ by the following steps. (a) Interpret Figure 18 to show that $\frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} \leq \ln n$ and $\ln n \leq 1 + \frac{1}{2} + \cdots + \frac{1}{n}$. (b) Show that if $n$ is an integer with $n \geq 3$, then $1 \leq \ln n$. (c) Deduce from (a) and (b) that if $n \geq 3$, then $\ln n \leq 1 + \frac{1}{2} + \cdots + \frac{1}{n} \leq 2 \ln n$. (d) Deduce from (c) that $1 + \frac{1}{2} + \cdots + \frac{1}{n}$ is $\Theta(\ln n)$.
 
@@ -1167,9 +1167,9 @@ Each pass through the loop computes the middle index `mid` and compares $x$ with
 
 **Example 11.5.1 (Tracing Binary Search).** Trace the variables `index`, `bot`, `top`, and `mid` of Algorithm 11.5.1 on the following input array for (a) $x = \text{Erik}$ and (b) $x = \text{Sara}$. Elements are compared in alphabetical order.
 
-$$
+```math
 a[1] = \text{Ann},\ a[2] = \text{Dawn},\ a[3] = \text{Erik},\ a[4] = \text{Gail},\ a[5] = \text{Juan},\ a[6] = \text{Matt},\ a[7] = \text{Max},\ a[8] = \text{Rita},\ a[9] = \text{Tsuji},\ a[10] = \text{Yuen}
-$$
+```
 
 **Solution.** Each column of Tables 11 and 12 shows the values after one iteration of the while loop.
 
@@ -1199,7 +1199,7 @@ In (a), $a[3] = x$ in the third iteration, so `index` becomes 3 and the loop end
 
 ### 5.3 Efficiency of Binary Search
 
-The idea behind the efficiency of binary search can be sketched first. Each stage leaves a subarray about half as long as the one before, and in the worst case the search goes on until a subarray with a single element has been examined. The worst-case number of iterations of the while loop is therefore one more than the number of times the original array can be roughly halved. When the length $n$ is a power of 2 ($n = 2^k$), halving exactly $k = \log_2 n = \lfloor \log_2 n \rfloor$ times reaches length 1. When $n$ is not a power of 2, $n = 2^k + m$ for an integer $k$ and $0 < m < 2^k$, and $n$ can still be roughly halved $k$ times, so again $k = \lfloor \log_2 n \rfloor$. Hence the worst-case number of iterations of the while loop, which is proportional to the number of comparisons, is $\lfloor \log_2 n \rfloor + 1$, and this is $O(\log_2 n)$. The following examples fill in the details.
+The idea behind the efficiency of binary search can be sketched first. Each stage leaves a subarray about half as long as the one before, and in the worst case the search goes on until a subarray with a single element has been examined. The worst-case number of iterations of the while loop is therefore one more than the number of times the original array can be roughly halved. When the length $n$ is a power of 2 ($`n = 2^k`$), halving exactly $k = \log_2 n = \lfloor \log_2 n \rfloor$ times reaches length 1. When $n$ is not a power of 2, $n = 2^k + m$ for an integer $k$ and $0 < m < 2^k$, and $n$ can still be roughly halved $k$ times, so again $k = \lfloor \log_2 n \rfloor$. Hence the worst-case number of iterations of the while loop, which is proportional to the number of comparisons, is $\lfloor \log_2 n \rfloor + 1$, and this is $O(\log_2 n)$. The following examples fill in the details.
 
 For each integer $n \geq 1$, let $w_n$ denote the number of iterations of the while loop when binary search runs on an input array of length $n$ in the worst case.
 
@@ -1218,15 +1218,15 @@ The first question is this: given the length of the array that enters one iterat
 
 The larger of $\lfloor k/2 \rfloor$ and $\lfloor k/2 \rfloor - 1$ is $\lfloor k/2 \rfloor$, so in the worst case the array input to the next iteration has length $\lfloor k/2 \rfloor$.
 
-**Example 11.5.3 (A Recurrence Relation for $w_1, w_2, w_3, \ldots$).** Show that the sequence $w_1, w_2, w_3, \ldots$ satisfies the following recurrence relation and initial condition.
+**Example 11.5.3 (A Recurrence Relation for $`w_1, w_2, w_3, \ldots`$).** Show that the sequence $w_1, w_2, w_3, \ldots$ satisfies the following recurrence relation and initial condition.
 
-$$
+```math
 w_1 = 1, \qquad w_k = 1 + w_{\lfloor k/2 \rfloor} \quad (k > 1)
-$$
+```
 
-**Solution.** By the previous example, when an array of length $k$ enters the while loop, in the worst case the next iteration works on an array of length $\lfloor k/2 \rfloor$. So the worst-case number of iterations for length $k$ is one more than that for length $\lfloor k/2 \rfloor$; in symbols, $w_k = 1 + w_{\lfloor k/2 \rfloor}$. Also $w_1 = 1$, because for an input array of length 1 ($bot = top$) the while loop iterates only once.
+**Solution.** By the previous example, when an array of length $k$ enters the while loop, in the worst case the next iteration works on an array of length $\lfloor k/2 \rfloor$. So the worst-case number of iterations for length $k$ is one more than that for length $\lfloor k/2 \rfloor$; in symbols, $w_k = 1 + w_{\lfloor k/2 \rfloor}$. Also $w_1 = 1$, because for an input array of length 1 ($`bot = top`$) the while loop iterates only once.
 
-**Example 11.5.4 (Guessing an Explicit Formula for $w_n$).** Apply iteration to the recurrence relation to guess an explicit formula for $w_n$.
+**Example 11.5.4 (Guessing an Explicit Formula for $`w_n`$).** Apply iteration to the recurrence relation to guess an explicit formula for $w_n$.
 
 **Solution.** Computing the first few terms gives the following. For instance, $w_2 = 1 + w_1 = 2$, $w_3 = 1 + w_1 = 2$, $w_4 = 1 + w_2 = 3$, $w_8 = 1 + w_4 = 4$, $w_{15} = 1 + w_7 = 4$, and $w_{16} = 1 + w_8 = 5$.
 
@@ -1239,9 +1239,9 @@ $$
 
 Whenever the subscript $n$ lies between two powers of 2, $w_n$ is 1 more than the exponent of the smaller power. In other words:
 
-$$
+```math
 2^i \leq n < 2^{i+1} \implies w_n = i + 1 \qquad (11.5.1)
-$$
+```
 
 If $2^i \leq n < 2^{i+1}$, then $i = \lfloor \log_2 n \rfloor$ by property (11.4.2), so substituting into (11.5.1) suggests that $w_n = \lfloor \log_2 n \rfloor + 1$.
 
@@ -1255,17 +1255,17 @@ If $2^i \leq n < 2^{i+1}$, then $i = \lfloor \log_2 n \rfloor$ by property (11.4
 
 Case 1 ($k$ is even): since $k + 1$ is odd, $\lfloor (k+1)/2 \rfloor = k/2$, and since $k \geq 2$, $1 \leq k/2 < k$, so the inductive hypothesis applies.
 
-$$
+```math
 w_{k+1} = 1 + w_{k/2} = 1 + \bigl(\lfloor \log_2(k/2) \rfloor + 1\bigr) = \lfloor \log_2 k - 1 \rfloor + 2 = \bigl(\lfloor \log_2 k \rfloor - 1\bigr) + 2 = \lfloor \log_2(k+1) \rfloor + 1
-$$
+```
 
 The reasons are, in order, the definition of the sequence, the inductive hypothesis, $\log_2(k/2) = \log_2 k - \log_2 2 = \log_2 k - 1$, $\lfloor x - 1 \rfloor = \lfloor x \rfloor - 1$, and property (11.4.3).
 
 Case 2 ($k$ is odd): since $k + 1$ is even, $\lfloor (k+1)/2 \rfloor = (k+1)/2$, and $1 \leq (k+1)/2 \leq k$, so the inductive hypothesis applies.
 
-$$
+```math
 w_{k+1} = 1 + w_{(k+1)/2} = 1 + \bigl(\lfloor \log_2(k+1) - 1 \rfloor + 1\bigr) = \bigl(\lfloor \log_2(k+1) \rfloor - 1\bigr) + 2 = \lfloor \log_2(k+1) \rfloor + 1
-$$
+```
 
 In either case $w_{k+1} = \lfloor \log_2(k+1) \rfloor + 1$; since both the basis and the inductive steps have been proved, the proof by strong mathematical induction is complete.
 
@@ -1273,9 +1273,9 @@ In either case $w_{k+1} = \lfloor \log_2(k+1) \rfloor + 1$; since both the basis
 
 **Solution.** For each integer $n \geq 2$, the following hold in turn.
 
-$$
+```math
 w_n = \lfloor \log_2 n \rfloor + 1 \implies \log_2 n \leq w_n \leq \log_2 n + 1 \implies \log_2 n \leq w_n \leq \log_2 n + \log_2 n = 2 \log_2 n
-$$
+```
 
 The first step holds because $x < \lfloor x \rfloor + 1$ and $\lfloor x \rfloor \leq x$ for every real number $x$, and the second because the logarithmic function with base 2 is increasing, so $2 \leq n$ gives $1 = \log_2 2 \leq \log_2 n$. With $A = 1$, $B = 2$, and $k = 2$, $A \log_2 n \leq w_n \leq B \log_2 n$ for every integer $n \geq k$, so $w_n$ is $\Theta(\log_2 n)$. Finally, because the number of iterations $w_n$ of the while loop is proportional to the number of comparisons binary search performs, the binary search algorithm is $\Theta(\log_2 n)$ in the worst case.
 
@@ -1356,7 +1356,7 @@ graph TD
 
 As with binary search, formalizing merge sort requires deciding exactly where to split each array. For an array $a[bot], a[bot+1], \ldots, a[top]$, let $mid = \lfloor (bot + top)/2 \rfloor$, and take the left subarray to be $a[bot], \ldots, a[mid]$ and the right subarray to be $a[mid+1], \ldots, a[top]$.
 
-**Algorithm 11.5.2 (Merge Sort).** This algorithm takes an array $a[r], a[r+1], \ldots, a[s]$ ($r \leq s$) and arranges the same values in ascending order. The output array is also denoted $a[r], \ldots, a[s]$. The input array is split into two subarrays of nearly equal length, each is sorted by merge sort, and then the two subarrays are merged.
+**Algorithm 11.5.2 (Merge Sort).** This algorithm takes an array $a[r], a[r+1], \ldots, a[s]$ ($`r \leq s`$) and arranges the same values in ascending order. The output array is also denoted $a[r], \ldots, a[s]$. The input array is split into two subarrays of nearly equal length, each is sorted by merge sort, and then the two subarrays are merged.
 
 ```text
 Input: r, s [positive integers with r ≤ s], a[r], a[r + 1], ..., a[s] [an array of data items that can be ordered]
@@ -1375,7 +1375,7 @@ end while
 Output: a[r], a[r + 1], ..., a[s] [an array with the same elements as the input array, in ascending order]
 ```
 
-> **Note:** In this pseudocode `bot` and `top` never change inside the loop body, so executing `while` literally would keep the condition `bot < top` true and repeat the same work forever. The intended behavior is to execute the body once when `bot < top`, so `while (bot < top) ... end while` should be read as `if (bot < top) then ... end if`. For an array of length 1 ($bot = top$) nothing is done, and this is the base of the recursion.
+> **Note:** In this pseudocode `bot` and `top` never change inside the loop body, so executing `while` literally would keep the condition `bot < top` true and repeat the same work forever. The intended behavior is to execute the body once when `bot < top`, so `while (bot < top) ... end while` should be read as `if (bot < top) then ... end if`. For an array of length 1 ($`bot = top`$) nothing is done, and this is the base of the recursion.
 
 Merge sort is recursive, since its own definition calls merge sort. It is still well defined: every call receives a shorter array than the call that made it, so the calls eventually reach arrays of length 1, which are already sorted.
 
@@ -1383,9 +1383,9 @@ Merge sort is recursive, since its own definition calls merge sort. It is still 
 
 No comparisons are used for an array of length 1, so $m_1 = 0$. For an integer $k > 1$, when an array $a[bot], \ldots, a[top]$ of length $k$ is split at $mid = \lfloor (bot + top)/2 \rfloor$, the relative position of $mid$ is $\lfloor (k+1)/2 \rfloor = \lceil k/2 \rceil$, so the left subarray has length $\lceil k/2 \rceil$ and the right subarray has length $k - \lceil k/2 \rceil = \lfloor k/2 \rfloor$. Also, merging into an array of length $k$ needs at most $k - 1$ comparisons. Hence the number of comparisons for an array of length $k$ is the sum of the number for an array of length $\lfloor k/2 \rfloor$, the number for an array of length $\lceil k/2 \rceil$, and the number for the merge, which gives the following recurrence relation.
 
-$$
+```math
 m_k = m_{\lfloor k/2 \rfloor} + m_{\lceil k/2 \rceil} + (k - 1) \qquad (k > 1)
-$$
+```
 
 Computing the first few terms with this recurrence and comparing them with the worst-case number of comparisons of insertion sort, $\frac{n(n-1)}{2}$ (counting only the comparisons `x < a[j]`), gives Table 17.
 
@@ -1398,15 +1398,15 @@ Computing the first few terms with this recurrence and comparing them with the w
 
 Applying strong mathematical induction to this recurrence shows that the following inequality holds for every integer $n \geq 1$, and from it merge sort is $\Theta(n \log_2 n)$ in the worst case.
 
-$$
+```math
 \frac{1}{2} n \log_2 n \leq m_n \leq 2n \log_2 n
-$$
+```
 
 When $n$ is a power of 2, this fact is easy to check. If $n = 2^k$, then $\lfloor n/2 \rfloor = \lceil n/2 \rceil = 2^{k-1}$, so the recurrence becomes $m_{2^k} = 2m_{2^{k-1}} + 2^k - 1$. Mathematical induction on $k$ shows $m_{2^k} = k \cdot 2^k - 2^k + 1$: for $k = 0$, $0 - 1 + 1 = 0 = m_1$, and if $m_{2^{k-1}} = (k-1)2^{k-1} - 2^{k-1} + 1$, then the following holds.
 
-$$
+```math
 m_{2^k} = 2\bigl((k-1)2^{k-1} - 2^{k-1} + 1\bigr) + 2^k - 1 = (k-1)2^k - 2^k + 2 + 2^k - 1 = k \cdot 2^k - 2^k + 1
-$$
+```
 
 That is, if $n = 2^k$, then $m_n = n \log_2 n - n + 1$. Since $-n + 1 \leq 0$, $m_n \leq n \log_2 n \leq 2n \log_2 n$. Also, $m_n \geq \frac{1}{2} n \log_2 n$ is equivalent to $\frac{1}{2} k \cdot 2^k \geq 2^k - 1$, which holds with equality for $k = 0, 1$ and holds for $k \geq 2$ because $\frac{1}{2} k \cdot 2^k \geq 2^k > 2^k - 1$.
 
@@ -1418,9 +1418,9 @@ In Sections 3.4 and 3.5, insertion sort and selection sort were both $\Theta(n^2
 
 At the other end of the scale from binary search, with its logarithmic order, lie algorithms of exponential order. Take, for example, an algorithm that lists every move needed to transfer the 64 disks of the Tower of Hanoi puzzle, one at a time, from one pole to another. The minimum number of moves $h_n$ for $n$ disks satisfies $h_1 = 1$ and $h_n = 2h_{n-1} + 1$, from the process of moving the top $n - 1$ disks to the spare pole, moving the largest disk, and moving the $n - 1$ disks back on top of it, and the solution is $h_n = 2^n - 1$ (Chapter 5). Therefore transferring 64 disks requires $2^{64} - 1$ moves. If a computer needed one nanosecond to compute each move, computing all of them would take the following time.
 
-$$
+```math
 (2^{64} - 1) \times \frac{1}{10^9} \times \frac{1}{60} \times \frac{1}{60} \times \frac{1}{24} \times \frac{1}{365.25} \approx 584.5
-$$
+```
 
 The factors are, in order, the number of moves and the reciprocals of the moves per second $10^9$, the seconds per minute 60, the minutes per hour 60, the hours per day 24, and the days per year 365.25, and the result is in years. That is, it would take about 584.5 years.
 
@@ -1481,7 +1481,7 @@ Table 18 collects the orders of the algorithms analyzed in this chapter.
 | Concept | Key Summary |
 |:-----|:-----|
 | Graph of a real-valued function | The set of points $(x, y)$ with $x$ in the domain and $y = f(x)$; the height at $x$ is $f(x)$. The graph of a function defined on the integers keeps only the points with integer first coordinates. |
-| Power function | $p_a(x) = x^a$ ($x \geq 0$) for a nonnegative real number $a$; for $x > 1$, the larger the exponent, the higher the graph. |
+| Power function | $p_a(x) = x^a$ ($`x \geq 0`$) for a nonnegative real number $a$; for $x > 1$, the larger the exponent, the higher the graph. |
 | Multiple of a function | $(Mf)(x) = M \cdot f(x)$; the height of the graph is multiplied by $M$ at each $x$. |
 | Increasing and decreasing functions | $x_1 < x_2$ implies $f(x_1) < f(x_2)$ (increasing) or $f(x_1) > f(x_2)$ (decreasing). Both are one-to-one; a positive multiple preserves the property and a negative multiple reverses it. |
 | Ω-notation | $f(n)$ is $\Omega(g(n))$ if there are positive $A$ and $a$ with $Ag(n) \leq f(n)$ for $n \geq a$. |
@@ -1587,7 +1587,7 @@ Table 18 collects the orders of the algorithms analyzed in this chapter.
    <details>
    <summary>Answer</summary>
 
-   With $bot = 1$ and $top = 10$: $mid = 5$ ($a[5] = 16 < 23$, so $bot = 6$), $mid = \lfloor 16/2 \rfloor = 8$ ($a[8] = 56 > 23$, so $top = 7$), and $mid = \lfloor 13/2 \rfloor = 6$ ($a[6] = 23$, so $index = 6$). So `mid` takes the values 5, 8, 6, in 3 iterations. The worst-case number of iterations is $w_{10} = \lfloor \log_2 10 \rfloor + 1 = 3 + 1 = 4$.
+   With $bot = 1$ and $top = 10$: $mid = 5$ ($a[5] = 16 < 23$, so $`bot = 6`$), $mid = \lfloor 16/2 \rfloor = 8$ ($a[8] = 56 > 23$, so $`top = 7`$), and $mid = \lfloor 13/2 \rfloor = 6$ ($a[6] = 23$, so $`index = 6`$). So `mid` takes the values 5, 8, 6, in 3 iterations. The worst-case number of iterations is $w_{10} = \lfloor \log_2 10 \rfloor + 1 = 3 + 1 = 4$.
 
    </details>
 

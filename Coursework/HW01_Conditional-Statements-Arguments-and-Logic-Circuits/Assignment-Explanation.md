@@ -120,7 +120,7 @@ The statement form is false only in the fourth row ($p$ true, $q$ false, $r$ fal
 | F | F | T | T | T | T | T |
 | F | F | F | T | T | T | F |
 
-*Table 3. Truth table for $p \to (q \to r)$ and $(p \to q) \to r$*
+*Table 3. $`p \to (q \to r)`$ and $`(p \to q) \to r`$: truth table*
 
 The two columns differ in the sixth and eighth rows. For example, when $p$, $q$, and $r$ are all false as in the eighth row, $p \to (q \to r)$ is true because its hypothesis $p$ is false. On the other hand, $p \to q$ is true and $r$ is false, so $(p \to q) \to r$ is false. Therefore **the two statement forms are not logically equivalent.** The conditional operator $\to$ is not associative, so the placement of the parentheses changes the meaning.
 
@@ -144,9 +144,9 @@ The two columns differ in the sixth and eighth rows. For example, when $p$, $q$,
 
 **Concepts used.** For a conditional statement $p \to q$, the **converse** is $q \to p$, the **inverse** is $\sim p \to \sim q$, and the **contrapositive** is $\sim q \to \sim p$ (Chapter 2, Section 2). The converse interchanges the hypothesis and the conclusion, while the inverse keeps them in place and negates each of them. If the hypothesis or the conclusion contains "or" or "and", negate it with De Morgan's laws $\sim(a \vee b) \equiv \sim a \wedge \sim b$ and $\sim(a \wedge b) \equiv \sim a \vee \sim b$.
 
-**Solution.** Apply the definitions to the $p$ and $q$ above. The negation of the conclusion of (d), "$n$ is odd or $n = 2$", is "$n$ is not odd and $n \ne 2$", and the negation of the conclusion of (f), "Jim is Ann's uncle and Sue is Ann's aunt", is "Jim is not Ann's uncle or Sue is not Ann's aunt". For a real number $x$, the negation of the hypothesis of (e), "$x$ is nonnegative", is "$x$ is negative".
+**Solution.** Apply the definitions to the $p$ and $q$ above. The negation of the conclusion of (d), "$`n`$ is odd or $n = 2$", is "$`n`$ is not odd and $n \ne 2$", and the negation of the conclusion of (f), "Jim is Ann's uncle and Sue is Ann's aunt", is "Jim is not Ann's uncle or Sue is not Ann's aunt". For a real number $x$, the negation of the hypothesis of (e), "$`x`$ is nonnegative", is "$`x`$ is negative".
 
-| Item | Converse ($q \to p$) | Inverse ($\sim p \to \sim q$) |
+| Item | Converse ($`q \to p`$) | Inverse ($`\sim p \to \sim q`$) |
 |:---:|:-----|:-----|
 | (a) | If $P$ is a rectangle, then $P$ is a square. | If $P$ is not a square, then $P$ is not a rectangle. |
 | (b) | If tomorrow is in January, then today is New Year's Eve. | If today is not New Year's Eve, then tomorrow is not in January. |
@@ -176,15 +176,15 @@ The converse and the inverse can differ in truth value from the original stateme
 
 (a) In $p \to q \equiv \sim p \vee q$, substitute $p \wedge \sim q$ for $p$ and $r$ for $q$.
 
-$$
+```math
 (p \wedge \sim q) \to r \equiv \sim(p \wedge \sim q) \vee r
-$$
+```
 
 (b) The result of (a) is the disjunction $A \vee B$ of the two parts $A = \sim(p \wedge \sim q)$ and $B = r$. Apply $A \vee B \equiv \sim(\sim A \wedge \sim B)$, and then simplify $\sim A = \sim\sim(p \wedge \sim q) \equiv p \wedge \sim q$ by the double negative law.
 
-$$
+```math
 \sim(p \wedge \sim q) \vee r \equiv \sim\big(\sim\sim(p \wedge \sim q) \wedge \sim r\big) \equiv \sim\big((p \wedge \sim q) \wedge \sim r\big)
-$$
+```
 
 The last expression uses only $\wedge$ and $\sim$. The result can be checked through the case in which it is false. The original statement form is false only when its hypothesis $p \wedge \sim q$ is true and $r$ is false, that is, only when $p$ is true, $q$ is false, and $r$ is false. The last expression is false only when $(p \wedge \sim q) \wedge \sim r$ is true, that is, in exactly the same case.
 
@@ -202,33 +202,33 @@ The last expression uses only $\wedge$ and $\sim$. The result can be checked thr
 
 (a) First rewrite the two inner conditionals.
 
-$$
+```math
 p \to r \equiv \sim p \vee r, \qquad q \to r \equiv \sim q \vee r
-$$
+```
 
 Next, in the equivalence for the biconditional, substitute $\sim p \vee r$ for $p$ and $\sim q \vee r$ for $q$.
 
-$$
+```math
 (p \to r) \leftrightarrow (q \to r) \equiv \big(\sim(\sim p \vee r) \vee (\sim q \vee r)\big) \wedge \big(\sim(\sim q \vee r) \vee (\sim p \vee r)\big)
-$$
+```
 
 (b) Every $\vee$ remaining in the expression of (a) must be removed. First rewrite the two inner disjunctions. By $a \vee b \equiv \sim(\sim a \wedge \sim b)$ and the double negative law, the following holds.
 
-$$
+```math
 \sim p \vee r \equiv \sim(\sim\sim p \wedge \sim r) \equiv \sim(p \wedge \sim r), \qquad \sim q \vee r \equiv \sim(q \wedge \sim r)
-$$
+```
 
 Let $A = \sim(p \wedge \sim r)$ and $B = \sim(q \wedge \sim r)$; then the expression of (a) is $(\sim A \vee B) \wedge (\sim B \vee A)$. Apply the same equivalence to the two outer disjunctions.
 
-$$
+```math
 \sim A \vee B \equiv \sim(\sim\sim A \wedge \sim B) \equiv \sim(A \wedge \sim B), \qquad \sim B \vee A \equiv \sim(B \wedge \sim A)
-$$
+```
 
 Here $\sim B = \sim\sim(q \wedge \sim r) \equiv q \wedge \sim r$ and $\sim A \equiv p \wedge \sim r$. Substituting these gives the final result.
 
-$$
+```math
 (p \to r) \leftrightarrow (q \to r) \equiv \sim\big(\sim(p \wedge \sim r) \wedge (q \wedge \sim r)\big) \wedge \sim\big(\sim(q \wedge \sim r) \wedge (p \wedge \sim r)\big)
-$$
+```
 
 This expression can be checked against the truth table of Exercise 2.2.10 (Table 2). The first factor $\sim\big(\sim(p \wedge \sim r) \wedge (q \wedge \sim r)\big)$ is false only when $q$ is true, $r$ is false, and $p$ is false, and the second factor is false only when $p$ is true, $r$ is false, and $q$ is false. Hence the whole expression is false only in the fourth and sixth rows of Table 2, exactly as the original statement form.
 
@@ -238,7 +238,7 @@ This expression can be checked against the truth table of Exercise 2.2.10 (Table
 
 ## 7. Exercise 2.3.13: Validity of Modus Tollens
 
-**Problem.** Use a truth table to show that the argument form **modus tollens**, "$p \to q$, $\sim q$, therefore $\sim p$", is valid. Mark the columns of the premises and of the conclusion, and explain in one sentence why the table supports the answer.
+**Problem.** Use a truth table to show that the argument form **modus tollens**, "$`p \to q`$, $\sim q$, therefore $\sim p$", is valid. Mark the columns of the premises and of the conclusion, and explain in one sentence why the table supports the answer.
 
 **Concepts used.** An argument form is **valid** if and only if, no matter what truth values are substituted for its statement variables, the conclusion is true whenever all the premises are true ([Chapter 2, Section 3](../../Lecture-Notes/Ch02_The-Logic-of-Compound-Statements/Concepts_Lecture.md)). A row of the truth table in which all premises are true is called a **critical row**; the argument form is valid if the conclusion is true in every critical row, and invalid if the conclusion is false in at least one critical row.
 
@@ -267,7 +267,7 @@ The only row in which both premises are true is the fourth row, and in this crit
 - Premise 2: if I do not finish my homework, then I do not do well on tomorrow's test.
 - Conclusion: if I go to the movies, then I do not do well on tomorrow's test.
 
-**Concepts used.** **Transitivity** is the valid argument form "$p \to q$, $q \to r$, therefore $p \to r$" (Table 2.3.1 of the textbook). Any statement form, including a negation, may be substituted for its statement variables.
+**Concepts used.** **Transitivity** is the valid argument form "$`p \to q`$, $q \to r$, therefore $p \to r$" (Table 2.3.1 of the textbook). Any statement form, including a negation, may be substituted for its statement variables.
 
 **Solution.** Let the simple statements be as follows.
 
@@ -277,9 +277,9 @@ The only row in which both premises are true is the fourth row, and in this crit
 
 Then the form of the argument is the following.
 
-$$
+```math
 p \to \sim q, \qquad \sim q \to \sim r, \qquad \therefore\ p \to \sim r
-$$
+```
 
 This is the form of transitivity with $\sim q$ substituted for $q$ and $\sim r$ for $r$, so the argument is **valid by transitivity.** Intuitively as well, if both premises are true and $p$ is true, then $\sim q$ is true by premise 1, and in turn $\sim r$ is true by premise 2. Hence it cannot happen that $p$ is true while $\sim r$ is false, and the conclusion $p \to \sim r$ cannot be false.
 
@@ -295,13 +295,13 @@ This is the form of transitivity with $\sim q$ substituted for $q$ and $\sim r$ 
 - Premise 2: the set of irrational numbers is infinite.
 - Conclusion: the rational numbers are as numerous as the irrational numbers.
 
-**Concepts used.** The **converse error** is the invalid inference of the form "$p \to q$, $q$, therefore $p$" (Chapter 2, Section 3). It concludes that the hypothesis of a conditional is true from the fact that its conclusion is true, and it arises from confusing a conditional with its converse.
+**Concepts used.** The **converse error** is the invalid inference of the form "$`p \to q`$, $q$, therefore $p$" (Chapter 2, Section 3). It concludes that the hypothesis of a conditional is true from the fact that its conclusion is true, and it arises from confusing a conditional with its converse.
 
 **Solution.** Let $p$ be "the rational numbers are as numerous as the irrational numbers" and $q$ be "the set of irrational numbers is infinite". Then the form of the argument is the following.
 
-$$
+```math
 p \to q, \qquad q, \qquad \therefore\ p
-$$
+```
 
 The truth table of this form reveals that it is invalid.
 
@@ -328,13 +328,13 @@ The third row is a critical row in which both premises are true, yet the conclus
 - Premise 2: neither of the two numbers is divisible by 6.
 - Conclusion: the product of the two numbers is not divisible by 6.
 
-**Concepts used.** The **inverse error** is the invalid inference of the form "$p \to q$, $\sim p$, therefore $\sim q$" (Chapter 2, Section 3). It concludes that the conclusion of a conditional is false from the fact that its hypothesis is false, and it arises from confusing a conditional with its inverse.
+**Concepts used.** The **inverse error** is the invalid inference of the form "$`p \to q`$, $\sim p$, therefore $\sim q$" (Chapter 2, Section 3). It concludes that the conclusion of a conditional is false from the fact that its hypothesis is false, and it arises from confusing a conditional with its inverse.
 
 **Solution.** Let $p$ be "at least one of the two numbers is divisible by 6" and $q$ be "the product of the two numbers is divisible by 6". The negation of "at least one is divisible" is "neither is divisible", so the second premise is $\sim p$. Hence the form of the argument is the following.
 
-$$
+```math
 p \to q, \qquad \sim p, \qquad \therefore\ \sim q
-$$
+```
 
 | $p$ | $q$ | $p \to q$ (premise 1) | $\sim p$ (premise 2) | $\sim q$ (conclusion) | Remark |
 |:---:|:---:|:---:|:---:|:---:|:-----|
@@ -374,7 +374,7 @@ graph LR
     O --> R(["output R"])
 ```
 
-*Figure 1. Circuit for $P \vee (\sim P \wedge \sim Q)$*
+*Figure 1. $`P \vee (\sim P \wedge \sim Q)`$ as a circuit*
 
 The input/output table of this circuit is the following.
 
@@ -433,9 +433,9 @@ Now transform the expression of circuit (a) with the laws of Theorem 2.1.1.
 2. $\equiv \sim P \wedge (P \vee \sim Q)$ (double negative law)
 3. $\equiv (\sim P \wedge P) \vee (\sim P \wedge \sim Q)$ (distributive law)
 4. $\equiv (P \wedge \sim P) \vee (\sim P \wedge \sim Q)$ (commutative law)
-5. $\equiv \mathbf{c} \vee (\sim P \wedge \sim Q)$ (negation law, $p \wedge \sim p \equiv \mathbf{c}$)
+5. $\equiv \mathbf{c} \vee (\sim P \wedge \sim Q)$ (negation law, $`p \wedge \sim p \equiv \mathbf{c}`$)
 6. $\equiv (\sim P \wedge \sim Q) \vee \mathbf{c}$ (commutative law)
-7. $\equiv \sim P \wedge \sim Q$ (identity law, $p \vee \mathbf{c} \equiv p$)
+7. $\equiv \sim P \wedge \sim Q$ (identity law, $`p \vee \mathbf{c} \equiv p`$)
 8. $\equiv \sim(P \vee Q)$ (De Morgan's law)
 
 The last expression is the Boolean expression of circuit (b), so the two Boolean expressions are logically equivalent and the two circuits have the same input/output table. The input/output table confirms this.
@@ -467,8 +467,8 @@ The two output columns agree in every row. Circuit (b) uses only two gates, so i
 | Converse, inverse, contrapositive | For $p \to q$, the converse is $q \to p$, the inverse is $\sim p \to \sim q$, and the contrapositive is $\sim q \to \sim p$; only the contrapositive is equivalent to the original. |
 | Replacing connectives | Apply $p \to q \equiv \sim p \vee q$, $p \leftrightarrow q \equiv (\sim p \vee q) \wedge (\sim q \vee p)$, and $p \vee q \equiv \sim(\sim p \wedge \sim q)$ in turn. |
 | Validity and critical rows | An argument form is valid if the conclusion is true in every row in which all premises are true. |
-| Modus tollens and transitivity | "$p \to q$, $\sim q$, therefore $\sim p$" and "$p \to q$, $q \to r$, therefore $p \to r$" are valid. |
-| Converse and inverse errors | "$p \to q$, $q$, therefore $p$" and "$p \to q$, $\sim p$, therefore $\sim q$" are invalid. |
+| Modus tollens and transitivity | "$`p \to q`$, $\sim q$, therefore $\sim p$" and "$`p \to q`$, $q \to r$, therefore $p \to r$" are valid. |
+| Converse and inverse errors | "$`p \to q`$, $q$, therefore $p$" and "$`p \to q`$, $\sim p$, therefore $\sim q$" are invalid. |
 | Circuits and Boolean expressions | NOT, AND, and OR gates correspond to $\sim$, $\wedge$, and $\vee$, and the operator evaluated last becomes the gate at the output. |
 | Equivalence of circuits | Two circuits whose Boolean expressions are logically equivalent have the same input/output table, so Theorem 2.1.1 can simplify circuits. |
 
@@ -510,11 +510,11 @@ The two output columns agree in every row. Circuit (b) uses only two gates, so i
    <details>
    <summary>Answer</summary>
 
-   Let $p$ be "it rains" and $q$ be "the ground gets wet"; the form is "$p \to q$, $q$, therefore $p$". The row in which $p$ is false and $q$ is true is a critical row with a false conclusion, so the argument is invalid; it exhibits the converse error. For instance, the ground gets wet without rain if someone sprays water on it.
+   Let $p$ be "it rains" and $q$ be "the ground gets wet"; the form is "$`p \to q`$, $q$, therefore $p$". The row in which $p$ is false and $q$ is true is a critical row with a false conclusion, so the argument is invalid; it exhibits the converse error. For instance, the ground gets wet without rain if someone sprays water on it.
 
    </details>
 
-5. **Combining rules of inference:** Show by rules of inference that the argument form "$p \to q$, $q \to r$, $\sim r$, therefore $\sim p$" is valid.
+5. **Combining rules of inference:** Show by rules of inference that the argument form "$`p \to q`$, $q \to r$, $\sim r$, therefore $\sim p$" is valid.
 
    <details>
    <summary>Answer</summary>

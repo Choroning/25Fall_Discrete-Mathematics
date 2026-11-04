@@ -92,9 +92,9 @@ A sequence is usually represented by writing its elements in a row as $a_m, a_{m
 
 **Example 5.1.1 (Two Different Formulas Giving the Same Terms).** Define two sequences $a_1, a_2, a_3, \ldots$ and $b_2, b_3, b_4, \ldots$ by the following explicit formulas.
 
-$$
+```math
 a_k = \frac{k}{k+1} \quad (k \ge 1), \qquad b_i = \frac{i-1}{i} \quad (i \ge 2)
-$$
+```
 
 The first five terms of each sequence are found by substituting the subscripts into the formulas.
 
@@ -108,21 +108,21 @@ The first five terms of each sequence are found by substituting the subscripts i
 
 *Table 2. First five terms produced by two different explicit formulas*
 
-In fact all terms of the two sequences are identical. The $k$th term of $b$ is $b_{k+1}$, and $b_{k+1} = \frac{(k+1)-1}{k+1} = \frac{k}{k+1} = a_k$. Thus the same sequence can be written with different formulas and different subscript ranges.
+In fact all terms of the two sequences are identical. The $`k`$th term of $b$ is $b_{k+1}$, and $b_{k+1} = \frac{(k+1)-1}{k+1} = \frac{k}{k+1} = a_k$. Thus the same sequence can be written with different formulas and different subscript ranges.
 
 **Example 5.1.2 (An Alternating Sequence).** The first six terms of the sequence defined by $c_j = (-1)^j$ $(j \ge 0)$ are $c_0 = (-1)^0 = 1$, $c_1 = (-1)^1 = -1$, $c_2 = 1$, $c_3 = -1$, $c_4 = 1$, $c_5 = -1$. Even powers of $-1$ equal 1 and odd powers equal $-1$, so the sequence oscillates endlessly between 1 and $-1$. This shows that an infinite sequence may take only finitely many values.
 
 **Example 5.1.3 (Finding an Explicit Formula to Fit Given Initial Terms).** Find an explicit formula for a sequence whose initial terms are as follows.
 
-$$
+```math
 1, \; -\frac{1}{4}, \; \frac{1}{9}, \; -\frac{1}{16}, \; \frac{1}{25}, \; -\frac{1}{36}, \; \ldots
-$$
+```
 
 Denote the general term by $a_k$ and let the first term be $a_1$. The denominators are the perfect squares $1^2, 2^2, 3^2, 4^2, 5^2, 6^2$, and each denominator is the square of the subscript of its term. The numerators alternate between $+1$ and $-1$: $+1$ when $k$ is odd and $-1$ when $k$ is even. This oscillation is produced by the factor $(-1)^{k+1}$. When $k$ is odd, $k+1$ is even and $(-1)^{k+1} = 1$; when $k$ is even, $k+1$ is odd and $(-1)^{k+1} = -1$. Therefore a formula that gives the correct first six terms is the following.
 
-$$
+```math
 a_k = \frac{(-1)^{k+1}}{k^2} \quad (k \ge 1)
-$$
+```
 
 If the first term had been taken as $a_0$, the same terms could be written as $a_k = \frac{(-1)^k}{(k+1)^2}$ $(k \ge 0)$.
 
@@ -134,33 +134,33 @@ In the ancestor example, the total number of ancestors in the past six generatio
 
 > **Definition:** If $m$ and $n$ are integers and $m \le n$, the symbol $\sum_{k=m}^{n} a_k$, read the summation from $k$ equals $m$ to $n$ of $a_k$, is the sum of all the terms $a_m, a_{m+1}, a_{m+2}, \ldots, a_n$. The expression $a_m + a_{m+1} + a_{m+2} + \cdots + a_n$ is called the **expanded form** of the sum, $k$ is the **index** of the summation, $m$ is the **lower limit**, and $n$ is the **upper limit**.
 
-$$
+```math
 \sum_{k=m}^{n} a_k = a_m + a_{m+1} + a_{m+2} + \cdots + a_n
-$$
+```
 
 **Example 5.1.4 (Computing Summations).** Let $a_1 = -2$, $a_2 = -1$, $a_3 = 0$, $a_4 = 1$, and $a_5 = 2$. Compute three sums.
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad \sum_{k=1}^{5} a_k &= a_1 + a_2 + a_3 + a_4 + a_5 = (-2) + (-1) + 0 + 1 + 2 = 0 \\
 \text{(b)} \quad \sum_{k=2}^{2} a_k &= a_2 = -1 \\
 \text{(c)} \quad \sum_{k=1}^{2} a_{2k} &= a_{2 \cdot 1} + a_{2 \cdot 2} = a_2 + a_4 = -1 + 1 = 0
 \end{aligned}
-$$
+```
 
 As in (b), when the lower and upper limits are equal, the sum consists of a single term. In (c) the index $k$ takes the values 1 and 2, but the terms being added are $a_{2k}$, so $a_2$ and $a_4$ are added.
 
 Often the terms are given by a formula. For example, $\sum_{k=1}^{5} k^2 = 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 1 + 4 + 9 + 16 + 25 = 55$. When the upper limit is a variable, an ellipsis is used in the expanded form.
 
-$$
+```math
 \sum_{i=0}^{n} \frac{(-1)^i}{i+1} = \frac{(-1)^0}{0+1} + \frac{(-1)^1}{1+1} + \frac{(-1)^2}{2+1} + \cdots + \frac{(-1)^n}{n+1} = 1 - \frac{1}{2} + \frac{1}{3} - \cdots + \frac{(-1)^n}{n+1}
-$$
+```
 
 Conversely, to turn an expanded form into summation notation, find the general term as an expression in the index. In the following sum the numerators increase by one from 1 to $n+1$ and the denominators increase by one from $n$ to $2n$, so for $i = 0, 1, \ldots, n$ the general term can be written as $\frac{i+1}{n+i}$. When $i = 0$ it is $\frac{1}{n}$ and when $i = n$ it is $\frac{n+1}{2n}$, which match the first and last terms.
 
-$$
+```math
 \frac{1}{n} + \frac{2}{n+1} + \frac{3}{n+2} + \cdots + \frac{n+1}{2n} = \sum_{i=0}^{n} \frac{i+1}{n+i}
-$$
+```
 
 In the two examples above, the upper limit $n$ is a **free variable**. It may be replaced by any integer greater than or equal to the lower limit, and each replacement gives a different sum. Within one sum, however, $n$ acts like a constant, so even when $n$ appears in the terms, as in the last example, its value does not change from term to term. By contrast, the index is **bound** by the summation symbol and takes every value from the lower limit to the upper limit in succession. This is similar to a quantifier binding a variable in a quantified statement (Chapter 3) and to a local variable that has meaning only within its scope in a program.
 
@@ -170,30 +170,30 @@ Imagining the expanded form in summation notation avoids such mistakes. For exam
 
 Summation notation can be defined more precisely by the following **recursive definition**. If $m$ is an integer, then
 
-$$
+```math
 \sum_{k=m}^{m} a_k = a_m, \qquad \sum_{k=m}^{n} a_k = \left( \sum_{k=m}^{n-1} a_k \right) + a_n \quad (n > m)
-$$
+```
 
 The first equation fixes a sum with one term, and the second defines a sum with $n - m + 1$ terms as the sum with one fewer term plus the final term. Recursive definitions are discussed in detail in Section 6. When solving problems, this definition is often used to separate off the final term or, conversely, to combine several terms into a single summation.
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad \sum_{k=0}^{n} 2^k + 2^{n+1} &= (2^0 + 2^1 + \cdots + 2^n) + 2^{n+1} = \sum_{k=0}^{n+1} 2^k \\
 \text{(b)} \quad \sum_{i=1}^{n+1} \frac{1}{i^2} &= \frac{1}{1^2} + \frac{1}{2^2} + \cdots + \frac{1}{n^2} + \frac{1}{(n+1)^2} = \sum_{i=1}^{n} \frac{1}{i^2} + \frac{1}{(n+1)^2}
 \end{aligned}
-$$
+```
 
 **Example 5.1.10 (A Telescoping Sum).** When each term of a sum is a difference of two quantities, writing it in expanded form sometimes shows that all terms cancel except parts of the first and the last. Because the sum collapses like a telescope, it is called a **telescoping sum**. First, for every integer $k \ge 1$ the following identity holds, since bringing the two fractions to the common denominator $k(k+1)$ makes the numerator $(k+1) - k = 1$.
 
-$$
+```math
 \frac{1}{k} - \frac{1}{k+1} = \frac{(k+1) - k}{k(k+1)} = \frac{1}{k(k+1)}
-$$
+```
 
 Rewriting each term with this identity and expanding, the second part of each parenthesis cancels the first part of the next, and only the leading $\frac{1}{1}$ and the trailing $-\frac{1}{n+1}$ remain.
 
-$$
+```math
 \sum_{k=1}^{n} \frac{1}{k(k+1)} = \sum_{k=1}^{n} \left( \frac{1}{k} - \frac{1}{k+1} \right) = \left( \frac{1}{1} - \frac{1}{2} \right) + \left( \frac{1}{2} - \frac{1}{3} \right) + \cdots + \left( \frac{1}{n} - \frac{1}{n+1} \right) = 1 - \frac{1}{n+1}
-$$
+```
 
 Checking with $n = 3$, the left-hand side is $\frac{1}{2} + \frac{1}{6} + \frac{1}{12} = \frac{6 + 2 + 1}{12} = \frac{3}{4}$ and the right-hand side is $1 - \frac{1}{4} = \frac{3}{4}$.
 
@@ -205,9 +205,9 @@ The notation for a product of numbers is defined in the same way as summation no
 
 A recursive definition of product notation is as follows. If $m$ is an integer, then
 
-$$
+```math
 \prod_{k=m}^{m} a_k = a_m, \qquad \prod_{k=m}^{n} a_k = \left( \prod_{k=m}^{n-1} a_k \right) \cdot a_n \quad (n > m)
-$$
+```
 
 For example, $\prod_{k=1}^{5} k = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120$, and the product with a single factor $\prod_{k=1}^{1} \frac{k}{k+1}$ equals $\frac{1}{1+1} = \frac{1}{2}$.
 
@@ -215,32 +215,32 @@ For example, $\prod_{k=1}^{5} k = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120$, and 
 
 **Theorem 5.1.1.** If $a_m, a_{m+1}, a_{m+2}, \ldots$ and $b_m, b_{m+1}, b_{m+2}, \ldots$ are sequences of real numbers and $c$ is any real number, then the following equations hold for every integer $n \ge m$.
 
-$$
+```math
 \begin{aligned}
 &1. \quad \sum_{k=m}^{n} a_k + \sum_{k=m}^{n} b_k = \sum_{k=m}^{n} (a_k + b_k) \\
 &2. \quad c \cdot \sum_{k=m}^{n} a_k = \sum_{k=m}^{n} c \cdot a_k \\
 &3. \quad \left( \prod_{k=m}^{n} a_k \right) \cdot \left( \prod_{k=m}^{n} b_k \right) = \prod_{k=m}^{n} (a_k \cdot b_k)
 \end{aligned}
-$$
+```
 
 Equation 2 is called the **generalized distributive law**. The three equations can be understood as rearranging or regrouping finitely many terms by the commutative, associative, and distributive laws. However, handling an arbitrary number of terms hidden behind an ellipsis rigorously requires mathematical induction, and the proof of equation 1 is given in Section 6.6.
 
 **Example 5.1.12 (Writing a Single Summation or Product by the Properties).** Let $a_k = k + 1$ and $b_k = k - 1$ for every integer $k$. Then the expressions simplify as follows.
 
-$$
+```math
 \begin{aligned}
 \sum_{k=m}^{n} a_k + 2 \cdot \sum_{k=m}^{n} b_k &= \sum_{k=m}^{n} (k+1) + 2 \cdot \sum_{k=m}^{n} (k-1) && \text{(i)} \\
 &= \sum_{k=m}^{n} (k+1) + \sum_{k=m}^{n} 2 \cdot (k-1) && \text{(ii)} \\
 &= \sum_{k=m}^{n} \bigl( (k+1) + 2 \cdot (k-1) \bigr) && \text{(iii)} \\
 &= \sum_{k=m}^{n} (3k - 1) && \text{(iv)}
 \end{aligned}
-$$
+```
 
 Step (i) substitutes the formulas for $a_k$ and $b_k$, (ii) applies part 2 of Theorem 5.1.1, (iii) applies part 1, and (iv) simplifies $(k+1) + 2k - 2 = 3k - 1$. A product is simplified in the same way: substitute, apply part 3 of Theorem 5.1.1, and simplify $(k+1)(k-1) = k^2 - 1$.
 
-$$
+```math
 \left( \prod_{k=m}^{n} a_k \right) \cdot \left( \prod_{k=m}^{n} b_k \right) = \left( \prod_{k=m}^{n} (k+1) \right) \cdot \left( \prod_{k=m}^{n} (k-1) \right) = \prod_{k=m}^{n} \bigl( (k+1)(k-1) \bigr) = \prod_{k=m}^{n} (k^2 - 1)
-$$
+```
 
 > **Caution:** A product of sums is in general not a sum of products. The expressions $\sum_{k=m}^{n} (a_k \cdot b_k)$ and $\left( \sum_{k=m}^{n} a_k \right) \cdot \left( \sum_{k=m}^{n} b_k \right)$ are usually different. For example, with $a_k = b_k = k$, $m = 1$, and $n = 2$, the first is $1 + 4 = 5$ and the second is $3 \cdot 3 = 9$. Also, adding a constant gives $\sum_{k=m}^{n} (a_k + c) = \sum_{k=m}^{n} a_k + (n - m + 1)c$, because the constant $c$ is added once for each term, $n - m + 1$ times in all.
 
@@ -250,9 +250,9 @@ Since $\sum_{k=1}^{3} k^2 = 1^2 + 2^2 + 3^2$ and $\sum_{i=1}^{3} i^2 = 1^2 + 2^2
 
 A more complicated **change of variable** can also alter the appearance of a sum. For example, the following two sums add the same numbers.
 
-$$
+```math
 \sum_{j=2}^{4} (j-1)^2 = (2-1)^2 + (3-1)^2 + (4-1)^2 = 1^2 + 2^2 + 3^2 = \sum_{k=1}^{3} k^2
-$$
+```
 
 **Example 5.1.13 (Transforming a Sum by a Change of Variable).** Apply the change of variable $j = k + 1$ to $\sum_{k=0}^{6} \frac{1}{k+1}$. The procedure has three steps.
 
@@ -266,9 +266,9 @@ Because $j$ is also a dummy variable, replacing every $j$ by $k$ gives $\sum_{j=
 
 First change the variable by $j = k - 1$. The index $k$ takes the values 1 through $n+1$ in succession, so $j = 0$ when $k = 1$ and $j = (n+1) - 1 = n$ when $k = n + 1$. Here $n$ is a constant with respect to the terms, so its value does not change from term to term. Substituting $k = j + 1$ makes the general term $\frac{j+1}{n+(j+1)}$. Then changing every $j$ to $k$ gives the following.
 
-$$
+```math
 \sum_{k=1}^{n+1} \frac{k}{n+k} = \sum_{j=0}^{n} \frac{j+1}{n+(j+1)} = \sum_{k=0}^{n} \frac{k+1}{n+(k+1)}
-$$
+```
 
 Checking with $n = 1$, the left-hand side is $\frac{1}{2} + \frac{2}{3}$, and the right-hand side, for $k = 0, 1$, is also $\frac{1}{2} + \frac{2}{3}$.
 
@@ -292,15 +292,15 @@ Factorials grow very rapidly. For instance, $40! \approx 8.16 \times 10^{47}$, w
 
 A recursive definition of factorial is the following. For every nonnegative integer $n$,
 
-$$
+```math
 n! = \begin{cases} 1 & \text{if } n = 0 \\ n \cdot (n-1)! & \text{if } n \ge 1 \end{cases}
-$$
+```
 
 > **Caution:** The expression $n \cdot (n-1)!$ is interpreted as $n \cdot [(n-1)!]$. It must not be read as $[n \cdot (n-1)]!$ by multiplying first.
 
 The recursive definition is useful for simplifying expressions containing factorials. Write the larger factorial as a smaller factorial times the remaining factors, and cancel the common factors.
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad \frac{8!}{7!} &= \frac{8 \cdot 7!}{7!} = 8 \\
 \text{(b)} \quad \frac{5!}{2! \cdot 3!} &= \frac{5 \cdot 4 \cdot 3!}{2! \cdot 3!} = \frac{5 \cdot 4}{2 \cdot 1} = 10 \\
@@ -308,7 +308,7 @@ $$
 \text{(d)} \quad \frac{(n+1)!}{n!} &= \frac{(n+1) \cdot n!}{n!} = n + 1 \\
 \text{(e)} \quad \frac{n!}{(n-3)!} &= \frac{n \cdot (n-1) \cdot (n-2) \cdot (n-3)!}{(n-3)!} = n(n-1)(n-2) = n^3 - 3n^2 + 2n
 \end{aligned}
-$$
+```
 
 In (c), to obtain a common denominator, the numerator and denominator of the first fraction are multiplied by 3 and those of the second by 4; then $3 \cdot 2! = 3!$ and $4 \cdot 3! = 4!$ are used, and $3! \cdot 4! = 6 \cdot 24 = 144$. Part (e) holds for $n \ge 3$.
 
@@ -318,19 +318,19 @@ An important use of factorials is computing the following quantity, which appear
 
 Because the definition counts subsets, $\binom{n}{r}$ is always an integer. For example, the subsets of size 2 of the set $\lbrace a, b, c \rbrace$ are $\lbrace a, b \rbrace$, $\lbrace a, c \rbrace$, and $\lbrace b, c \rbrace$, so $\binom{3}{2} = 3$. Values can be computed with the following formula, which is proved in Chapter 9.
 
-$$
+```math
 \binom{n}{r} = \frac{n!}{r!\,(n-r)!} \quad (\text{for all integers } n, r \text{ with } 0 \le r \le n)
-$$
+```
 
-Since $\binom{n}{r}$ is always an integer, all factors of the denominator cancel with factors of the numerator. Calculators and books also write $_nC_r$, $C(n, r)$, and $C_{n,r}$; the letter C comes from the name **combinations** for these numbers. Because of their connection with the binomial theorem, they are also called **binomial coefficients** (Chapter 9).
+Since $\binom{n}{r}$ is always an integer, all factors of the denominator cancel with factors of the numerator. Calculators and books also write $`_nC_r`$, $C(n, r)$, and $C_{n,r}$; the letter C comes from the name **combinations** for these numbers. Because of their connection with the binomial theorem, they are also called **binomial coefficients** (Chapter 9).
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad \binom{8}{5} &= \frac{8!}{5!\,(8-5)!} = \frac{8 \cdot 7 \cdot 6 \cdot 5!}{5! \cdot 3 \cdot 2 \cdot 1} = \frac{8 \cdot 7 \cdot 6}{6} = 56 \\
 \text{(b)} \quad \binom{4}{4} &= \frac{4!}{4!\,(4-4)!} = \frac{4!}{4! \cdot 0!} = \frac{24}{24 \cdot 1} = 1 \\
 \text{(c)} \quad \binom{n+1}{n} &= \frac{(n+1)!}{n!\,((n+1)-n)!} = \frac{(n+1)!}{n! \cdot 1!} = \frac{(n+1) \cdot n!}{n!} = n + 1
 \end{aligned}
-$$
+```
 
 As in (a), canceling common factors before multiplying makes the computation easier. Part (b) can be evaluated thanks to $0! = 1$, and the result matches the fact that the only 4-element subset of a 4-element set is the set itself.
 
@@ -380,7 +380,7 @@ Start with a nonnegative integer $a$ and use the quotient-remainder theorem (Cha
 
 Written as equations, the divisions are $38 = 19 \cdot 2 + 0$, $19 = 9 \cdot 2 + 1$, $9 = 4 \cdot 2 + 1$, $4 = 2 \cdot 2 + 0$, $2 = 1 \cdot 2 + 0$, and $1 = 0 \cdot 2 + 1$. Substituting the second equation for the quotient 19 in the first, then the third for the quotient 9, and so on, repeated substitution gives the following.
 
-$$
+```math
 \begin{aligned}
 38 &= 19 \cdot 2 + 0 \\
 &= (9 \cdot 2 + 1) \cdot 2 + 0 = 9 \cdot 2^2 + 1 \cdot 2 + 0 \\
@@ -388,19 +388,19 @@ $$
 &= (2 \cdot 2 + 0) \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2 + 0 = 2 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2 + 0 \\
 &= (1 \cdot 2 + 0) \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2 + 0 = 1 \cdot 2^5 + 0 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2 + 0
 \end{aligned}
-$$
+```
 
-On the right, the coefficient of each power of 2 is one of the remainders of the repeated division; the leading 1 is the remainder of $1 = 0 \cdot 2 + 1$. Hence $38_{10} = 100110_2$, which is the remainders read backward from the last one, $(r[5] r[4] r[3] r[2] r[1] r[0])_2$. Indeed $2^5 + 2^2 + 2^1 = 32 + 4 + 2 = 38$.
+On the right, the coefficient of each power of 2 is one of the remainders of the repeated division; the leading 1 is the remainder of $1 = 0 \cdot 2 + 1$. Hence $38_{10} = 100110_2$, which is the remainders read backward from the last one, $`(r[5] r[4] r[3] r[2] r[1] r[0])_2`$. Indeed $2^5 + 2^2 + 2^1 = 32 + 4 + 2 = 38$.
 
 In general, suppose that dividing a nonnegative integer $a$ by 2 again and again until the quotient becomes 0 yields the remainders $r[0], r[1], \ldots, r[k]$. Each $r[i]$ is 0 or 1 by the quotient-remainder theorem, and repeated substitution gives the following.
 
-$$
+```math
 a = 2^k \cdot r[k] + 2^{k-1} \cdot r[k-1] + \cdots + 2^2 \cdot r[2] + 2^1 \cdot r[1] + 2^0 \cdot r[0]
-$$
+```
 
-Thus the binary representation of $a$ is $a_{10} = (r[k] r[k-1] \cdots r[2] r[1] r[0])_2$. For example, dividing 29 gives $29 = 14 \cdot 2 + 1$, $14 = 7 \cdot 2 + 0$, $7 = 3 \cdot 2 + 1$, $3 = 1 \cdot 2 + 1$, and $1 = 0 \cdot 2 + 1$, so the remainders are $r[0] = 1$, $r[1] = 0$, $r[2] = 1$, $r[3] = 1$, $r[4] = 1$, and $29_{10} = 11101_2$. As a check, $16 + 8 + 4 + 1 = 29$.
+Thus the binary representation of $a$ is $`a_{10} = (r[k] r[k-1] \cdots r[2] r[1] r[0])_2`$. For example, dividing 29 gives $29 = 14 \cdot 2 + 1$, $14 = 7 \cdot 2 + 0$, $7 = 3 \cdot 2 + 1$, $3 = 1 \cdot 2 + 1$, and $1 = 0 \cdot 2 + 1$, so the remainders are $r[0] = 1$, $r[1] = 0$, $r[2] = 1$, $r[3] = 1$, $r[4] = 1$, and $29_{10} = 11101_2$. As a check, $16 + 8 + 4 + 1 = 29$.
 
-Written as an algorithm, the procedure is the following (Algorithm 5.1.1). It takes a nonnegative integer `a` and returns binary digits `r[0], r[1], ..., r[i-1]` such that $a = (r[i-1] \cdots r[1] r[0])_2$.
+Written as an algorithm, the procedure is the following (Algorithm 5.1.1). It takes a nonnegative integer `a` and returns binary digits `r[0], r[1], ..., r[i-1]` such that $`a = (r[i-1] \cdots r[1] r[0])_2`$.
 
 ```text
 Input: a
@@ -413,7 +413,7 @@ end while
 Output: r[0], r[1], r[2], ..., r[i - 1]
 ```
 
-The second line sets the quotient still to be divided, `q`, to the input and the position of the next remainder, `i`, to 0. Inside the loop, the remainder of `q` divided by 2 is stored in `r[i]` (`mod`), `q` is replaced by the quotient (`div`, both from Chapter 4), and `i` is increased by 1 to move to the next position. The part `i = 0` of the guard `i = 0 or q ≠ 0` makes the loop execute at least once, so that `r[0] = 0` is computed even when the input is 0. For input 0, the loop sets `r[0] := 0`, `q := 0`, and `i := 1`, after which the guard is false and the single digit `r[0] = 0` is output. After the loop, `r[0], ..., r[i-1]` are all 0 or 1 and $a = (r[i-1] r[i-2] \cdots r[1] r[0])_2$.
+The second line sets the quotient still to be divided, `q`, to the input and the position of the next remainder, `i`, to 0. Inside the loop, the remainder of `q` divided by 2 is stored in `r[i]` (`mod`), `q` is replaced by the quotient (`div`, both from Chapter 4), and `i` is increased by 1 to move to the next position. The part `i = 0` of the guard `i = 0 or q ≠ 0` makes the loop execute at least once, so that `r[0] = 0` is computed even when the input is 0. For input 0, the loop sets `r[0] := 0`, `q := 0`, and `i := 1`, after which the guard is false and the single digit `r[0] = 0` is output. After the loop, `r[0], ..., r[i-1]` are all 0 or 1 and $`a = (r[i-1] r[i-2] \cdots r[1] r[0])_2`$.
 
 ---
 
@@ -427,27 +427,27 @@ In the natural sciences, deduction and induction are taught as two distinct ways
 
 For example, observe the following pattern.
 
-$$
+```math
 \begin{aligned}
 \text{row 1:} \quad & 1 - \frac{1}{2} = \frac{1}{2} \\
 \text{row 2:} \quad & \left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) = \frac{1}{3} \\
 \text{row 3:} \quad & \left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) \left( 1 - \frac{1}{4} \right) = \frac{1}{4}
 \end{aligned}
-$$
+```
 
 The pattern seems too regular to be a coincidence, so it is reasonable to conjecture that it holds in general. But it is still only a conjecture. The question that mathematical induction asks is this: does the fact that the pattern holds in one row guarantee that it holds in the next row? Suppose the equation in row 3 is true, and replace the product of the first three factors on the left-hand side of a new row 4 by the right-hand side $\frac{1}{4}$ of row 3. The result is the following.
 
-$$
+```math
 \left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) \left( 1 - \frac{1}{4} \right) \left( 1 - \frac{1}{5} \right) = \frac{1}{4} \left( 1 - \frac{1}{5} \right) = \frac{1}{4} \cdot \frac{4}{5} = \frac{1}{5}
-$$
+```
 
 So the pattern extends to row 4. Going from row 1 to row 2 works the same way: replacing $\left( 1 - \frac{1}{2} \right)$ on the left-hand side of row 2 by the right-hand side $\frac{1}{2}$ of row 1 gives $\frac{1}{2} \left( 1 - \frac{1}{3} \right) = \frac{1}{2} \cdot \frac{2}{3} = \frac{1}{3}$.
 
 Now check the general case. Suppose $k$ is any integer that is at least 2 and that the pattern of row $k$, $\left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) \cdots \left( 1 - \frac{1}{k} \right) = \frac{1}{k}$, holds. Then the following holds.
 
-$$
+```math
 \left( 1 - \frac{1}{2} \right) \cdots \left( 1 - \frac{1}{k} \right) \left( 1 - \frac{1}{k+1} \right) = \frac{1}{k} \left( 1 - \frac{1}{k+1} \right) = \frac{1}{k} \cdot \frac{(k+1) - 1}{k+1} = \frac{1}{k} \cdot \frac{k}{k+1} = \frac{1}{k+1}
-$$
+```
 
 That is, for every integer $k \ge 2$, if the pattern holds in row $k$, then it also holds in row $k+1$. Since the pattern holds in row 1, it holds in row 2; since it holds in row 2, it holds in row 3; and the argument continues forever, so the pattern holds in every row. This is the basic idea of mathematical induction.
 
@@ -459,7 +459,7 @@ That is, for every integer $k \ge 2$, if the pattern holds in row $k$, then it a
 >
 > Then $P(n)$ is true for every integer $n \ge a$.
 
-A domino analogy helps. Imagine infinitely many dominoes standing in a row, arranged so that whenever one domino falls, the next one must fall too. Then if the first domino falls, they all fall. Letting $P(n)$ be the sentence that the $n$th domino falls, for each $k \ge 1$, $P(k)$ implies $P(k+1)$, and $P(1)$ is true, so by the principle of mathematical induction $P(n)$ is true for every integer $n \ge 1$.
+A domino analogy helps. Imagine infinitely many dominoes standing in a row, arranged so that whenever one domino falls, the next one must fall too. Then if the first domino falls, they all fall. Letting $P(n)$ be the sentence that the $`n`$th domino falls, for each $k \ge 1$, $P(k)$ implies $P(k+1)$, and $P(1)$ is true, so by the principle of mathematical induction $P(n)$ is true for every integer $n \ge 1$.
 
 ```mermaid
 graph LR
@@ -497,9 +497,9 @@ To write $P(a)$, $P(k)$, and $P(k+1)$, copy $P(n)$ and replace every $n$ by $a$,
 
 **Theorem 5.2.1 (Sum of the First n Integers).** For every integer $n \ge 1$, the following holds.
 
-$$
+```math
 1 + 2 + \cdots + n = \frac{n(n+1)}{2}
-$$
+```
 
 Before the proof, identify the property $P(n)$ precisely. Here $P(n)$ is the equation $1 + 2 + \cdots + n = \frac{n(n+1)}{2}$ itself. Its subject is the sum of the integers from 1 to $n$ and its predicate says that this sum equals $\frac{n(n+1)}{2}$, so $P(n)$ is a sentence that is either true or false.
 
@@ -509,26 +509,26 @@ Before the proof, identify the property $P(n)$ precisely. Here $P(n)$ is the equ
 
 **Inductive step: show that for every integer $k \ge 1$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 1$ and that the following inductive hypothesis $P(k)$ is true.
 
-$$
+```math
 1 + 2 + \cdots + k = \frac{k(k+1)}{2}
-$$
+```
 
 It remains to show $P(k+1)$, that is, the following equation.
 
-$$
+```math
 1 + 2 + \cdots + (k+1) = \frac{(k+1)(k+2)}{2}
-$$
+```
 
 The two sides are computed separately and shown to equal the same quantity. The left-hand side is as follows.
 
-$$
+```math
 \begin{aligned}
 1 + 2 + \cdots + (k+1) &= (1 + 2 + \cdots + k) + (k+1) && \text{(1)} \\
 &= \frac{k(k+1)}{2} + (k+1) && \text{(2)} \\
 &= \frac{k(k+1)}{2} + \frac{2(k+1)}{2} && \text{(3)} \\
 &= \frac{k^2 + k + 2k + 2}{2} = \frac{k^2 + 3k + 2}{2} && \text{(4)}
 \end{aligned}
-$$
+```
 
 Step (1) makes explicit that in a sum of consecutive integers the term just before the last term $k+1$ is $k$. Step (2) substitutes the inductive hypothesis for the sum in parentheses, (3) puts the second term over the denominator 2 by multiplying its top and bottom by 2, and (4) multiplies out the numerator and combines like terms. The right-hand side, after multiplying out the numerator, is $\frac{(k+1)(k+2)}{2} = \frac{k^2 + 3k + 2}{2}$. The two sides equal the same quantity, so $P(k+1)$ is true.
 
@@ -540,13 +540,13 @@ There is also an intuitive way to obtain the same formula. Writing $S = 1 + 2 + 
 
 For example, $1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}$ writes the sum $1 + 2 + \cdots + n$ in closed form. Theorem 5.2.1 gives closed forms of other sums as well.
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad 2 + 4 + 6 + \cdots + 500 &= 2 \cdot (1 + 2 + 3 + \cdots + 250) = 2 \cdot \frac{250 \cdot 251}{2} = 62{,}750 \\
 \text{(b)} \quad 5 + 6 + 7 + \cdots + 50 &= (1 + 2 + \cdots + 50) - (1 + 2 + 3 + 4) = \frac{50 \cdot 51}{2} - 10 = 1{,}265 \\
 \text{(c)} \quad 1 + 2 + 3 + \cdots + (h-1) &= \frac{(h-1) \cdot [(h-1) + 1]}{2} = \frac{(h-1) \cdot h}{2} \quad (h \ge 2)
 \end{aligned}
-$$
+```
 
 Part (a) factors 2 out of every term and applies the formula with $n = 250$, (b) subtracts the sum from 1 to 4 from the sum from 1 to 50 and applies the formula with $n = 50$, and (c) applies the formula with $n = h - 1$.
 
@@ -556,9 +556,9 @@ A **geometric sequence** is a sequence in which each term is obtained from the p
 
 **Theorem 5.2.2 (Sum of a Geometric Sequence).** For any real number $r$ except 1 and any integer $n \ge 0$, the following holds.
 
-$$
+```math
 \sum_{i=0}^{n} r^i = \frac{r^{n+1} - 1}{r - 1}
-$$
+```
 
 In expanded form this is $r^0 + r^1 + r^2 + \cdots + r^n = \frac{r^{n+1} - 1}{r - 1}$, and since $r^0 = 1$ and $r^1 = r$, for $n \ge 1$ it is also written $1 + r + r^2 + \cdots + r^n = \frac{r^{n+1} - 1}{r - 1}$. The property $P(n)$ of this theorem is an equation containing a real variable $r$. So the proof first fixes $r$ as a particular but arbitrarily chosen real number other than 1 and then applies mathematical induction on $n$, starting at $n = 0$.
 
@@ -568,7 +568,7 @@ In expanded form this is $r^0 + r^1 + r^2 + \cdots + r^n = \frac{r^{n+1} - 1}{r 
 
 **Inductive step: show that for every integer $k \ge 0$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 0$ and that the inductive hypothesis $\sum_{i=0}^{k} r^i = \frac{r^{k+1} - 1}{r - 1}$ is true. It remains to show $\sum_{i=0}^{k+1} r^i = \frac{r^{(k+1)+1} - 1}{r - 1}$, that is, $\sum_{i=0}^{k+1} r^i = \frac{r^{k+2} - 1}{r - 1}$. This time the left-hand side is transformed step by step into the right-hand side.
 
-$$
+```math
 \begin{aligned}
 \sum_{i=0}^{k+1} r^i &= \sum_{i=0}^{k} r^i + r^{k+1} && \text{(1)} \\
 &= \frac{r^{k+1} - 1}{r - 1} + r^{k+1} && \text{(2)} \\
@@ -577,9 +577,9 @@ $$
 &= \frac{r^{k+1} - 1 + r^{k+2} - r^{k+1}}{r - 1} && \text{(5)} \\
 &= \frac{r^{k+2} - 1}{r - 1} && \text{(6)}
 \end{aligned}
-$$
+```
 
-Step (1) writes the $(k+2)$nd term $r^{k+1}$ separately from the first $k+1$ terms, and (2) substitutes the inductive hypothesis. Step (3) puts the second term over the common denominator $r - 1$ by multiplying its top and bottom by $r - 1$, (4) adds the fractions, (5) multiplies out using $r^{k+1} \cdot r = r^{k+1} \cdot r^1 = r^{k+2}$, and (6) cancels the $r^{k+1}$ terms. The last expression is the right-hand side of $P(k+1)$, so $P(k+1)$ is true.
+Step (1) writes the $`(k+2)`$nd term $r^{k+1}$ separately from the first $k+1$ terms, and (2) substitutes the inductive hypothesis. Step (3) puts the second term over the common denominator $r - 1$ by multiplying its top and bottom by $r - 1$, (4) adds the fractions, (5) multiplies out using $r^{k+1} \cdot r = r^{k+1} \cdot r^1 = r^{k+2}$, and (6) cancels the $r^{k+1}$ terms. The last expression is the right-hand side of $P(k+1)$, so $P(k+1)$ is true.
 
 Since the basis step and the inductive step have been proved, the theorem holds.
 
@@ -592,9 +592,9 @@ The proofs in Sections 2.4 and 2.5 illustrate two valid ways to prove an equatio
 
 Starting from the equation to be proved and deriving a true statement, however, is not valid. For example, writing the basis step of Theorem 5.2.2 as follows is wrong.
 
-$$
+```math
 \sum_{i=0}^{0} r^i = \frac{r^{0+1} - 1}{r - 1} \;\Rightarrow\; r^0 = \frac{r^1 - 1}{r - 1} \;\Rightarrow\; 1 = \frac{r - 1}{r - 1} \;\Rightarrow\; 1 = 1
-$$
+```
 
 Reaching a true conclusion from a statement says nothing about whether the statement itself is true, since false statements can also lead to true conclusions. For instance, starting from the false statement $1 = 0$ and swapping the sides gives $0 = 1$; adding the two equations side by side gives $1 + 0 = 0 + 1$, that is, the true statement $1 = 1$.
 
@@ -604,22 +604,22 @@ Reaching a true conclusion from a statement says nothing about whether the state
 
 The geometric sum formula may be regarded as a whole family of formulas, one for every real number $r$ other than 1. For an integer $m \ge 3$, write two sums in closed form.
 
-$$
+```math
 \begin{aligned}
 \text{(a)} \quad 1 + 3 + 3^2 + \cdots + 3^{m-2} &= \frac{3^{(m-2)+1} - 1}{3 - 1} = \frac{3^{m-1} - 1}{2} \\
 \text{(b)} \quad 3^2 + 3^3 + 3^4 + \cdots + 3^m &= 3^2 \cdot (1 + 3 + 3^2 + \cdots + 3^{m-2}) = 9 \cdot \frac{3^{m-1} - 1}{2}
 \end{aligned}
-$$
+```
 
 Part (a) applies Theorem 5.2.2 with $r = 3$ and $n = m - 2$, and (b) factors $3^2$ out of every term and then uses (a). Checking with $m = 3$, (a) gives $1 + 3 = 4 = \frac{9 - 1}{2}$ and (b) gives $9 + 27 = 36 = 9 \cdot \frac{9 - 1}{2}$.
 
 The geometric sum formula can also be found by an intuitive argument. Let $S_n = 1 + r + r^2 + \cdots + r^n$; then $r S_n = r + r^2 + r^3 + \cdots + r^{n+1}$. Subtracting the two expressions cancels all the middle terms and gives the following.
 
-$$
+```math
 r S_n - S_n = (r + r^2 + \cdots + r^{n+1}) - (1 + r + \cdots + r^n) = r^{n+1} - 1
-$$
+```
 
-On the other hand, $r S_n - S_n = (r - 1) S_n$, so equating the right-hand sides and dividing by $r - 1 \ne 0$ gives $S_n = \frac{r^{n+1} - 1}{r - 1}$. This derivation is persuasive but less rigorous than the inductive proof, because it relies on claims about the form and cancellation of terms hidden in the ellipsis, and those claims cannot be checked term by term. Mathematical induction instead isolates the one step that the ellipsis conceals, the passage from the $k$th case to the $(k+1)$st, and confirms that step beyond doubt.
+On the other hand, $r S_n - S_n = (r - 1) S_n$, so equating the right-hand sides and dividing by $r - 1 \ne 0$ gives $S_n = \frac{r^{n+1} - 1}{r - 1}$. This derivation is persuasive but less rigorous than the inductive proof, because it relies on claims about the form and cancellation of terms hidden in the ellipsis, and those claims cannot be checked term by term. Mathematical induction instead isolates the one step that the ellipsis conceals, the passage from the $`k`$th case to the $`(k+1)`$st, and confirms that step beyond doubt.
 
 ---
 
@@ -657,7 +657,7 @@ If no 5¢ coin is used, only 3¢ coins are used. Then if the amount is at least 
 
 **Proposition 5.3.1.** For every integer $n \ge 8$, $n$¢ can be obtained using 3¢ and 5¢ coins.
 
-**Proof (by mathematical induction).** Let $P(n)$ be the sentence "$n$¢ can be obtained using 3¢ and 5¢ coins."
+**Proof (by mathematical induction).** Let $P(n)$ be the sentence "$`n`$¢ can be obtained using 3¢ and 5¢ coins."
 
 **Basis step: show that $P(8)$ is true.** 8¢ can be obtained using one 3¢ coin and one 5¢ coin, so $P(8)$ is true.
 
@@ -678,13 +678,13 @@ An integer $m$ is divisible by 3 if, and only if, $m = 3r$ for some integer $r$ 
 
 The key to the proof is finding the relation between $2^{2(k+1)} - 1$ and $2^{2k} - 1$ of the inductive hypothesis. By the laws of exponents, $2^{2(k+1)} - 1 = 2^{2k+2} - 1 = 2^{2k} \cdot 2^2 - 1 = 2^{2k} \cdot 4 - 1$. Subtracting $2^{2k} - 1$ from it leaves $2^{2k} \cdot 4 - 1 - (2^{2k} - 1) = 2^{2k} \cdot 3$, a multiple of 3. Hence $2^{2k} \cdot 4 - 1 = 2^{2k} \cdot 3 + (2^{2k} - 1)$, and both terms on the right are divisible by 3, so their sum is divisible by 3.
 
-**Proof (by mathematical induction).** Let $P(n)$ be the sentence "$2^{2n} - 1$ is divisible by 3."
+**Proof (by mathematical induction).** Let $P(n)$ be the sentence "$`2^{2n} - 1`$ is divisible by 3."
 
 **Basis step: show that $P(0)$ is true.** $2^{2 \cdot 0} - 1 = 2^0 - 1 = 1 - 1 = 0$, and 0 is divisible by 3 because $0 = 3 \cdot 0$. Hence $P(0)$ is true.
 
 **Inductive step: show that for every integer $k \ge 0$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 0$ and that $2^{2k} - 1$ is divisible by 3. By definition of divisibility, $2^{2k} - 1 = 3r$ for some integer $r$. Then the following holds.
 
-$$
+```math
 \begin{aligned}
 2^{2(k+1)} - 1 &= 2^{2k+2} - 1 = 2^{2k} \cdot 2^2 - 1 && \text{(1)} \\
 &= 2^{2k} \cdot 4 - 1 = 2^{2k} \cdot (3 + 1) - 1 && \text{(2)} \\
@@ -692,7 +692,7 @@ $$
 &= 2^{2k} \cdot 3 + 3r && \text{(4)} \\
 &= 3(2^{2k} + r) && \text{(5)}
 \end{aligned}
-$$
+```
 
 Step (1) uses the laws of exponents, (2) and (3) the laws of algebra, (4) substitutes the inductive hypothesis, and (5) factors out 3. Since $2^{2k} + r$ is a sum of products of integers, it is an integer, so by definition of divisibility $2^{2(k+1)} - 1$ is divisible by 3. That is, $P(k+1)$ is true. Since the basis step and the inductive step have been proved, the proposition holds.
 
@@ -708,14 +708,14 @@ For $n = 1$ the statement is $3 < 2$ and for $n = 2$ it is $5 < 4$, both false, 
 
 **Inductive step: show that for every integer $k \ge 3$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 3$ and that the inductive hypothesis $2k + 1 < 2^k$ is true. It remains to show $2(k+1) + 1 < 2^{k+1}$.
 
-$$
+```math
 \begin{aligned}
 2(k+1) + 1 &= (2k + 1) + 2 && \text{(1)} \\
 &< 2^k + 2 && \text{(2)} \\
 &< 2^k + 2^k && \text{(3)} \\
 &= 2 \cdot 2^k = 2^{k+1} && \text{(4)}
 \end{aligned}
-$$
+```
 
 Step (1) is algebra, (2) adds 2 to both sides of the inductive hypothesis $2k + 1 < 2^k$, (3) uses $2 < 2^k$, which holds because $k \ge 3$, and (4) is a law of exponents. By transitivity of order, $2(k+1) + 1 < 2^{k+1}$, so $P(k+1)$ is true. Since the basis step and the inductive step have been proved, the proposition holds.
 
@@ -723,9 +723,9 @@ Step (1) is algebra, (2) adds 2 to both sides of the inductive hypothesis $2k + 
 
 Mathematical induction can show that the terms of a sequence satisfy a certain explicit formula. Define a sequence $a_1, a_2, a_3, \ldots$ as follows. A definition that determines each term from earlier terms in this way is a recursive definition, discussed in detail in Section 6.
 
-$$
+```math
 a_1 = 2, \qquad a_k = 5 a_{k-1} \quad (k \ge 2)
-$$
+```
 
 The first four terms are $a_1 = 2$, $a_2 = 5a_1 = 5 \cdot 2 = 10$, $a_3 = 5a_2 = 5 \cdot 10 = 50$, and $a_4 = 5a_3 = 5 \cdot 50 = 250$. These values suggest that $a_n = 2 \cdot 5^{n-1}$ for every integer $n \ge 1$.
 
@@ -735,9 +735,9 @@ The first four terms are $a_1 = 2$, $a_2 = 5a_1 = 5 \cdot 2 = 10$, $a_3 = 5a_2 =
 
 **Inductive step: show that for every integer $k \ge 1$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 1$ and that the inductive hypothesis $a_k = 2 \cdot 5^{k-1}$ is true. It remains to show $a_{k+1} = 2 \cdot 5^{(k+1)-1}$, that is, $a_{k+1} = 2 \cdot 5^k$.
 
-$$
+```math
 a_{k+1} = 5 a_{(k+1)-1} = 5 a_k = 5 \cdot (2 \cdot 5^{k-1}) = 2 \cdot (5 \cdot 5^{k-1}) = 2 \cdot 5^k
-$$
+```
 
 The first equality applies the definition of the sequence since $k + 1 \ge 2$; the second uses $(k+1) - 1 = k$, the third the inductive hypothesis, the fourth regrouping, and the fifth the laws of exponents. Hence $P(k+1)$ is true, and by mathematical induction every term of the sequence satisfies the formula.
 
@@ -794,15 +794,15 @@ Part (a) of Figure 3 shows the construction of the inductive step: the black squ
 
 The supposition in the inductive step, that $P(i)$ is true for each integer $i$ from $a$ through $k$, is called the **inductive hypothesis**. Equivalently, one may say that $P(a), P(a+1), \ldots, P(k)$ are all true. The principle is also known as the second principle of induction, the second principle of finite induction, and the **principle of complete induction**.
 
-Any statement that can be proved by ordinary mathematical induction can be proved by strong mathematical induction. If, for an integer $k \ge b$, the truth of $P(k)$ alone implies the truth of $P(k+1)$, then certainly the truth of all of $P(a), \ldots, P(k)$ implies it too. Conversely, any statement that can be proved by strong mathematical induction can be proved by ordinary mathematical induction. Let the new property $Q(n)$ be "$P(j)$ is true for every integer $j$ with $a \le j \le n$," and apply ordinary mathematical induction to $Q(n)$ for $n \ge b$. The basis step of the strong principle is exactly $Q(b)$, and if $Q(k)$ is true, then $P(k+1)$ is true by the inductive step of the strong principle, so $Q(k+1)$ is true. Hence $Q(n)$ is true for every $n \ge b$, and since $Q(n)$ includes $P(n)$, $P(n)$ is true for every $n \ge a$.
+Any statement that can be proved by ordinary mathematical induction can be proved by strong mathematical induction. If, for an integer $k \ge b$, the truth of $P(k)$ alone implies the truth of $P(k+1)$, then certainly the truth of all of $P(a), \ldots, P(k)$ implies it too. Conversely, any statement that can be proved by strong mathematical induction can be proved by ordinary mathematical induction. Let the new property $Q(n)$ be "$`P(j)`$ is true for every integer $j$ with $a \le j \le n$," and apply ordinary mathematical induction to $Q(n)$ for $n \ge b$. The basis step of the strong principle is exactly $Q(b)$, and if $Q(k)$ is true, then $P(k+1)$ is true by the inductive step of the strong principle, so $Q(k+1)$ is true. Hence $Q(n)$ is true for every $n \ge b$, and since $Q(n)$ includes $P(n)$, $P(n)$ is true for every $n \ge a$.
 
-> **Note:** In principle the basis step could be dropped by demanding the inductive step for every integer $k \ge a - 1$: if $P(i)$ holds for each $i$ from $a$ through $k$, then $P(k+1)$ holds. For $k = a - 1$ no $i$ satisfies $a \le i \le a - 1$, so the hypothesis "$P(i)$ is true for each $i$ from $a$ through $a - 1$" is vacuously true, and the conditional statement alone delivers $P(a)$. In practice, though, the inductive argument frequently breaks down for $a \le k < b$, so the initial values are best checked separately in a basis step.
+> **Note:** In principle the basis step could be dropped by demanding the inductive step for every integer $k \ge a - 1$: if $P(i)$ holds for each $i$ from $a$ through $k$, then $P(k+1)$ holds. For $k = a - 1$ no $i$ satisfies $a \le i \le a - 1$, so the hypothesis "$`P(i)`$ is true for each $i$ from $a$ through $a - 1$" is vacuously true, and the conditional statement alone delivers $P(a)$. In practice, though, the inductive argument frequently breaks down for $a \le k < b$, so the initial values are best checked separately in a basis step.
 
 ### 4.2 Applying Strong Mathematical Induction
 
 **Example 5.4.1 (Divisibility by a Prime).** Every integer greater than 1 is divisible by a prime number (Theorem 4.4.4 of Chapter 4). The idea for the inductive step is as follows. If an integer greater than 1 is not prime, it is a product of two positive integers that are greater than 1 and smaller than itself. By the inductive hypothesis each of these smaller integers is divisible by a prime, and by transitivity of divisibility that prime also divides the original integer. The smaller factor need not be $k$, so this requires strong induction, which assumes everything from 2 through $k$, rather than ordinary induction, which assumes only $P(k)$.
 
-**Proof (by strong mathematical induction).** Let $P(n)$ be the sentence "$n$ is divisible by a prime number."
+**Proof (by strong mathematical induction).** Let $P(n)$ be the sentence "$`n`$ is divisible by a prime number."
 
 **Basis step: show that $P(2)$ is true.** 2 is divisible by 2 and 2 is a prime number, so $P(2)$ is true.
 
@@ -815,9 +815,9 @@ In either case $k + 1$ is divisible by a prime number, so $P(k+1)$ is true. Sinc
 
 **Example 5.4.2 (Proving a Property of a Sequence with Strong Induction).** Define a sequence $s_0, s_1, s_2, \ldots$ as follows.
 
-$$
+```math
 s_0 = 0, \qquad s_1 = 4, \qquad s_k = 6 s_{k-1} - 5 s_{k-2} \quad (k \ge 2)
-$$
+```
 
 The first four terms are $s_0 = 0$, $s_1 = 4$, $s_2 = 6s_1 - 5s_0 = 6 \cdot 4 - 5 \cdot 0 = 24$, and $s_3 = 6s_2 - 5s_1 = 6 \cdot 24 - 5 \cdot 4 = 144 - 20 = 124$. These values suggest that $s_n = 5^n - 1$ for every integer $n \ge 0$. By the definition, computing a later term requires the two preceding terms, so the basis step must check both of the first two terms. If only the first term were checked, the inductive step could not deduce the second term, because $s_1$ is given as an initial value rather than by the recurrence.
 
@@ -827,7 +827,7 @@ The first four terms are $s_0 = 0$, $s_1 = 4$, $s_2 = 6s_1 - 5s_0 = 6 \cdot 4 - 
 
 **Inductive step: show that for every integer $k \ge 1$, if $P(i)$ for every $i$ from 0 through $k$, then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 1$ and, as the inductive hypothesis, that $s_i = 5^i - 1$ for each integer $i$ with $0 \le i \le k$. It remains to show $s_{k+1} = 5^{k+1} - 1$. Since $k \ge 1$, $k + 1 \ge 2$, so the recurrence applies.
 
-$$
+```math
 \begin{aligned}
 s_{k+1} &= 6 s_k - 5 s_{k-1} && \text{(1)} \\
 &= 6(5^k - 1) - 5(5^{k-1} - 1) && \text{(2)} \\
@@ -835,19 +835,19 @@ s_{k+1} &= 6 s_k - 5 s_{k-1} && \text{(1)} \\
 &= (6 - 1) \cdot 5^k - 1 = 5 \cdot 5^k - 1 && \text{(4)} \\
 &= 5^{k+1} - 1 && \text{(5)}
 \end{aligned}
-$$
+```
 
 Step (1) is the definition of the sequence, and (2) applies the inductive hypothesis with $i = k$ and $i = k - 1$; since $0 \le k - 1 \le k$, both cases are covered by the inductive hypothesis. Step (3) multiplies out and uses $5 \cdot 5^{k-1} = 5^k$, (4) factors out $5^k$ and computes, and (5) is a law of exponents. Hence $P(k+1)$ is true and the statement holds.
 
 **Example 5.4.3 (A Sequence That Involves the Floor Function).** Define a sequence $a_1, a_2, a_3, \ldots$ as follows, where $\lfloor x \rfloor$ is the floor function of Chapter 4.
 
-$$
+```math
 a_1 = 0, \qquad a_2 = 2, \qquad a_k = 3 a_{\lfloor k/2 \rfloor} + 2 \quad (k \ge 3)
-$$
+```
 
 The next terms are as follows.
 
-$$
+```math
 \begin{aligned}
 a_3 &= 3 a_{\lfloor 3/2 \rfloor} + 2 = 3 a_1 + 2 = 3 \cdot 0 + 2 = 2 \\
 a_4 &= 3 a_{\lfloor 4/2 \rfloor} + 2 = 3 a_2 + 2 = 3 \cdot 2 + 2 = 8 \\
@@ -855,11 +855,11 @@ a_5 &= 3 a_{\lfloor 5/2 \rfloor} + 2 = 3 a_2 + 2 = 8 \\
 a_6 &= 3 a_{\lfloor 6/2 \rfloor} + 2 = 3 a_3 + 2 = 3 \cdot 2 + 2 = 8 \\
 a_7 &= 3 a_{\lfloor 7/2 \rfloor} + 2 = 3 a_3 + 2 = 8
 \end{aligned}
-$$
+```
 
 So the first seven terms are $0, 2, 2, 8, 8, 8, 8$. The following proof shows that $a_n$ is even for every integer $n \ge 1$. Here $a_{k+1}$ depends not on the immediately preceding term but on a term whose subscript is about half as large, so strong induction is the right tool.
 
-**Proof (by strong mathematical induction).** Let $P(n)$ be the sentence "$a_n$ is even."
+**Proof (by strong mathematical induction).** Let $P(n)$ be the sentence "$`a_n`$ is even."
 
 **Basis step: show that $P(1)$ and $P(2)$ are true.** $a_1 = 0$ and $a_2 = 2$ are both even.
 
@@ -875,9 +875,9 @@ So the first seven terms are $0, 2, 2, 8, 8, 8, 8$. The following proof shows th
 
 **Inductive step: show that for every integer $k \ge 1$, if $P(i)$ for every $i$ from 1 through $k$, then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 1$ and, as the inductive hypothesis, that for each integer $i$ from 1 through $k$ a product of $i$ numbers is computed with $i - 1$ multiplications no matter how the parentheses are placed. When parentheses are inserted to compute a product of $k + 1$ factors $x_1, \ldots, x_{k+1}$, some multiplication is performed last. Let $L$ be the left factor and $R$ the right factor of this final multiplication, and suppose $L$ is a product of $l$ factors and $R$ a product of $r$ factors; then $l + r = k + 1$, $1 \le l \le k$, and $1 \le r \le k$. By the inductive hypothesis, computing $L$ takes $l - 1$ multiplications and computing $R$ takes $r - 1$, and one final multiplication computes $L \cdot R$. Thus the total number of multiplications is
 
-$$
+```math
 (l - 1) + (r - 1) + 1 = (l + r) - 1 = (k + 1) - 1 = k
-$$
+```
 
 and $P(k+1)$ is true. Hence the proposition holds. For example, the final multiplication of $((x_1 x_2) x_3)(x_4 x_5)$ multiplies $(x_1 x_2) x_3$ by $x_4 x_5$; with $l = 3$ and $r = 2$, it uses $2 + 1 + 1 = 4$ multiplications.
 
@@ -887,13 +887,13 @@ Strong mathematical induction proves a fact used frequently in computer science:
 
 **Theorem 5.4.1 (Existence and Uniqueness of Binary Integer Representations).** Every positive integer $n$ has a unique representation of the following form, where $r$ is a nonnegative integer, $c_r = 1$, and $c_j$ is 1 or 0 for each $j = 0, 1, 2, \ldots, r-1$.
 
-$$
+```math
 n = c_r \cdot 2^r + c_{r-1} \cdot 2^{r-1} + \cdots + c_2 \cdot 2^2 + c_1 \cdot 2 + c_0
-$$
+```
 
 **Proof.** Existence and uniqueness are proved separately.
 
-**Existence (by strong mathematical induction).** Let $P(n)$ be the sentence "$n$ can be represented in the form above."
+**Existence (by strong mathematical induction).** Let $P(n)$ be the sentence "$`n`$ can be represented in the form above."
 
 **Basis step: show that $P(1)$ is true.** Let $r = 0$ and $c_0 = 1$. Then $1 = c_0 \cdot 2^0$, so 1 can be written in the required form.
 
@@ -906,15 +906,15 @@ In either case $k + 1$ can be written in the required form, so $P(k+1)$ is true.
 
 **Uniqueness (by contradiction).** Suppose that some positive integer $n$ has two different representations as a sum of distinct powers of 2. Delete from both sides every power that appears in both representations. Since the representations differ, at least one side still has terms. If only one side had terms, a positive sum would equal 0, a contradiction. So both sides have terms, and since the remaining powers on the two sides are different, the highest powers $2^r$ and $2^s$ on the two sides are also different. Without loss of generality suppose $r < s$; this gives the following equation, where each $c_i$ and each $d_i$ is 0 or 1.
 
-$$
+```math
 2^r + c_{r-1} \cdot 2^{r-1} + \cdots + c_1 \cdot 2 + c_0 = 2^s + d_{s-1} \cdot 2^{s-1} + \cdots + d_1 \cdot 2 + d_0
-$$
+```
 
 But each $c_i \le 1$, so by the formula for the sum of a geometric sequence (Theorem 5.2.2) and $r + 1 \le s$, the left-hand side satisfies
 
-$$
+```math
 2^r + c_{r-1} \cdot 2^{r-1} + \cdots + c_1 \cdot 2 + c_0 \le 2^r + 2^{r-1} + \cdots + 2 + 1 = 2^{r+1} - 1 < 2^{r+1} \le 2^s
-$$
+```
 
 while the right-hand side is at least $2^s$. Thus the left-hand side is smaller than the right-hand side, which contradicts the equation above. Therefore the supposition is false, and the binary representation of every positive integer is unique.
 
@@ -1047,13 +1047,13 @@ Suppose a loop invariant has two further features: (1) it holds before the first
 
 **Proof.** Assume that the predicate $I(n)$ satisfies properties I-IV. Properties I and II are the basis step and inductive step needed to prove the following statement.
 
-$$
+```math
 \text{For every integer } n \ge 0, \text{ if the while loop iterates } n \text{ times, then } I(n) \text{ is true.}
-$$
+```
 
-So by the principle of mathematical induction this statement is true. By property III, the guard $G$ eventually becomes false; let $N$ be the number of iterations performed by then. Since $I(n)$ is true after the $n$th iteration for every $n \ge 0$, $I(N)$ is true after the $N$th iteration. That is, after the $N$th iteration the guard is false and $I(N)$ is true. This is the hypothesis of property IV, which is a conditional statement. Property IV is true by assumption and its hypothesis is true as just shown, so by modus ponens its conclusion is also true. That is, after execution of the loop the values of all algorithm variables are as specified in the post-condition for the loop.
+So by the principle of mathematical induction this statement is true. By property III, the guard $G$ eventually becomes false; let $N$ be the number of iterations performed by then. Since $I(n)$ is true after the $`n`$th iteration for every $n \ge 0$, $I(N)$ is true after the $`N`$th iteration. That is, after the $`N`$th iteration the guard is false and $I(N)$ is true. This is the hypothesis of property IV, which is a conditional statement. Property IV is true by assumption and its hypothesis is true as just shown, so by modus ponens its conclusion is also true. That is, after execution of the loop the values of all algorithm variables are as specified in the post-condition for the loop.
 
-Choosing a good loop invariant takes skill and is a topic for more advanced study. A second difficulty is that running an algorithm takes time: a variable keeps its name while its value changes from step to step. To distinguish the value of a variable just before a statement is executed from its value just after, the subscripts old and new are attached to the variable name. For example, $\text{product}_{\text{old}}$ is the value just before the statement and $\text{product}_{\text{new}}$ is the value just after.
+Choosing a good loop invariant takes skill and is a topic for more advanced study. A second difficulty is that running an algorithm takes time: a variable keeps its name while its value changes from step to step. To distinguish the value of a variable just before a statement is executed from its value just after, the subscripts old and new are attached to the variable name. For example, $`\text{product}_{\text{old}}`$ is the value just before the statement and $`\text{product}_{\text{new}}`$ is the value just after.
 
 > **[Algorithms]** Algorithms courses use loop invariants to show the correctness of iterative algorithms such as insertion sort and binary search. They usually show that the invariant is true before the first iteration (initialization), that one iteration preserves it (maintenance), and that the invariant gives the desired result when the loop ends (termination); these correspond to properties I, II, and IV of the theorem above. Property III, that the loop actually stops, is checked separately.
 
@@ -1073,21 +1073,21 @@ end while
 
 Statement 1 adds $x$ to `product` once more, and statement 2 increases by 1 the count `i` of additions done so far. The loop invariant and the guard are the following.
 
-$$
+```math
 I(n): \; i = n \text{ and } \text{product} = nx, \qquad G: \; i \ne m
-$$
+```
 
 **Proof (by the loop invariant theorem).**
 
-**I. Basis property.** $I(0)$ is "$i = 0$ and $\text{product} = 0 \cdot x$." By the pre-condition, $i = 0$ and $\text{product} = 0$, and $0 \cdot x = 0$, so $I(0)$ is true before the first iteration.
+**I. Basis property.** $I(0)$ is "$`i = 0`$ and $\text{product} = 0 \cdot x$." By the pre-condition, $i = 0$ and $\text{product} = 0$, and $0 \cdot x = 0$, so $I(0)$ is true before the first iteration.
 
-**II. Inductive property.** Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration. Then at the top of the loop, $i \ne m$, $\text{product} = kx$, and $i = k$. Because $i \ne m$, the loop body is entered and statement 1 runs. Before statement 1, $\text{product}_{\text{old}} = kx$, so after it the following holds.
+**II. Inductive property.** Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration. Then at the top of the loop, $i \ne m$, $\text{product} = kx$, and $i = k$. Because $i \ne m$, the loop body is entered and statement 1 runs. Before statement 1, $`\text{product}_{\text{old}} = kx`$, so after it the following holds.
 
-$$
+```math
 \text{product}_{\text{new}} = \text{product}_{\text{old}} + x = kx + x = (k+1)x
-$$
+```
 
-Similarly, before statement 2, $i_{\text{old}} = k$, so after it $i_{\text{new}} = i_{\text{old}} + 1 = k + 1$. Hence after the iteration $I(k+1)$, namely "$i = k + 1$ and $\text{product} = (k+1)x$," is true.
+Similarly, before statement 2, $i_{\text{old}} = k$, so after it $i_{\text{new}} = i_{\text{old}} + 1 = k + 1$. Hence after the iteration $I(k+1)$, namely "$`i = k + 1`$ and $\text{product} = (k+1)x$," is true.
 
 **III. Eventual falsity of guard.** The guard $G$ is $i \ne m$, and $m$ is a nonnegative integer. By I and II, for every integer $n \ge 0$, if the loop iterates $n$ times then $i = n$ and $\text{product} = nx$. So after $m$ iterations $i = m$, and $G$ becomes false.
 
@@ -1121,19 +1121,19 @@ end while
 
 The loop invariant and the guard are the following.
 
-$$
+```math
 I(n): \; r = a - nd \ge 0 \text{ and } n = q, \qquad G: \; r \ge d
-$$
+```
 
 **Proof (by the loop invariant theorem).**
 
-**I. Basis property.** $I(0)$ is "$r = a - 0 \cdot d \ge 0$ and $q = 0$." By the pre-condition, $r = a$, $a \ge 0$, and $q = 0$, and since $a = a - 0 \cdot d$, it follows that $r = a - 0 \cdot d \ge 0$. Hence $I(0)$ is true before the first iteration.
+**I. Basis property.** $I(0)$ is "$`r = a - 0 \cdot d \ge 0`$ and $q = 0$." By the pre-condition, $r = a$, $a \ge 0$, and $q = 0$, and since $a = a - 0 \cdot d$, it follows that $r = a - 0 \cdot d \ge 0$. Hence $I(0)$ is true before the first iteration.
 
 **II. Inductive property.** Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration. Since $G$ is true, $r \ge d$ and the loop is entered. Since $I(k)$ is true, $r = a - kd \ge 0$ and $k = q$. So before statements 1 and 2 are executed, $r_{\text{old}} \ge d$, $r_{\text{old}} = a - kd$, and $q_{\text{old}} = k$. Executing statements 1 and 2 gives the following.
 
-$$
+```math
 r_{\text{new}} = r_{\text{old}} - d = (a - kd) - d = a - (k+1)d, \qquad q_{\text{new}} = q_{\text{old}} + 1 = k + 1
-$$
+```
 
 In addition, since $r_{\text{old}} \ge d$ before the execution, $r_{\text{new}} = r_{\text{old}} - d \ge d - d = 0$. Putting the three facts together, after the iteration $r_{\text{new}} \ge 0$, $r_{\text{new}} = a - (k+1)d$, and $q_{\text{new}} = k + 1$, so $I(k+1)$ is true.
 
@@ -1177,19 +1177,19 @@ end while
 
 Statement 1 stores the remainder of `a` divided by `b` in `r`, and statements 2 and 3 replace the pair `(a, b)` by `(b, r)`. The loop invariant and the guard are the following.
 
-$$
+```math
 I(n): \; \gcd(a, b) = \gcd(A, B) \text{ and } 0 \le b < a, \qquad G: \; b \ne 0
-$$
+```
 
 **Proof (by the loop invariant theorem).**
 
-**I. Basis property.** $I(0)$ is "$\gcd(A, B) = \gcd(a, b)$ and $0 \le b < a$." By the pre-condition, $a = A$, $b = B$, $r = B$, and $0 \le B < A$. Hence $\gcd(A, B) = \gcd(a, b)$, and since $0 \le B < A$, $b = B$, and $a = A$, it follows that $0 \le b < a$. Therefore $I(0)$ is true.
+**I. Basis property.** $I(0)$ is "$`\gcd(A, B) = \gcd(a, b)`$ and $0 \le b < a$." By the pre-condition, $a = A$, $b = B$, $r = B$, and $0 \le B < A$. Hence $\gcd(A, B) = \gcd(a, b)$, and since $0 \le B < A$, $b = B$, and $a = A$, it follows that $0 \le b < a$. Therefore $I(0)$ is true.
 
 **II. Inductive property.** Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration. Since $G$ is true, $b_{\text{old}} \ne 0$ and the loop is entered. Since $I(k)$ is true, the following holds immediately before statement 1 is executed.
 
-$$
+```math
 \gcd(a_{\text{old}}, b_{\text{old}}) = \gcd(A, B), \qquad 0 \le b_{\text{old}} < a_{\text{old}} \qquad \text{(i)}
-$$
+```
 
 After statement 1, $r_{\text{new}} = a_{\text{old}} \bmod b_{\text{old}}$. By the quotient-remainder theorem, $a_{\text{old}} = b_{\text{old}} \cdot q + r_{\text{new}}$ for some integer $q$, and $0 \le r_{\text{new}} < b_{\text{old}}$ (ii). Since $b_{\text{old}} \ne 0$, Lemma 4.10.2 gives $\gcd(a_{\text{old}}, b_{\text{old}}) = \gcd(b_{\text{old}}, r_{\text{new}})$, and together with (i), $\gcd(b_{\text{old}}, r_{\text{new}}) = \gcd(A, B)$ (iii). Executing statements 2 and 3 gives $a_{\text{new}} = b_{\text{old}}$ and $b_{\text{new}} = r_{\text{new}}$ (iv). Substituting (iv) into (iii) gives $\gcd(a_{\text{new}}, b_{\text{new}}) = \gcd(A, B)$, and substituting (iv) into the inequality of (ii) gives $0 \le b_{\text{new}} < a_{\text{new}}$. Hence $I(k+1)$ is true after the iteration.
 
@@ -1231,48 +1231,48 @@ A recursive definition of a sequence parallels a proof by mathematical induction
 
 **Example 5.6.1 (Computing Terms of a Recursively Defined Sequence).** Define a sequence $c_0, c_1, c_2, \ldots$ recursively as follows.
 
-$$
+```math
 \text{(1)} \; c_k = c_{k-1} + k c_{k-2} + 1 \quad (k \ge 2, \text{ recurrence relation}), \qquad \text{(2)} \; c_0 = 1, \; c_1 = 2 \quad (\text{initial conditions})
-$$
+```
 
 Find $c_2$, $c_3$, and $c_4$ in turn, using each value already computed.
 
-$$
+```math
 \begin{aligned}
 c_2 &= c_1 + 2 c_0 + 1 = 2 + 2 \cdot 1 + 1 = 5 && (k = 2 \text{ in (1), using (2)}) \\
 c_3 &= c_2 + 3 c_1 + 1 = 5 + 3 \cdot 2 + 1 = 12 && (k = 3, \text{ using } c_2 = 5, \; c_1 = 2) \\
 c_4 &= c_3 + 4 c_2 + 1 = 12 + 4 \cdot 5 + 1 = 33 && (k = 4, \text{ using } c_3 = 12, \; c_2 = 5)
 \end{aligned}
-$$
+```
 
 **Example 5.6.2 (Writing a Recurrence Relation in More Than One Way).** Let $s_0, s_1, s_2, \ldots$ satisfy $s_k = 3 s_{k-1} - 1$ for every integer $k \ge 1$. Then $s_{k+1} = 3 s_k - 1$ also holds for every integer $k \ge 0$. Informally, the recurrence relation says that any term equals 3 times the previous term minus 1, and for any integer $k \ge 0$ the term previous to $s_{k+1}$ is $s_k$. One may think of the recurrence relation as $s_{\square} = 3 s_{\square - 1} - 1$, where any positive integer expression with subscripts in range may be placed in the box $\square$.
 
 **Example 5.6.3 (Sequences That Satisfy the Same Recurrence Relation).** A recursively defined sequence need not start with subscript 0. Also, one recurrence relation may be satisfied by many sequences, and the actual values are determined by the initial conditions. If two sequences $a_1, a_2, \ldots$ and $b_1, b_2, \ldots$ satisfy the same recurrence relation $a_k = 3 a_{k-1}$, $b_k = 3 b_{k-1}$ for every $k \ge 2$ but have different initial conditions $a_1 = 2$ and $b_1 = 1$, the result is the following.
 
-$$
+```math
 \begin{aligned}
 a_2 &= 3 a_1 = 3 \cdot 2 = 6, & a_3 &= 3 a_2 = 3 \cdot 6 = 18, & a_4 &= 3 a_3 = 3 \cdot 18 = 54 \\
 b_2 &= 3 b_1 = 3 \cdot 1 = 3, & b_3 &= 3 b_2 = 3 \cdot 3 = 9, & b_4 &= 3 b_3 = 3 \cdot 9 = 27
 \end{aligned}
-$$
+```
 
 Thus $a$ begins $2, 6, 18, 54, \ldots$ and $b$ begins $1, 3, 9, 27, \ldots$.
 
 **Example 5.6.4 (Showing That a Sequence Given by an Explicit Formula Satisfies a Recurrence Relation).** The **Catalan numbers**, which bear the name of the Belgian mathematician Eugène Catalan, turn up in a surprisingly wide range of problems in discrete mathematics. For each integer $n \ge 1$ they are defined as follows.
 
-$$
+```math
 C_n = \frac{1}{n+1} \binom{2n}{n}
-$$
+```
 
 The first three terms are $C_1 = \frac{1}{2} \binom{2}{1} = \frac{1}{2} \cdot 2 = 1$, $C_2 = \frac{1}{3} \binom{4}{2} = \frac{1}{3} \cdot 6 = 2$, and $C_3 = \frac{1}{4} \binom{6}{3} = \frac{1}{4} \cdot 20 = 5$. The following proof shows that the sequence satisfies the recurrence relation $C_k = \frac{4k - 2}{k + 1} C_{k-1}$ for every integer $k \ge 2$. Substituting $k$ and $k - 1$ for $n$ in the explicit formula gives the following.
 
-$$
+```math
 C_k = \frac{1}{k+1} \binom{2k}{k}, \qquad C_{k-1} = \frac{1}{(k-1)+1} \binom{2(k-1)}{k-1} = \frac{1}{k} \binom{2k-2}{k-1}
-$$
+```
 
 Begin with the right-hand side of the recurrence relation and rewrite it until it becomes the left-hand side. For each integer $k \ge 2$, the following holds.
 
-$$
+```math
 \begin{aligned}
 \frac{4k-2}{k+1} C_{k-1} &= \frac{4k-2}{k+1} \left[ \frac{1}{k} \binom{2k-2}{k-1} \right] && \text{(1)} \\
 &= \frac{2(2k-1)}{k+1} \cdot \frac{1}{k} \cdot \frac{(2k-2)!}{(k-1)!\,(2k-2-(k-1))!} && \text{(2)} \\
@@ -1281,7 +1281,7 @@ $$
 &= \frac{1}{k+1} \cdot \frac{2}{2} \cdot \frac{1}{k!} \cdot \frac{1}{(k-1)!\,k} \cdot (2k)(2k-1)(2k-2)! && \text{(5)} \\
 &= \frac{1}{k+1} \cdot \frac{(2k)!}{k!\,k!} = \frac{1}{k+1} \binom{2k}{k} = C_k && \text{(6)}
 \end{aligned}
-$$
+```
 
 Step (1) substitutes the expression for $C_{k-1}$, and (2) writes $4k - 2 = 2(2k - 1)$ and applies the formula for n choose r. Step (3) rearranges the factors and uses $2k - 2 - (k - 1) = k - 1$, and (4) writes $k(k-1)! = k!$ and multiplies by the factor $\frac{1}{2} \cdot \frac{1}{k} \cdot 2k$, whose value is 1. Step (5) rearranges the factors again, and (6) uses $(k-1)! \cdot k = k!$, $\frac{2}{2} = 1$, and $2k(2k-1)(2k-2)! = (2k)!$, then applies the formula for n choose r and the definition of $C_k$.
 
@@ -1324,15 +1324,15 @@ Now express the observation as a sequence. The crucial step in solving this prob
 
 Going from position (a) to (b) takes $m_{k-1}$ moves, from (b) to (c) takes 1 move, and from (c) to (d) takes $m_{k-1}$ moves, so the following holds.
 
-$$
+```math
 m_k = m_{k-1} + 1 + m_{k-1} = 2 m_{k-1} + 1 \quad (k \ge 2)
-$$
+```
 
 The initial condition comes from the definition of the sequence. One move suffices to move one disk from one pole to another, so $m_1 = 1$. Hence the recursive definition of the sequence $m_1, m_2, m_3, \ldots$ is the following.
 
-$$
+```math
 \text{(1)} \; m_k = 2 m_{k-1} + 1 \quad (k \ge 2, \text{ recurrence relation}), \qquad \text{(2)} \; m_1 = 1 \quad (\text{initial condition})
-$$
+```
 
 The next five terms are $m_2 = 2 \cdot 1 + 1 = 3$, $m_3 = 2 \cdot 3 + 1 = 7$, $m_4 = 2 \cdot 7 + 1 = 15$, $m_5 = 2 \cdot 15 + 1 = 31$, and $m_6 = 2 \cdot 31 + 1 = 63$. The seven moves for three disks are written out below; disk 1 is the smallest and disk 3 the largest.
 
@@ -1358,15 +1358,15 @@ How many rabbits are there when the year ends? Recursion lets one go straight to
 
 The crucial observation is that the number of pairs born at the end of month $k$ equals the number of pairs alive at the end of month $k - 2$. The pairs that can give birth during month $k$ are exactly those already alive at the end of month $k - 2$; a pair born at the end of month $k - 1$ is in its first month during month $k$ and cannot yet give birth. Meanwhile, the number of pairs alive at the end of month $k$ is the number alive at the end of month $k - 1$ plus the number newly born at the end of month $k$. Therefore the following holds.
 
-$$
+```math
 \begin{pmatrix} \text{pairs alive at the} \\ \text{end of month } k \end{pmatrix} = \begin{pmatrix} \text{pairs alive at the} \\ \text{end of month } k-1 \end{pmatrix} + \begin{pmatrix} \text{pairs alive at the} \\ \text{end of month } k-2 \end{pmatrix}
-$$
+```
 
 The key move is to restate this observation in terms of a sequence. For each integer $n \ge 1$, let $F_n$ be the number of rabbit pairs alive at the end of month $n$, and let $F_0$ be the initial number of pairs, 1. Then $F_k = F_{k-1} + F_{k-2}$ for every integer $k \ge 2$. Also $F_1 = 1$, because the first pair is not fertile until the second month. Hence the complete definition of the **Fibonacci sequence** is the following.
 
-$$
+```math
 \text{(1)} \; F_k = F_{k-1} + F_{k-2} \quad (k \ge 2, \text{ recurrence relation}), \qquad \text{(2)} \; F_0 = 1, \; F_1 = 1 \quad (\text{initial conditions})
-$$
+```
 
 To answer Fibonacci's question, compute $F_2$ through $F_{12}$ in turn. For example, $F_2 = F_1 + F_0 = 1 + 1 = 2$ and $F_3 = F_2 + F_1 = 2 + 1 = 3$, and each term is the sum of the two preceding terms.
 
@@ -1384,15 +1384,15 @@ So when the twelfth month ends there are 233 pairs, that is, 466 rabbits.
 
 **Example 5.6.7 (Compound Interest).** Suppose that on the day a person was born, a relative deposited 100,000 dollars in an account earning 4% interest compounded annually, and on the person's twenty-first birthday a letter announces that the account will now be turned over to that person. How much is in the account now? Approached recursively, the amount at the end of any year is the amount at the end of the previous year plus the interest earned during the year, and that interest is the rate 4%, that is, 0.04, times the amount at the end of the previous year. For each integer $n \ge 1$ let $A_n$ be the amount in the account at the end of year $n$, and let $A_0$ be the initial amount, 100,000 dollars; then for every integer $k \ge 1$ the following holds.
 
-$$
+```math
 A_k = A_{k-1} + (0.04) \cdot A_{k-1} = (1 + 0.04) \cdot A_{k-1} = (1.04) \cdot A_{k-1}
-$$
+```
 
 So the sequence $A_0, A_1, A_2, \ldots$ is completely specified as follows. The number 1.04 is called the **growth factor** of the sequence.
 
-$$
+```math
 \text{(1)} \; A_k = (1.04) \cdot A_{k-1} \quad (k \ge 1, \text{ recurrence relation}), \qquad \text{(2)} \; A_0 = 100{,}000 \quad (\text{initial condition})
-$$
+```
 
 Repeated substitution gives the following; each year's amount is the previous year's amount times 1.04.
 
@@ -1404,28 +1404,28 @@ Repeated substitution gives the following; each year's amount is the previous ye
 
 For example, $A_1 = 1.04 \cdot 100{,}000 = 104{,}000$, $A_2 = 1.04 \cdot 104{,}000 = 108{,}160$, and $A_3 = 1.04 \cdot 108{,}160 = 112{,}486.40$; continuing the same computation, the amount on the twenty-first birthday is $A_{21} \approx 227{,}876.81$ dollars. As in the example of Section 3.4, mathematical induction shows that $A_n = 100{,}000 \cdot (1.04)^n$.
 
-**Example 5.6.8 (Compound Interest with Compounding Several Times a Year).** When an annual interest rate $i$ is compounded $m$ times per year, the interest rate per period is $\frac{i}{m}$. For instance, if 3%, that is, 0.03, annual interest is compounded quarterly, the rate per quarter is $\frac{0.03}{4} = 0.0075$. Assuming no additional deposits or withdrawals, let $P_k$ be the balance at the end of the $k$th period for each integer $k \ge 1$; the interest earned during the $k$th period is $P_{k-1} \cdot \frac{i}{m}$, and the following holds.
+**Example 5.6.8 (Compound Interest with Compounding Several Times a Year).** When an annual interest rate $i$ is compounded $m$ times per year, the interest rate per period is $\frac{i}{m}$. For instance, if 3%, that is, 0.03, annual interest is compounded quarterly, the rate per quarter is $\frac{0.03}{4} = 0.0075$. Assuming no additional deposits or withdrawals, let $P_k$ be the balance at the end of the $`k`$th period for each integer $k \ge 1$; the interest earned during the $`k`$th period is $P_{k-1} \cdot \frac{i}{m}$, and the following holds.
 
-$$
+```math
 P_k = P_{k-1} + P_{k-1} \left( \frac{i}{m} \right) = P_{k-1} \left( 1 + \frac{i}{m} \right)
-$$
+```
 
 If 10,000 dollars is deposited at 3% compounded quarterly, then $P_0 = 10{,}000$ and the recurrence relation is $P_k = (1.0075) \cdot P_{k-1}$ $(k \ge 1)$. The amount after one year, that is, after four quarters, is found by repeated substitution.
 
-$$
+```math
 \begin{aligned}
 P_1 &= 1.0075 \cdot 10{,}000.00 = 10{,}075.00 \\
 P_2 &= 1.0075 \cdot 10{,}075.00 \approx 10{,}150.56 \\
 P_3 &\approx 1.0075 \cdot 10{,}150.56 \approx 10{,}226.69 \\
 P_4 &\approx 1.0075 \cdot 10{,}226.69 \approx 10{,}303.39
 \end{aligned}
-$$
+```
 
 So after one year the account holds about 10,303.39 dollars. The relative growth of the balance over one year is called the **annual percentage yield (APY)**, and the APY of this account is as follows. Because interest is also earned on the interest added each quarter, the APY is slightly larger than the nominal annual rate of 3%.
 
-$$
+```math
 \frac{10{,}303.39 - 10{,}000}{10{,}000} \approx 0.03034 = 3.034\%
-$$
+```
 
 ### 6.6 Recursive Definitions of Sum and Product
 
@@ -1433,38 +1433,38 @@ Addition and multiplication are **binary operations**: each one combines exactly
 
 > **Definition:** Given a positive integer $n$ and numbers $a_1, a_2, \ldots, a_n$, the summation $\sum_{i=1}^{n} a_i$ and the product $\prod_{i=1}^{n} a_i$ from $i = 1$ to $n$ of the $a_i$ are defined as follows.
 
-$$
+```math
 \sum_{i=1}^{1} a_i = a_1, \quad \sum_{i=1}^{n} a_i = \left( \sum_{i=1}^{n-1} a_i \right) + a_n \; (n > 1); \qquad \prod_{i=1}^{1} a_i = a_1, \quad \prod_{i=1}^{n} a_i = \left( \prod_{i=1}^{n-1} a_i \right) \cdot a_n \; (n > 1)
-$$
+```
 
 The definitions also fix the order in which a sum or product of three or more numbers is evaluated, as in the following example.
 
-$$
+```math
 \sum_{i=1}^{4} a_i = \left( \sum_{i=1}^{3} a_i \right) + a_4 = \left( \left( \sum_{i=1}^{2} a_i \right) + a_3 \right) + a_4 = ((a_1 + a_2) + a_3) + a_4
-$$
+```
 
 Together with mathematical induction, these recursive definitions make it possible to prove many properties of finite sums and products in general. The following proves part 1 of Theorem 5.1.1 for the case $m = 1$.
 
 **Example 5.6.9 (A Sum of Sums).** For any positive integer $n$, if $a_1, \ldots, a_n$ and $b_1, \ldots, b_n$ are real numbers, then the following holds.
 
-$$
+```math
 \sum_{i=1}^{n} (a_i + b_i) = \sum_{i=1}^{n} a_i + \sum_{i=1}^{n} b_i
-$$
+```
 
-**Proof (by mathematical induction).** Let $P(n)$ be the equation above (for any real numbers $a_1, \ldots, a_n$ and $b_1, \ldots, b_n$); mathematical induction on $n$ shows that $P(n)$ is true for every integer $n \ge 1$.
+**Proof (by mathematical induction).** Let $P(n)$ be the equation above (for any real numbers $a_1, \ldots, a_n$ and $`b_1, \ldots, b_n`$); mathematical induction on $n$ shows that $P(n)$ is true for every integer $n \ge 1$.
 
 **Basis step: show that $P(1)$ is true.** By definition of summation, $\sum_{i=1}^{1} (a_i + b_i) = a_1 + b_1$, and also by definition, $a_1 + b_1 = \sum_{i=1}^{1} a_i + \sum_{i=1}^{1} b_i$. Hence $P(1)$ is true.
 
 **Inductive step: show that for every integer $k \ge 1$, if $P(k)$ then $P(k+1)$.** Suppose that $k$ is an integer with $k \ge 1$, that $a_1, \ldots, a_{k+1}$ and $b_1, \ldots, b_{k+1}$ are real numbers, and that the inductive hypothesis $\sum_{i=1}^{k} (a_i + b_i) = \sum_{i=1}^{k} a_i + \sum_{i=1}^{k} b_i$ is true. Transform the left-hand side into the right-hand side.
 
-$$
+```math
 \begin{aligned}
 \sum_{i=1}^{k+1} (a_i + b_i) &= \sum_{i=1}^{k} (a_i + b_i) + (a_{k+1} + b_{k+1}) && \text{(1)} \\
 &= \left( \sum_{i=1}^{k} a_i + \sum_{i=1}^{k} b_i \right) + (a_{k+1} + b_{k+1}) && \text{(2)} \\
 &= \left( \sum_{i=1}^{k} a_i + a_{k+1} \right) + \left( \sum_{i=1}^{k} b_i + b_{k+1} \right) && \text{(3)} \\
 &= \sum_{i=1}^{k+1} a_i + \sum_{i=1}^{k+1} b_i && \text{(4)}
 \end{aligned}
-$$
+```
 
 Step (1) is the definition of summation, (2) the inductive hypothesis, (3) the associative and commutative laws of addition, and (4) the definition of summation again. The last expression is the right-hand side of $P(k+1)$, so $P(k+1)$ is true. Hence the equation holds for every positive integer $n$.
 
@@ -1482,7 +1482,7 @@ Step (1) is the definition of summation, (2) the inductive hypothesis, (3) the a
 | The inductive step assumes the statement to be proved, "for every $n \ge a$, $P(n)$." | **F.** The inductive step proves a conditional statement: it assumes $P(k)$ for one particular but arbitrarily chosen $k \ge a$ and shows $P(k+1)$. |
 | If only the inductive step is proved and the basis step is false, no conclusion follows. | **T.** A property such as $P(n)$: $n = n + 1$ satisfies the inductive step but is false for every $n$. Without a first domino that falls, nothing falls. |
 | Substituting $n = 1$ into $1^2 + 2^2 + \cdots + n^2$ gives $1^2 + 2^2 + 3^2 + \cdots + 1^2$. | **F.** The expression is a sum starting at $1^2$ and ending at $n^2$, so for $n = 1$ it is just $1^2$. |
-| A statement that can be proved by strong mathematical induction can also be proved by ordinary mathematical induction. | **T.** Apply ordinary induction to $Q(n)$: "$P(j)$ for every $j$ with $a \le j \le n$." The three principles (ordinary induction, strong induction, well-ordering) are equivalent. |
+| A statement that can be proved by strong mathematical induction can also be proved by ordinary mathematical induction. | **T.** Apply ordinary induction to $Q(n)$: "$`P(j)`$ for every $j$ with $a \le j \le n$." The three principles (ordinary induction, strong induction, well-ordering) are equivalent. |
 | The set of all positive real numbers has no least element, so it is a counterexample to the well-ordering principle. | **F.** The well-ordering principle concerns nonempty sets of integers that are bounded below. The set of positive real numbers is not a set of integers. |
 | Of the four properties in the loop invariant theorem, I and II alone guarantee that the loop satisfies its post-condition. | **F.** I and II only show, by induction on the number of iterations, that the invariant is maintained. Property III, that the loop terminates, and IV, that the invariant yields the post-condition at termination, are also needed. |
 | Two sequences that satisfy the same recurrence relation are always the same sequence. | **F.** The initial conditions determine the values. Under $a_k = 3a_{k-1}$, $a_1 = 2$ gives $2, 6, 18, \ldots$ while $a_1 = 1$ gives $1, 3, 9, \ldots$. |
@@ -1561,7 +1561,7 @@ Step (1) is the definition of summation, (2) the inductive hypothesis, (3) the a
    <details>
    <summary>Answer</summary>
 
-   Let $P(n)$ be "$6^n - 1$ is divisible by 5." Basis step: $6^0 - 1 = 0 = 5 \cdot 0$, so $P(0)$ is true. Inductive step: suppose $k \ge 0$ and $6^k - 1 = 5r$ for some integer $r$. Then $6^{k+1} - 1 = 6 \cdot 6^k - 1 = (5 + 1) \cdot 6^k - 1 = 5 \cdot 6^k + (6^k - 1) = 5 \cdot 6^k + 5r = 5(6^k + r)$, and $6^k + r$ is an integer, so $6^{k+1} - 1$ is divisible by 5. Hence by mathematical induction $P(n)$ is true for every $n \ge 0$.
+   Let $P(n)$ be "$`6^n - 1`$ is divisible by 5." Basis step: $6^0 - 1 = 0 = 5 \cdot 0$, so $P(0)$ is true. Inductive step: suppose $k \ge 0$ and $6^k - 1 = 5r$ for some integer $r$. Then $6^{k+1} - 1 = 6 \cdot 6^k - 1 = (5 + 1) \cdot 6^k - 1 = 5 \cdot 6^k + (6^k - 1) = 5 \cdot 6^k + 5r = 5(6^k + r)$, and $6^k + r$ is an integer, so $6^{k+1} - 1$ is divisible by 5. Hence by mathematical induction $P(n)$ is true for every $n \ge 0$.
 
    </details>
 
@@ -1601,7 +1601,7 @@ Step (1) is the definition of summation, (2) the inductive hypothesis, (3) the a
 
    </details>
 
-9. **Loop invariant:** Prove that the following loop is correct with respect to its pre- and post-conditions using the loop invariant $I(n)$: "$i = n$ and $s = \frac{n(n+1)}{2}$."
+9. **Loop invariant:** Prove that the following loop is correct with respect to its pre- and post-conditions using the loop invariant $I(n)$: "$`i = n`$ and $s = \frac{n(n+1)}{2}$."
 
    ```text
    [Pre-condition: n0 is a nonnegative integer, i = 0, and s = 0.]

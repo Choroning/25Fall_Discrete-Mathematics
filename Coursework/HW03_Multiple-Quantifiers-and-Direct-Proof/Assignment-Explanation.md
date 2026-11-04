@@ -38,7 +38,7 @@
 
 ## 1. Exercise 3.3.2: Truth Values of a Two-Variable Predicate
 
-**Problem.** Let $G(x, y)$ be the predicate "$x^2 > y$". Decide whether each of (a) $G(2, 3)$, (b) $G(1, 1)$, (c) $G\left(\frac{1}{2}, \frac{1}{2}\right)$, and (d) $G(-2, 2)$ is true or false.
+**Problem.** Let $G(x, y)$ be the predicate "$`x^2 > y`$". Decide whether each of (a) $G(2, 3)$, (b) $G(1, 1)$, (c) $G\left(\frac{1}{2}, \frac{1}{2}\right)$, and (d) $G(-2, 2)$ is true or false.
 
 **Concepts used.** Substituting values into a two-variable predicate $G(x, y)$ produces a statement ([Chapter 3, Sections 1 and 3](../../Lecture-Notes/Ch03_The-Logic-of-Quantified-Statements/Concepts_Lecture.md)). The first value in the parentheses is substituted for $x$ and the second for $y$, so swapping them gives a different statement.
 
@@ -51,7 +51,7 @@
 | (c) | $x = \frac{1}{2}$, $y = \frac{1}{2}$ | $\left(\frac{1}{2}\right)^2 = \frac{1}{4}$ and $\frac{1}{4} < \frac{1}{2}$ | false |
 | (d) | $x = -2$, $y = 2$ | $(-2)^2 = 4 > 2$ | true |
 
-*Table 1. Results of substituting values into the predicate $G(x, y)$*
+*Table 1. Predicate $`G(x, y)`$: results of substituting values*
 
 In (b) the two values are equal, so the strict inequality $>$ fails. Item (c) shows that squaring a number between 0 and 1 makes it smaller. In (d), squaring a negative number gives a positive number, so $G(x, y)$ can be true even when $x$ is negative.
 
@@ -68,23 +68,23 @@ In (b) the two values are equal, so the strict inequality $>$ fails. Item (c) sh
 
 **Concepts used.** A statement with several quantifiers is negated by applying Theorems 3.2.1 and 3.2.2 to the quantifiers one at a time, starting from the outermost (Chapter 3, Section 3). As a result, $\forall$ and $\exists$ are interchanged and the innermost predicate is negated.
 
-$$
+```math
 \sim\big(\forall x \in D,\ \exists y \in E \text{ such that } P(x, y)\big) \equiv \exists x \in D \text{ such that } \forall y \in E,\ \sim P(x, y)
-$$
+```
 
-$$
+```math
 \sim\big(\exists x \in D \text{ such that } \forall y \in E,\ P(x, y)\big) \equiv \forall x \in D,\ \exists y \in E \text{ such that } \sim P(x, y)
-$$
+```
 
-A statement of the form $\forall x\ \exists y$ is true if a suitable $y$ can be found for each $x$, and this $y$ may depend on $x$. A statement of the form $\exists x\ \forall y$ is true only if a single $x$ works for every $y$.
+A statement of the form $`\forall x\ \exists y`$ is true if a suitable $y$ can be found for each $x$, and this $y$ may depend on $x$. A statement of the form $`\exists x\ \forall y`$ is true only if a single $x$ works for every $y$.
 
 **Solution.**
 
 (a) The negation is the following.
 
-$$
+```math
 \exists x \in D \text{ such that } \forall y \in E,\ x + y \ne 1
-$$
+```
 
 For the original statement to be true, $y = 1 - x$ must belong to $E$ for each $x$ in $D$. The $y$ required for each $x$ is listed below.
 
@@ -93,15 +93,15 @@ For the original statement to be true, $y = 1 - x$ must belong to $E$ for each $
 | Required $y = 1 - x$ | $3$ | $2$ | $1$ | $0$ | $-1$ |
 | Is $y \in E$? | no | yes | yes | yes | yes |
 
-*Table 2. The $y$ required for each $x$ in (a)*
+*Table 2. The value of $`y`$ required for each $`x`$ in (a)*
 
 For $x = -2$, the required $y = 3$ is not in $E$. Indeed, for every $y$ in $E$, $-2 + y$ is one of $-4, -3, -2, -1, 0$, so it never equals 1. Hence the original statement is false, and since $x = -2$ satisfies the existential statement of the negation, **the negation is true.**
 
 (b) The negation is the following.
 
-$$
+```math
 \forall x \in D,\ \exists y \in E \text{ such that } x + y \ne -y
-$$
+```
 
 $x + y = -y$ is the same as $x = -2y$. For the original statement to be true, a single $x$ must satisfy $x = -2y$ for every $y$ in $E$. But $y = 0$ requires $x = 0$ and $y = 1$ requires $x = -2$, so no $x$ meets both conditions. Hence the original statement is false. That the negation is true can be shown directly by choosing $y$ for each $x$.
 
@@ -121,7 +121,7 @@ Therefore **the negation is true.**
 - (a) $\forall$ real numbers $x$, $\exists$ a real number $y$ such that $x + y = 0$.
 - (b) $\exists$ a real number $y$ such that $\forall$ real numbers $x$, $x + y = 0$.
 
-**Concepts used.** The two statements use the same predicate $x + y = 0$ but differ in the order of quantifiers (Chapter 3, Section 3). In (a), $\forall x\ \exists y$, the value of $x$ is already known when $y$ is chosen, so $y$ may depend on $x$. In (b), $\exists y\ \forall x$, a single $y$ must be fixed before any $x$, and that $y$ must work for every $x$.
+**Concepts used.** The two statements use the same predicate $x + y = 0$ but differ in the order of quantifiers (Chapter 3, Section 3). In (a), $`\forall x\ \exists y`$, the value of $x$ is already known when $y$ is chosen, so $y$ may depend on $x$. In (b), $`\exists y\ \forall x`$, a single $y$ must be fixed before any $x$, and that $y$ must work for every $x$.
 
 **Solution.**
 
@@ -131,9 +131,9 @@ Therefore **the negation is true.**
 
 (b) **Rewritten:** There is a real number whose sum with every real number is always 0.
 
-**Verdict: false.** Show that its negation, "$\forall$ real numbers $y$, $\exists$ a real number $x$ such that $x + y \ne 0$", is true. For any real number $y$, let $x = 1 - y$; then $x + y = 1 \ne 0$. Alternatively, suppose such a $y$ exists; $x = 0$ gives $0 + y = 0$, so $y = 0$, but then $x = 1$ gives $1 + 0 = 1 \ne 0$, a contradiction.
+**Verdict: false.** Show that its negation, "$`\forall`$ real numbers $y$, $\exists$ a real number $x$ such that $x + y \ne 0$", is true. For any real number $y$, let $x = 1 - y$; then $x + y = 1 \ne 0$. Alternatively, suppose such a $y$ exists; $x = 0$ gives $0 + y = 0$, so $y = 0$, but then $x = 1$ gives $1 + 0 = 1 \ne 0$, a contradiction.
 
-> **Key Point:** $\forall x\ \exists y$ and $\exists y\ \forall x$ differ in meaning even with the same predicate. If $\exists y\ \forall x$ is true then $\forall x\ \exists y$ is also true, but, as this exercise shows, the converse does not hold.
+> **Key Point:** $`\forall x\ \exists y`$ and $`\exists y\ \forall x`$ differ in meaning even with the same predicate. If $`\exists y\ \forall x`$ is true then $`\forall x\ \exists y`$ is also true, but, as this exercise shows, the converse does not hold.
 
 ---
 
@@ -143,24 +143,24 @@ Therefore **the negation is true.**
 
 **Problem.** Derive the following two rules from the laws for negating universal and existential statements.
 
-- (a) $\sim\big(\forall x \in D\,(\forall y \in E\,(P(x, y)))\big) \equiv \exists x \in D\,(\exists y \in E\,(\sim P(x, y)))$
-- (b) $\sim\big(\exists x \in D\,(\exists y \in E\,(P(x, y)))\big) \equiv \forall x \in D\,(\forall y \in E\,(\sim P(x, y)))$
+- (a) $`\sim\big(\forall x \in D\,(\forall y \in E\,(P(x, y)))\big) \equiv \exists x \in D\,(\exists y \in E\,(\sim P(x, y)))`$
+- (b) $`\sim\big(\exists x \in D\,(\exists y \in E\,(P(x, y)))\big) \equiv \forall x \in D\,(\forall y \in E\,(\sim P(x, y)))`$
 
-**Concepts used.** Theorem 3.2.1 (negation of a universal statement) states $\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)$, and Theorem 3.2.2 (negation of an existential statement) states $\sim(\exists x \in D \text{ such that } Q(x)) \equiv \forall x \in D,\ \sim Q(x)$ (Chapter 3, Section 2). Both theorems hold even when the predicate $Q(x)$ itself contains other quantifiers. Moreover, replacing the predicate inside a quantifier by one that has the same truth value for every $x$ does not change the truth value of the whole statement.
+**Concepts used.** Theorem 3.2.1 (negation of a universal statement) states $`\sim(\forall x \in D,\ Q(x)) \equiv \exists x \in D \text{ such that } \sim Q(x)`$, and Theorem 3.2.2 (negation of an existential statement) states $`\sim(\exists x \in D \text{ such that } Q(x)) \equiv \forall x \in D,\ \sim Q(x)`$ (Chapter 3, Section 2). Both theorems hold even when the predicate $Q(x)$ itself contains other quantifiers. Moreover, replacing the predicate inside a quantifier by one that has the same truth value for every $x$ does not change the truth value of the whole statement.
 
 **Solution.**
 
-(a) Let the inner part be $Q(x) = \forall y \in E\,(P(x, y))$.
+(a) Let the inner part be $`Q(x) = \forall y \in E\,(P(x, y))`$.
 
-1. The given expression is $\sim(\forall x \in D\,(Q(x)))$, which by Theorem 3.2.1 is equivalent to $\exists x \in D\,(\sim Q(x))$.
-2. For a fixed $x$, $\sim Q(x) = \sim(\forall y \in E\,(P(x, y)))$, which by Theorem 3.2.1 again is equivalent to $\exists y \in E\,(\sim P(x, y))$.
-3. The equivalence of step 2 holds for every $x$ in $D$, so $\sim Q(x)$ in step 1 may be replaced by it. Hence $\sim\big(\forall x \in D\,(\forall y \in E\,(P(x, y)))\big) \equiv \exists x \in D\,(\exists y \in E\,(\sim P(x, y)))$.
+1. The given expression is $`\sim(\forall x \in D\,(Q(x)))`$, which by Theorem 3.2.1 is equivalent to $`\exists x \in D\,(\sim Q(x))`$.
+2. For a fixed $x$, $`\sim Q(x) = \sim(\forall y \in E\,(P(x, y)))`$, which by Theorem 3.2.1 again is equivalent to $`\exists y \in E\,(\sim P(x, y))`$.
+3. The equivalence of step 2 holds for every $x$ in $D$, so $\sim Q(x)$ in step 1 may be replaced by it. Hence $`\sim\big(\forall x \in D\,(\forall y \in E\,(P(x, y)))\big) \equiv \exists x \in D\,(\exists y \in E\,(\sim P(x, y)))`$.
 
-(b) Let the inner part be $R(x) = \exists y \in E\,(P(x, y))$.
+(b) Let the inner part be $`R(x) = \exists y \in E\,(P(x, y))`$.
 
-1. The given expression is $\sim(\exists x \in D\,(R(x)))$, which by Theorem 3.2.2 is equivalent to $\forall x \in D\,(\sim R(x))$.
-2. For a fixed $x$, $\sim R(x) = \sim(\exists y \in E\,(P(x, y)))$, which by Theorem 3.2.2 again is equivalent to $\forall y \in E\,(\sim P(x, y))$.
-3. Substituting the equivalence of step 2 into step 1 gives $\sim\big(\exists x \in D\,(\exists y \in E\,(P(x, y)))\big) \equiv \forall x \in D\,(\forall y \in E\,(\sim P(x, y)))$.
+1. The given expression is $`\sim(\exists x \in D\,(R(x)))`$, which by Theorem 3.2.2 is equivalent to $`\forall x \in D\,(\sim R(x))`$.
+2. For a fixed $x$, $`\sim R(x) = \sim(\exists y \in E\,(P(x, y)))`$, which by Theorem 3.2.2 again is equivalent to $`\forall y \in E\,(\sim P(x, y))`$.
+3. Substituting the equivalence of step 2 into step 1 gives $`\sim\big(\exists x \in D\,(\exists y \in E\,(P(x, y)))\big) \equiv \forall x \in D\,(\forall y \in E\,(\sim P(x, y)))`$.
 
 In words, (a) says that "not every pair $(x, y)$ satisfies $P$" is the same as "at least one pair fails to satisfy $P$", and (b) says that "no pair satisfies $P$" is the same as "every pair fails to satisfy $P$".
 
@@ -178,11 +178,11 @@ In words, (a) says that "not every pair $(x, y)$ satisfies $P$" is the same as "
 
 **Concepts used.** **Universal modus tollens** is the valid argument form below (Chapter 3, Section 4).
 
-$$
+```math
 \forall x,\ P(x) \to Q(x), \qquad \sim Q(a) \text{ for a particular } a, \qquad \therefore\ \sim P(a)
-$$
+```
 
-**Solution.** Written as a universal conditional statement, the first premise is "$\forall x$, if $x$ is an irrational number then $x$ is a real number". $P(x)$ is "$x$ is an irrational number", $Q(x)$ is "$x$ is a real number", and the particular object is $a = \frac{1}{0}$. The second premise is $\sim Q(a)$, so universal modus tollens gives $\sim P(a)$.
+**Solution.** Written as a universal conditional statement, the first premise is "$`\forall x`$, if $x$ is an irrational number then $x$ is a real number". $P(x)$ is "$`x`$ is an irrational number", $Q(x)$ is "$`x`$ is a real number", and the particular object is $a = \frac{1}{0}$. The second premise is $\sim Q(a)$, so universal modus tollens gives $\sim P(a)$.
 
 Conclusion: **$\frac{1}{0}$ is not an irrational number.**
 
@@ -200,13 +200,13 @@ Division by 0 is undefined, so $\frac{1}{0}$ does not represent any real number,
 - Premise 2: for a particular number $n$, the number $2n$ is even.
 - Conclusion: that particular number $n$ is even.
 
-**Concepts used.** The **converse error** in an argument with quantified statements is the invalid inference of the form "$\forall x,\ P(x) \to Q(x)$, $Q(a)$, therefore $P(a)$" (Chapter 3, Section 4). Unlike universal modus ponens, "$\forall x,\ P(x) \to Q(x)$, $P(a)$, therefore $Q(a)$", it does not guarantee a true conclusion.
+**Concepts used.** The **converse error** in an argument with quantified statements is the invalid inference of the form "$`\forall x,\ P(x) \to Q(x)`$, $Q(a)$, therefore $P(a)$" (Chapter 3, Section 4). Unlike universal modus ponens, "$`\forall x,\ P(x) \to Q(x)`$, $P(a)$, therefore $Q(a)$", it does not guarantee a true conclusion.
 
-**Solution.** Let $P(x)$ be "$x$ is even" and $Q(x)$ be "$2x$ is even". Then the form of the argument is the following.
+**Solution.** Let $P(x)$ be "$`x`$ is even" and $Q(x)$ be "$`2x`$ is even". Then the form of the argument is the following.
 
-$$
+```math
 \forall x,\ P(x) \to Q(x), \qquad Q(n), \qquad \therefore\ P(n)
-$$
+```
 
 This is the form of the converse error, so the argument is **invalid.** As a counterexample, consider $n = 3$. The first premise is true for every number, and $2 \cdot 3 = 6$ is even, so the second premise is also true. But 3 is not even, so the conclusion is false. In fact $2n$ is even for every integer $n$, so the second premise tells nothing about whether $n$ is even.
 
@@ -260,11 +260,11 @@ The key step in (c) is to rewrite $2k - 1$ in the form $2 \cdot (\text{integer})
 
 **Problem.** For the statement "For all real numbers $a$ and $b$, if $a < b$ then $a^2 < b^2$", (a) write a negation, and (b) disprove the statement by a counterexample and explain how the counterexample makes the statement false.
 
-**Concepts used.** The negation of a universal conditional statement is "$\exists x$ such that $P(x) \wedge \sim Q(x)$" (Chapter 3, Section 2). Hence, to disprove a statement of the form $\forall x,\ P(x) \to Q(x)$, it suffices to find one $x$ for which the hypothesis $P(x)$ is true and the conclusion $Q(x)$ is false, that is, a counterexample (Chapter 4, Section 1).
+**Concepts used.** The negation of a universal conditional statement is "$`\exists x`$ such that $P(x) \wedge \sim Q(x)$" (Chapter 3, Section 2). Hence, to disprove a statement of the form $`\forall x,\ P(x) \to Q(x)`$, it suffices to find one $x$ for which the hypothesis $P(x)$ is true and the conclusion $Q(x)$ is false, that is, a counterexample (Chapter 4, Section 1).
 
 **Solution.**
 
-(a) Negation: $\exists$ real numbers $a$ and $b$ such that $a < b$ and $a^2 \ge b^2$. The negation of the conclusion $a^2 < b^2$ is "$a^2$ is not less than $b^2$", that is, $a^2 \ge b^2$.
+(a) Negation: $\exists$ real numbers $a$ and $b$ such that $a < b$ and $a^2 \ge b^2$. The negation of the conclusion $a^2 < b^2$ is "$`a^2`$ is not less than $b^2$", that is, $a^2 \ge b^2$.
 
 (b) Let $a = -2$ and $b = 1$. The hypothesis $-2 < 1$ is true. However, $a^2 = 4$ and $b^2 = 1$ with $4 \ge 1$, so the conclusion $a^2 < b^2$ is false. For this pair, the conditional "if $a < b$ then $a^2 < b^2$" has a true hypothesis and a false conclusion, so it is false. The universal statement, which must be true for every pair of real numbers, is false for this pair, so the original statement is false. In other words, this pair makes the negation in (a) true.
 
@@ -276,11 +276,11 @@ This statement has the same structure as Exercise 3.1.4 of HW2. Every pair with 
 
 ## 10. Exercise 4.1.29: Filling in a Direct Proof
 
-**Problem.** For the theorem "The negative of any even integer is even", (a) rewrite the theorem in three ways, as "$\forall$ \_\_\_\_, if \_\_\_\_ then \_\_\_\_", as "$\forall$ \_\_\_\_, \_\_\_\_" (without if or then), and as "If \_\_\_\_, then \_\_\_\_" (without an explicit universal quantifier), and (b) fill in the blanks (a)-(d) of the following proof.
+**Problem.** For the theorem "The negative of any even integer is even", (a) rewrite the theorem in three ways, as "$`\forall`$ \_\_\_\_, if \_\_\_\_ then \_\_\_\_", as "$`\forall`$ \_\_\_\_, \_\_\_\_" (without if or then), and as "If \_\_\_\_, then \_\_\_\_" (without an explicit universal quantifier), and (b) fill in the blanks (a)-(d) of the following proof.
 
 The proof to be completed starts from an arbitrarily chosen even integer $n$ and sets out to show that $-n$ is even. Citing reason (a), it writes $n = 2k$ for some integer $k$. Citing reason (b), it obtains $-n = -(2k)$, and by algebra it obtains $-(2k) = 2(-k)$. It then sets $r = -k$ and states that $r$ is an integer because $-1$ and $k$ are integers and fact (c) holds. Finally, from $-n = 2r$ with $r$ an integer, it concludes by reason (d) that $-n$ is even.
 
-**Concepts used.** A **direct proof** of $\forall x \in D,\ P(x) \to Q(x)$ supposes that $x$ is a particular but arbitrarily chosen element of $D$ satisfying the hypothesis $P(x)$, and derives $Q(x)$ from definitions, previously established results, and rules of inference (Chapter 4, Section 1). Because $x$ was chosen arbitrarily, the conclusion extends to every element of $D$ by **generalizing from the generic particular**.
+**Concepts used.** A **direct proof** of $`\forall x \in D,\ P(x) \to Q(x)`$ supposes that $x$ is a particular but arbitrarily chosen element of $D$ satisfying the hypothesis $P(x)$, and derives $Q(x)$ from definitions, previously established results, and rules of inference (Chapter 4, Section 1). Because $x$ was chosen arbitrarily, the conclusion extends to every element of $D$ by **generalizing from the generic particular**.
 
 **Solution.**
 
@@ -338,16 +338,16 @@ Since $k$ was chosen arbitrarily, the theorem holds for every positive integer $
 |:-----|:-----|
 | Two-variable predicate | Substituting values into $G(x, y)$ yields a statement, and the order of the values determines the meaning. |
 | Negating multiply-quantified statements | Interchange $\forall$ and $\exists$ from the outside in and negate the innermost predicate. |
-| Truth of $\forall x\ \exists y$ | It is true if a suitable $y$ can be found for each $x$, and $y$ may depend on $x$. |
-| Truth of $\exists x\ \forall y$ | It is true only if a single $x$ satisfies the condition for every $y$. |
-| Order of quantifiers | If $\exists y\ \forall x$ is true then $\forall x\ \exists y$ is true, but the converse does not hold in general. |
+| Truth of $`\forall x\ \exists y`$ | It is true if a suitable $y$ can be found for each $x$, and $y$ may depend on $x$. |
+| Truth of $`\exists x\ \forall y`$ | It is true only if a single $x$ satisfies the condition for every $y$. |
+| Order of quantifiers | If $`\exists y\ \forall x`$ is true then $`\forall x\ \exists y`$ is true, but the converse does not hold in general. |
 | Deriving negation rules | Applying Theorems 3.2.1 and 3.2.2 once per quantifier, from the outermost, yields the negation rules for multiply-quantified statements. |
-| Universal modus tollens | "$\forall x,\ P(x) \to Q(x)$, $\sim Q(a)$, therefore $\sim P(a)$" is valid. |
-| Converse error with quantifiers | "$\forall x,\ P(x) \to Q(x)$, $Q(a)$, therefore $P(a)$" is invalid. |
+| Universal modus tollens | "$`\forall x,\ P(x) \to Q(x)`$, $\sim Q(a)$, therefore $\sim P(a)$" is valid. |
+| Converse error with quantifiers | "$`\forall x,\ P(x) \to Q(x)`$, $Q(a)$, therefore $P(a)$" is invalid. |
 | Diagrams for arguments | Represent "all A are B" by the disk for A inside the disk for B, and decide validity from the drawing. |
 | Validity and soundness | A valid argument is not sound if a premise is false. |
 | Even and odd | $n$ is even if $n = 2k$ and odd if $n = 2k + 1$ for some integer $k$. |
-| Disproof by counterexample | $\forall x,\ P(x) \to Q(x)$ is disproved by a single $x$ with $P(x)$ true and $Q(x)$ false. |
+| Disproof by counterexample | $`\forall x,\ P(x) \to Q(x)`$ is disproved by a single $x$ with $P(x)$ true and $Q(x)$ false. |
 | Direct proof | Take a particular but arbitrarily chosen element satisfying the hypothesis, and derive the conclusion from definitions and established results. |
 | Arguing from examples | Checking a few cases is not a proof of a universal statement. |
 
@@ -357,7 +357,7 @@ Since $k$ was chosen arbitrarily, the theorem holds for every positive integer $
 
 ## Self-Check Questions
 
-1. **Order of quantifiers:** With the set of all positive integers as the domain, decide the truth values of "$\forall x\ \exists y$ such that $y > x$" and "$\exists y$ such that $\forall x$, $y > x$".
+1. **Order of quantifiers:** With the set of all positive integers as the domain, decide the truth values of "$`\forall x\ \exists y`$ such that $y > x$" and "$`\exists y`$ such that $\forall x$, $y > x$".
 
    <details>
    <summary>Answer</summary>
@@ -366,12 +366,12 @@ Since $k$ was chosen arbitrarily, the theorem holds for every positive integer $
 
    </details>
 
-2. **Negating a multiply-quantified statement:** Write a negation of "$\forall x \in \mathbf{R}$, $\exists y \in \mathbf{R}$ such that $xy = 1$", and decide which of the original statement and its negation is true.
+2. **Negating a multiply-quantified statement:** Write a negation of "$`\forall x \in \mathbf{R}`$, $\exists y \in \mathbf{R}$ such that $xy = 1$", and decide which of the original statement and its negation is true.
 
    <details>
    <summary>Answer</summary>
 
-   The negation is "$\exists x \in \mathbf{R}$ such that $\forall y \in \mathbf{R}$, $xy \ne 1$". For $x = 0$, $xy = 0 \ne 1$ for every $y$, so the negation is true and the original statement is false.
+   The negation is "$`\exists x \in \mathbf{R}`$ such that $\forall y \in \mathbf{R}$, $xy \ne 1$". For $x = 0$, $xy = 0 \ne 1$ for every $y$, so the negation is true and the original statement is false.
 
    </details>
 
@@ -380,7 +380,7 @@ Since $k$ was chosen arbitrarily, the theorem holds for every positive integer $
    <details>
    <summary>Answer</summary>
 
-   With $P(x)$ "$x$ is prime" and $Q(x)$ "$x > 1$", the form is "$\forall x,\ P(x) \to Q(x)$, $\sim Q(1)$, therefore $\sim P(1)$". This is universal modus tollens, so the argument is valid.
+   With $P(x)$ "$`x`$ is prime" and $Q(x)$ "$`x > 1`$", the form is "$`\forall x,\ P(x) \to Q(x)`$, $\sim Q(1)$, therefore $\sim P(1)$". This is universal modus tollens, so the argument is valid.
 
    </details>
 
@@ -389,7 +389,7 @@ Since $k$ was chosen arbitrarily, the theorem holds for every positive integer $
    <details>
    <summary>Answer</summary>
 
-   It is invalid. Its form is "$\forall x,\ P(x) \to Q(x)$, $Q(F)$, therefore $P(F)$", which is the converse error. In a diagram, the point for $F$ can be placed inside the "rectangles" disk but outside the "squares" disk; a rectangle of width 2 and height 1 is such an example.
+   It is invalid. Its form is "$`\forall x,\ P(x) \to Q(x)`$, $Q(F)$, therefore $P(F)$", which is the converse error. In a diagram, the point for $F$ can be placed inside the "rectangles" disk but outside the "squares" disk; a rectangle of width 2 and height 1 is such an example.
 
    </details>
 

@@ -80,18 +80,18 @@ Logic distinguishes the **form** of an argument from its **content**. Logical an
 
 Compare two arguments whose content is entirely different but whose form is the same. Letters such as $p$, $q$, and $r$ stand for component sentences, "not $p$" stands for the sentence "It is not the case that $p$," and the symbol $\therefore$ means "therefore."
 
-- **Argument 1.** If the bell rings ($p$) or the flag drops ($q$), then the race is over ($r$). Therefore, if the race is not over (not $r$), then the bell has not rung (not $p$) and the flag has not dropped (not $q$).
-- **Argument 2.** If $x = 2$ ($p$) or $x = -2$ ($q$), then $x^2 = 4$ ($r$). Therefore, if $x^2 \neq 4$ (not $r$), then $x \neq 2$ (not $p$) and $x \neq -2$ (not $q$).
+- **Argument 1.** If the bell rings ($`p`$) or the flag drops ($`q`$), then the race is over ($`r`$). Therefore, if the race is not over (not $`r`$), then the bell has not rung (not $`p`$) and the flag has not dropped (not $`q`$).
+- **Argument 2.** If $x = 2$ ($`p`$) or $x = -2$ ($`q`$), then $x^2 = 4$ ($`r`$). Therefore, if $x^2 \neq 4$ (not $`r`$), then $x \neq 2$ (not $`p`$) and $x \neq -2$ (not $`q`$).
 
 The common form of the two arguments is as follows.
 
-$$
+```math
 \begin{array}{l}
 \text{If } p \text{ or } q \text{, then } r. \\
 \hline
 \therefore\ \text{If not } r \text{, then not } p \text{ and not } q.
 \end{array}
-$$
+```
 
 This form is **valid** in the sense defined in Section 3: whenever the premise is true, the conclusion must be true. Because Arguments 1 and 2 have the same form, whatever their content, one is valid exactly when the other is.
 
@@ -102,14 +102,14 @@ This form is **valid** in the sense defined in Section 3: whenever the premise i
 
 In (a) the second premise equals the component after "or" in the first premise, and the conclusion equals the component after "then." Since the second premise of (b) is "I will study hard," blank (1) is "I (will) study hard," and since the conclusion is "I will get an A in this course," blank (2) is "I will get an A in this course." The common form is as follows.
 
-$$
+```math
 \begin{array}{l}
 \text{If } p \text{ or } q \text{, then } r. \\
 q \\
 \hline
 \therefore\ r
 \end{array}
-$$
+```
 
 ### 1.2 Statements
 
@@ -144,9 +144,9 @@ Some computer languages and books use $\neg$ in place of $\sim$. A statement bui
 
 **Translating everyday language.** Various words translate into $\wedge$, $\vee$, or $\sim$. "But" linking two independent clauses translates the same as "and"; "but" is used in place of "and" only when the part that follows is somehow unexpected, and its logical meaning is the same. "Neither $p$ nor $q$" means "not $p$ and not $q$."
 
-$$
+```math
 p \text{ but } q \;\text{ means }\; p \wedge q, \qquad \text{neither } p \text{ nor } q \;\text{ means }\; \sim p \wedge \sim q
-$$
+```
 
 **Example 2.1.2 (Translating But and Neither-Nor).** Let $h$ be "It is hot" and $s$ be "It is sunny," and write the following sentences symbolically.
 
@@ -155,17 +155,17 @@ $$
 
 **Inequalities with and and or.** For particular real numbers $x$, $a$, and $b$ the following hold. The numbers are taken to be particular so that sentences such as $x < a$ and $x \geq b$ are either true or false, and hence are statements.
 
-$$
+```math
 x \leq a \;\text{ means }\; x < a \text{ or } x = a, \qquad a \leq x \leq b \;\text{ means }\; a \leq x \text{ and } x \leq b
-$$
+```
 
-For instance, $2 \leq x \leq 1$ means "$2 \leq x$ and $x \leq 1$," which is always false because no real number $x$ satisfies both conditions at once.
+For instance, $2 \leq x \leq 1$ means "$`2 \leq x`$ and $x \leq 1$," which is always false because no real number $x$ satisfies both conditions at once.
 
-**Example 2.1.3 (And, Or, and Inequalities).** Suppose $x$ is a particular real number and let $p$, $q$, and $r$ stand for "$0 < x$," "$x < 3$," and "$x = 3$," respectively. Write the following inequalities symbolically.
+**Example 2.1.3 (And, Or, and Inequalities).** Suppose $x$ is a particular real number and let $p$, $q$, and $r$ stand for "$`0 < x`$," "$`x < 3`$," and "$`x = 3`$," respectively. Write the following inequalities symbolically.
 
-- (a) $x \leq 3$ is "$x < 3$ or $x = 3$," so it is $q \vee r$.
-- (b) $0 < x < 3$ is "$0 < x$ and $x < 3$," so it is $p \wedge q$.
-- (c) $0 < x \leq 3$ is "$0 < x$, and $x < 3$ or $x = 3$," so it is $p \wedge (q \vee r)$. Without the parentheses it would be the ambiguous $p \wedge q \vee r$.
+- (a) $x \leq 3$ is "$`x < 3`$ or $x = 3$," so it is $q \vee r$.
+- (b) $0 < x < 3$ is "$`0 < x`$ and $x < 3$," so it is $p \wedge q$.
+- (c) $0 < x \leq 3$ is "$`0 < x`$, and $x < 3$ or $x = 3$," so it is $p \wedge (q \vee r)$. Without the parentheses it would be the ambiguous $p \wedge q \vee r$.
 
 ### 1.4 Truth Values
 
@@ -180,11 +180,11 @@ The negation is the statement that expresses exactly what it means for the origi
 | T | F |
 | F | T |
 
-*Table 2. Truth table for the negation $\sim p$*
+*Table 2. Negation $`\sim p`$: truth table*
 
 In everyday speech, "It is hot and it is sunny" counts as true when the weather is both hot and sunny, and as false as soon as one of the two fails. The definition of conjunction agrees with this understanding.
 
-> **Definition:** If $p$ and $q$ are statement variables, the **conjunction** of $p$ and $q$ is "$p$ and $q$," denoted $p \wedge q$. It is true when, and only when, both $p$ and $q$ are true. If either $p$ or $q$ is false, or if both are false, $p \wedge q$ is false.
+> **Definition:** If $p$ and $q$ are statement variables, the **conjunction** of $p$ and $q$ is "$`p`$ and $q$," denoted $p \wedge q$. It is true when, and only when, both $p$ and $q$ are true. If either $p$ or $q$ is false, or if both are false, $p \wedge q$ is false.
 
 A truth table lists the four combinations of truth values for $p$ and $q$, one per row, and puts the truth value of the whole statement in the right-most column of that row.
 
@@ -195,13 +195,13 @@ A truth table lists the four combinations of truth values for $p$ and $q$, one p
 | F | T | F |
 | F | F | F |
 
-*Table 3. Truth table for the conjunction $p \wedge q$*
+*Table 3. Conjunction $`p \wedge q`$: truth table*
 
 It is customary to list the truth values of two variables in the order TT, TF, FT, FF. Another order gives the same information, but a fixed order makes tables easy to compare, so every table in this chapter follows it.
 
-**Inclusive and exclusive or.** Everyday "or" has two uses. When a restaurant server asks a customer to choose "coffee, tea, or milk," only one drink is meant and a second one costs extra: this is the **exclusive** sense. When the server asks whether the customer wants "cream or sugar," taking both is fine: this is the **inclusive** sense. To avoid ambiguity, mathematics and logic always read "or" inclusively (as "and/or"). The symbol $\vee$ derives from vel, the Latin word for "or" in the inclusive sense. The exclusive sense is expressed explicitly as "$p$ or $q$ but not both."
+**Inclusive and exclusive or.** Everyday "or" has two uses. When a restaurant server asks a customer to choose "coffee, tea, or milk," only one drink is meant and a second one costs extra: this is the **exclusive** sense. When the server asks whether the customer wants "cream or sugar," taking both is fine: this is the **inclusive** sense. To avoid ambiguity, mathematics and logic always read "or" inclusively (as "and/or"). The symbol $\vee$ derives from vel, the Latin word for "or" in the inclusive sense. The exclusive sense is expressed explicitly as "$`p`$ or $q$ but not both."
 
-> **Definition:** If $p$ and $q$ are statement variables, the **disjunction** of $p$ and $q$ is "$p$ or $q$," denoted $p \vee q$. It is true when either $p$ is true, or $q$ is true, or both are true; it is false only when both $p$ and $q$ are false.
+> **Definition:** If $p$ and $q$ are statement variables, the **disjunction** of $p$ and $q$ is "$`p`$ or $q$," denoted $p \vee q$. It is true when either $p$ is true, or $q$ is true, or both are true; it is false only when both $p$ and $q$ are false.
 
 | $p$ | $q$ | $p \vee q$ |
 |:-:|:-:|:-:|
@@ -210,9 +210,9 @@ It is customary to list the truth values of two variables in the order TT, TF, F
 | F | T | T |
 | F | F | F |
 
-*Table 4. Truth table for the disjunction $p \vee q$*
+*Table 4. Disjunction $`p \vee q`$: truth table*
 
-For instance, $2 \leq 2$ means "$2 < 2$ or $2 = 2$," and it is true because $2 = 2$ is true.
+For instance, $2 \leq 2$ means "$`2 < 2`$ or $2 = 2$," and it is true because $2 = 2$ is true.
 
 > **Key Point:** A conjunction is T only in the first row, where both components are true, and a disjunction is F only in the last row, where both components are false. To fill a table quickly, first put T in the rows where both components are T (for and) or F in the rows where both are F (for or), and then fill the remaining rows with the opposite value.
 
@@ -224,7 +224,7 @@ Truth values can also be assigned to more complicated expressions such as $\sim 
 
 Truth values of a statement form are computed by the same rules used for algebraic expressions. For each combination of truth values, evaluate the expressions in the innermost parentheses first, then those in the next innermost parentheses, and so on outward. Statement forms correspond closely to the Boolean expressions of Section 4.
 
-**Example 2.1.4 (Truth Table for Exclusive Or).** When "or" is used in its exclusive sense, "$p$ or $q$" means "$p$ or $q$, and not both $p$ and $q$," which in symbols is $(p \vee q) \wedge \sim(p \wedge q)$. Construct the truth table for this statement form.
+**Example 2.1.4 (Truth Table for Exclusive Or).** When "or" is used in its exclusive sense, "$`p`$ or $q$" means "$`p`$ or $q$, and not both $p$ and $q$," which in symbols is $(p \vee q) \wedge \sim(p \wedge q)$. Construct the truth table for this statement form.
 
 1. Make columns for $p$, $q$, $p \vee q$, $p \wedge q$, $\sim(p \wedge q)$, and $(p \vee q) \wedge \sim(p \wedge q)$, and fill the $p$ and $q$ columns with all possible combinations of T and F.
 2. Fill the $p \vee q$ and $p \wedge q$ columns using the truth tables for $\vee$ and $\wedge$.
@@ -238,11 +238,11 @@ Truth values of a statement form are computed by the same rules used for algebra
 | F | T | T | F | T | T |
 | F | F | F | F | T | F |
 
-*Table 5. Truth table for exclusive or, $(p \vee q) \wedge \sim(p \wedge q)$*
+*Table 5. Exclusive or $`(p \vee q) \wedge \sim(p \wedge q)`$: truth table*
 
 The result is T exactly when $p$ and $q$ have different truth values. Exclusive or is often written $p \oplus q$ or $p$ XOR $q$.
 
-**Example 2.1.5 (Truth Table for $(p \wedge q) \vee \sim r$).** With $n$ variables there are $2^n$ combinations of truth values, so three variables need eight rows. The customary order for three variables fills the $p$ column with four T's and then four F's, the $q$ column with alternating pairs of T's and F's, and the $r$ column with alternating single T's and F's. After filling the $p \wedge q$ and $\sim r$ columns, put F only in rows 3, 5, and 7, where both $p \wedge q$ and $\sim r$ are F, because a disjunction is false only when both components are false.
+**Example 2.1.5 (Truth Table for $`(p \wedge q) \vee \sim r`$).** With $n$ variables there are $2^n$ combinations of truth values, so three variables need eight rows. The customary order for three variables fills the $p$ column with four T's and then four F's, the $q$ column with alternating pairs of T's and F's, and the $r$ column with alternating single T's and F's. After filling the $p \wedge q$ and $\sim r$ columns, put F only in rows 3, 5, and 7, where both $p \wedge q$ and $\sim r$ are F, because a disjunction is false only when both components are false.
 
 | $p$ | $q$ | $r$ | $p \wedge q$ | $\sim r$ | $(p \wedge q) \vee \sim r$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -255,7 +255,7 @@ The result is T exactly when $p$ and $q$ have different truth values. Exclusive 
 | F | F | T | F | F | F |
 | F | F | F | F | T | T |
 
-*Table 6. Truth table for $(p \wedge q) \vee \sim r$*
+*Table 6. $`(p \wedge q) \vee \sim r`$: truth table*
 
 > **Key Point:** Thanks to the rules for truth values, once the truth values of the components are known, logic alone settles the truth value of a compound statement. Logic cannot say whether the components themselves are true; its role is to combine separately known facts into one consistent judgment.
 
@@ -272,7 +272,7 @@ The result is T exactly when $p$ and $q$ have different truth values. Exclusive 
 | F | T | F | F |
 | F | F | F | F |
 
-*Table 7. $p \wedge q$ and $q \wedge p$, which agree in every row*
+*Table 7. Truth table of $`p \wedge q`$ and $`q \wedge p`$, which agree in every row*
 
 > **Definition:** Two statement forms are **logically equivalent** if, and only if, every substitution of statements for their statement variables gives the two forms the same truth value. When statement forms $P$ and $Q$ are logically equivalent, this is written $P \equiv Q$. Two statements are logically equivalent if, and only if, their forms are logically equivalent when each occurrence of the same component statement is replaced by the same statement variable.
 
@@ -290,7 +290,7 @@ The result is T exactly when $p$ and $q$ have different truth values. Exclusive 
 | T | F | T |
 | F | T | F |
 
-*Table 8. $\sim(\sim p)$, which has the same truth values as $p$*
+*Table 8. Truth table of $`\sim(\sim p)`$ and $`p`$, which have the same truth values*
 
 **Two ways to show nonequivalence.** One is to find a row of the truth table in which the two statement forms differ; the other is to find concrete statements that make one form true and the other false.
 
@@ -305,9 +305,9 @@ The result is T exactly when $p$ and $q$ have different truth values. Exclusive 
 | F | T | T | F | F | T | F |
 | F | F | T | T | F | T | T |
 
-*Table 9. $\sim(p \wedge q)$ and $\sim p \wedge \sim q$, which differ in rows 2 and 3*
+*Table 9. Truth table of $`\sim(p \wedge q)`$ and $`\sim p \wedge \sim q`$, which differ in rows 2 and 3*
 
-(b) With a concrete example, let $p$ be "$0 < 1$" and $q$ be "$1 < 0$." Then $\sim(p \wedge q)$ is "It is not the case that both $0 < 1$ and $1 < 0$," which is true, whereas $\sim p \wedge \sim q$ is "$0 \not< 1$ and $1 \not< 0$," which is false. Since some substitution makes one form true and the other false, the forms are not logically equivalent.
+(b) With a concrete example, let $p$ be "$`0 < 1`$" and $q$ be "$`1 < 0`$." Then $\sim(p \wedge q)$ is "It is not the case that both $0 < 1$ and $1 < 0$," which is true, whereas $\sim p \wedge \sim q$ is "$`0 \not< 1`$ and $1 \not< 0$," which is false. Since some substitution makes one form true and the other false, the forms are not logically equivalent.
 
 **De Morgan's laws.** The statement "John is tall and Jim is redheaded" is true only when both of its parts are true. It is therefore false as soon as at least one part is false, so its negation is "John is not tall or Jim is not redheaded." In general, negating a conjunction of two statements gives a statement logically equivalent to the disjunction of the two negations. The last two columns of the following table agree in every row, so $\sim(p \wedge q) \equiv \sim p \vee \sim q$.
 
@@ -318,7 +318,7 @@ The result is T exactly when $p$ and $q$ have different truth values. Exclusive 
 | F | T | T | F | F | T | T |
 | F | F | T | T | F | T | T |
 
-*Table 10. Verification of De Morgan's law $\sim(p \wedge q) \equiv \sim p \vee \sim q$*
+*Table 10. De Morgan's law $`\sim(p \wedge q) \equiv \sim p \vee \sim q`$: verification*
 
 The same method shows that the negation of a disjunction is logically equivalent to the conjunction of the negations.
 
@@ -329,34 +329,36 @@ The same method shows that the negation of a disjunction is logically equivalent
 | F | T | T | F | T | F | F |
 | F | F | T | T | F | T | T |
 
-*Table 11. Verification of De Morgan's law $\sim(p \vee q) \equiv \sim p \wedge \sim q$*
+*Table 11. De Morgan's law $`\sim(p \vee q) \equiv \sim p \wedge \sim q`$: verification*
 
 > **Key Point:** **De Morgan's laws** are the following two equivalences: the negation of an and statement is logically equivalent to the or of the negated components, and the negation of an or statement is logically equivalent to the and of the negated components.
 >
-> $$\sim(p \wedge q) \equiv \sim p \vee \sim q, \qquad \sim(p \vee q) \equiv \sim p \wedge \sim q$$
+> ```math
+> \sim(p \wedge q) \equiv \sim p \vee \sim q, \qquad \sim(p \vee q) \equiv \sim p \wedge \sim q
+> ```
 
 The laws are named after Augustus De Morgan, who first stated them in formal mathematical terms.
 
 **Example 2.1.9 (Applying De Morgan's Laws).** Write negations of the following statements.
 
 - (a) "John is 180 centimeters tall and he weighs at least 90 kilograms" has the form $p \wedge q$, so its negation has the form $\sim p \vee \sim q$: "John is not 180 centimeters tall or he weighs less than 90 kilograms."
-- (b) "The bus was late or Tom's watch was slow" has the form $p \vee q$, so its negation has the form $\sim p \wedge \sim q$: "The bus was not late and Tom's watch was not slow." Since "neither $p$ nor $q$" means "$\sim p$ and $\sim q$," another answer is "Neither was the bus late nor was Tom's watch slow."
+- (b) "The bus was late or Tom's watch was slow" has the form $p \vee q$, so its negation has the form $\sim p \wedge \sim q$: "The bus was not late and Tom's watch was not slow." Since "neither $p$ nor $q$" means "$`\sim p`$ and $\sim q$," another answer is "Neither was the bus late nor was Tom's watch slow."
 
 **Negating inequalities.** For a particular real number $x$, $x \not< 2$ ($x$ is not less than 2) says that on the number line $x$ is not to the left of 2, so $x$ either equals 2 or lies to its right. Hence $x \not< 2$ is equivalent to $x \geq 2$. Similarly, $x \not> 2$ is equivalent to $x \leq 2$, $x \not\leq 2$ to $x > 2$, and $x \not\geq 2$ to $x < 2$. Part (a) of the figure below shows the region where $x \not> 2$.
 
-**Example 2.1.10 (Inequalities and De Morgan's Laws).** Use De Morgan's laws to write the negation of $-1 < x \leq 4$. The given statement is equivalent to "$-1 < x$ and $x \leq 4$," so by De Morgan's laws its negation is "$-1 \not< x$ or $x \not\leq 4$," which is equivalent to "$-1 \geq x$ or $x > 4$." The shaded region in part (b) of the figure below contains exactly the $x$ that satisfy this negation.
+**Example 2.1.10 (Inequalities and De Morgan's Laws).** Use De Morgan's laws to write the negation of $-1 < x \leq 4$. The given statement is equivalent to "$`-1 < x`$ and $x \leq 4$," so by De Morgan's laws its negation is "$`-1 \not< x`$ or $x \not\leq 4$," which is equivalent to "$`-1 \geq x`$ or $x > 4$." The shaded region in part (b) of the figure below contains exactly the $x$ that satisfy this negation.
 
 ![Figure 1. (a) Real numbers that are not greater than 2 and (b) real numbers with −1 ≥ x or x > 4](../../images/Ch02_Number-Lines.png)
 
 *Figure 1. (a) Real numbers that are not greater than 2 and (b) real numbers with −1 ≥ x or x > 4*
 
-> **Caution:** The negation of $-1 < x \leq 4$ is not $-1 \not< x \not\leq 4$, and it is not $-1 \geq x > 4$ either. A chain of inequalities means "and," so $-1 \geq x > 4$ would mean "$-1 \geq x$ and $x > 4$," which no real number satisfies. The negation is two inequalities joined by "or."
+> **Caution:** The negation of $-1 < x \leq 4$ is not $-1 \not< x \not\leq 4$, and it is not $-1 \geq x > 4$ either. A chain of inequalities means "and," so $-1 \geq x > 4$ would mean "$`-1 \geq x`$ and $x > 4$," which no real number satisfies. The negation is two inequalities joined by "or."
 
 De Morgan's laws are often used in writing programs. For instance, to delete all files modified outside the range from date 1 through date 2 inclusive, a program uses the following equivalence.
 
-$$
+```math
 \sim(\text{date1} \leq \text{date} \leq \text{date2}) \equiv (\text{date} < \text{date1}) \vee (\text{date2} < \text{date})
-$$
+```
 
 **Example 2.1.11 (A Cautionary Case).** De Morgan's laws turn $p$: "Jim is tall and Jim is thin" into the negation $\sim p$: "Jim is not tall or Jim is not thin." If $p$ is shortened to "Jim is tall and thin" and its negation is written "Jim is not tall and thin," the negation looks like an and statement, as if De Morgan's laws had been broken. They have not. Formal logic lets and and or connect only complete statements, never sentence fragments, and "tall and thin" is a fragment. Before De Morgan's laws can be applied, the statement must be expanded into the two complete statements "Jim is tall" and "Jim is thin."
 
@@ -368,14 +370,14 @@ $$
 
 A tautological statement is true, and a contradictory statement is false, purely because of its logical structure; what the statement is about makes no difference. In this chapter a tautology is denoted by a bold $\mathbf{t}$ and a contradiction by a bold $\mathbf{c}$.
 
-**Example 2.1.12 (Tautologies and Contradictions).** In the table below the $p \vee \sim p$ column is all T's, so it is a tautology, and the $p \wedge \sim p$ column is all F's, so it is a contradiction. Every statement is true or false, so "$p$ or not $p$" is always true, and no statement is both true and false, so "$p$ and not $p$" is always false.
+**Example 2.1.12 (Tautologies and Contradictions).** In the table below the $p \vee \sim p$ column is all T's, so it is a tautology, and the $p \wedge \sim p$ column is all F's, so it is a contradiction. Every statement is true or false, so "$`p`$ or not $p$" is always true, and no statement is both true and false, so "$`p`$ and not $p$" is always false.
 
 | $p$ | $\sim p$ | $p \vee \sim p$ | $p \wedge \sim p$ |
 |:-:|:-:|:-:|:-:|
 | T | F | T | F |
 | F | T | T | F |
 
-*Table 12. Truth table for the tautology $p \vee \sim p$ and the contradiction $p \wedge \sim p$*
+*Table 12. Tautology $`p \vee \sim p`$ and contradiction $`p \wedge \sim p`$: truth table*
 
 **Example 2.1.13 (Logical Equivalences Involving Tautologies and Contradictions).** If $\mathbf{t}$ is a tautology and $\mathbf{c}$ is a contradiction, then $p \wedge \mathbf{t} \equiv p$ and $p \wedge \mathbf{c} \equiv \mathbf{c}$. Since $\mathbf{t}$ is T in every row and $\mathbf{c}$ is F in every row, the following table results.
 
@@ -384,7 +386,7 @@ A tautological statement is true, and a contradictory statement is false, purely
 | T | T | T | F | F |
 | F | T | F | F | F |
 
-*Table 13. Verification of $p \wedge \mathbf{t} \equiv p$ and $p \wedge \mathbf{c} \equiv \mathbf{c}$*
+*Table 13. $`p \wedge \mathbf{t} \equiv p`$ and $`p \wedge \mathbf{c} \equiv \mathbf{c}`$: verification*
 
 The $p \wedge \mathbf{t}$ column equals the $p$ column, and the $p \wedge \mathbf{c}$ column equals the $\mathbf{c}$ column.
 
@@ -423,7 +425,7 @@ Knowing logical equivalences makes arguments easier to build. It often happens t
 | F | F | T | T | F | F | F | F |
 | F | F | F | F | F | F | F | F |
 
-*Table 15. Verification of the distributive law $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$*
+*Table 15. Distributive law $`p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)`$: verification*
 
 The absorption laws are checked in the same way. In the table below the $p \vee (p \wedge q)$ and $p \wedge (p \vee q)$ columns both equal the $p$ column. Intuitively, $p \vee (p \wedge q)$ is true when $p$ is true, and when $p$ is false, $p \wedge q$ is also false, so the whole is false.
 
@@ -442,7 +444,7 @@ All the other laws can be derived from the first five (the commutative, associat
 
 **Example 2.1.14 (Simplifying a Statement Form).** Use the laws of logical equivalence to show that $\sim(\sim p \wedge q) \wedge (p \vee q) \equiv p$. Each time part of the left-hand form is replaced by a logically equivalent expression, the whole remains logically equivalent, so replacements continue until the right-hand form appears.
 
-$$
+```math
 \begin{aligned}
 \sim(\sim p \wedge q) \wedge (p \vee q) &\equiv (\sim(\sim p) \vee \sim q) \wedge (p \vee q) && \text{by De Morgan's laws} \\
 &\equiv (p \vee \sim q) \wedge (p \vee q) && \text{by the double negative law} \\
@@ -451,7 +453,7 @@ $$
 &\equiv p \vee \mathbf{c} && \text{by the negation law} \\
 &\equiv p && \text{by the identity law}
 \end{aligned}
-$$
+```
 
 The third line reads the second distributive law $p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)$ from right to left with $\sim q$ in place of $q$ and $q$ in place of $r$. Skill in such simplification is useful in writing logically efficient programs and in designing digital logic circuits (Section 4).
 
@@ -471,7 +473,7 @@ For statements $p$ and $q$, a sentence of the form "If $p$ then $q$" is denoted 
 
 To make $p \to q$ a statement, its truth values must be fixed just as they were for $\wedge$ and $\vee$, and the choice follows everyday usage. Imagine that a shop owner tells a job applicant, "If you show up for work Monday morning, then you will get the job." The owner can be accused of breaking the promise only if the applicant comes in on Monday morning and is not hired. The promise describes what happens when its condition (coming in on Monday morning) is met and is silent about the case in which the condition is not met, so in that case it cannot be called false, whether the applicant is hired or not. Hence a conditional is false in exactly one situation, a true hypothesis with a false conclusion, and since each row of a truth table must hold T or F, every other row holds T.
 
-> **Definition:** If $p$ and $q$ are statement variables, the **conditional statement** $p \to q$ is "If $p$ then $q$" or "$p$ implies $q$." It is false when $p$ is true and $q$ is false, and true in every other case. The statement $p$ is the hypothesis (or **antecedent**) of the conditional, and $q$ is its conclusion (or **consequent**).
+> **Definition:** If $p$ and $q$ are statement variables, the **conditional statement** $p \to q$ is "If $p$ then $q$" or "$`p`$ implies $q$." It is false when $p$ is true and $q$ is false, and true in every other case. The statement $p$ is the hypothesis (or **antecedent**) of the conditional, and $q$ is its conclusion (or **consequent**).
 
 | $p$ | $q$ | $p \to q$ |
 |:-:|:-:|:-:|
@@ -480,17 +482,17 @@ To make $p \to q$ a statement, its truth values must be fixed just as they were 
 | F | T | T |
 | F | F | T |
 
-*Table 17. Truth table for the conditional $p \to q$*
+*Table 17. Conditional $`p \to q`$: truth table*
 
 A conditional that is true only because its hypothesis is false is said to be **vacuously true**, or true by default. The shop owner's promise, for example, is vacuously true when the applicant never comes in on Monday morning. In general, an if-then statement whose "if" part is false is true as a whole, regardless of the truth value of its conclusion.
 
 **Example 2.2.1 (A Conditional Statement with a False Hypothesis).** "If $0 = 1$ then $1 = 2$" looks odd, yet it is true because its hypothesis $0 = 1$ is false. In fact, assuming $0 = 1$ and adding 1 to both sides does yield $1 = 2$.
 
-> **Note:** The philosopher W. V. O. Quine advised against reading $p \to q$ as "$p$ implies $q$," because the word "implies" suggests that $q$ can be logically deduced from $p$, which is often not the case. The phrase is still widely used as a convenient replacement for the symbol $\to$.
+> **Note:** The philosopher W. V. O. Quine advised against reading $p \to q$ as "$`p`$ implies $q$," because the word "implies" suggests that $q$ can be logically deduced from $p$, which is often not the case. The phrase is still widely used as a convenient replacement for the symbol $\to$.
 
 **Order of operations.** In an expression that contains $\to$ together with $\wedge$, $\vee$, and $\sim$, the $\to$ is performed last. That is, $\sim$ is performed first, then $\wedge$ and $\vee$, and finally $\to$.
 
-**Example 2.2.2 (Truth Table for $p \vee \sim q \to \sim p$).** By the order of operations this expression means $(p \vee (\sim q)) \to (\sim p)$, so the hypothesis is $p \vee \sim q$ and the conclusion is $\sim p$. List the four combinations of $p$ and $q$, fill the $\sim p$ and $\sim q$ columns by the definition of negation, and fill the $p \vee \sim q$ column by the definition of $\vee$. Finally, put F in rows 1 and 2, where the hypothesis $p \vee \sim q$ is T and the conclusion $\sim p$ is F, and T in the other two rows.
+**Example 2.2.2 (Truth Table for $`p \vee \sim q \to \sim p`$).** By the order of operations this expression means $(p \vee (\sim q)) \to (\sim p)$, so the hypothesis is $p \vee \sim q$ and the conclusion is $\sim p$. List the four combinations of $p$ and $q$, fill the $\sim p$ and $\sim q$ columns by the definition of negation, and fill the $p \vee \sim q$ column by the definition of $\vee$. Finally, put F in rows 1 and 2, where the hypothesis $p \vee \sim q$ is T and the conclusion $\sim p$ is F, and T in the other two rows.
 
 | $p$ | $q$ | $\sim p$ | $\sim q$ | $p \vee \sim q$ | $p \vee \sim q \to \sim p$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -499,13 +501,13 @@ A conditional that is true only because its hypothesis is false is said to be **
 | F | T | T | F | F | T |
 | F | F | T | T | T | T |
 
-*Table 18. Truth table for $p \vee \sim q \to \sim p$*
+*Table 18. $`p \vee \sim q \to \sim p`$: truth table*
 
 ### 2.2 Logical Equivalences Involving Conditionals
 
 Suppose that for three statements $p$, $q$, and $r$ it is known that $r$ is true whenever $p$ is true and also whenever $q$ is true. Then $r$ must hold no matter whether $p$ or $q$ is the case. The method of analysis by division into cases is based on this idea.
 
-**Example 2.2.3 (Division into Cases, $p \vee q \to r \equiv (p \to r) \wedge (q \to r)$).** List the eight combinations of truth values and fill the $p \vee q$, $p \to r$, and $q \to r$ columns by the definitions of or and if-then. For example, the $p \to r$ column is F in rows 2 and 4, where $p$ is true and $r$ is false. The $p \vee q \to r$ column is F in rows 2, 4, and 6, where the hypothesis $p \vee q$ is true and the conclusion $r$ is false, and T in the other rows. The last two columns agree in every row, so the two statement forms are logically equivalent.
+**Example 2.2.3 (Division into Cases, $`p \vee q \to r \equiv (p \to r) \wedge (q \to r)`$).** List the eight combinations of truth values and fill the $p \vee q$, $p \to r$, and $q \to r$ columns by the definitions of or and if-then. For example, the $p \to r$ column is F in rows 2 and 4, where $p$ is true and $r$ is false. The $p \vee q \to r$ column is F in rows 2, 4, and 6, where the hypothesis $p \vee q$ is true and the conclusion $r$ is false, and T in the other rows. The last two columns agree in every row, so the two statement forms are logically equivalent.
 
 | $p$ | $q$ | $r$ | $p \vee q$ | $p \to r$ | $q \to r$ | $p \vee q \to r$ | $(p \to r) \wedge (q \to r)$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -518,15 +520,15 @@ Suppose that for three statements $p$, $q$, and $r$ it is known that $r$ is true
 | F | F | T | F | T | T | T | T |
 | F | F | F | F | T | T | T | T |
 
-*Table 19. Logical equivalence of $p \vee q \to r$ and $(p \to r) \wedge (q \to r)$*
+*Table 19. $`p \vee q \to r`$ and $`(p \to r) \wedge (q \to r)`$: logical equivalence*
 
 ### 2.3 Representation of If-Then as Or
 
 "If $p$ then $q$" is logically equivalent to "not $p$ or $q$."
 
-$$
+```math
 p \to q \equiv \sim p \vee q
-$$
+```
 
 In the truth table below the $p \to q$ and $\sim p \vee q$ columns agree in every row, because both are F only in row 2, where $p$ is T and $q$ is F.
 
@@ -537,27 +539,27 @@ In the truth table below the $p \to q$ and $\sim p \vee q$ columns agree in ever
 | F | T | T | T | T |
 | F | F | T | T | T |
 
-*Table 20. Verification of $p \to q \equiv \sim p \vee q$*
+*Table 20. $`p \to q \equiv \sim p \vee q`$: verification*
 
-**Example 2.2.4 (Applying the Equivalence between $\sim p \vee q$ and $p \to q$).** Rewrite "Either you get to work on time or you are fired" in if-then form. Take $\sim p$ to be "You get to work on time" and $q$ to be "You are fired," so the sentence has the form $\sim p \vee q$. Then $p$ says "You do not get to work on time," and the equivalent form $p \to q$ reads "If you do not get to work on time, then you are fired."
+**Example 2.2.4 (Applying the Equivalence between $\sim p \vee q$ and $`p \to q`$).** Rewrite "Either you get to work on time or you are fired" in if-then form. Take $\sim p$ to be "You get to work on time" and $q$ to be "You are fired," so the sentence has the form $\sim p \vee q$. Then $p$ says "You do not get to work on time," and the equivalent form $p \to q$ reads "If you do not get to work on time, then you are fired."
 
 ### 2.4 The Negation of a Conditional Statement
 
-By definition, $p \to q$ is false if, and only if, its hypothesis $p$ is true and its conclusion $q$ is false. Hence the negation of "if $p$ then $q$" is logically equivalent to "$p$ and not $q$."
+By definition, $p \to q$ is false if, and only if, its hypothesis $p$ is true and its conclusion $q$ is false. Hence the negation of "if $p$ then $q$" is logically equivalent to "$`p`$ and not $q$."
 
-$$
+```math
 \sim(p \to q) \equiv p \wedge \sim q
-$$
+```
 
 The same result follows by negating both sides of the equivalence $p \to q \equiv \sim p \vee q$ of Section 2.3.
 
-$$
+```math
 \begin{aligned}
 \sim(p \to q) &\equiv \sim(\sim p \vee q) && \text{by the equivalence of Section 2.3} \\
 &\equiv \sim(\sim p) \wedge (\sim q) && \text{by De Morgan's laws} \\
 &\equiv p \wedge \sim q && \text{by the double negative law}
 \end{aligned}
-$$
+```
 
 A truth table confirms it as well: the $\sim(p \to q)$ and $p \wedge \sim q$ columns agree in every row.
 
@@ -568,7 +570,7 @@ A truth table confirms it as well: the $\sim(p \to q)$ and $p \wedge \sim q$ col
 | F | T | T | F | F | F |
 | F | F | T | F | T | F |
 
-*Table 21. Verification of $\sim(p \to q) \equiv p \wedge \sim q$*
+*Table 21. $`\sim(p \to q) \equiv p \wedge \sim q`$: verification*
 
 **Example 2.2.5 (Negations of If-Then Statements).** Write negations of the following statements.
 
@@ -621,7 +623,7 @@ A conditional statement has two further variants, and neither is logically equiv
 > **Key Point:** The table above shows the following three facts.
 > 1. A conditional statement and its converse are not logically equivalent (they differ in rows 2 and 3).
 > 2. A conditional statement and its inverse are not logically equivalent (they differ in rows 2 and 3).
-> 3. The converse and the inverse of a conditional statement are logically equivalent to each other, because the inverse is the contrapositive of the converse (the contrapositive of $q \to p$ is $\sim p \to \sim q$).
+> 3. The converse and the inverse of a conditional statement are logically equivalent to each other, because the inverse is the contrapositive of the converse (the contrapositive of $q \to p$ is $`\sim p \to \sim q`$).
 
 ```mermaid
 graph LR
@@ -637,18 +639,18 @@ graph LR
 
 ### 2.7 Only If and the Biconditional
 
-"$p$ only if $q$" says that $p$ cannot happen unless $q$ happens as well. In other words, if $q$ fails to happen, then $p$ cannot happen either. By the equivalence with the contrapositive, this amounts to saying that whenever $p$ happens, $q$ must happen too.
+"$`p`$ only if $q$" says that $p$ cannot happen unless $q$ happens as well. In other words, if $q$ fails to happen, then $p$ cannot happen either. By the equivalence with the contrapositive, this amounts to saying that whenever $p$ happens, $q$ must happen too.
 
-> **Definition:** If $p$ and $q$ are statements, "$p$ only if $q$" means "if not $q$ then not $p$," or, equivalently, "if $p$ then $q$."
+> **Definition:** If $p$ and $q$ are statements, "$`p`$ only if $q$" means "if not $q$ then not $p$," or, equivalently, "if $p$ then $q$."
 
-**Example 2.2.8 (Converting Only If to If-Then).** Rewrite "John will break the world's record for the 1,000-meter run only if he runs the 1,000 meters in under 2.5 minutes" in two if-then forms, one the contrapositive of the other. With $p$ for "John breaks the world's record" and $q$ for "John runs the 1,000 meters in under 2.5 minutes," the sentence is "$p$ only if $q$."
+**Example 2.2.8 (Converting Only If to If-Then).** Rewrite "John will break the world's record for the 1,000-meter run only if he runs the 1,000 meters in under 2.5 minutes" in two if-then forms, one the contrapositive of the other. With $p$ for "John breaks the world's record" and $q$ for "John runs the 1,000 meters in under 2.5 minutes," the sentence is "$`p`$ only if $q$."
 
-- First form ($\sim q \to \sim p$): If John does not run the 1,000 meters in under 2.5 minutes, then he will not break the world's record.
-- Second form ($p \to q$): If John breaks the world's record, then he will have run the 1,000 meters in under 2.5 minutes.
+- First form ($`\sim q \to \sim p`$): If John does not run the 1,000 meters in under 2.5 minutes, then he will not break the world's record.
+- Second form ($`p \to q`$): If John breaks the world's record, then he will have run the 1,000 meters in under 2.5 minutes.
 
-> **Caution:** "$p$ only if $q$" does not mean "$p$ if $q$" (that is, $q \to p$). Saying that John can break the record only if he runs under 2.5 minutes does not mean that he breaks the record if he runs under 2.5 minutes. If the record is well below 2.5 minutes, a time under 2.5 minutes may still not be fast enough. So "$p$ only if $q$" can be true while "$p$ if $q$" is false.
+> **Caution:** "$`p`$ only if $q$" does not mean "$`p`$ if $q$" (that is, $`q \to p`$). Saying that John can break the record only if he runs under 2.5 minutes does not mean that he breaks the record if he runs under 2.5 minutes. If the record is well below 2.5 minutes, a time under 2.5 minutes may still not be fast enough. So "$`p`$ only if $q$" can be true while "$`p`$ if $q$" is false.
 
-> **Definition:** Given statement variables $p$ and $q$, the **biconditional** of $p$ and $q$ is "$p$ if, and only if, $q$" and is denoted $p \leftrightarrow q$. It is true if $p$ and $q$ have the same truth value and false if they have opposite truth values. The words "if and only if" are often abbreviated **iff**.
+> **Definition:** Given statement variables $p$ and $q$, the **biconditional** of $p$ and $q$ is "$`p`$ if, and only if, $q$" and is denoted $p \leftrightarrow q$. It is true if $p$ and $q$ have the same truth value and false if they have opposite truth values. The words "if and only if" are often abbreviated **iff**.
 
 | $p$ | $q$ | $p \leftrightarrow q$ |
 |:-:|:-:|:-:|
@@ -657,7 +659,7 @@ graph LR
 | F | T | F |
 | F | F | T |
 
-*Table 23. Truth table for the biconditional $p \leftrightarrow q$*
+*Table 23. Biconditional $`p \leftrightarrow q`$: truth table*
 
 In the order of operations $\leftrightarrow$ has the same rank as $\to$, so, as with $\wedge$ and $\vee$, parentheses are the only means of fixing which of the two is applied first. The complete order of the five logical operators is as follows.
 
@@ -669,11 +671,11 @@ In the order of operations $\leftrightarrow$ has the same rank as $\to$, so, as 
 
 *Table 24. Order of operations for the logical operators*
 
-Given what "if" and "only if" each mean, "$p$ if, and only if, $q$" ought to say the same thing as "$p$ if $q$" together with "$p$ only if $q$." The following table confirms this.
+Given what "if" and "only if" each mean, "$`p`$ if, and only if, $q$" ought to say the same thing as "$`p`$ if $q$" together with "$`p`$ only if $q$." The following table confirms this.
 
-$$
+```math
 p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)
-$$
+```
 
 | $p$ | $q$ | $p \to q$ | $q \to p$ | $p \leftrightarrow q$ | $(p \to q) \wedge (q \to p)$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -682,7 +684,7 @@ $$
 | F | T | T | F | F | F |
 | F | F | T | T | T | T |
 
-*Table 25. Verification of $p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)$*
+*Table 25. $`p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)`$: verification*
 
 **Example 2.2.9 (If and Only If).** The sentence "This program is correct if, and only if, it produces correct answers for every possible set of input data" splits into the conjunction of two if-then statements: "If this program is correct, then it produces correct answers for every possible set of input data, and if this program produces correct answers for every possible set of input data, then it is correct."
 
@@ -691,10 +693,10 @@ $$
 In careful formal usage, the expressions necessary condition and sufficient condition mean exactly what their logical definitions say.
 
 > **Definition:** If $r$ and $s$ are statements:
-> - "$r$ is a **sufficient condition** for $s$" means "if $r$ then $s$" ($r \to s$).
-> - "$r$ is a **necessary condition** for $s$" means "if not $r$ then not $s$" ($\sim r \to \sim s$).
+> - "$`r`$ is a **sufficient condition** for $s$" means "if $r$ then $s$" ($`r \to s`$).
+> - "$`r`$ is a **necessary condition** for $s$" means "if not $r$ then not $s$" ($`\sim r \to \sim s`$).
 
-To say that $r$ is a sufficient condition for $s$ means that the occurrence of $r$ guarantees the occurrence of $s$. To say that $r$ is a necessary condition for $s$ means that if $r$ does not occur, then $s$ cannot occur either; that is, $r$ must occur for $s$ to occur. By the equivalence of a conditional and its contrapositive, "$r$ is a necessary condition for $s$" also means "if $s$ then $r$" ($s \to r$). Consequently, "$r$ is a necessary and sufficient condition for $s$" means "$r$ if, and only if, $s$" ($r \leftrightarrow s$).
+To say that $r$ is a sufficient condition for $s$ means that the occurrence of $r$ guarantees the occurrence of $s$. To say that $r$ is a necessary condition for $s$ means that if $r$ does not occur, then $s$ cannot occur either; that is, $r$ must occur for $s$ to occur. By the equivalence of a conditional and its contrapositive, "$`r`$ is a necessary condition for $s$" also means "if $s$ then $r$" ($`s \to r`$). Consequently, "$`r`$ is a necessary and sufficient condition for $s$" means "$`r`$ if, and only if, $s$" ($`r \leftrightarrow s`$).
 
 **Example 2.2.10 (Interpreting Necessary and Sufficient Conditions).** In "If John is eligible to vote, then he is at least 18 years old," knowing that John is eligible to vote guarantees that he is at least 18, so the first condition is sufficient for the second. Conversely, being at least 18 is necessary for being eligible to vote, since a John younger than 18 could not vote.
 
@@ -702,8 +704,8 @@ To say that $r$ is a sufficient condition for $s$ means that the occurrence of $
 
 **Example 2.2.12 (Converting a Necessary Condition to If-Then Form).** Use the contrapositive to rewrite "George's attaining age 35 is a necessary condition for his being president of the United States" in two ways. Let $r$ be "George has attained age 35" and $s$ be "George can be president of the United States."
 
-- First form ($\sim r \to \sim s$): If George has not attained the age of 35, then he cannot be president of the United States.
-- Second form ($s \to r$): If George can be president of the United States, then he has attained the age of 35.
+- First form ($`\sim r \to \sim s`$): If George has not attained the age of 35, then he cannot be president of the United States.
+- Second form ($`s \to r`$): If George can be president of the United States, then he has attained the age of 35.
 
 Since many phrases express the same conditional statement, the following table collects them.
 
@@ -742,7 +744,7 @@ In mathematics and logic the word argument does not mean a quarrel; it means a l
 
 Section 1.1 showed that the logical form of an argument can be separated from what the argument is about. For example, the argument on the right has the abstract form on the left.
 
-$$
+```math
 \begin{array}{l}
 \text{If } p \text{ then } q. \\
 p \\
@@ -756,7 +758,7 @@ p \\
 \hline
 \therefore\ \text{Socrates is mortal.}
 \end{array}
-$$
+```
 
 In the abstract form, $p$ and $q$ are placeholders into which statements can be substituted. An argument form is valid if, and only if, every substitution that makes all the premises true also makes the conclusion true.
 
@@ -774,14 +776,14 @@ What matters about a valid argument is that its form alone forces the conclusion
 
 **Example 2.3.1 (Determining Validity or Invalidity).** Determine with a truth table whether the following argument form is valid.
 
-$$
+```math
 \begin{array}{l}
 p \to q \vee \sim r \\
 q \to p \wedge r \\
 \hline
 \therefore\ p \to r
 \end{array}
-$$
+```
 
 The premises are $p \to q \vee \sim r$ and $q \to p \wedge r$, and the conclusion is $p \to r$. By the order of operations the first premise is $p \to (q \vee \sim r)$ and the second is $q \to (p \wedge r)$. Fill the intermediate columns $\sim r$, $q \vee \sim r$, and $p \wedge r$ first, then the columns for the premises and the conclusion.
 
@@ -804,19 +806,19 @@ Rows 1, 7, and 8 make every premise and the conclusion true, but row 4 ($p$ T, $
 
 An argument form with exactly two premises and one conclusion is a **syllogism**; its first premise is the major premise and its second the minor premise. The most famous syllogism is **modus ponens**.
 
-$$
+```math
 \begin{array}{l}
 \text{If } p \text{ then } q. \\
 p \\
 \hline
 \therefore\ q
 \end{array}
-$$
+```
 
 Modus ponens is Latin for "method of affirming"; the conclusion is an affirmation. Here are arguments of this form.
 
-- If it rains, the ground is wet ($p \to q$). It rains ($p$). Therefore, the ground is wet ($q$).
-- If the sum of the digits of 371,487 is divisible by 3, then 371,487 is divisible by 3. The sum of the digits of 371,487 is divisible by 3 ($3 + 7 + 1 + 4 + 8 + 7 = 30$). Therefore, 371,487 is divisible by 3.
+- If it rains, the ground is wet ($`p \to q`$). It rains ($`p`$). Therefore, the ground is wet ($`q`$).
+- If the sum of the digits of 371,487 is divisible by 3, then 371,487 is divisible by 3. The sum of the digits of 371,487 is divisible by 3 ($`3 + 7 + 1 + 4 + 8 + 7 = 30`$). Therefore, 371,487 is divisible by 3.
 
 Modus ponens is accepted intuitively even before truth tables are known, but a truth table proof confirms that the formal definition of validity agrees with intuition.
 
@@ -833,21 +835,21 @@ Only the first row makes both premises true, and the conclusion is true in that 
 
 Another valid argument form is **modus tollens**.
 
-$$
+```math
 \begin{array}{l}
 \text{If } p \text{ then } q. \\
 \sim q \\
 \hline
 \therefore\ \sim p
 \end{array}
-$$
+```
 
 Modus tollens is Latin for "method of denying"; the conclusion is a denial. Here are arguments of this form.
 
-- If it rains, the ground is wet ($p \to q$). The ground is not wet ($\sim q$). Therefore, it does not rain ($\sim p$).
+- If it rains, the ground is wet ($`p \to q`$). The ground is not wet ($`\sim q`$). Therefore, it does not rain ($`\sim p`$).
 - If Zeus is human, then Zeus is mortal. Zeus is not mortal. Therefore, Zeus is not human.
 
-Proof by contradiction gives an intuitive reason why modus tollens is valid. Assume that (1) "If Zeus is human, then Zeus is mortal" and (2) "Zeus is not mortal" both hold. Were Zeus human, (1) would make him mortal, contradicting (2); so Zeus is not human. Formally, the validity follows from modus ponens together with the equivalence of a conditional and its contrapositive ($p \to q \equiv \sim q \to \sim p$), and it can also be checked with the following truth table.
+Proof by contradiction gives an intuitive reason why modus tollens is valid. Assume that (1) "If Zeus is human, then Zeus is mortal" and (2) "Zeus is not mortal" both hold. Were Zeus human, (1) would make him mortal, contradicting (2); so Zeus is not human. Formally, the validity follows from modus ponens together with the equivalence of a conditional and its contrapositive ($`p \to q \equiv \sim q \to \sim p`$), and it can also be checked with the following truth table.
 
 | $p$ | $q$ | Premise $p \to q$ | Premise $\sim q$ | Conclusion $\sim p$ | Remark |
 |:-:|:-:|:-:|:-:|:-:|:-----|
@@ -877,21 +879,21 @@ Modus ponens and modus tollens are therefore rules of inference. The rules below
 
 **Generalization.** The following argument forms are valid.
 
-$$
+```math
 \text{(a)}\ \begin{array}{l} p \\ \hline \therefore\ p \vee q \end{array}
 \qquad\qquad
 \text{(b)}\ \begin{array}{l} q \\ \hline \therefore\ p \vee q \end{array}
-$$
+```
 
-The first form says that once $p$ is true, the more general statement "$p$ or $q$" is true for any statement $q$ whatsoever, because a disjunction needs only one true component. Suppose, for instance, that the job is to count the upperclassmen (juniors and seniors) of a school and word comes that Anton is a junior. One reasons, "Anton is a junior; hence, more generally, Anton is a junior or a senior," and because an upperclassman is a junior or a senior, Anton goes on the list.
+The first form says that once $p$ is true, the more general statement "$`p`$ or $q$" is true for any statement $q$ whatsoever, because a disjunction needs only one true component. Suppose, for instance, that the job is to count the upperclassmen (juniors and seniors) of a school and word comes that Anton is a junior. One reasons, "Anton is a junior; hence, more generally, Anton is a junior or a senior," and because an upperclassman is a junior or a senior, Anton goes on the list.
 
 **Specialization.** The following argument forms are valid.
 
-$$
+```math
 \text{(a)}\ \begin{array}{l} p \wedge q \\ \hline \therefore\ p \end{array}
 \qquad\qquad
 \text{(b)}\ \begin{array}{l} p \wedge q \\ \hline \therefore\ q \end{array}
-$$
+```
 
 They hold because a true conjunction has two true components. When things are sorted by one property, much more is usually known about them than that property, and the rest is set aside so that attention stays on the property that matters. Suppose, for instance, that a project needs a partner who knows graph algorithms and it turns out that Ana knows both numerical analysis and graph algorithms. One reasons, "Ana knows numerical analysis and Ana knows graph algorithms; hence, in particular, Ana knows graph algorithms," and asks Ana to join the project.
 
@@ -899,30 +901,30 @@ Mathematicians use generalization and specialization constantly to reshape known
 
 **Elimination.** The following argument forms are valid.
 
-$$
+```math
 \text{(a)}\ \begin{array}{l} p \vee q \\ \sim q \\ \hline \therefore\ p \end{array}
 \qquad\qquad
 \text{(b)}\ \begin{array}{l} p \vee q \\ \sim p \\ \hline \therefore\ q \end{array}
-$$
+```
 
-These forms say that when only two possibilities exist and one of them is excluded, the other must hold. For instance, if it is known about a particular number $x$ that "$x - 3 = 0$ or $x + 2 = 0$" and also that $x$ is not negative, then $x \neq -2$, so $x + 2 \neq 0$, and elimination gives $x - 3 = 0$.
+These forms say that when only two possibilities exist and one of them is excluded, the other must hold. For instance, if it is known about a particular number $x$ that "$`x - 3 = 0`$ or $x + 2 = 0$" and also that $x$ is not negative, then $x \neq -2$, so $x + 2 \neq 0$, and elimination gives $x - 3 = 0$.
 
 **Transitivity.** The following argument form is valid.
 
-$$
+```math
 \begin{array}{l}
 p \to q \\
 q \to r \\
 \hline
 \therefore\ p \to r
 \end{array}
-$$
+```
 
 Mathematical arguments often string if-then statements together: if a first statement implies a second and the second implies a third, then the first implies the third. For instance, for a particular integer $n$, "If $n$ is divisible by 18, then $n$ is divisible by 9" and "If $n$ is divisible by 9, then the sum of the digits of $n$ is divisible by 9" give "If $n$ is divisible by 18, then the sum of the digits of $n$ is divisible by 9."
 
 **Proof by division into cases.** The following argument form is valid.
 
-$$
+```math
 \begin{array}{l}
 p \vee q \\
 p \to r \\
@@ -930,9 +932,9 @@ q \to r \\
 \hline
 \therefore\ r
 \end{array}
-$$
+```
 
-When at least one of two statements is known to be true and the same conclusion can be derived from each of them, that conclusion must be true. For instance, suppose $x$ is a particular nonzero real number. By the trichotomy property of the real numbers, every real number is positive, negative, or zero, so by elimination $x$ is positive or negative. One can then reason, "$x$ is positive or $x$ is negative. If $x$ is positive, then $x^2 > 0$. If $x$ is negative, then $x^2 > 0$. Therefore, $x^2 > 0$."
+When at least one of two statements is known to be true and the same conclusion can be derived from each of them, that conclusion must be true. For instance, suppose $x$ is a particular nonzero real number. By the trichotomy property of the real numbers, every real number is positive, negative, or zero, so by elimination $x$ is positive or negative. One can then reason, "$`x`$ is positive or $x$ is negative. If $x$ is positive, then $x^2 > 0$. If $x$ is negative, then $x^2 > 0$. Therefore, $x^2 > 0$."
 
 The validity of these rules is also checked with truth tables. For example, in the truth table for division into cases the critical rows, where all three premises are true, are rows 1, 3, and 5, and the conclusion $r$ is true in all three.
 
@@ -1002,25 +1004,25 @@ This section also examines two further fallacies, the converse error and the inv
 
 **Example 2.3.9 (Converse Error).** Show that the following argument is invalid.
 
-$$
+```math
 \begin{array}{l}
 \text{If Zeke is a cheater, then Zeke sits in the back row.} \\
 \text{Zeke sits in the back row.} \\
 \hline
 \therefore\ \text{Zeke is a cheater.}
 \end{array}
-$$
+```
 
 Most people sense at once that this argument is invalid. The first premise tells something about Zeke only in the case that he is a cheater and is silent otherwise. Picture someone who does not cheat but happens to sit in the back row; putting that person's name in place of Zeke makes the first premise vacuously true and the second premise true, while the conclusion is false. The general form of the argument and its truth table are as follows.
 
-$$
+```math
 \begin{array}{l}
 p \to q \\
 q \\
 \hline
 \therefore\ p
 \end{array}
-$$
+```
 
 | $p$ | $q$ | Premise $p \to q$ | Premise $q$ | Conclusion $p$ | Remark |
 |:-:|:-:|:-:|:-:|:-:|:-----|
@@ -1035,16 +1037,16 @@ The conclusion is false in the critical row 3, so the form is invalid. The concl
 
 **Example 2.3.10 (Inverse Error).** Consider the following argument.
 
-$$
+```math
 \begin{array}{l}
 \text{If these two vertices are adjacent, then they do not have the same color.} \\
 \text{These two vertices are not adjacent.} \\
 \hline
 \therefore\ \text{These two vertices have the same color.}
 \end{array}
-$$
+```
 
-The form of this argument is $p \to q$, $\sim p$, $\therefore\ \sim q$.
+The form of this argument is $p \to q$, $\sim p$, $`\therefore\ \sim q`$.
 
 | $p$ | $q$ | Premise $p \to q$ | Premise $\sim p$ | Conclusion $\sim q$ | Remark |
 |:-:|:-:|:-:|:-:|:-:|:-----|
@@ -1063,27 +1065,27 @@ The conclusion is false in the critical row 3, so the form is invalid. The concl
 
 **Example 2.3.11 (A Valid Argument with a False Premise and a False Conclusion).** The following argument is valid because it has the form of modus ponens, yet its major premise and its conclusion are both false.
 
-$$
+```math
 \begin{array}{l}
 \text{If Canada is north of the United States, then temperatures in Canada never rise above freezing.} \\
 \text{Canada is north of the United States.} \\
 \hline
 \therefore\ \text{Temperatures in Canada never rise above freezing.}
 \end{array}
-$$
+```
 
 "All birds can swim. Cats are birds. Therefore, cats can swim" is another argument with a valid form whose two premises are both false. Why such a form involving "all" is valid is explained in Chapter 3.
 
 **Example 2.3.12 (An Invalid Argument with True Premises and a True Conclusion).** The following argument is invalid because it commits the converse error, but its conclusion is true.
 
-$$
+```math
 \begin{array}{l}
 \text{If New York is a big city, then New York has tall buildings.} \\
 \text{New York has tall buildings.} \\
 \hline
 \therefore\ \text{New York is a big city.}
 \end{array}
-$$
+```
 
 > **Definition:** An argument is **sound** if, and only if, it is valid and every one of its premises is true; an argument that is not sound is unsound.
 
@@ -1108,13 +1110,13 @@ The concept of logical contradiction supports a technique of reasoning called th
 
 **Example 2.3.13 (Validity of the Contradiction Rule).** Show that the following argument form is valid, where $\mathbf{c}$ is a contradiction.
 
-$$
+```math
 \begin{array}{l}
 \sim p \to \mathbf{c} \\
 \hline
 \therefore\ p
 \end{array}
-$$
+```
 
 | $p$ | $\sim p$ | $\mathbf{c}$ | Premise $\sim p \to \mathbf{c}$ | Conclusion $p$ | Remark |
 |:-:|:-:|:-:|:-:|:-:|:-----|
@@ -1159,11 +1161,11 @@ The following table summarizes the most important rules of inference. In each ce
 
 | Rule | Form | Rule | Form |
 |:-----|:-----|:-----|:-----|
-| Modus ponens | $p \to q$<br>$p$<br>$\therefore\ q$ | Elimination | (a) $p \vee q$, $\sim q$, $\therefore\ p$<br>(b) $p \vee q$, $\sim p$, $\therefore\ q$ |
-| Modus tollens | $p \to q$<br>$\sim q$<br>$\therefore\ \sim p$ | Transitivity | $p \to q$<br>$q \to r$<br>$\therefore\ p \to r$ |
-| Generalization | (a) $p$, $\therefore\ p \vee q$<br>(b) $q$, $\therefore\ p \vee q$ | Proof by division into cases | $p \vee q$<br>$p \to r$<br>$q \to r$<br>$\therefore\ r$ |
-| Specialization | (a) $p \wedge q$, $\therefore\ p$<br>(b) $p \wedge q$, $\therefore\ q$ | Contradiction rule | $\sim p \to \mathbf{c}$<br>$\therefore\ p$ |
-| Conjunction | $p$<br>$q$<br>$\therefore\ p \wedge q$ | | |
+| Modus ponens | $p \to q$<br>$`p`$<br>$`\therefore\ q`$ | Elimination | (a) $p \vee q$, $\sim q$, $`\therefore\ p`$<br>(b) $p \vee q$, $\sim p$, $`\therefore\ q`$ |
+| Modus tollens | $p \to q$<br>$`\sim q`$<br>$`\therefore\ \sim p`$ | Transitivity | $p \to q$<br>$`q \to r`$<br>$`\therefore\ p \to r`$ |
+| Generalization | (a) $p$, $`\therefore\ p \vee q`$<br>(b) $q$, $`\therefore\ p \vee q`$ | Proof by division into cases | $p \vee q$<br>$`p \to r`$<br>$`q \to r`$<br>$`\therefore\ r`$ |
+| Specialization | (a) $p \wedge q$, $`\therefore\ p`$<br>(b) $p \wedge q$, $`\therefore\ q`$ | Contradiction rule | $\sim p \to \mathbf{c}$<br>$`\therefore\ p`$ |
+| Conjunction | $p$<br>$`q`$<br>$`\therefore\ p \wedge q`$ | | |
 
 *Table 36. Valid argument forms (rules of inference)*
 
@@ -1313,7 +1315,7 @@ For a circuit made of NOT-, AND-, and OR-gates, following what each gate does to
 
 **Example 2.4.3 (Finding a Boolean Expression for a Circuit).** Find Boolean expressions for the two circuits in the figure below. A black dot marks a point where two wires are joined; wires that cross with no dot do not touch.
 
-- (a) Trace the circuit from left to right, writing the output of each gate symbolically. The inputs $P$ and $Q$ are each split and fed to an OR-gate and an AND-gate, whose outputs are $P \vee Q$ and $P \wedge Q$. The NOT-gate changes $P \wedge Q$ to $\sim(P \wedge Q)$, and the final AND-gate receives $P \vee Q$ and $\sim(P \wedge Q)$, so the final expression is $(P \vee Q) \wedge \sim(P \wedge Q)$. This is the exclusive or of Section 1.5: "$P$ or $Q$ but not both."
+- (a) Trace the circuit from left to right, writing the output of each gate symbolically. The inputs $P$ and $Q$ are each split and fed to an OR-gate and an AND-gate, whose outputs are $P \vee Q$ and $P \wedge Q$. The NOT-gate changes $P \wedge Q$ to $\sim(P \wedge Q)$, and the final AND-gate receives $P \vee Q$ and $\sim(P \wedge Q)$, so the final expression is $(P \vee Q) \wedge \sim(P \wedge Q)$. This is the exclusive or of Section 1.5: "$`P`$ or $Q$ but not both."
 - (b) The first AND-gate outputs $P \wedge Q$, the NOT-gate outputs $\sim R$, and the AND-gate that receives both outputs $(P \wedge Q) \wedge \sim R$.
 
 ![Figure 9. (a) A circuit computing exclusive or and (b) a circuit computing (P ∧ Q) ∧ ∼R](../../images/Ch02_Circuit-to-Expression.png)
@@ -1383,12 +1385,12 @@ The preceding sections went from a circuit to its input/output table, from a cir
 *Table 43. The input/output table for which a circuit is designed*
 
 1. Identify the rows whose output is 1. In this table they are rows 1, 3, and 4.
-2. For each such row, construct an and expression that is 1 (true) for the exact input combination of that row and 0 (false) for all other combinations. The expression for row 1 ($P = 1$, $Q = 1$, $R = 1$) is $P \wedge Q \wedge R$. The expression for row 3 ($P = 1$, $Q = 0$, $R = 1$) is $P \wedge \sim Q \wedge R$, and the expression for row 4 ($P = 1$, $Q = 0$, $R = 0$) is $P \wedge \sim Q \wedge \sim R$. Each variable is written as it is when its value in the row is 1 and negated when its value is 0.
+2. For each such row, construct an and expression that is 1 (true) for the exact input combination of that row and 0 (false) for all other combinations. The expression for row 1 ($P = 1$, $Q = 1$, $`R = 1`$) is $P \wedge Q \wedge R$. The expression for row 3 ($P = 1$, $Q = 0$, $`R = 1`$) is $P \wedge \sim Q \wedge R$, and the expression for row 4 ($P = 1$, $Q = 0$, $`R = 0`$) is $P \wedge \sim Q \wedge \sim R$. Each variable is written as it is when its value in the row is 1 and negated when its value is 0.
 3. A Boolean expression with the given table as its truth table must be 1 in case $P \wedge Q \wedge R = 1$, in case $P \wedge \sim Q \wedge R = 1$, or in case $P \wedge \sim Q \wedge \sim R = 1$, and 0 in all other cases. Hence the disjunction of the three expressions is an answer.
 
-$$
+```math
 S = (P \wedge Q \wedge R) \vee (P \wedge \sim Q \wedge R) \vee (P \wedge \sim Q \wedge \sim R)
-$$
+```
 
 The circuit corresponding to this expression is shown below. The three AND-gates are the recognizers for the rows, and the OR-gate puts them together in parallel.
 
@@ -1429,14 +1431,14 @@ Logically equivalent statement forms have the same truth table, so two circuits 
 
 **Example 2.4.6 (Showing That Two Circuits Are Equivalent).** The Boolean expressions corresponding to circuits (a) and (b) in the figure above are $((P \wedge \sim Q) \vee (P \wedge Q)) \wedge Q$ and $P \wedge Q$, respectively. By the laws of logical equivalence of Section 1.8:
 
-$$
+```math
 \begin{aligned}
 ((P \wedge \sim Q) \vee (P \wedge Q)) \wedge Q &\equiv (P \wedge (\sim Q \vee Q)) \wedge Q && \text{by the distributive law} \\
 &\equiv (P \wedge (Q \vee \sim Q)) \wedge Q && \text{by the commutative law for } \vee \\
 &\equiv (P \wedge \mathbf{t}) \wedge Q && \text{by the negation law} \\
 &\equiv P \wedge Q && \text{by the identity law}
 \end{aligned}
-$$
+```
 
 The first line reads the distributive law $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$ from right to left to factor out the common $P$. Hence the two expressions have the same truth table, the two circuits have the same input/output table, and the circuits are equivalent.
 
@@ -1451,9 +1453,9 @@ A circuit can also be simplified by replacing it with an equivalent circuit that
 
 The logical symbols for these gates are $\mid$ for NAND and $\downarrow$ for NOR. The symbol $\mid$ is called the **Sheffer stroke** after H. M. Sheffer, and $\downarrow$ is called the **Peirce arrow** after C. S. Peirce. Some sources write NAND as $\uparrow$.
 
-$$
+```math
 P \mid Q \equiv \sim(P \wedge Q), \qquad P \downarrow Q \equiv \sim(P \vee Q)
-$$
+```
 
 ![Figure 14. Symbols for the NAND-gate and the NOR-gate](../../images/Ch02_NAND-NOR-Gates.png)
 
@@ -1472,31 +1474,31 @@ Every Boolean expression is logically equivalent to an expression that uses Shef
 
 **Example 2.4.7 (Rewriting Expressions Using the Sheffer Stroke).** Use the laws of logical equivalence and the definition of the Sheffer stroke to show that (a) $\sim P \equiv P \mid P$ and (b) $P \vee Q \equiv (P \mid P) \mid (Q \mid Q)$.
 
-$$
+```math
 \begin{aligned}
 \text{(a)}\quad \sim P &\equiv \sim(P \wedge P) && \text{by the idempotent law for } \wedge \\
 &\equiv P \mid P && \text{by definition of } \mid
 \end{aligned}
-$$
+```
 
-$$
+```math
 \begin{aligned}
 \text{(b)}\quad P \vee Q &\equiv \sim(\sim(P \vee Q)) && \text{by the double negative law} \\
 &\equiv \sim(\sim P \wedge \sim Q) && \text{by De Morgan's laws} \\
 &\equiv \sim((P \mid P) \wedge (Q \mid Q)) && \text{by part (a)} \\
 &\equiv (P \mid P) \mid (Q \mid Q) && \text{by definition of } \mid
 \end{aligned}
-$$
+```
 
 The third line of (b) applies part (a) to $P$ and to $Q$, replacing $\sim P$ by $P \mid P$ and $\sim Q$ by $Q \mid Q$. The remaining $\wedge$ can be expressed in the same way.
 
-$$
+```math
 \begin{aligned}
 P \wedge Q &\equiv \sim(\sim(P \wedge Q)) && \text{by the double negative law} \\
 &\equiv \sim(P \mid Q) && \text{by definition of } \mid \\
 &\equiv (P \mid Q) \mid (P \mid Q) && \text{by part (a) applied to } P \mid Q
 \end{aligned}
-$$
+```
 
 Hence $\sim$, $\wedge$, and $\vee$ can all be expressed with the Sheffer stroke alone, and every combinational circuit can be built from NAND-gates only.
 
@@ -1512,9 +1514,9 @@ This section treats the binary and hexadecimal notations with which computers re
 
 In the **decimal notation** taught in elementary school, the value of a number is the sum of its digits multiplied by their place values. In 5,049, for example, the digits 5, 0, 4, and 9 occupy the thousands, hundreds, tens, and ones places, so
 
-$$
+```math
 5{,}049 = 5 \cdot (1{,}000) + 0 \cdot (100) + 4 \cdot (10) + 9 \cdot (1) = 5 \cdot 10^3 + 0 \cdot 10^2 + 4 \cdot 10^1 + 9 \cdot 10^0
-$$
+```
 
 Decimal notation in general rests on the fact that every positive integer has exactly one expression as a sum of products $d \cdot 10^n$, with each $n$ a nonnegative integer and each $d$ one of the decimal digits 0, 1, 2, ..., 9. The word decimal derives from deci, the Latin root for ten. Decimal (base 10) notation writes a number as a string of digits, and the position of each digit tells which power of 10 multiplies it: the right-most position is the ones place (the $10^0$ place), the next position to the left is the tens place (the $10^1$ place), and the one after that is the hundreds place (the $10^2$ place).
 
@@ -1528,9 +1530,9 @@ Decimal notation in general rests on the fact that every positive integer has ex
 
 The number 10 has no special status: it serves as a base only because people have ten fingers, and any integer larger than 1 could be used instead. In computer science, base 2, or **binary notation**, is of special importance, because the signals of modern electronic devices always take one of just two states. Every positive integer has exactly one expression as a sum of products $d \cdot 2^n$, where each $n$ is a nonnegative integer and each $d$ is a binary digit, or **bit**, equal to 0 or 1. This fact is proved in Chapter 5. For example,
 
-$$
+```math
 27 = 16 + 8 + 2 + 1 = 1 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0
-$$
+```
 
 As in decimal notation, binary notation writes only the digits and omits the powers of the base, so $27_{10} = 11011_2$; the subscripts tell whether a number is written in base 10 or base 2. The places of binary notation stand for powers of 2: the ones place (the $2^0$ place) is right-most, the twos place (the $2^1$ place) is next to it on the left, and the fours place (the $2^2$ place) comes after that.
 
@@ -1538,7 +1540,7 @@ As in decimal notation, binary notation writes only the digits and omits the pow
 |:-----|:-:|:-:|:-:|:-:|:-:|
 | Binary digit | 1 | 1 | 0 | 1 | 1 |
 
-*Table 47. Places and place values of $11011_2$*
+*Table 47. $`11011_2`$: places and place values*
 
 Leading zeros can be inserted or removed freely, just as in decimal notation. For example, $003_{10} = 3_{10} = 1 \cdot 2^1 + 1 \cdot 2^0 = 11_2 = 011_2$.
 
@@ -1569,9 +1571,9 @@ A list of powers of 2 is useful for conversions between binary and decimal. Plac
 
 **Example 2.5.2 (Converting a Binary to a Decimal Number).** Represent $110101_2$ in decimal notation by multiplying each bit by the power of 2 of its place and adding.
 
-$$
+```math
 110101_2 = 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 32 + 16 + 4 + 1 = 53_{10}
-$$
+```
 
 The same computation can be done with the following schema, multiplying the bits from the right by 1, 2, 4, 8, 16, and 32 and adding.
 
@@ -1593,25 +1595,25 @@ The same computation can be done with the following schema, multiplying the bits
 2. $209 - 128 = 81$, and 81 lies between 64 and 128, so $209 = 128 + 64 + (\text{a smaller number})$.
 3. $81 - 64 = 17$, and 17 lies between 16 and 32, so 16 is added. Then $17 - 16 = 1 = 2^0$.
 
-$$
+```math
 209 = 128 + 64 + 16 + 1 = 1 \cdot 2^7 + 1 \cdot 2^6 + 0 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 0 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0
-$$
+```
 
 Writing 1 in the position of each power of 2 that occurs in the sum and 0 in the position of each missing power gives $209_{10} = 11010001_2$. Another conversion procedure, which uses repeated division by 2, is discussed in Chapter 5.
 
 **Binary fractions.** The bits after the binary point correspond to $2^{-1}, 2^{-2}, \ldots$. For example,
 
-$$
+```math
 1011.01_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 + 0 \cdot 2^{-1} + 1 \cdot 2^{-2} = 8 + 2 + 1 + \frac{1}{4} = 11.25
-$$
+```
 
 ### 5.3 Binary Addition and Subtraction
 
-Binary arithmetic works just like decimal arithmetic, except that 2 ($= 10_2$) takes over the role that 10 plays in decimal arithmetic. Adding two bits gives the following four cases.
+Binary arithmetic works just like decimal arithmetic, except that 2 ($`= 10_2`$) takes over the role that 10 plays in decimal arithmetic. Adding two bits gives the following four cases.
 
-$$
+```math
 0 + 0 = 00_2, \qquad 0 + 1 = 01_2, \qquad 1 + 0 = 01_2, \qquad 1 + 1 = 10_2
-$$
+```
 
 Since $1_{10} + 1_{10} = 2_{10}$ becomes $1_2 + 1_2 = 10_2$ in binary notation, adding two 1's results in a carry of 1. Adding three 1's also results in a carry of 1, with 1 written in that place, because $3_{10} = 11_2$.
 
@@ -1657,9 +1659,9 @@ The first place requires computing $0 - 1$, so a borrow is needed; the second an
 
 Consider designing a circuit to produce the sum of two binary digits $P$ and $Q$. Both $P$ and $Q$ can be 0 or 1, and the following facts are known.
 
-$$
+```math
 1_2 + 1_2 = 10_2, \qquad 1_2 + 0_2 = 01_2, \qquad 0_2 + 1_2 = 01_2, \qquad 0_2 + 0_2 = 00_2
-$$
+```
 
 The sum of two bits can therefore have two digits, so the circuit needs two outputs: the left digit, called the **carry**, and the right digit, called the **sum**. The carry is 1 only when both $P$ and $Q$ are 1, so it is produced by the AND-gate corresponding to the Boolean expression $P \wedge Q$. The sum is 1 when exactly one of $P$ and $Q$ is 1, so it is produced by the circuit for exclusive or, $(P \vee Q) \wedge \sim(P \wedge Q)$ (Section 4.4). This circuit, which adds two bits, is called a **half-adder**.
 
@@ -1748,17 +1750,19 @@ For example, computing $101_2 + 011_2$ proceeds as follows. The half-adder adds 
 
 ### 5.5 Two's Complements and Signed Integers
 
-Computers usually store an integer in a fixed number of bits. One scheme reserves one bit, normally the left-most, for the sign and writes the absolute value in binary in the remaining bits. This scheme makes addition awkward and gives 0 two representations: with 8 bits, both $00000000$ and $10000000$ represent 0 (as $+0$ and $-0$). The more common scheme, **two's complements**, makes integer addition easy and represents 0 in only one way. In practice 64-bit and 32-bit integers are the most common, but the ideas do not depend on the bit length, so this discussion uses 8 bits for simplicity. Eight bits represent the 256 integers from $-128$ through 127, and 32 bits represent $2^{32} = 4{,}294{,}967{,}296$ integers, about 4.3 billion.
+Computers usually store an integer in a fixed number of bits. One scheme reserves one bit, normally the left-most, for the sign and writes the absolute value in binary in the remaining bits. This scheme makes addition awkward and gives 0 two representations: with 8 bits, both $00000000$ and $10000000$ represent 0 (as $+0$ and $`-0`$). The more common scheme, **two's complements**, makes integer addition easy and represents 0 in only one way. In practice 64-bit and 32-bit integers are the most common, but the ideas do not depend on the bit length, so this discussion uses 8 bits for simplicity. Eight bits represent the 256 integers from $-128$ through 127, and 32 bits represent $2^{32} = 4{,}294{,}967{,}296$ integers, about 4.3 billion.
 
 > **Definition:** The **8-bit two's complement** for an integer $a$ between $-128$ and 127 is the 8-bit binary representation of $a$ if $a \geq 0$ and of $2^8 - \lvert a \rvert$ if $a < 0$.
 >
-> $$a \geq 0 \Rightarrow a, \qquad a < 0 \Rightarrow 2^8 - \lvert a \rvert$$
+> ```math
+> a \geq 0 \Rightarrow a, \qquad a < 0 \Rightarrow 2^8 - \lvert a \rvert
+> ```
 
 Thus the 8-bit two's complement of a nonnegative integer is the same as its 8-bit binary representation. For the negative integer $-46$, for example,
 
-$$
+```math
 (2^8 - \lvert -46 \rvert)_{10} = (256 - 46)_{10} = 210_{10} = (128 + 64 + 16 + 2)_{10} = 11010010_2
-$$
+```
 
 so the 8-bit two's complement of $-46$ is $11010010$. For negative integers the following method, which involves less arithmetic than applying the definition directly, is more convenient.
 
@@ -1767,7 +1771,7 @@ so the 8-bit two's complement of $-46$ is $11010010$. For negative integers the 
 > 2. Change every 1 to 0 and every 0 to 1; this step is called flipping, or complementing, the bits.
 > 3. Add 1 in binary notation.
 
-**Example 2.5.6 (Finding a Two's Complement).** Use the method above to find the 8-bit two's complement of $-46$. Here $\lvert -46 \rvert = 46 = (32 + 8 + 4 + 2)_{10} = 00101110_2$. Flipping the bits gives $11010001$, and adding 1 gives $11010010$, the same result as obtained directly from the definition.
+**Example 2.5.6 (Finding a Two's Complement).** Use the method above to find the 8-bit two's complement of $-46$. Here $`\lvert -46 \rvert = 46 = (32 + 8 + 4 + 2)_{10} = 00101110_2`$. Flipping the bits gives $11010001$, and adding 1 gives $11010010$, the same result as obtained directly from the definition.
 
 The method works in general because of the following three facts.
 
@@ -1815,11 +1819,11 @@ The decimal representation of the negative integer that has a given 8-bit two's 
 1. Apply the two's complement procedure to the given two's complement.
 2. Write the decimal equivalent of the result and put a minus sign in front of it.
 
-**Example 2.5.7 (Finding a Number with a Given Two's Complement).** Find the decimal representation of the integer with two's complement $10101001$. The left-most digit is 1, so the integer is negative. Applying the two's complement procedure gives $01010110$ after flipping and $01010111_2 = (64 + 16 + 4 + 2 + 1)_{10} = 87_{10} = \lvert -87 \rvert_{10}$ after adding 1. So the answer is $-87$. Check it by deriving the two's complement of $-87$ directly from the definition.
+**Example 2.5.7 (Finding a Number with a Given Two's Complement).** Find the decimal representation of the integer with two's complement $10101001$. The left-most digit is 1, so the integer is negative. Applying the two's complement procedure gives $01010110$ after flipping and $`01010111_2 = (64 + 16 + 4 + 2 + 1)_{10} = 87_{10} = \lvert -87 \rvert_{10}`$ after adding 1. So the answer is $-87$. Check it by deriving the two's complement of $-87$ directly from the definition.
 
-$$
+```math
 (2^8 - \lvert -87 \rvert)_{10} = (256 - 87)_{10} = 169_{10} = (128 + 32 + 8 + 1)_{10} = 10101001_2
-$$
+```
 
 ### 5.6 Addition and Subtraction in Two's Complement Form
 
@@ -1875,34 +1879,34 @@ A binary numeral is much longer than the decimal numeral for the same number, ev
 
 *Table 53. Hexadecimal digits with their decimal values and 4-bit binary equivalents*
 
-**Example 2.5.8 (Converting from Hexadecimal to Decimal Notation).** Convert $3\text{CF}_{16}$ to decimal notation. As in the schema for binary numbers, multiply each digit by the power of 16 of its place and add. Here $3_{16} = 3_{10}$, $\text{C}_{16} = 12_{10}$, and $\text{F}_{16} = 15_{10}$, and the place values are $16^2 = 256$, $16^1 = 16$, and $16^0 = 1$.
+**Example 2.5.8 (Converting from Hexadecimal to Decimal Notation).** Convert $`3\text{CF}_{16}`$ to decimal notation. As in the schema for binary numbers, multiply each digit by the power of 16 of its place and add. Here $3_{16} = 3_{10}$, $`\text{C}_{16} = 12_{10}`$, and $`\text{F}_{16} = 15_{10}`$, and the place values are $16^2 = 256$, $16^1 = 16$, and $16^0 = 1$.
 
-$$
+```math
 3\text{CF}_{16} = 3 \cdot 256 + 12 \cdot 16 + 15 \cdot 1 = 768 + 192 + 15 = 975_{10}
-$$
+```
 
-**Why hexadecimal converts easily to binary.** Rewrite each term of $\text{C50A}_{16}$ with powers of 2 and apply the laws of exponents. Here $\text{C}_{16} = 12_{10}$, $5_{16} = 5_{10}$, $0_{16} = 0_{10}$, and $\text{A}_{16} = 10_{10}$.
+**Why hexadecimal converts easily to binary.** Rewrite each term of $`\text{C50A}_{16}`$ with powers of 2 and apply the laws of exponents. Here $`\text{C}_{16} = 12_{10}`$, $5_{16} = 5_{10}$, $0_{16} = 0_{10}$, and $`\text{A}_{16} = 10_{10}`$.
 
-$$
+```math
 \begin{aligned}
 10 \cdot 16^0 &= (2^3 + 2) \cdot 1 = 2^3 + 2 && 10 = 2^3 + 2 \\
 0 \cdot 16^1 &= 0 \cdot 2^4 = 0 && 16^1 = 2^4 \\
 5 \cdot 16^2 &= (2^2 + 1) \cdot 2^8 = 2^{10} + 2^8 && 5 = 2^2 + 1,\ 16^2 = (2^4)^2 = 2^8,\ 2^2 \cdot 2^8 = 2^{10} \\
 12 \cdot 16^3 &= (2^3 + 2^2) \cdot 2^{12} = 2^{15} + 2^{14} && 12 = 2^3 + 2^2,\ 16^3 = (2^4)^3 = 2^{12}
 \end{aligned}
-$$
+```
 
 Adding these terms, by the rules for writing binary numbers and for binary addition,
 
-$$
+```math
 (2^{15} + 2^{14}) + (2^{10} + 2^8) + 0 + (2^3 + 2) = 1100\,0000\,0000\,0000_2 + 0101\,0000\,0000_2 + 0000\,0000_2 + 1010_2 = 1100\,0101\,0000\,1010_2
-$$
+```
 
-In the result, $\text{C}_{16}$ has become $1100$, $5_{16}$ has become $0101$, $0_{16}$ has become $0000$, and $\text{A}_{16}$ has become $1010$, placed side by side. This happens because $16 = 2^4$, so each hexadecimal digit occupies exactly four binary places.
+In the result, $`\text{C}_{16}`$ has become $1100$, $5_{16}$ has become $0101$, $0_{16}$ has become $0000$, and $`\text{A}_{16}`$ has become $1010$, placed side by side. This happens because $16 = 2^4$, so each hexadecimal digit occupies exactly four binary places.
 
 > **Key Point:** **Converting hexadecimal to binary.** Write each hexadecimal digit of the integer as a 4-bit binary number and place the results side by side in order.
 
-**Example 2.5.9 (Converting from Hexadecimal to Binary Notation).** Convert $\text{B09F}_{16}$ to binary notation. Since $\text{B}_{16} = 11_{10} = 1011_2$, $0_{16} = 0_{10} = 0000_2$, $9_{16} = 9_{10} = 1001_2$, and $\text{F}_{16} = 15_{10} = 1111_2$,
+**Example 2.5.9 (Converting from Hexadecimal to Binary Notation).** Convert $`\text{B09F}_{16}`$ to binary notation. Since $`\text{B}_{16} = 11_{10} = 1011_2`$, $0_{16} = 0_{10} = 0000_2$, $9_{16} = 9_{10} = 1001_2$, and $`\text{F}_{16} = 15_{10} = 1111_2`$,
 
 ```text
    B      0      9      F
@@ -1916,15 +1920,15 @@ and the answer is $1011000010011111_2$.
 > 1. Split the binary digits into groups of four, counting from the right, and put zeros in front if needed.
 > 2. Replace each group of four by its hexadecimal digit and write these digits side by side in order.
 
-**Example 2.5.10 (Converting from Binary to Hexadecimal Notation).** Convert $100110110101001_2$ to hexadecimal notation. Grouping the digits in sets of four from right to left and adding one leading 0 gives $0100\ 1101\ 1010\ 1001$. Converting each group, $0100 \to 4$, $1101 \to \text{D}$, $1010 \to \text{A}$, and $1001 \to 9$, so the answer is $\text{4DA9}_{16}$.
+**Example 2.5.10 (Converting from Binary to Hexadecimal Notation).** Convert $100110110101001_2$ to hexadecimal notation. Grouping the digits in sets of four from right to left and adding one leading 0 gives $`0100\ 1101\ 1010\ 1001`$. Converting each group, $0100 \to 4$, $1101 \to \text{D}$, $1010 \to \text{A}$, and $1001 \to 9$, so the answer is $`\text{4DA9}_{16}`$.
 
 The 32-bit integers commonly used in computers need only eight characters in hexadecimal notation.
 
 **Example 2.5.11 (Reading a Memory Dump).** On most computers the smallest unit of memory with its own address is the **byte**, a group of eight bits. During debugging one sometimes prints the contents of memory locations in order, which is called a dump; the contents are shown in hexadecimal rather than binary because hexadecimal takes less space and is easier to read. If a segment of a memory dump is A3 BB 59 2E, the actual contents of the four memory locations are found by converting each hexadecimal digit to 4 bits.
 
-$$
+```math
 \text{A3}_{16} = 10100011_2, \qquad \text{BB}_{16} = 10111011_2, \qquad \text{59}_{16} = 01011001_2, \qquad \text{2E}_{16} = 00101110_2
-$$
+```
 
 ---
 
@@ -1939,7 +1943,7 @@ $$
 | If $p \to q$ is false, then $p$ is true. | **T.** The only case in which a conditional is false is when the hypothesis $p$ is true and the conclusion $q$ is false. |
 | $\sim(p \wedge q)$ is logically equivalent to $\sim p \wedge \sim q$. | **F.** By De Morgan's laws $\sim(p \wedge q) \equiv \sim p \vee \sim q$, which differs from $\sim p \wedge \sim q$ in the two rows where $p$ and $q$ have different truth values. |
 | A conditional statement and its converse always have the same truth value. | **F.** If $p$ is true and $q$ is false, then $p \to q$ is false but the converse $q \to p$ is true. The form that always has the same truth value as a conditional is its contrapositive. |
-| "$p$ only if $q$" means $q \to p$. | **F.** "$p$ only if $q$" means "if not $q$ then not $p$," that is, $p \to q$. |
+| "$`p`$ only if $q$" means $q \to p$. | **F.** "$`p`$ only if $q$" means "if not $q$ then not $p$," that is, $p \to q$. |
 | The conclusion of a valid argument is always true. | **F.** Validity only guarantees that the conclusion is true when all premises are true. With a false premise, a valid argument can have a false conclusion. A true conclusion is guaranteed only by a sound argument. |
 | The argument that concludes $p$ from the premises $p \to q$ and $q$ is invalid. | **T.** It is the converse error. In the critical row where $p$ is false and $q$ is true, the conclusion is false. |
 | Two circuits with the same input/output table are equivalent even if they have different numbers of gates. | **T.** Equivalence of two digital logic circuits is defined as having identical input/output tables. |
@@ -1966,11 +1970,11 @@ $$
 | Conditional statement | $p \to q$ is false only when $p$ is true and $q$ is false. It is vacuously true when the hypothesis is false. |
 | Equivalences of conditionals | $p \to q \equiv \sim p \vee q$ and $\sim(p \to q) \equiv p \wedge \sim q$, so a negation does not start with if. |
 | Contrapositive, converse, inverse | The contrapositive $\sim q \to \sim p$ is equivalent to the original, while the converse $q \to p$ and the inverse $\sim p \to \sim q$ are not equivalent to the original but are equivalent to each other. |
-| Only if and the biconditional | "$p$ only if $q$" is $p \to q$, and $p \leftrightarrow q$ is equivalent to $(p \to q) \wedge (q \to p)$. |
+| Only if and the biconditional | "$`p`$ only if $q$" is $p \to q$, and $p \leftrightarrow q$ is equivalent to $(p \to q) \wedge (q \to p)$. |
 | Necessary and sufficient conditions | If $r$ is a sufficient condition for $s$, then $r \to s$; if it is a necessary condition, then $\sim r \to \sim s$, that is, $s \to r$. |
 | Validity of arguments | Valid if the conclusion is true in every critical row (row with all premises true), and invalid if some critical row has a false conclusion. |
 | Rules of inference | Modus ponens, modus tollens, generalization, specialization, conjunction, elimination, transitivity, division into cases, and the contradiction rule are valid argument forms. |
-| Fallacies | The converse error ($p \to q$, $q$, $\therefore\ p$) and the inverse error ($p \to q$, $\sim p$, $\therefore\ \sim q$) are invalid. |
+| Fallacies | The converse error ($p \to q$, $q$, $`\therefore\ p`$) and the inverse error ($p \to q$, $\sim p$, $`\therefore\ \sim q`$) are invalid. |
 | Soundness | A valid argument with all premises true; only a sound argument guarantees a true conclusion. |
 | Digital logic circuits | NOT-, AND-, and OR-gates correspond to $\sim$, $\wedge$, and $\vee$, and the output of a combinational circuit is determined by its current input alone. |
 | Circuits and Boolean expressions | Trace a circuit to get its Boolean expression, and build a circuit by placing gates from right to left starting with the outermost operation. |
@@ -2011,11 +2015,11 @@ $$
    <details>
    <summary>Answer</summary>
 
-   The negation is "$n$ is divisible by 6 and $n$ is not even," the contrapositive is "If $n$ is not even, then $n$ is not divisible by 6," the converse is "If $n$ is even, then $n$ is divisible by 6," and the inverse is "If $n$ is not divisible by 6, then $n$ is not even." The contrapositive always has the same truth value as the original. For $n = 2$ the converse has a true hypothesis (even) and a false conclusion (divisible by 6), so it is false, and the inverse has a true hypothesis (not divisible by 6) and a false conclusion (not even), so it is also false.
+   The negation is "$`n`$ is divisible by 6 and $n$ is not even," the contrapositive is "If $n$ is not even, then $n$ is not divisible by 6," the converse is "If $n$ is even, then $n$ is divisible by 6," and the inverse is "If $n$ is not divisible by 6, then $n$ is not even." The contrapositive always has the same truth value as the original. For $n = 2$ the converse has a true hypothesis (even) and a false conclusion (divisible by 6), so it is false, and the inverse has a true hypothesis (not divisible by 6) and a false conclusion (not even), so it is also false.
 
    </details>
 
-4. **Necessary and sufficient conditions:** For a real number $x$, is "$x > 2$" a sufficient condition for "$x^2 > 4$"? Is it a necessary condition?
+4. **Necessary and sufficient conditions:** For a real number $x$, is "$`x > 2`$" a sufficient condition for "$`x^2 > 4`$"? Is it a necessary condition?
 
    <details>
    <summary>Answer</summary>
@@ -2024,7 +2028,7 @@ $$
 
    </details>
 
-5. **Determining validity:** Use critical rows to decide whether the argument form $p \to q$, $q \to r$, $\sim r$, $\therefore\ \sim p$ is valid, and explain it with rules of inference as well.
+5. **Determining validity:** Use critical rows to decide whether the argument form $p \to q$, $q \to r$, $\sim r$, $`\therefore\ \sim p`$ is valid, and explain it with rules of inference as well.
 
    <details>
    <summary>Answer</summary>
@@ -2038,7 +2042,7 @@ $$
    <details>
    <summary>Answer</summary>
 
-   Its form is $p \to q$, $q$, $\therefore\ p$, so it is the converse error (the fallacy of affirming the consequent). For example, if it did not rain but a street cleaning truck sprayed water on the street, the first premise is vacuously true because its hypothesis is false, the second premise "The street is wet" is true, but the conclusion "It rained" is false.
+   Its form is $p \to q$, $q$, $`\therefore\ p`$, so it is the converse error (the fallacy of affirming the consequent). For example, if it did not rain but a street cleaning truck sprayed water on the street, the first premise is vacuously true because its hypothesis is false, the second premise "The street is wet" is true, but the conclusion "It rained" is false.
 
    </details>
 
@@ -2069,12 +2073,12 @@ $$
 
    </details>
 
-10. **Hexadecimal notation:** Convert $\text{2E9}_{16}$ to decimal and binary notation.
+10. **Hexadecimal notation:** Convert $`\text{2E9}_{16}`$ to decimal and binary notation.
 
     <details>
     <summary>Answer</summary>
 
-    In decimal, $2 \cdot 16^2 + 14 \cdot 16 + 9 = 512 + 224 + 9 = 745$. In binary, convert each hexadecimal digit to 4 bits, juxtapose them as $0010\ 1110\ 1001$, and drop the leading zeros to get $1011101001_2$. As a check, $512 + 128 + 64 + 32 + 8 + 1 = 745$.
+    In decimal, $2 \cdot 16^2 + 14 \cdot 16 + 9 = 512 + 224 + 9 = 745$. In binary, convert each hexadecimal digit to 4 bits, juxtapose them as $`0010\ 1110\ 1001`$, and drop the leading zeros to get $1011101001_2$. As a check, $512 + 128 + 64 + 32 + 8 + 1 = 745$.
 
     </details>
 

@@ -85,13 +85,13 @@
 
 $S$가 집합이고 $P(x)$가 $S$의 원소에 대해 참 또는 거짓이 되는 성질(술어)이면, **조건제시법(set-builder notation)** 으로 새 집합 $A$를 다음과 같이 정의할 수 있다.
 
-$$
+```math
 A = \lbrace x \in S \mid P(x) \rbrace
-$$
+```
 
-이 식은 "$S$의 원소 $x$ 가운데 $P(x)$를 만족하는 것 전체의 집합"이라고 읽는다. 세로 막대 $\mid$ 뒤에는 원소가 만족해야 할 조건을 쓴다. 예를 들어 $\lbrace x \in \mathbf{Z} \mid -2 < x < 3 \rbrace$는 $-2$보다 크고 3보다 작은 정수 전체이므로 $\lbrace -1, 0, 1, 2 \rbrace$이다.
+이 식은 "$`S`$의 원소 $x$ 가운데 $P(x)$를 만족하는 것 전체의 집합"이라고 읽는다. 세로 막대 $\mid$ 뒤에는 원소가 만족해야 할 조건을 쓴다. 예를 들어 $\lbrace x \in \mathbf{Z} \mid -2 < x < 3 \rbrace$는 $-2$보다 크고 3보다 작은 정수 전체이므로 $\lbrace -1, 0, 1, 2 \rbrace$이다.
 
-> **주의:** $\lbrace x \in S \mid P(x) \rbrace$는 원소 하나가 아니라 집합이다. "전체의 집합"이라는 말을 빼고 "$P(x)$를 만족하는 $x$"라고 읽으면 조건을 만족하는 원소 하나를 가리키는 것처럼 오해하게 된다.
+> **주의:** $\lbrace x \in S \mid P(x) \rbrace$는 원소 하나가 아니라 집합이다. "전체의 집합"이라는 말을 빼고 "$`P(x)`$를 만족하는 $x$"라고 읽으면 조건을 만족하는 원소 하나를 가리키는 것처럼 오해하게 된다.
 
 ### 1.2 부분집합: 증명과 반증
 
@@ -99,15 +99,15 @@ $$
 
 > **용어 정의:** 집합 $A$의 모든 원소가 집합 $B$의 원소이면 $A$를 $B$의 **부분집합(subset)** 이라 하고 $A \subseteq B$로 쓴다.
 
-$$
+```math
 A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)
-$$
+```
 
 전칭 명제의 부정은 존재 명제이므로(3장), 부분집합이 아니라는 것은 다음과 같은 존재 명제이다.
 
-$$
+```math
 A \not\subseteq B \iff \exists x\ (x \in A \land x \notin B)
-$$
+```
 
 따라서 $A \subseteq B$를 증명하려면 $A$의 모든 원소를 다루는 논증이 필요하지만, $A \subseteq B$를 반증하려면 $A$에 속하고 $B$에 속하지 않는 원소 하나만 찾으면 된다.
 
@@ -128,9 +128,9 @@ $$
 
 **예제 6.1.2 (부분집합 관계의 증명과 반증).** 두 집합을 다음과 같이 정의한다.
 
-$$
+```math
 A = \lbrace m \in \mathbf{Z} \mid \exists r \in \mathbf{Z},\ m = 6r + 12 \rbrace, \qquad B = \lbrace n \in \mathbf{Z} \mid \exists s \in \mathbf{Z},\ n = 3s \rbrace
-$$
+```
 
 원소를 몇 개 나열하면 감을 잡을 수 있다. $r = -2, -1, 0, 1$을 넣으면 $A$에는 $0, 6, 12, 18$이 들어 있고, $6r + 12 = 6(r + 2)$이므로 $A$는 6의 배수 전체이다. $B$는 3의 배수 전체 $\lbrace \ldots, -3, 0, 3, 6, \ldots \rbrace$이다.
 
@@ -146,9 +146,9 @@ $$
 
 (c) **$B \subseteq A$의 반증.** $B$에 속하지만 $A$에 속하지 않는 원소 하나를 찾으면 된다. $x = 3$을 택한다. $3 = 3 \cdot 1$이므로 $3 \in B$이다. $3 \in A$라면 $6r + 12 = 3$인 정수 $r$가 있어야 하는데, 이 식을 풀면 다음과 같다.
 
-$$
+```math
 6r + 12 = 3 \ \Rightarrow\ 2r + 4 = 1 \ \Rightarrow\ 2r = -3 \ \Rightarrow\ r = -\tfrac{3}{2}
-$$
+```
 
 첫 단계는 양변을 3으로 나누고, 둘째 단계는 양변에서 4를 빼고, 셋째 단계는 양변을 2로 나눈 것이다. $-\frac{3}{2}$는 정수가 아니므로 $3 \notin A$이다. 따라서 $3 \in B$이고 $3 \notin A$이므로 $B \not\subseteq A$이다.
 
@@ -158,17 +158,17 @@ $$
 
 > **용어 정의:** $A$의 모든 원소가 $B$에 속하고 $B$의 모든 원소가 $A$에 속하면 $A$와 $B$는 **같다(equal)** 고 하고 $A = B$로 쓴다.
 
-$$
+```math
 A = B \iff A \subseteq B \land B \subseteq A
-$$
+```
 
 따라서 두 집합이 같음을 증명하려면 $A \subseteq B$와 $B \subseteq A$를 각각 증명해야 한다.
 
 **예제 6.1.3 (집합의 상등).** 두 집합을 다음과 같이 정의한다.
 
-$$
+```math
 A = \lbrace m \in \mathbf{Z} \mid \exists a \in \mathbf{Z},\ m = 2a \rbrace, \qquad B = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b - 2 \rbrace
-$$
+```
 
 $A = B$이다. 이를 두 부분으로 나누어 증명한다.
 
@@ -178,7 +178,7 @@ $A = B$이다. 이를 두 부분으로 나누어 증명한다.
 
 두 부분집합 관계가 모두 성립하므로 집합의 상등의 정의에 의해 $A = B$이다. 두 집합은 모두 짝수 전체의 집합이다.
 
-> **참고:** 조건제시법 안의 변수 이름은 자리를 표시할 뿐이다. $A$의 정의에서 $m$과 $a$를 각각 $n$과 $b$로 바꾸어 $A = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b \rbrace$로 써도 같은 집합이다. 다만 바꿀 때는 식 안의 모든 곳을 일관되게 바꾸어야 한다.
+> **참고:** 조건제시법 안의 변수 이름은 자리를 표시할 뿐이다. $A$의 정의에서 $m$과 $a$를 각각 $n$과 $b$로 바꾸어 $`A = \lbrace n \in \mathbf{Z} \mid \exists b \in \mathbf{Z},\ n = 2b \rbrace`$로 써도 같은 집합이다. 다만 바꿀 때는 식 안의 모든 곳을 일관되게 바꾸어야 한다.
 
 ### 1.4 벤 다이어그램
 
@@ -214,14 +214,14 @@ $A \not\subseteq B$는 그림 2처럼 세 가지로 나타낼 수 있다. 어느
 
 기호로 쓰면 다음과 같다.
 
-$$
+```math
 \begin{aligned}
 A \cup B &= \lbrace x \in U \mid x \in A \lor x \in B \rbrace \\
 A \cap B &= \lbrace x \in U \mid x \in A \land x \in B \rbrace \\
 B - A &= \lbrace x \in U \mid x \in B \land x \notin A \rbrace \\
 A^c &= \lbrace x \in U \mid x \notin A \rbrace
 \end{aligned}
-$$
+```
 
 기호 $\in$, $\cup$, $\cap$은 이탈리아의 수학자 페아노(Giuseppe Peano)가 1889년에 도입하였다. 그림 4는 네 연산의 결과를 색칠한 영역으로 보여 준다. 바깥의 직사각형이 전체집합 $U$이다.
 
@@ -265,13 +265,13 @@ $$
 - $B - A$: $0 \le x < 1$이면서 $-1 < x \le 0$이 아닌 실수이다. $B$에서 $A$와 겹치는 점은 0뿐이므로 $B - A = (0, 1)$이다.
 - $A^c$: 다음과 같이 이중 부등식의 정의와 드모르간의 법칙을 적용한다.
 
-$$
+```math
 \begin{aligned}
 x \in A^c &\iff \sim(-1 < x \le 0) \\
 &\iff \sim(-1 < x \land x \le 0) \\
 &\iff x \le -1 \lor x > 0
 \end{aligned}
-$$
+```
 
 따라서 $A^c = (-\infty, -1] \cup (0, \infty)$이다.
 
@@ -287,22 +287,22 @@ $$
 
 한정기호로 쓰면 다음과 같다.
 
-$$
+```math
 \begin{aligned}
 \bigcup_{i=0}^{n} A_i &= \lbrace x \in U \mid \exists i \in \lbrace 0, 1, \ldots, n \rbrace,\ x \in A_i \rbrace \\
 \bigcup_{i=0}^{\infty} A_i &= \lbrace x \in U \mid \exists i \in \mathbf{Z}^{\text{nonneg}},\ x \in A_i \rbrace \\
 \bigcap_{i=0}^{n} A_i &= \lbrace x \in U \mid \forall i \in \lbrace 0, 1, \ldots, n \rbrace,\ x \in A_i \rbrace \\
 \bigcap_{i=0}^{\infty} A_i &= \lbrace x \in U \mid \forall i \in \mathbf{Z}^{\text{nonneg}},\ x \in A_i \rbrace
 \end{aligned}
-$$
+```
 
-여기서 $\mathbf{Z}^{\text{nonneg}}$는 음이 아닌 정수 전체의 집합이다. $\bigcup_{i=0}^{n} A_i$는 "$i$가 0부터 $n$까지일 때 $A_i$의 합집합"이라고 읽으며, $A_0 \cup A_1 \cup \cdots \cup A_n$으로도 쓴다. 마찬가지로 $\bigcap_{i=0}^{n} A_i$는 $A_0 \cap A_1 \cap \cdots \cap A_n$으로도 쓴다. 합집합은 존재 한정기호, 교집합은 전칭 한정기호에 대응한다는 점에 주목할 필요가 있다.
+여기서 $\mathbf{Z}^{\text{nonneg}}$는 음이 아닌 정수 전체의 집합이다. $\bigcup_{i=0}^{n} A_i$는 "$`i`$가 0부터 $n$까지일 때 $A_i$의 합집합"이라고 읽으며, $A_0 \cup A_1 \cup \cdots \cup A_n$으로도 쓴다. 마찬가지로 $\bigcap_{i=0}^{n} A_i$는 $A_0 \cap A_1 \cap \cdots \cap A_n$으로도 쓴다. 합집합은 존재 한정기호, 교집합은 전칭 한정기호에 대응한다는 점에 주목할 필요가 있다.
 
 **예제 6.1.7 (무한히 많은 구간의 합집합과 교집합).** 양의 정수 $i$마다 다음 구간을 정의한다.
 
-$$
+```math
 A_i = \lbrace x \in \mathbf{R} \mid -\tfrac{1}{i} < x < \tfrac{1}{i} \rbrace = \left(-\tfrac{1}{i}, \tfrac{1}{i}\right)
-$$
+```
 
 $A_1 = (-1, 1)$, $A_2 = (-\frac{1}{2}, \frac{1}{2})$, $A_3 = (-\frac{1}{3}, \frac{1}{3})$이고, $i$가 커질수록 구간이 좁아지므로 $A_1 \supseteq A_2 \supseteq A_3 \supseteq \cdots$이다.
 
@@ -360,13 +360,13 @@ $\bigcap_{i=1}^{\infty} A_i$: 0은 모든 $A_i$에 속한다. 0이 아닌 실수
 
 (b) 정수 집합 $\mathbf{Z}$에서 다음 세 집합을 생각한다.
 
-$$
+```math
 \begin{aligned}
 T_0 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k \rbrace \\
 T_1 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k + 1 \rbrace \\
 T_2 &= \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 3k + 2 \rbrace
 \end{aligned}
-$$
+```
 
 4장의 몫-나머지 정리에 따르면 모든 정수 $n$은 어떤 정수 $k$에 대해 $n = 3k$, $n = 3k + 1$, $n = 3k + 2$ 가운데 정확히 하나의 꼴로 나타난다. 모든 정수가 세 꼴 가운데 적어도 하나로 나타나므로 모든 정수가 $T_0$, $T_1$, $T_2$ 가운데 하나에 속하고, 따라서 $\mathbf{Z} = T_0 \cup T_1 \cup T_2$이다. 또 두 꼴로 동시에 나타나는 정수는 없으므로 어떤 정수도 두 집합에 동시에 속하지 않고, 따라서 세 집합은 쌍마다 서로소이다. 또 $0 \in T_0$, $1 \in T_1$, $2 \in T_2$이므로 세 집합 모두 공집합이 아니다. 그러므로 $\lbrace T_0, T_1, T_2 \rbrace$는 $\mathbf{Z}$의 분할이다.
 
@@ -386,9 +386,9 @@ $$
 
 따라서 다음과 같다.
 
-$$
+```math
 \mathcal{P}(\lbrace x, y \rbrace) = \lbrace \emptyset, \lbrace x \rbrace, \lbrace y \rbrace, \lbrace x, y \rbrace \rbrace
-$$
+```
 
 원소가 2개인 집합의 멱집합은 원소가 $4 = 2^2$개이다. 원소가 $n$개인 집합의 멱집합이 $2^n$개의 원소를 가진다는 일반적인 사실은 3.3절에서 증명한다.
 
@@ -499,7 +499,7 @@ $X$와 $Y$가 전체집합 $U$의 부분집합이고 $x$, $y$가 $U$의 원소�
 - **출발점:** $A$와 $B$를 임의로 택한 특정 집합이라 하자.
 - **보일 것:** $A \cap B \subseteq A$.
 
-부분집합의 정의에 따라 $A \cap B \subseteq A$는 $\forall x\ (x \in A \cap B \rightarrow x \in A)$와 같으므로, $x$를 $A \cap B$의 임의의 원소로 두고 $x \in A$를 보이면 된다. 두 사이를 메우는 데는 교집합의 절차적 정의와 논리 규칙을 쓴다. 다음 두 표는 정리 6.2.1의 1(a)와 2(a)의 증명을 한 단계씩 근거와 함께 적은 것이다.
+부분집합의 정의에 따라 $A \cap B \subseteq A$는 $`\forall x\ (x \in A \cap B \rightarrow x \in A)`$와 같으므로, $x$를 $A \cap B$의 임의의 원소로 두고 $x \in A$를 보이면 된다. 두 사이를 메우는 데는 교집합의 절차적 정의와 논리 규칙을 쓴다. 다음 두 표는 정리 6.2.1의 1(a)와 2(a)의 증명을 한 단계씩 근거와 함께 적은 것이다.
 
 | 진술 | 근거 |
 |:-----|:-----|
@@ -527,7 +527,7 @@ $X$와 $Y$가 전체집합 $U$의 부분집합이고 $x$, $y$가 $U$의 원소�
 
 1(b)와 2(b)는 $A$와 $B$의 역할을 바꾸어 같은 방식으로 증명한다. 3의 추이성은 다음과 같이 증명한다. $A \subseteq B$이고 $B \subseteq C$인 집합 $A$, $B$, $C$를 택하고, $x$를 $A$의 임의의 원소라 하자. $A \subseteq B$이므로 부분집합의 정의에 의해 $x \in B$이다. 다시 $B \subseteq C$이므로 $x \in C$이다. $x$는 $A$의 임의의 원소였으므로 $A \subseteq C$이다.
 
-**가정의 세계.** 호프스태터(Douglas Hofstadter)는 *괴델, 에셔, 바흐*에서 수학적 증명의 공상 규칙(fantasy rule)을 소개하였다. 증명에서 어떤 대상을 두거나 어떤 사실을 가정하면 현실 세계의 모든 사실에 더해 그 가정까지 참인 가상의 세계로 들어간다. 그 세계 안에서 다시 가정을 하면 한 단계 더 안쪽의 세계로 들어간다. 조건문이나 전칭 명제 형태의 결론을 하나 끌어낼 때마다 한 단계씩 바깥 세계로 돌아오며, 증명은 처음 가정을 한 세계로 돌아올 때 끝난다. 문제가 "(명제 1)이라 하자. (명제 2)를 증명하라." 꼴로 주어지면, 명제 1은 이미 참인 사실로 받아들이고 명제 2의 출발점에서 증명을 시작한다. 예를 들어 "$A$와 $B$를 임의의 집합이라 하자. $A \cap B \subseteq A$를 증명하라."라는 문제의 증명은 "$x \in A \cap B$라 하자"로 시작하며, $A$와 $B$를 임의로 고른 것은 이미 전제되어 있다.
+**가정의 세계.** 호프스태터(Douglas Hofstadter)는 *괴델, 에셔, 바흐*에서 수학적 증명의 공상 규칙(fantasy rule)을 소개하였다. 증명에서 어떤 대상을 두거나 어떤 사실을 가정하면 현실 세계의 모든 사실에 더해 그 가정까지 참인 가상의 세계로 들어간다. 그 세계 안에서 다시 가정을 하면 한 단계 더 안쪽의 세계로 들어간다. 조건문이나 전칭 명제 형태의 결론을 하나 끌어낼 때마다 한 단계씩 바깥 세계로 돌아오며, 증명은 처음 가정을 한 세계로 돌아올 때 끝난다. 문제가 "(명제 1)이라 하자. (명제 2)를 증명하라." 꼴로 주어지면, 명제 1은 이미 참인 사실로 받아들이고 명제 2의 출발점에서 증명을 시작한다. 예를 들어 "$`A`$와 $B$를 임의의 집합이라 하자. $A \cap B \subseteq A$를 증명하라."라는 문제의 증명은 "$`x \in A \cap B`$라 하자"로 시작하며, $A$와 $B$를 임의로 고른 것은 이미 전제되어 있다.
 
 > **주의:** 벤 다이어그램은 직관을 주지만 그 자체로는 엄밀한 증명이 아니다. 그림이 모든 경우를 대표한다는 사실을 말로 정당화하려면 원소 논증만큼 긴 설명이 필요하고, 집합이 넷 이상이면 모든 교집합 영역을 보여 주는 그림을 그리기도 어렵다. 예를 들어 모든 교집합 영역을 보여 주면서 회전 대칭인 벤 다이어그램은 집합의 개수가 4, 6, 8, 9처럼 합성수이면 그릴 수 없다. 반대로 개수가 소수이면 그런 그림이 존재함이 그릭스(Jerrold Griggs), 킬리언(Charles Killian), 새비지(Carla Savage)에 의해 증명되었지만, 개수가 커지면 그림이 지나치게 복잡해진다.
 
@@ -566,11 +566,11 @@ $X$와 $Y$가 전체집합 $U$의 부분집합이고 $x$, $y$가 $U$의 원소�
 
 증명할 명제는 전칭 명제이므로 일반적 특수 사례로부터의 일반화를 쓴다. 출발점은 $A$, $B$, $C$를 임의로 택한 집합으로 두는 것이고, 보일 것은 $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$이다. 두 집합이 같으려면 다음 두 포함 관계가 모두 성립해야 한다.
 
-$$
+```math
 A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C) \qquad \text{그리고} \qquad (A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)
-$$
+```
 
-첫째 포함 관계는 $\forall x\ (x \in A \cup (B \cap C) \rightarrow x \in (A \cup B) \cap (A \cup C))$이므로, $x \in A \cup (B \cap C)$라고 가정하고 $x \in (A \cup B) \cap (A \cup C)$를 보인다. 둘째 포함 관계도 마찬가지로 $x \in (A \cup B) \cap (A \cup C)$라고 가정하고 $x \in A \cup (B \cap C)$를 보인다. 그림 7은 이 증명의 구조를 상자로 나타낸 것이다. 안쪽 두 상자의 빈칸(세로 점)을 채우는 것이 남은 일이다.
+첫째 포함 관계는 $`\forall x\ (x \in A \cup (B \cap C) \rightarrow x \in (A \cup B) \cap (A \cup C))`$이므로, $x \in A \cup (B \cap C)$라고 가정하고 $x \in (A \cup B) \cap (A \cup C)$를 보인다. 둘째 포함 관계도 마찬가지로 $x \in (A \cup B) \cap (A \cup C)$라고 가정하고 $x \in A \cup (B \cap C)$를 보인다. 그림 7은 이 증명의 구조를 상자로 나타낸 것이다. 안쪽 두 상자의 빈칸(세로 점)을 채우는 것이 남은 일이다.
 
 ```mermaid
 flowchart TB
@@ -599,15 +599,15 @@ flowchart TB
 
 **(1) $A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)$의 증명.** $x \in A \cup (B \cap C)$라 하자. 합집합의 정의에 의해 $x \in A$이거나 $x \in B \cap C$이다.
 
-- **경우 1 ($x \in A$):** 합집합의 정의에 의해 $x \in A \cup B$이고 $x \in A \cup C$이다. 따라서 교집합의 정의에 의해 $x \in (A \cup B) \cap (A \cup C)$이다.
-- **경우 2 ($x \in B \cap C$):** 교집합의 정의에 의해 $x \in B$이고 $x \in C$이다. $x \in B$이므로 합집합의 정의에 의해 $x \in A \cup B$이고, $x \in C$이므로 $x \in A \cup C$이다. 따라서 교집합의 정의에 의해 $x \in (A \cup B) \cap (A \cup C)$이다.
+- **경우 1 ($`x \in A`$):** 합집합의 정의에 의해 $x \in A \cup B$이고 $x \in A \cup C$이다. 따라서 교집합의 정의에 의해 $x \in (A \cup B) \cap (A \cup C)$이다.
+- **경우 2 ($`x \in B \cap C`$):** 교집합의 정의에 의해 $x \in B$이고 $x \in C$이다. $x \in B$이므로 합집합의 정의에 의해 $x \in A \cup B$이고, $x \in C$이므로 $x \in A \cup C$이다. 따라서 교집합의 정의에 의해 $x \in (A \cup B) \cap (A \cup C)$이다.
 
 두 경우 모두 $x \in (A \cup B) \cap (A \cup C)$이다. $x$는 $A \cup (B \cap C)$의 임의의 원소였으므로 부분집합의 정의에 의해 $A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)$이다.
 
 **(2) $(A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$의 증명.** $x \in (A \cup B) \cap (A \cup C)$라 하자. $x \in A$인 경우와 $x \notin A$인 경우로 나눈다.
 
-- **경우 1 ($x \in A$):** 합집합의 정의에 의해 곧바로 $x \in A \cup (B \cap C)$이다.
-- **경우 2 ($x \notin A$):** 교집합의 정의에 의해 $x \in A \cup B$이고 $x \in A \cup C$이다. $x \in A \cup B$이므로 $x$는 $A$와 $B$ 가운데 적어도 하나에 속하는데, $x \notin A$이므로 $x \in B$이다(소거). 같은 이유로 $x \in A \cup C$와 $x \notin A$에서 $x \in C$이다. 따라서 교집합의 정의에 의해 $x \in B \cap C$이고, 합집합의 정의에 의해 $x \in A \cup (B \cap C)$이다.
+- **경우 1 ($`x \in A`$):** 합집합의 정의에 의해 곧바로 $x \in A \cup (B \cap C)$이다.
+- **경우 2 ($`x \notin A`$):** 교집합의 정의에 의해 $x \in A \cup B$이고 $x \in A \cup C$이다. $x \in A \cup B$이므로 $x$는 $A$와 $B$ 가운데 적어도 하나에 속하는데, $x \notin A$이므로 $x \in B$이다(소거). 같은 이유로 $x \in A \cup C$와 $x \notin A$에서 $x \in C$이다. 따라서 교집합의 정의에 의해 $x \in B \cap C$이고, 합집합의 정의에 의해 $x \in A \cup (B \cap C)$이다.
 
 두 경우 모두 $x \in A \cup (B \cap C)$이므로, 부분집합의 정의에 의해 $(A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$이다.
 
@@ -662,7 +662,7 @@ graph LR
 
 **결론.** 두 포함 관계가 모두 증명되었으므로 집합의 상등의 정의에 의해 $(A \cup B)^c = A^c \cap B^c$이다. ∎
 
-두 방향의 증명은 같은 단계를 거꾸로 밟는다. 각 단계가 동치($\iff$)이기 때문이다. 9(b) $(A \cap B)^c = A^c \cup B^c$도 같은 방법으로 증명하며, 이때는 논리곱의 부정에 대한 드모르간의 법칙을 쓴다.
+두 방향의 증명은 같은 단계를 거꾸로 밟는다. 각 단계가 동치($`\iff`$)이기 때문이다. 9(b) $(A \cap B)^c = A^c \cup B^c$도 같은 방법으로 증명하며, 이때는 논리곱의 부정에 대한 드모르간의 법칙을 쓴다.
 
 ### 2.7 부분집합과의 교집합과 합집합
 
@@ -682,7 +682,7 @@ graph LR
 
 **증명 (귀류법).** 정리의 부정이 참이라고 가정한다. 곧 원소가 없는 집합 $E$와 어떤 집합 $A$가 있어 $E \not\subseteq A$라 하자. 그러면 부분집합의 정의에 의해 $E$의 원소이면서 $A$의 원소가 아닌 것이 있어야 한다. 그러나 $E$에는 원소가 없으므로 그런 원소는 있을 수 없다. 이는 모순이다. 따라서 원소가 없는 집합 $E$와 $E \not\subseteq A$인 집합 $A$가 있다는 가정은 거짓이고, 정리는 참이다. ∎
 
-이 정리는 공허하게 참인 명제(2장, 3장)로도 이해할 수 있다. $E \subseteq A$는 $\forall x\ (x \in E \rightarrow x \in A)$와 같은데, $E$에 원소가 없으므로 가정 $x \in E$가 어떤 $x$에 대해서도 거짓이고, 따라서 이 조건문은 공허하게 참이다.
+이 정리는 공허하게 참인 명제(2장, 3장)로도 이해할 수 있다. $E \subseteq A$는 $`\forall x\ (x \in E \rightarrow x \in A)`$와 같은데, $E$에 원소가 없으므로 가정 $x \in E$가 어떤 $x$에 대해서도 거짓이고, 따라서 이 조건문은 공허하게 참이다.
 
 > **핵심:** **따름정리 6.2.5 (공집합의 유일성).** 원소가 없는 집합은 하나뿐이다.
 
@@ -722,21 +722,21 @@ $A$를 임의로 택한 집합이라 하자. 위의 원소 방법에 따라 $A \
 
 > **핵심:** **일반화된 분배 법칙.** 모든 양의 정수 $n$과 모든 집합 $A$, $B_1, B_2, \ldots, B_n$에 대해 다음이 성립한다.
 
-$$
+```math
 A \cup \left( \bigcap_{i=1}^{n} B_i \right) = \bigcap_{i=1}^{n} (A \cup B_i)
-$$
+```
 
 **증명.** $A$와 $B_1, \ldots, B_n$을 임의의 집합이라 하고 $n$을 양의 정수라 하자.
 
 **1부: $A \cup \left( \bigcap_{i=1}^{n} B_i \right) \subseteq \bigcap_{i=1}^{n} (A \cup B_i)$.** $x$를 $A \cup \left( \bigcap_{i=1}^{n} B_i \right)$의 임의의 원소라 하자. 합집합의 정의에 의해 $x \in A$이거나 $x \in \bigcap_{i=1}^{n} B_i$이다.
 
-- **경우 1 ($x \in A$):** 합집합의 정의에 의해 모든 정수 $i = 1, \ldots, n$에 대해 $x \in A \cup B_i$이다. 따라서 일반화된 교집합의 정의에 의해 $x \in \bigcap_{i=1}^{n} (A \cup B_i)$이다.
-- **경우 2 ($x \in \bigcap_{i=1}^{n} B_i$):** 일반화된 교집합의 정의에 의해 모든 $i = 1, \ldots, n$에 대해 $x \in B_i$이다. 합집합의 정의에 의해 모든 $i$에 대해 $x \in A \cup B_i$이므로 $x \in \bigcap_{i=1}^{n} (A \cup B_i)$이다.
+- **경우 1 ($`x \in A`$):** 합집합의 정의에 의해 모든 정수 $i = 1, \ldots, n$에 대해 $x \in A \cup B_i$이다. 따라서 일반화된 교집합의 정의에 의해 $x \in \bigcap_{i=1}^{n} (A \cup B_i)$이다.
+- **경우 2 ($`x \in \bigcap_{i=1}^{n} B_i`$):** 일반화된 교집합의 정의에 의해 모든 $i = 1, \ldots, n$에 대해 $x \in B_i$이다. 합집합의 정의에 의해 모든 $i$에 대해 $x \in A \cup B_i$이므로 $x \in \bigcap_{i=1}^{n} (A \cup B_i)$이다.
 
 **2부: $\bigcap_{i=1}^{n} (A \cup B_i) \subseteq A \cup \left( \bigcap_{i=1}^{n} B_i \right)$.** $x$를 $\bigcap_{i=1}^{n} (A \cup B_i)$의 임의의 원소라 하자. 교집합의 정의에 의해 모든 $i = 1, \ldots, n$에 대해 $x \in A \cup B_i$이다. $x \in A$인 경우와 $x \notin A$인 경우로 나눈다.
 
-- **경우 1 ($x \in A$):** 합집합의 정의에 의해 $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$이다.
-- **경우 2 ($x \notin A$):** 모든 $i$에 대해 $x \in A \cup B_i$이고 $x \notin A$이므로, 모든 $i$에 대해 $x \in B_i$이다. 따라서 교집합의 정의에 의해 $x \in \bigcap_{i=1}^{n} B_i$이고, 합집합의 정의에 의해 $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$이다.
+- **경우 1 ($`x \in A`$):** 합집합의 정의에 의해 $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$이다.
+- **경우 2 ($`x \notin A`$):** 모든 $i$에 대해 $x \in A \cup B_i$이고 $x \notin A$이므로, 모든 $i$에 대해 $x \in B_i$이다. 따라서 교집합의 정의에 의해 $x \in \bigcap_{i=1}^{n} B_i$이고, 합집합의 정의에 의해 $x \in A \cup \left( \bigcap_{i=1}^{n} B_i \right)$이다.
 
 **결론.** 두 포함 관계가 모두 증명되었으므로 집합의 상등의 정의에 의해 두 집합은 같다. ∎
 
@@ -754,9 +754,9 @@ $$
 
 **예제 6.3.1 (집합 항등식의 반례 찾기).** 다음 성질은 참인가?
 
-$$
+```math
 \text{모든 집합 } A, B, C \text{에 대해 } (A - B) \cup (B - C) = A - C
-$$
+```
 
 이 성질이 참이라는 것은 모든 집합 $A$, $B$, $C$에 대해 등식이 성립한다는 뜻이다. 따라서 이 성질이 거짓이라는 것은 등식이 성립하지 않는 집합 $A$, $B$, $C$가 있다는 뜻이다.
 
@@ -823,13 +823,13 @@ $$
 
 $X$를 원소가 $k + 1$개인 집합이라 하자. $k + 1 \ge 1$이므로 $X$에서 원소 $z$를 하나 고를 수 있다. $X$의 모든 부분집합은 $z$를 포함하거나 포함하지 않는다. $z$를 포함하지 않는 부분집합은 정확히 $X - \lbrace z \rbrace$의 부분집합이고, $z$를 포함하지 않는 부분집합 $A$는 $z$를 포함하는 부분집합 $A \cup \lbrace z \rbrace$와 짝지어진다. 따라서 $z$를 포함하는 부분집합과 포함하지 않는 부분집합의 개수가 같고, $X$의 부분집합의 개수는 $X - \lbrace z \rbrace$의 부분집합의 개수의 두 배이다. $X - \lbrace z \rbrace$는 원소가 $k$개이므로 귀납 가정에 의해 부분집합이 $2^k$개이다. 그러므로 다음이 성립한다.
 
-$$
+```math
 \begin{aligned}
 (X\text{의 부분집합의 개수}) &= 2 \cdot (X - \lbrace z \rbrace\text{의 부분집합의 개수}) \\
 &= 2 \cdot 2^k \\
 &= 2^{k+1}
 \end{aligned}
-$$
+```
 
 둘째 줄은 귀납 가정을 대입한 것이고, 셋째 줄은 지수 법칙이다. 이로써 $P(k + 1)$이 참이다. 기저 단계와 귀납 단계가 모두 증명되었으므로 정리가 성립한다. ∎
 
@@ -843,21 +843,21 @@ $U$를 전체집합이라 하자. 정리 6.2.2의 항등식은 멱집합 $\mathc
 
 이 방법이 가능한 것은 알려진 성질이 모두 전칭 명제이기 때문이다. 보통의 대수 법칙처럼 집합 법칙의 각 변수 자리에는 어떤 집합이든 넣을 수 있다. 예를 들어 분배 법칙
 
-$$
+```math
 A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-$$
+```
 
 는 임의의 세 집합을 넣을 수 있는 틀이다. $A_1$, $A_2$, $A_3$이 특정한 집합이면 $A$ 자리에 $A_1$, $B$ 자리에 $A_2$, $C$ 자리에 $A_3$을 넣어 다음을 얻는다.
 
-$$
+```math
 A_1 \cap (A_2 \cup A_3) = (A_1 \cap A_2) \cup (A_1 \cap A_3)
-$$
+```
 
 변수 자리에는 복합적인 집합도 넣을 수 있다. $W$, $X$, $Y$, $Z$가 임의의 집합이면 $A$ 자리에 $W \cap X$, $B$ 자리에 $Y$, $C$ 자리에 $Z$를 넣어 다음을 얻는다.
 
-$$
+```math
 (W \cap X) \cap (Y \cup Z) = ((W \cap X) \cap Y) \cup ((W \cap X) \cap Z)
-$$
+```
 
 이렇게 정리 6.2.2의 항등식을 한 단계씩 적용하여 새 항등식을 증명하는 방법을 **대수적 증명(algebraic proof)** 이라 한다.
 
@@ -897,9 +897,9 @@ $$
 
 **예제 6.3.4 (네 집합의 결합 법칙).** 모든 집합 $A_1$, $A_2$, $A_3$, $A_4$에 대해 다음이 성립함을 정리 6.2.2의 성질만으로 증명한다.
 
-$$
+```math
 ((A_1 \cup A_2) \cup A_3) \cup A_4 = A_1 \cup ((A_2 \cup A_3) \cup A_4)
-$$
+```
 
 | 단계 | 식 | 근거 |
 |:-----|:-----|:-----|
@@ -920,7 +920,7 @@ $$
 
 ### 4.1 논리적 동치와 집합 성질의 대응
 
-다음 표는 2장의 논리적 동치(명제 변수 $p$, $q$, $r$)와 정리 6.2.2의 집합 성질(집합 $A$, $B$, $C$)을 나란히 놓은 것이다. $\mathbf{t}$는 항진명제, $\mathbf{c}$는 모순명제, $\sim$는 부정이다.
+다음 표는 2장의 논리적 동치(명제 변수 $p$, $q$, $`r`$)와 정리 6.2.2의 집합 성질(집합 $A$, $B$, $`C`$)을 나란히 놓은 것이다. $\mathbf{t}$는 항진명제, $\mathbf{c}$는 모순명제, $\sim$는 부정이다.
 
 | 법칙 | 논리적 동치 | 집합 성질 |
 |:-----|:-----|:-----|
@@ -1039,9 +1039,9 @@ $\lor$(또는)를 $\cup$로, $\land$(그리고)를 $\cap$로, $\mathbf{t}$를 �
 
 **증명.** $B$를 부울 대수, $a$를 $B$의 임의의 원소라 하자. 그러면 다음이 성립한다.
 
-$$
+```math
 \overline{a} + a = a + \overline{a} = 1, \qquad \overline{a} \cdot a = a \cdot \overline{a} = 0
-$$
+```
 
 각 식의 첫 등호는 교환 법칙(공리 1(a), 1(b))이고, 둘째 등호는 보원 법칙(공리 5(a), 5(b))이다. 따라서 $a$는 $\overline{a}$의 보원이 만족해야 하는 두 식 $\overline{a} + a = 1$, $\overline{a} \cdot a = 0$을 만족한다. 정리 6.4.1의 1에 의해 $\overline{a}$의 보원은 유일하므로 $\overline{(\overline{a})} = a$이다. ∎
 
@@ -1065,9 +1065,9 @@ $$
 
 **러셀의 역설(Russell's paradox).** 보통의 집합은 자기 자신에 속하지 않는다. 예를 들어 정수 전체의 집합은 그 자체가 정수가 아니다. 그래도 자기 자신에 속하는 집합을 생각할 수는 있다. 추상적인 개념 전체의 집합은 그 자체도 추상적인 개념이라고 볼 수 있으므로 자기 자신의 원소가 된다. 이제 어떤 성질이든 집합을 정의하는 데 쓸 수 있다고 가정한다. 그러면 자기 자신에 속하지 않는 집합만을 정확히 원소로 가지는 집합 $S$를 다음과 같이 만들 수 있다.
 
-$$
+```math
 S = \lbrace A \mid A\text{는 집합이고 } A \notin A \rbrace
-$$
+```
 
 $S$는 $S$의 원소인가? 어느 답을 택해도 반대 답이 따라 나온다.
 
@@ -1093,9 +1093,9 @@ $S$는 $S$의 원소인가? 어느 답을 택해도 반대 답이 따라 나온�
 
 $U$를 전체집합으로 두고, 논의하는 모든 집합이 $U$의 부분집합이라 하자. 다음과 같이 정의한다.
 
-$$
+```math
 S = \lbrace A \mid A \subseteq U \land A \notin A \rbrace
-$$
+```
 
 러셀의 역설에서는 $S \in S \rightarrow S \notin S$와 $S \notin S \rightarrow S \in S$가 모두 증명되어 $S \in S \land S \notin S$라는 모순이 나왔다. 이 정의에서는 다음과 같이 된다.
 
@@ -1188,7 +1188,7 @@ flowchart TD
 | 개념 | 핵심 요약 |
 |:-----|:-----|
 | 조건제시법 | $\lbrace x \in S \mid P(x) \rbrace$는 $S$의 원소 가운데 $P(x)$를 만족하는 것 전체의 집합이다. |
-| 부분집합 | $A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)$이며, 반증하려면 $A$에 속하고 $B$에 속하지 않는 원소 하나를 찾는다. |
+| 부분집합 | $`A \subseteq B \iff \forall x\ (x \in A \rightarrow x \in B)`$이며, 반증하려면 $A$에 속하고 $B$에 속하지 않는 원소 하나를 찾는다. |
 | 원소 논증 | $X \subseteq Y$를 보이려면 $X$의 임의의 원소 $x$를 두고 $x \in Y$임을 보인다. |
 | 집합의 상등 | $A = B \iff A \subseteq B \land B \subseteq A$이므로 두 방향의 포함 관계를 각각 증명한다. |
 | 집합의 연산 | $A \cup B$는 또는, $A \cap B$는 그리고, $B - A$는 $B$에 있고 $A$에 없음, $A^c$는 전체집합 $U$에서 $A$에 없음으로 정의한다. |
@@ -1213,7 +1213,7 @@ flowchart TD
 
 ## 점검 문제
 
-1. **원소 논증과 반증:** $A = \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 10k + 4 \rbrace$, $B = \lbrace n \in \mathbf{Z} \mid \exists j \in \mathbf{Z},\ n = 2j \rbrace$일 때 $A \subseteq B$를 증명하고 $B \subseteq A$를 반증하라.
+1. **원소 논증과 반증:** $`A = \lbrace n \in \mathbf{Z} \mid \exists k \in \mathbf{Z},\ n = 10k + 4 \rbrace`$, $`B = \lbrace n \in \mathbf{Z} \mid \exists j \in \mathbf{Z},\ n = 2j \rbrace`$일 때 $A \subseteq B$를 증명하고 $B \subseteq A$를 반증하라.
 
    <details>
    <summary>정답</summary>

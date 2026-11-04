@@ -47,9 +47,9 @@
 
 **Concepts used.** The definition of antisymmetry from [Chapter 8, Section 4](../../Lecture-Notes/Ch08_Properties-of-Relations/Concepts_Lecture.md) (Section 8.5 of the textbook) is used.
 
-> **Definition:** A relation $R$ on a set $A$ is **antisymmetric** if for all $a, b \in A$, $a \, R \, b$ and $b \, R \, a$ imply $a = b$.
+> **Definition:** A relation $R$ on a set $A$ is **antisymmetric** if for all $a, b \in A$, $`a \, R \, b`$ and $`b \, R \, a`$ imply $a = b$.
 
-Taking the negation, $R$ is not antisymmetric when there are $a$ and $b$ with $a \, R \, b$, $b \, R \, a$, and $a \neq b$. In terms of the directed graph, the relation is not antisymmetric **if even one pair of distinct vertices has arrows in both directions**. A loop is the case $a = b$, so loops do not affect antisymmetry.
+Taking the negation, $R$ is not antisymmetric when there are $a$ and $b$ with $`a \, R \, b`$, $`b \, R \, a`$, and $a \neq b$. In terms of the directed graph, the relation is not antisymmetric **if even one pair of distinct vertices has arrows in both directions**. A loop is the case $a = b$, so loops do not affect antisymmetry.
 
 **Solution.** In each relation, for every ordered pair $(a, b)$ of distinct elements, check whether the reversed pair $(b, a)$ is also in the relation.
 
@@ -62,7 +62,7 @@ Taking the negation, $R$ is not antisymmetric when there are $a$ and $b$ with $a
 
 *Table 1. Antisymmetry of the four relations*
 
-Therefore the antisymmetric relations are $R_2$ and $R_3$. $R_1$ is not antisymmetric because $1 \, R_1 \, 3$ and $3 \, R_1 \, 1$ but $1 \neq 3$, and $R_4$ is not antisymmetric because $1 \, R_4 \, 2$ and $2 \, R_4 \, 1$ but $1 \neq 2$. The four directed graphs are as follows.
+Therefore the antisymmetric relations are $R_2$ and $R_3$. $R_1$ is not antisymmetric because $`1 \, R_1 \, 3`$ and $`3 \, R_1 \, 1`$ but $1 \neq 3$, and $R_4$ is not antisymmetric because $`1 \, R_4 \, 2`$ and $`2 \, R_4 \, 1`$ but $1 \neq 2$. The four directed graphs are as follows.
 
 ```mermaid
 graph LR
@@ -125,15 +125,15 @@ graph LR
 
 ## 2. Exercise 8.5.7: Inclusion of Prime Factors
 
-**Problem.** On $\mathbf{Z}$, let $m \, R \, n$ mean that every prime factor of $m$ is also a prime factor of $n$. Prove that $R$ is a partial order relation or refute it with a counterexample.
+**Problem.** On $\mathbf{Z}$, let $`m \, R \, n`$ mean that every prime factor of $m$ is also a prime factor of $n$. Prove that $R$ is a partial order relation or refute it with a counterexample.
 
 **Concepts used.** By Chapter 8, Section 4, a relation that is reflexive, antisymmetric, and transitive is a **partial order relation**. Hence if any one of the three properties fails, the relation is not a partial order relation.
 
 **Solution.** $R$ is not a partial order relation, because it is not antisymmetric.
 
 1. Let $m = 2$ and $n = 4$. The only prime factor of 2 is 2, and the only prime factor of $4 = 2^2$ is also 2.
-2. Every prime factor of 2 (namely 2) is a prime factor of 4, so $2 \, R \, 4$.
-3. Every prime factor of 4 (namely 2) is a prime factor of 2, so $4 \, R \, 2$.
+2. Every prime factor of 2 (namely 2) is a prime factor of 4, so $`2 \, R \, 4`$.
+3. Every prime factor of 4 (namely 2) is a prime factor of 2, so $`4 \, R \, 2`$.
 4. But $2 \neq 4$, so $R$ is not antisymmetric.
 
 The other two properties hold. Every prime factor of $m$ is obviously a prime factor of $m$, so $R$ is reflexive. If every prime factor of $m$ is a prime factor of $n$ and every prime factor of $n$ is a prime factor of $p$, then each prime factor of $m$ becomes, through $n$, a prime factor of $p$, so $R$ is transitive. Because $R$ compares only the **sets** of prime factors and ignores their exponents, distinct integers with the same set of prime factors ($2$ and $4$, $6$ and $12$, $2$ and $-2$, and so on) are related to each other, which breaks antisymmetry.
@@ -197,13 +197,13 @@ Figure 6 has the structure of the vertices and edges of a cube. For example, $\l
 
 **Problem.** A relation $R$ on $A = \lbrace a, b, c, d \rbrace$ is given below.
 
-$$
+```math
 R = \lbrace (a, a), (b, b), (c, c), (d, d), (c, a), (a, d), (c, d), (b, c), (b, d), (b, a) \rbrace
-$$
+```
 
 Decide, with justification, whether $R$ is a total order relation on $A$.
 
-**Concepts used.** By Chapter 8, Section 4, elements $a$ and $b$ are **comparable** under a partial order relation $R$ if $a \, R \, b$ or $b \, R \, a$. A partial order relation under which every two elements of $A$ are comparable is a **total order relation**. A subset in which every two elements are comparable is a **chain**, so a total order relation is a partial order relation under which all of $A$ is a single chain.
+**Concepts used.** By Chapter 8, Section 4, elements $a$ and $b$ are **comparable** under a partial order relation $R$ if $`a \, R \, b`$ or $`b \, R \, a`$. A partial order relation under which every two elements of $A$ are comparable is a **total order relation**. A subset in which every two elements are comparable is a **chain**, so a total order relation is a partial order relation under which all of $A$ is a single chain.
 
 **Solution.** $R$ is a total order relation. Four things are checked in turn.
 
@@ -211,9 +211,9 @@ Decide, with justification, whether $R$ is a total order relation on $A$.
 
 **(2) Antisymmetric.** The pairs other than loops are the six pairs $(c, a)$, $(a, d)$, $(c, d)$, $(b, c)$, $(b, d)$, $(b, a)$, and none of their reversals $(a, c)$, $(d, a)$, $(d, c)$, $(c, b)$, $(d, b)$, $(a, b)$ is in $R$.
 
-**(3) Transitive.** Cases involving a loop ($x \, R \, x$ and $x \, R \, z$ give $x \, R \, z$) are trivial, so only the cases in which two non-loop pairs are linked by a middle element need checking.
+**(3) Transitive.** Cases involving a loop ($`x \, R \, x`$ and $`x \, R \, z`$ give $`x \, R \, z`$) are trivial, so only the cases in which two non-loop pairs are linked by a middle element need checking.
 
-| $x \, R \, y$ | $y \, R \, z$ | Required $x \, R \, z$ | In $R$? |
+| $`x \, R \, y`$ | $`y \, R \, z`$ | Required $`x \, R \, z`$ | In $R$? |
 |:---:|:---:|:---:|:---:|
 | $(c, a)$ | $(a, d)$ | $(c, d)$ | Yes |
 | $(b, c)$ | $(c, a)$ | $(b, a)$ | Yes |
@@ -226,7 +226,7 @@ No pair can follow a non-loop pair whose second component is $d$, because the on
 
 **(4) Every two elements are comparable.** There are $\binom{4}{2} = 6$ pairs of distinct elements, and for each pair one of the two ordered pairs is in $R$: $\lbrace a, b \rbrace$ by $(b, a)$, $\lbrace a, c \rbrace$ by $(c, a)$, $\lbrace a, d \rbrace$ by $(a, d)$, $\lbrace b, c \rbrace$ by $(b, c)$, $\lbrace b, d \rbrace$ by $(b, d)$, and $\lbrace c, d \rbrace$ by $(c, d)$.
 
-Therefore $R$ is a total order relation on $A$, and listing the elements in order gives $b \, R \, c$, $c \, R \, a$, $a \, R \, d$. That is, $[b, c, a, d]$ is a chain containing every element of $A$, and the Hasse diagram is a single vertical line.
+Therefore $R$ is a total order relation on $A$, and listing the elements in order gives $`b \, R \, c`$, $`c \, R \, a`$, $`a \, R \, d`$. That is, $[b, c, a, d]$ is a chain containing every element of $A$, and the Hasse diagram is a single vertical line.
 
 ```mermaid
 graph BT
@@ -271,9 +271,9 @@ graph LR
 
 Each step has 2 branches, so there are $2 \cdot 2 \cdot 2 = 8$ leaves, and the sample space is as follows.
 
-$$
+```math
 S = \lbrace BBB, BBG, BGB, BGG, GBB, GBG, GGB, GGG \rbrace
-$$
+```
 
 Each child is a boy or a girl with equal chance, independently of the others, so the eight outcomes are equally likely, each with probability $\frac{1}{8}$.
 
@@ -287,7 +287,7 @@ Each child is a boy or a girl with equal chance, independently of the others, so
 
 *Table 3. Sets and probabilities of the three events*
 
-"At least two" in (ii) includes both exactly two ($BGG$, $GBG$, $GGB$) and three ($GGG$). As a check, the numbers of outcomes with 0, 1, 2, and 3 girls, namely $1, 3, 3, 1$, add up to $8$.
+"At least two" in (ii) includes both exactly two ($BGG$, $GBG$, $`GGB`$) and three ($`GGG`$). As a check, the numbers of outcomes with 0, 1, 2, and 3 girls, namely $1, 3, 3, 1$, add up to $8$.
 
 ---
 
@@ -345,9 +345,9 @@ In (d) the **units digit is chosen first**. The units digit is odd, so it is not
 
 **Solution (e).** The 90 two-digit integers are equally likely to be chosen, so the equally likely probability formula applies.
 
-$$
+```math
 P(\text{distinct digits}) = \frac{81}{90} = \frac{9}{10}, \qquad P(\text{distinct digits and odd}) = \frac{40}{90} = \frac{4}{9}
-$$
+```
 
 > **Key Point:** The multiplication rule applies when the **number** of choices at each step is constant regardless of what was chosen at earlier steps. The choices themselves may differ, but their number must be the same. Choosing the most constrained position first (here the units digit, which must be odd) makes this condition easy to meet.
 
@@ -361,9 +361,9 @@ $$
 
 **Concepts used.** An ordered selection of $r$ distinct elements from a set of $n$ elements is an **r-permutation**, and the number of them is written $P(n, r)$. By Theorem 9.2.3, if $1 \le r \le n$, then the following holds.
 
-$$
+```math
 P(n, r) = n(n - 1)(n - 2) \cdots (n - r + 1) = \frac{n!}{(n - r)!}
-$$
+```
 
 The condition $n \ge 2$ is there because applying Theorem 9.2.3 to $P(n, 2)$ requires $r = 2 \le n$.
 
@@ -375,13 +375,13 @@ The condition $n \ge 2$ is there because applying Theorem 9.2.3 to $P(n, 2)$ req
 
 Simplifying the left-hand side therefore gives the following.
 
-$$
+```math
 \begin{aligned}
 P(n + 1, 2) - P(n, 2) &= (n + 1)n - n(n - 1) \\
 &= n\big[(n + 1) - (n - 1)\big] \\
 &= 2n = 2P(n, 1)
 \end{aligned}
-$$
+```
 
 Starting from the factorial forms $P(n + 1, 2) = \frac{(n + 1)!}{(n - 1)!}$ and $P(n, 2) = \frac{n!}{(n - 2)!}$ and canceling also leads to the same expression.
 
@@ -399,33 +399,33 @@ The identity can also be explained by counting. Split a set of $n + 1$ elements 
 
 **Solution (a).** Split the set of all passwords into the sets of passwords of lengths 3, 4, and 5; these three sets are mutually disjoint, so the addition rule applies. A password of length $k$ with repetition allowed has 50 choices for each position, so by the multiplication rule there are $50^k$ of them.
 
-$$
+```math
 50^3 + 50^4 + 50^5 = 125{,}000 + 6{,}250{,}000 + 312{,}500{,}000 = 318{,}875{,}000
-$$
+```
 
 **Solution (b).** A password of length $k$ with no repeated symbol is an ordered selection of $k$ distinct symbols from the 50, that is, a $k$-permutation of 50 elements. Again add over the lengths.
 
-$$
+```math
 \begin{aligned}
 P(50, 3) &= 50 \cdot 49 \cdot 48 = 117{,}600 \\
 P(50, 4) &= 50 \cdot 49 \cdot 48 \cdot 47 = 5{,}527{,}200 \\
 P(50, 5) &= 50 \cdot 49 \cdot 48 \cdot 47 \cdot 46 = 254{,}251{,}200
 \end{aligned}
-$$
+```
 
 Therefore there are $117{,}600 + 5{,}527{,}200 + 254{,}251{,}200 = 259{,}896{,}000$ passwords with no repeated symbol.
 
 **Solution (c).** The set of passwords with a repeated symbol is the difference of the set of all passwords and the set of passwords with no repetition. By the difference rule, the count is as follows.
 
-$$
+```math
 318{,}875{,}000 - 259{,}896{,}000 = 58{,}979{,}000
-$$
+```
 
 **Solution (d).** Regarding the 318,875,000 passwords as equally likely, the equally likely probability formula gives the following.
 
-$$
+```math
 \frac{58{,}979{,}000}{318{,}875{,}000} \approx 0.185
-$$
+```
 
 That is, about 18.5%. The formula for the probability of a complement in Chapter 9, Section 3 gives the same value, $1 - \frac{259{,}896{,}000}{318{,}875{,}000} \approx 1 - 0.815 = 0.185$.
 
@@ -447,9 +447,9 @@ By Theorem 9.3.3, the **inclusion/exclusion rule**, $N(A \cup B) = N(A) + N(B) -
 
 **Solution.** Let $p$ and $q$ be distinct primes and let $n = pq$. Define the following sets.
 
-$$
+```math
 U = \lbrace 1, 2, \ldots, n \rbrace, \qquad A = \lbrace k \in U \mid p \mid k \rbrace, \qquad B = \lbrace k \in U \mid q \mid k \rbrace
-$$
+```
 
 **Step 1: The integers sharing a common factor greater than 1 with $n$ are exactly the elements of $A \cup B$.** Suppose $k \in U$.
 
@@ -467,9 +467,9 @@ Therefore the set counted by $\varphi(n)$ is $U - (A \cup B)$, and since $A \cup
 
 **Step 3: Inclusion/exclusion.** $N(A \cup B) = N(A) + N(B) - N(A \cap B) = q + p - 1$. Therefore the following holds.
 
-$$
+```math
 \varphi(n) = pq - (p + q - 1) = pq - p - q + 1 = (p - 1)(q - 1)
-$$
+```
 
 For example, if $n = 15 = 3 \cdot 5$, then up to 15 there are 5 multiples of 3, 3 multiples of 5, and one multiple of both, namely 15, so $N(A \cup B) = 5 + 3 - 1 = 7$ and $\varphi(15) = 15 - 7 = 8 = (3 - 1)(5 - 1)$. Indeed, the integers relatively prime to 15 are the 8 integers 1, 2, 4, 7, 8, 11, 13, 14.
 
@@ -524,7 +524,7 @@ The pigeonholes can also be chosen differently. Taking the $n$ pairs $\lbrace 1,
 
 | Concept | Key Summary |
 |:-----|:-----|
-| Antisymmetry | $a \, R \, b$ and $b \, R \, a$ imply $a = b$; in the directed graph, no two distinct vertices have arrows in both directions. |
+| Antisymmetry | $`a \, R \, b`$ and $`b \, R \, a`$ imply $a = b$; in the directed graph, no two distinct vertices have arrows in both directions. |
 | Partial order relation | A relation that is reflexive, antisymmetric, and transitive; if two distinct elements are related to each other, as under the relation comparing only sets of prime factors, it is not a partial order. |
 | Hasse diagram | Point arrows upward and remove loops, arrows implied by transitivity, and arrowheads; in a power set, connect sets that differ by exactly one element. |
 | Total order relation | A partial order relation under which every two elements are comparable, so that all the elements form a single chain. |
@@ -547,7 +547,7 @@ The pigeonholes can also be chosen differently. Taking the $n$ pairs $\lbrace 1,
    <details>
    <summary>Answer</summary>
 
-   The relation $\lbrace (0, 0), (1, 1) \rbrace$ on $\lbrace 0, 1 \rbrace$ is an example. If a relation is symmetric and antisymmetric, then $a \, R \, b$ gives $b \, R \, a$ by symmetry and $a = b$ by antisymmetry. Hence such a relation consists of loops only, that is, it has the form $\lbrace (a, a) \mid a \in B \rbrace$ with $B \subseteq A$.
+   The relation $\lbrace (0, 0), (1, 1) \rbrace$ on $\lbrace 0, 1 \rbrace$ is an example. If a relation is symmetric and antisymmetric, then $`a \, R \, b`$ gives $`b \, R \, a`$ by symmetry and $a = b$ by antisymmetry. Hence such a relation consists of loops only, that is, it has the form $\lbrace (a, a) \mid a \in B \rbrace$ with $B \subseteq A$.
 
    </details>
 

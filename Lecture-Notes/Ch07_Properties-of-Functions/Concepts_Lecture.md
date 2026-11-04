@@ -72,15 +72,15 @@ Together, the two properties say that for each element $x$ of $X$ there is exact
 
 The set of all values of $f$ is called the **range** of $f$, or the image of $X$ under $f$.
 
-$$
+```math
 \text{range of } f = \lbrace\, y \in Y \mid y = f(x) \text{ for some } x \in X \,\rbrace
-$$
+```
 
 In the other direction, given an element $y$ of $Y$, an element $x$ with $f(x) = y$ is called a **preimage** or an **inverse image** of $y$. The set of all preimages of $y$ is also called the inverse image of $y$.
 
-$$
+```math
 \text{inverse image of } y = \lbrace\, x \in X \mid f(x) = y \,\rbrace
-$$
+```
 
 Some elements of the co-domain may have no preimage at all, and others may have several. If an element has no preimage, its inverse image is the empty set.
 
@@ -126,17 +126,17 @@ The criterion for deciding when two functions are equal follows from viewing a f
 
 First suppose that $F(x) = G(x)$ for every $x \in X$. Then for any element $x$ of $X$ and any element $y$ of $Y$,
 
-$$
+```math
 (x, y) \in F \iff y = F(x) \iff y = G(x) \iff (x, y) \in G
-$$
+```
 
 The middle equivalence follows from the supposition $F(x) = G(x)$. Hence $F$ and $G$ consist of exactly the same ordered pairs, and by the definition of set equality, $F = G$.
 
 Conversely, suppose that $F = G$. For any $x \in X$, let $y = F(x)$. Then
 
-$$
+```math
 y = F(x) \iff (x, y) \in F \iff (x, y) \in G \iff y = G(x)
-$$
+```
 
 The middle equivalence holds because $F$ and $G$ are sets with the same elements. Thus $F(x)$ and $G(x)$ both equal $y$, so $F(x) = G(x)$. $\blacksquare$
 
@@ -152,15 +152,15 @@ Note that the hypothesis of the theorem requires the two functions to have the s
 | 1 | 3 | $3 \bmod 3 = 0$ | 9 | $9 \bmod 3 = 0$ |
 | 2 | 7 | $7 \bmod 3 = 1$ | 16 | $16 \bmod 3 = 1$ |
 
-*Table 1. Values of $f$ and $g$ at each element of $J_3$*
+*Table 1. Values of $`f`$ and $`g`$ on $`J_3`$, element by element*
 
 Since $f(x) = g(x)$ for every $x \in J_3$, Theorem 7.1.1 gives $f = g$. The expressions $x^2 + x + 1$ and $(x + 2)^2 = x^2 + 4x + 4$ are different polynomials over the integers, but their difference $3x + 3$ is always a multiple of 3, so they leave the same remainder when divided by 3.
 
 (b) For functions $F, G: \mathbf{R} \to \mathbf{R}$, define new functions $F + G$ and $G + F$ by $(F + G)(x) = F(x) + G(x)$ and $(G + F)(x) = G(x) + F(x)$ for every $x \in \mathbf{R}$. Is $F + G = G + F$? For every real number $x$,
 
-$$
+```math
 (F + G)(x) = F(x) + G(x) = G(x) + F(x) = (G + F)(x)
-$$
+```
 
 The first equality is the definition of $F + G$, the second is the commutative law for addition of real numbers, and the third is the definition of $G + F$. Hence $F + G = G + F$ by Theorem 7.1.1.
 
@@ -172,15 +172,15 @@ The domain and co-domain of a function need not be sets of numbers. The followin
 
 **Example 7.1.5 (Sequences).** Formally, an infinite sequence is a function whose domain consists of all integers from some fixed starting integer onward (Chapter 5). For example, the sequence
 
-$$
+```math
 1, -\frac{1}{2}, \frac{1}{3}, -\frac{1}{4}, \frac{1}{5}, \ldots, \frac{(-1)^n}{n + 1}, \ldots
-$$
+```
 
 can be viewed as the function $f(n) = \frac{(-1)^n}{n + 1}$ from the set $\mathbf{Z}^{\text{nonneg}}$ of nonnegative integers to $\mathbf{R}$. This function sends $0 \mapsto 1$, $1 \mapsto -\frac{1}{2}$, $2 \mapsto \frac{1}{3}$, $3 \mapsto -\frac{1}{4}$, and $4 \mapsto \frac{1}{5}$. The same sequence can also be described by another function. Define $g$ from the set $\mathbf{Z}^{+}$ of positive integers to $\mathbf{R}$ by $g(n) = \frac{(-1)^{n+1}}{n}$. Then $g(1) = 1$, $g(2) = -\frac{1}{2}$, $g(3) = \frac{1}{3}$, and in general
 
-$$
+```math
 g(n + 1) = \frac{(-1)^{n+2}}{n + 1} = \frac{(-1)^n}{n + 1} = f(n)
-$$
+```
 
 The second equality follows from $(-1)^{n+2} = (-1)^n (-1)^2 = (-1)^n$. In other words, $g$ is the same sequence with subscripts starting at 1. As functions, $f$ and $g$ are different because their domains differ, but they list the same terms in the same order.
 
@@ -194,9 +194,9 @@ The co-domain $\mathbf{Z}^{\text{nonneg}}$ is infinite, but the range is only $\
 
 **Example 7.1.7 (Functions Defined on a Cartesian Product).** Define functions $M: \mathbf{R} \times \mathbf{R} \to \mathbf{R}$ and $R: \mathbf{R} \times \mathbf{R} \to \mathbf{R} \times \mathbf{R}$ as follows for every ordered pair $(a, b)$ of real numbers.
 
-$$
+```math
 M(a, b) = ab, \qquad R(a, b) = (-a, b)
-$$
+```
 
 $M$ multiplies the two coordinates of a pair of real numbers, and $R$ reflects each point of the plane across the vertical axis. Strictly speaking, an element of the domain is an ordered pair, so one should write $M((a, b))$; by convention one pair of parentheses is dropped and $M(a, b)$ is written instead. Some values are computed below.
 
@@ -283,7 +283,7 @@ The function defined by this table sends $(1, 1, 1)$, $(1, 1, 0)$, $(1, 0, 0)$, 
 | 0 | 0 | 1 | 1 | 1 |
 | 0 | 0 | 0 | 0 | 0 |
 
-*Table 4. Input/output table of $f(x_1, x_2, x_3) = (x_1 + x_2 + x_3) \bmod 2$*
+*Table 4. $`f(x_1, x_2, x_3) = (x_1 + x_2 + x_3) \bmod 2`$: input/output table*
 
 The output is 1 when the input contains an odd number of 1's and 0 when it contains an even number. This function is the exclusive or of the three inputs, and it is also the function that computes the parity bit indicating whether a string of 0's and 1's contains an odd number of 1's.
 
@@ -298,9 +298,9 @@ Sometimes a rule seems to define a function but does not. For example, suppose o
 
 **Example 7.1.12 (A Function That Is Not Well Defined).** $\mathbf{Q}$ denotes the set of all rational numbers. Suppose one tries to define a function $f: \mathbf{Q} \to \mathbf{Z}$ by the formula $f\left(\frac{m}{n}\right) = m$ for all integers $m$ and $n$ with $n \neq 0$, that is, to associate the integer $m$ with the rational number $\frac{m}{n}$. This $f$ is not well defined, because a rational number can be written as a quotient of integers in more than one way. For instance, $\frac{1}{2} = \frac{3}{6}$. If $f$ were a function, it would give equal values to equal inputs, so $f\left(\frac{1}{2}\right) = f\left(\frac{3}{6}\right)$. But applying the rule gives the following.
 
-$$
+```math
 f\left(\frac{1}{2}\right) = 1, \qquad f\left(\frac{3}{6}\right) = 3, \qquad 1 \neq 3
-$$
+```
 
 Equal inputs with unequal outputs contradict the definition of a function, so $f$ is not well defined and is not a function.
 
@@ -314,9 +314,9 @@ Given a function from $X$ to $Y$, one can form the subset of $Y$ consisting of t
 
 > **Definition:** If $f: X \to Y$ is a function, $A \subseteq X$, and $C \subseteq Y$, define the sets below. $f(A)$ is called the **image of $A$**, and $f^{-1}(C)$ is called the **inverse image of $C$**.
 
-$$
+```math
 f(A) = \lbrace\, y \in Y \mid y = f(x) \text{ for some } x \in A \,\rbrace, \qquad f^{-1}(C) = \lbrace\, x \in X \mid f(x) \in C \,\rbrace
-$$
+```
 
 For an element $y \in Y$, the notation $f^{-1}(y)$ for the inverse image of $y$ abbreviates $f^{-1}(\lbrace y\rbrace)$, the inverse image of the set $\lbrace y\rbrace$.
 
@@ -328,7 +328,7 @@ For an element $y \in Y$, the notation $f^{-1}(y)$ for the inverse image of $y$ 
 
 1. $F(A)$: the elements 1 and 4 of $A$ both go to $b$, so $F(A) = \lbrace b\rbrace$.
 2. $F(X)$: the images of 1, 2, 3, 4 are $b$, $a$, $d$, $b$, so $F(X) = \lbrace a, b, d\rbrace$, which is the range of $F$.
-3. $F^{-1}(C)$: the elements whose images are $a$ or $b$ are 2 (image $a$) and 1 and 4 (image $b$), so $F^{-1}(C) = \lbrace1, 2, 4\rbrace$.
+3. $F^{-1}(C)$: the elements whose images are $a$ or $b$ are 2 (image $`a`$) and 1 and 4 (image $`b`$), so $F^{-1}(C) = \lbrace1, 2, 4\rbrace$.
 4. $F^{-1}(D)$: no arrow goes to $c$ or $e$, so $F^{-1}(D) = \emptyset$.
 
 **Example 7.1.14 (Interaction of a Function with Union).** For sets $X$ and $Y$, a function $F: X \to Y$, and arbitrary subsets $A$ and $B$ of $X$, prove that $F(A \cup B) \subseteq F(A) \cup F(B)$.
@@ -362,15 +362,15 @@ As Section 1.2 showed, different elements of the domain of a function may share 
 
 Symbolically:
 
-$$
+```math
 F: X \to Y \text{ is one-to-one} \iff \forall x_1, x_2 \in X, \ \big(F(x_1) = F(x_2) \Rightarrow x_1 = x_2\big)
-$$
+```
 
 The two forms are equivalent because the second conditional "if $x_1 \neq x_2$, then $F(x_1) \neq F(x_2)$" is the contrapositive of the first (Chapter 2). The precise meaning of a function **not** being one-to-one is obtained by negating the definition (negation of quantified statements, Chapter 3).
 
-$$
+```math
 F: X \to Y \text{ is not one-to-one} \iff \exists x_1, x_2 \in X, \ \big(F(x_1) = F(x_2) \text{ and } x_1 \neq x_2\big)
-$$
+```
 
 That is, if two different elements $x_1$ and $x_2$ with the same function value can be found, then $F$ is not one-to-one. Pictured with arrows, a one-to-one function keeps distinct points of the domain apart in the co-domain, so it **separates** points, while a function that is not one-to-one **collapses** at least two points of the domain into a single point of the co-domain.
 
@@ -382,7 +382,7 @@ That is, if two different elements $x_1$ and $x_2$ with the same function value 
 
 $F$ sends $a \mapsto w$, $b \mapsto v$, $c \mapsto x$, and $d \mapsto y$; the four images are all different, so $F$ is one-to-one. $G$ sends $a \mapsto w$, $b \mapsto u$, $c \mapsto w$, and $d \mapsto y$. Since $G(a) = G(c) = w$ but $a \neq c$, $G$ is not one-to-one.
 
-(b) Let $X = \lbrace1, 2, 3\rbrace$ and $Y = \lbrace a, b, c, d\rbrace$. Define $H: X \to Y$ by $H(1) = c$, $H(2) = a$, $H(3) = d$, and $K: X \to Y$ by $K(1) = d$, $K(2) = b$, $K(3) = d$. $H$ is one-to-one because it sends the three elements of its domain to different elements ($H(1) \neq H(2)$, $H(1) \neq H(3)$, $H(2) \neq H(3)$). $K$ is not one-to-one because $K(1) = K(3) = d$ but $1 \neq 3$.
+(b) Let $X = \lbrace1, 2, 3\rbrace$ and $Y = \lbrace a, b, c, d\rbrace$. Define $H: X \to Y$ by $H(1) = c$, $H(2) = a$, $H(3) = d$, and $K: X \to Y$ by $K(1) = d$, $K(2) = b$, $K(3) = d$. $H$ is one-to-one because it sends the three elements of its domain to different elements ($H(1) \neq H(2)$, $H(1) \neq H(3)$, $`H(2) \neq H(3)`$). $K$ is not one-to-one because $K(1) = K(3) = d$ but $1 \neq 3$.
 
 Whether a function $F$ defined on a finite set is one-to-one can be checked mechanically as follows. Store the elements of the domain in an array $a[1], a[2], \ldots, a[n]$ and let two nested loops run over all pairs $(a[i], a[j])$ with $i < j$. If some pair has $F(a[i]) = F(a[j])$ and $a[i] \neq a[j]$, then $F$ is not one-to-one; if no such pair turns up after all pairs have been examined, then $F$ is one-to-one. The number of pairs to examine is at most $\frac{n(n-1)}{2}$.
 
@@ -390,9 +390,9 @@ Whether a function $F$ defined on a finite set is one-to-one can be checked mech
 
 If the domain $X$ is infinite, the pairs cannot be checked one by one, so a proof is needed. By definition, saying that $f$ is one-to-one means that the following universal statement is true.
 
-$$
+```math
 \forall x_1, x_2 \in X, \ \big(f(x_1) = f(x_2) \Rightarrow x_1 = x_2\big)
-$$
+```
 
 Thus, to prove that $f$ is one-to-one, one generally uses a direct proof.
 
@@ -403,9 +403,9 @@ Conversely, to show that $f$ is not one-to-one, **find** elements $x_1$ and $x_2
 
 **Example 7.2.2 (Proving or Disproving That Functions Are One-to-One).** Define functions $f: \mathbf{R} \to \mathbf{R}$ and $g: \mathbf{Z} \to \mathbf{Z}$ as follows.
 
-$$
+```math
 f(x) = 4x - 1 \ \ (x \in \mathbf{R}), \qquad g(n) = n^2 \ \ (n \in \mathbf{Z})
-$$
+```
 
 To decide whether each function is one-to-one, a good strategy is to try first to prove that it is one-to-one and, if the attempt runs into difficulty, to analyze the point of difficulty to find a counterexample.
 
@@ -429,9 +429,9 @@ For efficient storage, the university needs a hash function that (1) is one-to-o
 
 **Example 7.2.3 (Computing Values of a Hash Function).** Suppose, for simplicity, that there are only 6 students, and define a function $H$ from the set of ID numbers to $\lbrace0, 1, 2, \ldots, 10\rbrace$ by $H(n) = n \bmod 11$ for each ID number $n$. Values of $H$ are computed with the formula $n \bmod 11 = n - 11 \cdot (n \operatorname{div} 11)$ from Chapter 4: divide $n$ by 11, multiply the integer part of the quotient by 11, and subtract the result from $n$. For example, since $328343419 / 11 = 29849401.73\ldots$,
 
-$$
+```math
 H(328343419) = 328343419 - 11 \cdot 29849401 = 328343419 - 328343411 = 8
-$$
+```
 
 In the same way, $356633102 = 11 \cdot 32421191 + 1$, $223799061 = 11 \cdot 20345369 + 2$, and $513408716 = 11 \cdot 46673519 + 7$, so $H(356633102) = 1$, $H(223799061) = 2$, and $H(513408716) = 7$. The link to the record of the student with ID number $n$ is stored in position $H(n)$ of the table.
 
@@ -469,15 +469,15 @@ Section 1.2 showed that some element of the co-domain may fail to be the image o
 
 > **Definition:** Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **onto** (or **surjective**) if, and only if, for every element $y$ of $Y$ there is an element $x$ of $X$ with $F(x) = y$.
 
-$$
+```math
 F: X \to Y \text{ is onto} \iff \forall y \in Y, \ \exists x \in X, \ F(x) = y
-$$
+```
 
 Negating the definition gives the precise meaning of not being onto.
 
-$$
+```math
 F: X \to Y \text{ is not onto} \iff \exists y \in Y, \ \forall x \in X, \ F(x) \neq y
-$$
+```
 
 That is, if the co-domain contains an element that is not the image of **any** element of the domain, the function is not onto. In terms of arrow diagrams, an onto function is one in which at least one arrow from the domain arrives at every element of the co-domain, and if even one element of the co-domain receives no arrow, the function is not onto.
 
@@ -497,9 +497,9 @@ Whether a function from a finite set $X$ to a finite set $Y$ is onto can also be
 
 If $F$ is a function from a set $X$ to an infinite set $Y$, then by definition, saying that $F$ is onto means that the following universal statement is true.
 
-$$
+```math
 \forall y \in Y, \ \exists x \in X, \ F(x) = y
-$$
+```
 
 Thus, to prove that $F$ is onto, one ordinarily uses the method of generalizing from the generic particular from Chapter 4.
 
@@ -510,17 +510,17 @@ Conversely, to show that $F$ is not onto, **find** an element $y$ of $Y$ such th
 
 **Example 7.2.5 (Proving or Disproving That Functions Are Onto).** Define functions $f: \mathbf{R} \to \mathbf{R}$ and $h: \mathbf{Z} \to \mathbf{Z}$ as follows.
 
-$$
+```math
 f(x) = 4x - 1 \ \ (x \in \mathbf{R}), \qquad h(n) = 4n - 1 \ \ (n \in \mathbf{Z})
-$$
+```
 
 (a) Start by trying to prove that $f$ is onto and watch for difficulties. The statement to prove is $\forall y \in \mathbf{R}, \exists x \in \mathbf{R}, f(x) = y$. Suppose $y$ is a real number; one must show that there exists a real number $x$ with $y = 4x - 1$.
 
 **Scratch work.** If such a real number $x$ exists, then
 
-$$
+```math
 4x - 1 = y \;\Longrightarrow\; 4x = y + 1 \;\Longrightarrow\; x = \frac{y + 1}{4}
-$$
+```
 
 The first arrow adds 1 to both sides and the second divides both sides by 4. That is, if $x$ exists, it must equal $\frac{y + 1}{4}$.
 
@@ -528,9 +528,9 @@ The first arrow adds 1 to both sides and the second divides both sides by 4. Tha
 
 **Proof.** Let $y \in \mathbf{R}$. [It must be shown that there exists $x \in \mathbf{R}$ with $f(x) = y$.] Let $x = \frac{y + 1}{4}$. Then $x$ is a real number, because a sum of real numbers is real and a quotient of real numbers with a nonzero denominator is real. Moreover,
 
-$$
+```math
 f(x) = f\left(\frac{y + 1}{4}\right) = 4 \cdot \frac{y + 1}{4} - 1 = (y + 1) - 1 = y
-$$
+```
 
 The first equality is substitution, the second is the definition of $f$, and the last two are basic algebra. Hence $f$ is onto. $\blacksquare$
 
@@ -542,8 +542,8 @@ The same rule $4x - 1$ gives an onto function or not, depending on the domain an
 
 | Aspect | One-to-one | Onto |
 |:-----|:-----|:-----|
-| Definition | $\forall x_1, x_2 \in X, \ F(x_1) = F(x_2) \Rightarrow x_1 = x_2$ | $\forall y \in Y, \ \exists x \in X, \ F(x) = y$ |
-| Negation | $\exists x_1, x_2 \in X, \ F(x_1) = F(x_2) \wedge x_1 \neq x_2$ | $\exists y \in Y, \ \forall x \in X, \ F(x) \neq y$ |
+| Definition | $`\forall x_1, x_2 \in X, \ F(x_1) = F(x_2) \Rightarrow x_1 = x_2`$ | $`\forall y \in Y, \ \exists x \in X, \ F(x) = y`$ |
+| Negation | $`\exists x_1, x_2 \in X, \ F(x_1) = F(x_2) \wedge x_1 \neq x_2`$ | $`\exists y \in Y, \ \forall x \in X, \ F(x) \neq y`$ |
 | Arrow diagram | At most one arrow arrives at each element of the co-domain | At least one arrow arrives at each element of the co-domain |
 | Start of a proof | Suppose $F(x_1) = F(x_2)$ | Suppose $y$ is any element of the co-domain |
 | Goal of a proof | Show $x_1 = x_2$ | Find $x \in X$ with $F(x) = y$ and verify it |
@@ -557,19 +557,19 @@ The same rule $4x - 1$ gives an onto function or not, depending on the domain an
 
 That $b^x$ is a real number for every real number $x$ follows from the least-upper-bound property of the real number system. When working with exponential functions, one uses the following **laws of exponents**. If $b$ and $c$ are positive real numbers and $u$ and $v$ are real numbers, then
 
-$$
+```math
 b^u b^v = b^{u+v} \quad (7.2.1), \qquad (b^u)^v = b^{uv} \quad (7.2.2), \qquad \frac{b^u}{b^v} = b^{u-v} \quad (7.2.3), \qquad (bc)^u = b^u c^u \quad (7.2.4)
-$$
+```
 
 The logarithmic function with base $b$ defined in Section 1.3 is a function from $\mathbf{R}^{+}$ to $\mathbf{R}$ that satisfies $\log_b x = y \iff b^y = x$ for each positive real number $x$ and real number $y$. Using calculus one can show that both exponential and logarithmic functions are one-to-one and onto. Applying the definition of one-to-one gives the following two properties. For any positive real number $b$ with $b \neq 1$,
 
-$$
+```math
 \text{for all real numbers } u, v, \text{ if } b^u = b^v \text{ then } u = v \quad (7.2.5)
-$$
+```
 
-$$
+```math
 \text{for all positive real numbers } u, v, \text{ if } \log_b u = \log_b v \text{ then } u = v \quad (7.2.6)
-$$
+```
 
 These properties lead to many facts about exponents and logarithms, in particular to the following properties of logarithms.
 
@@ -581,29 +581,29 @@ Parts (a) through (c) are proved by rewriting each logarithm as an exponent and 
 
 **Proof.** Suppose positive real numbers $b$, $c$, and $x$ are given with $b \neq 1$ and $c \neq 1$, and let
 
-$$
+```math
 (1)\ u = \log_b c, \qquad (2)\ v = \log_c x, \qquad (3)\ w = \log_b x
-$$
+```
 
 By the definition of logarithm, each equation can be rewritten in exponential form.
 
-$$
+```math
 (1')\ c = b^u, \qquad (2')\ x = c^v, \qquad (3')\ x = b^w
-$$
+```
 
 Substituting $(1')$ into $(2')$ and applying law of exponents 7.2.2 gives $x = c^v = (b^u)^v = b^{uv}$. On the other hand, $x = b^w$ by $(3')$, so $b^{uv} = b^w$. By the one-to-oneness of the exponential function (property 7.2.5), $uv = w$. Substituting from (1), (2), and (3) gives
 
-$$
+```math
 (\log_b c)(\log_c x) = \log_b x
-$$
+```
 
 Since $c \neq 1$, $\log_b c \neq 0$, because $\log_b c = 0$ would mean $c = b^0 = 1$. Hence dividing both sides by $\log_b c$ gives $\log_c x = \frac{\log_b x}{\log_b c}$. $\blacksquare$
 
-**Example 7.2.7 (Computing Logarithms with Base 2 on a Calculator).** Computer science often requires logarithms with base 2. Most calculators have no key for base 2, but they do have keys for **common logarithms** (base 10) and **natural logarithms** (base $e$). The common logarithm is often written $\log$ and the natural logarithm $\ln$. If a calculator shows $\ln 5 \approx 1.609437912$ and $\ln 2 \approx 0.6931471806$, then Theorem 7.2.1(d) with $b = e$ and $c = 2$ gives
+**Example 7.2.7 (Computing Logarithms with Base 2 on a Calculator).** Computer science often requires logarithms with base 2. Most calculators have no key for base 2, but they do have keys for **common logarithms** (base 10) and **natural logarithms** (base $`e`$). The common logarithm is often written $\log$ and the natural logarithm $\ln$. If a calculator shows $\ln 5 \approx 1.609437912$ and $\ln 2 \approx 0.6931471806$, then Theorem 7.2.1(d) with $b = e$ and $c = 2$ gives
 
-$$
+```math
 \log_2 5 = \frac{\ln 5}{\ln 2} \approx \frac{1.609437912}{0.6931471806} \approx 2.321928095
-$$
+```
 
 As a check, $2^2 = 4 < 5 < 8 = 2^3$, so $\log_2 5$ must lie between 2 and 3, which agrees with the result.
 
@@ -641,9 +641,9 @@ $h$ is a one-to-one correspondence. Every element of $S$ is the image of some su
 
 **Proof that $F$ is one-to-one.** Suppose $(x_1, y_1)$ and $(x_2, y_2)$ are ordered pairs in $\mathbf{R} \times \mathbf{R}$ such that $F(x_1, y_1) = F(x_2, y_2)$. [It must be shown that $(x_1, y_1) = (x_2, y_2)$.] By the definition of $F$, $(x_1 + y_1, x_1 - y_1) = (x_2 + y_2, x_2 - y_2)$. For two ordered pairs to be equal, their first components must be equal and their second components must be equal, which gives the following system of equations.
 
-$$
+```math
 x_1 + y_1 = x_2 + y_2 \quad (1), \qquad x_1 - y_1 = x_2 - y_2 \quad (2)
-$$
+```
 
 Adding (1) and (2) gives $2x_1 = 2x_2$, so $x_1 = x_2$. Substituting this into (1) gives $x_1 + y_1 = x_1 + y_2$, so $y_1 = y_2$. By the definition of equality of ordered pairs, $(x_1, y_1) = (x_2, y_2)$.
 
@@ -651,9 +651,9 @@ Adding (1) and (2) gives $2x_1 = 2x_2$, so $x_1 = x_2$. Substituting this into (
 
 **Proof that $F$ is onto.** Suppose $(u, v)$ is any ordered pair in the co-domain. [It must be shown that some ordered pair in the domain is sent to $(u, v)$ by $F$.] Let $r = \frac{u + v}{2}$ and $s = \frac{u - v}{2}$. Then $(r, s)$ is an ordered pair of real numbers, so it is in the domain of $F$, and
 
-$$
+```math
 F(r, s) = F\left(\frac{u + v}{2}, \frac{u - v}{2}\right) = \left(\frac{u + v}{2} + \frac{u - v}{2}, \ \frac{u + v}{2} - \frac{u - v}{2}\right) = \left(\frac{2u}{2}, \frac{2v}{2}\right) = (u, v)
-$$
+```
 
 The first equality is substitution, the second is the definition of $F$, and the rest is algebra. Hence $F$ is onto, and since it is also one-to-one, it is a one-to-one correspondence. $\blacksquare$
 
@@ -685,25 +685,25 @@ graph LR
 
 **Example 7.2.11 (Finding an Inverse Function for a Function Given by an Arrow Diagram).** Find the inverse function of the one-to-one correspondence $h$ of Example 7.2.8. Tracing the $h$-arrows backward from $S$ to $\mathcal{P}(\lbrace a, b\rbrace)$ gives $h^{-1}$.
 
-$$
+```math
 h^{-1}(00) = \emptyset, \qquad h^{-1}(10) = \lbrace a\rbrace, \qquad h^{-1}(01) = \lbrace b\rbrace, \qquad h^{-1}(11) = \lbrace a, b\rbrace
-$$
+```
 
 **Example 7.2.12 (Finding an Inverse Function for a Function Given in Words).** Find the inverse function of the one-to-one correspondence $g$ of Example 7.2.9. The function $g: T \to T$ sends each string $t$ to the string obtained by writing the characters of $t$ in reverse order. Writing characters in reverse order and then in reverse order again recovers the original string, so for any string $t \in T$, $g^{-1}(t)$ is the unique string that equals $t$ when written in reverse order, that is, the string obtained by writing $t$ in reverse order. Hence $g^{-1}(t) = g(t)$, and $g^{-1}$ is the same as $g$ itself. In other words, $g^{-1} = g$.
 
 **Example 7.2.13 (Finding an Inverse Function for a Function Given by a Formula).** Find the inverse of the function $f: \mathbf{R} \to \mathbf{R}$, $f(x) = 4x - 1$, which Example 7.2.2 showed to be one-to-one and Example 7.2.5 showed to be onto. For any particular but arbitrarily chosen real number $y$, $f^{-1}(y)$ is the unique real number $x$ such that $f(x) = y$. But
 
-$$
+```math
 f(x) = y \iff 4x - 1 = y \iff x = \frac{y + 1}{4}
-$$
+```
 
 The first equivalence is the definition of $f$ and the second is algebra. Hence $f^{-1}(y) = \frac{y + 1}{4}$. For example, $f(2) = 7$ and $f^{-1}(7) = \frac{8}{4} = 2$.
 
 **Example 7.2.14 (Finding an Inverse Function for a Function of Two Variables).** Find the inverse function $F^{-1}: \mathbf{R} \times \mathbf{R} \to \mathbf{R} \times \mathbf{R}$ of the one-to-one correspondence $F$ of Example 7.2.10. The solution of Example 7.2.10 showed that $F\left(\frac{u + v}{2}, \frac{u - v}{2}\right) = (u, v)$. Since $F$ is one-to-one, $\left(\frac{u + v}{2}, \frac{u - v}{2}\right)$ is the unique ordered pair in the domain that is sent to $(u, v)$ by $F$. Thus $F^{-1}$ is defined as follows for each ordered pair $(u, v) \in \mathbf{R} \times \mathbf{R}$.
 
-$$
+```math
 F^{-1}(u, v) = \left(\frac{u + v}{2}, \frac{u - v}{2}\right)
-$$
+```
 
 For example, $F(3, 1) = (4, 2)$ and $F^{-1}(4, 2) = \left(\frac{6}{2}, \frac{2}{2}\right) = (3, 1)$.
 
@@ -737,7 +737,7 @@ graph LR
 
 Connecting functions in this way is called **composing** them, and the resulting function is the **composition** of the two functions. Composition makes sense only when every output of the first function is a legitimate input of the second, in other words, when the range of the first function lies inside the domain of the second.
 
-> **Definition:** Let $f: X \to Y$ and $g: Y' \to Z$ be functions such that the range of $f$ is contained in the domain $Y'$ of $g$. Define a new function $g \circ f: X \to Z$ by $(g \circ f)(x) = g(f(x))$ for every $x \in X$; it is called the **composition of $f$ and $g$**. $g \circ f$ is read "$g$ circle $f$", and $g(f(x))$ is read "$g$ of $f$ of $x$".
+> **Definition:** Let $f: X \to Y$ and $g: Y' \to Z$ be functions such that the range of $f$ is contained in the domain $Y'$ of $g$. Define a new function $g \circ f: X \to Z$ by $(g \circ f)(x) = g(f(x))$ for every $x \in X$; it is called the **composition of $f$ and $g$**. $g \circ f$ is read "$`g`$ circle $f$", and $g(f(x))$ is read "$`g`$ of $f$ of $x$".
 
 ```mermaid
 graph LR
@@ -754,15 +754,15 @@ graph LR
 
 (a) Find $g \circ f$ and $f \circ g$. $f$ adds 1 to whatever integer it receives, and $g$ squares whatever integer it receives. This remains true when the incoming integer is written as an expression such as $g(n)$ or $f(n)$. Hence for every $n \in \mathbf{Z}$,
 
-$$
+```math
 (g \circ f)(n) = g(f(n)) = g(n + 1) = (n + 1)^2, \qquad (f \circ g)(n) = f(g(n)) = f(n^2) = n^2 + 1
-$$
+```
 
 (b) Is $g \circ f = f \circ g$? By Theorem 7.1.1, two functions are equal only if they take the same value at every input. But at $n = 1$ the values below differ, so $g \circ f \neq f \circ g$.
 
-$$
+```math
 (g \circ f)(1) = (1 + 1)^2 = 4, \qquad (f \circ g)(1) = 1^2 + 1 = 2
-$$
+```
 
 This example shows that composition of functions is **not a commutative** operation. In general, $F \circ G$ and $G \circ F$ need not be equal, although the two compositions may happen to be equal in particular cases.
 
@@ -776,9 +776,9 @@ This example shows that composition of functions is **not a commutative** operat
 
 The arrow diagram for $g \circ f$ is obtained by tracing the arrows all the way across from $X$ to $Z$ through $Y$ (right part of Figure 11).
 
-$$
+```math
 (g \circ f)(1) = g(f(1)) = g(c) = z, \qquad (g \circ f)(2) = g(f(2)) = g(b) = y, \qquad (g \circ f)(3) = g(f(3)) = g(a) = y
-$$
+```
 
 Hence the range of $g \circ f$ is $\lbrace y, z\rbrace$.
 
@@ -817,9 +817,9 @@ Let $f$ be a function from a set $X$ to a set $Y$ that has an inverse function $
 
 $f^{-1} \circ f$ is found by following the arrows from $X$ to $Y$ by $f$ and back to $X$ by $f^{-1}$.
 
-$$
+```math
 (f^{-1} \circ f)(a) = f^{-1}(z) = a, \qquad (f^{-1} \circ f)(b) = f^{-1}(x) = b, \qquad (f^{-1} \circ f)(c) = f^{-1}(y) = c
-$$
+```
 
 The composition of $f$ and $f^{-1}$ sends each element to itself, so by the definition of the identity function, $f^{-1} \circ f = I_X$. In the same way, $(f \circ f^{-1})(x) = f(b) = x$, $(f \circ f^{-1})(y) = f(c) = y$, and $(f \circ f^{-1})(z) = f(a) = z$, so $f \circ f^{-1} = I_Y$.
 
@@ -850,11 +850,11 @@ The starting point and the conclusion of a direct proof are as follows.
 
 The crucial step is to substitute $g \circ f$ into the definition of one-to-one.
 
-$$
+```math
 g \circ f \text{ is one-to-one} \iff \forall x_1, x_2 \in X, \ \big((g \circ f)(x_1) = (g \circ f)(x_2) \Rightarrow x_1 = x_2\big)
-$$
+```
 
-So one supposes elements $x_1$ and $x_2$ of $X$ with $(g \circ f)(x_1) = (g \circ f)(x_2)$ and shows $x_1 = x_2$. By the definition of composition, the supposition says $g(f(x_1)) = g(f(x_2))$. This equation has the form "$g$(something) = $g$(something else)". Since $g$ is one-to-one, two inputs with the same $g$-value are equal, so $f(x_1) = f(x_2)$. This equation also has the form "$f$(something) = $f$(something else)", and since $f$ is also one-to-one, $x_1 = x_2$. Summarizing this discussion gives the following proof.
+So one supposes elements $x_1$ and $x_2$ of $X$ with $(g \circ f)(x_1) = (g \circ f)(x_2)$ and shows $x_1 = x_2$. By the definition of composition, the supposition says $g(f(x_1)) = g(f(x_2))$. This equation has the form "$`g`$(something) = $g$(something else)". Since $g$ is one-to-one, two inputs with the same $g$-value are equal, so $f(x_1) = f(x_2)$. This equation also has the form "$`f`$(something) = $f$(something else)", and since $f$ is also one-to-one, $x_1 = x_2$. Summarizing this discussion gives the following proof.
 
 **Proof of Theorem 7.3.3.** Suppose $f: X \to Y$ and $g: Y \to Z$ are both one-to-one functions. [It must be shown that $g \circ f$ is one-to-one.] Suppose $x_1$ and $x_2$ are elements of $X$ such that $(g \circ f)(x_1) = (g \circ f)(x_2)$. [It must be shown that $x_1 = x_2$.] By the definition of composition, $g(f(x_1)) = g(f(x_2))$. Since $g$ is one-to-one, $f(x_1) = f(x_2)$, and since $f$ is one-to-one, $x_1 = x_2$. Hence $g \circ f$ is one-to-one. $\blacksquare$
 
@@ -870,25 +870,25 @@ All three elements of $Z$ are images under $g \circ f$, so $g \circ f$ is onto. 
 
 > **Key Point:** **Theorem 7.3.4.** If $f: X \to Y$ and $g: Y \to Z$ are both onto functions, then $g \circ f$ is onto.
 
-The starting point of a direct proof is "$f$ is an onto function from $X$ to $Y$, and $g$ is an onto function from $Y$ to $Z$", and the conclusion to be shown is "$g \circ f$ is an onto function from $X$ to $Z$". Substituting $g \circ f$ into the definition of onto gives the following.
+The starting point of a direct proof is "$`f`$ is an onto function from $X$ to $Y$, and $g$ is an onto function from $Y$ to $Z$", and the conclusion to be shown is "$`g \circ f`$ is an onto function from $X$ to $Z$". Substituting $g \circ f$ into the definition of onto gives the following.
 
-$$
+```math
 g \circ f: X \to Z \text{ is onto} \iff \forall z \in Z, \ \exists x \in X, \ (g \circ f)(x) = z
-$$
+```
 
 This statement is universal, so one supposes a particular but arbitrarily chosen element $z \in Z$ and shows that there exists $x \in X$ with $(g \circ f)(x) = z$. To find $x$, start from the supposition $z \in Z$ and use backward the facts that $g$ and $f$ are onto.
 
 1. Since $g$ is onto, some arrow coming from $Y$ ends at $z$. That is, there is an element $y \in Y$ such that
 
-   $$
+   ```math
    g(y) = z \quad (7.3.1)
-   $$
+   ```
 
 2. Since $f$ is also onto, every element of $Y$ is the endpoint of some arrow coming from $X$. In particular so is $y$, so there is an element $x \in X$ such that
 
-   $$
+   ```math
    f(x) = y \quad (7.3.2)
-   $$
+   ```
 
 3. Substituting equation (7.3.2) into equation (7.3.1) gives $g(f(x)) = z$, and since $g(f(x)) = (g \circ f)(x)$ by the definition of composition, $(g \circ f)(x) = z$. Thus $x$ is an element of $X$ that $g \circ f$ sends to $z$, which is the element sought.
 
@@ -911,8 +911,8 @@ graph LR
 **Example 7.3.5 (An Incorrect "Proof" That a Function Is Onto).** Suppose a student tries to show that a composition of onto functions is onto by writing the following.
 
 1. Suppose $f: X \to Y$ and $g: Y \to Z$ are both onto. Then
-2. $\forall y \in Y, \ \exists x \in X, \ f(x) = y$, and
-3. $\forall z \in Z, \ \exists y \in Y, \ g(y) = z$.
+2. $`\forall y \in Y, \ \exists x \in X, \ f(x) = y`$, and
+3. $`\forall z \in Z, \ \exists y \in Y, \ g(y) = z`$.
 4. So $(g \circ f)(x) = g(f(x)) = g(y) = z$, and thus $g \circ f$ is onto.
 
 Explain the mistakes in this "proof". First, to show that $g \circ f$ is onto, one must be able to answer the following challenge: whenever someone supplies an element $z$ of $Z$ of their own choosing, one must explain how to find an element $x \in X$ with $(g \circ f)(x) = z$. So a proof must start by assuming that a particular but arbitrarily chosen element $z$ of $Z$ is given, and this text does not do so. Second, lines 2 and 3 only restate the hypotheses that $f$ and $g$ are onto. The $x$ and $y$ in line 2 and the $y$ and $z$ in line 3 are local variables whose meaning is confined to the quantified statement in which they occur. In particular, the $y$ in line 2 has nothing to do with the $y$ in line 3, yet line 4 treats the two $y$'s as the same object. As a result, nothing supports the conclusion that $g \circ f$ is onto. A correct proof fixes $z$ first, as above, then finds $y$ for that $z$, and then finds $x$ for that $y$.
@@ -960,7 +960,7 @@ Chapter 9 shows that, for two finite sets with the same number of elements, a fu
 
 - For infinite sets $A$ and $B$ with the same cardinality, some functions from $A$ to $B$ are one-to-one without being onto, and some functions from $A$ to $B$ are onto without being one-to-one.
 
-For instance, $\mathbf{Z}$ and $2\mathbf{Z}$ have the same cardinality because of the function $H$ of Example 7.4.1. But the **inclusion function** $I: 2\mathbf{Z} \to \mathbf{Z}$ defined by $I(n) = n$ for every even integer $n$ is one-to-one but not onto, since no odd integer is an image. And the function $J: \mathbf{Z} \to 2\mathbf{Z}$ defined by $J(n) = 2\lfloor n/2 \rfloor$ for every integer $n$ is onto ($J(2k) = 2k$) but not one-to-one, since $J(0) = J(1) = 0$.
+For instance, $\mathbf{Z}$ and $2\mathbf{Z}$ have the same cardinality because of the function $H$ of Example 7.4.1. But the **inclusion function** $I: 2\mathbf{Z} \to \mathbf{Z}$ defined by $I(n) = n$ for every even integer $n$ is one-to-one but not onto, since no odd integer is an image. And the function $J: \mathbf{Z} \to 2\mathbf{Z}$ defined by $J(n) = 2\lfloor n/2 \rfloor$ for every integer $n$ is onto ($`J(2k) = 2k`$) but not one-to-one, since $J(0) = J(1) = 0$.
 
 ### 4.2 Countable Sets
 
@@ -989,9 +989,9 @@ The integers can be counted by starting at 0 and moving outward, alternating bet
 
 This counting never reaches the same integer twice, so the function is one-to-one, and it reaches every integer after finitely many steps, so it is onto. Hence this matching is a one-to-one correspondence from $\mathbf{Z}^{+}$ to $\mathbf{Z}$, and $\mathbf{Z}^{+}$ and $\mathbf{Z}$ have the same cardinality. Therefore $\mathbf{Z}$ is countably infinite and hence countable. The description above can also be written as the following formula.
 
-$$
+```math
 F(n) = \begin{cases} \dfrac{n}{2} & \text{if } n \text{ is an even positive integer} \\[2mm] -\dfrac{n - 1}{2} & \text{if } n \text{ is an odd positive integer} \end{cases}
-$$
+```
 
 For example, $F(4) = \frac{4}{2} = 2$ and $F(5) = -\frac{5 - 1}{2} = -2$, in agreement with Table 9.
 
@@ -1003,7 +1003,7 @@ Every infinite set discussed so far has turned out to be countably infinite, whi
 
 Surprisingly, this belief is wrong. Even though the rational numbers are packed densely on the line while the integers stand apart, the set of all rational numbers and the set of all integers can be put into one-to-one correspondence. The next example proves part of this fact: the positive rational numbers can be matched one-to-one with the positive integers. Combining this result with the method of Example 7.4.2 (starting at 0 and alternating between positive and negative numbers) shows that the set of all rational numbers is also countable.
 
-**Example 7.4.4 (The Set of All Positive Rational Numbers Is Countable).** Show that the set $\mathbf{Q}^{+}$ of all positive rational numbers is countable. Arrange the elements of $\mathbf{Q}^{+}$ in a grid whose entry in row $p$ and column $q$ is $\frac{p}{q}$. Each positive rational number then occurs somewhere in the grid (in fact infinitely often, since $\frac{1}{1} = \frac{2}{2} = \frac{3}{3} = \cdots$).
+**Example 7.4.4 (The Set of All Positive Rational Numbers Is Countable).** Show that the set $\mathbf{Q}^{+}$ of all positive rational numbers is countable. Arrange the elements of $\mathbf{Q}^{+}$ in a grid whose entry in row $p$ and column $q$ is $\frac{p}{q}$. Each positive rational number then occurs somewhere in the grid (in fact infinitely often, since $`\frac{1}{1} = \frac{2}{2} = \frac{3}{3} = \cdots`$).
 
 ![Figure 17. The positive rational numbers arranged in a grid and counted along the diagonals](../../images/Ch07_Rational-Grid-Enumeration.png)
 
@@ -1017,9 +1017,9 @@ Now consider the real numbers. In 1874 Georg Cantor found a larger infinity by p
 
 First recall how real numbers are written as decimals. Every real number marks a location on the number line and has a **decimal expansion** of the form below, in which $a_0$ is an integer (positive, negative, or zero) and every $a_i$ with $i \geq 1$ is one of the digits 0 through 9.
 
-$$
+```math
 a_0.a_1 a_2 a_3 \ldots
-$$
+```
 
 For example, take the point $P$ in Figure 18. In (a), $P$ lies between 1 and 2. When the interval from 1 to 2 is cut into ten pieces of equal length, (b) shows that $P$ lies between 1.6 and 1.7. When the interval from 1.6 to 1.7 is cut into ten equal pieces once more, (c) shows that $P$ lies between 1.62 and 1.63, nearer to 1.62 than to 1.63. So the decimal expansion of $P$ begins with the three digits 1.62.
 
@@ -1029,9 +1029,9 @@ For example, take the point $P$ in Figure 18. In (a), $P$ lies between 1 and 2. 
 
 If every interval of real numbers, however short, can be cut into ten equal pieces, this procedure can in principle continue forever, producing further digits of the decimal expansion of $P$. If $P$ lands exactly on a cut point at some stage, all remaining digits may be taken to be 0; otherwise the procedure yields infinitely many digits. The decimal representation obtained in this way is unique, except for numbers whose expansions end in an infinite run of 9's or an infinite run of 0's. For example, the following equality holds.
 
-$$
+```math
 0.199999\ldots = 0.200000\ldots
-$$
+```
 
 By convention, such a number is always written with the expansion that ends in 0's, so that every real number has exactly one representation.
 
@@ -1039,33 +1039,33 @@ By convention, such a number is always written with the expansion that ends in 0
 
 **Proof (by contradiction).** Suppose the set of all real numbers between 0 and 1 is countable. This set contains the distinct elements $\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots$, so it is not finite. Hence it is countably infinite, and a one-to-one correspondence with $\mathbf{Z}^{+}$ lets the decimal representations of all its elements be listed, without omission, as a first, second, third, and so on.
 
-$$
+```math
 \begin{aligned} &0.a_{11}a_{12}a_{13}\cdots a_{1n}\cdots \\ &0.a_{21}a_{22}a_{23}\cdots a_{2n}\cdots \\ &0.a_{31}a_{32}a_{33}\cdots a_{3n}\cdots \\ &\qquad \vdots \\ &0.a_{n1}a_{n2}a_{n3}\cdots a_{nn}\cdots \\ &\qquad \vdots \end{aligned}
-$$
+```
 
-[A contradiction is derived by showing that some number between 0 and 1 does not appear on this list.] For each pair of positive integers $i$ and $j$, $a_{ij}$ is the $j$th decimal digit of the $i$th number on the list. In particular, $a_{11}$ is the first digit of the first number and $a_{22}$ is the second digit of the second number. For example, suppose the list starts out as follows, where the digits in bold are the diagonal digits.
+[A contradiction is derived by showing that some number between 0 and 1 does not appear on this list.] For each pair of positive integers $i$ and $j$, $a_{ij}$ is the $`j`$th decimal digit of the $`i`$th number on the list. In particular, $a_{11}$ is the first digit of the first number and $a_{22}$ is the second digit of the second number. For example, suppose the list starts out as follows, where the digits in bold are the diagonal digits.
 
-| $i$th number on the list | 1st digit | 2nd digit | 3rd digit | 4th digit | 5th digit | Rest |
+| $`i`$th number on the list | 1st digit | 2nd digit | 3rd digit | 4th digit | 5th digit | Rest |
 |:-----|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1st number | **2** | 0 | 1 | 4 | 8 | $8\,0\,2\ldots$ |
-| 2nd number | 1 | **1** | 6 | 6 | 6 | $0\,2\,1\ldots$ |
-| 3rd number | 0 | 3 | **3** | 5 | 3 | $3\,2\,0\ldots$ |
-| 4th number | 9 | 6 | 7 | **7** | 6 | $8\,0\,9\ldots$ |
-| 5th number | 0 | 0 | 0 | 3 | **1** | $0\,0\,2\ldots$ |
+| 1st number | **2** | 0 | 1 | 4 | 8 | $`8\,0\,2\ldots`$ |
+| 2nd number | 1 | **1** | 6 | 6 | 6 | $`0\,2\,1\ldots`$ |
+| 3rd number | 0 | 3 | **3** | 5 | 3 | $`3\,2\,0\ldots`$ |
+| 4th number | 9 | 6 | 7 | **7** | 6 | $`8\,0\,9\ldots`$ |
+| 5th number | 0 | 0 | 0 | 3 | **1** | $`0\,0\,2\ldots`$ |
 
 *Table 10. A sample list for the diagonalization argument and its diagonal digits*
 
 The diagonal digits are $a_{11} = 2$, $a_{22} = 1$, $a_{33} = 3$, $a_{44} = 7$, and $a_{55} = 1$. Now construct a new decimal $d = 0.d_1 d_2 d_3 \cdots d_n \cdots$ by the following rule.
 
-$$
+```math
 d_n = \begin{cases} 1 & \text{if } a_{nn} \neq 1 \\ 2 & \text{if } a_{nn} = 1 \end{cases}
-$$
+```
 
 In the example above, $d_1 = 1$ because $a_{11} = 2 \neq 1$, $d_2 = 2$ because $a_{22} = 1$, $d_3 = 1$ because $a_{33} = 3 \neq 1$, $d_4 = 1$ because $a_{44} = 7 \neq 1$, and $d_5 = 2$ because $a_{55} = 1$. Hence $d = 0.12112\ldots$.
 
-The key observation is that **for every positive integer $n$, the $n$th decimal digit of $d$ differs from the $n$th decimal digit of the $n$th number on the list**. Hence $d$ equals no number on the list. Yet $d$ is a real number between 0 and 1, so it is a real number between 0 and 1 missing from a list that was supposed to contain **all** such numbers. This contradiction shows that the assumption that the set of all real numbers between 0 and 1 is countable is false. Hence this set is uncountable. $\blacksquare$
+The key observation is that **for every positive integer $n$, the $`n`$th decimal digit of $d$ differs from the $`n`$th decimal digit of the $`n`$th number on the list**. Hence $d$ equals no number on the list. Yet $d$ is a real number between 0 and 1, so it is a real number between 0 and 1 missing from a list that was supposed to contain **all** such numbers. This contradiction shows that the assumption that the set of all real numbers between 0 and 1 is countable is false. Hence this set is uncountable. $\blacksquare$
 
-> **Note:** There is a reason for using only the digits 1 and 2 in $d$. Since $d$ contains no 0's or 9's, its decimal expansion does not end in repeating 0's or 9's, so its representation is unique. Therefore the fact that the $n$th digits differ implies that $d$ differs from the $n$th number **as a number**. Also, $0.111\ldots \leq d \leq 0.222\ldots$, so $d$ lies between 0 and 1. If the digits were changed carelessly, two different representations of the same number, such as $0.1999\ldots$ and $0.2000\ldots$, could arise and break the argument.
+> **Note:** There is a reason for using only the digits 1 and 2 in $d$. Since $d$ contains no 0's or 9's, its decimal expansion does not end in repeating 0's or 9's, so its representation is unique. Therefore the fact that the $`n`$th digits differ implies that $d$ differs from the $`n`$th number **as a number**. Also, $0.111\ldots \leq d \leq 0.222\ldots$, so $d$ lies between 0 and 1. If the digits were changed carelessly, two different representations of the same number, such as $0.1999\ldots$ and $0.2000\ldots$, could arise and break the argument.
 
 ### 4.4 Subsets of Countable Sets and the Cardinality of the Real Numbers
 
@@ -1090,9 +1090,9 @@ By Corollary 7.4.4, the set $\mathbf{R}$ of all real numbers is uncountable, sin
 
 **Example 7.4.5 (The Cardinality of the Set of All Real Numbers).** Show that $\mathbf{R}$ has the same cardinality as the set of real numbers between 0 and 1. Let $S$ be the open interval from 0 to 1, that is, the set of real numbers strictly between 0 and 1.
 
-$$
+```math
 S = \lbrace\, x \in \mathbf{R} \mid 0 < x < 1 \,\rbrace
-$$
+```
 
 Imagine lifting $S$ off the line and bending it into a circle. Because $S$ contains neither endpoint 0 nor 1, the point at the top of the circle is missing. Set the circle on the number line so that it touches the line at the point 0. Then $\frac{1}{2}$ lies at the point of contact, and $\frac{1}{4}$ and $\frac{3}{4}$ lie at the leftmost and rightmost points of the circle.
 
@@ -1117,7 +1117,7 @@ Let $P$ be the set of all programs in the given language. Either $P$ is finite o
 1. Choose a binary code that turns each symbol of the alphabet of the language into a string of 0's and 1's, for example the seven-bit ASCII (American Standard Code for Information Interchange) or the eight-bit EBCDIC (Extended Binary-Coded Decimal Interchange Code).
 2. For each program in $P$, translate all the symbols of the program into 0's and 1's with this code.
 3. List these strings in order of increasing length, and list strings of equal length in increasing order of the numbers they represent when read as binary numerals.
-4. Define a function $F: \mathbf{Z}^{+} \to P$ by letting $F(n)$ be the $n$th program in this list, for each $n \in \mathbf{Z}^{+}$.
+4. Define a function $F: \mathbf{Z}^{+} \to P$ by letting $F(n)$ be the $`n`$th program in this list, for each $n \in \mathbf{Z}^{+}$.
 
 Different programs translate into different strings, and there are only finitely many strings of each length, so every program occupies a finite position in the list. Hence $F$ is one-to-one and onto, and $P$ is countably infinite and hence countable.
 
@@ -1138,9 +1138,9 @@ The last example proves that a certain set is uncountable and deduces from this 
 
 (a) Let $S$ be the set of all real numbers between 0 and 1. As shown earlier, each number in $S$ can be written as $0.a_1 a_2 a_3 \ldots a_n \ldots$ with every $a_i$ a digit from 0 through 9, and this representation is unique once expansions ending in all 9's are excluded. Define a function $F$ from $S$ to a subset of $T$ as follows.
 
-$$
+```math
 F(0.a_1 a_2 a_3 \ldots a_n \ldots) = \text{the function that sends each positive integer } n \text{ to } a_n
-$$
+```
 
 For example, if $G = F(0.2901\ldots)$, then $G(1) = 2$, $G(2) = 9$, $G(3) = 0$, and $G(4) = 1$. The co-domain of $F$ is taken to be exactly the subset of $T$ that makes $F$ onto, namely the image $F(S)$ of $S$ under $F$. Then $F$ is one-to-one: if the functions $F(x_1)$ and $F(x_2)$ are equal, they take the same value at every positive integer, so every decimal digit of $x_1$ equals the corresponding digit of $x_2$, and since the representations are unique, $x_1 = x_2$. Thus $F$ is a one-to-one correspondence from $S$ to the subset $F(S)$ of $T$. If $F(S)$ were countable, then $S$, which has the same cardinality as $F(S)$, would also be countable by the transitive property of cardinality, contradicting Theorem 7.4.2. Hence $F(S)$ is an uncountable subset of $T$, and $T$ is uncountable by Corollary 7.4.4.
 
@@ -1205,7 +1205,7 @@ For example, if $G = F(0.2901\ldots)$, then $G(1) = 2$, $G(2) = 9$, $G(3) = 0$, 
 | Composition and one-to-one, onto | A composition of one-to-one functions is one-to-one, and a composition of onto functions is onto (Theorems 7.3.3, 7.3.4). |
 | Cardinality | Two sets have the same cardinality if there is a one-to-one correspondence between them, and having the same cardinality is reflexive, symmetric, and transitive. |
 | Countable and uncountable | A set with the same cardinality as $\mathbf{Z}^{+}$ is countably infinite, a finite or countably infinite set is countable, and any other set is uncountable. $\mathbf{Z}$ and $\mathbf{Q}^{+}$ are countable. |
-| Cantor diagonalization | Constructing a number that differs from the $n$th number on a list in the $n$th digit shows that the real numbers between 0 and 1 are uncountable. |
+| Cantor diagonalization | Constructing a number that differs from the $`n`$th number on a list in the $`n`$th digit shows that the real numbers between 0 and 1 are uncountable. |
 | Subsets and cardinality | Any subset of a countable set is countable, and a set with an uncountable subset is uncountable, so $\mathbf{R}$ is uncountable. |
 | Computability | There are countably many programs but uncountably many functions from $\mathbf{Z}^{+}$ to $\lbrace0, \ldots, 9\rbrace$, so noncomputable functions exist. |
 
@@ -1224,7 +1224,7 @@ For example, if $G = F(0.2901\ldots)$, then $G(1) = 2$, $G(2) = 9$, $G(3) = 0$, 
 
    </details>
 
-2. **Well-defined functions:** Decide whether each of the following rules defines a function on $\mathbf{Q}$, where $m$ and $n$ are integers with $n \neq 0$. (a) $g\left(\frac{m}{n}\right) = m + n$ ($g: \mathbf{Q} \to \mathbf{Z}$), (b) $k\left(\frac{m}{n}\right) = \frac{3m}{n}$ ($k: \mathbf{Q} \to \mathbf{Q}$).
+2. **Well-defined functions:** Decide whether each of the following rules defines a function on $\mathbf{Q}$, where $m$ and $n$ are integers with $n \neq 0$. (a) $g\left(\frac{m}{n}\right) = m + n$ ($`g: \mathbf{Q} \to \mathbf{Z}`$), (b) $k\left(\frac{m}{n}\right) = \frac{3m}{n}$ ($`k: \mathbf{Q} \to \mathbf{Q}`$).
 
    <details>
    <summary>Answer</summary>
@@ -1287,12 +1287,12 @@ For example, if $G = F(0.2901\ldots)$, then $G(1) = 2$, $G(2) = 9$, $G(3) = 0$, 
 
    </details>
 
-9. **Diagonalization:** Suppose a list of real numbers between 0 and 1 begins with $0.3141\ldots$, $0.1111\ldots$, $0.2718\ldots$, and $0.5000\ldots$. Use Cantor's rule ($d_n = 1$ if $a_{nn} \neq 1$ and $d_n = 2$ if $a_{nn} = 1$) to find the first four digits of $d$, and explain why $d$ differs from every number on the list.
+9. **Diagonalization:** Suppose a list of real numbers between 0 and 1 begins with $0.3141\ldots$, $0.1111\ldots$, $0.2718\ldots$, and $0.5000\ldots$. Use Cantor's rule ($d_n = 1$ if $a_{nn} \neq 1$ and $d_n = 2$ if $`a_{nn} = 1`$) to find the first four digits of $d$, and explain why $d$ differs from every number on the list.
 
    <details>
    <summary>Answer</summary>
 
-   The diagonal digits are the first digit of the first number, $a_{11} = 3$, the second digit of the second number, $a_{22} = 1$, the third digit of the third number, $a_{33} = 1$, and the fourth digit of the fourth number, $a_{44} = 0$. Hence $d_1 = 1$, $d_2 = 2$, $d_3 = 2$, $d_4 = 1$, and $d = 0.1221\ldots$. For every $n$, $d$ differs from the $n$th number in the $n$th digit, and since the digits of $d$ contain no 0's or 9's, its representation is unique, so $d$ equals no number on the list.
+   The diagonal digits are the first digit of the first number, $a_{11} = 3$, the second digit of the second number, $a_{22} = 1$, the third digit of the third number, $a_{33} = 1$, and the fourth digit of the fourth number, $a_{44} = 0$. Hence $d_1 = 1$, $d_2 = 2$, $d_3 = 2$, $d_4 = 1$, and $d = 0.1221\ldots$. For every $n$, $d$ differs from the $`n`$th number in the $`n`$th digit, and since the digits of $d$ contain no 0's or 9's, its representation is unique, so $d$ equals no number on the list.
 
    </details>
 

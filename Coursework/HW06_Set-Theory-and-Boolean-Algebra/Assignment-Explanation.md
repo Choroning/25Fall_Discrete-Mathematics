@@ -52,7 +52,7 @@
 
 - **(a)** Since $A \subseteq C$, draw $A$ inside $C$. Since $C \cap B \ne \emptyset$, $B$ must overlap $C$, and since $A \cap B = \emptyset$, that overlap must lie outside $A$. That is, $B$ overlaps only the part of $C$ that is not in $A$. Place a dot in $C \cap B$.
 - **(b)** Since $A \subseteq B$ and $C \subseteq B$, draw both $A$ and $C$ inside $B$. Since $A \cap C \ne \emptyset$, draw the two regions overlapping and place a dot in the overlap.
-- **(c)** $A$ and $C$ must each overlap $B$ (dots in $A \cap B$ and $B \cap C$), must each also extend outside $B$ (dots in $A - B$ and $C - B$), and must not overlap each other ($A \cap C = \emptyset$). So draw $B$ in the middle with $A$ and $C$ straddling $B$ from the two sides.
+- **(c)** $A$ and $C$ must each overlap $B$ (dots in $A \cap B$ and $`B \cap C`$), must each also extend outside $B$ (dots in $A - B$ and $`C - B`$), and must not overlap each other ($`A \cap C = \emptyset`$). So draw $B$ in the middle with $A$ and $C$ straddling $B$ from the two sides.
 
 ![Figure 1. Venn diagrams satisfying conditions (a), (b), and (c), with dots in the regions that must contain an element](../../images/HW06_Venn-Diagrams-for-Given-Conditions.png)
 
@@ -127,9 +127,9 @@ First determine how the sets are related. If $x > i + 1$ then $x > i$, so $W_{i+
 - **(b)** By (a), $\mathcal{P}(\mathcal{P}(\emptyset)) = \mathcal{P}(\lbrace \emptyset \rbrace)$. The subsets of a set whose only element is $\emptyset$ are $\emptyset$, which chooses no element, and $\lbrace \emptyset \rbrace$, which chooses that element. Hence $\mathcal{P}(\mathcal{P}(\emptyset)) = \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace$, which has $2^1 = 2$ elements.
 - **(c)** Let the two elements of the set $X = \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace$ from (b) be $x_1 = \emptyset$ and $x_2 = \lbrace \emptyset \rbrace$. Then the subsets of $X$ are the four sets $\emptyset$, $\lbrace x_1 \rbrace$, $\lbrace x_2 \rbrace$, and $\lbrace x_1, x_2 \rbrace$. Writing $x_1$ and $x_2$ out again gives the following.
 
-$$
+```math
 \mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \lbrace \emptyset, \lbrace \emptyset \rbrace, \lbrace \lbrace \emptyset \rbrace \rbrace, \lbrace \emptyset, \lbrace \emptyset \rbrace \rbrace \rbrace
-$$
+```
 
 It has $2^2 = 4$ elements.
 
@@ -154,7 +154,7 @@ It has $2^2 = 4$ elements.
 
 **Problem.** All sets lie inside a universal set $U$. Show by an element argument that $(A \cap B)^c = A^c \cup B^c$ for all sets $A$ and $B$.
 
-**Concept used.** In [Chapter 6, Section 2](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.md), the basic method for showing that two sets $X$ and $Y$ are equal is to prove $X \subseteq Y$ and $Y \subseteq X$ separately. $X \subseteq Y$ is proved by an **element argument**, which shows that an arbitrary element of $X$ belongs to $Y$. Each step uses the definitions of complement ($A^c = \lbrace x \in U \mid x \notin A \rbrace$), intersection, and union, together with De Morgan's law of logic ${\sim}(p \land q) \equiv {\sim}p \lor {\sim}q$.
+**Concept used.** In [Chapter 6, Section 2](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.md), the basic method for showing that two sets $X$ and $Y$ are equal is to prove $X \subseteq Y$ and $Y \subseteq X$ separately. $X \subseteq Y$ is proved by an **element argument**, which shows that an arbitrary element of $X$ belongs to $Y$. Each step uses the definitions of complement ($`A^c = \lbrace x \in U \mid x \notin A \rbrace`$), intersection, and union, together with De Morgan's law of logic ${\sim}(p \land q) \equiv {\sim}p \lor {\sim}q$.
 
 **Proof.** Let $A$ and $B$ be arbitrarily chosen sets.
 
@@ -162,7 +162,7 @@ It has $2^2 = 4$ elements.
 
 1. Suppose $x \in (A \cap B)^c$. [It must be shown that $x \in A^c \cup B^c$.]
 2. By the definition of complement, $x \in U$ and $x \notin A \cap B$.
-3. By the definition of intersection, "$x \in A$ and $x \in B$" is false.
+3. By the definition of intersection, "$`x \in A`$ and $x \in B$" is false.
 4. By De Morgan's law of logic, $x \notin A$ or $x \notin B$.
 5. Since $x \in U$, the definition of complement gives $x \in A^c$ or $x \in B^c$.
 6. By the definition of union, $x \in A^c \cup B^c$.
@@ -172,7 +172,7 @@ It has $2^2 = 4$ elements.
 1. Suppose $x \in A^c \cup B^c$. [It must be shown that $x \in (A \cap B)^c$.]
 2. By the definition of union, $x \in A^c$ or $x \in B^c$.
 3. By the definition of complement, $x \in U$, and $x \notin A$ or $x \notin B$.
-4. By De Morgan's law of logic, "$x \in A$ and $x \in B$" is false.
+4. By De Morgan's law of logic, "$`x \in A`$ and $x \in B$" is false.
 5. By the definition of intersection, $x \notin A \cap B$.
 6. Since $x \in U$, the definition of complement gives $x \in (A \cap B)^c$.
 
@@ -180,9 +180,9 @@ It has $2^2 = 4$ elements.
 
 Part (2) retraces the steps of part (1) in reverse, because every step is an "if and only if". Written as one line, for every element $x$ of $U$:
 
-$$
+```math
 x \in (A \cap B)^c \iff x \notin A \cap B \iff {\sim}(x \in A \land x \in B) \iff x \notin A \lor x \notin B \iff x \in A^c \cup B^c
-$$
+```
 
 The same conclusion follows by splitting $U$ into four regions according to whether $x$ belongs to $A$ and to $B$ and comparing membership in the two sides. This table has the same structure as the truth table that checks De Morgan's law of logic.
 
@@ -203,7 +203,7 @@ The same conclusion follows by splitting $U$ into four regions according to whet
 
 **Problem.** Show by an element argument that for all sets $A$, $B$, and $C$, $A \subseteq C$ and $B \subseteq C$ together imply $A \cup B \subseteq C$.
 
-**Concept used.** The definition of subset ($X \subseteq Y$ means that every element of $X$ belongs to $Y$) and the definition of union. The supposition that an element belongs to a union contains an "or", so it is handled by division into cases.
+**Concept used.** The definition of subset ($X \subseteq Y$ means that every element of $X$ belongs to $`Y`$) and the definition of union. The supposition that an element belongs to a union contains an "or", so it is handled by division into cases.
 
 **Proof.**
 
@@ -335,14 +335,14 @@ So the statement appears to hold, and it is proved by an element argument.
 
 **Proof.** Let $A$ and $B$ be any sets.
 
-$$
+```math
 \begin{aligned}
 A \cup (B - A) &= A \cup (B \cap A^c) && \text{(1)} \\
 &= (A \cup B) \cap (A \cup A^c) && \text{(2)} \\
 &= (A \cup B) \cap U && \text{(3)} \\
 &= A \cup B && \text{(4)}
 \end{aligned}
-$$
+```
 
 Step (1) uses $B - A = B \cap A^c$, the set difference law 12 with $B$ in place of $A$ and $A$ in place of $B$. Step (2) is the distributive law 3(a) with $A$, $B$, $A^c$ in place of $A$, $B$, $C$. Step (3) is the complement law 5(a), $A \cup A^c = U$, and step (4) is the identity law 4(b) with $A \cup B$ in place of $A$.
 
@@ -358,9 +358,9 @@ Step (1) uses $B - A = B \cap A^c$, the set difference law 12 with $B$ in place 
 
 **Problem.** In a Boolean algebra $B$ with operations $+$ and $\cdot$, the chain of equalities below shows that $a \cdot a = a$ for every $a$ in $B$. For each step (a)-(e), state the axiom for a Boolean algebra that justifies it.
 
-$$
+```math
 a = a \cdot 1 = a \cdot (a + \overline{a}) = (a \cdot a) + (a \cdot \overline{a}) = (a \cdot a) + 0 = a \cdot a
-$$
+```
 
 **Concept used.** A **Boolean algebra**, as in [Chapter 6, Section 4](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.md), is a structure consisting of a set $B$ and two operations $+$ and $\cdot$ such that $a + b$ and $a \cdot b$ are in $B$ for all elements $a$ and $b$ of $B$ and the following five axioms hold. Axiom 4 states that there exist two distinct elements 0 and 1, and axiom 5 states that each $a$ has a **complement** $\overline{a}$. In the example of sets, $+$ corresponds to $\cup$, $\cdot$ to $\cap$, 0 to $\emptyset$, 1 to $U$, and $\overline{a}$ to the complement.
 
@@ -398,7 +398,7 @@ Step (a) reads $a \cdot 1 = a$ from right to left to replace $a$ by $a \cdot 1$.
 
 ## 11. Exercise 6.4.3: The Absorption Law
 
-**Problem.** In a chain of equalities showing that $(a + b) \cdot a = a$ for all $a$ and $b$ in a Boolean algebra $B$, state the axiom that justifies each step (a)-(f). The other two steps rest on exercise 6.4.1 (the idempotent law for the product, $a \cdot a = a$) and exercise 6.4.2 (the **universal bound law** for the sum, $a + 1 = 1$).
+**Problem.** In a chain of equalities showing that $(a + b) \cdot a = a$ for all $a$ and $b$ in a Boolean algebra $B$, state the axiom that justifies each step (a)-(f). The other two steps rest on exercise 6.4.1 (the idempotent law for the product, $`a \cdot a = a`$) and exercise 6.4.2 (the **universal bound law** for the sum, $`a + 1 = 1`$).
 
 **Concept used.** The axioms for a Boolean algebra collected in Table 7 of Section 10, and the two properties already proved. An equation can be used in either direction, so a step that replaces the right side of an axiom by its left side is also justified by that axiom.
 
@@ -440,17 +440,17 @@ The proof runs as follows. First $a$ is distributed into the parentheses to give
    - (ii) $a + 0' = a$
 2. Compute as follows.
 
-$$
+```math
 \begin{aligned}
 0' &= 0' + 0 && \text{(1)} \\
 &= 0 + 0' && \text{(2)} \\
 &= 0 && \text{(3)}
 \end{aligned}
-$$
+```
 
 Step (1) is equation (i) with $a = 0'$, step (2) is the commutative law for $+$ (axiom 1(a)), and step (3) is equation (ii) with $a = 0$. Hence $0' = 0$, and 0 is the only identity for $+$.
 
-> **Caution:** That $0'$ is an identity for $+$ does not follow from the axioms; it is the supposition of step 1. The identity law (axiom 4(a)) only says that an identity called 0 **exists** and says nothing about any other element $0'$. So writing "$0'$ also satisfies $a + 0' = a$ by the identity law" gives the wrong reason. Since the statement to be proved is "0 is the only element that is an identity", the starting point is to introduce an arbitrary identity element $0'$ as a supposition.
+> **Caution:** That $0'$ is an identity for $+$ does not follow from the axioms; it is the supposition of step 1. The identity law (axiom 4(a)) only says that an identity called 0 **exists** and says nothing about any other element $0'$. So writing "$`0'`$ also satisfies $a + 0' = a$ by the identity law" gives the wrong reason. Since the statement to be proved is "0 is the only element that is an identity", the starting point is to introduce an arbitrary identity element $0'$ as a supposition.
 
 > **Note:** The commutative law is needed because equation (ii) has the form $a + 0'$, with $0'$ on the right. Only after rewriting $0' + 0$ as $0 + 0'$ can $a = 0$ be substituted into (ii). Replacing $+$ by $\cdot$ and 0 by 1 in the same argument proves the uniqueness of the identity 1 for $\cdot$ (exercise 6.4.7): $1' = 1' \cdot 1 = 1 \cdot 1' = 1$.
 
@@ -550,6 +550,6 @@ Step (1) is equation (i) with $a = 0'$, step (2) is the commutative law for $+$ 
    <details>
    <summary>Answer</summary>
 
-   Suppose 1 and $1'$ are both identities for $\cdot$, that is, $a \cdot 1 = a$ and $a \cdot 1' = a$ for every $a$. Then $1' = 1' \cdot 1$ (1 is an identity, $a = 1'$) $= 1 \cdot 1'$ (commutative law for $\cdot$) $= 1$ ($1'$ is an identity, $a = 1$), so $1' = 1$.
+   Suppose 1 and $1'$ are both identities for $\cdot$, that is, $a \cdot 1 = a$ and $a \cdot 1' = a$ for every $a$. Then $1' = 1' \cdot 1$ (1 is an identity, $`a = 1'`$) $= 1 \cdot 1'$ (commutative law for $`\cdot`$) $= 1$ ($1'$ is an identity, $`a = 1`$), so $1' = 1$.
 
    </details>

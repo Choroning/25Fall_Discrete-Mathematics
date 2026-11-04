@@ -41,7 +41,9 @@
 
 **Concepts used.** A subset of $r$ elements chosen without regard to order from a set of $n$ elements is called an **r-combination**, and the number of them is written $\binom{n}{r}$ and read n choose r ([Chapter 9, Section 5](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). By Theorem 9.5.1, if $0 \le r \le n$, then
 
-$$\binom{n}{r} = \frac{n!}{r!\,(n-r)!}$$
+```math
+\binom{n}{r} = \frac{n!}{r!\,(n-r)!}
+```
 
 This is combined with the **multiplication rule**, which multiplies the numbers of ways of the successive steps of a selection, the **addition rule**, which adds over cases that do not overlap, and the **difference rule**, which subtracts the unwanted cases from the total ([Chapter 9, Sections 2 and 3](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)).
 
@@ -49,11 +51,15 @@ This is combined with the **multiplication rule**, which multiplies the numbers 
 
 **(a)** Seven of the 13 members are chosen without regard to order, so 7-combinations are counted. Canceling the common factor $7!$ from the numerator and the denominator gives the following.
 
-$$\binom{13}{7} = \frac{13!}{7!\,6!} = \frac{13 \cdot 12 \cdot 11 \cdot 10 \cdot 9 \cdot 8}{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = \frac{1235520}{720} = 1716$$
+```math
+\binom{13}{7} = \frac{13!}{7!\,6!} = \frac{13 \cdot 12 \cdot 11 \cdot 10 \cdot 9 \cdot 8}{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = \frac{1235520}{720} = 1716
+```
 
 **(b)(i)** Step 1 chooses four of the seven women, and step 2 chooses three of the six men. The number of ways to perform step 2 is the same whoever was chosen in step 1, so the multiplication rule applies.
 
-$$\binom{7}{4}\binom{6}{3} = 35 \cdot 20 = 700$$
+```math
+\binom{7}{4}\binom{6}{3} = 35 \cdot 20 = 700
+```
 
 **(b)(ii)** The groups with at least one man are all groups of seven except those with no man, that is, the all-female groups. There are exactly seven women, so there is only $\binom{7}{7} = 1$ all-female group. By the difference rule the answer is $1716 - 1 = 1715$.
 
@@ -76,7 +82,7 @@ The same answer follows from the addition rule. The allowed groups split, withou
 
 **(d)** Call the two members $X$ and $Y$. The allowed groups split, without overlap, into groups containing both and groups containing neither. A group containing both takes five of the other 11 members, giving $\binom{11}{5} = 462$, and a group containing neither takes seven of the 11, giving $\binom{11}{7} = 330$. By the addition rule the answer is $462 + 330 = 792$.
 
-> **Caution:** For a condition with a range, such as "at least one" or "at most three", first check whether it is simpler to count the cases that fail the condition and subtract them from the total before adding the cases one by one. Part (b)(ii) is obtained at once by subtracting the single all-female group instead of adding the cases with one man through six men. Also, as in (b)(iii), forgetting to check that there are enough people to fill the remaining places can lead to counting a case that does not exist ($k = 0$).
+> **Caution:** For a condition with a range, such as "at least one" or "at most three", first check whether it is simpler to count the cases that fail the condition and subtract them from the total before adding the cases one by one. Part (b)(ii) is obtained at once by subtracting the single all-female group instead of adding the cases with one man through six men. Also, as in (b)(iii), forgetting to check that there are enough people to fill the remaining places can lead to counting a case that does not exist ($`k = 0`$).
 
 ---
 
@@ -92,13 +98,17 @@ The same answer follows from the addition rule. The allowed groups split, withou
 
 **(a)** Each choice of two points determines the line through them. If two different pairs determined the same line, that line would contain at least three of the points, contradicting the condition that no three points are collinear. Therefore the number of lines equals the number of 2-combinations.
 
-$$\binom{10}{2} = \frac{10 \cdot 9}{2} = 45$$
+```math
+\binom{10}{2} = \frac{10 \cdot 9}{2} = 45
+```
 
 **(b)** A line not passing through $A$ is determined by two of the nine points other than $A$, so there are $\binom{9}{2} = \frac{9 \cdot 8}{2} = 36$ such lines. This can also be checked with the difference rule. The lines through $A$ join $A$ to one of the other nine points, so there are nine of them, and $45 - 9 = 36$ as before.
 
 **(c)** Since no three points are collinear, every choice of three points gives a triangle, and different sets of three points give different triangles.
 
-$$\binom{10}{3} = \frac{10 \cdot 9 \cdot 8}{3 \cdot 2 \cdot 1} = \frac{720}{6} = 120$$
+```math
+\binom{10}{3} = \frac{10 \cdot 9 \cdot 8}{3 \cdot 2 \cdot 1} = \frac{720}{6} = 120
+```
 
 **(d)** A triangle without $A$ as a vertex is formed by three of the other nine points, so there are $\binom{9}{3} = \frac{504}{6} = 84$ of them. By the difference rule, a triangle with $A$ as a vertex chooses its other two vertices from the nine, giving $\binom{9}{2} = 36$, and $120 - 36 = 84$ as before.
 
@@ -114,7 +124,9 @@ $$\binom{10}{3} = \frac{10 \cdot 9 \cdot 8}{3 \cdot 2 \cdot 1} = \frac{720}{6} =
 
 **Concepts used.** A selection of $r$ elements from a set of $n$ elements, made without regard to order and with repetition allowed, is called an **r-combination with repetition allowed**. It is the same as a **multiset** of size $r$ whose elements come from the set. By Theorem 9.6.1 the number of them is as follows ([Chapter 9, Section 6](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)).
 
-$$\binom{r + n - 1}{r}$$
+```math
+\binom{r + n - 1}{r}
+```
 
 The formula counts the ways to arrange in a row $r$ crosses ×, one for each chosen element, and $n - 1$ vertical bars that separate the $n$ categories. Choosing the $r$ positions of the crosses in a row of length $r + n - 1$ determines one arrangement, and conversely each arrangement determines how many elements are chosen from each category.
 
@@ -129,7 +141,9 @@ The formula counts the ways to arrange in a row $r$ crosses ×, one for each cho
 
 The two bars are the boundaries of the three categories. The number of crosses before the first bar is $x_1$, between the bars is $x_2$, and after the second bar is $x_3$; when the bars are adjacent, the category between them is 0. Hence the number of solutions is the number of ways to choose the positions of 20 crosses among 22 positions, that is, the number of r-combinations with repetition allowed with $n = 3$ and $r = 20$.
 
-$$\binom{20 + 3 - 1}{20} = \binom{22}{20} = \binom{22}{2} = \frac{22 \cdot 21}{2} = 231$$
+```math
+\binom{20 + 3 - 1}{20} = \binom{22}{20} = \binom{22}{2} = \frac{22 \cdot 21}{2} = 231
+```
 
 Therefore there are 231 nonnegative integer solutions. The second equality uses $\binom{n}{r} = \binom{n}{n-r}$: choosing the 20 positions of the crosses among 22 positions is the same as choosing the 2 positions of the bars.
 
@@ -145,11 +159,15 @@ Therefore there are 231 nonnegative integer solutions. The second equality uses 
 
 **Solution.** Since $x_i \ge 1$, let $y_i = x_i - 1$. Then $y_i \ge 0$, and the equation becomes the following.
 
-$$(y_1 + 1) + (y_2 + 1) + (y_3 + 1) = 20 \iff y_1 + y_2 + y_3 = 17$$
+```math
+(y_1 + 1) + (y_2 + 1) + (y_3 + 1) = 20 \iff y_1 + y_2 + y_3 = 17
+```
 
 Because $x_i = y_i + 1$, positive integer solutions $(x_1, x_2, x_3)$ correspond one-to-one to nonnegative integer solutions $(y_1, y_2, y_3)$. In terms of units, three of the 20 units are first placed one in each category, and the remaining 17 units are distributed freely among the three categories. Counting as in Exercise 9.6.10 gives the following.
 
-$$\binom{17 + 3 - 1}{17} = \binom{19}{17} = \binom{19}{2} = \frac{19 \cdot 18}{2} = 171$$
+```math
+\binom{17 + 3 - 1}{17} = \binom{19}{17} = \binom{19}{2} = \frac{19 \cdot 18}{2} = 171
+```
 
 Therefore there are 171 positive integer solutions.
 
@@ -165,7 +183,9 @@ Therefore there are 171 positive integer solutions.
 
 **Concepts used.** Theorem 9.7.1 (**Pascal's formula**) states that if $n$ and $r$ are positive integers with $r \le n$, then the following holds ([Chapter 9, Section 7](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)).
 
-$$\binom{n+1}{r} = \binom{n}{r-1} + \binom{n}{r}$$
+```math
+\binom{n+1}{r} = \binom{n}{r-1} + \binom{n}{r}
+```
 
 Combinatorially, if a particular element $x$ is fixed in a set of $n+1$ elements, the subsets of $r$ elements split into those containing $x$ ($\binom{n}{r-1}$ of them) and those not containing $x$ ($\binom{n}{r}$ of them). **Pascal's triangle** is the table with $\binom{n}{r}$ in row $n$ and column $r$. Each row begins and ends with $\binom{n}{0} = \binom{n}{n} = 1$, and by Pascal's formula each interior entry is the sum of the entry directly above it and the entry to the left of that one.
 
@@ -173,15 +193,23 @@ Combinatorially, if a particular element $x$ is fixed in a set of $n+1$ elements
 
 **(a)** Apply Pascal's formula with $n = 5$.
 
-$$\binom{6}{2} = \binom{5}{1} + \binom{5}{2} = 5 + 10 = 15, \qquad \binom{6}{3} = \binom{5}{2} + \binom{5}{3} = 10 + 10 = 20$$
+```math
+\binom{6}{2} = \binom{5}{1} + \binom{5}{2} = 5 + 10 = 15, \qquad \binom{6}{3} = \binom{5}{2} + \binom{5}{3} = 10 + 10 = 20
+```
 
-$$\binom{6}{4} = \binom{5}{3} + \binom{5}{4} = 10 + 5 = 15, \qquad \binom{6}{5} = \binom{5}{4} + \binom{5}{5} = 5 + 1 = 6$$
+```math
+\binom{6}{4} = \binom{5}{3} + \binom{5}{4} = 10 + 5 = 15, \qquad \binom{6}{5} = \binom{5}{4} + \binom{5}{5} = 5 + 1 = 6
+```
 
 **(b)** Apply Pascal's formula with $n = 6$ and use the values from part (a).
 
-$$\binom{7}{3} = \binom{6}{2} + \binom{6}{3} = 15 + 20 = 35, \qquad \binom{7}{4} = \binom{6}{3} + \binom{6}{4} = 20 + 15 = 35$$
+```math
+\binom{7}{3} = \binom{6}{2} + \binom{6}{3} = 15 + 20 = 35, \qquad \binom{7}{4} = \binom{6}{3} + \binom{6}{4} = 20 + 15 = 35
+```
 
-$$\binom{7}{5} = \binom{6}{4} + \binom{6}{5} = 15 + 6 = 21$$
+```math
+\binom{7}{5} = \binom{6}{4} + \binom{6}{5} = 15 + 6 = 21
+```
 
 **(c)** Fill in the remaining entries in the same way. Since $\binom{6}{0} = \binom{6}{6} = 1$ and $\binom{6}{1} = 6$, it follows that $\binom{7}{1} = \binom{6}{0} + \binom{6}{1} = 1 + 6 = 7$, $\binom{7}{2} = \binom{6}{1} + \binom{6}{2} = 6 + 15 = 21$, and $\binom{7}{6} = \binom{6}{5} + \binom{6}{6} = 6 + 1 = 7$, and the two ends are $\binom{7}{0} = \binom{7}{7} = 1$. Hence the row for $n = 7$ is 1, 7, 21, 35, 35, 21, 7, 1.
 
@@ -198,7 +226,7 @@ $$\binom{7}{5} = \binom{6}{4} + \binom{6}{5} = 15 + 6 = 21$$
 
 *Table 2. Pascal's triangle up to the row for n = 7 (bold values are those computed in parts (a) and (b))*
 
-The row for $n = 7$ is symmetric ($\binom{7}{r} = \binom{7}{7-r}$), and its sum is $2^7 = 128$. The symmetry holds because choosing $r$ elements is the same as choosing the $7 - r$ elements left out, and the sum is $2^7$ because it counts all subsets of a 7-element set, grouped by size.
+The row for $n = 7$ is symmetric ($`\binom{7}{r} = \binom{7}{7-r}`$), and its sum is $2^7 = 128$. The symmetry holds because choosing $r$ elements is the same as choosing the $7 - r$ elements left out, and the sum is $2^7$ because it counts all subsets of a 7-element set, grouped by size.
 
 ---
 
@@ -208,35 +236,45 @@ The row for $n = 7$ is symmetric ($\binom{7}{r} = \binom{7}{7-r}$), and its sum 
 
 **Problem.** Prove the following equation for every integer $n \ge 1$.
 
-$$1 \cdot 2 + 2 \cdot 3 + \cdots + n(n+1) = 2\binom{n+2}{3}$$
+```math
+1 \cdot 2 + 2 \cdot 3 + \cdots + n(n+1) = 2\binom{n+2}{3}
+```
 
 **Concepts used.** The proof uses mathematical induction ([Chapter 5, Section 2](../../Lecture-Notes/Ch05_Sequences-Mathematical-Induction-and-Recursion/Concepts_Lecture.md)) and Pascal's formula ([Chapter 9, Section 7](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). In addition, $\binom{m}{2} = \frac{m(m-1)}{2}$ by Theorem 9.5.1, so $(k+1)(k+2) = 2\binom{k+2}{2}$.
 
 **Solution.** For each integer $n \ge 1$, let $P(n)$ be the following equation.
 
-$$P(n): \quad \sum_{i=1}^{n} i(i+1) = 2\binom{n+2}{3}$$
+```math
+P(n): \quad \sum_{i=1}^{n} i(i+1) = 2\binom{n+2}{3}
+```
 
 **Basis step.** For $n = 1$, the left-hand side is $1 \cdot 2 = 2$, and the right-hand side is $2\binom{3}{3} = 2 \cdot 1 = 2$. The two sides are equal, so $P(1)$ is true.
 
 **Inductive step.** Suppose that $P(k)$ is true for an arbitrary integer $k \ge 1$. This is the inductive hypothesis.
 
-$$\sum_{i=1}^{k} i(i+1) = 2\binom{k+2}{3}$$
+```math
+\sum_{i=1}^{k} i(i+1) = 2\binom{k+2}{3}
+```
 
 It remains to show $P(k+1)$, that is, $\sum_{i=1}^{k+1} i(i+1) = 2\binom{k+3}{3}$. Splitting off the last term of the left-hand side and rewriting step by step gives the following.
 
-$$\begin{aligned}
+```math
+\begin{aligned}
 \sum_{i=1}^{k+1} i(i+1) &= \sum_{i=1}^{k} i(i+1) + (k+1)(k+2) && \text{(split off the last term)} \\
 &= 2\binom{k+2}{3} + (k+1)(k+2) && \text{(inductive hypothesis)} \\
 &= 2\binom{k+2}{3} + 2\binom{k+2}{2} && \text{(Theorem 9.5.1)} \\
 &= 2\left[\binom{k+2}{2} + \binom{k+2}{3}\right] && \text{(factor out 2)} \\
 &= 2\binom{k+3}{3} && \text{(Pascal's formula)}
-\end{aligned}$$
+\end{aligned}
+```
 
 The last line is Pascal's formula with $n = k + 2$ and $r = 3$. The formula applies when $r \le n$, and $3 \le k + 2$ holds because $k \ge 1$. Therefore $P(k+1)$ is true. Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \ge 1$ by mathematical induction.
 
 The same inductive step can also be done by polynomial algebra. By Theorem 9.5.1, $2\binom{k+2}{3} = \frac{k(k+1)(k+2)}{3}$, so the following holds.
 
-$$\frac{k(k+1)(k+2)}{3} + (k+1)(k+2) = (k+1)(k+2)\left(\frac{k}{3} + 1\right) = \frac{(k+1)(k+2)(k+3)}{3} = 2\binom{k+3}{3}$$
+```math
+\frac{k(k+1)(k+2)}{3} + (k+1)(k+2) = (k+1)(k+2)\left(\frac{k}{3} + 1\right) = \frac{(k+1)(k+2)(k+3)}{3} = 2\binom{k+3}{3}
+```
 
 Checking small values, for $n = 2$ the sum is $2 + 6 = 8 = 2\binom{4}{3}$, and for $n = 3$ it is $2 + 6 + 12 = 20 = 2\binom{5}{3}$.
 
@@ -254,7 +292,7 @@ Checking small values, for $n = 2$ the sum is $2 + 6 = 8 = 2\binom{4}{3}$, and f
 
 1. $0 \le P(A) \le 1$ for every event $A$.
 2. $P(\emptyset) = 0$ and $P(S) = 1$.
-3. If events $A$ and $B$ are disjoint ($A \cap B = \emptyset$), then $P(A \cup B) = P(A) + P(B)$.
+3. If events $A$ and $B$ are disjoint ($`A \cap B = \emptyset`$), then $P(A \cup B) = P(A) + P(B)$.
 
 Two formulas follow from the axioms. For the **complement** $A^c = S - A$ of an event $A$, $P(A^c) = 1 - P(A)$, and for any two events, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
 
@@ -295,9 +333,11 @@ Two formulas follow from the axioms. For the **complement** $A^c = S - A$ of an 
 
 **Concepts used.** When $P(B) \ne 0$, the **conditional probability** of $A$ given that $B$ has occurred is defined as follows ([Chapter 9, Section 9](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)).
 
-$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
+```math
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+```
 
-Multiplying both sides by $P(B)$ gives $P(A \cap B) = P(A \mid B)\,P(B)$. Also, when an event is split into disjoint pieces, axiom 3 of probability allows the probabilities of the pieces to be added.
+Multiplying both sides by $P(B)$ gives $`P(A \cap B) = P(A \mid B)\,P(B)`$. Also, when an event is split into disjoint pieces, axiom 3 of probability allows the probabilities of the pieces to be added.
 
 **Solution.** For $P(A \mid B)$ to be defined, $P(B) \ne 0$ is required, and for $P(A \mid B^c)$ to be defined, $P(B^c) = 1 - P(B) \ne 0$ is required, that is, $P(B) \ne 1$. Hence $0 < P(B) < 1$ is assumed.
 
@@ -307,11 +347,13 @@ Multiplying both sides by $P(B)$ gives $P(A \cap B) = P(A \mid B)\,P(B)$. Also, 
 
 1. Since $S = B \cup B^c$ and $B \cap B^c = \emptyset$, it follows that $A = (A \cap B) \cup (A \cap B^c)$, and the two pieces $A \cap B$ and $A \cap B^c$ are disjoint (Figure 2).
 2. By axiom 3, $P(A) = P(A \cap B) + P(A \cap B^c)$, so $P(A \cap B^c) = P(A) - P(A \cap B)$.
-3. By the definition of conditional probability, $P(A \cap B) = P(A \mid B)\,P(B)$.
+3. By the definition of conditional probability, $`P(A \cap B) = P(A \mid B)\,P(B)`$.
 4. By the formula for the probability of a complement, $P(B^c) = 1 - P(B)$.
 5. Substituting the results of steps 2, 3, and 4 into the definition of $P(A \mid B^c)$ gives the following formula.
 
-$$P(A \mid B^c) = \frac{P(A \cap B^c)}{P(B^c)} = \frac{P(A) - P(A \mid B)\,P(B)}{1 - P(B)}$$
+```math
+P(A \mid B^c) = \frac{P(A \cap B^c)}{P(B^c)} = \frac{P(A) - P(A \mid B)\,P(B)}{1 - P(B)}
+```
 
 The formula can be checked with one roll of a fair die. With $A = \lbrace 2, 4, 6\rbrace$ (an even number) and $B = \lbrace 1, 2, 3\rbrace$, the probabilities are $P(A) = \frac{1}{2}$ and $P(B) = \frac{1}{2}$, and since $A \cap B = \lbrace 2\rbrace$, $P(A \mid B) = \frac{1/6}{1/2} = \frac{1}{3}$. The formula gives $P(A \mid B^c) = \frac{1/2 - (1/3)(1/2)}{1 - 1/2} = \frac{1/3}{1/2} = \frac{2}{3}$. Counting directly, the even numbers in $B^c = \lbrace 4, 5, 6\rbrace$ are 4 and 6, so the probability is $\frac{2}{3}$ as well.
 
@@ -323,7 +365,9 @@ The formula can be checked with one roll of a fair die. With $A = \lbrace 2, 4, 
 
 **Problem.** Prove Bayes' theorem for $n = 2$: if the sample space $S$ splits into two disjoint events $B_1$ and $B_2$ and the event $A$ has nonzero probability, then the following holds for $k = 1, 2$.
 
-$$P(B_k \mid A) = \frac{P(A \mid B_k)\,P(B_k)}{P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)}$$
+```math
+P(B_k \mid A) = \frac{P(A \mid B_k)\,P(B_k)}{P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)}
+```
 
 **Concepts used.** The proof uses the definition of conditional probability, axiom 3 of probability, and the distributive law for sets $A \cap (B_1 \cup B_2) = (A \cap B_1) \cup (A \cap B_2)$. The result is the case $n = 2$ of **Bayes' theorem** (Theorem 9.9.1 in [Chapter 9, Section 9](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). Since $P(A \mid B_1)$ and $P(A \mid B_2)$ must be defined, it is also assumed that $P(B_1) \ne 0$ and $P(B_2) \ne 0$.
 
@@ -334,13 +378,15 @@ $$P(B_k \mid A) = \frac{P(A \mid B_k)\,P(B_k)}{P(A \mid B_1)\,P(B_1) + P(A \mid 
 *Figure 3. Sample space split into two disjoint events, with an event A across them*
 
 1. By the definition of conditional probability, $P(B_k \mid A) = \dfrac{P(B_k \cap A)}{P(A)}$. This is defined because $P(A) \ne 0$.
-2. Applying the definition of conditional probability to $P(A \mid B_k)$ gives $P(A \mid B_k) = \dfrac{P(A \cap B_k)}{P(B_k)}$, so $P(B_k \cap A) = P(A \mid B_k)\,P(B_k)$.
+2. Applying the definition of conditional probability to $P(A \mid B_k)$ gives $P(A \mid B_k) = \dfrac{P(A \cap B_k)}{P(B_k)}$, so $`P(B_k \cap A) = P(A \mid B_k)\,P(B_k)`$.
 3. Since $S = B_1 \cup B_2$, the distributive law gives $A = A \cap S = (A \cap B_1) \cup (A \cap B_2)$ (Figure 3).
 4. Since $(A \cap B_1) \cap (A \cap B_2) \subseteq B_1 \cap B_2 = \emptyset$, the two pieces are disjoint. Hence axiom 3 gives $P(A) = P(A \cap B_1) + P(A \cap B_2)$.
-5. Applying step 2 with $k = 1$ and with $k = 2$ gives $P(A) = P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)$.
+5. Applying step 2 with $k = 1$ and with $k = 2$ gives $`P(A) = P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)`$.
 6. Substituting the expression of step 2 into the numerator of step 1 and the expression of step 5 into its denominator gives the equation to be proved.
 
-$$P(B_k \mid A) = \frac{P(B_k \cap A)}{P(A)} = \frac{P(A \mid B_k)\,P(B_k)}{P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)}$$
+```math
+P(B_k \mid A) = \frac{P(B_k \cap A)}{P(A)} = \frac{P(A \mid B_k)\,P(B_k)}{P(A \mid B_1)\,P(B_1) + P(A \mid B_2)\,P(B_2)}
+```
 
 > **Note:** The equation $P(A) = P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2)$ of step 5 is called the **law of total probability**. Bayes' theorem computes backward: from the probability $P(A \mid B_k)$ that cause $B_k$ produces result $A$, it gives the probability $P(B_k \mid A)$ that the cause was $B_k$ once result $A$ has been observed. If there are $n$ mutually disjoint events whose union is $S$, the sum in step 4 merely grows to $n$ terms, and the proof is the same.
 
@@ -352,7 +398,7 @@ $$P(B_k \mid A) = \frac{P(B_k \cap A)}{P(A)} = \frac{P(A \mid B_k)\,P(B_k)}{P(A 
 
 **Problem.** For three tosses of a fair coin, let $A$ be the event that the first result is a head and $B$ the event that the number of heads is even. Verify that $P(A \mid B) = P(A)$ and $P(B \mid A) = P(B)$.
 
-**Concepts used.** In a finite sample space whose outcomes are all equally likely, the probability of an event $E$ is $P(E) = \frac{N(E)}{N(S)}$ ([Chapter 9, Section 1](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). Here $N(E)$ is the number of elements of $E$. Two events $A$ and $B$ are **independent events** if $P(A \cap B) = P(A)\,P(B)$ ([Chapter 9, Section 9](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). When $P(A) \ne 0$ and $P(B) \ne 0$, this condition is equivalent to $P(A \mid B) = P(A)$ and also to $P(B \mid A) = P(B)$. In other words, knowing that one event has occurred does not change the probability of the other.
+**Concepts used.** In a finite sample space whose outcomes are all equally likely, the probability of an event $E$ is $P(E) = \frac{N(E)}{N(S)}$ ([Chapter 9, Section 1](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). Here $N(E)$ is the number of elements of $E$. Two events $A$ and $B$ are **independent events** if $`P(A \cap B) = P(A)\,P(B)`$ ([Chapter 9, Section 9](../../Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.md)). When $P(A) \ne 0$ and $P(B) \ne 0$, this condition is equivalent to $P(A \mid B) = P(A)$ and also to $P(B \mid A) = P(B)$. In other words, knowing that one event has occurred does not change the probability of the other.
 
 **Solution.** Writing H for a head and T for a tail, each toss has two results, so by the multiplication rule three tosses have $2^3 = 8$ outcomes, and they are equally likely because the coin is fair. The following possibility tree generates the eight outcomes.
 
@@ -391,9 +437,11 @@ graph LR
 
 From the table, $A = \lbrace \mathrm{HHH}, \mathrm{HHT}, \mathrm{HTH}, \mathrm{HTT} \rbrace$, $B = \lbrace \mathrm{HHT}, \mathrm{HTH}, \mathrm{THH}, \mathrm{TTT} \rbrace$, and $A \cap B = \lbrace \mathrm{HHT}, \mathrm{HTH} \rbrace$. Hence $P(A) = \frac{4}{8} = \frac{1}{2}$, $P(B) = \frac{4}{8} = \frac{1}{2}$, and $P(A \cap B) = \frac{2}{8} = \frac{1}{4}$, and the definition of conditional probability gives the following.
 
-$$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{1/4}{1/2} = \frac{1}{2} = P(A), \qquad P(B \mid A) = \frac{P(A \cap B)}{P(A)} = \frac{1/4}{1/2} = \frac{1}{2} = P(B)$$
+```math
+P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{1/4}{1/2} = \frac{1}{2} = P(A), \qquad P(B \mid A) = \frac{P(A \cap B)}{P(A)} = \frac{1/4}{1/2} = \frac{1}{2} = P(B)
+```
 
-Both equations hold. Moreover, $P(A \cap B) = \frac{1}{4} = P(A)\,P(B)$, so $A$ and $B$ are independent events. Knowing the first toss gives no information about the parity of the number of heads because, whether the first toss is H or T, exactly two of the four outcomes of the remaining two tosses make the total number of heads even.
+Both equations hold. Moreover, $`P(A \cap B) = \frac{1}{4} = P(A)\,P(B)`$, so $A$ and $B$ are independent events. Knowing the first toss gives no information about the parity of the number of heads because, whether the first toss is H or T, exactly two of the four outcomes of the remaining two tosses make the total number of heads even.
 
 > **Caution:** Zero is even, so TTT, with no heads, also belongs to $B$. Leaving out TTT shrinks $B$ to three outcomes, gives $P(A \mid B) = \frac{2}{3}$, and leads to the false conclusion that the two events are not independent.
 

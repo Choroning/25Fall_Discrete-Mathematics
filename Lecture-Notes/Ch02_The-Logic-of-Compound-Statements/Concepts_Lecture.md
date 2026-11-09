@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 2
 
@@ -600,7 +600,7 @@ When solving a problem, the contrapositive is sometimes easier to work with than
 
 A conditional statement has two further variants, and neither is logically equivalent to it.
 
-> **Definition:** Suppose a conditional statement of the form "If $p$ then $q$" is given.
+> **Definition:** **Converse and inverse.** Suppose a conditional statement of the form "If $p$ then $q$" is given.
 > 1. The **converse** is "If $q$ then $p$." Symbolically, the converse of $p \to q$ is $q \to p$.
 > 2. The **inverse** is "If $\sim p$ then $\sim q$." Symbolically, the inverse of $p \to q$ is $\sim p \to \sim q$.
 
@@ -641,7 +641,7 @@ graph LR
 
 "$`p`$ only if $q$" says that $p$ cannot happen unless $q$ happens as well. In other words, if $q$ fails to happen, then $p$ cannot happen either. By the equivalence with the contrapositive, this amounts to saying that whenever $p$ happens, $q$ must happen too.
 
-> **Definition:** If $p$ and $q$ are statements, "$`p`$ only if $q$" means "if not $q$ then not $p$," or, equivalently, "if $p$ then $q$."
+> **Definition:** **Meaning of only if.** If $p$ and $q$ are statements, "$`p`$ only if $q$" means "if not $q$ then not $p$," or, equivalently, "if $p$ then $q$."
 
 **Example 2.2.8 (Converting Only If to If-Then).** Rewrite "John will break the world's record for the 1,000-meter run only if he runs the 1,000 meters in under 2.5 minutes" in two if-then forms, one the contrapositive of the other. With $p$ for "John breaks the world's record" and $q$ for "John runs the 1,000 meters in under 2.5 minutes," the sentence is "$`p`$ only if $q$."
 
@@ -692,7 +692,7 @@ p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)
 
 In careful formal usage, the expressions necessary condition and sufficient condition mean exactly what their logical definitions say.
 
-> **Definition:** If $r$ and $s$ are statements:
+> **Definition:** **Necessary and sufficient conditions.** If $r$ and $s$ are statements:
 > - "$`r`$ is a **sufficient condition** for $s$" means "if $r$ then $s$" ($`r \to s`$).
 > - "$`r`$ is a **necessary condition** for $s$" means "if not $r$ then not $s$" ($`\sim r \to \sim s`$).
 

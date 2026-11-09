@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 1
 
@@ -692,7 +692,7 @@ Stated less formally, a relation $F$ from $A$ to $B$ is a function if, and only 
 
 In most mathematical situations a function is thought of as sending elements of one set, the domain, to elements of another set, the co-domain. If $F$ is a function from $A$ to $B$, then for a given element $x$ of $A$, property 1 guarantees that at least one element of $B$ is related to $x$, and property 2 guarantees that there is at most one such element. Hence each element of the domain corresponds to exactly one element of the co-domain, and that element can be given a special name.
 
-> **Definition:** If $F$ is a function from $A$ to $B$, then for any element $x$ in $A$, the unique element of $B$ that is related to $x$ by $F$ is denoted $F(x)$, which is read "$`F`$ of $x$". That is, $x \mathrel{F} y \iff y = F(x)$.
+> **Definition:** **Function notation.** If $F$ is a function from $A$ to $B$, then for any element $x$ in $A$, the unique element of $B$ that is related to $x$ by $F$ is denoted $F(x)$, which is read "$`F`$ of $x$". That is, $x \mathrel{F} y \iff y = F(x)$.
 
 **Example 1.3.4 (Functions and Relations on Finite Sets).** Let $A = \lbrace 2, 4, 6 \rbrace$ and $B = \lbrace 1, 3, 5 \rbrace$. Determine which of the relations $R$, $S$, and $T$ below are functions from $A$ to $B$.
 

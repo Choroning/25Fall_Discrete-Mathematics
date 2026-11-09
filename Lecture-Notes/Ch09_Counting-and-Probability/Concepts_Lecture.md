@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 9
 
@@ -1305,7 +1305,7 @@ The binomial theorem generalizes this formula to an arbitrary nonnegative intege
 
 The second expression equals the first because $\binom{n}{0} = \binom{n}{n} = 1$ for every nonnegative integer $n$ and $b^0 = 1$, $a^{n-n} = 1$. Both proofs of the binomial theorem require a precise definition of integer power.
 
-> **Definition:** For any real number $a$ and any nonnegative integer $n$, the nonnegative integer powers of $a$ are defined recursively by $a^0 = 1$ and $a^n = a \cdot a^{n-1}$ if $n > 0$.
+> **Definition:** **Nonnegative integer powers.** For any real number $a$ and any nonnegative integer $n$, the nonnegative integer powers of $a$ are defined recursively by $a^0 = 1$ and $a^n = a \cdot a^{n-1}$ if $n > 0$.
 
 > **Note:** In some mathematical contexts $0^0$ is left undefined, but this definition sets $0^0 = 1$. This makes it possible to write general formulas without excluding values of the variables that are 0. For example, substituting $a = 0$ into the binomial theorem makes the term with $k = n$ equal to $\binom{n}{n}0^0 b^n = b^n$, which agrees with $(0 + b)^n = b^n$.
 

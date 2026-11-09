@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -122,7 +122,7 @@ The reason is that each edge adds 1 to the degree of each of its two endpoints, 
 
 Travel in a graph consists of repeatedly moving from a vertex to an adjacent vertex along an edge. Different names are given to a journey according to whether it reuses an edge, whether it revisits a vertex, and whether it returns to the starting vertex.
 
-> **Definition:** Let $G$ be a graph, and let $v$ and $w$ be vertices of $G$.
+> **Definition:** **Walks, trails, paths, and circuits.** Let $G$ be a graph, and let $v$ and $w$ be vertices of $G$.
 > - A **walk** from $v$ to $w$ is a finite alternating sequence of vertices and edges of $G$, $v_0 e_1 v_1 e_2 \cdots v_{n-1} e_n v_n$, where $v_0 = v$, $v_n = w$, and for each $i = 1, 2, \ldots, n$, $v_{i-1}$ and $v_i$ are the endpoints of $e_i$. The sequence consisting of the single vertex $v$ is the **trivial walk** from $v$ to $v$.
 > - A **trail** from $v$ to $w$ is a walk from $v$ to $w$ that does not contain a repeated edge.
 > - A **path** from $v$ to $w$ is a trail that does not contain a repeated vertex.

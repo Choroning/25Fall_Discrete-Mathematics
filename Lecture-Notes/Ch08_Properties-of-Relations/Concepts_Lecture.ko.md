@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -314,7 +314,7 @@ graph LR
 
 ### 2.1 세 성질의 정의
 
-> **용어 정의:** $R$을 집합 $A$ 위의 관계라 한다.
+> **용어 정의:** **관계의 세 성질(three properties of relations).** $R$을 집합 $A$ 위의 관계라 한다.
 > 1. $R$이 **반사적(reflexive)** 이라는 것은 모든 $x \in A$에 대해 $`x \, R \, x`$라는 뜻이다.
 > 2. $R$이 **대칭적(symmetric)** 이라는 것은 모든 $x, y \in A$에 대해 $`x \, R \, y`$이면 $`y \, R \, x`$라는 뜻이다.
 > 3. $R$이 **추이적(transitive)** 이라는 것은 모든 $x, y, z \in A$에 대해 $`x \, R \, y`$이고 $`y \, R \, z`$이면 $`x \, R \, z`$라는 뜻이다.
@@ -1195,7 +1195,7 @@ $B$가 $A$의 사슬이면, $B$는 $\preceq$를 $B$로 제한한 관계에 대�
 
 부분 순서 집합의 **극대 원소(maximal element)** 는 자신과 비교 가능한 모든 원소보다 크거나 같은 원소이다. 비교 불가능한 원소는 많이 있을 수 있다. 반면 **최대 원소(greatest element)** 는 집합의 모든 원소보다 크거나 같은 원소이므로 모든 원소와 비교 가능하다. **극소 원소(minimal element)** 와 **최소 원소(least element)** 도 순서의 방향을 바꾸어 같은 방식으로 정의한다.
 
-> **용어 정의:** 집합 $A$를 관계 $\preceq$에 대한 부분 순서 집합이라 한다.
+> **용어 정의:** **부분 순서의 특별한 원소(special elements of a partial order).** 집합 $A$를 관계 $\preceq$에 대한 부분 순서 집합이라 한다.
 > 1. $A$의 원소 $a$가 **$A$의 극대 원소** 라는 것은 $A$의 모든 원소 $b$에 대해 $b \preceq a$이거나 $b$와 $a$가 비교 불가능하다는 뜻이다.
 > 2. $A$의 원소 $a$가 **$A$의 최대 원소** 라는 것은 $A$의 모든 원소 $b$에 대해 $b \preceq a$라는 뜻이다.
 > 3. $A$의 원소 $a$가 **$A$의 극소 원소** 라는 것은 $A$의 모든 원소 $b$에 대해 $a \preceq b$이거나 $b$와 $a$가 비교 불가능하다는 뜻이다.

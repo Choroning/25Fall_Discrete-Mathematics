@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -314,7 +314,7 @@ These three properties correspond to the properties of general relations called 
 
 ### 2.1 Definitions of the Three Properties
 
-> **Definition:** Let $R$ be a relation on a set $A$.
+> **Definition:** **Three properties of relations.** Let $R$ be a relation on a set $A$.
 > 1. $R$ is **reflexive** if, and only if, $`x \, R \, x`$ for every $x \in A$.
 > 2. $R$ is **symmetric** if, and only if, for every $x, y \in A$, if $`x \, R \, y`$ then $`y \, R \, x`$.
 > 3. $R$ is **transitive** if, and only if, for every $x, y, z \in A$, if $`x \, R \, y`$ and $`y \, R \, z`$ then $`x \, R \, z`$.
@@ -1195,7 +1195,7 @@ If $B$ is a chain in $A$, then $B$ is a totally ordered set with respect to the 
 
 In a partially ordered set, a **maximal element** is greater than or equal to each element comparable with it, although there may be many elements that are not comparable with it. A **greatest element**, by contrast, is greater than or equal to every element of the set, so it is comparable with all of them. **Minimal elements** and **least elements** are defined in the same way with the direction of the order reversed.
 
-> **Definition:** Let a set $A$ be partially ordered with respect to a relation $\preceq$.
+> **Definition:** **Special elements of a partial order.** Let a set $A$ be partially ordered with respect to a relation $\preceq$.
 > 1. An element $a$ of $A$ is a **maximal element of $A$** if, and only if, for each $b$ in $A$, either $b \preceq a$ or $b$ and $a$ are not comparable.
 > 2. An element $a$ of $A$ is a **greatest element of $A$** if, and only if, $b \preceq a$ for each $b$ in $A$.
 > 3. An element $a$ of $A$ is a **minimal element of $A$** if, and only if, for each $b$ in $A$, either $a \preceq b$ or $b$ and $a$ are not comparable.

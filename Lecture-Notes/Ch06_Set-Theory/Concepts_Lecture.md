@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -206,7 +206,7 @@ If some subregions of a Venn diagram are allowed to contain no points, the relat
 
 Most mathematical discussions take place within some context. For example, if all sets under consideration are sets of real numbers, then $\mathbf{R}$ is called the **universal set** or **universe of discourse** for the discussion. In the definitions below, the complement is taken relative to the universal set $U$.
 
-> **Definition:** Let $A$ and $B$ be subsets of a universal set $U$.
+> **Definition:** **Set operations.** Let $A$ and $B$ be subsets of a universal set $U$.
 > 1. The **union** of $A$ and $B$, denoted $A \cup B$, is the set of all elements that are in at least one of $A$ or $B$.
 > 2. The **intersection** of $A$ and $B$, denoted $A \cap B$, is the set of all elements that are common to both $A$ and $B$.
 > 3. The **difference** of $B$ minus $A$, denoted $B - A$, is the set of all elements that are in $B$ and not in $A$. It is also called the **relative complement** of $A$ in $B$.
@@ -279,7 +279,7 @@ Hence $A^c = (-\infty, -1] \cup (0, \infty)$.
 
 Union and intersection extend naturally to three or more sets.
 
-> **Definition:** Let $A_0, A_1, A_2, \ldots$ be subsets of a universal set $U$, and let $n$ be a nonnegative integer.
+> **Definition:** **Indexed unions and intersections.** Let $A_0, A_1, A_2, \ldots$ be subsets of a universal set $U$, and let $n$ be a nonnegative integer.
 > 1. $\bigcup_{i=0}^{n} A_i$ is the set of all elements that are in $A_i$ for at least one $i = 0, 1, \ldots, n$.
 > 2. $\bigcup_{i=0}^{\infty} A_i$ is the set of all elements that are in $A_i$ for at least one nonnegative integer $i$.
 > 3. $\bigcap_{i=0}^{n} A_i$ is the set of all elements that are in $A_i$ for every $i = 0, 1, \ldots, n$.

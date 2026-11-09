@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -356,7 +356,7 @@ Existential quantification can also be implicit. For instance, the statement "Th
 
 Mathematical writing contains many examples of implicitly quantified statements. Some occur, as in the first example above, through the presence of the word a or an; others occur where the general context of a sentence supplies part of its meaning. For example, in an algebra course in which the letter $x$ always denotes a real number, the predicate "if $x > 2$ then $x^2 > 4$" is interpreted to mean the same as the statement "For every real number $x$, if $x > 2$ then $x^2 > 4$." Mathematicians often use a double arrow to indicate this implicit quantification, writing $x > 2 \Rightarrow x^2 > 4$.
 
-> **Definition:** Let $P(x)$ and $Q(x)$ be predicates, and suppose the common domain of $x$ is $D$.
+> **Definition:** **Implicit quantification.** Let $P(x)$ and $Q(x)$ be predicates, and suppose the common domain of $x$ is $D$.
 >
 > - The notation $P(x) \Rightarrow Q(x)$ means that every element in the truth set of $P(x)$ is in the truth set of $Q(x)$. This is the same as $`\forall x,\ P(x) \to Q(x)`$.
 > - The notation $P(x) \Leftrightarrow Q(x)$ means that $P(x)$ and $Q(x)$ have identical truth sets. This is the same as $`\forall x,\ P(x) \leftrightarrow Q(x)`$.
@@ -605,7 +605,7 @@ False
 
 As seen in Chapter 2, a conditional statement has a contrapositive, a converse, and an inverse. The definitions of these terms extend directly to universal conditional statements.
 
-> **Definition:** Consider a statement of the form $\forall x \in D$, if $P(x)$ then $Q(x)$.
+> **Definition:** **Variants of universal conditionals.** Consider a statement of the form $\forall x \in D$, if $P(x)$ then $Q(x)$.
 >
 > 1. Its **contrapositive** is the statement $\forall x \in D$, if $\sim Q(x)$ then $\sim P(x)$.
 > 2. Its **converse** is the statement $\forall x \in D$, if $Q(x)$ then $P(x)$.
@@ -648,7 +648,7 @@ Chapter 2 showed that a conditional statement is logically equivalent to its con
 
 The definitions of necessary, sufficient, and "only if" can also be extended to universal conditional statements.
 
-> **Definition:**
+> **Definition:** **Necessary, sufficient, and only if.**
 >
 > - "$`\forall x`$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$`\forall x`$, if $r(x)$ then $s(x)$".
 > - "$`\forall x`$, $r(x)$ is a **necessary condition** for $s(x)$" means "$`\forall x`$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $s(x)$ then $r(x)$".

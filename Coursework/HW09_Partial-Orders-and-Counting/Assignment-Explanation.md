@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 8, 9
 
@@ -441,7 +441,7 @@ That is, about 18.5%. The formula for the probability of a complement in Chapter
 
 **Concepts used.** The **Euler phi function** defined in Exercises 7.1.51-7.1.53 is as follows.
 
-> **Definition:** For each integer $n \ge 1$, $\varphi(n)$ is the number of positive integers less than or equal to $n$ that have no common factors with $n$ except $\pm 1$. For example, the positive integers up to 9 whose only common factors with 9 are $\pm 1$ are the non-multiples of 3, namely 1, 2, 4, 5, 7, 8, so $\varphi(9) = 6$.
+> **Definition:** **Euler phi function.** For each integer $n \ge 1$, $\varphi(n)$ is the number of positive integers less than or equal to $n$ that have no common factors with $n$ except $\pm 1$. For example, the positive integers up to 9 whose only common factors with 9 are $\pm 1$ are the non-multiples of 3, namely 1, 2, 4, 5, 7, 8, so $\varphi(9) = 6$.
 
 By Theorem 9.3.3, the **inclusion/exclusion rule**, $N(A \cup B) = N(A) + N(B) - N(A \cap B)$ for finite sets $A$ and $B$. The strategy of the proof is not to count the integers counted by $\varphi(n)$ directly, but to count the opposite, "integers that share a common factor greater than 1 with $n$", and subtract from the total.
 

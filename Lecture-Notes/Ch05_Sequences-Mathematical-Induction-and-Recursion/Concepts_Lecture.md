@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 5
 
@@ -1431,7 +1431,7 @@ So after one year the account holds about 10,303.39 dollars. The relative growth
 
 Addition and multiplication are **binary operations**: each one combines exactly two numbers at a time. To give sums and products of three or more numbers a precise meaning, recursion is used.
 
-> **Definition:** Given a positive integer $n$ and numbers $a_1, a_2, \ldots, a_n$, the summation $\sum_{i=1}^{n} a_i$ and the product $\prod_{i=1}^{n} a_i$ from $i = 1$ to $n$ of the $a_i$ are defined as follows.
+> **Definition:** **Recursive definitions of sum and product.** Given a positive integer $n$ and numbers $a_1, a_2, \ldots, a_n$, the summation $\sum_{i=1}^{n} a_i$ and the product $\prod_{i=1}^{n} a_i$ from $i = 1$ to $n$ of the $a_i$ are defined as follows.
 
 ```math
 \sum_{i=1}^{1} a_i = a_1, \quad \sum_{i=1}^{n} a_i = \left( \sum_{i=1}^{n-1} a_i \right) + a_n \; (n > 1); \qquad \prod_{i=1}^{1} a_i = a_1, \quad \prod_{i=1}^{n} a_i = \left( \prod_{i=1}^{n-1} a_i \right) \cdot a_n \; (n > 1)

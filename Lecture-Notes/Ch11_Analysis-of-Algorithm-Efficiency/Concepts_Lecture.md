@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 11
 
@@ -221,7 +221,7 @@ The idea of the three notations is as follows. Suppose $f$ and $g$ are real-valu
 
 The order notations were first defined for functions on intervals of real numbers. In algorithm analysis, however, the variable of interest is the size of the problem being solved, such as the number of items to be sorted or the number of vertices of a graph whose minimum spanning tree is sought, and this size is always an integer. Anything true for every real number in an interval is in particular true for every integer in it, and the arguments in this chapter go through unchanged with "for every real number $x$" in place of "for every integer $n$." For this reason the chapter states its results for functions on sets of integers while drawing their graphs as continuous curves. The reader may equally picture them as isolated points, as in Section 1.4.
 
-> **Definition:** Let $f$ and $g$ be real-valued functions defined on the same set of nonnegative integers, with $g(n) \geq 0$ for every integer $n \geq r$, where $r$ is a positive real number.
+> **Definition:** **Three order notations.** Let $f$ and $g$ be real-valued functions defined on the same set of nonnegative integers, with $g(n) \geq 0$ for every integer $n \geq r$, where $r$ is a positive real number.
 >
 > 1. If there exist a positive real number $A$ and a positive real number $a \geq r$ such that $A g(n) \leq f(n)$ for every integer $n \geq a$, then $f$ is of **order at least $g$**, written $f(n)$ is $\Omega(g(n))$ ("$`f`$ of $n$ is big-Omega of $g$ of $n$").
 > 2. If there exist a positive real number $B$ and a positive real number $b \geq r$ such that $0 \leq f(n) \leq B g(n)$ for every integer $n \geq b$, then $f$ is of **order at most $g$**, written $f(n)$ is $O(g(n))$ ("$`f`$ of $n$ is big-O of $g$ of $n$").
@@ -550,7 +550,7 @@ Suppose two algorithms $A$ and $B$ do the same job and, for an input of size $n$
 
 For an input size of 1,000,000, $B$ performs almost 2 trillion more elementary operations than $A$. Put differently, for every operation that $A$ performs, $B$ performs $\frac{2n^2}{20n} = \frac{n}{10} = 100{,}000$ operations.
 
-> **Definition:** Let $A$ be an algorithm.
+> **Definition:** **Order of an algorithm.** Let $A$ be an algorithm.
 >
 > 1. If the number of elementary operations that $A$ performs on an input of size $n$ is determined by $n$ alone, whatever the input data are, call that number $f(n)$. If $f(n)$ is $\Theta(g(n))$, it is said that **$A$ is $\Theta(g(n))$** or **$A$ is of order $g(n)$**.
 > 2. Suppose instead that the number of elementary operations depends on the input data as well as on $n$.

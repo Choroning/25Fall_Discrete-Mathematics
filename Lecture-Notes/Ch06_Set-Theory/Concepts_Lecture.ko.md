@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -206,7 +206,7 @@ $A \not\subseteq B$는 그림 2처럼 세 가지로 나타낼 수 있다. 어느
 
 수학적 논의는 대개 어떤 맥락 안에서 이루어진다. 예를 들어 논의하는 모든 집합이 실수의 집합이면 $\mathbf{R}$를 그 논의의 **전체집합(universal set)** 또는 **논의 영역(universe of discourse)** 이라 한다. 아래 정의에서 여집합은 전체집합 $U$를 기준으로 정해진다.
 
-> **용어 정의:** $A$와 $B$가 전체집합 $U$의 부분집합이라 하자.
+> **용어 정의:** **집합의 연산(set operations).** $A$와 $B$가 전체집합 $U$의 부분집합이라 하자.
 > 1. $A$와 $B$의 **합집합(union)** $A \cup B$는 $A$와 $B$ 가운데 적어도 하나에 속하는 원소 전체의 집합이다.
 > 2. $A$와 $B$의 **교집합(intersection)** $A \cap B$는 $A$와 $B$에 공통으로 속하는 원소 전체의 집합이다.
 > 3. $B$에서 $A$를 뺀 **차집합(difference)** $B - A$는 $B$에 속하고 $A$에 속하지 않는 원소 전체의 집합이다. $B$에 대한 $A$의 **상대 여집합(relative complement)** 이라고도 한다.
@@ -279,7 +279,7 @@ x \in A^c &\iff \sim(-1 < x \le 0) \\
 
 합집합과 교집합은 셋 이상의 집합으로 자연스럽게 확장된다.
 
-> **용어 정의:** $A_0, A_1, A_2, \ldots$가 전체집합 $U$의 부분집합이고 $n$이 음이 아닌 정수라 하자.
+> **용어 정의:** **첨자 붙은 집합족의 합집합과 교집합(indexed unions and intersections).** $A_0, A_1, A_2, \ldots$가 전체집합 $U$의 부분집합이고 $n$이 음이 아닌 정수라 하자.
 > 1. $\bigcup_{i=0}^{n} A_i$는 $i = 0, 1, \ldots, n$ 가운데 적어도 하나의 $i$에 대해 $A_i$에 속하는 원소 전체의 집합이다.
 > 2. $\bigcup_{i=0}^{\infty} A_i$는 적어도 하나의 음이 아닌 정수 $i$에 대해 $A_i$에 속하는 원소 전체의 집합이다.
 > 3. $\bigcap_{i=0}^{n} A_i$는 모든 $i = 0, 1, \ldots, n$에 대해 $A_i$에 속하는 원소 전체의 집합이다.

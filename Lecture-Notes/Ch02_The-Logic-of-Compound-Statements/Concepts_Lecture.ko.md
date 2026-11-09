@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 2
 
@@ -600,7 +600,7 @@ p \to q \equiv \sim p \vee q
 
 조건 명제의 다른 두 변형은 원래 조건 명제와 논리적 동치가 아니다.
 
-> **용어 정의:** "$`p`$이면 $q$이다" 꼴의 조건 명제가 주어졌을 때
+> **용어 정의:** **역과 이(converse and inverse).** "$`p`$이면 $q$이다" 꼴의 조건 명제가 주어졌을 때
 > 1. **역(converse)** 은 "$`q`$이면 $p$이다"이다. 기호로 $p \to q$의 역은 $q \to p$이다.
 > 2. **이(inverse)** 는 "$`p`$가 아니면 $q$가 아니다"이다. 기호로 $p \to q$의 이는 $\sim p \to \sim q$이다.
 
@@ -641,7 +641,7 @@ graph LR
 
 **~일 때만(only if)** 을 쓴 문장 "$`p`$ only if $q$"(한국어로는 "$`q`$일 때만 $p$이다")는 $q$가 일어날 때에만 $p$가 일어날 수 있다는 뜻이다. 즉 $q$가 일어나지 않으면 $p$도 일어날 수 없다. 대우의 동치에 의해, 이는 $p$가 일어나면 $q$도 일어나야 한다는 말과 같다.
 
-> **용어 정의:** $p$와 $q$가 명제일 때 "$`p`$ only if $q$"는 "$`q`$가 아니면 $p$가 아니다"를 뜻하고, 이와 동치로 "$`p`$이면 $q$이다"를 뜻한다.
+> **용어 정의:** **only if의 의미(meaning of only if).** $p$와 $q$가 명제일 때 "$`p`$ only if $q$"는 "$`q`$가 아니면 $p$가 아니다"를 뜻하고, 이와 동치로 "$`p`$이면 $q$이다"를 뜻한다.
 
 **예제 2.2.8 (only if를 if-then으로 바꾸기).** "존은 1,000 m 달리기를 2.5분 안에 뛸 때만 세계 기록을 깰 것이다"를 서로 대우인 두 가지 if-then 꼴로 쓴다. $p$를 "존이 세계 기록을 깬다", $q$를 "존이 1,000 m를 2.5분 안에 뛴다"로 두면 주어진 문장은 "$`p`$ only if $q$"이다.
 
@@ -692,7 +692,7 @@ p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)
 
 형식적인 문장에서 쓰는 필요조건과 충분조건이라는 말은 논리학의 정의와 정확히 일치한다.
 
-> **용어 정의:** $r$와 $s$가 명제일 때
+> **용어 정의:** **필요조건과 충분조건(necessary and sufficient conditions).** $r$와 $s$가 명제일 때
 > - "$`r`$는 $s$의 **충분조건(sufficient condition)** 이다"는 "$`r`$이면 $s$이다"($`r \to s`$)를 뜻한다.
 > - "$`r`$는 $s$의 **필요조건(necessary condition)** 이다"는 "$`r`$가 아니면 $s$가 아니다"($`\sim r \to \sim s`$)를 뜻한다.
 

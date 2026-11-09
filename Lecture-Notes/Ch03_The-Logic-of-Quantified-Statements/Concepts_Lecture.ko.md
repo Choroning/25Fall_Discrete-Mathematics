@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -356,7 +356,7 @@ Bye
 
 수학 문서에는 암묵적으로 한정된 명제가 많다. 위의 첫 예처럼 부정관사(a, an)로 드러나기도 하고, 문장의 일반적인 맥락이 뜻의 일부를 정하기도 한다. 예를 들어 $x$가 언제나 실수를 나타내는 대수학 과목에서 술어 "$`x > 2`$이면 $x^2 > 4$"는 명제 "모든 실수 $x$에 대해 $x > 2$이면 $x^2 > 4$"와 같은 뜻으로 해석한다. 수학자들은 이런 암묵적 한정을 이중 화살표로 나타내 $x > 2 \Rightarrow x^2 > 4$처럼 쓰기도 한다.
 
-> **용어 정의:** $P(x)$와 $Q(x)$를 술어라 하고, $x$의 공통 정의역을 $D$라 한다.
+> **용어 정의:** **암묵적 한정(implicit quantification).** $P(x)$와 $Q(x)$를 술어라 하고, $x$의 공통 정의역을 $D$라 한다.
 >
 > - 표기 $P(x) \Rightarrow Q(x)$는 $P(x)$의 진리 집합의 모든 원소가 $Q(x)$의 진리 집합에 속한다는 뜻이다. 이는 $`\forall x,\ P(x) \to Q(x)`$와 같다.
 > - 표기 $P(x) \Leftrightarrow Q(x)$는 $P(x)$와 $Q(x)$의 진리 집합이 같다는 뜻이다. 이는 $`\forall x,\ P(x) \leftrightarrow Q(x)`$와 같다.
@@ -605,7 +605,7 @@ False
 
 2장에서 보았듯이 조건 명제에는 대우, 역, 이가 있다. 이 용어의 정의는 전칭 조건 명제로 그대로 확장된다.
 
-> **용어 정의:** $\forall x \in D$, $P(x)$이면 $Q(x)$이다 꼴의 명제를 생각한다.
+> **용어 정의:** **전칭 조건 명제의 변형(variants of universal conditionals).** $\forall x \in D$, $P(x)$이면 $Q(x)$이다 꼴의 명제를 생각한다.
 >
 > 1. 그 **대우(contrapositive)** 는 $\forall x \in D$, $\sim Q(x)$이면 $\sim P(x)$이다 꼴의 명제이다.
 > 2. 그 **역(converse)** 은 $\forall x \in D$, $Q(x)$이면 $P(x)$이다 꼴의 명제이다.
@@ -648,7 +648,7 @@ False
 
 필요조건, 충분조건, "\~일 때만"의 정의도 전칭 조건 명제로 확장할 수 있다.
 
-> **용어 정의:**
+> **용어 정의:** **필요조건, 충분조건, 일 때만(necessary, sufficient, and only if).**
 >
 > - "$`\forall x`$, $r(x)$는 $s(x)$의 **충분조건(sufficient condition)** 이다"는 "$`\forall x`$, $r(x)$이면 $s(x)$이다"를 뜻한다.
 > - "$`\forall x`$, $r(x)$는 $s(x)$의 **필요조건(necessary condition)** 이다"는 "$`\forall x`$, $\sim r(x)$이면 $\sim s(x)$이다"를 뜻하며, 이는 대우에 의해 "$`\forall x`$, $s(x)$이면 $r(x)$이다"와 동치이다.

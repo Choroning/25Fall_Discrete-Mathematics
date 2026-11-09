@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 >
 > Discrete Mathematics with Applications, Epp, Ch 5
 
@@ -1431,7 +1431,7 @@ P_4 &\approx 1.0075 \cdot 10{,}226.69 \approx 10{,}303.39
 
 덧셈과 곱셈은 한 번에 두 수만 더하거나 곱할 수 있으므로 **이항 연산(binary operation)** 이라 한다. 세 개 이상의 수의 합과 곱을 엄밀히 정의하려면 재귀를 쓴다.
 
-> **용어 정의:** 양의 정수 $n$과 수 $a_1, a_2, \ldots, a_n$이 주어질 때, $i = 1$부터 $n$까지의 $a_i$의 합 $\sum_{i=1}^{n} a_i$와 곱 $\prod_{i=1}^{n} a_i$를 다음과 같이 정의한다.
+> **용어 정의:** **합과 곱의 재귀적 정의(recursive definitions of sum and product).** 양의 정수 $n$과 수 $a_1, a_2, \ldots, a_n$이 주어질 때, $i = 1$부터 $n$까지의 $a_i$의 합 $\sum_{i=1}^{n} a_i$와 곱 $\prod_{i=1}^{n} a_i$를 다음과 같이 정의한다.
 
 ```math
 \sum_{i=1}^{1} a_i = a_1, \quad \sum_{i=1}^{n} a_i = \left( \sum_{i=1}^{n-1} a_i \right) + a_n \; (n > 1); \qquad \prod_{i=1}^{1} a_i = a_1, \quad \prod_{i=1}^{n} a_i = \left( \prod_{i=1}^{n-1} a_i \right) \cdot a_n \; (n > 1)

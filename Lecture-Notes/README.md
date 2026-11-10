@@ -2,7 +2,9 @@
 
 [Repository Guide](../README.md) | [English](README.md) | [한국어](README.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-10
+
+## Textbook Units
 
 | Unit | Topics | Documents |
 |:-----|:-----|:-----|
@@ -17,3 +19,11 @@
 | [Chapter 9 Counting and Probability](Ch09_Counting-and-Probability/) | Sample spaces and events, possibility trees and the multiplication rule, permutations, the addition rule, the difference rule, the inclusion/exclusion rule, the pigeonhole principle, r-combinations, r-combinations with repetition allowed, Pascal's formula and the binomial theorem, probability axioms and expected value, conditional probability, Bayes' theorem, independent events | [Lecture notes](Ch09_Counting-and-Probability/Concepts_Lecture.md) |
 | [Chapter 10 Theory of Graphs and Trees](Ch10_Theory-of-Graphs-and-Trees/) | Walks, trails, paths, and circuits, connected components, Euler circuits and Hamiltonian circuits, adjacency matrices and counting walks, graph isomorphism and isomorphic invariants, properties of trees, rooted trees and binary trees, binary search trees, spanning trees and minimum spanning trees, Kruskal's algorithm, Prim's algorithm, Dijkstra's algorithm | [Lecture notes](Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md) |
 | [Chapter 11 Analysis of Algorithm Efficiency](Ch11_Analysis-of-Algorithm-Efficiency/) | Graphs of real-valued functions, power functions, increasing and decreasing functions, O-, Ω-, and Θ-notations, orders of polynomial functions, the efficiency of sequential search, insertion sort, and selection sort, polynomial evaluation and Horner's rule, orders of exponential and logarithmic functions, binary search, merge sort and divide and conquer | [Lecture notes](Ch11_Analysis-of-Algorithm-Efficiency/Concepts_Lecture.md) |
+
+## Supplementary Units
+
+A unit that supplements topics on structures and finite automata not covered in the course, building on the finite automata of Chapter 12 of the textbook.
+
+| Unit | Topics | Documents |
+|:-----|:-----|:-----|
+| [Chapter 12 Structures and Finite Automata](Ch12_Structures-and-Finite-Automata/) | Vocabularies and structures, first-order sentences and satisfaction, models, isomorphism of structures and sentences, finite and infinite structures, sentences with only infinite models, sentences about the number of elements and the compactness theorem, finite model theory, Fagin's theorem, alphabets, strings, and languages, word structures, deterministic finite-state automata and acceptance, designing automata, regular languages and Kleene's theorem, product automata and closure properties, the pumping lemma and its proof, proving non-regularity, the limits of the pumping lemma, the hierarchy of languages | [Lecture notes](Ch12_Structures-and-Finite-Automata/Concepts_Lecture.md) |

@@ -539,7 +539,7 @@ Just as computer programming must distinguish kinds of data structures and respe
 
 *Table 5. Mathematical objects that look alike but differ*
 
-> **[Theory of Computation]** In the theory of computation, a finite set is called an alphabet, and a set of strings over an alphabet is called a language. Automata and grammars are devices that decide whether a given string belongs to a language or generate the strings of a language, and all of this starts from the strings defined here.
+> **[Theory of Computation]** In the theory of computation, a finite set is called an alphabet, and a set of strings over an alphabet is called a language. Automata and grammars are devices that decide whether a given string belongs to a language or generate the strings of a language (finite automata are covered in Chapter 12), and all of this starts from the strings defined here.
 
 ---
 

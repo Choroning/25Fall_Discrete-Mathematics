@@ -2,7 +2,7 @@
 
 [레포지토리 안내](README.ko.md) | [English](Course-Information.md) | [한국어](Course-Information.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-10
 
 ## 목차
 
@@ -115,6 +115,7 @@
   - 9장(9.1\~9.9절): [Ch09](Lecture-Notes/Ch09_Counting-and-Probability/Concepts_Lecture.ko.md)
   - 10장(10.1\~10.6절): [Ch10](Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.ko.md)
   - 11장(11.1\~11.5절): [Ch11](Lecture-Notes/Ch11_Analysis-of-Algorithm-Efficiency/Concepts_Lecture.ko.md)
+- `Ch12`는 교재 12장의 유한 오토마타를 바탕으로 수업에서 다루지 않은 구조와 유한 오토마타의 주제를 보충한 단원이므로, 위 진도 표의 어느 주차에도 대응하지 않는다.
 - 과제 12회의 해설은 [`Coursework` 색인](Coursework/README.ko.md)에 있다.
 
 ---

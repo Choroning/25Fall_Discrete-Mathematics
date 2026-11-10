@@ -22,7 +22,7 @@ This repository archives lecture notes and coursework for the Discrete Mathemati
 <br><a name="about-this-repository"></a>
 ## 📝 About This Repository
 
-- `Lecture-Notes/` holds lecture notes that follow the textbook's chapter numbers (`Ch01`-`Ch11`).
+- `Lecture-Notes/` holds lecture notes that follow the textbook's chapter numbers (`Ch01`-`Ch11`), and `Ch12` is a supplementary unit on topics in structures and finite automata not covered in the course, building on the finite automata of Chapter 12 of the textbook.
 - `Coursework/` holds explanations of the 12 homework assignments made up of textbook exercises; the submitted answer files are not included.
 - Every lecture note and assignment explanation comes as an English (`.md`) and Korean (`.ko.md`) pair.
 

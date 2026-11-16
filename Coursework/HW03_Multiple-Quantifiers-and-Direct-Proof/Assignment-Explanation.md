@@ -2,17 +2,17 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 3, 4
 
 > **Learning Objectives:**
 > 1. Determine the truth values of two-variable predicates and multiply-quantified statements, and explain why the order of quantifiers changes the meaning
 > 2. Write negations of multiply-quantified statements, and derive their negation rules from Theorems 3.2.1 and 3.2.2
-> 3. Draw conclusions by universal modus tollens, and detect the converse error in arguments with quantified statements
+> 3. Draw conclusions by universal modus tollens, and decide whether an argument with quantified statements is valid and which error it commits
 > 4. Decide the validity of arguments with quantified statements by drawing diagrams for arguments
 > 5. Decide properties of integers with the definitions of even and odd, disprove universal statements by counterexamples, and give a reason for each step of a direct proof
-> 6. Detect the mistake of arguing from examples and correct it into a valid proof
+> 6. Detect the mistake in an offered proof and correct it into a valid proof
 
 ---
 
@@ -23,7 +23,7 @@
 - [3. Exercise 3.3.22: Order of Quantifiers](#3-exercise-3322-order-of-quantifiers)
 - [4. Exercise 3.3.24: Deriving Negation Rules for Multiple Quantifiers](#4-exercise-3324-deriving-negation-rules-for-multiple-quantifiers)
 - [5. Exercise 3.4.5: Universal Modus Tollens](#5-exercise-345-universal-modus-tollens)
-- [6. Exercise 3.4.16: An Argument with the Converse Error](#6-exercise-3416-an-argument-with-the-converse-error)
+- [6. Exercise 3.4.16: Testing the Validity of an Argument About Twice a Number](#6-exercise-3416-testing-the-validity-of-an-argument-about-twice-a-number)
 - [7. Exercise 3.4.21: Testing Validity with a Diagram](#7-exercise-3421-testing-validity-with-a-diagram)
 - [8. Exercise 4.1.1: Definitions of Even and Odd](#8-exercise-411-definitions-of-even-and-odd)
 - [9. Exercise 4.1.12: Negation and Counterexample](#9-exercise-4112-negation-and-counterexample)
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 3.3.2: Truth Values of a Two-Variable Predicate
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Let $G(x, y)$ be the predicate "$`x^2 > y`$". Decide whether each of (a) $G(2, 3)$, (b) $G(1, 1)$, (c) $G\left(\frac{1}{2}, \frac{1}{2}\right)$, and (d) $G(-2, 2)$ is true or false.
 
@@ -192,7 +194,7 @@ Division by 0 is undefined, so $\frac{1}{0}$ does not represent any real number,
 
 <br>
 
-## 6. Exercise 3.4.16: An Argument with the Converse Error
+## 6. Exercise 3.4.16: Testing the Validity of an Argument About Twice a Number
 
 **Problem.** Decide whether the following argument is valid by universal modus ponens or universal modus tollens, or invalid because it commits the converse or the inverse error, and give the reason.
 
@@ -200,7 +202,7 @@ Division by 0 is undefined, so $\frac{1}{0}$ does not represent any real number,
 - Premise 2: for a particular number $n$, the number $2n$ is even.
 - Conclusion: that particular number $n$ is even.
 
-**Concepts used.** The **converse error** in an argument with quantified statements is the invalid inference of the form "$`\forall x,\ P(x) \to Q(x)`$, $Q(a)$, therefore $P(a)$" (Chapter 3, Section 4). Unlike universal modus ponens, "$`\forall x,\ P(x) \to Q(x)`$, $P(a)$, therefore $Q(a)$", it does not guarantee a true conclusion.
+**Concepts used.** An argument with quantified statements is compared with the following four forms (Chapter 3, Section 4). Universal modus ponens, "$`\forall x,\ P(x) \to Q(x)`$, $P(a)$, therefore $Q(a)$", and universal modus tollens, "$`\forall x,\ P(x) \to Q(x)`$, $\sim Q(a)$, therefore $\sim P(a)$", are valid. In contrast, the **converse error**, "$`\forall x,\ P(x) \to Q(x)`$, $Q(a)$, therefore $P(a)$", and the **inverse error**, "$`\forall x,\ P(x) \to Q(x)`$, $\sim P(a)$, therefore $\sim Q(a)$", are invalid inferences that do not guarantee a true conclusion.
 
 **Solution.** Let $P(x)$ be "$`x`$ is even" and $Q(x)$ be "$`2x`$ is even". Then the form of the argument is the following.
 
@@ -208,7 +210,7 @@ Division by 0 is undefined, so $\frac{1}{0}$ does not represent any real number,
 \forall x,\ P(x) \to Q(x), \qquad Q(n), \qquad \therefore\ P(n)
 ```
 
-This is the form of the converse error, so the argument is **invalid.** As a counterexample, consider $n = 3$. The first premise is true for every number, and $2 \cdot 3 = 6$ is even, so the second premise is also true. But 3 is not even, so the conclusion is false. In fact $2n$ is even for every integer $n$, so the second premise tells nothing about whether $n$ is even.
+This is the form of the converse error, so the argument is **invalid.** Unlike universal modus ponens, it derives $P(a)$ from $Q(a)$, so the conclusion is not guaranteed to be true. As a counterexample, consider $n = 3$. The first premise is true for every number, and $2 \cdot 3 = 6$ is even, so the second premise is also true. But 3 is not even, so the conclusion is false. In fact $2n$ is even for every integer $n$, so the second premise tells nothing about whether $n$ is even.
 
 ---
 
@@ -314,9 +316,9 @@ Blanks (a) and (d) use the same definition in opposite directions. In (a), "is e
 - Theorem: For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
 - Offered proof: the case $k = 2$ is checked. There $k > 0$ and $k^2 + 2k + 1 = 2^2 + 2 \cdot 2 + 1 = 9 = 3 \cdot 3$, so 9 is composite, and from this the theorem is declared true.
 
-**Concepts used.** An integer $n$ is **composite** if and only if $n > 1$ and $n = rs$ for some integers $r$ and $s$ with $1 < r < n$ and $1 < s < n$ (Chapter 4, Section 1). Among the common mistakes in writing proofs, **arguing from examples** is the error of treating a general statement as proved after showing that it holds in a few cases (Chapter 4, Section 2).
+**Concepts used.** An integer $n$ is **composite** if and only if $n > 1$ and $n = rs$ for some integers $r$ and $s$ with $1 < r < n$ and $1 < s < n$ (Chapter 4, Section 1). Whether a proof is correct is judged by whether it covers the whole range that the theorem claims and whether each step is justified by definitions and previously established results (Chapter 4, Section 2).
 
-**Solution.** The offered proof checks only the single case $k = 2$. The theorem is a universal statement about all positive integers $k$, so the fact that it holds in one case is evidence, not a proof. Hence the offered proof commits **the mistake of arguing from examples**. To prove a universal statement, the conclusion must be shown for a particular but arbitrarily chosen positive integer $k$.
+**Solution.** The offered proof checks only the single case $k = 2$. The theorem is a universal statement about all positive integers $k$, so the fact that it holds in one case is evidence, not a proof. Among the common mistakes in writing proofs, **arguing from examples** is the error of treating a general statement as proved after showing that it holds in a few cases, and the offered proof commits this **mistake of arguing from examples**. To prove a universal statement, the conclusion must be shown for a particular but arbitrarily chosen positive integer $k$.
 
 The theorem itself is true, and a direct proof is the following.
 

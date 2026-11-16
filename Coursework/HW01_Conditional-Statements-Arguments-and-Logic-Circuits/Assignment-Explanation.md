@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 2
 
@@ -24,9 +24,9 @@
 - [5. Exercise 2.2.47: Rewriting a Conditional with Conjunction and Negation](#5-exercise-2247-rewriting-a-conditional-with-conjunction-and-negation)
 - [6. Exercise 2.2.49: Rewriting a Biconditional with Conjunction and Negation](#6-exercise-2249-rewriting-a-biconditional-with-conjunction-and-negation)
 - [7. Exercise 2.3.13: Validity of Modus Tollens](#7-exercise-2313-validity-of-modus-tollens)
-- [8. Exercise 2.3.26: A Valid Argument by Transitivity](#8-exercise-2326-a-valid-argument-by-transitivity)
-- [9. Exercise 2.3.28: Converse Error](#9-exercise-2328-converse-error)
-- [10. Exercise 2.3.29: Inverse Error](#10-exercise-2329-inverse-error)
+- [8. Exercise 2.3.26: Testing the Validity of an Argument About Movies and an Exam](#8-exercise-2326-testing-the-validity-of-an-argument-about-movies-and-an-exam)
+- [9. Exercise 2.3.28: Testing the Validity of an Argument About Rational and Irrational Numbers](#9-exercise-2328-testing-the-validity-of-an-argument-about-rational-and-irrational-numbers)
+- [10. Exercise 2.3.29: Testing the Validity of an Argument About a Product of Two Numbers](#10-exercise-2329-testing-the-validity-of-an-argument-about-a-product-of-two-numbers)
 - [11. Exercise 2.4.15: Circuit for a Boolean Expression](#11-exercise-2415-circuit-for-a-boolean-expression)
 - [12. Exercise 2.4.27: Equivalence of Two Circuits](#12-exercise-2427-equivalence-of-two-circuits)
 - [Summary](#summary)
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 2.2.6: Truth Table with a Conditional
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Construct a truth table for the statement form $(p \vee q) \vee (\sim p \wedge q) \to q$.
 
@@ -259,7 +261,7 @@ The only row in which both premises are true is the fourth row, and in this crit
 
 <br>
 
-## 8. Exercise 2.3.26: A Valid Argument by Transitivity
+## 8. Exercise 2.3.26: Testing the Validity of an Argument About Movies and an Exam
 
 **Problem.** Symbolize the following argument. If it is valid, name the rule of inference behind its validity; if it is invalid, tell whether it commits the converse error or the inverse error.
 
@@ -267,7 +269,7 @@ The only row in which both premises are true is the fourth row, and in this crit
 - Premise 2: if I do not finish my homework, then I do not do well on tomorrow's test.
 - Conclusion: if I go to the movies, then I do not do well on tomorrow's test.
 
-**Concepts used.** **Transitivity** is the valid argument form "$`p \to q`$, $q \to r$, therefore $p \to r$" (Table 2.3.1 of the textbook). Any statement form, including a negation, may be substituted for its statement variables.
+**Concepts used.** The validity of an argument is decided from the critical rows of a truth table, or by comparing the form of the argument with the valid argument forms (rules of inference) collected in Table 2.3.1 of the textbook (Chapter 2, Section 3). Typical forms of invalid reasoning are the **converse error** "$`p \to q`$, $q$, therefore $p$" and the **inverse error** "$`p \to q`$, $\sim p$, therefore $\sim q$". In the rules of inference and in the forms of the errors, any statement form, including a negation, may be substituted for the statement variables.
 
 **Solution.** Let the simple statements be as follows.
 
@@ -281,21 +283,21 @@ Then the form of the argument is the following.
 p \to \sim q, \qquad \sim q \to \sim r, \qquad \therefore\ p \to \sim r
 ```
 
-This is the form of transitivity with $\sim q$ substituted for $q$ and $\sim r$ for $r$, so the argument is **valid by transitivity.** Intuitively as well, if both premises are true and $p$ is true, then $\sim q$ is true by premise 1, and in turn $\sim r$ is true by premise 2. Hence it cannot happen that $p$ is true while $\sim r$ is false, and the conclusion $p \to \sim r$ cannot be false.
+**Transitivity** is the valid argument form "$`p \to q`$, $q \to r$, therefore $p \to r$" (Table 2.3.1 of the textbook). The form above is the form of transitivity with $\sim q$ substituted for $q$ and $\sim r$ for $r$, so the argument is **valid by transitivity.** Intuitively as well, if both premises are true and $p$ is true, then $\sim q$ is true by premise 1, and in turn $\sim r$ is true by premise 2. Hence it cannot happen that $p$ is true while $\sim r$ is false, and the conclusion $p \to \sim r$ cannot be false.
 
 ---
 
 <br>
 
-## 9. Exercise 2.3.28: Converse Error
+## 9. Exercise 2.3.28: Testing the Validity of an Argument About Rational and Irrational Numbers
 
-**Problem.** Symbolize the following argument, decide whether it is valid, and if it is invalid, tell which error it commits.
+**Problem.** Symbolize the following argument. If it is valid, name the rule of inference behind its validity; if it is invalid, tell whether it commits the converse error or the inverse error.
 
 - Premise 1: if the rational numbers are as numerous as the irrational numbers, then the set of irrational numbers is infinite.
 - Premise 2: the set of irrational numbers is infinite.
 - Conclusion: the rational numbers are as numerous as the irrational numbers.
 
-**Concepts used.** The **converse error** is the invalid inference of the form "$`p \to q`$, $q$, therefore $p$" (Chapter 2, Section 3). It concludes that the hypothesis of a conditional is true from the fact that its conclusion is true, and it arises from confusing a conditional with its converse.
+**Concepts used.** The same as in Exercise 2.3.26. Write the form of the argument by assigning symbols to the simple statements, compare that form with the rules of inference and the forms of the errors, and then confirm the result with the critical rows of a truth table.
 
 **Solution.** Let $p$ be "the rational numbers are as numerous as the irrational numbers" and $q$ be "the set of irrational numbers is infinite". Then the form of the argument is the following.
 
@@ -303,7 +305,7 @@ This is the form of transitivity with $\sim q$ substituted for $q$ and $\sim r$ 
 p \to q, \qquad q, \qquad \therefore\ p
 ```
 
-The truth table of this form reveals that it is invalid.
+This form is the form of the converse error. The converse error concludes that the hypothesis of a conditional is true from the fact that its conclusion is true, and it arises from confusing a conditional with its converse. The truth table of this form reveals that it is invalid.
 
 | $p$ | $q$ | $p \to q$ (premise 1) | $q$ (premise 2) | $p$ (conclusion) | Remark |
 |:---:|:---:|:---:|:---:|:---:|:-----|
@@ -320,21 +322,23 @@ The third row is a critical row in which both premises are true, yet the conclus
 
 <br>
 
-## 10. Exercise 2.3.29: Inverse Error
+## 10. Exercise 2.3.29: Testing the Validity of an Argument About a Product of Two Numbers
 
-**Problem.** Symbolize the following argument, decide whether it is valid, and if it is invalid, tell which error it commits.
+**Problem.** Symbolize the following argument. If it is valid, name the rule of inference behind its validity; if it is invalid, tell whether it commits the converse error or the inverse error.
 
 - Premise 1: if at least one of two given numbers is divisible by 6, then their product is divisible by 6.
 - Premise 2: neither of the two numbers is divisible by 6.
 - Conclusion: the product of the two numbers is not divisible by 6.
 
-**Concepts used.** The **inverse error** is the invalid inference of the form "$`p \to q`$, $\sim p$, therefore $\sim q$" (Chapter 2, Section 3). It concludes that the conclusion of a conditional is false from the fact that its hypothesis is false, and it arises from confusing a conditional with its inverse.
+**Concepts used.** The same as in Exercise 2.3.26. The negation of a statement that contains "at least one" is found with De Morgan's laws.
 
 **Solution.** Let $p$ be "at least one of the two numbers is divisible by 6" and $q$ be "the product of the two numbers is divisible by 6". The negation of "at least one is divisible" is "neither is divisible", so the second premise is $\sim p$. Hence the form of the argument is the following.
 
 ```math
 p \to q, \qquad \sim p, \qquad \therefore\ \sim q
 ```
+
+This form is the form of the inverse error. The inverse error concludes that the conclusion of a conditional is false from the fact that its hypothesis is false, and it arises from confusing a conditional with its inverse.
 
 | $p$ | $q$ | $p \to q$ (premise 1) | $\sim p$ (premise 2) | $\sim q$ (conclusion) | Remark |
 |:---:|:---:|:---:|:---:|:---:|:-----|
@@ -403,11 +407,11 @@ The input/output table of this circuit is the following.
 ```mermaid
 graph LR
     P(["input P"]) --> N1["NOT"]
-    N1 -->|"∼P"| A2["AND"]
-    N1 -->|"∼P"| A1["AND"]
+    N1 --> A2["AND"]
+    N1 --> A1["AND"]
     Q(["input Q"]) --> A1
-    A1 -->|"∼P ∧ Q"| N2["NOT"]
-    N2 -->|"∼(∼P ∧ Q)"| A2
+    A1 --> N2["NOT"]
+    N2 --> A2
     A2 --> R(["output"])
 ```
 
@@ -417,7 +421,7 @@ graph LR
 graph LR
     P(["input P"]) --> O["OR"]
     Q(["input Q"]) --> O
-    O -->|"P ∨ Q"| N["NOT"]
+    O --> N["NOT"]
     N --> R(["output"])
 ```
 
@@ -426,6 +430,29 @@ graph LR
 **Concepts used.** If the Boolean expressions of two circuits are logically equivalent as statement forms, the two circuits have the same input/output table. Theorem 2.1.1 is the list of laws of logical equivalence in Chapter 2, Section 1, which collects the commutative, associative, distributive, identity, negation, double negative, idempotent, universal bound, De Morgan's, and absorption laws and the negations of $\mathbf{t}$ and $\mathbf{c}$. Here $\mathbf{t}$ denotes a tautology and $\mathbf{c}$ a contradiction.
 
 **Solution.** First find the Boolean expression of each circuit by following the signals from the inputs toward the output. In circuit (a), the first NOT gate outputs $\sim P$, the first AND gate outputs $\sim P \wedge Q$, and the second NOT gate outputs $\sim(\sim P \wedge Q)$, so the final output is $\sim P \wedge \sim(\sim P \wedge Q)$. The output of circuit (b) is $\sim(P \vee Q)$.
+
+```mermaid
+graph LR
+    P(["input P"]) --> N1["NOT"]
+    N1 -->|"∼P"| A2["AND"]
+    N1 -->|"∼P"| A1["AND"]
+    Q(["input Q"]) --> A1
+    A1 -->|"∼P ∧ Q"| N2["NOT"]
+    N2 -->|"∼(∼P ∧ Q)"| A2
+    A2 --> R(["output"])
+```
+
+*Figure 4. Circuit (a) with the output of each gate marked*
+
+```mermaid
+graph LR
+    P(["input P"]) --> O["OR"]
+    Q(["input Q"]) --> O
+    O -->|"P ∨ Q"| N["NOT"]
+    N --> R(["output"])
+```
+
+*Figure 5. Circuit (b) with the output of each gate marked*
 
 Now transform the expression of circuit (a) with the laws of Theorem 2.1.1.
 

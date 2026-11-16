@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 2, 3
 
@@ -41,6 +41,8 @@
 <br>
 
 ## 1. 연습 문제 2.5.2: 10진 정수를 2진 표기로 바꾸기
+
+> **풀어 보기:** 이 문서는 정답과 풀이를 담고 있다. 먼저 [과제 안내문](Original/Assignment.ko.md)의 문제를 직접 풀어 본 뒤 읽는다.
 
 **문제.** 10진 정수 55를 2진 표기로 나타낸다.
 

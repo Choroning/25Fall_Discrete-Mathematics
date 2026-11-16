@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 9
 
@@ -36,6 +36,8 @@
 <br>
 
 ## 1. Exercise 9.5.7: Choosing Teams under Conditions
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Count the ways to pick 7 of the 13 members of a team for a project under each condition: (a) no condition; (b) with 7 women and 6 men on the team, (i) 4 women and 3 men, (ii) at least 1 man, and (iii) at most 3 women; (c) two given members may not both be picked; (d) two given members must be picked together or both left out.
 

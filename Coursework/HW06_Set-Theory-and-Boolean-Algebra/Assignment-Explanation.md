@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 6.1.15: Venn Diagrams Satisfying Given Conditions
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** For each list of conditions below, sketch a Venn diagram of sets $A$, $B$, and $C$ that meets all of them.
 
@@ -86,7 +88,7 @@ Figure 1 shows one of many possible answers. For example, in (a) drawing $B$ ent
 
 **Concept used.** Unions and intersections of an indexed collection of sets from [Chapter 6, Section 1](../../Lecture-Notes/Ch06_Set-Theory/Concepts_Lecture.md). $\bigcup_{i=0}^{n} A_i$ is the set of all elements that belong to $A_i$ for at least one $i$, and $\bigcap_{i=0}^{n} A_i$ is the set of all elements that belong to $A_i$ for every $i$. When the upper limit is $\infty$, $i$ ranges over all nonnegative integers. Sets are **mutually disjoint** if $A_i \cap A_j = \emptyset$ whenever $i \ne j$.
 
-First determine how the sets are related. If $x > i + 1$ then $x > i$, so $W_{i+1} \subseteq W_i$, and therefore $W_0 \supseteq W_1 \supseteq W_2 \supseteq \cdots$. Each interval is open with left endpoint $i$, and the left endpoint moves to the right as $i$ grows.
+**Solution.** First determine how the sets are related. If $x > i + 1$ then $x > i$, so $W_{i+1} \subseteq W_i$, and therefore $W_0 \supseteq W_1 \supseteq W_2 \supseteq \cdots$. Each interval is open with left endpoint $i$, and the left endpoint moves to the right as $i$ grows.
 
 ```text
             0     1     2     3     4     5
@@ -98,8 +100,6 @@ First determine how the sets are related. If $x > i + 1$ then $x > i$, so $W_{i+
 ```
 
 *Figure 2. Inclusions among the open intervals W₀ to W₄ with left endpoints 0, 1, 2, 3, 4*
-
-**Solution.**
 
 - **(a)** $\bigcup_{i=0}^{4} W_i = W_0 = (0, \infty)$. An element $x$ of the union belongs to some $W_i$, so $x > i \ge 0$ and hence $x \in W_0$. Conversely, $W_0$ is one of the sets in the union, so every element of $W_0$ belongs to the union.
 - **(b)** $\bigcap_{i=0}^{4} W_i = W_4 = (4, \infty)$. An element of the intersection belongs in particular to $W_4$. Conversely, if $x > 4$ then $x > 4 \ge i$ for every $i = 0, 1, 2, 3, 4$, so $x$ belongs to every $W_i$.
@@ -213,7 +213,7 @@ The same conclusion follows by splitting $U$ into four regions according to whet
 4. **Case 2, $x \in B$:** Since $B \subseteq C$, the definition of subset gives $x \in C$.
 5. In either case $x \in C$ (proof by division into cases). Since $x$ was an arbitrary element of $A \cup B$, the definition of subset gives $A \cup B \subseteq C$.
 
-> **Note:** The converse also holds. If $A \cup B \subseteq C$, then $A \subseteq A \cup B$ (Theorem 6.2.1) and the transitivity of the subset relation give $A \subseteq C$, and for the same reason $B \subseteq C$. Therefore $A \cup B$ is the smallest set containing both $A$ and $B$. This result is used again with $C = U$ in exercise 6.3.8 in Section 7.
+> **Note:** The converse also holds. If $A \cup B \subseteq C$, then $A \subseteq A \cup B$ (Theorem 6.2.1) and the transitivity of the subset relation give $A \subseteq C$, and for the same reason $B \subseteq C$. Therefore $A \cup B$ is the smallest set containing both $A$ and $B$.
 
 ---
 
@@ -246,7 +246,9 @@ The same conclusion follows by splitting $U$ into four regions according to whet
 
 **Problem.** All sets lie inside a universal set $U$. Decide whether "for all sets $A$ and $B$, if $A^c \subseteq B$ then $A \cup B = U$" holds; prove it if it does, and give a counterexample if it does not.
 
-**Concept used.** First decide whether the statement is true. Splitting $U$ into four regions according to whether $x$ belongs to $A$ and to $B$, the hypothesis $A^c \subseteq B$ says that every element outside $A$ lies in $B$, which means the region $A^c \cap B^c$ of elements in neither $A$ nor $B$ must be empty. But this is exactly the only region lying outside $A \cup B$.
+**Concept used.** When it is not known whether a statement about sets is true or false, first decide by splitting $U$ into regions according to whether an element belongs to each set (Chapter 6, Section 3). If the statement appears true, prove it by an element argument; if it appears false, give a counterexample with concrete sets.
+
+**Solution.** Splitting $U$ into four regions according to whether $x$ belongs to $A$ and to $B$, the hypothesis $A^c \subseteq B$ says that every element outside $A$ lies in $B$, which means the region $A^c \cap B^c$ of elements in neither $A$ nor $B$ must be empty. But this is exactly the only region lying outside $A \cup B$.
 
 | Region | $x \in A$ | $x \in B$ | Under the hypothesis $A^c \subseteq B$ | $x \in A \cup B$ |
 |:-----|:-----|:-----|:-----|:-----|
@@ -288,7 +290,7 @@ So the statement appears to hold, and it is proved by an element argument.
 - (e) The number of elements of $S_1 \cup S_2$
 - (f) How $S_1 \cup S_2$ is related to $\mathcal{P}(A)$
 
-**Concept used.** Power sets, disjointness, and partitions. A collection of sets $\lbrace A_1, A_2, \ldots \rbrace$ is a **partition** of a set $X$ if the $A_i$ are mutually disjoint and their union is $X$. The subsets of $A$ that do not contain $w$ are exactly the subsets of $\lbrace t, u, v \rbrace$.
+**Concept used.** Power sets and disjointness. The subsets of $A$ that do not contain $w$ are exactly the subsets of $\lbrace t, u, v \rbrace$.
 
 **Solution.**
 
@@ -297,7 +299,7 @@ So the statement appears to hold, and it is proved by an element argument.
 - **(c)** They are disjoint. No subset can both contain $w$ and not contain $w$, so $S_1 \cap S_2 = \emptyset$.
 - **(d)** They have the same size (8 each), because the correspondence $X \mapsto X \cup \lbrace w \rbrace$ pairs the elements of $S_1$ with the elements of $S_2$ one to one with none left over, as in Table 5.
 - **(e)** Since $S_1$ and $S_2$ are disjoint, the number of elements of $S_1 \cup S_2$ is $8 + 8 = 16$.
-- **(f)** $S_1 \cup S_2 = \mathcal{P}(A)$. Every subset of $A$ either contains $w$ or does not, so $\mathcal{P}(A) \subseteq S_1 \cup S_2$, and conversely every element of $S_1$ and of $S_2$ is a subset of $A$, so $S_1 \cup S_2 \subseteq \mathcal{P}(A)$. Together with (c), $\lbrace S_1, S_2 \rbrace$ is a partition of $\mathcal{P}(A)$. The count 16 also agrees with $2^4$.
+- **(f)** $S_1 \cup S_2 = \mathcal{P}(A)$. Every subset of $A$ either contains $w$ or does not, so $\mathcal{P}(A) \subseteq S_1 \cup S_2$, and conversely every element of $S_1$ and of $S_2$ is a subset of $A$, so $S_1 \cup S_2 \subseteq \mathcal{P}(A)$. A collection of sets $\lbrace A_1, A_2, \ldots \rbrace$ is a **partition** of a set $X$ if the $A_i$ are mutually disjoint and their union is $X$, so together with (c), $\lbrace S_1, S_2 \rbrace$ is a partition of $\mathcal{P}(A)$. The count 16 also agrees with $2^4$.
 
 | Element $X$ of $S_1$ | Element $X \cup \lbrace w \rbrace$ of $S_2$ |
 |:-----|:-----|
@@ -399,6 +401,19 @@ Step (a) reads $a \cdot 1 = a$ from right to left to replace $a$ by $a \cdot 1$.
 ## 11. Exercise 6.4.3: The Absorption Law
 
 **Problem.** In a chain of equalities showing that $(a + b) \cdot a = a$ for all $a$ and $b$ in a Boolean algebra $B$, state the axiom that justifies each step (a)-(f). The other two steps rest on exercise 6.4.1 (the idempotent law for the product, $`a \cdot a = a`$) and exercise 6.4.2 (the **universal bound law** for the sum, $`a + 1 = 1`$).
+
+```math
+\begin{aligned}
+(a + b) \cdot a &= a \cdot (a + b) && \text{(a)} \\
+&= a \cdot a + a \cdot b && \text{(b)} \\
+&= a + a \cdot b && \text{by exercise 6.4.1} \\
+&= a \cdot 1 + a \cdot b && \text{(c)} \\
+&= a \cdot (1 + b) && \text{(d)} \\
+&= a \cdot (b + 1) && \text{(e)} \\
+&= a \cdot 1 && \text{by exercise 6.4.2} \\
+&= a && \text{(f)}
+\end{aligned}
+```
 
 **Concept used.** The axioms for a Boolean algebra collected in Table 7 of Section 10, and the two properties already proved. An equation can be used in either direction, so a step that replaces the right side of an axiom by its left side is also justified by that axiom.
 

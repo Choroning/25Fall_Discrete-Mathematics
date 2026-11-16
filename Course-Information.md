@@ -2,7 +2,7 @@
 
 [Repository Guide](README.md) | [English](Course-Information.md) | [한국어](Course-Information.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-16
 
 ## Table of Contents
 
@@ -116,7 +116,7 @@
   - Chapter 10 (Sections 10.1-10.6): [Ch10](Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)
   - Chapter 11 (Sections 11.1-11.5): [Ch11](Lecture-Notes/Ch11_Analysis-of-Algorithm-Efficiency/Concepts_Lecture.md)
 - `Ch12` is a supplementary unit on topics in structures and finite automata not covered in the course, building on the finite automata of Chapter 12 of the textbook, so it does not correspond to any week in the schedule above.
-- The explanations of the twelve assignments are in the [`Coursework` index](Coursework/README.md).
+- The problems and explanations of the twelve assignments are in the [`Coursework` index](Coursework/README.md).
 
 ---
 

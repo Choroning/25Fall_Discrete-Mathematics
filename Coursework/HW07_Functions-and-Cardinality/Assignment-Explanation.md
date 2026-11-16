@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -10,7 +10,7 @@
 > 1. Compute values of functions defined in words or by formulas, and decide whether two functions are equal by comparing their values at every element of the domain
 > 2. Prove a property of logarithms using only the definition of logarithm and the definition of negative exponents
 > 3. Prove or disprove that a function is one-to-one or onto, following the correct direction of each definition
-> 4. Compute compositions of functions, and explain that the result can depend on the order of composition and that a function composed with its inverse is an identity function
+> 4. Compute compositions of functions to decide whether two compositions are the same function, and prove that a function composed with its inverse is an identity function
 > 5. Prove that two infinite sets have the same cardinality by constructing a one-to-one correspondence
 
 ---
@@ -36,6 +36,8 @@
 <br>
 
 ## 1. Exercise 7.1.9: The Sum-of-Positive-Divisors Function
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** The function $S: \mathbf{Z}^{+} \to \mathbf{Z}^{+}$ assigns to each positive integer the sum of its positive divisors. Compute $S(1)$, $S(15)$, $S(17)$, $S(5)$, $S(18)$, and $S(21)$.
 
@@ -66,7 +68,7 @@ The positive divisors of a prime $p$ are only $1$ and $p$, so $S(p) = p + 1$; $S
 
 **Problem.** For functions $F$ and $G$ from the reals to the reals, the product function is defined pointwise by $(F \cdot G)(x) = F(x) \cdot G(x)$, and $G \cdot F$ is defined in the same way. Decide, with reasons, whether $F \cdot G$ and $G \cdot F$ are the same function.
 
-**Concepts used.** By Theorem 7.1.1, two functions $F$ and $G$ with the same domain and co-domain are equal if and only if $F(x) = G(x)$ for every element $x$ of the domain. A value of a product function is a product of two real numbers, so the commutative law of real multiplication $ab = ba$ applies.
+**Concepts used.** By Theorem 7.1.1, two functions $F$ and $G$ with the same domain and co-domain are equal if and only if $F(x) = G(x)$ for every element $x$ of the domain. A value of a product function is a product of two real numbers, so the values of the two functions are compared using the properties of real multiplication.
 
 **Solution.** $F \cdot G = G \cdot F$. The step-by-step reasons are as follows.
 
@@ -80,7 +82,7 @@ The positive divisors of a prime $p$ are only $1$ and $p$, so $S(p) = p + 1$; $S
 
 Since $x$ was an arbitrary real number, the two functions take the same value at every real number $x$. By Theorem 7.1.1, $F \cdot G = G \cdot F$.
 
-> **Note:** This conclusion holds because multiplication of values is commutative. Composition of functions does not multiply values; it feeds the output of one function into another, so in general it is not commutative, as Exercises 7.3.7 and 7.3.10 show.
+> **Note:** This conclusion holds because multiplication of values is commutative. Composition of functions does not multiply values; it feeds the output of one function into another, so this argument does not carry over, and whether two compositions in opposite orders are equal must be decided separately, as in Exercises 7.3.7 and 7.3.10.
 
 ---
 
@@ -163,7 +165,7 @@ $f$ and $h$ have the same rule and differ only in the co-domain. Being onto depe
 
 **Problem.** Decide, with justification, whether the function $f(x) = \frac{x}{x^2 + 1}$, defined for every real number $x$, is one-to-one.
 
-**Concepts used.** By the negation of the definition of one-to-one, to show that $f$ is not one-to-one it suffices to exhibit real numbers $x_1$ and $x_2$ with $f(x_1) = f(x_2)$ and $x_1 \neq x_2$. Candidates can be found systematically by simplifying the equation $f(x_1) = f(x_2)$. The denominator $x^2 + 1$ is at least $1$ for every real $x$, so $f$ is defined at every real number.
+**Concepts used.** To show that $f$ is one-to-one, $x_1 = x_2$ must be derived from $f(x_1) = f(x_2)$ by the definition; to show that $f$ is not one-to-one, by the negation of the definition it suffices to exhibit real numbers $x_1$ and $x_2$ with $f(x_1) = f(x_2)$ and $x_1 \neq x_2$. Which case holds can be found systematically by simplifying the equation $f(x_1) = f(x_2)$. The denominator $x^2 + 1$ is at least $1$ for every real $x$, so $f$ is defined at every real number.
 
 **Solution.** $f$ is not one-to-one.
 

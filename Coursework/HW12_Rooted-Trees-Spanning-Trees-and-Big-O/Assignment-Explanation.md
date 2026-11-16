@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 10, 11
 
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 10.5.2: Terminology of Rooted Trees
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Figure 1 is a rooted tree with root $v_0$. Find (a) the level of $v_8$, (b) the level of $v_0$, (c) the height of the tree, (d) the children of $v_{10}$, (e) the parent of $v_5$, (f) the siblings of $v_1$, (g) the descendants of $v_{12}$, and (h) the number of leaves (terminal vertices).
 
@@ -141,7 +143,17 @@ The internal vertices are the five vertices $a, b, c, d, e$, each with exactly t
 
 ## 3. Exercise 10.6.1: All Spanning Trees
 
-**Problem.** Find all spanning trees of the graph $G$ with vertices $a, b, c, d$ and edges $ab$, $ad$, $bd$, $bc$ (the first drawing in Figure 3).
+**Problem.** Find all spanning trees of the graph $G$ in Figure 3. $G$ has vertices $a, b, c, d$ and edges $ab$, $ad$, $bd$, $bc$.
+
+```mermaid
+graph TD
+    a((a)) --- b((b))
+    a --- d((d))
+    b --- d
+    b --- c((c))
+```
+
+*Figure 3. Graph G whose spanning trees are found*
 
 **Concepts used.** A **spanning tree** of a graph $G$ is a subgraph of $G$ that contains every vertex of $G$ and is a tree ([Chapter 10, Section 6](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). By Proposition 10.6.1, every connected graph has a spanning tree, and any two spanning trees of a graph have the same number of edges. Also, by Theorem 10.4.2, a tree with $n$ vertices has $n - 1$ edges.
 
@@ -157,9 +169,9 @@ Therefore the spanning trees are the following three.
 - $T_2 = \lbrace ab, bd, bc\rbrace$ ($ad$ removed)
 - $T_3 = \lbrace ad, bd, bc\rbrace$ ($ab$ removed)
 
-![Figure 3. Graph G and its three spanning trees (dashed lines are removed edges)](../../images/HW12_Spanning-Trees.png)
+![Figure 4. Graph G and its three spanning trees (dashed lines are removed edges)](../../images/HW12_Spanning-Trees.png)
 
-*Figure 3. Graph G and its three spanning trees (dashed lines are removed edges)*
+*Figure 4. Graph G and its three spanning trees (dashed lines are removed edges)*
 
 There are $\binom{4}{3} = 4$ ways to choose three of the four edges, and only $\lbrace ab, ad, bd\rbrace$, the choice without $bc$, fails to be a spanning tree, which confirms the answer of 3.
 
@@ -171,11 +183,11 @@ There are $\binom{4}{3} = 4$ ways to choose three of the four edges, and only $\
 
 ## 4. Exercise 10.6.13: Tracing Dijkstra's Algorithm
 
-**Problem.** Use Dijkstra's algorithm to find a shortest path from $a$ to $z$ in the weighted graph of Figure 4, and show the action of the algorithm in a table in the format of Table 10.6.1 of the textbook.
+**Problem.** Use Dijkstra's algorithm to find a shortest path from $a$ to $z$ in the weighted graph of Figure 5, and show the action of the algorithm in a table in the format of Table 10.6.1 of the textbook.
 
-![Figure 4. Weighted graph to which Dijkstra's algorithm is applied](../../images/HW12_Dijkstra-Graph.png)
+![Figure 5. Weighted graph to which Dijkstra's algorithm is applied](../../images/HW12_Dijkstra-Graph.png)
 
-*Figure 4. Weighted graph to which Dijkstra's algorithm is applied*
+*Figure 5. Weighted graph to which Dijkstra's algorithm is applied*
 
 **Concepts used.** A graph with a positive weight on each edge is called a **weighted graph**. **Dijkstra's algorithm** (Algorithm 10.6.3) finds shortest paths by growing a tree $T$ from the starting vertex $a$ one vertex at a time ([Chapter 10, Section 6](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)). Each vertex $u$ carries a **label** $L(u)$, the shortest distance from $a$ to $u$ known so far; initially $L(a) = 0$ and all other labels are $\infty$. Let $v$ be the vertex most recently added to $T$, and let the **fringe** $F$ be the set of vertices adjacent to $T$ but not yet in $T$. While $z \notin V(T)$, repeat the following.
 
@@ -208,9 +220,9 @@ When the algorithm stops, $L(z)$ is the length of a shortest path, and following
 
 The length of a shortest path is $L(z) = 8$. Following $D(z) = e$, $D(e) = c$, $D(c) = b$, and $D(b) = a$ backward, the shortest path is $`a\,b\,c\,e\,z`$, with length $2 + 3 + 1 + 2 = 8$.
 
-![Figure 5. Shortest path a b c e z from a to z (thick lines)](../../images/HW12_Dijkstra-Shortest-Path.png)
+![Figure 6. Shortest path a b c e z from a to z (thick lines)](../../images/HW12_Dijkstra-Shortest-Path.png)
 
-*Figure 5. Shortest path a b c e z from a to z (thick lines)*
+*Figure 6. Shortest path a b c e z from a to z (thick lines)*
 
 > **Caution:** In part 2 of the loop, only the vertices adjacent to the newly added vertex $v$ can have their labels changed. In step 3, $v = b$ is not adjacent to $e$, so $L(e)$ remains 11 there; it drops to 6 only in step 4, where $v$ is $c$, a neighbor of $e$. When filling in a row, recompute only the labels of the vertices adjacent to that step's $v$. Also, the label of a vertex already in $T$ never changes afterward and equals its shortest distance from $a$.
 
@@ -220,11 +232,11 @@ The length of a shortest path is $L(z) = 8$. Following $D(z) = e$, $D(e) = c$, $
 
 ## 5. Exercise 11.1.1: Reading the Graph of a Function
 
-**Problem.** Read the following from the graph of $f$ in Figure 6: (a) the sign of $f(0)$, (b) the solutions of $f(x) = 0$, (c) approximate values of two different numbers $x_1$ and $x_2$ with $f(x_1) = f(x_2) = 1$, (d) an approximate solution of $f(x) = 1.5$, (e) whether the values of $f$ increase or decrease as $x$ goes from $-3$ to $-1$, and (f) the same question for $x$ from 0 to 4.
+**Problem.** Read the following from the graph of $f$ in Figure 7: (a) the sign of $f(0)$, (b) the solutions of $f(x) = 0$, (c) approximate values of two different numbers $x_1$ and $x_2$ with $f(x_1) = f(x_2) = 1$, (d) an approximate solution of $f(x) = 1.5$, (e) whether the values of $f$ increase or decrease as $x$ goes from $-3$ to $-1$, and (f) the same question for $x$ from 0 to 4.
 
-![Figure 6. Graph of the function f and the points read from it](../../images/HW12_Function-Graph.png)
+![Figure 7. Graph of the function f](../../images/HW12_Function-Graph-Problem.png)
 
-*Figure 6. Graph of the function f and the points read from it*
+*Figure 7. Graph of the function f*
 
 **Concepts used.** A function from a subset of the real numbers to the real numbers is called a **real-valued function**, and its graph is the set of all points $(x, f(x))$ ([Chapter 11, Section 1](../../Lecture-Notes/Ch11_Analysis-of-Algorithm-Efficiency/Concepts_Lecture.md)). Hence $f(a)$ is the height of the graph at $x = a$, and the solutions of the equation $f(x) = c$ are the $x$-coordinates of the points where the horizontal line $y = c$ meets the graph. A function $f$ is **increasing** on a set $S$ if $f(x_1) < f(x_2)$ for all $x_1 < x_2$ in $S$, and **decreasing** if $f(x_1) > f(x_2)$.
 
@@ -236,6 +248,10 @@ The length of a shortest path is $L(z) = 8$. Following $D(z) = e$, $D(e) = c$, $
 - **(d)** The horizontal line $y = 1.5$ also meets the graph twice, at $x \approx -0.5$ or $x \approx 1$. Either value is an answer.
 - **(e)** From $-3$ to $-1$ the graph rises from left to right, so the values of $f$ increase.
 - **(f)** From 0 to 4 the graph falls from left to right, so the values of $f$ decrease.
+
+![Figure 8. Graph of the function f and the points read from it](../../images/HW12_Function-Graph.png)
+
+*Figure 8. Graph of the function f and the points read from it*
 
 Having two distinct points with the same function value, as in (c) and (d), means that $f$ is not one-to-one. Indeed, $f$ increases to the left of $x = 0$ and decreases to the right, so it passes each such height once on each side.
 
@@ -259,9 +275,9 @@ Having two distinct points with the same function value, as in (c) and (d), mean
 
 If $x$ is an integer $n$, then $\lceil n \rceil = n$, but as soon as $x$ exceeds $n$ by any amount the value jumps to $n + 1$. So for each integer $n$, draw a horizontal segment at height $n$ over the interval $(n - 1, n]$, with an open circle (excluded) at the left end $(n - 1, n)$ and a filled dot (included) at the right end $(n, n)$.
 
-![Figure 7. Graph of the ceiling function g(x) = ⌈x⌉](../../images/HW12_Ceiling-Function-Graph.png)
+![Figure 9. Graph of the ceiling function g(x) = ⌈x⌉](../../images/HW12_Ceiling-Function-Graph.png)
 
-*Figure 7. Graph of the ceiling function g(x) = ⌈x⌉*
+*Figure 9. Graph of the ceiling function g(x) = ⌈x⌉*
 
 > **Caution:** The graph of the floor function $\lfloor x \rfloor$ consists of segments over the intervals $[n, n + 1)$, so its left ends are filled dots and its right ends are open circles. The ceiling function is the opposite, so swapping the endpoint marks produces the graph of a different function. Also, the ceiling function takes the same value on whole intervals, as in $\lceil 0.2 \rceil = \lceil 0.7 \rceil = 1$, so by the textbook's definition it is not an increasing function. Its values never decrease, but an increasing function requires $f(x_1) < f(x_2)$ whenever $x_1 < x_2$.
 
@@ -308,11 +324,11 @@ Given an inequality, match it with the form of a definition and read off the con
 
 **Answer:** $n - \lfloor n/2 \rfloor + 1$ is $\Omega(n)$.
 
-The inequality itself can also be checked. By the definition of the floor, $\lfloor n/2 \rfloor \le n/2$, so $n - \lfloor n/2 \rfloor \ge n - n/2 = n/2$, and adding 1 gives $n - \lfloor n/2 \rfloor + 1 > \frac{1}{2}n$. For example, for $n = 1, 2, 3, 4, 5, 6$ the left side $\frac{1}{2}n$ is 0.5, 1, 1.5, 2, 2.5, 3, and the right side is 2, 2, 3, 3, 4, 4 (Figure 8 (a)).
+The inequality itself can also be checked. By the definition of the floor, $\lfloor n/2 \rfloor \le n/2$, so $n - \lfloor n/2 \rfloor \ge n - n/2 = n/2$, and adding 1 gives $n - \lfloor n/2 \rfloor + 1 > \frac{1}{2}n$. For example, for $n = 1, 2, 3, 4, 5, 6$ the left side $\frac{1}{2}n$ is 0.5, 1, 1.5, 2, 2.5, 3, and the right side is 2, 2, 3, 3, 4, 4 (Figure 10 (a)).
 
-![Figure 8. Two functions with their lower and upper bounds: (a) n − ⌊n/2⌋ + 1, (b) 3n(n − 2)](../../images/HW12_Order-Bounds.png)
+![Figure 10. Two functions with their lower and upper bounds: (a) n − ⌊n/2⌋ + 1, (b) 3n(n − 2)](../../images/HW12_Order-Bounds.png)
 
-*Figure 8. Two functions with their lower and upper bounds: (a) n − ⌊n/2⌋ + 1, (b) 3n(n − 2)*
+*Figure 10. Two functions with their lower and upper bounds: (a) n − ⌊n/2⌋ + 1, (b) 3n(n − 2)*
 
 ---
 
@@ -346,7 +362,7 @@ The inequality can also be checked. By Exercise 11.2.4, $f(n) > n/2 \ge 0$, so t
 
 **Answer:** $3n(n - 2)$ is $\Theta(n^2)$.
 
-The inequality can also be checked. On the left, $3n(n - 2) - n^2 = 2n^2 - 6n = 2n(n - 3) \ge 0$, so it holds for $n \ge 3$. On the right, $4n^2 - 3n(n - 2) = n^2 + 6n > 0$, so it holds for every positive integer $n$. For $n = 2$, $3n(n - 2) = 0 < 4 = n^2$, so the left inequality fails, which is why the starting point $k = 3$ is needed (Figure 8 (b)).
+The inequality can also be checked. On the left, $3n(n - 2) - n^2 = 2n^2 - 6n = 2n(n - 3) \ge 0$, so it holds for $n \ge 3$. On the right, $4n^2 - 3n(n - 2) = n^2 + 6n > 0$, so it holds for every positive integer $n$. For $n = 2$, $3n(n - 2) = 0 < 4 = n^2$, so the left inequality fails, which is why the starting point $k = 3$ is needed (Figure 10 (b)).
 
 ---
 
@@ -378,11 +394,11 @@ Therefore $A$ is more efficient when $n > 10^6 = 1{,}000{,}000$. At $n = 10^6$ t
 
 Therefore $B$ is at least 100 times more efficient than $A$ when $1 \le n \le 10^4 = 10{,}000$.
 
-![Figure 9. Numbers of operations of the two algorithms (logarithmic scale)](../../images/HW12_Operation-Counts.png)
+![Figure 11. Numbers of operations of the two algorithms (logarithmic scale)](../../images/HW12_Operation-Counts.png)
 
-*Figure 9. Numbers of operations of the two algorithms (logarithmic scale)*
+*Figure 11. Numbers of operations of the two algorithms (logarithmic scale)*
 
-In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the graph of $`100\,n^3`$ crosses the graph of $A$ at $n = 10^4$. On a logarithmic scale the slope is the exponent of the order, so $B$ (slope 3) eventually overtakes $A$ (slope 2), but because of the constant $10^6$ this happens very late. Choosing an algorithm by order alone may select the slower algorithm for the input sizes actually encountered.
+In Figure 11 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the graph of $`100\,n^3`$ crosses the graph of $A$ at $n = 10^4$. On a logarithmic scale the slope is the exponent of the order, so $B$ (slope 3) eventually overtakes $A$ (slope 2), but because of the constant $10^6$ this happens very late. Choosing an algorithm by order alone may select the slower algorithm for the input sizes actually encountered.
 
 ---
 
@@ -436,7 +452,7 @@ In Figure 9 the graph of $B$ crosses the graph of $A$ at $n = 10^6$, and the gra
 
    </details>
 
-4. **Dijkstra's algorithm:** In the graph of Figure 4, if the weight of the edge $de$ were 3 instead of 10, what would be the shortest path from $a$ to $z$ and its length?
+4. **Dijkstra's algorithm:** In the graph of Figure 5, if the weight of the edge $de$ were 3 instead of 10, what would be the shortest path from $a$ to $z$ and its length?
 
    <details>
    <summary>Answer</summary>

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 5
 
@@ -29,6 +29,8 @@
 <br>
 
 ## 1. Exercise 5.1.47: An Alternating Sum
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Rewrite $1 - r + r^2 - r^3 + r^4 - r^5$ compactly with summation or product notation.
 

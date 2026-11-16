@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -11,7 +11,7 @@
 > 2. Count all subgraphs of a small graph without omission according to the definition of subgraph
 > 3. Find the adjacency matrix of a graph with loops and parallel edges, and draw a graph from an adjacency matrix
 > 4. Prove from the definition of matrix multiplication that the square of a symmetric matrix is symmetric
-> 5. Show that two graphs are isomorphic by constructing correspondences of vertices and edges, and check the decision with isomorphic invariants
+> 5. Decide whether two graphs are isomorphic, construct correspondences of vertices and edges if they are, and check the decision with isomorphic invariants
 > 6. Find the leaves and internal vertices of a tree, and decide whether a tree can exist from the relation between its numbers of vertices and edges
 
 ---
@@ -35,6 +35,8 @@
 <br>
 
 ## 1. Exercise 10.1.2: Classifying Walks
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Classify each of the six walks below in the graph of Figure 1 as a trail, path, closed walk, circuit, or simple circuit, or as a walk of none of these kinds.
 
@@ -361,9 +363,11 @@ Both results can be checked with the sum of degrees. A tree with $n$ vertices ha
 
 **Problem.** Decide whether a tree with nine vertices and nine edges exists; draw an example if it does, and explain why not if it does not.
 
-**Concepts used.** Theorem 10.4.2 ([Chapter 10, Section 4](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)) states that, for any positive integer $n$, a tree with $n$ vertices has exactly $n - 1$ edges. It is proved by mathematical induction, removing a leaf and its edge with the help of Lemma 10.4.1, which says that any tree with more than one vertex has a vertex of degree 1. Also, by Corollary 10.4.5, a graph with $n$ vertices and at least $n$ edges always has a circuit.
+**Concepts used.** The relation between the numbers of vertices and edges of a tree (Theorem 10.4.2 and Corollary 10.4.5 in Chapter 10, Section 4) is used. Check whether the given numbers satisfy that relation; if they do, draw a tree that meets the specifications, and if they do not, explain why.
 
-**Solution.** No such tree exists. By Theorem 10.4.2, a tree with nine vertices must have exactly $9 - 1 = 8$ edges, so it cannot have nine. The same fact also follows from Corollary 10.4.5: a graph with nine vertices and nine edges has a circuit, so it cannot be a tree, which must have no circuit.
+**Solution.** Theorem 10.4.2 ([Chapter 10, Section 4](../../Lecture-Notes/Ch10_Theory-of-Graphs-and-Trees/Concepts_Lecture.md)) states that, for any positive integer $n$, a tree with $n$ vertices has exactly $n - 1$ edges. It is proved by mathematical induction, removing a leaf and its edge with the help of Lemma 10.4.1, which says that any tree with more than one vertex has a vertex of degree 1. Also, by Corollary 10.4.5, a graph with $n$ vertices and at least $n$ edges always has a circuit.
+
+No such tree exists. By Theorem 10.4.2, a tree with nine vertices must have exactly $9 - 1 = 8$ edges, so it cannot have nine. The same fact also follows from Corollary 10.4.5: a graph with nine vertices and nine edges has a circuit, so it cannot be a tree, which must have no circuit.
 
 ```mermaid
 graph LR

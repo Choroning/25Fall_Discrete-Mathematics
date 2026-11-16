@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 8, 9
 
@@ -11,7 +11,7 @@
 > 2. Draw the Hasse diagram of a partially ordered set such as a power set under the subset relation
 > 3. Write sample spaces and events as sets and compute probabilities with the equally likely probability formula
 > 4. Count with the multiplication rule, the addition rule, the difference rule, and the formula for r-permutations, and prove an identity about permutations
-> 5. Prove the formula for the Euler phi function with the inclusion/exclusion rule, and show with the pigeonhole principle that certain facts must hold
+> 5. Prove the formula for the Euler phi function with the inclusion/exclusion rule, and decide with the pigeonhole principle whether a fact must hold
 
 ---
 
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 8.5.1: Deciding Antisymmetry
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** Draw the directed graph of each of the following four relations on $\lbrace 0, 1, 2, 3 \rbrace$, and pick out the antisymmetric ones.
 
@@ -483,7 +485,7 @@ For example, if $n = 15 = 3 \cdot 5$, then up to 15 there are 5 multiples of 3, 
 
 **Problem.** For a positive integer $n$, decide whether choosing $n + 1$ distinct integers from $\lbrace 1, 2, 3, \ldots, 2n \rbrace$ always yields at least one odd integer, and explain why.
 
-**Concepts used.** By Theorem 9.4.1, the **pigeonhole principle**, a function from a finite set with $n$ elements to a finite set with $m$ elements is not one-to-one if $n > m$. In other words, if $n + 1$ pigeons fly into $n$ pigeonholes, some pigeonhole receives two or more pigeons.
+**Concepts used.** By Theorem 9.4.1, the **pigeonhole principle**, a function from a finite set with $n$ elements to a finite set with $m$ elements is not one-to-one if $n > m$. In other words, if $n + 1$ pigeons fly into $n$ pigeonholes, some pigeonhole receives two or more pigeons. Conversely, to show that the fact need not hold, it suffices to exhibit one choice that meets the conditions but contains no odd integer.
 
 **Solution.** Yes. At least one of them must be odd.
 

@@ -2,14 +2,14 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
 > **Learning Objectives:**
 > 1. Decide whether two elements are related under a relation defined in words or by a formula, and represent a relation by a directed graph or by a graph in the Cartesian plane
 > 2. Prove or disprove, following the definitions, that a relation is reflexive, symmetric, or transitive
-> 3. Check that a counterexample is valid under every hypothesis of the problem, and prove that the inverse relation preserves transitivity
+> 3. Check that a counterexample is valid under every hypothesis of the problem, and decide whether the inverse of a transitive relation is transitive, proving or refuting it
 > 4. Prove that a relation is an equivalence relation, find its equivalence classes, and list the distinct equivalence classes without duplication
 > 5. Decide whether two classes of congruence modulo d are equal by comparing remainders
 
@@ -37,6 +37,8 @@
 <br>
 
 ## 1. Exercise 8.1.3: Congruence Modulo 3
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** The relation $T$ on $\mathbf{Z}$ is given by $`m \, T \, n \iff 3 \mid (m - n)`$. (a) Decide whether each of $`10 \, T \, 1`$, $`1 \, T \, 10`$, $(2, 2) \in T$, and $(8, 1) \in T$ holds, and give five integers $n$ satisfying each of (b) $`n \, T \, 0`$, (c) $`n \, T \, 1`$, and (d) $`n \, T \, 2`$.
 

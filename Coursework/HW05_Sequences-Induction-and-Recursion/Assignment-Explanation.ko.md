@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-04
+> **최종 수정일:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 5
 
@@ -29,6 +29,8 @@
 <br>
 
 ## 1. 연습 문제 5.1.47: 부호가 번갈아 바뀌는 합
+
+> **풀어 보기:** 이 문서는 정답과 풀이를 담고 있다. 먼저 [과제 안내문](Original/Assignment.ko.md)의 문제를 직접 풀어 본 뒤 읽는다.
 
 **문제.** $1 - r + r^2 - r^3 + r^4 - r^5$를 합 기호나 곱 기호를 써서 간결하게 나타낸다.
 

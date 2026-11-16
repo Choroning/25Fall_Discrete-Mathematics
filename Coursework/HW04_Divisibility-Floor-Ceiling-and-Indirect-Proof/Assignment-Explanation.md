@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-16
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -11,7 +11,7 @@
 > 2. Prove divisibility facts about the last digit by rewriting a decimal representation as an expression
 > 3. Determine a remainder by using the uniqueness part of the quotient-remainder theorem
 > 4. Compute values of floor and ceiling from their defining inequalities and prove their properties
-> 5. Prove irrationality by contradiction, and explain the role that the remainders of a product of primes plus 1 play in the proof that there are infinitely many primes
+> 5. Decide whether a real number is irrational and support the answer with a proof or a disproof, and explain the role that the remainders of a product of primes plus 1 play in the proof that there are infinitely many primes
 
 ---
 
@@ -34,6 +34,8 @@
 <br>
 
 ## 1. Exercise 4.4.4: A Product of Three Consecutive Integers and 3
+
+> **Try It First:** This document contains the answers and solutions. Solve the problems in the [assignment handout](Original/Assignment.md) yourself before reading on.
 
 **Problem.** If $k$ is an integer, is $(3k+1)(3k+2)(3k+3)$ divisible by 3? Give the answer and a reason.
 
@@ -91,7 +93,9 @@ For example, if $a = 3$, $b = 6$, and $c = 9$, then $r = 2$, $s = 3$, and $b + c
 
 **Problem.** Decide whether the statement "for all integers $a, b, c$, if $a \mid b$ and $a \mid c$ then $a \mid (2b - 3c)$" is true; if it is, give a direct proof from the definitions, and if not, give a counterexample.
 
-**Concept used.** The definition of divisibility and direct proof. When the truth value is unknown, test small examples first. With $a = 4$, $b = 8$, $c = 12$, $2b - 3c = 16 - 36 = -20 = 4 \cdot (-5)$, which is divisible by 4. Examples are not a proof, but when the statement holds in several examples it is likely to be true, so attempt a proof.
+**Concept used.** The definition of divisibility and direct proof. When the truth value is unknown, test small examples first. Examples are not a proof, but if the statement holds in several examples, attempt a proof from the definitions, and if an example fails, present it as a counterexample.
+
+**Solution.** Testing first with $a = 4$, $b = 8$, $c = 12$ gives $2b - 3c = 16 - 36 = -20 = 4 \cdot (-5)$, which is divisible by 4. When the statement holds in several examples it is likely to be true, so attempt a proof.
 
 **Proof.**
 
@@ -229,9 +233,9 @@ For example, $n = 10$ gives $\lfloor 5 \rfloor = 5 = 10/2$, and $n = -6$ gives $
 
 ## 8. Exercise 4.8.6: Deciding Irrationality
 
-**Problem.** Determine whether $6 - 7\sqrt{2}$ is irrational, and support the answer with a proof or a disproof.
+**Problem.** Determine whether the statement "$`6 - 7\sqrt{2}`$ is irrational" is true or false; prove it if it is true and disprove it if it is false.
 
-**Concept used.** A real number $r$ is a **rational number** if $r = a/b$ for some integers $a, b$ with $b \ne 0$, and a real number that is not rational is an **irrational number**. By Theorem 4.8.1 in [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md), $\sqrt{2}$ is irrational. Being irrational is the negative statement "not rational", so proof by contradiction, which supposes the negation of the conclusion and derives a contradiction, is the natural method. It is the same method as the proof of Proposition 4.8.2 (the irrationality of $`1 + 3\sqrt{2}`$).
+**Concept used.** A real number $r$ is a **rational number** if $r = a/b$ for some integers $a, b$ with $b \ne 0$, and a real number that is not rational is an **irrational number**. By Theorem 4.8.1 in [Chapter 4, Section 8](../../Lecture-Notes/Ch04_Elementary-Number-Theory-and-Methods-of-Proof/Concepts_Lecture.md), $\sqrt{2}$ is irrational. Being irrational is the negative statement "not rational", so irrationality is proved by contradiction, which supposes the negation of the conclusion and derives a contradiction. The proof of Proposition 4.8.2 (the irrationality of $`1 + 3\sqrt{2}`$) is an example. Conversely, to disprove the statement, it suffices to write the given number as a quotient of two integers with a nonzero denominator.
 
 **Answer.** It is irrational.
 

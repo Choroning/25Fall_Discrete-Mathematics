@@ -23,7 +23,7 @@
 ## 📝 레포지토리 소개
 
 - `Lecture-Notes/`에는 교재의 장 번호(`Ch01`\~`Ch11`)를 따른 강의 노트가 있고, `Ch12`는 교재 12장의 유한 오토마타를 바탕으로 수업에서 다루지 않은 구조와 유한 오토마타의 주제를 보충한 단원입니다.
-- `Coursework/`에는 교재의 연습 문제로 이루어진 과제 12회의 해설이 있으며, 제출한 답안 파일은 올리지 않았습니다.
+- `Coursework/`에는 교재의 연습 문제로 이루어진 과제 12회의 문제와 해설이 있으며, 제출한 답안 파일은 올리지 않았습니다.
 - 모든 강의 노트와 과제 해설은 영어(`.md`)와 한국어(`.ko.md`) 파일이 짝을 이룹니다.
 
 > **🤖 생성형 AI 도구 사용**
@@ -60,7 +60,7 @@
 ```plaintext
 25Fall_Discrete-Mathematics
 ├── Lecture-Notes               교재 장별 강의 노트
-├── Coursework                  과제 해설
+├── Coursework                  과제 문제와 해설
 ├── images                      모든 문서의 그림
 ├── Course-Information.ko.md    수업 운영 정보
 ├── Course-Information.md

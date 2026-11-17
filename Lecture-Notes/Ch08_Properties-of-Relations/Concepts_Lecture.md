@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -241,7 +241,7 @@ graph LR
 
 A binary relation is a subset of the Cartesian product of two sets, and an $n$-ary relation is, in the same way, a subset of the Cartesian product of $n$ sets. $n$-ary relations supply the mathematical basis for the theory of **relational databases**.
 
-> **Definition:** Given sets $A_1, A_2, \ldots, A_n$, a subset of $A_1 \times A_2 \times \cdots \times A_n$ is called an **$n$-ary relation** on $A_1 \times A_2 \times \cdots \times A_n$. The cases $n = 2, 3, 4$ are called **binary**, **ternary**, and **quaternary relations**, respectively.
+> **Definition:** Given sets $A_1, A_2, \ldots, A_n$, a subset of $A_1 \times A_2 \times \cdots \times A_n$ is called an **$n$-ary relation** on $A_1 \times A_2 \times \cdots \times A_n$. The cases $n = 2, 3, 4$ are called binary, ternary, and quaternary relations, respectively.
 
 **Example 8.1.7 (A Simple Database).** The following is a heavily simplified model of the admission records a hospital might keep. Let $A_1$ be a set of positive integers, $A_2$ a set of strings of letters, $A_3$ a set of strings of digits, and $A_4$ a set of strings of letters. A quaternary relation $R$ on $A_1 \times A_2 \times A_3 \times A_4$ is defined as follows: $(a_1, a_2, a_3, a_4) \in R$ if, and only if, the patient with ID number $a_1$ and name $a_2$ was admitted on date $a_3$ with primary diagnosis $a_4$.
 
@@ -952,12 +952,12 @@ Negating the definition, $R$ is not antisymmetric if, and only if, there are ele
 
 ```mermaid
 graph LR
-    subgraph G1["R₁"]
+    subgraph G1["R1"]
         p0["0"] --> p2["2"]
         p2 --> p0
         p1["1"] --> p2
     end
-    subgraph G2["R₂"]
+    subgraph G2["R2"]
         q0["0"] --> q0
         q0 --> q1["1"]
         q0 --> q2["2"]
@@ -985,7 +985,7 @@ Example 8.5.2 shows that one defining rule can give an antisymmetric relation on
 
 ### 4.2 Definition and Examples of Partial Orders
 
-> **Definition:** Let $R$ be a relation defined on a set $A$. $R$ is a **partial order relation**, or simply a **partial order**, if, and only if, $R$ is reflexive, antisymmetric, and transitive.
+> **Definition:** Let $R$ be a relation defined on a set $A$. $R$ is a **partial order relation**, or simply a partial order, if, and only if, $R$ is reflexive, antisymmetric, and transitive.
 
 The less-than-or-equal-to relation on a set of real numbers and the subset relation on a set of sets are the two most basic partial order relations, and they serve as the models on which the general notion is patterned.
 
@@ -1171,21 +1171,25 @@ graph BT
 
 For any two real numbers $x$ and $y$, at least one of $x \le y$ and $y \le x$ holds; two elements related in one direction or the other like this are said to be comparable. By contrast, two subsets $A$ and $B$ of $\lbrace a, b, c \rbrace$ may satisfy neither $A \subseteq B$ nor $B \subseteq A$. For instance, if $A = \lbrace a, b \rbrace$ and $B = \lbrace b, c \rbrace$, then $A \not\subseteq B$ and $B \not\subseteq A$. In such a case, $A$ and $B$ are said to be noncomparable.
 
-> **Definition:** Let $\preceq$ be a partial order relation on a set $A$. Elements $a$ and $b$ of $A$ are said to be **comparable** if, and only if, either $a \preceq b$ or $b \preceq a$. Otherwise, $a$ and $b$ are called **noncomparable**.
+> **Definition:** Let $\preceq$ be a partial order relation on a set $A$. Elements $a$ and $b$ of $A$ are said to be **comparable** if, and only if, either $a \preceq b$ or $b \preceq a$. Otherwise, $a$ and $b$ are called noncomparable.
 
 A partial order relation under which every two elements are comparable is called a total order.
 
-> **Definition:** If $R$ is a partial order relation on a set $A$, and for any two elements $a$ and $b$ of $A$ either $`a \, R \, b`$ or $`b \, R \, a`$, then $R$ is called a **total order relation**, or a **total order**, on $A$.
+> **Definition:** If $R$ is a partial order relation on a set $A$, and for any two elements $a$ and $b$ of $A$ either $`a \, R \, b`$ or $`b \, R \, a`$, then $R$ is called a **total order relation**, or a total order, on $A$.
 
 The less-than-or-equal-to relation on any set of real numbers and the dictionary order of words are both total order relations, and the Hasse diagram of a total order relation is one vertical chain. Many partial orders of practical importance, however, contain noncomparable elements and therefore are not total orders. For instance, the subset relation on $\mathcal{P}(\lbrace a, b, c \rbrace)$ is not a total order because $\lbrace a, b \rbrace$ and $\lbrace a, c \rbrace$ are noncomparable. Divides relations are often not total orders either; in Figure 18, for example, neither of 2 and 3 divides the other. On a set of positive integers, the divides relation is a total order exactly when each element divides the next one once the elements are listed in increasing order, as in $\lbrace 1, 2, 4, 8 \rbrace$ or $\lbrace 2, 6, 12 \rbrace$.
 
-> **Definition:** A set $A$ is called a **partially ordered set (poset)** with respect to a relation $\preceq$ if, and only if, $\preceq$ is a partial order relation on $A$. A set $A$ is called a **totally ordered set** with respect to $\preceq$ if, and only if, $A$ is partially ordered with respect to $\preceq$ and $\preceq$ is a total order.
+> **Definition:** A set $A$ is called a **partially ordered set (poset)** with respect to a relation $\preceq$ if, and only if, $\preceq$ is a partial order relation on $A$.
+
+> **Definition:** A set $A$ is called a **totally ordered set** with respect to $\preceq$ if, and only if, $A$ is partially ordered with respect to $\preceq$ and $\preceq$ is a total order.
 
 For instance, the real numbers form a partially ordered set under the less-than-or-equal-to relation $\le$, and any set of sets forms a partially ordered set under the subset relation $\subseteq$. Any subset of a partially ordered set is again a partially ordered set with respect to the same relation (restricted to the subset). This is because reflexivity, antisymmetry, and transitivity are all universal statements: what holds for all elements of the original set holds in particular for the elements of the subset.
 
 Even a partially ordered set that is not totally ordered may contain subsets that are totally ordered; such subsets are called chains.
 
-> **Definition:** Let $A$ be a partially ordered set with respect to a relation $\preceq$. A subset $B$ of $A$ is called a **chain** if, and only if, every two elements of $B$ are comparable, that is, $a \preceq b$ or $b \preceq a$ for all $a$ and $b$ in $B$. The **length of a chain** is one less than the number of elements in the chain.
+> **Definition:** Let $A$ be a partially ordered set with respect to a relation $\preceq$. A subset $B$ of $A$ is called a **chain** if, and only if, every two elements of $B$ are comparable, that is, $a \preceq b$ or $b \preceq a$ for all $a$ and $b$ in $B$.
+
+> **Definition:** The **length of a chain** is one less than the number of elements in the chain.
 
 If $B$ is a chain in $A$, then $B$ is a totally ordered set with respect to the restriction of $\preceq$ to $B$. Also, a partially ordered set is totally ordered if, and only if, the whole set is a chain.
 
@@ -1439,7 +1443,7 @@ This analysis shows that task 9 cannot be finished earlier than 26 hours after t
 
 **True/False Check:**
 
-| Statement | Verdict and Reason |
+| Statement | Judgment and Reason |
 |:-----|:------------|
 | A relation that is not symmetric is antisymmetric. | **F.** The relation $\lbrace (0, 1), (1, 0), (0, 2) \rbrace$ on $\lbrace 0, 1, 2 \rbrace$ is neither symmetric nor antisymmetric. |
 | The empty relation on a nonempty set is symmetric and transitive but not reflexive. | **T.** Symmetry and transitivity are vacuously true because their hypotheses never hold, and it is not reflexive because $(x, x)$ is missing for an element $x$. |

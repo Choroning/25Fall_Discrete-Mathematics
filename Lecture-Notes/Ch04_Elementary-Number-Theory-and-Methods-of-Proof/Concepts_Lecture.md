@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -102,9 +102,12 @@ The proofs in this chapter use the following facts without proof.
 
 To judge whether a statement is true, one must first know what the statement is about, that is, the exact meaning of every term in it. Mathematics defines terms very precisely, and it is important to learn definitions almost word for word.
 
-> **Definition:** An integer $n$ is **even** if, and only if, $n$ equals twice some integer, and $n$ is **odd** if, and only if, $n$ equals twice some integer plus 1. Symbolically, for an integer $n$:
+> **Definition:** An integer $n$ is **even** if, and only if, $n$ equals twice some integer. Symbolically, for an integer $n$:
 >
 > - $n$ is even $\iff$ $n = 2k$ for some integer $k$
+
+> **Definition:** An integer $n$ is **odd** if, and only if, $n$ equals twice some integer plus 1. Symbolically, for an integer $n$:
+>
 > - $n$ is odd $\iff$ $n = 2k + 1$ for some integer $k$
 
 A definition is used in both directions. Knowing that an integer is even, one may write it as 2 times some integer; conversely, knowing that an integer equals 2 times some integer, one may conclude that the integer is even.
@@ -135,9 +138,12 @@ Also, because the definitions of even and odd are quantified statements, the var
 
 The integer $6 = 2 \cdot 3$ is a product of two smaller positive integers. On the other hand, 7 cannot be written this way; its only positive divisors are 1 and 7. An integer greater than 1 that, like 7, cannot be written as a product of two smaller positive integers is called prime.
 
-> **Definition:** An integer $n$ is **prime** if, and only if, $n > 1$ and for all positive integers $r$ and $s$ with $n = rs$, one of $r$ and $s$ equals $n$. An integer $n$ is **composite** if, and only if, $n > 1$ and $n = rs$ for some integers $r$ and $s$ with $1 < r < n$ and $1 < s < n$. Symbolically, for each integer $n$ with $n > 1$:
+> **Definition:** An integer $n$ is **prime** if, and only if, $n > 1$ and for all positive integers $r$ and $s$ with $n = rs$, one of $r$ and $s$ equals $n$. Symbolically, for each integer $n$ with $n > 1$:
 >
 > - $n$ is prime $\iff$ for all positive integers $r$ and $s$ with $n = rs$, ($r = 1$ and $`s = n`$) or ($r = n$ and $`s = 1`$)
+
+> **Definition:** An integer $n$ is **composite** if, and only if, $n > 1$ and $n = rs$ for some integers $r$ and $s$ with $1 < r < n$ and $1 < s < n$. Symbolically, for each integer $n$ with $n > 1$:
+>
 > - $n$ is composite $\iff$ there exist positive integers $r$ and $s$ with $n = rs$, $1 < r < n$, and $1 < s < n$
 
 **Example 4.1.2 (Prime and Composite Numbers).**
@@ -420,9 +426,11 @@ Sums, differences, and products of integers are integers, but most quotients of 
 
 ### 3.1 Rational and Irrational Numbers
 
-> **Definition:** A real number $r$ is **rational** if, and only if, $r$ can be expressed as a quotient of two integers with a nonzero denominator. A real number that is not rational is **irrational**. Symbolically, for a real number $r$:
+> **Definition:** A real number $r$ is **rational** if, and only if, $r$ can be expressed as a quotient of two integers with a nonzero denominator. Symbolically, for a real number $r$:
 >
 > - $r$ is rational $\iff$ there exist integers $a$ and $b$ with $r = a/b$ and $b \ne 0$
+
+> **Definition:** A real number that is not rational is **irrational**.
 
 The word rational contains the word ratio, and a rational number is one that can be written as a ratio of integers.
 
@@ -634,9 +642,9 @@ For example, applying this process to $n = 360$ gives the following. The factori
 
 ```mermaid
 graph LR
-    N["n = 360<br>not prime"] -->|"360 = 20 × 18"| R0["r₀ = 20<br>not prime"]
-    R0 -->|"20 = 4 × 5"| R1["r₁ = 4<br>not prime"]
-    R1 -->|"4 = 2 × 2"| R2["r₂ = 2<br>prime"]
+    N["n = 360<br>not prime"] -->|"360 = 20 × 18"| R0["r0 = 20<br>not prime"]
+    R0 -->|"20 = 4 × 5"| R1["r1 = 4<br>not prime"]
+    R1 -->|"4 = 2 × 2"| R2["r2 = 2<br>prime"]
 ```
 
 *Figure 1. Repeatedly splitting factors of n = 360 until reaching the prime factor 2*
@@ -741,7 +749,7 @@ If $n$ is positive, the theorem can be seen on the number line as follows. Step 
 
 ### 5.2 div and mod
 
-> **Definition:** Given an integer $n$ and a positive integer $d$, **$n$ div $d$** is the integer quotient obtained when $n$ is divided by $d$, and **$n$ mod $d$** is the nonnegative integer remainder obtained when $n$ is divided by $d$. Symbolically, if $n$ and $d$ are integers and $d > 0$:
+> **Definition:** Given an integer $n$ and a positive integer $d$, **$n$ div $d$** is the integer quotient obtained when $n$ is divided by $d$, and $n$ mod $d$ is the nonnegative integer remainder obtained when $n$ is divided by $d$. Symbolically, if $n$ and $d$ are integers and $d > 0$:
 >
 > - $n \text{ div } d = q$ and $n \text{ mod } d = r$ $\iff$ $n = dq + r$ (where $q$ and $r$ are integers and $`0 \le r < d`$)
 
@@ -823,9 +831,9 @@ In general, suppose that at some stage of a proof one knows that $A_1$ or $A_2$ 
 
 ```mermaid
 flowchart TD
-    H["A₁ or A₂ or … or Aₙ is true"] --> C1["Case 1: assume A₁"]
-    H --> C2["Case 2: assume A₂"]
-    H --> CN["Case n: assume Aₙ"]
+    H["A_1 or A_2 or … or A_n is true"] --> C1["Case 1: assume A_1"]
+    H --> C2["Case 2: assume A_2"]
+    H --> CN["Case n: assume A_n"]
     C1 -->|"deduce"| C["Conclusion C"]
     C2 -->|"deduce"| C
     CN -->|"deduce"| C

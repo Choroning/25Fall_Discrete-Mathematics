@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -99,7 +99,7 @@ Searching for such a route by hand, one keeps getting stuck at a vertex with no 
 
 The basic graph terminology used in this chapter is collected here from Chapter 1.
 
-> **Definition:** A **graph** $G$ consists of a nonempty finite set $V(G)$ and a finite set $E(G)$. The elements of $V(G)$ are called **vertices** and the elements of $E(G)$ are called **edges**; each edge is associated with a set of one or two vertices called its **endpoints**. The correspondence that sends each edge to its set of endpoints is called the **edge-endpoint function**.
+> **Definition:** A **graph** $G$ consists of a nonempty finite set $V(G)$ and a finite set $E(G)$. The elements of $V(G)$ are called vertices and the elements of $E(G)$ are called edges; each edge is associated with a set of one or two vertices called its endpoints. The correspondence that sends each edge to its set of endpoints is called the edge-endpoint function.
 
 - An edge with just one endpoint is called a **loop**, and two or more distinct edges with the same set of endpoints are called **parallel edges**.
 - Two vertices connected by an edge are **adjacent**. An edge is **incident on** each of its endpoints, and two edges incident on the same endpoint are also called adjacent. A vertex on which no edge is incident is an **isolated vertex**.
@@ -108,7 +108,9 @@ The basic graph terminology used in this chapter is collected here from Chapter 
 
 This chapter also uses the following two kinds of graphs frequently.
 
-> **Definition:** A graph with no loops and no parallel edges is a **simple graph**. In a simple graph there is at most one edge with endpoints $u$ and $v$, so that edge is denoted $\lbrace u, v\rbrace$. The **complete graph** $K_n$ is the simple graph with $n$ vertices in which each pair of distinct vertices is joined by exactly one edge.
+> **Definition:** A graph with no loops and no parallel edges is a **simple graph**. In a simple graph there is at most one edge with endpoints $u$ and $v$, so that edge is denoted $\lbrace u, v\rbrace$.
+
+> **Definition:** The **complete graph** $K_n$ is the simple graph with $n$ vertices in which each pair of distinct vertices is joined by exactly one edge.
 
 The edges of $K_n$ correspond to the ways of choosing two distinct vertices, so $K_n$ has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges. The symbol $\binom{n}{2}$, read n choose 2, is the number of subsets of size 2 of a set with $n$ elements (Chapter 9, Section 5). If the sum of the degrees of all the vertices of a graph is called its **total degree** and $\lvert E(G)\rvert$ denotes the number of edges, then the following holds.
 
@@ -122,13 +124,19 @@ The reason is that each edge adds 1 to the degree of each of its two endpoints, 
 
 Travel in a graph consists of repeatedly moving from a vertex to an adjacent vertex along an edge. Different names are given to a journey according to whether it reuses an edge, whether it revisits a vertex, and whether it returns to the starting vertex.
 
-> **Definition:** **Walks, trails, paths, and circuits.** Let $G$ be a graph, and let $v$ and $w$ be vertices of $G$.
-> - A **walk** from $v$ to $w$ is a finite alternating sequence of vertices and edges of $G$, $v_0 e_1 v_1 e_2 \cdots v_{n-1} e_n v_n$, where $v_0 = v$, $v_n = w$, and for each $i = 1, 2, \ldots, n$, $v_{i-1}$ and $v_i$ are the endpoints of $e_i$. The sequence consisting of the single vertex $v$ is the **trivial walk** from $v$ to $v$.
-> - A **trail** from $v$ to $w$ is a walk from $v$ to $w$ that does not contain a repeated edge.
-> - A **path** from $v$ to $w$ is a trail that does not contain a repeated vertex.
-> - A **closed walk** is a walk that starts and ends at the same vertex.
-> - A **circuit** is a closed walk that contains at least one edge and does not contain a repeated edge.
-> - A **simple circuit** is a circuit that does not have any repeated vertex except the first and last.
+Let $G$ be a graph, and let $v$ and $w$ be vertices of $G$.
+
+> **Definition:** A **walk** from $v$ to $w$ is a finite alternating sequence of vertices and edges of $G$, $v_0 e_1 v_1 e_2 \cdots v_{n-1} e_n v_n$, where $v_0 = v$, $v_n = w$, and for each $i = 1, 2, \ldots, n$, $v_{i-1}$ and $v_i$ are the endpoints of $e_i$. The sequence consisting of the single vertex $v$ is the trivial walk from $v$ to $v$.
+
+> **Definition:** A **trail** from $v$ to $w$ is a walk from $v$ to $w$ that does not contain a repeated edge.
+
+> **Definition:** A **path** from $v$ to $w$ is a trail that does not contain a repeated vertex.
+
+> **Definition:** A **closed walk** is a walk that starts and ends at the same vertex.
+
+> **Definition:** A **circuit** is a closed walk that contains at least one edge and does not contain a repeated edge.
+
+> **Definition:** A **simple circuit** is a circuit that does not have any repeated vertex except the first and last.
 
 The number of edges in a walk, with a repeated edge counted each time it occurs, is called the **length** of the walk. For example, $v_0 e_1 v_1 e_2 v_2$ has length 2 and the trivial walk has length 0. The differences among the six kinds of travel are summarized in the following table.
 
@@ -199,7 +207,7 @@ Hence $G$ has $3 + 4 + 3 + 1 = 11$ subgraphs, all drawn in Figure 5.
 
 Intuitively, a graph is connected if one can travel along edges from any vertex to any other vertex. The formal definition is stated in terms of walks.
 
-> **Definition:** Let $G$ be a graph. Two vertices $v$ and $w$ of $G$ are **connected** if, and only if, there is a walk from $v$ to $w$. The graph $G$ is a **connected graph** if, and only if, for any two vertices $v, w$ of $G$ there is a walk from $v$ to $w$. That is, $G$ is connected exactly when, for all vertices $v, w \in V(G)$, there exists a walk from $v$ to $w$.
+> **Definition:** Let $G$ be a graph. Two vertices $v$ and $w$ of $G$ are connected if, and only if, there is a walk from $v$ to $w$. The graph $G$ is a **connected graph** if, and only if, for any two vertices $v, w$ of $G$ there is a walk from $v$ to $w$. That is, $G$ is connected exactly when, for all vertices $v, w \in V(G)$, there exists a walk from $v$ to $w$.
 
 Negating this definition, $G$ is not connected if, and only if, there exist two vertices of $G$ that are not connected by any walk.
 
@@ -426,7 +434,7 @@ How can a graph be represented inside a computer? Everything that determines a g
 
 Matrices are two-dimensional analogues of sequences and are also called two-dimensional arrays.
 
-> **Definition:** An $m \times n$ **matrix** $\mathbf{A}$ over a set $S$ is a rectangular array of elements of $S$ arranged into $m$ **rows** and $n$ **columns**, written $\mathbf{A} = (a_{ij})$. The element $a_{ij}$ in row $i$ and column $j$ is called the $(i, j)$ **entry** of $\mathbf{A}$, and a matrix with $m$ rows and $n$ columns is said to have **size** $m \times n$.
+> **Definition:** An $m \times n$ **matrix** $\mathbf{A}$ over a set $S$ is a rectangular array of elements of $S$ arranged into $m$ rows and $n$ columns, written $\mathbf{A} = (a_{ij})$. The element $a_{ij}$ in row $i$ and column $j$ is called the $(i, j)$ entry of $\mathbf{A}$, and a matrix with $m$ rows and $n$ columns is said to have size $m \times n$.
 
 ```math
 \mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1j} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2j} & \cdots & a_{2n} \\ \vdots & \vdots & & \vdots & & \vdots \\ a_{i1} & a_{i2} & \cdots & a_{ij} & \cdots & a_{in} \\ \vdots & \vdots & & \vdots & & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mj} & \cdots & a_{mn} \end{bmatrix}
@@ -544,7 +552,7 @@ This matrix consists of square blocks of different sizes ($3 \times 3$, $2 \time
 
 Matrix multiplication is an operation used in many contexts, including counting walks in graphs. Here only matrices with real entries are considered. The product of two matrices is built from scalar products of rows and columns.
 
-> **Definition:** Suppose the entries of matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers and the number $n$ of elements in the $`i`$th row of $\mathbf{A}$ equals the number of elements in the $`j`$th column of $\mathbf{B}$. The **scalar product** or **dot product** of the $`i`$th row of $\mathbf{A}$ and the $`j`$th column of $\mathbf{B}$ is the following real number.
+> **Definition:** Suppose the entries of matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers and the number $n$ of elements in the $`i`$th row of $\mathbf{A}$ equals the number of elements in the $`j`$th column of $\mathbf{B}$. The **scalar product** or dot product of the $`i`$th row of $\mathbf{A}$ and the $`j`$th column of $\mathbf{B}$ is the following real number.
 
 ```math
 \begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix} \begin{bmatrix} b_{1j} \\ b_{2j} \\ \vdots \\ b_{nj} \end{bmatrix} = a_{i1} b_{1j} + a_{i2} b_{2j} + \cdots + a_{in} b_{nj}
@@ -702,7 +710,7 @@ The graph $G'$ on the right of Figure 23 is a different graph from $G$. For inst
 
 For example, in $G$ the endpoints of $e_2$ are $v_2, v_3$, which correspond to $v_3, v_5$, and the edge $e_3$ of $G'$ corresponding to $e_2$ has exactly the endpoints $v_3, v_5$. Both correspondences are one-to-one and onto, that is, one-to-one correspondences. Graphs that differ only in the names of their vertices and edges are said to be isomorphic. The word isomorphism is built from Greek roots meaning "same form."
 
-> **Definition:** Let $G$ and $G'$ be graphs with vertex sets $V(G), V(G')$ and edge sets $E(G), E(G')$, respectively. $G$ is **isomorphic** to $G'$ if, and only if, there exist one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that the following holds for every $v \in V(G)$ and $e \in E(G)$. In this case $g$ and $h$ are said to preserve the edge-endpoint functions, and the pair of correspondences is called an **isomorphism**.
+> **Definition:** Let $G$ and $G'$ be graphs with vertex sets $V(G), V(G')$ and edge sets $E(G), E(G')$, respectively. $G$ is **isomorphic** to $G'$ if, and only if, there exist one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$ such that the following holds for every $v \in V(G)$ and $e \in E(G)$. In this case $g$ and $h$ are said to preserve the edge-endpoint functions, and the pair of correspondences is called an isomorphism.
 
 ```math
 v \text{ is an endpoint of } e \iff g(v) \text{ is an endpoint of } h(e) \qquad (10.3.1)
@@ -837,7 +845,11 @@ In mathematics a tree is a connected graph that contains no circuits. Like a bot
 
 ### 4.1 Trees and Forests
 
-> **Definition:** A graph is **circuit-free** if, and only if, it has no circuits. A graph is a **tree** if, and only if, it is circuit-free and connected, and a graph that consists of a single vertex is a **trivial tree**. A graph is a **forest** if, and only if, it is circuit-free and not connected.
+> **Definition:** A graph is **circuit-free** if, and only if, it has no circuits.
+
+> **Definition:** A graph is a **tree** if, and only if, it is circuit-free and connected, and a graph that consists of a single vertex is a trivial tree.
+
+> **Definition:** A graph is a **forest** if, and only if, it is circuit-free and not connected.
 
 ![Figure 28. Graphs that are trees (top row) and graphs that are not (bottom row)](../../images/Ch10_Trees-and-Non-Trees.png)
 
@@ -953,7 +965,9 @@ Each step is possible for the following reasons. In Step 1, if no edge were inci
 
 In fact, any tree with more than one vertex has at least two vertices of degree 1. Let $u$ be the vertex of degree 1 found by the algorithm, move along the only edge incident on $u$ to its neighbor, and continue searching, always leaving along an edge different from the one used to enter; since the tree has no circuit, the search never returns to $u$ and stops at a vertex of degree 1 different from $u$.
 
-> **Definition:** Let $T$ be a tree. If $T$ has at least two vertices, then a vertex of degree 1 in $T$ is called a **leaf** (or a **terminal vertex**), and a vertex of degree greater than 1 is called an **internal vertex** (or a **branch vertex**). The unique vertex in a trivial tree is also called a leaf.
+> **Definition:** Let $T$ be a tree. If $T$ has at least two vertices, then a vertex of degree 1 in $T$ is called a **leaf** (or a terminal vertex). The unique vertex in a trivial tree is also called a leaf.
+
+> **Definition:** Let $T$ be a tree with at least two vertices. A vertex of degree greater than 1 in $T$ is called an **internal vertex** (or a branch vertex).
 
 ![Figure 33. A tree whose leaves and internal vertices are to be found](../../images/Ch10_Leaves-Internal-Vertices.png)
 
@@ -1056,11 +1070,14 @@ A tree growing outdoors has a root, and a family tree listing all the descendant
 
 ### 5.1 Terminology of Rooted Trees
 
-> **Definition:** A **rooted tree** is a tree in which one vertex is distinguished from the others and is called the **root**.
-> - The **level** of a vertex is the number of edges along the unique path between it and the root.
-> - The **height** of a rooted tree is the maximum level of any vertex of the tree.
-> - Given the root or any internal vertex $v$, the **children** of $v$ are all those vertices that are adjacent to $v$ and are one level farther away from the root than $v$. If $w$ is a child of $v$, then $v$ is the **parent** of $w$, and two distinct vertices that are both children of the same parent are **siblings**.
-> - Given two distinct vertices $v$ and $w$, if $v$ lies on the unique path between $w$ and the root, then $v$ is an **ancestor** of $w$ and $w$ is a **descendant** of $v$.
+> **Definition:** A **rooted tree** is a tree in which one vertex is distinguished from the others and is called the root.
+
+Rooted trees use the following terms.
+
+- The **level** of a vertex is the number of edges along the unique path between it and the root.
+- The **height** of a rooted tree is the maximum level of any vertex of the tree.
+- Given the root or any internal vertex $v$, the **children** of $v$ are all those vertices that are adjacent to $v$ and are one level farther away from the root than $v$. If $w$ is a child of $v$, then $v$ is the **parent** of $w$, and two distinct vertices that are both children of the same parent are **siblings**.
+- Given two distinct vertices $v$ and $w$, if $v$ lies on the unique path between $w$ and the root, then $v$ is an **ancestor** of $w$ and $w$ is a **descendant** of $v$.
 
 ![Figure 37. A rooted tree with its levels marked by dashed lines](../../images/Ch10_Rooted-Tree-Terms.png)
 
@@ -1105,9 +1122,11 @@ graph TD
 
 A rooted tree in which no vertex has more than two children, and in which each child is marked as either a left or a right child, is a binary tree.
 
-> **Definition:** A **binary tree** is a rooted tree in which every parent has at most two children, each child is designated either a **left child** or a **right child** (but not both), and every parent has at most one left child and at most one right child. A **full binary tree** is a binary tree in which each parent has exactly two children.
+> **Definition:** A **binary tree** is a rooted tree in which every parent has at most two children, each child is designated either a left child or a right child (but not both), and every parent has at most one left child and at most one right child.
 
-> **Definition:** Given any parent $v$ in a binary tree $T$, if $v$ has a left child, then the **left subtree** of $v$ is the binary tree whose root is the left child of $v$, whose vertices are the left child of $v$ and all its descendants, and whose edges are all those edges of $T$ that connect these vertices. The **right subtree** is defined analogously.
+> **Definition:** A **full binary tree** is a binary tree in which each parent has exactly two children.
+
+> **Definition:** The **left subtree** of a parent $v$ in a binary tree $T$ that has a left child is the binary tree whose root is the left child of $v$, whose vertices are the left child of $v$ and all its descendants, and whose edges are all those edges of $T$ that connect these vertices. The right subtree is defined analogously.
 
 ![Figure 39. A binary tree showing left children, right children, and subtrees](../../images/Ch10_Binary-Tree-Terms.png)
 
@@ -1262,7 +1281,9 @@ Part (2) follows immediately from Theorem 10.4.2: if $G$ has $n$ vertices, every
 
 Suppose the distance of each route is written on it, as in Figure 43, and the airline wants to serve all the cities with a route system of minimum total distance. Such a system is again a tree: if it contained a circuit, removing one route of the circuit would still allow travel between all the cities (Lemma 10.4.3) and would reduce the total distance.
 
-> **Definition:** A **weighted graph** is a graph in which each edge has an associated positive real number **weight**. The sum of the weights of all the edges is the **total weight** of the graph. A **minimum spanning tree** for a connected, weighted graph is a spanning tree that has the least possible total weight compared with all other spanning trees for the graph. If $G$ is a weighted graph and $e$ is an edge of $G$, then $w(e)$ denotes the weight of $e$ and $w(G)$ denotes the total weight of $G$.
+> **Definition:** A **weighted graph** is a graph in which each edge has an associated positive real number weight. The sum of the weights of all the edges is the total weight of the graph. If $G$ is a weighted graph and $e$ is an edge of $G$, then $w(e)$ denotes the weight of $e$ and $w(G)$ denotes the total weight of $G$.
+
+> **Definition:** A **minimum spanning tree** for a connected, weighted graph is a spanning tree that has the least possible total weight compared with all other spanning trees for the graph.
 
 A minimum spanning tree can always be found in principle: enumerate every spanning tree, add up the weights of each, and keep one of least total. There are finitely many spanning trees, so a smallest total weight exists. This method is inefficient, however, because the number of spanning trees is very large. For instance, a complete graph with $n$ vertices has $n^{n-2}$ spanning trees. Even $K_4$ has $4^2 = 16$, and for a graph with about 100 vertices, checking every spanning tree would take even the fastest computers longer than the universe is estimated to have left. In 1956 and 1957, respectively, Joseph B. Kruskal and Robert C. Prim published far more efficient methods for building minimum spanning trees, and both can be implemented so that they finish in relatively short times even on large graphs.
 

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 
 This is Assignment 11 of Discrete Mathematics and Practice, given in Week 14. It consists of nine exercises chosen from Sections 10.1 (Trails, Paths, and Circuits), 10.2 (Matrix Representations of Graphs), 10.3 (Isomorphisms of Graphs), and 10.4 (Trees: Examples and Basic Properties) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
 
@@ -111,25 +111,25 @@ Find all leaves (or terminal vertices) and all internal (or branch) vertices for
 
 ```mermaid
 graph TD
-    v2((v₂)) --- v1((v₁))
-    v2 --- v3((v₃))
-    v2 --- v4((v₄))
-    v4 --- v5((v₅))
-    v3 --- v6((v₆))
-    v6 --- v7((v₇))
+    v2((v2)) --- v1((v1))
+    v2 --- v3((v3))
+    v2 --- v4((v4))
+    v4 --- v5((v5))
+    v3 --- v6((v6))
+    v6 --- v7((v7))
 ```
 
 *Figure 6. Tree (a)*
 
 ```mermaid
 graph TD
-    v4((v₄)) --- v3((v₃))
-    v3 --- v1((v₁))
-    v4 --- v2((v₂))
-    v4 --- v5((v₅))
-    v4 --- v7((v₇))
-    v7 --- v6((v₆))
-    v7 --- v8((v₈))
+    v4((v4)) --- v3((v3))
+    v3 --- v1((v1))
+    v4 --- v2((v2))
+    v4 --- v5((v5))
+    v4 --- v7((v7))
+    v7 --- v6((v6))
+    v7 --- v8((v8))
 ```
 
 *Figure 7. Tree (b)*

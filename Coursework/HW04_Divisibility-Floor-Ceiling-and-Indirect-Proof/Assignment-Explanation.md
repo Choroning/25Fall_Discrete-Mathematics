@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -121,7 +121,7 @@ In the earlier example $r = 2$ and $s = 3$, so $t = 2 \cdot 2 - 3 \cdot 3 = -5$,
 
 **Concept used.** The definitions of decimal representation and of divisibility.
 
-> **Definition:** The **decimal representation** of a nonnegative integer $n$ is an expression of the form $d_k d_{k-1} \cdots d_1 d_0$. Here $k$ is a nonnegative integer, the **decimal digits** $d_0, d_1, \ldots, d_k$ are integers from 0 to 9 inclusive, $d_k \ne 0$ unless $n = 0$ and $k = 0$, and $n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_1 \cdot 10 + d_0$.
+> **Definition:** The **decimal representation** of a nonnegative integer $n$ is an expression of the form $d_k d_{k-1} \cdots d_1 d_0$. Here $k$ is a nonnegative integer, the decimal digits $d_0, d_1, \ldots, d_k$ are integers from 0 to 9 inclusive, $d_k \ne 0$ unless $n = 0$ and $k = 0$, and $n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_1 \cdot 10 + d_0$.
 
 For example, $2{,}530 = 2 \cdot 10^3 + 5 \cdot 10^2 + 3 \cdot 10 + 0$. The equation in the hint is obtained by factoring 10 out of all terms except the last term $d_0$.
 

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 9
 
@@ -104,7 +104,9 @@ Two heads occur in 1 of the four outcomes and no heads also in 1, but one head o
 
 To generalize this analysis, some terms are defined. A process is called **random** if, whenever it is carried out, it is certain to produce one outcome from a known set of possible outcomes, yet which outcome will appear cannot be predicted with certainty. When an ordinary person tosses an ordinary coin and lets it fall to the ground, it is certain that the coin lands heads or tails (the set of outcomes is {heads, tails}), but it is not known which of the two will occur. A skilled magician can toss a coin so that it looks random while actually controlling the result, and a physicist able to measure all the forces on the coin may predict the result, so randomness is a notion that includes the conditions under which the process is carried out. Drawing winning lottery numbers, selecting respondents for opinion polls, and assigning subjects to treatment and control groups in medical experiments are further examples of random processes.
 
-> **Definition:** A **sample space** is the set of all possible **outcomes** of a random process or experiment. An **event** is a subset of a sample space.
+> **Definition:** A **sample space** is the set of all possible outcomes of a random process or experiment.
+
+> **Definition:** An **event** is a subset of a sample space.
 
 ### 1.2 The Equally Likely Probability Formula
 
@@ -821,7 +823,7 @@ Theorem 9.4.2 applies in particular when $X = Y$. A function from a finite set t
 
 Suppose 5 members of a group of 12 are to be chosen to work as a team on a special project. How many distinct 5-person teams can be selected? This question is a special case of the following general question: given a set $S$ with $n$ elements, how many subsets of size $r$ can be chosen from $S$? That number equals the number of subsets of size $r$ that $S$ has.
 
-> **Definition:** Let $n$ and $r$ be nonnegative integers with $r \le n$. An **r-combination** of a set of $n$ elements is a subset of $r$ of the $n$ elements. The symbol $\binom{n}{r}$, read **n choose r**, denotes the number of subsets of size $r$ (r-combinations) that can be formed from a set of $n$ elements.
+> **Definition:** Let $n$ and $r$ be nonnegative integers with $r \le n$. An **r-combination** of a set of $n$ elements is a subset of $r$ of the $n$ elements. The symbol $\binom{n}{r}$, read n choose r, denotes the number of subsets of size $r$ (r-combinations) that can be formed from a set of $n$ elements.
 
 Calculators and other references sometimes use symbols such as $C(n, r)$, $`{}_nC_r`$, $C_{n,r}$, or ${}^nC_r$ instead of $\binom{n}{r}$. A formula for computing $\binom{n}{r}$ is derived below, but it is best to think of the symbol first of all as a way to count the subsets of size $r$ of a set of $n$ elements.
 
@@ -948,19 +950,19 @@ By the addition rule there are $175 + 350 + 210 + 35 + 1 = 771$ teams, the same 
 
 ```mermaid
 graph LR
-    subgraph K4["K₄: 6 edges"]
-        a1(("v₁")) --- a2(("v₂"))
-        a1 --- a3(("v₃"))
-        a1 --- a4(("v₄"))
+    subgraph K4["K4: 6 edges"]
+        a1(("v1")) --- a2(("v2"))
+        a1 --- a3(("v3"))
+        a1 --- a4(("v4"))
         a2 --- a3
         a2 --- a4
         a3 --- a4
     end
-    subgraph K23["K₂,₃: 6 edges"]
-        b1(("v₁")) --- w1(("w₁"))
-        b1 --- w2(("w₂"))
-        b1 --- w3(("w₃"))
-        b2(("v₂")) --- w1
+    subgraph K23["K2,3: 6 edges"]
+        b1(("v1")) --- w1(("w1"))
+        b1 --- w2(("w2"))
+        b1 --- w3(("w3"))
+        b2(("v2")) --- w1
         b2 --- w2
         b2 --- w3
     end
@@ -1050,7 +1052,7 @@ This answer is much larger than the correct answer 771. Call the men $M_1, \ldot
 
 As shown in Section 5, there are $\binom{n}{r}$ ways to choose $r$ distinct elements without regard to order from a set of $n$ elements. For example, there are $\binom{4}{3} = 4$ ways to choose three elements from a set of four: {1, 2, 3}, {1, 2, 4}, {1, 3, 4}, {2, 3, 4}. This section asks how many ways there are to choose $r$ elements without regard to order from a set of $n$ elements when repetition is allowed. It helps to think of the $n$ elements as **categories** of objects from which several selections may be made. If the categories are 1, 2, 3, 4 and three are chosen, one can choose two from category 3 and one from category 1, all three from category 2, or one each from categories 1, 2, and 4. These choices are denoted $[3, 3, 1]$, $[2, 2, 2]$, and $[1, 2, 4]$, respectively. Because order does not matter, for example, $[3, 3, 1] = [3, 1, 3] = [1, 3, 3]$.
 
-> **Definition:** An **r-combination with repetition allowed**, or **multiset** of size $r$, chosen from a set $X$ of $n$ elements is an unordered selection of $r$ elements taken from $X$ with repetition allowed. If $X = \lbrace x_1, x_2, \ldots, x_n \rbrace$, it is written $[x_{i_1}, x_{i_2}, \ldots, x_{i_r}]$, where each $x_{i_j}$ is in $X$ and some of them may equal each other.
+> **Definition:** An **r-combination with repetition allowed**, or multiset of size $r$, chosen from a set $X$ of $n$ elements is an unordered selection of $r$ elements taken from $X$ with repetition allowed. If $X = \lbrace x_1, x_2, \ldots, x_n \rbrace$, it is written $[x_{i_1}, x_{i_2}, \ldots, x_{i_r}]$, where each $x_{i_j}$ is in $X$ and some of them may equal each other.
 
 **Example 9.6.1 (Complete Enumeration of 3-Combinations with Repetition Allowed).** List all 3-combinations with repetition allowed (multisets of size 3) that can be selected from {1, 2, 3, 4}. Because the order of selection does not matter, the elements of each selection may be written in increasing order, and writing them in increasing order ensures that no combination is overlooked.
 
@@ -1575,12 +1577,12 @@ The following tree diagram makes these computations convenient. Each branch carr
 
 ```mermaid
 graph LR
-    S(("Start")) ---|"5/12"| B1["B₁"]
-    S ---|"7/12"| N1["B₁ᶜ"]
-    B1 ---|"4/11"| L1["B₁ ∩ B₂: 20/132"]
-    B1 ---|"7/11"| L2["B₁ ∩ B₂ᶜ: 35/132"]
-    N1 ---|"5/11"| L3["B₁ᶜ ∩ B₂: 35/132"]
-    N1 ---|"6/11"| L4["B₁ᶜ ∩ B₂ᶜ: 42/132"]
+    S(("Start")) ---|"5/12"| B1["B1"]
+    S ---|"7/12"| N1["B1ᶜ"]
+    B1 ---|"4/11"| L1["B1 ∩ B2: 20/132"]
+    B1 ---|"7/11"| L2["B1 ∩ B2ᶜ: 35/132"]
+    N1 ---|"5/11"| L3["B1ᶜ ∩ B2: 35/132"]
+    N1 ---|"6/11"| L4["B1ᶜ ∩ B2ᶜ: 42/132"]
 ```
 
 *Figure 14. Tree diagram of conditional probabilities for drawing two balls from an urn without replacement*
@@ -1595,8 +1597,8 @@ The first urn holds 3 blue and 4 gray balls, and the second urn holds 5 blue and
 
 ```mermaid
 graph LR
-    S(("Start")) ---|"1/2"| U1["first urn B₁"]
-    S ---|"1/2"| U2["second urn B₂"]
+    S(("Start")) ---|"1/2"| U1["first urn B1"]
+    S ---|"1/2"| U2["second urn B2"]
     U1 ---|"3/7"| L1["blue: 3/14"]
     U1 ---|"4/7"| L2["gray: 4/14"]
     U2 ---|"5/8"| L3["blue: 5/16"]
@@ -1683,7 +1685,7 @@ To obtain a more convenient form for the definition of independence, observe the
 
 So defining independence by the following product formula eliminates the requirement that the probabilities be nonzero.
 
-> **Definition:** If $A$ and $B$ are events in a sample space $S$, then $A$ and $B$ are **independent** if, and only if, $P(A \cap B) = P(A) \cdot P(B)$. Two events that are not independent are called **dependent**.
+> **Definition:** If $A$ and $B$ are events in a sample space $S$, then $A$ and $B$ are **independent** if, and only if, $P(A \cap B) = P(A) \cdot P(B)$. Two events that are not independent are called dependent.
 
 **Example 9.9.4 (Disjoint Events and Independence).** Let $A$ and $B$ be events in a sample space $S$ with $A \cap B = \emptyset$, $P(A) \ne 0$, and $P(B) \ne 0$. Show that $P(A \cap B) \ne P(A) \cdot P(B)$. Because $A \cap B = \emptyset$, $P(A \cap B) = 0$ by axiom 2. But $P(A) \cdot P(B) \ne 0$ because neither $P(A)$ nor $P(B)$ is zero. Hence $P(A \cap B) \ne P(A) \cdot P(B)$.
 
@@ -1723,7 +1725,7 @@ What are the probabilities of the various numbers of heads when a loaded coin is
 
 Conversely, there are three events that satisfy $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$ without being pairwise independent. For example, in the sample space {1, 2, ..., 8} of eight equally likely outcomes, let $A$ = {1, 2, 3, 4}, $B$ = {1, 2, 3, 5}, and $C$ = {1, 6, 7, 8}; each has probability $\frac{1}{2}$ and $A \cap B \cap C$ = {1}, so $P(A \cap B \cap C) = \frac{1}{8} = \left(\frac{1}{2}\right)^3$, but $A \cap B$ = {1, 2, 3}, so $P(A \cap B) = \frac{3}{8} \ne \frac{1}{4}$. Because of such situations, all four conditions must be included in the definition of independence for three events.
 
-> **Definition:** Let $A$, $B$, and $C$ be events in a sample space $S$. $A$, $B$, and $C$ are **pairwise independent** if, and only if, they satisfy conditions 1-3 below, and they are **mutually independent** if, and only if, they satisfy all four conditions.
+> **Definition:** **Independence of three events.** Let $A$, $B$, and $C$ be events in a sample space $S$. $A$, $B$, and $C$ are pairwise independent if, and only if, they satisfy conditions 1-3 below, and they are mutually independent if, and only if, they satisfy all four conditions.
 > 1. $P(A \cap B) = P(A) \cdot P(B)$
 > 2. $P(A \cap C) = P(A) \cdot P(C)$
 > 3. $P(B \cap C) = P(B) \cdot P(C)$

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 12
 
@@ -74,7 +74,7 @@ To determine the truth value of a sentence, then, two things must be known: the 
 
 Before defining structures, first fix the symbols that sentences may use.
 
-> **Definition:** **Vocabulary.** A set of relation symbols, function symbols, and constant symbols to be used in sentences, in which each relation symbol and function symbol has a fixed number of arguments called its **arity**. It is also called a signature.
+> **Definition:** **Vocabulary.** A set of relation symbols, function symbols, and constant symbols to be used in sentences, in which each relation symbol and function symbol has a fixed number of arguments called its arity. It is also called a signature.
 
 For example, the vocabulary for talking about graphs is $\lbrace E \rbrace$, consisting of a single relation symbol $E$ of arity 2, and the vocabulary for talking about orders is $\lbrace < \rbrace$. To talk about addition of integers, the vocabulary $\lbrace +, 0 \rbrace$ with a function symbol $+$ of arity 2 and a constant symbol $0$ is used. The vocabulary of the Tarski world consists of relation symbols of arity 1 such as $\text{Triangle}$, $\text{Square}$, $\text{Circle}$, $\text{Blue}$, $\text{Gray}$, $\text{Black}$ and relation symbols of arity 2 such as $\text{RightOf}$. A vocabulary that consists only of relation symbols, with no function or constant symbols, is called a **relational vocabulary**.
 
@@ -97,7 +97,7 @@ A formula with free variables, like the predicates of Chapter 3, gets a truth va
 
 ### 1.3 Definition of a Structure
 
-> **Definition:** **Structure.** A structure $\mathcal{A}$ for a vocabulary $\tau$ consists of a nonempty set $A$ and the following interpretation of each symbol of $\tau$. To a relation symbol $R$ of arity $k$ it assigns a $k$-ary relation $R^{\mathcal{A}} \subseteq A^k$ on $A$, to a function symbol $f$ of arity $k$ it assigns a function $f^{\mathcal{A}}: A^k \to A$, and to a constant symbol $c$ it assigns an element $c^{\mathcal{A}} \in A$. The set $A$ is called the **domain** of the structure.
+> **Definition:** **Structure.** A structure $\mathcal{A}$ for a vocabulary $\tau$ consists of a nonempty set $A$ and the following interpretation of each symbol of $\tau$. To a relation symbol $R$ of arity $k$ it assigns a $k$-ary relation $R^{\mathcal{A}} \subseteq A^k$ on $A$, to a function symbol $f$ of arity $k$ it assigns a function $f^{\mathcal{A}}: A^k \to A$, and to a constant symbol $c$ it assigns an element $c^{\mathcal{A}} \in A$. The set $A$ is called the domain of the structure.
 
 A structure is usually written by listing the domain and the interpretations side by side, as follows.
 
@@ -233,7 +233,9 @@ That there is a one-to-one correspondence between the domains (same cardinality)
 
 ### 2.1 Finite Structures and Infinite Structures
 
-> **Definition:** **Finite structure.** A structure whose domain is a finite set. A structure whose domain is an infinite set is called an **infinite structure**.
+> **Definition:** **Finite structure.** A structure whose domain is a finite set.
+
+> **Definition:** **Infinite structure.** A structure whose domain is an infinite set.
 
 Most structures that mathematics has long studied, such as $(\mathbf{Z}; +, 0)$ or $(\mathbf{R}; <)$, are infinite structures. In contrast, most structures dealt with in computer science are finite structures. Graphs, databases, strings (Section 3.2), and arrangements of blocks in a Tarski world given as inputs to algorithms all have finite domains. Among infinite structures, those whose domains are countably infinite ($\mathbf{Z}$, $`\mathbf{Q}`$) are further distinguished from those whose domains are uncountable ($`\mathbf{R}`$) (Section 4 of Chapter 7).
 
@@ -413,7 +415,7 @@ $abba$ satisfies both sentences. The set of all strings satisfying the first sen
 
 A vending machine changes its state according to the total amount of money inserted, and dispenses a drink when the total reaches the price. What the vending machine remembers is not every coin inserted so far but only its current state. A finite-state automaton is the mathematical definition of such a machine, which has finitely many states and whose next state is determined by the current state and input alone. A computer with $n$ bits of memory also has at most $2^n$ states, so it can be described as a finite-state automaton with a very large number of states.
 
-> **Definition:** **Finite-state automaton.** A machine $A = (\Sigma, S, s_0, F, N)$ consisting of five things: (1) an input alphabet $\Sigma$, a finite set of input symbols; (2) a finite set $S$ of states; (3) an initial state $s_0 \in S$; (4) a set $F \subseteq S$ of accepting states; (5) a **next-state function** $N: S \times \Sigma \to S$ that assigns a next state to each ordered pair of a current state and a current input symbol.
+> **Definition:** **Finite-state automaton.** A machine $A = (\Sigma, S, s_0, F, N)$ consisting of five things: (1) an input alphabet $\Sigma$, a finite set of input symbols; (2) a finite set $S$ of states; (3) an initial state $s_0 \in S$; (4) a set $F \subseteq S$ of accepting states; (5) a next-state function $N: S \times \Sigma \to S$ that assigns a next state to each ordered pair of a current state and a current input symbol.
 
 $N(s, a) = t$ means "reading the symbol $a$ in state $s$ moves to state $t$." Because $N$ is a function, the next state is determined uniquely for each state and each symbol. In this sense the machine is also called a **deterministic** finite-state automaton.
 
@@ -426,8 +428,8 @@ A finite-state automaton is represented in two ways. A **transition diagram** is
 ```mermaid
 graph LR
     st([start]) --> se
-    se(((sₑ))) -->|0| se
-    se -->|1| so((sₒ))
+    se(((s_e))) -->|0| se
+    se -->|1| so((s_o))
     so -->|1| se
     so -->|0| so
 ```
@@ -465,11 +467,11 @@ The last state $s_o$ is not an accepting state, so $1011$ is not accepted. Indee
 
 ```mermaid
 graph LR
-    st([start]) --> t0((t₀))
+    st([start]) --> t0((t0))
     t0 -->|1| t0
-    t0 -->|0| t1((t₁))
+    t0 -->|0| t1((t1))
     t1 -->|0| t1
-    t1 -->|1| t2(((t₂)))
+    t1 -->|1| t2(((t2)))
     t2 -->|0| t1
     t2 -->|1| t0
 ```
@@ -500,10 +502,10 @@ If $v$ is the number represented by the string read so far, then after reading t
 ```mermaid
 graph LR
     st([start]) --> r0
-    r0(((r₀))) -->|0| r0
-    r0 -->|1| r1((r₁))
+    r0(((r0))) -->|0| r0
+    r0 -->|1| r1((r1))
     r1 -->|1| r0
-    r1 -->|0| r2((r₂))
+    r1 -->|0| r2((r2))
     r2 -->|0| r1
     r2 -->|1| r2
 ```
@@ -604,9 +606,9 @@ and since $w \in L$, $q_n$ is an accepting state. Hence $xy^i z \in L$ for every
 
 ```mermaid
 graph LR
-    q0((s₀)) -->|"x"| qs((qⱼ = qₖ))
+    q0((s_0)) -->|"x"| qs((q_j = q_k))
     qs -->|"y (loop)"| qs
-    qs -->|"z"| qn(((qₙ)))
+    qs -->|"z"| qn(((q_n)))
 ```
 
 *Figure 5. Proof of the pumping lemma: the part y between two occurrences of the same state can be repeated or removed and still reach an accepting state*

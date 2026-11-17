@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -161,7 +161,11 @@ $R \cap S$ is not a line or a curve but a finite set of two points. When graphin
 
 **Concepts used.** The three properties of Chapter 8, Section 2 and their negations are as follows. A counterexample showing that a property fails is an element satisfying the existential statement of the corresponding negation.
 
-> **Definition:** A relation $R$ on a set $A$ is **reflexive** if $`x \, R \, x`$ for every $x \in A$. It is **symmetric** if for all $x, y \in A$, $`x \, R \, y`$ implies $`y \, R \, x`$. It is **transitive** if for all $x, y, z \in A$, $`x \, R \, y`$ and $`y \, R \, z`$ imply $`x \, R \, z`$.
+> **Definition:** A relation $R$ on a set $A$ is **reflexive** if $`x \, R \, x`$ for every $x \in A$.
+
+> **Definition:** A relation $R$ on a set $A$ is **symmetric** if for all $x, y \in A$, $`x \, R \, y`$ implies $`y \, R \, x`$.
+
+> **Definition:** A relation $R$ on a set $A$ is **transitive** if for all $x, y, z \in A$, $`x \, R \, y`$ and $`y \, R \, z`$ imply $`x \, R \, z`$.
 
 | Property | Condition under which the property fails (form of a counterexample) |
 |:---|:---|
@@ -280,7 +284,9 @@ Find the classes $[0]$, $[1]$, $[2]$, $[3]$, then give the number of distinct eq
 
 **Concepts used.** The definitions and results of Chapter 8, Section 3 are used.
 
-> **Definition:** A relation that is reflexive, symmetric, and transitive is an **equivalence relation**. For an equivalence relation $R$ and $a \in A$, the **equivalence class** of $a$ is $`[a] = \lbrace x \in A \mid x \, R \, a \rbrace`$.
+> **Definition:** A relation that is reflexive, symmetric, and transitive is an **equivalence relation**.
+
+> **Definition:** For an equivalence relation $R$ on a set $A$ and $a \in A$, the **equivalence class** of $a$ is $`[a] = \lbrace x \in A \mid x \, R \, a \rbrace`$.
 
 By Lemma 8.3.2, if $`a \, R \, b`$ then $[a] = [b]$, and by Lemma 8.3.3, two equivalence classes are either equal or disjoint. By Theorem 8.3.4, the distinct equivalence classes form a partition of $A$. Hence, to find the distinct equivalence classes, compute the class of each element and then merge the classes that are equal.
 

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 2
 
@@ -115,7 +115,7 @@ q \\
 
 The definitions of formal logic were mostly chosen to match the intuitive logic of people who think and speak carefully; where they depart from it, the purpose is to remove ambiguity and to gain consistency. A mathematical theory defines new terms by means of earlier ones, and since this chain has to begin somewhere, a few terms stay undefined. In logic the undefined starting terms are **sentence**, **true**, and **false**.
 
-> **Definition:** A **statement** (or **proposition**) is a sentence that is true or false but not both.
+> **Definition:** A **statement** (or proposition) is a sentence that is true or false but not both.
 
 - "Two plus two equals four" is a statement because it is true, and "Two plus two equals five" is a statement because it is false. For the same reason $2 + 5 = 7$ is a true statement and $2 - 2 = 7$ is a false statement.
 - $x - 2 = 7$ is not a statement, because its truth cannot be decided until the value of $x$ is fixed. It becomes a statement once a particular value is given to $x$.
@@ -220,7 +220,7 @@ For instance, $2 \leq 2$ means "$`2 < 2`$ or $2 = 2$," and it is true because $2
 
 Truth values can also be assigned to more complicated expressions such as $\sim p \vee q$, $(p \vee q) \wedge \sim(p \wedge q)$, and $(p \wedge q) \vee r$.
 
-> **Definition:** A **statement form** (or **propositional form**) is an expression built from statement variables such as $p$, $q$, and $r$ with logical connectives such as $\sim$, $\wedge$, and $\vee$; replacing each statement variable by an actual statement turns it into a statement. The truth table of a statement form lists the truth value of the form for every possible assignment of truth values to its statement variables.
+> **Definition:** A **statement form** (or propositional form) is an expression built from statement variables such as $p$, $q$, and $r$ with logical connectives such as $\sim$, $\wedge$, and $\vee$; replacing each statement variable by an actual statement turns it into a statement. The truth table of a statement form lists the truth value of the form for every possible assignment of truth values to its statement variables.
 
 Truth values of a statement form are computed by the same rules used for algebraic expressions. For each combination of truth values, evaluate the expressions in the innermost parentheses first, then those in the next innermost parentheses, and so on outward. Statement forms correspond closely to the Boolean expressions of Section 4.
 
@@ -366,7 +366,9 @@ De Morgan's laws are often used in writing programs. For instance, to delete all
 
 ### 1.7 Tautologies and Contradictions
 
-> **Definition:** A **tautology** is a statement form that is true for every assignment of truth values to the statements substituted for its statement variables, and a statement whose form is a tautology is called a tautological statement. A **contradiction** is a statement form that is false for every such assignment, and a statement whose form is a contradiction is called a contradictory statement.
+> **Definition:** A **tautology** is a statement form that is true for every assignment of truth values to the statements substituted for its statement variables, and a statement whose form is a tautology is called a tautological statement.
+
+> **Definition:** A **contradiction** is a statement form that is false for every assignment of truth values to the statements substituted for its statement variables, and a statement whose form is a contradiction is called a contradictory statement.
 
 A tautological statement is true, and a contradictory statement is false, purely because of its logical structure; what the statement is about makes no difference. In this chapter a tautology is denoted by a bold $\mathbf{t}$ and a contradiction by a bold $\mathbf{c}$.
 
@@ -473,7 +475,7 @@ For statements $p$ and $q$, a sentence of the form "If $p$ then $q$" is denoted 
 
 To make $p \to q$ a statement, its truth values must be fixed just as they were for $\wedge$ and $\vee$, and the choice follows everyday usage. Imagine that a shop owner tells a job applicant, "If you show up for work Monday morning, then you will get the job." The owner can be accused of breaking the promise only if the applicant comes in on Monday morning and is not hired. The promise describes what happens when its condition (coming in on Monday morning) is met and is silent about the case in which the condition is not met, so in that case it cannot be called false, whether the applicant is hired or not. Hence a conditional is false in exactly one situation, a true hypothesis with a false conclusion, and since each row of a truth table must hold T or F, every other row holds T.
 
-> **Definition:** If $p$ and $q$ are statement variables, the **conditional statement** $p \to q$ is "If $p$ then $q$" or "$`p`$ implies $q$." It is false when $p$ is true and $q$ is false, and true in every other case. The statement $p$ is the hypothesis (or **antecedent**) of the conditional, and $q$ is its conclusion (or **consequent**).
+> **Definition:** If $p$ and $q$ are statement variables, the **conditional statement** $p \to q$ is "If $p$ then $q$" or "$`p`$ implies $q$." It is false when $p$ is true and $q$ is false, and true in every other case. The statement $p$ is the hypothesis (or antecedent) of the conditional, and $q$ is its conclusion (or consequent).
 
 | $p$ | $q$ | $p \to q$ |
 |:-:|:-:|:-:|
@@ -600,9 +602,9 @@ When solving a problem, the contrapositive is sometimes easier to work with than
 
 A conditional statement has two further variants, and neither is logically equivalent to it.
 
-> **Definition:** **Converse and inverse.** Suppose a conditional statement of the form "If $p$ then $q$" is given.
-> 1. The **converse** is "If $q$ then $p$." Symbolically, the converse of $p \to q$ is $q \to p$.
-> 2. The **inverse** is "If $\sim p$ then $\sim q$." Symbolically, the inverse of $p \to q$ is $\sim p \to \sim q$.
+> **Definition:** The **converse** of a conditional statement of the form "If $p$ then $q$" is "If $q$ then $p$." Symbolically, the converse of $p \to q$ is $q \to p$.
+
+> **Definition:** The **inverse** of a conditional statement of the form "If $p$ then $q$" is "If $\sim p$ then $\sim q$." Symbolically, the inverse of $p \to q$ is $\sim p \to \sim q$.
 
 **Example 2.2.7 (Writing the Converse and the Inverse).** Write the converse and inverse of the two statements of Section 2.5.
 
@@ -650,7 +652,7 @@ graph LR
 
 > **Caution:** "$`p`$ only if $q$" does not mean "$`p`$ if $q$" (that is, $`q \to p`$). Saying that John can break the record only if he runs under 2.5 minutes does not mean that he breaks the record if he runs under 2.5 minutes. If the record is well below 2.5 minutes, a time under 2.5 minutes may still not be fast enough. So "$`p`$ only if $q$" can be true while "$`p`$ if $q$" is false.
 
-> **Definition:** Given statement variables $p$ and $q$, the **biconditional** of $p$ and $q$ is "$`p`$ if, and only if, $q$" and is denoted $p \leftrightarrow q$. It is true if $p$ and $q$ have the same truth value and false if they have opposite truth values. The words "if and only if" are often abbreviated **iff**.
+> **Definition:** Given statement variables $p$ and $q$, the **biconditional** of $p$ and $q$ is "$`p`$ if, and only if, $q$" and is denoted $p \leftrightarrow q$. It is true if $p$ and $q$ have the same truth value and false if they have opposite truth values. The words "if and only if" are often abbreviated iff.
 
 | $p$ | $q$ | $p \leftrightarrow q$ |
 |:-:|:-:|:-:|
@@ -692,9 +694,9 @@ p \leftrightarrow q \equiv (p \to q) \wedge (q \to p)
 
 In careful formal usage, the expressions necessary condition and sufficient condition mean exactly what their logical definitions say.
 
-> **Definition:** **Necessary and sufficient conditions.** If $r$ and $s$ are statements:
-> - "$`r`$ is a **sufficient condition** for $s$" means "if $r$ then $s$" ($`r \to s`$).
-> - "$`r`$ is a **necessary condition** for $s$" means "if not $r$ then not $s$" ($`\sim r \to \sim s`$).
+> **Definition:** If $r$ and $s$ are statements, "$`r`$ is a **sufficient condition** for $s$" means "if $r$ then $s$" ($`r \to s`$).
+
+> **Definition:** If $r$ and $s$ are statements, "$`r`$ is a **necessary condition** for $s$" means "if not $r$ then not $s$" ($`\sim r \to \sim s`$).
 
 To say that $r$ is a sufficient condition for $s$ means that the occurrence of $r$ guarantees the occurrence of $s$. To say that $r$ is a necessary condition for $s$ means that if $r$ does not occur, then $s$ cannot occur either; that is, $r$ must occur for $s$ to occur. By the equivalence of a conditional and its contrapositive, "$`r`$ is a necessary condition for $s$" also means "if $s$ then $r$" ($`s \to r`$). Consequently, "$`r`$ is a necessary and sufficient condition for $s$" means "$`r`$ if, and only if, $s$" ($`r \leftrightarrow s`$).
 
@@ -762,7 +764,9 @@ p \\
 
 In the abstract form, $p$ and $q$ are placeholders into which statements can be substituted. An argument form is valid if, and only if, every substitution that makes all the premises true also makes the conclusion true.
 
-> **Definition:** An **argument** is a sequence of statements, and an **argument form** is a sequence of statement forms. In either case every item except the last is a **premise** (also called an assumption or hypothesis), and the last item is the **conclusion**; the symbol $\therefore$, read "therefore," is usually written in front of the conclusion. An argument form is **valid** when every substitution of particular statements for the statement variables in its premises that makes all the premises true also makes the conclusion true. An argument is valid when its form is valid, and an argument form that is not valid is **invalid**.
+> **Definition:** An **argument** is a sequence of statements, and an argument form is a sequence of statement forms. In either case every item except the last is a premise (also called an assumption or hypothesis), and the last item is the conclusion; the symbol $\therefore$, read "therefore," is usually written in front of the conclusion.
+
+> **Definition:** **Valid argument form.** An argument form is valid when every substitution of particular statements for the statement variables in its premises that makes all the premises true also makes the conclusion true. An argument is valid when its form is valid, and an argument form that is not valid is invalid.
 
 What matters about a valid argument is that its form alone forces the conclusion to be true whenever the premises are true, so no valid argument has all premises true and a false conclusion. When a valid argument has true premises, its conclusion is said to be inferred, or deduced, from them. A conclusion that does not necessarily follow is not a valid deduction.
 
@@ -1398,7 +1402,7 @@ The circuit corresponding to this expression is shown below. The three AND-gates
 
 *Figure 12. A circuit implementing the given input/output table by joining three recognizers with an OR-gate*
 
-> **Definition:** An expression such as the one above, which is a disjunction of terms, each term being a conjunction that contains one of $P$ and $\sim P$, one of $Q$ and $\sim Q$, and one of $R$ and $\sim R$, is in **disjunctive normal form**, also called **sum-of-products form**.
+> **Definition:** An expression such as the one above, which is a disjunction of terms, each term being a conjunction that contains one of $P$ and $\sim P$, one of $Q$ and $\sim Q$, and one of $R$ and $\sim R$, is in **disjunctive normal form**, also called sum-of-products form.
 
 > **Caution:** An input/output table whose outputs are all 0 has no row with output 1, so this method produces no terms. In that case a contradiction such as $P \wedge \sim P$ is an expression with the table as its truth table.
 
@@ -1701,10 +1705,10 @@ A circuit that computes the sum of three bits is called a **full-adder**. Let $C
 graph LR
     P["P"] --> H1["half-adder 1"]
     Q["Q"] --> H1
-    H1 -->|"S₁"| H2["half-adder 2"]
+    H1 -->|"S1"| H2["half-adder 2"]
     R["R"] --> H2
-    H1 -->|"C₁"| OR1["OR"]
-    H2 -->|"C₂"| OR1
+    H1 -->|"C1"| OR1["OR"]
+    H2 -->|"C2"| OR1
     OR1 --> COUT["C"]
     H2 --> SOUT["S"]
 ```
@@ -1732,16 +1736,16 @@ Combining two full-adders with one half-adder gives a circuit that adds the thre
 graph LR
     R["R"] --> HA["half-adder"]
     U["U"] --> HA
-    HA -->|"S₁"| Z["Z"]
-    HA -->|"C₁"| FA1["full-adder 1"]
+    HA -->|"S1"| Z["Z"]
+    HA -->|"C1"| FA1["full-adder 1"]
     Q["Q"] --> FA1
     T["T"] --> FA1
-    FA1 -->|"S₂"| Y["Y"]
-    FA1 -->|"C₂"| FA2["full-adder 2"]
+    FA1 -->|"S2"| Y["Y"]
+    FA1 -->|"C2"| FA2["full-adder 2"]
     P["P"] --> FA2
     S["S"] --> FA2
-    FA2 -->|"S₃"| X["X"]
-    FA2 -->|"C₃"| W["W"]
+    FA2 -->|"S3"| X["X"]
+    FA2 -->|"C3"| W["W"]
 ```
 
 *Figure 17. A parallel adder that adds PQR and STU to obtain WXYZ*

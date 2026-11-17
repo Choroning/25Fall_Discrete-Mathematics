@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 11
 
@@ -72,7 +72,9 @@ The O-, Ω-, and Θ-notations that compare algorithm efficiency ask whether the 
 
 A **Cartesian plane**, or two-dimensional Cartesian coordinate system, is a way of picturing $\mathbf{R} \times \mathbf{R}$, the set of ordered pairs of real numbers. Draw two lines in the plane that meet at right angles, the horizontal axis and the vertical axis, take their crossing point as the **origin**, and fix a unit length on each axis. Then every ordered pair $(x, y)$ determines exactly one point of the plane, and every point determines exactly one ordered pair. For the pair $(x, y)$ of a point $P$, $|x|$ is the distance from $P$ to the vertical axis and $|y|$ is the distance from $P$ to the horizontal axis, while the signs tell whether $P$ lies to the right (positive) or left (negative) of the vertical axis and above (positive) or below (negative) the horizontal axis. An arrow on each axis marks its positive direction.
 
-> **Definition:** A **real-valued function of a real variable** is a function whose domain and co-domain are both sets of real numbers. Thus each real number $x$ in the domain is assigned a single real value $f(x)$. The **graph** of $f$ is the set of all points $(x, y)$ of the Cartesian plane for which $x$ belongs to the domain of $f$ and $y = f(x)$.
+> **Definition:** A **real-valued function of a real variable** is a function whose domain and co-domain are both sets of real numbers. Thus each real number $x$ in the domain is assigned a single real value $f(x)$.
+
+> **Definition:** The **graph** of a real-valued function $f$ of a real variable is the set of all points $(x, y)$ of the Cartesian plane for which $x$ belongs to the domain of $f$ and $y = f(x)$.
 
 By the definition, for each $x$ in the domain, the point $(x, y)$ lies on the graph of $f$ if, and only if, $y = f(x)$. Therefore the height of the graph at $x$ is $f(x)$. When a function value is negative, the graph lies below the horizontal axis, and the height is read as a negative number.
 
@@ -163,7 +165,9 @@ For $x \geq 0$ the graph of $A$ is the same as the line $y = x$ of slope 1 throu
 
 Tracing the graph from left to right, the height continually decreases to the left of the origin and continually increases to the right of the origin. For this reason the absolute value function is said to be decreasing on the set of negative real numbers and increasing on the set of positive real numbers. Since the height of the graph at $x$ is $f(x)$, these geometric notions translate into the following definition.
 
-> **Definition:** Let $f$ be a real-valued function defined on a set of real numbers, and suppose the domain of $f$ contains a set $S$. $f$ is **increasing** on $S$ if, and only if, for all real numbers $x_1$ and $x_2$ in $S$, if $x_1 < x_2$ then $f(x_1) < f(x_2)$. $f$ is **decreasing** on $S$ if, and only if, for all real numbers $x_1$ and $x_2$ in $S$, if $x_1 < x_2$ then $f(x_1) > f(x_2)$. A function that is increasing on its entire domain is an **increasing function**, and a function that is decreasing on its entire domain is a **decreasing function**.
+> **Definition:** Let $f$ be a real-valued function defined on a set of real numbers, and suppose the domain of $f$ contains a set $S$. $f$ is **increasing** on $S$ if, and only if, for all real numbers $x_1$ and $x_2$ in $S$, if $x_1 < x_2$ then $f(x_1) < f(x_2)$. A function that is increasing on its entire domain is an increasing function.
+
+> **Definition:** Let $f$ be a real-valued function defined on a set of real numbers, and suppose the domain of $f$ contains a set $S$. $f$ is **decreasing** on $S$ if, and only if, for all real numbers $x_1$ and $x_2$ in $S$, if $x_1 < x_2$ then $f(x_1) > f(x_2)$. A function that is decreasing on its entire domain is a decreasing function.
 
 ![Figure 7. Comparison of function values when x1 < x2 for an increasing function and a decreasing function](../../images/Ch11_Increasing-Decreasing.png)
 
@@ -1424,7 +1428,11 @@ At the other end of the scale from binary search, with its logarithmic order, li
 
 The factors are, in order, the number of moves and the reciprocals of the moves per second $10^9$, the seconds per minute 60, the minutes per hour 60, the hours per day 24, and the days per year 365.25, and the result is in years. That is, it would take about 584.5 years.
 
-> **Definition:** An algorithm whose worst-case order with respect to time is a polynomial is a **polynomial-time algorithm**. A problem that some polynomial-time algorithm solves belongs to **class P** and is called **tractable**; a problem that cannot be solved in polynomial time is called **intractable**. A problem belongs to **class NP** if a proposed solution can be checked by a polynomial-time algorithm, even though it may not be possible to find a solution in polynomial time.
+> **Definition:** An algorithm whose worst-case order with respect to time is a polynomial is a **polynomial-time algorithm**.
+
+> **Definition:** The class of problems that some polynomial-time algorithm solves is called **class P**, and a problem in this class is called tractable; a problem that cannot be solved in polynomial time is called intractable.
+
+> **Definition:** The class of problems for which a proposed solution can be checked by a polynomial-time algorithm is called **class NP**, even though it may not be possible to find a solution of such a problem in polynomial time.
 
 More precisely, NP is the class of problems that a nondeterministic sequential machine can solve in polynomial time, and these are the same as the problems whose proposed solutions an ordinary computer (a deterministic sequential machine) can verify in polynomial time. The name NP stands for nondeterministic polynomial time.
 

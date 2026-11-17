@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-04
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -62,7 +62,11 @@ Functions appear in almost every area of mathematics and computer science, and e
 
 In ordinary language the word "function" indicates that one quantity depends on another. For example, saying that a taxi fare is a function of the distance traveled means that there is a rule assigning one fare to each distance. Chapter 1 defined a function as a special kind of relation. This chapter restates that definition and adds the dynamic view of a function as something that sends inputs to outputs, together with the terminology that goes with this view.
 
-> **Definition:** A **function** $f: X \to Y$ from a set $X$ to a set $Y$ is a relation from $X$ to $Y$ that satisfies two properties. (1) Every element of $X$ is related to some element of $Y$. (2) No element of $X$ is related to two different elements of $Y$. The set $X$ is called the **domain** of $f$, and $Y$ is called the **co-domain** of $f$.
+> **Definition:** A **function** $f: X \to Y$ from a set $X$ to a set $Y$ is a relation from $X$ to $Y$ that satisfies two properties. (1) Every element of $X$ is related to some element of $Y$. (2) No element of $X$ is related to two different elements of $Y$.
+
+> **Definition:** The **domain** of a function $f: X \to Y$ is the set $X$.
+
+> **Definition:** The **co-domain** of a function $f: X \to Y$ is the set $Y$.
 
 Together, the two properties say that for each element $x$ of $X$ there is exactly one element of $Y$ related to $x$. If this element is called $y$, $f$ is said to send $x$ to $y$, which is written $x \xrightarrow{f} y$ or $f: x \mapsto y$. The unique element to which $f$ sends $x$ is denoted $f(x)$, and it has several names.
 
@@ -205,7 +209,9 @@ $M$ multiplies the two coordinates of a pair of real numbers, and $R$ reflects e
 
 Next comes the logarithmic function, which is used frequently in computer science.
 
-> **Definition:** Let $b$ be a positive real number with $b \neq 1$. For each positive real number $x$, the **logarithm with base $b$ of $x$**, written $\log_b x$, is the exponent that turns $b$ into $x$. That is, $\log_b x = y \iff b^y = x$. The function from $\mathbf{R}^{+}$ to $\mathbf{R}$ that sends each positive real number $x$ to $\log_b x$ is called the **logarithmic function with base $b$**.
+> **Definition:** Let $b$ be a positive real number with $b \neq 1$. For each positive real number $x$, the **logarithm with base $b$ of $x$**, written $\log_b x$, is the exponent that turns $b$ into $x$. That is, $\log_b x = y \iff b^y = x$.
+
+> **Definition:** Let $b$ be a positive real number with $b \neq 1$. The function from $\mathbf{R}^{+}$ to $\mathbf{R}$ that sends each positive real number $x$ to $\log_b x$ is called the **logarithmic function with base $b$**.
 
 The definition relies on the fact that each positive real number $x$ equals $b^y$ for exactly one real number $y$. This fact is true but not self-evident, and it is proved in most calculus books.
 
@@ -312,7 +318,7 @@ Strictly speaking, the phrase "well-defined function" is redundant, because bein
 
 Given a function from $X$ to $Y$, one can form the subset of $Y$ consisting of the images of all elements of a subset of $X$, and the subset of $X$ consisting of the inverse images of all elements of a subset of $Y$.
 
-> **Definition:** If $f: X \to Y$ is a function, $A \subseteq X$, and $C \subseteq Y$, define the sets below. $f(A)$ is called the **image of $A$**, and $f^{-1}(C)$ is called the **inverse image of $C$**.
+> **Definition:** If $f: X \to Y$ is a function, $A \subseteq X$, and $C \subseteq Y$, define the sets below. $f(A)$ is called the **image of $A$**, and $f^{-1}(C)$ is called the inverse image of $C$.
 
 ```math
 f(A) = \lbrace\, y \in Y \mid y = f(x) \text{ for some } x \in A \,\rbrace, \qquad f^{-1}(C) = \lbrace\, x \in X \mid f(x) \in C \,\rbrace
@@ -358,7 +364,7 @@ This section studies two important properties that a function may or may not hav
 
 As Section 1.2 showed, different elements of the domain of a function may share one image in the co-domain; in an arrow diagram, several arrows that start in the domain then end at one point of the co-domain. A function for which this never happens, so that no point of the co-domain is the endpoint of two arrows, is a one-to-one function. Equivalently, no element of the co-domain of a one-to-one function is the image of more than one element of the domain.
 
-> **Definition:** Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **one-to-one** (or **injective**) if, and only if, for all elements $x_1$ and $x_2$ in $X$, "if $F(x_1) = F(x_2)$, then $x_1 = x_2$". This is equivalent to "if $x_1 \neq x_2$, then $F(x_1) \neq F(x_2)$".
+> **Definition:** Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **one-to-one** (or injective) if, and only if, for all elements $x_1$ and $x_2$ in $X$, "if $F(x_1) = F(x_2)$, then $x_1 = x_2$". This is equivalent to "if $x_1 \neq x_2$, then $F(x_1) \neq F(x_2)$".
 
 Symbolically:
 
@@ -427,7 +433,7 @@ Suppose a university has 10,000 students and gives each of them a nine-digit ID 
 
 For efficient storage, the university needs a hash function that (1) is one-to-one and (2) has a co-domain far smaller than one billion. Most hash functions in use are variations of the mod function built with prime numbers, which make the values more likely to spread out than to pile up. Choosing a co-domain 50% to 100% larger than the domain also raises the chance that the function is one-to-one. Even so, two different inputs may receive the same value, that is, they may **collide**, and several techniques exist for handling such a **collision**.
 
-**Example 7.2.3 (Computing Values of a Hash Function).** Suppose, for simplicity, that there are only 6 students, and define a function $H$ from the set of ID numbers to $\lbrace0, 1, 2, \ldots, 10\rbrace$ by $H(n) = n \bmod 11$ for each ID number $n$. Values of $H$ are computed with the formula $n \bmod 11 = n - 11 \cdot (n \operatorname{div} 11)$ from Chapter 4: divide $n$ by 11, multiply the integer part of the quotient by 11, and subtract the result from $n$. For example, since $328343419 / 11 = 29849401.73\ldots$,
+**Example 7.2.3 (Computing Values of a Hash Function).** Suppose, for simplicity, that there are only 6 students, and define a function $H$ from the set of ID numbers to $\lbrace0, 1, 2, \ldots, 10\rbrace$ by $H(n) = n \bmod 11$ for each ID number $n$. Values of $H$ are computed with the formula $n \bmod 11 = n - 11 \cdot (n \text{ div } 11)$ from Chapter 4: divide $n$ by 11, multiply the integer part of the quotient by 11, and subtract the result from $n$. For example, since $328343419 / 11 = 29849401.73\ldots$,
 
 ```math
 H(328343419) = 328343419 - 11 \cdot 29849401 = 328343419 - 328343411 = 8
@@ -467,7 +473,7 @@ Typical uses of cryptographic hash functions are the following.
 
 Section 1.2 showed that some element of the co-domain may fail to be the image of any element of the domain. On the other hand, there are functions for which **every** element of the co-domain is the image of some element of the domain. Such a function is called onto, and the range of an onto function equals its co-domain.
 
-> **Definition:** Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **onto** (or **surjective**) if, and only if, for every element $y$ of $Y$ there is an element $x$ of $X$ with $F(x) = y$.
+> **Definition:** Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **onto** (or surjective) if, and only if, for every element $y$ of $Y$ there is an element $x$ of $X$ with $F(x) = y$.
 
 ```math
 F: X \to Y \text{ is onto} \iff \forall y \in Y, \ \exists x \in X, \ F(x) = y
@@ -617,7 +623,7 @@ Figure 7 shows the graphs of $y = 2^x$ and $y = \log_2 x$. The point $(1, 2)$ li
 
 Suppose a function $F: X \to Y$ is both one-to-one and onto. Given an element $x$ of $X$, there is a unique corresponding element $y = F(x)$ in $Y$ because $F$ is a function. Given an element $y$ of $Y$, there is an element $x$ in $X$ with $F(x) = y$ because $F$ is onto, and there is only one such $x$ because $F$ is one-to-one. Hence a function with both properties matches each element of $X$ with exactly one element of $Y$ and each element of $Y$ with exactly one element of $X$. For example, the function from $\lbrace a, b, c, d, e\rbrace$ to $\lbrace1, 2, 3, 4, 5\rbrace$ that sends $a \mapsto 1$, $b \mapsto 2$, $c \mapsto 3$, $d \mapsto 4$, and $e \mapsto 5$ is such a pairing. Such pairings are also used for counting: the pairing above shows that $\lbrace a, b, c, d, e\rbrace$ has five elements.
 
-> **Definition:** A **one-to-one correspondence** (or **bijection**) from a set $X$ to a set $Y$ is a function $F: X \to Y$ that is both one-to-one and onto.
+> **Definition:** A **one-to-one correspondence** (or bijection) from a set $X$ to a set $Y$ is a function $F: X \to Y$ that is both one-to-one and onto.
 
 **Example 7.2.8 (A Function from a Power Set to a Set of Strings).** $\mathcal{P}(\lbrace a, b\rbrace) = \lbrace\emptyset, \lbrace a\rbrace, \lbrace b\rbrace, \lbrace a, b\rbrace\rbrace$, and let $S = \lbrace00, 01, 10, 11\rbrace$ be the set of all strings of 0's and 1's of length 2. Define a function $h: \mathcal{P}(\lbrace a, b\rbrace) \to S$ as follows. For a subset $A$ of $\lbrace a, b\rbrace$, each of $a$ and $b$ either belongs to $A$ or does not. The first character of $h(A)$ is 1 if $a \in A$ and 0 otherwise. Likewise, the second character is 1 if $b \in A$ and 0 otherwise.
 
@@ -975,7 +981,13 @@ graph LR
 
 *Figure 16. Counting a countably infinite set A with a one-to-one correspondence F*
 
-> **Definition:** A set is **finite** if, and only if, it is empty or there is a one-to-one correspondence between it and $\lbrace1, 2, \ldots, n\rbrace$ for some positive integer $n$. A set is **countably infinite** if, and only if, it has the same cardinality as the set $\mathbf{Z}^{+}$ of positive integers. A set is **countable** if, and only if, it is finite or countably infinite, and a set that is not countable is called **uncountable**.
+> **Definition:** A set is **finite** if, and only if, it is empty or there is a one-to-one correspondence between it and $\lbrace1, 2, \ldots, n\rbrace$ for some positive integer $n$.
+
+> **Definition:** A set is **countably infinite** if, and only if, it has the same cardinality as the set $\mathbf{Z}^{+}$ of positive integers.
+
+> **Definition:** A set is **countable** if, and only if, it is finite or countably infinite.
+
+> **Definition:** A set that is not countable is called **uncountable**.
 
 **Example 7.4.2 (Countability of Z, the Set of All Integers).** Show that the set $\mathbf{Z}$ of all integers is countable. Since $\mathbf{Z}$ is infinite, it can be countable only by being countably infinite, so one must find a one-to-one correspondence from $\mathbf{Z}^{+}$ to $\mathbf{Z}$. On a number line the integers consist of the positive integers together with 0 and the negative integers, so they look more than twice as plentiful as the positive integers, and the claim seems to defy common sense.
 

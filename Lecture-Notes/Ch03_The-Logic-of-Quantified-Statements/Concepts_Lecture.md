@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -75,7 +75,9 @@ Chapter 2 analyzed compound statements, which are simple statements joined by th
 
 The argument is intuitively correct. However, translating the three sentences into the language of compound statements only gives three unrelated simple statements $p$, $q$, and $r$, so the truth table method of Chapter 2 cannot show that "$`p`$ and $q$, therefore $r$" is valid. To analyze arguments like this one, statements must be split into smaller parts, in the way sentences are split into subjects and predicates, and the special role of words that denote quantities, such as "all" and "some", must be understood.
 
-> **Definition:** The symbolic analysis of predicates and quantified statements is called the **predicate calculus**. The symbolic analysis of compound statements studied in Chapter 2 is called the **statement calculus** (or **propositional calculus**).
+> **Definition:** The symbolic analysis of predicates and quantified statements is called the **predicate calculus**.
+
+> **Definition:** The symbolic analysis of compound statements studied in Chapter 2 is called the **statement calculus** (or propositional calculus).
 
 ### 1.2 Predicates and Truth Sets
 
@@ -85,7 +87,9 @@ In grammar, a sentence divides into a subject and a predicate, the predicate bei
 
 In logic, predicates are obtained by removing some or all of the nouns from a sentence. For instance, let $P$ stand for "is a student at Bedford College" and $Q$ for "is a student at". Then the sentences "$`x`$ is a student at Bedford College" and "$`x`$ is a student at $y$" are symbolized as $P(x)$ and $Q(x, y)$. Here $P$ and $Q$ are **predicate symbols**, and $x$ and $y$, which take values in appropriate sets, are **predicate variables**. When concrete values are substituted for the predicate variables, a statement results. For simplicity, a predicate symbol together with suitable predicate variables is called a predicate; other treatments of logic call such objects **propositional functions** or **open sentences**.
 
-> **Definition:** A **predicate** is a sentence with finitely many variables that turns into a statement once each variable is replaced by a specific value. The **domain** of a predicate variable is the set of values allowed to replace that variable.
+> **Definition:** A **predicate** is a sentence with finitely many variables that turns into a statement once each variable is replaced by a specific value.
+
+> **Definition:** The **domain** of a predicate variable is the set of values allowed to replace that variable.
 
 For example, if $P(x)$ is the predicate "$`x > 3`$", that is, "$`x`$ is greater than 3", then $P(x)$ itself is not a statement. But $P(4)$, obtained by substituting 4 for $x$, is a true statement because $4 > 3$, and $P(2)$ is a false statement because $2 > 3$ is false.
 
@@ -130,7 +134,9 @@ This is read "For every human being $x$, $x$ is mortal." If $H$ is the set of al
 
 In a universal statement, the domain of the predicate variable is usually indicated either between the $\forall$ symbol and the variable name ($\forall$ human being $`x`$) or immediately after the variable name ($`\forall x \in H`$). In sentences that mix symbols and words, one $\forall$ can refer to two or more variables. For instance, "For all real numbers $x$ and $y$, $x + y = y + x$" is written "$`\forall`$ real numbers $x$ and $y$, $x + y = y + x$". More formal versions of symbolic logic attach a separate $\forall$ to each variable: $`\forall x \in \mathbf{R}\,(\forall y \in \mathbf{R}\,(x + y = y + x))`$.
 
-> **Definition:** Let $Q(x)$ be a predicate and $D$ the domain of $x$. A **universal statement** is a statement of the form $`\forall x \in D,\ Q(x)`$. It is true if, and only if, $Q(x)$ is true for each individual $x$ in $D$, and it is false if, and only if, $Q(x)$ is false for at least one $x$ in $D$. A value of $x$ for which $Q(x)$ is false is called a **counterexample** to the universal statement.
+> **Definition:** Let $Q(x)$ be a predicate and $D$ the domain of $x$. A **universal statement** is a statement of the form $`\forall x \in D,\ Q(x)`$. It is true if, and only if, $Q(x)$ is true for each individual $x$ in $D$, and it is false if, and only if, $Q(x)$ is false for at least one $x$ in $D$.
+
+> **Definition:** For a universal statement $`\forall x \in D,\ Q(x)`$, a value of $x$ for which $Q(x)$ is false is called a **counterexample** to the universal statement.
 
 **Example 3.1.3 (Truth and Falsity of Universal Statements).**
 
@@ -299,7 +305,9 @@ In all three the letter is only a placeholder for an arbitrary integer, and each
 
 Both statements use the variable name $x$, but the $x$ in Statement 1 serves a different function from the $x$ in Statement 2.
 
-> **Definition:** A variable associated with a quantifier and controlled by it is said to be **bound** by that quantifier, and it is called a **bound variable**. The **scope** of the variable begins where the quantifier introduces it and ends at the end of the quantified statement.
+> **Definition:** A variable associated with a quantifier and controlled by it is said to be bound by that quantifier, and it is called a **bound variable**.
+
+> **Definition:** The **scope** of a bound variable begins where the quantifier introduces it and ends at the end of the quantified statement.
 
 Renaming a bound variable consistently does not change the meaning of the statement. For example, $`\forall x \in \mathbf{Z},\ x^2 \geq 0`$ and $`\forall y \in \mathbf{Z},\ y^2 \geq 0`$ are the same statement.
 
@@ -582,7 +590,7 @@ Now consider the case in which no balls at all are placed in the bowl, as in Fig
 
 Let $D$ be the set of all ten balls, $P(x)$ "$`x`$ is in the bowl", and $Q(x)$ "$`x`$ is blue". Then the statement is $`\forall x \in D,\ P(x) \to Q(x)`$. When the bowl is empty, $P(x)$ is false for every $x$, so each conditional $P(x) \to Q(x)$ is true regardless of $Q(x)$, and hence the universal statement is true.
 
-> **Definition:** A statement of the form $\forall x \in D$, if $P(x)$ then $Q(x)$ is called **vacuously true** or **true by default** if, and only if, $P(x)$ is false for every $x$ in $D$. In that case, the conditional $P(x) \to Q(x)$ is true for each $x$ regardless of the truth value of $Q(x)$.
+> **Definition:** A statement of the form $\forall x \in D$, if $P(x)$ then $Q(x)$ is called **vacuously true** or true by default if, and only if, $P(x)$ is false for every $x$ in $D$. In that case, the conditional $P(x) \to Q(x)$ is true for each $x$ regardless of the truth value of $Q(x)$.
 
 > **Note:** In ordinary language, the words "in general" mean that something is usually, but not always, the case (in general I take the bus, but today I walked). In mathematics, the words "in general" signal that what follows is a generalization that always holds true.
 
@@ -648,11 +656,11 @@ Chapter 2 showed that a conditional statement is logically equivalent to its con
 
 The definitions of necessary, sufficient, and "only if" can also be extended to universal conditional statements.
 
-> **Definition:** **Necessary, sufficient, and only if.**
->
-> - "$`\forall x`$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$`\forall x`$, if $r(x)$ then $s(x)$".
-> - "$`\forall x`$, $r(x)$ is a **necessary condition** for $s(x)$" means "$`\forall x`$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $s(x)$ then $r(x)$".
-> - "$`\forall x`$, $r(x)$ **only if** $s(x)$" means "$`\forall x`$, if $\sim s(x)$ then $\sim r(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $r(x)$ then $s(x)$".
+> **Definition:** "$`\forall x`$, $r(x)$ is a **sufficient condition** for $s(x)$" means "$`\forall x`$, if $r(x)$ then $s(x)$".
+
+> **Definition:** "$`\forall x`$, $r(x)$ is a **necessary condition** for $s(x)$" means "$`\forall x`$, if $\sim r(x)$ then $\sim s(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $s(x)$ then $r(x)$".
+
+> **Definition:** **Only if.** "$`\forall x`$, $r(x)$ only if $s(x)$" means "$`\forall x`$, if $\sim s(x)$ then $\sim r(x)$", which by the contrapositive is equivalent to "$`\forall x`$, if $r(x)$ then $s(x)$".
 
 The three expressions are summarized as universal conditional statements below.
 
@@ -1174,7 +1182,9 @@ This argument has the form of universal modus tollens and is therefore valid.
 
 Validity means the same thing here as for arguments built from compound statements: an argument is valid exactly when the truth of its premises **forces** the truth of its conclusion. The formal definition is as follows.
 
-> **Definition:** An **argument form** is **valid** if every substitution of particular predicates for its predicate symbols that makes all the premises true also makes the conclusion true. An **argument** is valid when its form is valid, and it is **sound** when, in addition, all of its premises are true.
+> **Definition:** **Valid argument form.** An argument form is valid if every substitution of particular predicates for its predicate symbols that makes all the premises true also makes the conclusion true. An argument is valid when its form is valid.
+
+> **Definition:** **Sound argument.** An argument is sound when its form is valid and, in addition, all of its premises are true.
 
 The validity of universal instantiation comes straight from the meaning of a universal statement, as noted earlier. A general theory of validity proofs in the predicate calculus is not developed here; instead, the validity of universal modus ponens is proved below as a sample of what such a proof looks like.
 

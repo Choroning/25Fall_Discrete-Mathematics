@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -123,7 +123,9 @@ Since $b$ and $u$ were arbitrary numbers satisfying the conditions, the proof is
 
 **Concepts used.** The two definitions of Chapter 7, Section 2 and their negations are used. Writing the definitions with quantifiers makes clear what a proof assumes and what it must show.
 
-> **Definition:** A function $F: X \to Y$ is **one-to-one** if for all elements $x_1$ and $x_2$ of $X$, $F(x_1) = F(x_2)$ implies $x_1 = x_2$. $F$ is **onto** if for every element $y$ of $Y$ there exists an element $x$ of $X$ such that $F(x) = y$.
+> **Definition:** A function $F: X \to Y$ is **one-to-one** if for all elements $x_1$ and $x_2$ of $X$, $F(x_1) = F(x_2)$ implies $x_1 = x_2$.
+
+> **Definition:** A function $F: X \to Y$ is **onto** if for every element $y$ of $Y$ there exists an element $x$ of $X$ such that $F(x) = y$.
 
 The negations fix the form of a counterexample. $F$ is not one-to-one when there exist elements $x_1$ and $x_2$ of $X$ with $F(x_1) = F(x_2)$ and $x_1 \neq x_2$, and $F$ is not onto when there exists an element $y$ of $Y$ such that $F(x) \neq y$ for every $x \in X$.
 
@@ -211,7 +213,9 @@ f\left(\frac{1}{x}\right) = \frac{\frac{1}{x}}{\frac{1}{x^2} + 1} = \frac{\frac{
 
 **Concepts used.** The image and inverse image of a set defined in Chapter 7, Section 1 are used, together with set equality: two sets are equal when each is a subset of the other (the element argument of Chapter 6).
 
-> **Definition:** If $F: X \to Y$ is a function and $A \subseteq X$, $C \subseteq Y$, the **image of $A$** is $F(A) = \lbrace y \in Y \mid y = F(x) \text{ for some } x \in A \rbrace$, and the **inverse image of $C$** is $F^{-1}(C) = \lbrace x \in X \mid F(x) \in C \rbrace$.
+> **Definition:** If $F: X \to Y$ is a function and $A \subseteq X$, $C \subseteq Y$, the **image of $A$** is $F(A) = \lbrace y \in Y \mid y = F(x) \text{ for some } x \in A \rbrace$.
+
+> **Definition:** If $F: X \to Y$ is a function and $C \subseteq Y$, the **inverse image of $C$** is $F^{-1}(C) = \lbrace x \in X \mid F(x) \in C \rbrace$.
 
 > **Caution:** Here $F^{-1}(B)$ is the inverse image of the set $B$; it does not mean that $F$ has an inverse function. Inverse images are defined for every function, including functions that are not one-to-one correspondences.
 

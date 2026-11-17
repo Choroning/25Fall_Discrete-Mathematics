@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-16
+> **최종 수정일:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -121,7 +121,7 @@
 
 **사용하는 개념.** 10진 표기의 정의와 나누어떨어짐의 정의이다.
 
-> **용어 정의:** 음이 아닌 정수 $n$의 **10진 표기(decimal representation)** 는 $n$을 $d_k d_{k-1} \cdots d_1 d_0$ 꼴로 쓴 것이다. 여기서 $k$는 음이 아닌 정수이고, **자리 숫자(decimal digit)** $d_0, d_1, \ldots, d_k$는 0 이상 9 이하의 정수이며, $n = 0$이고 $k = 0$인 경우가 아니면 $d_k \ne 0$이고, $n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_1 \cdot 10 + d_0$이 성립한다.
+> **용어 정의:** 음이 아닌 정수 $n$의 **10진 표기(decimal representation)** 는 $n$을 $d_k d_{k-1} \cdots d_1 d_0$ 꼴로 쓴 것이다. 여기서 $k$는 음이 아닌 정수이고, 자리 숫자(decimal digit) $d_0, d_1, \ldots, d_k$는 0 이상 9 이하의 정수이며, $n = 0$이고 $k = 0$인 경우가 아니면 $d_k \ne 0$이고, $n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_1 \cdot 10 + d_0$이 성립한다.
 
 예를 들어 $2{,}530 = 2 \cdot 10^3 + 5 \cdot 10^2 + 3 \cdot 10 + 0$이다. 힌트의 식은 마지막 항 $d_0$을 뺀 나머지 항에서 10을 묶어 얻는다.
 

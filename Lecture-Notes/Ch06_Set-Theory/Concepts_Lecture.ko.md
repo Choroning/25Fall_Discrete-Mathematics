@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-10
+> **최종 수정일:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -111,7 +111,9 @@ A \not\subseteq B \iff \exists x\ (x \in A \land x \notin B)
 
 따라서 $A \subseteq B$를 증명하려면 $A$의 모든 원소를 다루는 논증이 필요하지만, $A \subseteq B$를 반증하려면 $A$에 속하고 $B$에 속하지 않는 원소 하나만 찾으면 된다.
 
-> **용어 정의:** $A \subseteq B$이고 $B$의 원소 가운데 $A$에 속하지 않는 것이 적어도 하나 있으면 $A$를 $B$의 **진부분집합(proper subset)** 이라 한다. 원소가 하나뿐인 집합 $\lbrace a \rbrace$는 **단원소 집합(singleton set)** 이라 한다.
+> **용어 정의:** $A \subseteq B$이고 $B$의 원소 가운데 $A$에 속하지 않는 것이 적어도 하나 있으면 $A$를 $B$의 **진부분집합(proper subset)** 이라 한다.
+
+> **용어 정의:** 원소가 하나뿐인 집합 $\lbrace a \rbrace$는 **단원소 집합(singleton set)** 이라 한다.
 
 **예제 6.1.1 (부분집합과 진부분집합 판정).** $A = \lbrace 1 \rbrace$, $B = \lbrace 1, \lbrace 1 \rbrace \rbrace$일 때 $A \subseteq B$인지, 그렇다면 진부분집합인지 판정한다.
 
@@ -620,10 +622,10 @@ flowchart TB
 ```mermaid
 graph LR
     subgraph F["전방 연쇄"]
-        S["출발점"] --> I1["I₁"] --> I2["I₂"]
+        S["출발점"] --> I1["I1"] --> I2["I2"]
     end
     subgraph BK["후방 연쇄"]
-        SG2["SG₂"] --> SG1["SG₁"] --> GOAL["목표"]
+        SG2["SG2"] --> SG1["SG1"] --> GOAL["목표"]
     end
     I2 --> SG2
 ```
@@ -1025,7 +1027,9 @@ $\lor$(또는)를 $\cup$로, $\land$(그리고)를 $\cap$로, $\mathbf{t}$를 �
 
 부울 대수의 공리는 모두, 정리 6.4.1은 대부분이 (a), (b)의 짝으로 되어 있다. 예를 들어 분배 법칙은 $a + (b \cdot c) = (a + b) \cdot (a + c)$와 $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$이고, 항등 법칙은 $a + 0 = a$와 $a \cdot 1 = a$이다. 짝을 이루는 두 식은 한쪽의 $+$를 모두 $\cdot$으로, $\cdot$을 모두 $+$로, 0을 모두 1로, 1을 모두 0으로 바꾸면 다른 쪽이 된다.
 
-> **용어 정의:** 부울 대수의 항등식 전체에서 $+$와 $\cdot$을 서로 바꾸고 0과 1을 서로 바꾸어 얻은 식을 그 항등식의 **쌍대(dual)** 라 한다. 어떤 식이 모든 부울 대수에서 항등식이면 그 쌍대도 모든 부울 대수에서 항등식이라는 사실을 **쌍대성 원리(duality principle)** 라 한다.
+> **용어 정의:** 부울 대수의 항등식 전체에서 $+$와 $\cdot$을 서로 바꾸고 0과 1을 서로 바꾸어 얻은 식을 그 항등식의 **쌍대(dual)** 라 한다.
+
+> **용어 정의:** 어떤 식이 모든 부울 대수에서 항등식이면 그 쌍대도 모든 부울 대수에서 항등식이라는 사실을 **쌍대성 원리(duality principle)** 라 한다.
 
 쌍대성 원리가 성립하는 이유는 공리들이 쌍대끼리 짝지어져 있기 때문이다. 어떤 항등식의 증명이 있으면, 증명의 각 단계를 그 단계에 쓴 공리의 쌍대로 바꾸어 쌍대 항등식의 증명을 얻는다. 예를 들어 4.5절에서 $a + a = a$를 증명하면, 쌍대성 원리에 의해 $a \cdot a = a$도 성립한다.
 

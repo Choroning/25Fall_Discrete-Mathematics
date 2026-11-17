@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -111,7 +111,9 @@ A \not\subseteq B \iff \exists x\ (x \in A \land x \notin B)
 
 Thus proving $A \subseteq B$ requires an argument that handles every element of $A$, whereas disproving $A \subseteq B$ requires only one element that is in $A$ and not in $B$.
 
-> **Definition:** If $A \subseteq B$ and at least one element of $B$ is not in $A$, then $A$ is a **proper subset** of $B$. A set $\lbrace a \rbrace$ with exactly one element is called a **singleton set**.
+> **Definition:** If $A \subseteq B$ and at least one element of $B$ is not in $A$, then $A$ is a **proper subset** of $B$.
+
+> **Definition:** A set $\lbrace a \rbrace$ with exactly one element is called a **singleton set**.
 
 **Example 6.1.1 (Testing for a Subset and a Proper Subset).** Let $A = \lbrace 1 \rbrace$ and $B = \lbrace 1, \lbrace 1 \rbrace \rbrace$. Decide whether $A \subseteq B$ and, if so, whether $A$ is a proper subset of $B$.
 
@@ -318,7 +320,7 @@ $\bigcap_{i=1}^{\infty} A_i$: 0 belongs to every $A_i$. For a nonzero real numbe
 
 A set is determined by its elements, but it is convenient to accept a set with no elements as a set as well. Otherwise, every time the intersection of two sets is taken or a set is defined by a condition, one would first have to check that the result has elements. For example, $\lbrace 1, 3 \rbrace \cap \lbrace 2, 4 \rbrace$ has no elements, and since no real number has a negative square, $\lbrace x \in \mathbf{R} \mid x^2 = -1 \rbrace$ has no elements either.
 
-> **Definition:** The set with no elements is called the **empty set** (or **null set**) and is denoted $\emptyset$.
+> **Definition:** The set with no elements is called the **empty set** (or null set) and is denoted $\emptyset$.
 
 Section 2.8 proves that there is only one set with no elements, which is why it can be given the single name empty set. The two examples above are written $\lbrace 1, 3 \rbrace \cap \lbrace 2, 4 \rbrace = \emptyset$ and $\lbrace x \in \mathbf{R} \mid x^2 = -1 \rbrace = \emptyset$.
 
@@ -335,7 +337,7 @@ It is often necessary to divide a set into nonoverlapping pieces. Such a divisio
 
 For example, $A = \lbrace 1, 3, 5 \rbrace$ and $B = \lbrace 2, 4, 6 \rbrace$ have no common elements, so $\lbrace 1, 3, 5 \rbrace \cap \lbrace 2, 4, 6 \rbrace = \emptyset$ and the two sets are disjoint.
 
-> **Definition:** Sets $A_1, A_2, A_3, \ldots$ are **mutually disjoint** (or **pairwise disjoint**) if, and only if, no two sets with distinct subscripts have any elements in common. That is, for all integers $i, j = 1, 2, 3, \ldots$, if $i \ne j$ then $A_i \cap A_j = \emptyset$.
+> **Definition:** Sets $A_1, A_2, A_3, \ldots$ are **mutually disjoint** (or pairwise disjoint) if, and only if, no two sets with distinct subscripts have any elements in common. That is, for all integers $i, j = 1, 2, 3, \ldots$, if $i \ne j$ then $A_i \cap A_j = \emptyset$.
 
 **Example 6.1.10 (Testing for Mutual Disjointness).**
 
@@ -620,10 +622,10 @@ In (2), the cases $x \in A$ and $x \notin A$ are considered for the following re
 ```mermaid
 graph LR
     subgraph F["Forward chaining"]
-        S["Starting point"] --> I1["I₁"] --> I2["I₂"]
+        S["Starting point"] --> I1["I1"] --> I2["I2"]
     end
     subgraph BK["Backward chaining"]
-        SG2["SG₂"] --> SG1["SG₁"] --> GOAL["Goal"]
+        SG2["SG2"] --> SG1["SG1"] --> GOAL["Goal"]
     end
     I2 --> SG2
 ```
@@ -1025,7 +1027,9 @@ The other properties are derived in the same way from the axioms and previously 
 
 All the axioms of a Boolean algebra and most parts of Theorem 6.4.1 appear as (a)/(b) pairs. For example, the distributive laws are $a + (b \cdot c) = (a + b) \cdot (a + c)$ and $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$, and the identity laws are $a + 0 = a$ and $a \cdot 1 = a$. In each pair, one statement turns into the other when every $+$ is replaced by $\cdot$, every $\cdot$ by $+$, every 0 by 1, and every 1 by 0.
 
-> **Definition:** Interchanging $+$ with $\cdot$ and 0 with 1 throughout a Boolean identity produces its **dual**. The **duality principle** states that whenever an equation is an identity in every Boolean algebra, so is its dual.
+> **Definition:** The **dual** of a Boolean identity is the identity obtained by interchanging $+$ with $\cdot$ and 0 with 1 throughout it.
+
+> **Definition:** The **duality principle** states that whenever an equation is an identity in every Boolean algebra, so is its dual.
 
 The duality principle holds because the axioms are paired with their duals. Given a proof of an identity, replacing each step by the dual of the axiom used in that step yields a proof of the dual identity. For example, once $a + a = a$ is proved in Section 4.5, the duality principle gives $a \cdot a = a$ as well.
 

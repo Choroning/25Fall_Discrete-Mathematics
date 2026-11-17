@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 1
 
@@ -273,7 +273,7 @@ For example, let $a_n = 1/n$ and $L = 0$. Given $\varepsilon = 0.01$, choose $N 
 
 The use of the word set as a formal mathematical term began with Georg Cantor in 1879. For most mathematical purposes it is enough to think of a set intuitively, as Cantor did, simply as a collection of elements. For example, if $I$ is the set of all integers from 1 to 100, then 57 is an element of $I$.
 
-> **Definition:** A **set** is a collection of objects, and each object in a set is called an **element** of the set. If $S$ is a set, $x \in S$ means that $x$ is an element of $S$, and $x \notin S$ means that $x$ is not an element of $S$.
+> **Definition:** A **set** is a collection of objects, and each object in a set is called an element of the set. If $S$ is a set, $x \in S$ means that $x$ is an element of $S$, and $x \notin S$ means that $x$ is not an element of $S$.
 
 > **Definition:** **Set-roster notation** specifies a set by writing all of its elements between braces. For example, $\lbrace 1, 2, 3 \rbrace$ is the set whose elements are 1, 2, and 3.
 
@@ -422,7 +422,7 @@ It can be checked step by step that this definition has the property expected of
 
 In both cases $a = c$ and $b = d$, so Kuratowski's definition distinguishes order. However, mathematicians realized that ordered pairs could be defined entirely in terms of sets only long after ordered pairs had been used extensively, and the set notation would be cumbersome to use regularly, so $\lbrace \lbrace a \rbrace, \lbrace a, b \rbrace \rbrace$ is usually written simply as $(a, b)$.
 
-> **Definition:** Given elements $a$ and $b$, the symbol $(a, b)$ denotes the **ordered pair** consisting of $a$ and $b$ together with the specification that $a$ is the **first element** and $b$ is the **second element**. Two ordered pairs $(a, b)$ and $(c, d)$ are equal if, and only if, $a = c$ and $b = d$.
+> **Definition:** Given elements $a$ and $b$, the symbol $(a, b)$ denotes the **ordered pair** consisting of $a$ and $b$ together with the specification that $a$ is the first element and $b$ is the second element. Two ordered pairs $(a, b)$ and $(c, d)$ are equal if, and only if, $a = c$ and $b = d$.
 >
 > ```math
 > (a, b) = (c, d) \iff a = c \text{ and } b = d
@@ -436,7 +436,7 @@ In both cases $a = c$ and $b = d$, so Kuratowski's definition distinguishes orde
 
 The ordered n-tuple generalizes the notation for an ordered pair to any finite number of elements, and it takes both order and multiplicity into account.
 
-> **Definition:** Let $n$ be a positive integer and let $x_1, x_2, \ldots, x_n$ be (not necessarily distinct) elements. The **ordered n-tuple** $(x_1, x_2, \ldots, x_n)$ consists of $x_1, x_2, \ldots, x_n$ together with the ordering: first $x_1$, then $x_2$, and so forth up to $x_n$. An ordered 2-tuple is called an ordered pair, and an ordered 3-tuple is called an **ordered triple**. Two ordered n-tuples are equal if, and only if, all corresponding components are equal.
+> **Definition:** Let $n$ be a positive integer and let $x_1, x_2, \ldots, x_n$ be (not necessarily distinct) elements. The **ordered n-tuple** $(x_1, x_2, \ldots, x_n)$ consists of $x_1, x_2, \ldots, x_n$ together with the ordering: first $x_1$, then $x_2$, and so forth up to $x_n$. An ordered 2-tuple is called an ordered pair, and an ordered 3-tuple is called an ordered triple. Two ordered n-tuples are equal if, and only if, all corresponding components are equal.
 >
 > ```math
 > (x_1, x_2, \ldots, x_n) = (y_1, y_2, \ldots, y_n) \iff x_1 = y_1,\ x_2 = y_2,\ \ldots,\ x_n = y_n
@@ -515,7 +515,11 @@ Both sets have $2 \times 3 \times 2 = 12$ elements, but, for example, $((x, 1), 
 
 Another notation that is important in both mathematics and computer science is the string.
 
-> **Definition:** Let $n$ be a positive integer and let $A$ be a finite set. A **string of length n over A** is an ordered n-tuple of elements of $A$ written without parentheses or commas. The elements of $A$ are called the **characters** of the string. The **null string** over $A$ is the string with no characters; it is often denoted $\lambda$ and is said to have length 0. If $A = \lbrace 0, 1 \rbrace$, a string over $A$ is called a **bit string**.
+> **Definition:** Let $n$ be a positive integer and let $A$ be a finite set. A **string of length n over A** is an ordered n-tuple of elements of $A$ written without parentheses or commas. The elements of $A$ are called the characters of the string.
+
+> **Definition:** The **null string** over $A$ is the string with no characters; it is often denoted $\lambda$ and is said to have length 0.
+
+> **Definition:** If $A = \lbrace 0, 1 \rbrace$, a string over $A$ is called a **bit string**.
 
 For example, the ordered triple $(a, b, a)$ written as a string is $aba$, which has length 3. $0110$ is a bit string of length 4.
 
@@ -581,7 +585,7 @@ Knowing which ordered pairs lie in this set is equivalent to knowing which eleme
 
 ### 3.2 Definition of a Relation
 
-> **Definition:** Let $A$ and $B$ be sets. A **relation** $R$ from $A$ to $B$ is a subset of $A \times B$. Given an ordered pair $(x, y)$ in $A \times B$, $x$ is related to $y$ by $R$, written $x \mathrel{R} y$, if, and only if, $(x, y)$ is in $R$. The set $A$ is called the **domain** of $R$ and the set $B$ is called its **co-domain**.
+> **Definition:** Let $A$ and $B$ be sets. A **relation** $R$ from $A$ to $B$ is a subset of $A \times B$. Given an ordered pair $(x, y)$ in $A \times B$, $x$ is related to $y$ by $R$, written $x \mathrel{R} y$, if, and only if, $(x, y)$ is in $R$. The set $A$ is called the domain of $R$ and the set $B$ is called its co-domain.
 >
 > ```math
 > x \mathrel{R} y \iff (x, y) \in R, \qquad x \not\mathrel{R} y \iff (x, y) \notin R
@@ -851,11 +855,11 @@ A graph is a mathematical structure for modeling relationships between pairs of 
 
 In Figure 13 the vertices are labeled with $v$'s and the edges with $e$'s. An edge that connects a vertex to itself, such as $e_5$, is called a **loop**, and two edges that connect the same pair of vertices, such as $e_2$ and $e_3$, are called **parallel edges**. A vertex that is not connected by any edge to another vertex, such as $v_5$, is called an **isolated vertex**. The formal definitions of these terms are as follows.
 
-> **Definition:** A **graph** $G$ consists of two finite sets: a nonempty set $V(G)$ of **vertices** and a set $E(G)$ of **edges**. Each edge is associated with a set of one or two vertices, called its **endpoints**, and the rule that assigns to each edge its endpoints is called the **edge-endpoint function**.
->
-> An edge whose set of endpoints has a single vertex is a **loop**, and two or more distinct edges with the same set of endpoints are **parallel**. An edge **connects** its endpoints. Two vertices joined by an edge are **adjacent**, and a vertex that is an endpoint of a loop is **adjacent to itself**.
->
-> An edge is **incident on** each of its endpoints, two edges incident on a common endpoint are **adjacent**, and a vertex on which no edge is incident is **isolated**.
+> **Definition:** A **graph** $G$ consists of two finite sets: a nonempty set $V(G)$ of vertices and a set $E(G)$ of edges. Each edge is associated with a set of one or two vertices, called its endpoints, and the rule that assigns to each edge its endpoints is called the edge-endpoint function.
+
+An edge whose set of endpoints has a single vertex is a **loop**, and two or more distinct edges with the same set of endpoints are **parallel**. An edge **connects** its endpoints. Two vertices joined by an edge are **adjacent**, and a vertex that is an endpoint of a loop is **adjacent to itself**.
+
+An edge is **incident on** each of its endpoints, two edges incident on a common endpoint are **adjacent**, and a vertex on which no edge is incident is **isolated**.
 
 > **Caution:** "Adjacent" is used between two vertices or between two edges, whereas "incident on" is used between an edge and a vertex that is its endpoint. Also, by definition $V(G)$ must be nonempty, but $E(G)$ may be empty. A graph with no edges consists only of isolated vertices.
 
@@ -958,7 +962,7 @@ In Figure 18 the named cities are **hubs** connected to one another by edges, an
 
 A **directed graph** differs from an (undirected) graph in one respect: each edge corresponds to an ordered pair of vertices instead of a set of vertices. An edge can therefore be drawn as an arrow from the first vertex of its pair to the second.
 
-> **Definition:** A **directed graph**, or **digraph**, $G$ consists of two finite sets: a nonempty set $V(G)$ of vertices and a set $D(G)$ of **directed edges**, where each directed edge is associated with an ordered pair of vertices called its endpoints. If edge $e$ is associated with the ordered pair $(v, w)$ of vertices, then $e$ is said to be the (directed) edge from $v$ to $w$.
+> **Definition:** A **directed graph**, or digraph, $G$ consists of two finite sets: a nonempty set $V(G)$ of vertices and a set $D(G)$ of directed edges, where each directed edge is associated with an ordered pair of vertices called its endpoints. If edge $e$ is associated with the ordered pair $(v, w)$ of vertices, then $e$ is said to be the (directed) edge from $v$ to $w$.
 
 Each directed graph has an associated ordinary (undirected) graph, obtained by ignoring the directions of the edges.
 

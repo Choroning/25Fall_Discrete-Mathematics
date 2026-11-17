@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-16
+> **최종 수정일:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -123,7 +123,9 @@ $b$와 $u$는 조건을 만족하는 임의의 수였으므로 증명이 끝난�
 
 **사용하는 개념.** 7장 2절의 두 정의와 그 부정을 쓴다. 정의를 한정기호로 쓰면 증명에서 무엇을 가정하고 무엇을 보여야 하는지가 분명해진다.
 
-> **용어 정의:** 함수 $F: X \to Y$가 **일대일 함수(one-to-one function)** 라는 것은 $X$의 모든 원소 $x_1$, $x_2$에 대하여 $F(x_1) = F(x_2)$이면 $x_1 = x_2$라는 뜻이다. $F$가 **위로의 함수(onto function)** 라는 것은 $Y$의 모든 원소 $y$에 대하여 $F(x) = y$인 $X$의 원소 $x$가 존재한다는 뜻이다.
+> **용어 정의:** 함수 $F: X \to Y$가 **일대일 함수(one-to-one function)** 라는 것은 $X$의 모든 원소 $x_1$, $x_2$에 대하여 $F(x_1) = F(x_2)$이면 $x_1 = x_2$라는 뜻이다.
+
+> **용어 정의:** 함수 $F: X \to Y$가 **위로의 함수(onto function)** 라는 것은 $Y$의 모든 원소 $y$에 대하여 $F(x) = y$인 $X$의 원소 $x$가 존재한다는 뜻이다.
 
 부정을 구하면 반례의 형태가 정해진다. $F$가 일대일 함수가 아니라는 것은 $F(x_1) = F(x_2)$이면서 $x_1 \neq x_2$인 $X$의 원소 $x_1$, $x_2$가 존재한다는 뜻이고, $F$가 위로의 함수가 아니라는 것은 모든 $x \in X$에 대하여 $F(x) \neq y$인 $Y$의 원소 $y$가 존재한다는 뜻이다.
 
@@ -211,7 +213,9 @@ f\left(\frac{1}{x}\right) = \frac{\frac{1}{x}}{\frac{1}{x^2} + 1} = \frac{\frac{
 
 **사용하는 개념.** 7장 1절에서 정의한 집합의 상과 역상, 그리고 두 집합이 서로의 부분집합이면 같다는 집합의 상등(6장의 원소 논증)을 쓴다.
 
-> **용어 정의:** $F: X \to Y$가 함수이고 $A \subseteq X$, $C \subseteq Y$일 때, **$A$의 상(image of $`A`$)** 은 $F(A) = \lbrace y \in Y \mid \text{어떤 } x \in A\text{에 대하여 } y = F(x) \rbrace$이고, **$C$의 역상(inverse image of $`C`$)** 은 $F^{-1}(C) = \lbrace x \in X \mid F(x) \in C \rbrace$이다.
+> **용어 정의:** $F: X \to Y$가 함수이고 $A \subseteq X$, $C \subseteq Y$일 때, **$A$의 상(image of $`A`$)** 은 $F(A) = \lbrace y \in Y \mid \text{어떤 } x \in A\text{에 대하여 } y = F(x) \rbrace$이다.
+
+> **용어 정의:** $F: X \to Y$가 함수이고 $C \subseteq Y$일 때, **$C$의 역상(inverse image of $`C`$)** 은 $F^{-1}(C) = \lbrace x \in X \mid F(x) \in C \rbrace$이다.
 
 > **주의:** 여기서 $F^{-1}(B)$는 집합 $B$의 역상이며, $F$의 역함수가 존재한다는 뜻이 아니다. 역상은 일대일 대응이 아닌 함수를 포함한 모든 함수에 대하여 정의된다.
 

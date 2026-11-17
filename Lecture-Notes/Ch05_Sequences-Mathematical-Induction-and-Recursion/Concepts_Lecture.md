@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-10
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 5
 
@@ -88,7 +88,7 @@ The number 2 at position 1 is $2^1$, the number 4 at position 2 is $2^2$, and th
 
 A sequence is usually represented by writing its elements in a row as $a_m, a_{m+1}, a_{m+2}, \ldots, a_n$. Each element $a_k$ (pronounced a sub k) is a **term** of the sequence, and the $k$ attached to it is its **subscript** or **index**. The first subscript $m$, belonging to the **initial term**, can be any integer, and the last subscript $n$, belonging to the **final term**, is an integer with $n \ge m$. The endless notation $a_m, a_{m+1}, a_{m+2}, \ldots$ denotes an **infinite sequence**. Since a sequence is a function, $a_k$ is the value $a(k)$ of the function $a$ at $k$ written with a subscript (functions are in Chapter 1).
 
-> **Definition:** An **explicit formula** (or **general formula**) for a sequence is a rule that gives each term $a_k$ directly as an expression in its subscript $k$.
+> **Definition:** An **explicit formula** (or general formula) for a sequence is a rule that gives each term $a_k$ directly as an expression in its subscript $k$.
 
 **Example 5.1.1 (Two Different Formulas Giving the Same Terms).** Define two sequences $a_1, a_2, a_3, \ldots$ and $b_2, b_3, b_4, \ldots$ by the following explicit formulas.
 
@@ -132,7 +132,7 @@ If the first term had been taken as $a_0$, the same terms could be written as $a
 
 In the ancestor example, the total number of ancestors in the past six generations is $A_1 + A_2 + \cdots + A_6 = 2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 = 126$. Such sums are written compactly in **summation notation**, which uses the capital Greek letter sigma, $\Sigma$.
 
-> **Definition:** If $m$ and $n$ are integers and $m \le n$, the symbol $\sum_{k=m}^{n} a_k$, read the summation from $k$ equals $m$ to $n$ of $a_k$, is the sum of all the terms $a_m, a_{m+1}, a_{m+2}, \ldots, a_n$. The expression $a_m + a_{m+1} + a_{m+2} + \cdots + a_n$ is called the **expanded form** of the sum, $k$ is the **index** of the summation, $m$ is the **lower limit**, and $n$ is the **upper limit**.
+> **Definition:** **Summation notation.** If $m$ and $n$ are integers and $m \le n$, the symbol $\sum_{k=m}^{n} a_k$, read the summation from $k$ equals $m$ to $n$ of $a_k$, is the sum of all the terms $a_m, a_{m+1}, a_{m+2}, \ldots, a_n$. The expression $a_m + a_{m+1} + a_{m+2} + \cdots + a_n$ is called the expanded form of the sum, $k$ is the index of the summation, $m$ is the lower limit, and $n$ is the upper limit.
 
 ```math
 \sum_{k=m}^{n} a_k = a_m + a_{m+1} + a_{m+2} + \cdots + a_n
@@ -278,7 +278,7 @@ Checking with $n = 1$, the left-hand side is $\frac{1}{2} + \frac{2}{3}$, and th
 
 The product of all consecutive positive integers up to a given integer occurs so often in mathematics that it has its own notation.
 
-> **Definition:** For each positive integer $n$, **$n$ factorial**, denoted $n!$, is the product of all the integers from 1 to $n$: $n! = n \cdot (n-1) \cdots 3 \cdot 2 \cdot 1$. **Zero factorial**, $0!$, is defined to be 1.
+> **Definition:** For each positive integer $n$, **$n$ factorial**, denoted $n!$, is the product of all the integers from 1 to $n$: $n! = n \cdot (n-1) \cdots 3 \cdot 2 \cdot 1$. Zero factorial, $0!$, is defined to be 1.
 
 The definition $0! = 1$ may look odd, but, as Chapter 9 shows, it lets many formulas be written without exceptions. The first ten factorials are as follows.
 
@@ -443,13 +443,13 @@ The pattern seems too regular to be a coincidence, so it is reasonable to conjec
 
 So the pattern extends to row 4. Going from row 1 to row 2 works the same way: replacing $\left( 1 - \frac{1}{2} \right)$ on the left-hand side of row 2 by the right-hand side $\frac{1}{2}$ of row 1 gives $\frac{1}{2} \left( 1 - \frac{1}{3} \right) = \frac{1}{2} \cdot \frac{2}{3} = \frac{1}{3}$.
 
-Now check the general case. Suppose $k$ is any integer that is at least 2 and that the pattern of row $k$, $\left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) \cdots \left( 1 - \frac{1}{k} \right) = \frac{1}{k}$, holds. Then the following holds.
+Now check the general case. Suppose $k$ is any integer that is at least 2 and that the pattern of row $k-1$, $\left( 1 - \frac{1}{2} \right) \left( 1 - \frac{1}{3} \right) \cdots \left( 1 - \frac{1}{k} \right) = \frac{1}{k}$, holds. Then the following holds.
 
 ```math
 \left( 1 - \frac{1}{2} \right) \cdots \left( 1 - \frac{1}{k} \right) \left( 1 - \frac{1}{k+1} \right) = \frac{1}{k} \left( 1 - \frac{1}{k+1} \right) = \frac{1}{k} \cdot \frac{(k+1) - 1}{k+1} = \frac{1}{k} \cdot \frac{k}{k+1} = \frac{1}{k+1}
 ```
 
-That is, for every integer $k \ge 2$, if the pattern holds in row $k$, then it also holds in row $k+1$. Since the pattern holds in row 1, it holds in row 2; since it holds in row 2, it holds in row 3; and the argument continues forever, so the pattern holds in every row. This is the basic idea of mathematical induction.
+That is, for every integer $k \ge 2$, if the pattern holds in row $k-1$, then it also holds in row $k$. Since the pattern holds in row 1, it holds in row 2; since it holds in row 2, it holds in row 3; and the argument continues forever, so the pattern holds in every row. This is the basic idea of mathematical induction.
 
 ### 2.2 The Principle of Mathematical Induction
 
@@ -979,7 +979,9 @@ In practice, programs are developed partly by reasoning and partly by experiment
 
 An algorithm is meant to turn a given initial state into a desired final state, and each of these states can be described by a predicate about the input and output variables.
 
-> **Definition:** The **pre-condition** of an algorithm is the predicate that describes its initial state, and the **post-condition** is the predicate that describes its final state.
+> **Definition:** The **pre-condition** of an algorithm is the predicate that describes its initial state.
+
+> **Definition:** The **post-condition** of an algorithm is the predicate that describes its final state.
 
 | Algorithm | Pre-condition | Post-condition |
 |:-----|:-----|:-----|
@@ -1227,7 +1229,9 @@ There are three ways to define a sequence.
 
 A recursive definition of a sequence parallels a proof by mathematical induction: the recurrence relation plays the role of the inductive step, and the initial values play the role of the basis step. Indeed, the possibility of defining sequences recursively and the validity of mathematical induction as a proof method are equivalent facts.
 
-> **Definition:** A **recurrence relation** for a sequence $a_0, a_1, a_2, \ldots$ is a formula expressing each term $a_k$ through some of the terms before it, $a_{k-1}, a_{k-2}, \ldots, a_{k-i}$, where $i$ is an integer with $k - i \ge 0$. When $i$ is a fixed integer, the **initial conditions** of the recurrence relation give the values of $a_0, a_1, \ldots, a_{i-1}$. When $i$ depends on $k$, they give the values of $a_0, a_1, \ldots, a_m$ for some integer $m \ge 0$.
+> **Definition:** A **recurrence relation** for a sequence $a_0, a_1, a_2, \ldots$ is a formula expressing each term $a_k$ through some of the terms before it, $a_{k-1}, a_{k-2}, \ldots, a_{k-i}$, where $i$ is an integer with $k - i \ge 0$.
+
+> **Definition:** When $i$ is a fixed integer in a recurrence relation, the **initial conditions** of the recurrence relation give the values of $a_0, a_1, \ldots, a_{i-1}$. When $i$ depends on $k$, they give the values of $a_0, a_1, \ldots, a_m$ for some integer $m \ge 0$.
 
 **Example 5.6.1 (Computing Terms of a Recursively Defined Sequence).** Define a sequence $c_0, c_1, c_2, \ldots$ recursively as follows.
 

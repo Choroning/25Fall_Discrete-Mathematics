@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -324,12 +324,12 @@ The map $g$ is a one-to-one correspondence from six vertices to six vertices, an
 
 ```mermaid
 graph TD
-    v2((v₂)) --- v1((v₁))
-    v2 --- v3((v₃))
-    v2 --- v4((v₄))
-    v4 --- v5((v₅))
-    v3 --- v6((v₆))
-    v6 --- v7((v₇))
+    v2((v2)) --- v1((v1))
+    v2 --- v3((v3))
+    v2 --- v4((v4))
+    v4 --- v5((v5))
+    v3 --- v6((v6))
+    v6 --- v7((v7))
     classDef leaf fill:#fde2cf,stroke:#e8590c
     class v1,v5,v7 leaf
 ```
@@ -340,13 +340,13 @@ graph TD
 
 ```mermaid
 graph TD
-    v4((v₄)) --- v3((v₃))
-    v3 --- v1((v₁))
-    v4 --- v2((v₂))
-    v4 --- v5((v₅))
-    v4 --- v7((v₇))
-    v7 --- v6((v₆))
-    v7 --- v8((v₈))
+    v4((v4)) --- v3((v3))
+    v3 --- v1((v1))
+    v4 --- v2((v2))
+    v4 --- v5((v5))
+    v4 --- v7((v7))
+    v7 --- v6((v6))
+    v7 --- v8((v8))
     classDef leaf fill:#fde2cf,stroke:#e8590c
     class v1,v2,v5,v6,v8 leaf
 ```
@@ -371,14 +371,14 @@ No such tree exists. By Theorem 10.4.2, a tree with nine vertices must have exac
 
 ```mermaid
 graph LR
-    u1((u₁)) --- u2((u₂))
-    u2 --- u3((u₃))
-    u3 --- u4((u₄))
-    u4 --- u5((u₅))
-    u2 --- u6((u₆))
-    u6 --- u7((u₇))
-    u3 --- u8((u₈))
-    u8 --- u9((u₉))
+    u1((u1)) --- u2((u2))
+    u2 --- u3((u3))
+    u3 --- u4((u4))
+    u4 --- u5((u5))
+    u2 --- u6((u6))
+    u6 --- u7((u7))
+    u3 --- u8((u8))
+    u8 --- u9((u9))
     u5 -.- u9
 ```
 

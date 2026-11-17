@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-17
 >
 > Discrete Mathematics with Applications, Epp, Ch 10, 11
 
@@ -44,25 +44,25 @@
 
 ```mermaid
 graph TD
-    v0((v₀)) --- v1((v₁))
-    v0 --- v2((v₂))
-    v1 --- v3((v₃))
-    v1 --- v4((v₄))
-    v1 --- v5((v₅))
-    v2 --- v6((v₆))
-    v3 --- v7((v₇))
-    v5 --- v8((v₈))
-    v5 --- v9((v₉))
-    v6 --- v10((v₁₀))
-    v6 --- v11((v₁₁))
-    v6 --- v12((v₁₂))
-    v8 --- v13((v₁₃))
-    v10 --- v14((v₁₄))
-    v10 --- v15((v₁₅))
-    v10 --- v16((v₁₆))
-    v12 --- v17((v₁₇))
-    v17 --- v18((v₁₈))
-    v17 --- v19((v₁₉))
+    v0((v0)) --- v1((v1))
+    v0 --- v2((v2))
+    v1 --- v3((v3))
+    v1 --- v4((v4))
+    v1 --- v5((v5))
+    v2 --- v6((v6))
+    v3 --- v7((v7))
+    v5 --- v8((v8))
+    v5 --- v9((v9))
+    v6 --- v10((v10))
+    v6 --- v11((v11))
+    v6 --- v12((v12))
+    v8 --- v13((v13))
+    v10 --- v14((v14))
+    v10 --- v15((v15))
+    v10 --- v16((v16))
+    v12 --- v17((v17))
+    v17 --- v18((v18))
+    v17 --- v19((v19))
 ```
 
 *Figure 1. The rooted tree of Exercise 10.5.2*

@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -131,6 +131,8 @@ Let $G$ be a graph, and let $v$ and $w$ be vertices of $G$.
 > **Definition:** A **trail** from $v$ to $w$ is a walk from $v$ to $w$ that does not contain a repeated edge.
 
 > **Definition:** A **path** from $v$ to $w$ is a trail that does not contain a repeated vertex.
+
+The three definitions above classify travel from $v$ to $w$ by whether repeated edges and vertices are allowed. A walk that returns to its starting vertex is treated separately, and it too receives three names according to how much repetition of edges and vertices is allowed.
 
 > **Definition:** A **closed walk** is a walk that starts and ends at the same vertex.
 

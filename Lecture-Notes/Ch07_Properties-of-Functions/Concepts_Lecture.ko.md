@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -984,6 +984,8 @@ graph LR
 > **용어 정의:** 공집합이거나 어떤 양의 정수 $n$에 대하여 $\lbrace1, 2, \ldots, n\rbrace$과 일대일 대응을 이룰 수 있는 집합을 **유한(finite)** 하다고 한다.
 
 > **용어 정의:** 양의 정수 전체의 집합 $\mathbf{Z}^{+}$와 기수가 같은 집합을 **가산 무한(countably infinite)** 하다고 한다.
+
+유한 집합은 원소를 1부터 $n$까지 세면 모두 셀 수 있고, 가산 무한 집합은 위와 같이 $\mathbf{Z}^{+}$의 순서를 따라 끝없이 하나씩 셀 수 있다. 두 경우 모두 모든 원소가 정확히 한 번씩 세어지므로 두 종류의 집합을 하나의 이름으로 묶는다.
 
 > **용어 정의:** 유한하거나 가산 무한한 집합을 **가산(countable)** 이라 한다.
 

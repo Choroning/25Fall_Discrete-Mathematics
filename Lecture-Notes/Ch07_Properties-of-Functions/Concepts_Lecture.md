@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 7
 
@@ -984,6 +984,8 @@ graph LR
 > **Definition:** A set is **finite** if, and only if, it is empty or there is a one-to-one correspondence between it and $\lbrace1, 2, \ldots, n\rbrace$ for some positive integer $n$.
 
 > **Definition:** A set is **countably infinite** if, and only if, it has the same cardinality as the set $\mathbf{Z}^{+}$ of positive integers.
+
+A finite set can be counted completely by counting from 1 to $n$, and a countably infinite set can be counted one element at a time, without end, following the order of $\mathbf{Z}^{+}$ as above. In both cases every element is counted exactly once, so the two kinds of sets are grouped under one name.
 
 > **Definition:** A set is **countable** if, and only if, it is finite or countably infinite.
 

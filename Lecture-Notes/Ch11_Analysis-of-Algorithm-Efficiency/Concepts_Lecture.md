@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 11
 
@@ -25,7 +25,7 @@
   - [1.5 Multiples of a Function and Their Graphs](#15-multiples-of-a-function-and-their-graphs)
   - [1.6 Increasing and Decreasing Functions](#16-increasing-and-decreasing-functions)
 - [2. Big-O, Big-Omega, and Big-Theta Notations](#2-big-o-big-omega-and-big-theta-notations)
-  - [2.1 Why Compare Algorithm Efficiency](#21-why-compare-algorithm-efficiency)
+  - [2.1 Reasons to Compare Algorithm Efficiency](#21-reasons-to-compare-algorithm-efficiency)
   - [2.2 Definitions of the Three Order Notations](#22-definitions-of-the-three-order-notations)
   - [2.3 Translating Inequalities into Order Notation](#23-translating-inequalities-into-order-notation)
   - [2.4 Relations among the Three Notations](#24-relations-among-the-three-notations)
@@ -197,7 +197,7 @@ In the same way, a positive multiple of a decreasing function is decreasing, a n
 
 ## 2. Big-O, Big-Omega, and Big-Theta Notations
 
-### 2.1 Why Compare Algorithm Efficiency
+### 2.1 Reasons to Compare Algorithm Efficiency
 
 How efficient an algorithm is matters well beyond theory. In industry and science, a faster algorithm can cut costs substantially, and sometimes it determines whether a computation is feasible at all. The two resources that most affect the cost and feasibility of running an algorithm are the computing time and the memory it needs. This chapter develops the basic techniques for measuring time, which is usually the more important of the two. When one algorithm needs less time but more memory than another, however, the choice between them depends on which resources are available.
 

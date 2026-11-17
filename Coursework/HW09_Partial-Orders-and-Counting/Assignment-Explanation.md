@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 8, 9
 
@@ -55,7 +55,7 @@ Taking the negation, $R$ is not antisymmetric when there are $a$ and $b$ with $`
 
 **Solution.** In each relation, for every ordered pair $(a, b)$ of distinct elements, check whether the reversed pair $(b, a)$ is also in the relation.
 
-| Relation | Ordered pairs of distinct elements | Pairs whose reversal is also present | Antisymmetric? |
+| Relation | Ordered pairs of distinct elements | Pairs whose reversal is also present | Antisymmetric |
 |:---:|:---|:---|:---:|
 | $R_1$ | $(0, 2)$, $(1, 0)$, $(1, 3)$, $(3, 0)$, $(3, 1)$ | $(1, 3)$ and $(3, 1)$ | No |
 | $R_2$ | $(0, 1)$, $(0, 2)$, $(1, 2)$, $(1, 3)$, $(3, 2)$ | None | Yes |
@@ -215,7 +215,7 @@ Decide, with justification, whether $R$ is a total order relation on $A$.
 
 **(3) Transitive.** Cases involving a loop ($`x \, R \, x`$ and $`x \, R \, z`$ give $`x \, R \, z`$) are trivial, so only the cases in which two non-loop pairs are linked by a middle element need checking.
 
-| $`x \, R \, y`$ | $`y \, R \, z`$ | Required $`x \, R \, z`$ | In $R$? |
+| $`x \, R \, y`$ | $`y \, R \, z`$ | Required $`x \, R \, z`$ | In $R$ |
 |:---:|:---:|:---:|:---:|
 | $(c, a)$ | $(a, d)$ | $(c, d)$ | Yes |
 | $(b, c)$ | $(c, a)$ | $(b, a)$ | Yes |

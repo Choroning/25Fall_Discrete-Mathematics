@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 2, 3
 
@@ -308,7 +308,7 @@ The first part is true because every integer $n$ can be written as $\frac{n}{1}$
 
 **Solution.** The original statement is "$`\forall`$ dogs $x$, $x$ is loyal", so its negation is "$`\exists`$ a dog $x$ such that $x$ is not loyal". Write each choice formally and compare it with this negation.
 
-| Item | Formal expression | Negation? |
+| Item | Formal expression | Negation |
 |:---:|:-----|:-----|
 | (a) | $\forall$ dogs $x$, $x$ is not loyal | No. If loyal and disloyal dogs are mixed, both the original statement and (a) are false. |
 | (b) | $\forall$ dogs $x$, $x$ is not loyal | No. It is the same statement as (a). |

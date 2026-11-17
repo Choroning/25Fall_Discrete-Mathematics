@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -436,7 +436,7 @@ Output: answer (a string)
 
 **예제 6.1.13 (알고리즘 6.1.1의 추적).** $m = 3$, $n = 4$이고 $a[1] = u$, $a[2] = v$, $a[3] = w$, $b[1] = w$, $b[2] = x$, $b[3] = y$, $b[4] = u$일 때 변수 $i$, $j$, `found`, `answer`의 변화를 추적한다. 표의 각 행은 안쪽 반복에서 비교를 한 번 한 뒤의 상태이며, 그 비교로 안쪽 반복이 끝나는 행의 `answer`는 바깥 반복의 `if` 문까지 실행한 뒤의 값이다.
 
-| 비교 | $i$ | $a[i]$ | $j$ | $b[j]$ | $a[i] = b[j]$? | found | answer |
+| 비교 | $i$ | $a[i]$ | $j$ | $b[j]$ | $a[i] = b[j]$ 여부 | found | answer |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | 1 | 1 | $u$ | 1 | $w$ | 아니오 | no | A ⊆ B |
 | 2 | 1 | $u$ | 2 | $x$ | 아니오 | no | A ⊆ B |

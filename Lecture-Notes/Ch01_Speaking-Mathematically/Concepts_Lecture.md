@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 1
 
@@ -599,7 +599,7 @@ Knowing which ordered pairs lie in this set is equivalent to knowing which eleme
 
 (a) $A \times B = \lbrace (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3) \rbrace$. To determine the elements of $R$, examine whether each ordered pair in $A \times B$ satisfies the defining condition.
 
-| Ordered Pair $(x, y)$ | $\frac{x - y}{2}$ | Integer? | In $R$? |
+| Ordered Pair $(x, y)$ | $\frac{x - y}{2}$ | Integer | In $R$ |
 |:-----|:-----|:-----|:-----|
 | $(1, 1)$ | $\frac{0}{2} = 0$ | Yes | $(1, 1) \in R$ |
 | $(1, 2)$ | $\frac{-1}{2}$ | No | $(1, 2) \notin R$ |

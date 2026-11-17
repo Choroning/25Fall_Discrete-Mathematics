@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -75,7 +75,7 @@ Any five integers satisfying the condition are a correct answer; for example, $0
 
 **Solution.**
 
-| Part | First two characters of $s$ | First two characters of $t$ | Is $`s \, R \, t`$? |
+| Part | First two characters of $s$ | First two characters of $t$ | $`s \, R \, t`$ holds |
 |:---:|:---:|:---:|:---:|
 | (a) $abaa$, $abba$ | $ab$ | $ab$ | Yes |
 | (b) $aabb$, $bbaa$ | $aa$ | $bb$ | No |

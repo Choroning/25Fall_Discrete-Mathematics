@@ -247,7 +247,7 @@ This scheme makes a limited amount of error correction possible. If a block of t
 |:-----|:---:|:---:|:---:|:---:|:---:|
 | $s = 00101$ | 0 | 0 | 1 | 0 | 1 |
 | $t = 01110$ | 0 | 1 | 1 | 1 | 0 |
-| Different? | same | differ | same | differ | differ |
+| Match | same | differ | same | differ | differ |
 
 *Table 2. Position-by-position comparison of 00101 and 01110*
 
@@ -627,7 +627,7 @@ Suppose a function $F: X \to Y$ is both one-to-one and onto. Given an element $x
 
 **Example 7.2.8 (A Function from a Power Set to a Set of Strings).** $\mathcal{P}(\lbrace a, b\rbrace) = \lbrace\emptyset, \lbrace a\rbrace, \lbrace b\rbrace, \lbrace a, b\rbrace\rbrace$, and let $S = \lbrace00, 01, 10, 11\rbrace$ be the set of all strings of 0's and 1's of length 2. Define a function $h: \mathcal{P}(\lbrace a, b\rbrace) \to S$ as follows. For a subset $A$ of $\lbrace a, b\rbrace$, each of $a$ and $b$ either belongs to $A$ or does not. The first character of $h(A)$ is 1 if $a \in A$ and 0 otherwise. Likewise, the second character is 1 if $b \in A$ and 0 otherwise.
 
-| Subset $A$ of $\lbrace a, b\rbrace$ | Is $a$ in $A$? | Is $b$ in $A$? | $h(A)$ |
+| Subset $A$ of $\lbrace a, b\rbrace$ | $a$ in $A$ | $b$ in $A$ | $h(A)$ |
 |:---:|:---:|:---:|:---:|
 | $\emptyset$ | no | no | 00 |
 | $\lbrace a\rbrace$ | yes | no | 10 |

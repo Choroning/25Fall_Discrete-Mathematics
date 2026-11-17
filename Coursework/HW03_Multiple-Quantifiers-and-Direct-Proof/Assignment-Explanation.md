@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 3, 4
 
@@ -93,7 +93,7 @@ For the original statement to be true, $y = 1 - x$ must belong to $E$ for each $
 | $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ |
 |:-----|:---:|:---:|:---:|:---:|:---:|
 | Required $y = 1 - x$ | $3$ | $2$ | $1$ | $0$ | $-1$ |
-| Is $y \in E$? | no | yes | yes | yes | yes |
+| $y \in E$ holds | no | yes | yes | yes | yes |
 
 *Table 2. The value of $`y`$ required for each $`x`$ in (a)*
 

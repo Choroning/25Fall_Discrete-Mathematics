@@ -142,7 +142,7 @@ The three definitions above classify travel from $v$ to $w$ by whether repeated 
 
 The number of edges in a walk, with a repeated edge counted each time it occurs, is called the **length** of the walk. For example, $v_0 e_1 v_1 e_2 v_2$ has length 2 and the trivial walk has length 0. The differences among the six kinds of travel are summarized in the following table.
 
-| Name | Repeated edge | Repeated vertex | Starts and ends at the same point? | Must contain at least one edge? |
+| Name | Repeated edge | Repeated vertex | Same start and end point | At least one edge required |
 |:-----|:-----|:-----|:-----|:-----|
 | Walk | allowed | allowed | allowed | no |
 | Trail | no | allowed | allowed | no |

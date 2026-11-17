@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 6
 
@@ -436,7 +436,7 @@ The answer changes only once, from its initial value "A ⊆ B", when a counterex
 
 **Example 6.1.13 (Tracing Algorithm 6.1.1).** Trace the variables $i$, $j$, `found`, and `answer` for $m = 3$, $n = 4$, $a[1] = u$, $a[2] = v$, $a[3] = w$, $b[1] = w$, $b[2] = x$, $b[3] = y$, $b[4] = u$. Each row of the table is the state after one comparison in the inner loop; in a row where that comparison ends the inner loop, `answer` shows its value after the `if` statement of the outer loop has also been executed.
 
-| Comparison | $i$ | $a[i]$ | $j$ | $b[j]$ | $a[i] = b[j]$? | found | answer |
+| Comparison | $i$ | $a[i]$ | $j$ | $b[j]$ | $a[i] = b[j]$ holds | found | answer |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | 1 | 1 | $u$ | 1 | $w$ | no | no | A ⊆ B |
 | 2 | 1 | $u$ | 2 | $x$ | no | no | A ⊆ B |

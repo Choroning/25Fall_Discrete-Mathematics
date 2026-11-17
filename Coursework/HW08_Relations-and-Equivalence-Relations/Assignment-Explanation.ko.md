@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -75,7 +75,7 @@
 
 **풀이.**
 
-| 문항 | $s$의 처음 두 글자 | $t$의 처음 두 글자 | $`s \, R \, t`$인가 |
+| 문항 | $s$의 처음 두 글자 | $t$의 처음 두 글자 | $`s \, R \, t`$ 성립 여부 |
 |:---:|:---:|:---:|:---:|
 | (a) $abaa$, $abba$ | $ab$ | $ab$ | 그렇다 |
 | (b) $aabb$, $bbaa$ | $aa$ | $bb$ | 아니다 |

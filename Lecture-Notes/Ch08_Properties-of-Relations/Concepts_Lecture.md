@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -403,7 +403,7 @@ graph LR
 - $S$ is not symmetric. $(0, 2) \in S$ but $(2, 0) \notin S$.
 - $S$ is transitive. For the hypothesis $(x, y) \in S$, $(y, z) \in S$ of transitivity to hold, the second component of the first pair must equal the first component of the second pair. Table 4 lists all such linked combinations of ordered pairs, and in each case the required pair $(x, z)$ is in $S$.
 
-| $(x, y) \in S$ | $(y, z) \in S$ | Required $(x, z)$ | $(x, z) \in S$? |
+| $(x, y) \in S$ | $(y, z) \in S$ | Required $(x, z)$ | $(x, z) \in S$ holds |
 |:---:|:---:|:---:|:---:|
 | $(0, 0)$ | $(0, 0)$ | $(0, 0)$ | Yes |
 | $(0, 0)$ | $(0, 2)$ | $(0, 2)$ | Yes |

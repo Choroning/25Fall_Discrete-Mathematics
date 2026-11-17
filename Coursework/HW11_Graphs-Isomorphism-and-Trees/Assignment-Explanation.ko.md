@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -292,7 +292,7 @@ $g$와 $h$는 모두 일대일 대응이고, 표 5의 모든 행에서 $h(e)$의
 3. **꼭짓점 대응 $g$.** 이 구조를 맞추어 $g(f) = z$, $g(c) = y$, $g(a) = u$, $g(b) = v$, $g(e) = w$, $g(d) = x$로 둔다.
 4. **변의 확인.** $G$의 변 7개를 모두 옮긴다.
 
-| $G$의 변 | $g$로 옮긴 쌍 | $G'$의 변인가 |
+| $G$의 변 | $g$로 옮긴 쌍 | $G'$의 변 여부 |
 |:---:|:---:|:---:|
 | $\lbrace a, b\rbrace$ | $\lbrace u, v\rbrace$ | 예 |
 | $\lbrace a, f\rbrace$ | $\lbrace u, z\rbrace$ | 예 |

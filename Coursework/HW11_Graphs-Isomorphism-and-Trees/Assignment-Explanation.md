@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -292,7 +292,7 @@ Both $g$ and $h$ are one-to-one correspondences, and in every row of Table 5 the
 3. **Vertex correspondence $g$.** Matching this structure, let $g(f) = z$, $g(c) = y$, $g(a) = u$, $g(b) = v$, $g(e) = w$, and $g(d) = x$.
 4. **Checking the edges.** Move all seven edges of $G$.
 
-| Edge of $G$ | Pair moved by $g$ | Edge of $G'$? |
+| Edge of $G$ | Pair moved by $g$ | Edge of $G'$ |
 |:---:|:---:|:---:|
 | $\lbrace a, b\rbrace$ | $\lbrace u, v\rbrace$ | yes |
 | $\lbrace a, f\rbrace$ | $\lbrace u, z\rbrace$ | yes |

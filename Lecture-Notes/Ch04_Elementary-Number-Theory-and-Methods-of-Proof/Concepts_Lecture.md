@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -58,7 +58,7 @@
   - [7.4 Proof as a Problem-Solving Tool](#74-proof-as-a-problem-solving-tool)
 - [8. Indirect Argument: Two Famous Theorems](#8-indirect-argument-two-famous-theorems)
   - [8.1 The Irrationality of √2](#81-the-irrationality-of-2)
-  - [8.2 Are There Infinitely Many Prime Numbers?](#82-are-there-infinitely-many-prime-numbers)
+  - [8.2 The Infinitude of Primes](#82-the-infinitude-of-primes)
   - [8.3 When to Use Indirect Proof](#83-when-to-use-indirect-proof)
   - [8.4 Open Questions in Number Theory](#84-open-questions-in-number-theory)
 - [Concept Applications](#concept-applications)
@@ -1317,7 +1317,7 @@ Once the irrationality of $\sqrt{2}$ is known, the irrationality of other real n
 
 Dividing both sides by 3 gives $\sqrt{2} = \frac{a - b}{3b}$. Since $a$ and $b$ are integers and differences and products of integers are integers, $a - b$ and $3b$ are integers, and $3b \ne 0$ by the zero product property. Hence $\sqrt{2}$ is a quotient of the two integers $a - b$ and $3b$ with a nonzero denominator, so it is rational by definition of rational. This contradicts the fact that $\sqrt{2}$ is irrational. [This contradiction shows that the supposition is false.] Hence $1 + 3\sqrt{2}$ is irrational.
 
-### 8.2 Are There Infinitely Many Prime Numbers?
+### 8.2 The Infinitude of Primes
 
 A prime number is an integer greater than 1 that cannot be written as a product of two smaller positive integers. Is the set of all primes infinite, or is there a largest prime? The answer was known to Euclid, and a proof that there are infinitely many primes appears in Book 9 of his Elements. Euclid's proof needs one fact not yet established: if a prime number divides an integer, then it does not divide the next integer.
 

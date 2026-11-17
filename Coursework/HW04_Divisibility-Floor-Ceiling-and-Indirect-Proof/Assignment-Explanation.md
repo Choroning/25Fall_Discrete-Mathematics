@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Assignment-Explanation.md) | [한국어](Assignment-Explanation.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-18
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -58,7 +58,7 @@ For example, $k = 1$ gives $4 \cdot 5 \cdot 6 = 120 = 3 \cdot 40$, and $k = -2$ 
 
 > **Caution:** Do not name the integer in the definition with the same letter as a variable of the problem. Writing $(3k+1)(3k+2)(3k+3) = 3k$ mixes it up with the $k$ already in use and produces an entirely different equation. When applying the definition, use a new letter ($m$ here).
 
-> **Note:** $3k + 1$, $3k + 2$, and $3k + 3$ are three consecutive integers. Splitting the integers into the forms $3q$, $3q + 1$, and $3q + 2$ by the quotient-remainder theorem shows that one of any three consecutive integers is a multiple of 3, so the product of three consecutive integers is always divisible by 3. In this problem that multiple appears openly as $3k + 3$.
+$3k + 1$, $3k + 2$, and $3k + 3$ are three consecutive integers. Splitting the integers into the forms $3q$, $3q + 1$, and $3q + 2$ by the quotient-remainder theorem shows that one of any three consecutive integers is a multiple of 3, so the product of three consecutive integers is always divisible by 3. In this problem that multiple appears openly as $3k + 3$.
 
 ---
 
@@ -83,7 +83,7 @@ For example, if $a = 3$, $b = 6$, and $c = 9$, then $r = 2$, $s = 3$, and $b + c
 
 > **Caution:** Do not use the same letter for the two integers in steps 2 and 3. Writing $b = ak$ and $c = ak$ adds the condition $b = c$, which is not in the hypothesis, and the proof then fails to cover the cases with $b \ne c$. Integers obtained from different existential statements need different letters.
 
-> **Note:** The same method proves that if $a \mid b$ and $a \mid c$ then $a \mid (b - c)$ (exercise 4.4.16), because $b - c = ar - as = a(r - s)$. This property of sums is also used to prove the test that a number whose digit sum is divisible by 9 is itself divisible by 9 (exercise 4.4.47).
+The same method proves that if $a \mid b$ and $a \mid c$ then $a \mid (b - c)$ (exercise 4.4.16), because $b - c = ar - as = a(r - s)$. This property of sums is also used to prove the test that a number whose digit sum is divisible by 9 is itself divisible by 9 (exercise 4.4.47).
 
 ---
 
@@ -141,7 +141,7 @@ The quantity $m$ in parentheses is a sum of products of integers, so it is an in
 
 For example, $2{,}530 = 10 \cdot 253 = 5 \cdot 506$.
 
-> **Note:** Showing from $n = 10m$ that $n/5 = 2m$ is an integer leads to the same conclusion, because for $d \ne 0$, $d \mid n$ is equivalent to $n/d$ being an integer. Since the definition is stated as a product, however, writing $n = 5 \cdot (\text{an integer})$ is the proof that applies the definition as it stands.
+Showing from $n = 10m$ that $n/5 = 2m$ is an integer leads to the same conclusion, because for $d \ne 0$, $d \mid n$ is equivalent to $n/d$ being an integer. Since the definition is stated as a product, however, writing $n = 5 \cdot (\text{an integer})$ is the proof that applies the definition as it stands.
 
 > **Note:** The case of last digit 5 is the same: $n = 10m + 5 = 5(2m + 1)$, so $5 \mid n$ (exercise 4.4.45). Conversely, if $5 \mid n$, then since $5 \mid 10m$, the difference property of exercise 4.4.16 shows that $d_0 = n - 10m$ is divisible by 5, and since $0 \le d_0 \le 9$, $d_0$ is 0 or 5. Therefore a nonnegative integer is divisible by 5 if, and only if, its last digit is 0 or 5.
 
@@ -168,7 +168,7 @@ For example, for $n = 42$ and $d = 7$, $42 = 7 \cdot 6 + 0$; for $n = -12$ and $
 
 > **Caution:** The uniqueness in step 4 is what determines the answer. The equation $n = dq + r$ alone is satisfied by other pairs as well, as in $12 = 4 \cdot 2 + 4$, but such a pair fails $r < d$. The quotient-remainder theorem guarantees that exactly one pair also satisfies $0 \le r < d$, so once a pair meeting all the conditions is found, it is the unique quotient and remainder.
 
-> **Note:** Uniqueness can be shown as follows. Suppose $n = dq_1 + r_1 = dq_2 + r_2$ with $0 \le r_1 < d$ and $0 \le r_2 < d$. Then $r_2 - r_1 = d(q_1 - q_2)$, so $r_2 - r_1$ is a multiple of $d$. But the two inequalities give $-d < r_2 - r_1 < d$, and the only multiple of $d$ in this range is 0, so $r_1 = r_2$, and since $d \ne 0$, $q_1 = q_2$.
+Uniqueness can be shown as follows. Suppose $n = dq_1 + r_1 = dq_2 + r_2$ with $0 \le r_1 < d$ and $0 \le r_2 < d$. Then $r_2 - r_1 = d(q_1 - q_2)$, so $r_2 - r_1$ is a multiple of $d$. But the two inequalities give $-d < r_2 - r_1 < d$, and the only multiple of $d$ in this range is 0, so $r_1 = r_2$, and since $d \ne 0$, $q_1 = q_2$.
 
 > **Key Point:** For a positive integer $d$ and an integer $n$, $d \mid n$ and $n$ mod $d = 0$ are equivalent. This exercise shows the forward direction, and the converse holds because $n$ mod $d = 0$ gives $n = dq$, so $d \mid n$ by definition.
 
@@ -203,7 +203,7 @@ For example, $k = 3$ gives $\lceil 3.5 \rceil = 4$.
 
 > **Caution:** Negative integers give the same answer. For $k = -2$, $k + \frac{1}{2} = -1.5$, and since $-2 < -1.5 \le -1$, $\lceil -1.5 \rceil = -1 = k + 1$. Misreading the ceiling as rounding away from 0 gives the wrong answer $-2$. The ceiling is always the integer on the right (larger) side on the number line.
 
-> **Note:** For comparison, $\lfloor k + \frac{1}{2} \rfloor = k$ (Example 4.6.3). In general, if $x$ is not an integer then $\lfloor x \rfloor$ and $\lceil x \rceil$ are consecutive integers with $\lceil x \rceil = \lfloor x \rfloor + 1$, and if $x$ is an integer then $\lfloor x \rfloor = \lceil x \rceil = x$.
+For comparison, $\lfloor k + \frac{1}{2} \rfloor = k$ (Example 4.6.3). In general, if $x$ is not an integer then $\lfloor x \rfloor$ and $\lceil x \rceil$ are consecutive integers with $\lceil x \rceil = \lfloor x \rfloor + 1$, and if $x$ is an integer then $\lfloor x \rfloor = \lceil x \rceil = x$.
 
 ---
 
@@ -260,7 +260,7 @@ Step (1) adds $7\sqrt{2} - \frac{a}{b}$ to both sides of the equation in step 2 
 
 > **Caution:** Obtaining $6 - 7\sqrt{2} \approx -3.8994949\ldots$ on a calculator does not prove irrationality. Every terminating decimal shown on a display is rational, and irrationality depends on the infinite property that the decimal expansion neither terminates nor repeats, which no finite number of digits can decide.
 
-> **Note:** The same argument shows that if $p$ and $q$ are rational and $q \ne 0$, then $p + q\sqrt{2}$ is irrational. If $p + q\sqrt{2}$ were a rational number $s$, then since differences of rationals and quotients by nonzero rationals are rational, $\sqrt{2} = (s - p)/q$ would be rational. This exercise is the case $p = 6$, $q = -7$. If $q = 0$, then $p + q\sqrt{2} = p$ is rational, so the condition $q \ne 0$ cannot be dropped.
+The same argument shows that if $p$ and $q$ are rational and $q \ne 0$, then $p + q\sqrt{2}$ is irrational. If $p + q\sqrt{2}$ were a rational number $s$, then since differences of rationals and quotients by nonzero rationals are rational, $\sqrt{2} = (s - p)/q$ would be rational. This exercise is the case $p = 6$, $q = -7$. If $q = 0$, then $p + q\sqrt{2} = p$ is rational, so the condition $q \ne 0$ cannot be dropped.
 
 ---
 
@@ -287,7 +287,7 @@ In all four cases $p > 1$, so $0 \le 1 < p$ holds, and each equation is therefor
 
 **Answer.** The remainder is 1 for each of 2, 3, 5, and 7.
 
-> **Note:** The remainder can also be found without guessing it first. Write $N = 3q + r$ with $0 \le r < 3$. Then $r - 1 = (N - 1) - 3q = 3(2 \cdot 5 \cdot 7) - 3q = 3(70 - q)$, so $3 \mid (r - 1)$. The only multiple of 3 in the range $-1 \le r - 1 < 2$ is 0, so $r = 1$. The divisors 2, 5, and 7 are handled the same way.
+The remainder can also be found without guessing it first. Write $N = 3q + r$ with $0 \le r < 3$. Then $r - 1 = (N - 1) - 3q = 3(2 \cdot 5 \cdot 7) - 3q = 3(70 - q)$, so $3 \mid (r - 1)$. The only multiple of 3 in the range $-1 \le r - 1 < 2$ is 0, so $r = 1$. The divisors 2, 5, and 7 are handled the same way.
 
 > **Key Point:** This computation is the heart of the proof of Theorem 4.8.4 (the infinitude of the primes). If 2, 3, 5, and 7 were the only primes, then $N$, being an integer greater than 1, would be divisible by some prime by Theorem 4.4.4. But as Table 1 shows, division by any of these primes leaves remainder 1, which is a contradiction.
 

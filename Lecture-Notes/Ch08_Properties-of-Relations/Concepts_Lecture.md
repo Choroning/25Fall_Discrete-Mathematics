@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-18
+> **Last Updated:** 2026-11-19
 >
 > Discrete Mathematics with Applications, Epp, Ch 8
 
@@ -430,53 +430,7 @@ graph LR
 
 > **Caution:** $T$ is transitive because it cannot fail to be transitive. A conditional statement is true when its hypothesis is false (Chapter 2), so a relation with no linked ordered pairs is always transitive. For the same reason, the empty relation on any set is symmetric and transitive.
 
-Computer algorithms can check whether a relation on a finite set $A$ has the three properties. Put the elements of $A$ in an array, and check reflexivity with a single loop over the elements $a$ testing $(a, a) \in R$, symmetry with a nested loop over all pairs $(a, b)$, and transitivity with a triply nested loop over all triples $(a, b, c)$. As soon as a counterexample appears, the property fails. The following is a Python version of this method.
-
-```python
-def is_reflexive(A, R):
-    for a in A:
-        if (a, a) not in R:
-            return False
-    return True
-
-
-def is_symmetric(A, R):
-    for a in A:
-        for b in A:
-            if (a, b) in R and (b, a) not in R:
-                return False
-    return True
-
-
-def is_transitive(A, R):
-    for a in A:
-        for b in A:
-            for c in A:
-                if (a, b) in R and (b, c) in R and (a, c) not in R:
-                    return False
-    return True
-
-
-A = [0, 1, 2, 3]
-R = {(0, 0), (0, 1), (0, 3), (1, 0), (1, 1), (2, 2), (3, 0), (3, 3)}
-S = {(0, 0), (0, 2), (0, 3), (2, 3)}
-T = {(0, 1), (2, 3)}
-for name, rel in [("R", R), ("S", S), ("T", T)]:
-    print(name, is_reflexive(A, rel), is_symmetric(A, rel), is_transitive(A, rel))
-```
-
-- `is_reflexive` visits the elements `a` of $A$ in turn and returns `False` immediately if the pair `(a, a)` is not in `R`, because one counterexample shows that the relation is not reflexive. If the loop runs to the end, there is no counterexample, so it returns `True`.
-- `is_symmetric` checks every pair `(a, b)` with a nested loop, looking for a counterexample in which `(a, b)` is in `R` but `(b, a)` is not.
-- `is_transitive` checks every `(a, b, c)` with a triply nested loop, looking for a counterexample in which `(a, b)` and `(b, c)` are in `R` but `(a, c)` is not.
-- A relation is stored as a `set` of ordered pairs (tuples), so the `in` operator tests whether an ordered pair belongs to the relation. The last loop applies the three functions to the three relations and prints the name and the results.
-
-```text
-R True True False
-S False False True
-T False False True
-```
-
-The output agrees with the decisions above. If $A$ has $n$ elements, the three functions check at most $n$, $n^2$, and $n^3$ cases, respectively.
+Computer algorithms can check whether a relation on a finite set $A$ has the three properties. Put the elements of $A$ in an array, and check reflexivity with a single loop over the elements $a$ testing $(a, a) \in R$, symmetry with a nested loop over all pairs $(a, b)$, and transitivity with a triply nested loop over all triples $(a, b, c)$. As soon as a counterexample appears, the property fails. If $A$ has $n$ elements, the three checks therefore examine at most $n$, $n^2$, and $n^3$ cases.
 
 ### 2.4 Relations on Infinite Sets
 
@@ -558,32 +512,9 @@ graph LR
 
 *Figure 11. Directed graph of the transitive closure of the relation R of Example 8.2.5*
 
-A computer can carry out the same process. The following function repeatedly adds $(a, d)$ whenever the relation contains two linked pairs $(a, b)$ and $(b, d)$ but not $(a, d)$, until there is no pair left to add.
+An algorithm can carry out the same process. Starting from $R$, it repeatedly adds $(a, d)$ whenever the relation contains two linked pairs $(a, b)$ and $(b, d)$ but not $(a, d)$, until there is no pair left to add. Since $A \times A$ is finite and the relation grows at every repetition, the repetition must end.
 
-```python
-def transitive_closure(R):
-    closure = set(R)
-    while True:
-        new_pairs = {(a, d) for (a, b) in closure for (c, d) in closure
-                     if b == c and (a, d) not in closure}
-        if not new_pairs:
-            return closure
-        closure |= new_pairs
-
-
-print(sorted(transitive_closure({(0, 1), (1, 2), (2, 3)})))
-```
-
-- `closure = set(R)` starts with a copy of $R$, so the result contains $R$.
-- The set comprehension finds every pair of linked ordered pairs `(a, b)` and `(c, d)` (with `b == c`) in `closure` and collects in `new_pairs` each `(a, d)` not yet present.
-- If there are no new pairs, `closure` is transitive and is returned; otherwise `closure |= new_pairs` takes the union and the loop repeats. Since $A \times A$ is finite and `closure` grows at every repetition, the loop must end.
-- The last line applies the function to the $R$ of Example 8.2.5 and prints the sorted result.
-
-```text
-[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
-```
-
-The three conditions of the definition show that this function computes exactly $R^t$. The result contains $R$ (condition 2), and it is transitive because the function stops only when no new pair arises (condition 1). Moreover, if $S$ is a transitive relation containing $R$, each added pair $(a, d)$ comes from pairs $(a, b)$ and $(b, d)$ already in $S$ and must be in $S$ by transitivity of $S$, so `closure` remains a subset of $S$ at every repetition (condition 3).
+The three conditions of the definition show that this procedure computes exactly $R^t$. The result contains $R$ (condition 2), and it is transitive because the procedure stops only when no new pair arises (condition 1). Moreover, if $S$ is a transitive relation containing $R$, each added pair $(a, d)$ comes from pairs $(a, b)$ and $(b, d)$ already in $S$ and must be in $S$ by transitivity of $S$, so the relation built so far remains a subset of $S$ at every repetition (condition 3).
 
 > **Note:** The transitive closure records reachability along arrows in the directed graph. $(x, z) \in R^t$ if, and only if, in the directed graph of $R$ there is a route that starts at $x$, follows one or more arrows in their directions, and arrives at $z$. In Example 8.2.5, 3 can be reached from 0 along $0 \to 1 \to 2 \to 3$, so $(0, 3) \in R^t$, and no arrow leaves 3, so no ordered pair starting with 3 is in $R^t$.
 

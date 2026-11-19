@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-19
 >
 > Discrete Mathematics with Applications, Epp, Ch 2
 
@@ -1579,20 +1579,6 @@ A list of powers of 2 is useful for conversions between binary and decimal. Plac
 110101_2 = 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 32 + 16 + 4 + 1 = 53_{10}
 ```
 
-The same computation can be done with the following schema, multiplying the bits from the right by 1, 2, 4, 8, 16, and 32 and adding.
-
-```text
-  1   1   0   1   0   1
-  │   │   │   │   │   └──  1 ×  1 =  1
-  │   │   │   │   └──────  0 ×  2 =  0
-  │   │   │   └──────────  1 ×  4 =  4
-  │   │   └──────────────  0 ×  8 =  0
-  │   └──────────────────  1 × 16 = 16
-  └──────────────────────  1 × 32 = 32
-                                    --
-                                    53
-```
-
 **Example 2.5.3 (Converting a Decimal to a Binary Number).** Write 209 in binary notation by expressing it as a sum of powers of 2, beginning with the largest power of 2 not exceeding 209 and working downward.
 
 1. 209 lies between 128 and 256, so the highest power of 2 less than 209 is 128. Hence $209 = 128 + (\text{a smaller number})$.
@@ -1883,7 +1869,7 @@ A binary numeral is much longer than the decimal numeral for the same number, ev
 
 *Table 53. Hexadecimal digits with their decimal values and 4-bit binary equivalents*
 
-**Example 2.5.8 (Converting from Hexadecimal to Decimal Notation).** Convert $`3\text{CF}_{16}`$ to decimal notation. As in the schema for binary numbers, multiply each digit by the power of 16 of its place and add. Here $3_{16} = 3_{10}$, $`\text{C}_{16} = 12_{10}`$, and $`\text{F}_{16} = 15_{10}`$, and the place values are $16^2 = 256$, $16^1 = 16$, and $16^0 = 1$.
+**Example 2.5.8 (Converting from Hexadecimal to Decimal Notation).** Convert $`3\text{CF}_{16}`$ to decimal notation. As with binary numbers, multiply each digit by the power of 16 of its place and add. Here $3_{16} = 3_{10}$, $`\text{C}_{16} = 12_{10}`$, and $`\text{F}_{16} = 15_{10}`$, and the place values are $16^2 = 256$, $16^1 = 16$, and $16^0 = 1$.
 
 ```math
 3\text{CF}_{16} = 3 \cdot 256 + 12 \cdot 16 + 15 \cdot 1 = 768 + 192 + 15 = 975_{10}

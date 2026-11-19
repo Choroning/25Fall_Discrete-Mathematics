@@ -2,7 +2,7 @@
 
 [Repository Guide](../../README.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-19
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -596,19 +596,6 @@ Let $D$ be the set of all ten balls, $P(x)$ "$`x`$ is in the bowl", and $Q(x)$ "
 
 By the same principle, if the domain is the empty set $\emptyset$, then $`\forall x \in \emptyset,\ Q(x)`$ is always true, because there can be no counterexample, and $\exists x \in \emptyset \text{ such that } Q(x)$ is always false, because no element can satisfy the condition. The Python built-in functions `all` and `any` follow the same convention: `all` returns `True` when the given iterable is empty, and `any` returns `False` when it is empty [1].
 
-```python
-balls_in_bowl = []                                       # the bowl is empty
-print(all(color == "blue" for color in balls_in_bowl))  # are all balls blue?
-print(any(color != "blue" for color in balls_in_bowl))  # is some ball not blue?
-```
-
-The first line creates an empty list to hold the colors of the balls in the bowl. The second line tests "All the balls in the bowl are blue" and prints `True`, and the third line tests its negation, "There is a ball that is not blue", and prints `False`.
-
-```text
-True
-False
-```
-
 ### 2.5 Variants of Universal Conditional Statements
 
 As seen in Chapter 2, a conditional statement has a contrapositive, a converse, and an inverse. The definitions of these terms extend directly to universal conditional statements.
@@ -1040,7 +1027,7 @@ If the following questions are added to the program, Prolog gives the answers in
 
 In (a), $b_2$ is in a different column from $w_1$, so `isabove(b2, w1)` cannot be derived from the given facts and rule. Prolog answers No to a question it cannot derive.
 
-> **Note:** Different Prolog implementations follow different conventions for representing constant, variable, and predicate names and forms of questions and answers; the notation above is similar to that of Edinburgh Prolog. In ISO standard Prolog, facts and rules end with a period, a rule is written like `isabove(X, Z) :- isabove(X, Y), isabove(Y, Z).`, and a question like `?- color(b1, blue).`. A standard processor searches for answers depth first, trying clauses from top to bottom and the conditions of a rule from left to right [2]. With the rule written exactly as above, question (a), whose answer is No, therefore applies the same rule again and again and never terminates. Real programs avoid the problem by separating the relation `on` (directly on top of) from the derived relation `above`, writing `above(X, Z) :- on(X, Z).` and `above(X, Z) :- on(X, Y), above(Y, Z).`.
+> **Note:** The notation above is simplified to show the idea; ISO standard Prolog writes the rule as `isabove(X, Z) :- isabove(X, Y), isabove(Y, Z).`. A standard processor searches for answers depth first [2], so with the rule written exactly as above, question (a), whose answer is No, applies the same rule again and again and never terminates. Separating the relation `on` (directly on top of) from the derived relation `above` avoids the problem.
 
 ---
 

@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-19
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -596,19 +596,6 @@ $Q(x)$가 술어이고 $x$의 정의역 $D$가 유한 집합 $\lbrace x_1, x_2, 
 
 같은 원리로, 정의역이 공집합 $\emptyset$이면 $`\forall x \in \emptyset,\ Q(x)`$는 반례가 있을 수 없으므로 언제나 참이고, $\exists x \in \emptyset \text{ such that } Q(x)$는 조건을 만족하는 원소가 있을 수 없으므로 언제나 거짓이다. Python의 내장 함수 `all`과 `any`도 같은 약속을 따른다. `all`은 주어진 반복 가능 객체가 비어 있으면 `True`를, `any`는 비어 있으면 `False`를 반환한다[1].
 
-```python
-balls_in_bowl = []                                       # 그릇이 비어 있다
-print(all(color == "blue" for color in balls_in_bowl))  # 모든 공이 파란색인가
-print(any(color != "blue" for color in balls_in_bowl))  # 파란색이 아닌 공이 있는가
-```
-
-첫째 줄은 그릇 안의 공의 색을 담을 빈 리스트를 만든다. 둘째 줄은 "그릇 안의 모든 공은 파란색이다"를 검사하여 `True`를 출력하고, 셋째 줄은 그 부정인 "파란색이 아닌 공이 있다"를 검사하여 `False`를 출력한다.
-
-```text
-True
-False
-```
-
 ### 2.5 전칭 조건 명제의 변형
 
 2장에서 보았듯이 조건 명제에는 대우, 역, 이가 있다. 이 용어의 정의는 전칭 조건 명제로 그대로 확장된다.
@@ -1040,7 +1027,7 @@ isabove(b2, b3)     isabove(X, Z) if isabove(X, Y) and isabove(Y, Z)
 
 (a)에서 $b_2$는 $w_1$과 다른 줄에 있으므로 주어진 사실과 규칙으로 `isabove(b2, w1)`을 이끌어 낼 수 없다. 프롤로그는 이끌어 낼 수 없는 질문에 No라고 답한다.
 
-> **참고:** 프롤로그 처리기마다 상수, 변수, 술어 이름과 질문, 답의 형식을 나타내는 관례가 다르며, 위의 표기는 에든버러 프롤로그의 관례와 비슷하다. ISO 표준 프롤로그에서는 사실과 규칙을 마침표로 끝내고, 규칙은 `isabove(X, Z) :- isabove(X, Y), isabove(Y, Z).`처럼, 질문은 `?- color(b1, blue).`처럼 쓴다. 표준 처리기는 절을 위에서부터, 규칙의 조건을 왼쪽부터 차례로 시도하는 깊이 우선 탐색으로 답을 찾는다[2]. 그래서 위 규칙을 그대로 쓰면 답이 No인 질문 (a)에서 같은 규칙을 끝없이 다시 적용하여 멈추지 않는다. 실제 프로그램에서는 바로 위에 놓인 관계 `on`과 그로부터 정의하는 관계 `above`를 나누어 `above(X, Z) :- on(X, Z).`와 `above(X, Z) :- on(X, Y), above(Y, Z).`처럼 쓰면 이 문제를 피할 수 있다.
+> **참고:** 위의 표기는 개념을 보이기 위한 단순화된 표기이며, ISO 표준 프롤로그는 규칙을 `isabove(X, Z) :- isabove(X, Y), isabove(Y, Z).`처럼 쓴다. 표준 처리기는 깊이 우선 탐색으로 답을 찾으므로[2], 이 규칙을 그대로 쓰면 답이 No인 질문 (a)에서 같은 규칙을 끝없이 다시 적용하여 멈추지 않는다. 바로 위에 놓인 관계 `on`과 그로부터 정의하는 관계 `above`를 나누어 쓰면 이 문제를 피할 수 있다.
 
 ---
 

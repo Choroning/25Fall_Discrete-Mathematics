@@ -2,7 +2,7 @@
 
 [Repository Guide](README.md) | [English](Course-Information.md) | [한국어](Course-Information.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 ## Table of Contents
 
@@ -57,8 +57,8 @@
 | Assignments | 24% |
 | Attendance | 6% |
 
-- There are twelve homework assignments made up of problems from the textbook and the references, and students are given one week to complete each assignment.
-- HW5 and HW12 were submitted individually, and the other assignments were submitted by groups.
+- There are twelve homework assignments made up of problems from the textbook and the references.
+- HW5 and HW12 were individual assignments, and the other assignments were group assignments.
 - Evaluation results are fed back to the students.
 
 ---
@@ -67,7 +67,6 @@
 
 ## 4. Course Policies
 
-- The submission deadline is strict, and all late assignments are graded zero. No exceptions to the homework policy are made without prior instructor approval, and medical exceptions require proper documentation.
 - Students are encouraged to discuss class topics among themselves, but each student must complete the assignments independently. Any sharing of code or plagiarism is considered academic dishonesty and results in strict disciplinary action.
 - Regular attendance is expected.
 - In all processes of taking the course (attending lectures, writing and submitting assignments, exams, etc.), students must participate in learning with honesty and passion according to the purpose and educational philosophy of the university, devote themselves to creative learning based on moral sensitivity, faithfully carry out what they have promised the faculty and fellow students, and respect the character of the faculty and other students and observe basic manners.
@@ -102,7 +101,6 @@
 
 - The planned topics and textbook chapters follow the weekly study contents of the syllabus.
 - The assignments in the progress column are listed in the week they were given, and the parentheses give the textbook sections that contain the exercises of each assignment.
-- HW4 was given in week 5 and, because week 6 had no classes during the Chuseok holidays, was submitted in week 7.
 - The chapter numbers of the textbook are the same as the numbers of the lecture notes. The textbook sections covered by each lecture note are as follows.
   - Chapter 1 (Sections 1.1-1.4): [Ch01](Lecture-Notes/Ch01_Speaking-Mathematically/Concepts_Lecture.md)
   - Chapter 2 (Sections 2.1-2.5): [Ch02](Lecture-Notes/Ch02_The-Logic-of-Compound-Statements/Concepts_Lecture.md)

@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 9 of Discrete Mathematics and Practice, given in Week 12. It consists of twelve exercises chosen from Sections 8.5 (Partial Order Relations), 9.1 (Introduction to Probability), 9.2 (Possibility Trees and the Multiplication Rule), 9.3 (Counting Elements of Disjoint Sets: The Addition Rule), and 9.4 (The Pigeonhole Principle) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-17
+> **Last Updated:** 2026-11-24
 
 This is Assignment 12 of Discrete Mathematics and Practice, given in Week 15. It consists of eleven exercises chosen from Sections 10.5 (Rooted Trees), 10.6 (Spanning Trees and a Shortest Path Algorithm), 11.1 (Real-Valued Functions of a Real Variable and Their Graphs), 11.2 (Big-O, Big-Omega, and Big-Theta Notations), and 11.3 (Analysis of Algorithm Efficiency I) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each student submits individually.
 
 ---
 

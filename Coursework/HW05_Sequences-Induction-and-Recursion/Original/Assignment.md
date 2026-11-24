@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 5 of Discrete Mathematics and Practice, given in Week 7. It consists of four exercises chosen from Sections 5.1 (Sequences), 5.2 (Mathematical Induction I: Proving Formulas), 5.3 (Mathematical Induction II: Applications), and 5.6 (Defining Sequences Recursively) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each student submits individually.
 
 ---
 

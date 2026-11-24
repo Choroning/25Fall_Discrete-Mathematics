@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 7 of Discrete Mathematics and Practice, given in Week 10. It consists of eleven exercises chosen from Sections 7.1 (Functions Defined on General Sets), 7.2 (One-to-One, Onto, and Inverse Functions), 7.3 (Composition of Functions), and 7.4 (Cardinality with Applications to Computability) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

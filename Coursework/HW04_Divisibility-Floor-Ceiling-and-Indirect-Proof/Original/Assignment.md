@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 4 of Discrete Mathematics and Practice, given in Week 5. It consists of nine exercises chosen from Sections 4.4 (Direct Proof and Counterexample IV: Divisibility), 4.5 (Direct Proof and Counterexample V: Division into Cases and the Quotient-Remainder Theorem), 4.6 (Direct Proof and Counterexample VI: Floor and Ceiling), and 4.8 (Indirect Argument: Two Famous Theorems) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points. Because there were no classes in Week 6 for the Chuseok holiday, it was submitted in Week 7.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

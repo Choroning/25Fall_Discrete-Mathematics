@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 8 of Discrete Mathematics and Practice, given in Week 11. It consists of twelve exercises chosen from Sections 8.1 (Relations on Sets), 8.2 (Reflexivity, Symmetry, and Transitivity), and 8.3 (Equivalence Relations) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

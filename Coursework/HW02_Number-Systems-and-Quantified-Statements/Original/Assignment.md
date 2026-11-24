@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 2 of Discrete Mathematics and Practice, given in Week 3. It consists of fifteen exercises chosen from Sections 2.5 (Application: Number Systems and Circuits for Addition), 3.1 (Predicates and Quantified Statements I), and 3.2 (Predicates and Quantified Statements II) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

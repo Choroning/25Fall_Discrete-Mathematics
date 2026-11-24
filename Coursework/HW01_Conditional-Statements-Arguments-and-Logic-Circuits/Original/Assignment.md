@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 1 of Discrete Mathematics and Practice, given in Week 2. It consists of twelve exercises chosen from Sections 2.2 (Conditional Statements), 2.3 (Valid and Invalid Arguments), and 2.4 (Application: Digital Logic Circuits) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

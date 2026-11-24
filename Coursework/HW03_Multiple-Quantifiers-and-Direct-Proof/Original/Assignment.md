@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 3 of Discrete Mathematics and Practice, given in Week 4. It consists of eleven exercises chosen from Sections 3.3 (Statements with Multiple Quantifiers), 3.4 (Arguments with Quantified Statements), 4.1 (Direct Proof and Counterexample I: Introduction), and 4.2 (Direct Proof and Counterexample II: Writing Advice) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 10 of Discrete Mathematics and Practice, given in Week 13. It consists of ten exercises chosen from Sections 9.5 (Counting Subsets of a Set: Combinations), 9.6 (r-Combinations with Repetition Allowed), 9.7 (Pascal's Formula and the Binomial Theorem), 9.8 (Probability Axioms and Expected Value), and 9.9 (Conditional Probability, Bayes' Formula, and Independent Events) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

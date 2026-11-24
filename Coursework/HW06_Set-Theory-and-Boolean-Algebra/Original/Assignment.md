@@ -2,12 +2,9 @@
 
 [Repository Guide](../../../README.md) | [English](Assignment.md) | [한국어](Assignment.ko.md)
 
-> **Last Updated:** 2026-11-16
+> **Last Updated:** 2026-11-24
 
 This is Assignment 6 of Discrete Mathematics and Practice, given in Week 9. It consists of twelve exercises chosen from Sections 6.1 (Set Theory: Definitions and the Element Method of Proof), 6.2 (Properties of Sets), 6.3 (Disproofs and Algebraic Proofs), and 6.4 (Boolean Algebras, Russell's Paradox, and the Halting Problem) of the textbook Discrete Mathematics with Applications (Epp), and the problem numbers are the exercise numbers of the textbook.
-
-- **Deadline:** One week after the assignment is given; any late assignment receives zero points.
-- **Submission:** Each group submits one set of answers.
 
 ---
 

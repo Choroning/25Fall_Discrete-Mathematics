@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 9
 
@@ -303,7 +303,7 @@ PIN M2ZM은 순서 4-튜플 (M, 2, Z, M)으로 볼 수도 있다. 이 관점에�
 ```text
 for i := 1 to 4
     for j := 1 to 3
-        [안쪽 반복문의 본문]
+        [body of the inner loop]
     next j
 next i
 ```
@@ -658,12 +658,12 @@ graph LR
           0. 1 2 1 2 ...
         ┌──────────────
      33 │ 4. 0 0 0 0
-          3  3            40 = 33 × 1 + 7   → 몫의 숫자 1, 나머지 7
+          3  3            40 = 33 × 1 + 7   → quotient digit 1, remainder 7
           ─────
-             7 0          70 = 33 × 2 + 4   → 몫의 숫자 2, 나머지 4
+             7 0          70 = 33 × 2 + 4   → quotient digit 2, remainder 4
              6 6
              ───
-               4 0        나머지 4가 처음 값 4와 같으므로 이후 과정이 반복된다
+               4 0        remainder 4 equals the initial value 4, so the process repeats
 ```
 
 *그림 8. 4/33의 긴 나눗셈에서 나머지 4가 다시 나타나는 과정*
@@ -1075,11 +1075,11 @@ graph LR
 20이라는 수를 목록을 만들지 않고 예측하는 방법이 있다. 1, 2, 3, 4를 범주로 보고, 범주마다 여러 번 고를 수 있게 하여 모두 세 개를 고른다고 생각한다. 네 범주를 구분하는 **세로 막대(vertical bar)** `|` 3개와 고른 물건 하나하나를 나타내는 **가위표(cross)** `×` 3개로 선택을 나타내면 다음과 같다.
 
 ```text
- 범주 1 | 범주 2 | 범주 3 | 범주 4        문자열     선택 결과
-        |   ×    |        |  × ×          |×||××     범주 2에서 하나, 범주 4에서 둘: [2, 4, 4]
-   ×    |        |   ×    |   ×           ×||×|×     범주 1, 3, 4에서 하나씩: [1, 3, 4]
- × × ×  |        |        |               ×××|||     범주 1에서 셋: [1, 1, 1]
-  × ×   |        |   ×    |               ××||×|     범주 1에서 둘, 범주 3에서 하나: [1, 1, 3]
+ Cat. 1 | Cat. 2 | Cat. 3 | Cat. 4        String     Result of the selection
+        |   ×    |        |  × ×          |×||××     one from category 2, two from category 4: [2, 4, 4]
+   ×    |        |   ×    |   ×           ×||×|×     one each from categories 1, 3, 4: [1, 3, 4]
+ × × ×  |        |        |               ×××|||     three from category 1: [1, 1, 1]
+  × ×   |        |   ×    |               ××||×|     two from category 1, one from category 3: [1, 1, 3]
 ```
 
 *그림 12. 세로 막대 3개와 가위표 3개로 이루어진 문자열이 나타내는 중복을 허용하는 3-조합*
@@ -1119,7 +1119,7 @@ graph LR
 이러한 세 쌍은 막대 $n - 1$개와 가위표 3개의 문자열로 나타나며, 가위표의 위치가 세 쌍에 들어가는 1부터 $n$까지의 정수를 가리킨다. $n = 5$이면 다음과 같다.
 
 ```text
- 1 | 2 | 3 | 4 | 5        문자열        세 쌍
+ 1 | 2 | 3 | 4 | 5        String        Triple
    |   |×× |   | ×        ||××||×       (3, 3, 5)
  × | × |   | × |          ×|×||×|       (1, 2, 4)
 ```
@@ -1140,7 +1140,7 @@ graph LR
 for k := 1 to n
     for j := 1 to k
         for i := 1 to j
-            [가장 안쪽 반복문의 본문]
+            [body of the innermost loop]
         next i
     next j
 next k

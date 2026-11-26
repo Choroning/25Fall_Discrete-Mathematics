@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-18
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 4
 
@@ -300,9 +300,9 @@ m + n &= 2r + 2s \\
 따라서 증명은 다음 모양을 가진다.
 
 ```text
-증명: G가 완전 이분 그래프인, [특정하지만 임의로 택한] 그래프라고 가정한다.
+Proof: Suppose G is a [particular but arbitrarily chosen] graph such that G is complete bipartite.
   ...
-그러므로 G는 연결 그래프이다.
+Therefore, G is connected.
 ```
 
 **예제 4.1.9 (증명의 빈칸 채우기).** 정리 "모든 정수 $r, s$에 대해, $r$이 짝수이고 $s$가 홀수이면 $3r + 2s$는 짝수이다"의 증명을 각 단계의 이유와 함께 쓴다.

@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 12
 
@@ -330,9 +330,9 @@ $\lambda_n$으로 여러 가지 크기 조건을 나타낼 수 있다.
 유한 구조는 알고리즘의 입력이 될 수 있다는 점에서도 중요하다. 원소가 $n$개인 유한 구조 $\mathcal{A}$와 고정된 문장 $\varphi$가 주어지면, $\mathcal{A} \models \varphi$인지를 표 2의 정의 그대로 계산할 수 있다. 한정기호 하나는 정의역의 원소를 차례로 대입하는 반복문 하나가 된다. 예를 들어 그래프에서 "다른 모든 꼭짓점과 연결된 꼭짓점이 있다"는 문장 $`\exists x\, \forall y\, (x = y \vee E(x, y))`$는 다음 이중 반복문으로 판정한다. 그래프는 10장 2절의 인접 행렬로 저장되어 있어 $E(x, y)$를 상수 시간에 확인할 수 있다고 가정한다.
 
 ```text
-for each vertex x:                  # ∃x : 하나라도 성공하면 참
+for each vertex x:                  # ∃x : true if any succeeds
     ok = true
-    for each vertex y:              # ∀y : 하나라도 실패하면 거짓
+    for each vertex y:              # ∀y : false if any fails
         if x ≠ y and not E(x, y):
             ok = false
     if ok:

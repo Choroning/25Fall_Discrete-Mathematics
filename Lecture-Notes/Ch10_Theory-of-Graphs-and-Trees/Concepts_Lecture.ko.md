@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-18
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 10
 
@@ -290,19 +290,19 @@ V_1 = \lbrace v_1, v_2, v_3\rbrace,\ E_1 = \lbrace e_1, e_2\rbrace; \quad V_2 = 
 **증명.** $G$가 연결 그래프이고 모든 꼭짓점의 차수가 양의 짝수라고 하자. 다음 알고리즘으로 회로 $C$를 만든다.
 
 ```text
-1단계: 출발할 꼭짓점 v를 G에서 아무것이나 고른다.
-2단계: v에서 출발하여 같은 변을 다시 쓰지 않고 인접한 꼭짓점과 변을 따라가
-       v로 돌아오는 열을 하나 고르고, 이 회로를 C라 한다.
-3단계: C가 G의 모든 변과 꼭짓점을 포함하면 C가 오일러 회로이므로 끝낸다.
-       그렇지 않으면 다음을 수행한다.
-  3a: G에서 C의 변을 모두 지우고, 그 결과 고립된 꼭짓점도 지운다.
-      이렇게 얻은 부분 그래프를 G'이라 한다.
-  3b: C와 G'에 공통인 꼭짓점 w를 하나 고른다.
-  3c: G'에서 w로부터 출발하여 같은 변을 다시 쓰지 않고 w로 돌아오는
-      회로 C'을 하나 고른다.
-  3d: C와 C'을 이어 새 회로 C''을 만든다. v에서 C를 따라 w까지 간 다음,
-      C'을 따라 한 바퀴 돌아 w로 돌아오고, C의 남은 부분을 따라 v로 돌아온다.
-  3e: C := C''으로 두고 3단계로 돌아간다.
+Step 1: Pick any vertex v of G at which to start.
+Step 2: Pick any sequence of adjacent vertices and edges that starts at v,
+        never repeats an edge, and returns to v. Call this circuit C.
+Step 3: If C contains every edge and vertex of G, then C is an Euler circuit; stop.
+        Otherwise perform the following steps.
+  3a: Remove all edges of C from G, and also any vertices that become isolated.
+      Call the resulting subgraph G'.
+  3b: Pick any vertex w common to both C and G'.
+  3c: Pick any sequence of adjacent vertices and edges of G' that starts at w,
+      never repeats an edge, and returns to w. Call this circuit C'.
+  3d: Patch C and C' together into a new circuit C'': follow C from v to w,
+      go once around C' back to w, then follow the rest of C back to v.
+  3e: Let C := C'' and go back to Step 3.
 ```
 
 각 단계를 수행할 수 있는 이유는 다음과 같다.
@@ -956,11 +956,11 @@ graph TD
 **증명.** 꼭짓점이 두 개 이상인 임의의 트리 $T$에 대해 다음 알고리즘을 생각한다.
 
 ```text
-1단계: T의 꼭짓점 v를 하나 고르고, v에 접하는 변 e를 하나 고른다.
-2단계: deg(v) > 1인 동안 다음을 반복한다.
-  2a: v에 접하는 변 가운데 e와 다른 변 e'을 고른다.
-  2b: e'에서 v의 반대쪽 끝점을 v'이라 한다.
-  2c: e := e', v := v'으로 둔다.
+Step 1: Pick a vertex v of T and let e be an edge incident on v.
+Step 2: While deg(v) > 1, repeat the following.
+  2a: Choose an edge e' incident on v such that e' is different from e.
+  2b: Let v' be the vertex at the other end of e' from v.
+  2c: Let e := e' and v := v'.
 ```
 
 각 단계가 가능한 이유는 다음과 같다. 1단계에서 $v$에 접하는 변이 없다면 $v$는 고립 꼭짓점인데, $T$는 연결되어 있고 꼭짓점이 두 개 이상이므로 그럴 수 없다. 2a단계에서는 $\deg(v) > 1$이므로 $v$에 접하는 변이 적어도 두 개 있어 $e$와 다른 변을 고를 수 있다. 2b단계에서는 $T$가 트리이므로 $e'$은 루프일 수 없어 서로 다른 두 끝점을 가진다. 2c단계는 2단계를 반복하기 위해 이름을 바꾸는 것뿐이다. $T$에는 회로가 없으므로 이 과정에서 같은 꼭짓점을 다시 방문하지 않으며, 꼭짓점이 유한 개이므로 알고리즘은 반드시 끝난다. 끝났을 때 $\deg(v) > 1$이 거짓이고 $v$에는 변 $e$가 접하므로 $\deg(v) = 1$이다. ∎
@@ -1204,24 +1204,24 @@ t \leq t_L + t_R \leq 2^{h_L} + 2^{h_R} \leq 2^k + 2^k = 2 \cdot 2^k = 2^{k+1}
 이진 탐색 트리를 만들려면 루트를 만들어 키를 하나 넣는다. 새 키를 넣을 때는 루트의 키와 비교하여, 새 키가 작으면 왼쪽으로, 크면 오른쪽으로 내려간다. 내려갈 자식이 이미 있으면 그 자식의 키와 다시 비교하고, 내려갈 자리에 자식이 없으면 그 자리에 새 꼭짓점을 만들어 새 키를 넣는다. 이 과정을 정확히 쓰면 다음 알고리즘이 된다.
 
 ```text
-알고리즘 10.5.1 (이진 탐색 트리 만들기)
-입력: 공집합이 아니고 전순서가 주어진 키의 집합 K
+Algorithm 10.5.1 (Building a Binary Search Tree)
+Input: a totally ordered, nonempty set K of keys
 
-T를 꼭짓점이 루트 하나뿐이고 변이 없는 트리로 두고, K에서 키 하나를 골라 루트에 넣는다.
-while (아직 넣지 않은 키가 있다)
-    K에서 넣을 키 newkey를 하나 고른다. v := 루트, success := 0으로 둔다.
+Initialize T to have one vertex, the root, and no edges; choose a key from K for the root.
+while (there are still keys to be added)
+    Choose a key newkey from K to add. Let v := the root and success := 0.
     while (success = 0)
         if (newkey < key(v))
-            then if (v에 왼쪽 자식이 있다) then v := v의 왼쪽 자식
-                 else 왼쪽 자식 vL을 T에 추가하고 변 {v, vL}을 추가한 뒤,
-                      vL에 newkey를 넣고 success := 1
+            then if (v has a left child) then v := the left child of v
+                 else add a left child vL to T and an edge {v, vL},
+                      insert newkey as the key of vL, and let success := 1
         if (newkey > key(v))
-            then if (v에 오른쪽 자식이 있다) then v := v의 오른쪽 자식
-                 else 오른쪽 자식 vR을 T에 추가하고 변 {v, vR}을 추가한 뒤,
-                      vR에 newkey를 넣고 success := 1
+            then if (v has a right child) then v := the right child of v
+                 else add a right child vR to T and an edge {v, vR},
+                      insert newkey as the key of vR, and let success := 1
     end while
 end while
-출력: K의 키로 이루어진 이진 탐색 트리 T
+Output: a binary search tree T for the set K of keys
 ```
 
 알고리즘의 각 부분은 다음 일을 한다. 첫 줄은 키 하나를 가진 루트만으로 트리를 시작한다. 바깥 `while`은 넣지 않은 키가 남아 있는 동안 키를 하나씩 넣는다. 각 키를 넣을 때 `v`는 현재 비교하는 꼭짓점이고, `success`는 키를 넣었는지 기록하는 표시이다. 안쪽 `while`에서는 `newkey`가 `key(v)`보다 작으면 왼쪽으로, 크면 오른쪽으로 내려가며, 내려갈 자식이 없으면 그 자리에 새 꼭짓점을 만들고 `success`를 1로 바꾸어 안쪽 반복을 끝낸다. 키들은 서로 다르다고 가정하므로 `newkey`와 `key(v)`가 같은 경우는 없다.
@@ -1294,18 +1294,18 @@ end while
 크루스칼 알고리즘은 연결된 가중 그래프의 변을 가중치가 작은 것부터 하나씩 살펴본다. 각 단계에서 살펴보는 변을 더해도 회로가 생기지 않으면 그 변을 최소 신장 트리가 될 그래프에 더한다. 꼭짓점의 수를 $n$이라 할 때 변을 $n - 1$개 더하고 나면, 그 변들과 그래프의 모든 꼭짓점이 최소 신장 트리를 이룬다.
 
 ```text
-알고리즘 10.6.1 (크루스칼)
-입력: 꼭짓점이 n개(n은 양의 정수)인 연결된 가중 그래프 G
+Algorithm 10.6.1 (Kruskal)
+Input: G, a connected, weighted graph with n vertices (n a positive integer)
 
-1. T를 G의 모든 꼭짓점을 가지고 변은 없는 그래프로 둔다.
-2. E를 G의 모든 변의 집합으로 두고, m := 0으로 둔다.
+1. Initialize T to have all the vertices of G and no edges.
+2. Let E be the set of all edges of G, and let m := 0.
 3. while (m < n - 1)
-   3a. E에서 가중치가 가장 작은 변 e를 찾는다.
-   3b. E에서 e를 지운다.
-   3c. if (e를 T의 변 집합에 더해도 회로가 생기지 않는다)
-           then e를 T의 변 집합에 더하고 m := m + 1
+   3a. Find an edge e in E of least weight.
+   3b. Delete e from E.
+   3c. if (adding e to the edge set of T does not produce a circuit)
+           then add e to the edge set of T and let m := m + 1
    end while
-출력: T (G의 최소 신장 트리)
+Output: T (a minimum spanning tree for G)
 ```
 
 1단계에서 $T$는 꼭짓점만 있고 변이 없는 그래프로 시작한다. 2단계의 $E$는 아직 살펴보지 않은 변의 집합이고, $m$은 $T$에 들어간 변의 수이다. 3단계의 반복은 $T$의 변이 $n - 1$개가 될 때까지 계속된다. 3a와 3b단계는 남은 변 가운데 가장 가벼운 변을 꺼내고, 3c단계는 그 변이 $T$에 회로를 만들지 않을 때만 $T$에 더한다.
@@ -1363,17 +1363,17 @@ $T_1$이 최소 신장 트리이므로 $w(T_2) \leq w(T_1)$인 신장 트리 $T_
 프림 알고리즘은 크루스칼 알고리즘과 다르게 동작한다. 한 꼭짓점에서 시작하여 연결된 상태를 유지하면서 바깥으로 넓혀 가며 최소 신장 트리 $T$를 만든다. 매 단계 변 하나와 꼭짓점 하나를 더하는데, 더하는 변은 이미 $T$에 있는 꼭짓점과 $T$에 없는 꼭짓점을 잇는 변 가운데 가중치가 가장 작은 것이고, 더하는 꼭짓점은 그 변의 끝점 가운데 $T$에 없던 것이다.
 
 ```text
-알고리즘 10.6.2 (프림)
-입력: 꼭짓점이 n개(n은 양의 정수)인 연결된 가중 그래프 G
+Algorithm 10.6.2 (Prim)
+Input: G, a connected, weighted graph with n vertices (n a positive integer)
 
-1. G의 꼭짓점 v를 하나 고르고, T를 꼭짓점 v 하나만 있고 변이 없는 그래프로 둔다.
-2. V를 v를 뺀 G의 모든 꼭짓점의 집합으로 둔다.
+1. Pick a vertex v of G and let T be the graph with one vertex, v, and no edges.
+2. Let V be the set of all vertices of G except v.
 3. for i := 1 to n - 1
-   3a. T의 꼭짓점과 V의 꼭짓점을 잇는 G의 변 가운데 가중치가 가장 작은 변 e를
-       찾고, e의 끝점 가운데 V에 있는 것을 w라 한다.
-   3b. e와 w를 각각 T의 변 집합과 꼭짓점 집합에 더하고, V에서 w를 지운다.
+   3a. Find an edge e of G of least weight among the edges connecting a vertex of T
+       to a vertex in V, and let w be the endpoint of e that is in V.
+   3b. Add e and w to the edge and vertex sets of T, and delete w from V.
    next i
-출력: T (G의 최소 신장 트리)
+Output: T (a minimum spanning tree for G)
 ```
 
 1단계는 출발 꼭짓점 하나로 $T$를 시작하고, 2단계의 $V$는 아직 $T$에 들어가지 않은 꼭짓점의 집합이다. 3단계는 $n - 1$번 반복하며, 매번 $T$와 $V$ 사이를 잇는 가장 가벼운 변 $e$와 그 변의 $V$ 쪽 끝점 $w$를 $T$로 옮긴다.
@@ -1441,26 +1441,26 @@ $T$는 $a$에서 바깥으로 자라므로, 각 단계에서 $T$에 들어갈 �
 크루스칼 알고리즘과 프림 알고리즘처럼, 최단 경로에도 단순하지만 지나치게 비효율적인 방법이 있다. $a$에서 $z$까지의 모든 경로의 길이를 계산하여 가장 짧은 것을 고르는 것이다. 그러나 비교적 작은 그래프에서도 이 방법은 수십억 년이 걸릴 수 있는 반면 다익스트라 알고리즘은 몇 초면 된다.
 
 ```text
-알고리즘 10.6.3 (다익스트라)
-입력: G (모든 변에 양의 가중치가 있는 연결된 단순 그래프), ∞ (G의 모든 변의
-      가중치의 합보다 큰 수), w(u, v) (변 {u, v}의 가중치),
-      a (출발 꼭짓점), z (도착 꼭짓점)
+Algorithm 10.6.3 (Dijkstra)
+Input: G (a connected simple graph with a positive weight for every edge), ∞ (a number
+       greater than the sum of the weights of all edges), w(u, v) (the weight of
+       the edge {u, v}), a (the starting vertex), z (the ending vertex)
 
-1. T를 꼭짓점 a 하나만 있고 변이 없는 그래프로 둔다.
-   V(T)는 T의 꼭짓점 집합, E(T)는 T의 변 집합이다.
-2. L(a) := 0으로 두고, a가 아닌 G의 모든 꼭짓점 u에 대해 L(u) := ∞로 둔다.
-3. v := a, F := {a}로 둔다.
+1. Initialize T to be the graph with vertex a and no edges.
+   V(T) is the vertex set of T and E(T) is the edge set of T.
+2. Let L(a) := 0, and let L(u) := ∞ for every vertex u of G other than a.
+3. Let v := a and F := {a}.
 4. while (z ∉ V(T))
-   4a. F := (F - {v}) ∪ {v와 인접하고 V(T)에 없는 꼭짓점}
-   4b. v와 인접하고 V(T)에 없는 각 꼭짓점 u에 대해
+   4a. F := (F - {v}) ∪ {vertices that are adjacent to v and not in V(T)}
+   4b. For each vertex u that is adjacent to v and not in V(T),
            if L(v) + w(v, u) < L(u) then
                L(u) := L(v) + w(v, u)
                D(u) := v
-   4c. F에서 레이블이 가장 작은 꼭짓점 x를 찾는다.
-       x를 V(T)에 더하고, 변 {D(x), x}를 E(T)에 더한다.
+   4c. Find a vertex x in F with the smallest label.
+       Add x to V(T), and add the edge {D(x), x} to E(T).
        v := x
    end while
-출력: L(z) (a에서 z로 가는 최단 경로의 길이)
+Output: L(z) (the length of a shortest path from a to z)
 ```
 
 각 줄의 역할은 다음과 같다. 1단계와 2단계는 트리 $T$와 레이블을 초기화한다. 3단계의 $v$는 가장 최근에 $T$에 더한 꼭짓점을 가리키고, $F$는 경계 집합이다. 4단계의 반복은 $z$가 $T$에 들어갈 때까지 계속된다. 4a단계는 방금 $T$에 들어간 $v$를 경계 집합에서 빼고, $v$와 인접하면서 $T$에 없는 꼭짓점을 경계 집합에 더한다(이미 경계 집합에 있으면 그대로 둔다). 4b단계는 $v$를 더한 일이 레이블에 영향을 줄 수 있는 꼭짓점, 즉 $v$와 인접한 꼭짓점의 레이블만 갱신한다. 레이블이 작아질 때마다 $D(u)$에 그 값을 준 $T$의 꼭짓점을 기록해 둔다. 4c단계는 경계 집합에서 레이블이 가장 작은 꼭짓점 $x$를 $T$에 더하고, $x$를 $T$에 잇는 변으로 $\lbrace D(x), x\rbrace$를 더한다. 끝났을 때 $T$에서 $a$와 $z$를 잇는 유일한 경로가 $G$에서 $a$에서 $z$로 가는 최단 경로이다.

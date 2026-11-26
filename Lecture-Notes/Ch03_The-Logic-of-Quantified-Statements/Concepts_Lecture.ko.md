@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-19
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 3
 
@@ -314,7 +314,7 @@ $n = 2$는 소수이면서 짝수이므로 이 명제는 참이다.
 수학에서 변수를 쓰는 방식은 프로그래밍에서 변수를 쓰는 방식과 비슷하다. 프로그램의 변수도 자리 표시자 역할을 하며, 값을 넣을 수 있는 (실제 또는 가상의) 메모리 위치를 만든다. 또 프로그램에서 변수가 속박되는 방식은 수학적 변수가 명제 안에서 속박되는 방식과 비슷하다. 다음 두 Python 프로그램을 비교한다.
 
 ```python
-# 프로그램 1
+# Program 1
 def f():
     X = "Hi"
     print(X)
@@ -328,7 +328,7 @@ g()
 ```
 
 ```python
-# 프로그램 2
+# Program 2
 def f():
     S = "Hi"
     print(S)

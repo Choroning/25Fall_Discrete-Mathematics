@@ -2,7 +2,7 @@
 
 [레포지토리 안내](../../README.ko.md) | [English](Concepts_Lecture.md) | [한국어](Concepts_Lecture.ko.md)
 
-> **최종 수정일:** 2026-11-17
+> **최종 수정일:** 2026-11-27
 >
 > Discrete Mathematics with Applications, Epp, Ch 11
 
@@ -645,12 +645,12 @@ n - \frac{n}{2} + 1 = \frac{n+2}{2}, \qquad n - \frac{n-1}{2} + 1 = \frac{2n - (
 **삽입 정렬(insertion sort)** 은 배열의 항목을 오름차순으로 늘어놓는다. 먼저 둘째 항목을 첫째 항목과 비교해 둘째가 더 작으면 서로 바꾸며, 그러면 처음 두 항목이 오름차순이 된다. 그다음부터는 새 항목을 하나씩 왼쪽으로 옮기며 앞 항목들 사이의 제자리에 넣어, 정렬된 앞부분을 한 칸씩 늘려 간다. 마지막 항목까지 넣으면 배열 전체가 정렬된다. 그림 13은 배열 $a[1], a[2], \ldots, a[n]$에서 삽입 정렬의 단계 $k$를 나타낸다.
 
 ```text
- 정렬된 부분 배열
+ sorted subarray
 ┌───────────────────────────┐
  a[1], a[2], a[3], ..., a[k-1], a[k], a[k+1], ..., a[n]
                                  ▲
- 단계 k: a[k]의 값을 a[1], a[2], ..., a[k-1]에 대해 알맞은 자리에 넣는다.
-         이 단계가 끝나면 a[1], a[2], ..., a[k]가 정렬되어 있다.
+ Step k: put the value of a[k] in its correct place among a[1], a[2], ..., a[k-1].
+         After this step, a[1], a[2], ..., a[k] are in order.
 ```
 
 *그림 13. 삽입 정렬의 단계 k*
@@ -658,7 +658,7 @@ n - \frac{n}{2} + 1 = \frac{n+2}{2}, \qquad n - \frac{n-1}{2} + 1 = \frac{2n - (
 **알고리즘 11.3.1 (삽입 정렬).** 이 알고리즘은 배열 $a[1], a[2], \ldots, a[n]$($`n \geq 1`$)을 받아 같은 값들을 오름차순으로 다시 늘어놓는다. 출력 배열도 $a[1], a[2], \ldots, a[n]$으로 나타낸다. $k$번째 단계에서 $a[1], \ldots, a[k-1]$은 이미 오름차순이고, $a[k]$를 그에 대해 알맞은 자리에 넣는다.
 
 ```text
-Input: n [양의 정수], a[1], a[2], ..., a[n] [순서를 매길 수 있는 데이터 항목의 배열]
+Input: n [a positive integer], a[1], a[2], ..., a[n] [an array of data items capable of being ordered]
 
 Algorithm Body:
 for k := 2 to n
@@ -674,7 +674,7 @@ for k := 2 to n
     end while
 next k
 
-Output: a[1], a[2], ..., a[n] [오름차순]
+Output: a[1], a[2], ..., a[n] [in ascending order]
 ```
 
 각 줄이 하는 일은 다음과 같다.
@@ -762,7 +762,7 @@ E_n = \sum_{k=2}^{n} \frac{k+1}{2} = \frac{1}{2}\left( \sum_{k=2}^{n} k + (n - 1
 **알고리즘 11.3.2 (선택 정렬).**
 
 ```text
-Input: n [양의 정수], a[1], a[2], ..., a[n] [순서를 매길 수 있는 데이터 항목의 배열]
+Input: n [a positive integer], a[1], a[2], ..., a[n] [an array of data items capable of being ordered]
 
 Algorithm Body:
 for k := 1 to n - 1
@@ -776,7 +776,7 @@ for k := 1 to n - 1
         a[IndexOfMin] := Temp
 next k
 
-Output: a[1], a[2], ..., a[n] [오름차순]
+Output: a[1], a[2], ..., a[n] [in ascending order]
 ```
 
 `IndexOfMin`은 지금까지 본 항목 중 최솟값의 첨자이다. 안쪽 루프는 $a[k+1]$부터 $a[n]$까지 차례로 보며 더 작은 값이 나오면 `IndexOfMin`을 바꾼다. 안쪽 루프가 끝나면 `IndexOfMin`은 $a[k], \ldots, a[n]$ 중 최솟값의 첨자이고, 그것이 $k$가 아니면 `Temp`를 거쳐 두 값을 맞바꾼다.
@@ -807,7 +807,7 @@ Output: a[1], a[2], ..., a[n] [오름차순]
 **알고리즘 11.3.3 (항별 다항식 평가).** 이 알고리즘은 $a[0]$부터 시작하여 각 항을 따로 계산해 누적 합에 더한다.
 
 ```text
-Input: n [음이 아닌 정수], a[0], a[1], ..., a[n] [실수의 배열], x [실수]
+Input: n [a nonnegative integer], a[0], a[1], ..., a[n] [an array of real numbers], x [a real number]
 
 Algorithm Body:
 polyval := a[0]
@@ -819,7 +819,7 @@ for i := 1 to n
     polyval := polyval + term
 next i
 
-Output: polyval [실수]
+Output: polyval [a real number]
 ```
 
 $i$번째 반복에서 안쪽 루프는 $a[i]$에 $x$를 $i$번 곱해 항 $a[i]x^i$를 만들고, 바깥 루프는 그 항을 `polyval`에 더한다. 따라서 $i$번째 반복의 연산은 곱셈 $i$번과 덧셈 1번이고, 차수가 $n$인 다항식에 대한 덧셈과 곱셈의 총횟수 $s_n$은 다음과 같다.
@@ -839,7 +839,7 @@ s_n = \sum_{i=1}^{n} (i + 1) = \frac{n(n+1)}{2} + n = \frac{n^2 + 3n}{2}
 각 단계에서 `polyval`의 현재 값에 $x$를 곱하고 다음으로 낮은 계수를 더한다.
 
 ```text
-Input: n [음이 아닌 정수], a[0], a[1], ..., a[n] [실수의 배열], x [실수]
+Input: n [a nonnegative integer], a[0], a[1], ..., a[n] [an array of real numbers], x [a real number]
 
 Algorithm Body:
 polyval := a[n]
@@ -847,7 +847,7 @@ for i := 1 to n
     polyval := polyval * x + a[n - i]
 next i
 
-Output: polyval [실수]
+Output: polyval [a real number]
 ```
 
 반복마다 곱셈 1번과 덧셈 1번을 하므로 덧셈과 곱셈의 총횟수는 $t_n = 2n$이고, 호너의 방법은 $\Theta(n)$이다. 첨자 $n - i$를 계산하는 뺄셈까지 세어도 $3n$번이어서 차수는 같다.
@@ -1151,8 +1151,8 @@ graph LR
 **알고리즘 11.5.1 (이진 탐색).** 이 알고리즘은 오름차순 배열 $a[1], a[2], \ldots, a[n]$에서 원소 $x$를 찾는다. $x$를 찾으면 변수 `index`를 $x$가 있는 원소의 첨자로 바꾸고, 찾지 못하면 `index`는 초깃값 0 그대로이다. 변수 `bot`과 `top`은 지금 조사하는 부분 배열의 아래쪽 첨자와 위쪽 첨자이다.
 
 ```text
-Input: n [양의 정수], a[1], a[2], ..., a[n] [오름차순으로 주어진 데이터 항목의 배열],
-       x [배열의 원소와 같은 자료형의 데이터 항목]
+Input: n [a positive integer], a[1], a[2], ..., a[n] [data items arranged in ascending order],
+       x [a data item of the same type as the array elements]
 
 Algorithm Body:
 index := 0, bot := 1, top := n
@@ -1164,7 +1164,7 @@ while (top ≥ bot and index = 0)
         else bot := mid + 1
 end while
 
-Output: index [음이 아닌 정수]
+Output: index [a nonnegative integer]
 ```
 
 루프의 반복마다 가운데 첨자 `mid`를 계산해 $x$를 $a[mid]$와 비교한다. 둘이 같으면 탐색은 성공이고 `index`가 `mid`가 되어 루프가 끝난다. 같지 않으면 `top`을 `mid - 1`로 바꾸어 아래쪽 부분 배열로, 또는 `bot`을 `mid + 1`로 바꾸어 위쪽 부분 배열로 과정을 되풀이한다. 반복마다 `top`이 줄거나 `bot`이 늘므로, 탐색에 성공하지 않으면 결국 `top`이 `bot`보다 작아져 루프가 끝나고, 이는 $x$가 배열의 원소가 아님을 뜻한다. 루프가 끝났을 때 `index`가 0이면 $x$는 배열에 없고, 그렇지 않으면 `index`가 $x$의 위치이다.
@@ -1363,7 +1363,7 @@ graph TD
 **알고리즘 11.5.2 (병합 정렬).** 이 알고리즘은 배열 $a[r], a[r+1], \ldots, a[s]$($`r \leq s`$)를 받아 같은 값들을 오름차순으로 늘어놓는다. 출력 배열도 $a[r], \ldots, a[s]$로 나타낸다. 입력 배열을 길이가 거의 같은 두 부분 배열로 나누어 각각을 병합 정렬로 정렬한 뒤 두 부분 배열을 병합한다.
 
 ```text
-Input: r, s [r ≤ s인 양의 정수], a[r], a[r + 1], ..., a[s] [순서를 매길 수 있는 데이터 항목의 배열]
+Input: r, s [positive integers with r ≤ s], a[r], a[r + 1], ..., a[s] [an array of data items that can be ordered]
 
 Algorithm Body:
 bot := r, top := s
@@ -1371,12 +1371,12 @@ while (bot < top)
     mid := ⌊(bot + top) / 2⌋
     call merge sort with input bot, mid, and a[bot], a[bot + 1], ..., a[mid]
     call merge sort with input mid + 1, top, and a[mid + 1], a[mid + 2], ..., a[top]
-    [이 두 단계가 끝나면 a[bot], ..., a[mid]와 a[mid + 1], ..., a[top]이 모두 정렬되어 있다.]
+    [After these steps both a[bot], ..., a[mid] and a[mid + 1], ..., a[top] are in order.]
     merge a[bot], ..., a[mid] and a[mid + 1], ..., a[top]
-    [오름차순인 두 배열을 받아 오름차순인 배열로 병합하는 병합 알고리즘을 호출하면 된다.]
+    [Any merge algorithm that combines two ascending arrays into one ascending array can be called here.]
 end while
 
-Output: a[r], a[r + 1], ..., a[s] [입력과 같은 원소를 오름차순으로 담은 배열]
+Output: a[r], a[r + 1], ..., a[s] [an array with the same elements as the input array, in ascending order]
 ```
 
 > **참고:** 이 의사코드에서 `bot`과 `top`은 루프 본문 안에서 바뀌지 않으므로, `while`을 글자 그대로 실행하면 조건 `bot < top`이 계속 참이어서 같은 작업을 끝없이 되풀이한다. 의도한 동작은 `bot < top`일 때 본문을 한 번 실행하는 것이므로, `while (bot < top) ... end while`은 `if (bot < top) then ... end if`로 읽어야 한다. 길이가 1인 배열($`bot = top`$)에서는 아무것도 하지 않고 끝나며, 이것이 재귀의 기저이다.
